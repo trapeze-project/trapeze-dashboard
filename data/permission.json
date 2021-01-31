@@ -1,0 +1,92 @@
+{
+    "general": [
+        {
+            "active": true,
+            "paragraph": "I consent with you using my images for marketing purposes"
+        },
+        {
+            "active": false,
+            "paragraph": "I consent with you using my images for marketing purposes"
+        },
+        {
+            "active": true,
+            "paragraph": "I consent with you using my images for marketing purposes"
+        },
+        {
+            "active": false,
+            "paragraph": "I consent with you using my images for marketing purposes"
+        },
+        {
+            "active": false,
+            "paragraph": "I consent with you using my images for marketing purposes"
+        },
+        {
+            "active": false,
+            "paragraph": "I consent with you using my images for marketing purposes"
+        },
+        {
+            "active": true,
+            "paragraph": "I consent with you using my images for marketing purposes"
+        }
+    ],
+    "data": [
+        {
+            "active": true,
+            "paragraph": "I consent with you using my images for marketing purposes"
+        },
+        {
+            "active": false,
+            "paragraph": "I consent with you using my images for marketing purposes"
+        },
+        {
+            "active": true,
+            "paragraph": "I consent with you using my images for marketing purposes"
+        },
+        {
+            "active": false,
+            "paragraph": "I consent with you using my images for marketing purposes"
+        },
+        {
+            "active": false,
+            "paragraph": "I consent with you using my images for marketing purposes"
+        },
+        {
+            "active": false,
+            "paragraph": "I consent with you using my images for marketing purposes"
+        },
+        {
+            "active": true,
+            "paragraph": "I consent with you using my images for marketing purposes"
+        }
+    ],
+    "marketing": [
+        {
+            "active": true,
+            "paragraph": "I consent with you using my images for marketing purposes"
+        },
+        {
+            "active": false,
+            "paragraph": "I consent with you using my images for marketing purposes"
+        },
+        {
+            "active": true,
+            "paragraph": "I consent with you using my images for marketing purposes"
+        },
+        {
+            "active": false,
+            "paragraph": "I consent with you using my images for marketing purposes"
+        },
+        {
+            "active": false,
+            "paragraph": "I consent with you using my images for marketing purposes"
+        },
+        {
+            "active": false,
+            "paragraph": "I consent with you using my images for marketing purposes"
+        },
+        {
+            "active": true,
+            "paragraph": "I consent with you using my images for marketing purposes"
+        }
+    ]
+}

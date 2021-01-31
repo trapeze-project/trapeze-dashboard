@@ -15,6 +15,10 @@ app.get('/fetch', (req, res) => {
   })
 })
 
+app.get('/permissions', (req, res) => {
+  res.json(require('./../data/permission.json'))
+})
+
 module.exports = {
   path: '/api',
   handler: app
