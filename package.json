@@ -19,7 +19,8 @@
     "material-design-icons-iconfont": "^6.1.0",
     "nuxt": "^2.14.6",
     "nuxt-i18n": "^6.17.0",
-    "nuxt-leaflet": "0.0.25"
+    "nuxt-leaflet": "0.0.25",
+    "vue-calendar-heatmap": "^0.8.4"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^3.1.0",
