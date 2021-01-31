@@ -10,6 +10,9 @@ const formatter = require('../logic/index')({ mappings: [movieMapping, locationM
 const app = express()
 
 app.get('/fetch', (req, res) => {
+  if (req.query.original === 'true') {
+    return res.json(require('./../data/data.json'))
+  }
   formatter(require('./../data/data.json'), (result) => {
     res.json(result)
   })
