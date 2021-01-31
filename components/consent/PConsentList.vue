@@ -16,7 +16,7 @@
 export default {
   props: {
     consents: {
-      type: Array,
+      type: Object,
       required: true
     }
   }
