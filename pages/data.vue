@@ -1,5 +1,10 @@
 <template>
   <div>
+    <h1 class="title">
+      My Data
+    </h1>
+    <v-divider />
+    <br>
     <div v-for="(item, index) in components" :key="index">
       <component :is="item.component" v-bind="item" />
       <br>

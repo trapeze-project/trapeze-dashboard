@@ -15,14 +15,15 @@
             <div>
               <v-list-item-title v-text="item.key" />
             </div>
-            <v-list-item-content>
+            <v-spacer />
+            <div>
               <div v-if="item.adress">
                 {{ item.adress }}
               </div>
               <a v-if="item.href" :href="item.href">
                 {{ item.href }}
               </a>
-            </v-list-item-content>
+            </div>
           </v-list-item>
         </div>
       </v-list>
