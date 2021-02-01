@@ -1,10 +1,6 @@
 import colors from 'vuetify/es5/util/colors'
 
-const { CI_PAGES_URL } = process.env
-const base = CI_PAGES_URL && new URL(CI_PAGES_URL).pathname
-
 export default {
-  target: 'static',
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
     titleTemplate: '%s - dashboardvuetfy',
@@ -42,16 +38,8 @@ export default {
     // https://go.nuxtjs.dev/vuetify
     '@nuxtjs/vuetify'
   ],
-  router: {
-    base
-  },
 
   // Modules (https://go.nuxtjs.dev/config-modules)
-
-  generate: {
-    dir: 'public'
-  },
-
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
