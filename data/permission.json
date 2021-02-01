@@ -6,7 +6,7 @@
         },
         {
             "active": false,
-            "paragraph": "I consent with you using my images for marketing purposes"
+            "paragraph": "I consent with you using my images for televison purposes"
         },
         {
             "active": true,
@@ -14,7 +14,7 @@
         },
         {
             "active": false,
-            "paragraph": "I consent with you using my images for marketing purposes"
+            "paragraph": "I consent with you using my images for adsence purposes"
         },
         {
             "active": false,
@@ -26,7 +26,7 @@
         },
         {
             "active": true,
-            "paragraph": "I consent with you using my images for marketing purposes"
+            "paragraph": "I consent with you using my images for adsence purposes"
         }
     ],
     "data": [
@@ -36,11 +36,11 @@
         },
         {
             "active": false,
-            "paragraph": "I consent with you using my images for marketing purposes"
+            "paragraph": "I consent with you using my images for televison purposes"
         },
         {
             "active": true,
-            "paragraph": "I consent with you using my images for marketing purposes"
+            "paragraph": "I consent with you using my images for adsence purposes"
         },
         {
             "active": false,
@@ -48,11 +48,11 @@
         },
         {
             "active": false,
-            "paragraph": "I consent with you using my images for marketing purposes"
+            "paragraph": "I consent with you using my images for televison purposes"
         },
         {
             "active": false,
-            "paragraph": "I consent with you using my images for marketing purposes"
+            "paragraph": "I consent with you using my images for analytical purposes"
         },
         {
             "active": true,
@@ -62,7 +62,7 @@
     "marketing": [
         {
             "active": true,
-            "paragraph": "I consent with you using my images for marketing purposes"
+            "paragraph": "I consent with you using my images for adsence purposes"
         },
         {
             "active": false,
@@ -78,15 +78,15 @@
         },
         {
             "active": false,
-            "paragraph": "I consent with you using my images for marketing purposes"
+            "paragraph": "I consent with you using my images for analytical purposes"
         },
         {
             "active": false,
-            "paragraph": "I consent with you using my images for marketing purposes"
+            "paragraph": "I consent with you using my images for adsence purposes"
         },
         {
             "active": true,
-            "paragraph": "I consent with you using my images for marketing purposes"
+            "paragraph": "I consent with you using my images for analytical purposes"
         }
     ]
 }
