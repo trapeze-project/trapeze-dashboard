@@ -1,18 +1,19 @@
 <template>
   <PExpandableContainer title="Account credentials" subtitle="Your username (in this case: email address) and password." icon="account_circle">
-    <v-list>
-      <div v-for="(item, index) in items" :key="index">
-        <v-list-item>
-          <v-list-item-title>
-            {{ item.title }}:
-          </v-list-item-title>
-          <div>
-            {{ item.description }}
-          </div>
-        </v-list-item>
-        <v-divider />
-      </div>
-    </v-list>
+    <div style="padding: 15px">
+      <v-list>
+        <div v-for="(item, index) in items" :key="index">
+          <v-list-item>
+            <v-subheader><b>{{ item.title.toUpperCase() }}:</b></v-subheader>
+            <v-spacer />
+            <div>
+              {{ item.description }}
+            </div>
+          </v-list-item>
+          <v-divider inset />
+        </div>
+      </v-list>
+    </div>
   </PExpandableContainer>
 </template>
 <script>

@@ -4,6 +4,7 @@
       Permissions
     </h1>
     <v-divider />
+    <br>
     <div class="permission-container">
       <PConsentList :consents="consents" />
     </div>
