@@ -22,6 +22,10 @@ app.get('/permissions', (req, res) => {
   res.json(require('./../data/permission.json'))
 })
 
+app.get('/profile', (req, res) => {
+  res.json(require('./../data/profile.json'))
+})
+
 module.exports = {
   path: '/api',
   handler: app
