@@ -1,5 +1,5 @@
 <template>
-  <PExpandableContainer title="Your browsing information." :subtitle="'We have collected '+items.length +' items.'" icon="mdi-web">
+  <PExpandableContainer title="Your browsing information." :subtitle="'We have collected '+clientFilteredItems.length +' items.'" icon="mdi-web">
     <div style="padding: 10px">
       <v-card-title>
         Browsing
@@ -14,7 +14,7 @@
       </v-card-title>
       <v-data-table
         :headers="headers"
-        :items="items"
+        :items="clientFilteredItems"
         :search="search"
         :single-expand="singleExpand"
         :expanded.sync="expanded"
@@ -38,13 +38,10 @@
 </template>
 
 <script>
+import searchableComponentMixin from '../mixins/searchableComponentMixin'
+import dateFilterMixin from '../mixins/dateFilterMixin'
 export default {
-  props: {
-    items: {
-      type: Array,
-      required: true
-    }
-  },
+  mixins: [searchableComponentMixin, dateFilterMixin],
   data: () => ({
     headers: [
       { text: 'URL', value: 'url' },
@@ -52,7 +49,6 @@ export default {
       { text: 'User Agent', value: 'user_agent' },
       { text: 'IP-Adress', value: 'ip_address' }
     ],
-    search: '',
     expanded: [],
     singleExpand: false
   })
