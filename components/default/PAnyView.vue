@@ -1,5 +1,5 @@
 <template>
-  <PExpandableContainer :title="dataType+' Log'" :subtitle="'We have collected '+items.length +' '+dataType.toLowerCase()+'(s)'" icon="mdi-format-list-text">
+  <PExpandableContainer :disabled="clientFilteredItems.length == 0" :title="dataType+' Log'" :subtitle="'We have collected '+clientFilteredItems.length +' '+dataType.toLowerCase()+'(s)'" icon="mdi-format-list-text">
     <div style="padding: 10px">
       <v-card-title>
         {{ dataType }}s
@@ -14,7 +14,7 @@
       </v-card-title>
       <v-data-table
         :headers="headers"
-        :items="items"
+        :items="clientFilteredItems"
         :single-expand="singleExpand"
         :expanded.sync="expanded"
         item-key="timestamp"
@@ -53,7 +53,8 @@
 </template>
 
 <script>
-
+import searchableComponentMixin from '../mixins/searchableComponentMixin'
+import dateFilterMixin from '../mixins/dateFilterMixin'
 export default {
   filters: {
     pretty (value) {
@@ -63,18 +64,14 @@ export default {
       return strArr.join('\n')
     }
   },
+  mixins: [searchableComponentMixin, dateFilterMixin],
   props: {
-    items: {
-      type: Array,
-      required: true
-    },
     dataType: {
       type: String,
       default: 'Activity'
     }
   },
   data: () => ({
-    search: '',
     expanded: [],
     singleExpand: true
   }),

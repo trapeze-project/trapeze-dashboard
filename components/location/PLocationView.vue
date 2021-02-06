@@ -1,5 +1,5 @@
 <template>
-  <PExpandableContainer title="Your location information." :subtitle="'We have collected '+items.length +' locations.'" icon="location_on" @clicked="updateSize()">
+  <PExpandableContainer :disabled="clientFilteredItems.length == 0" title="Your location information." :subtitle="'We have collected '+clientFilteredItems.length +' locations.'" icon="location_on" @clicked="updateSize()">
     <v-row gutter style="padding:10px">
       <v-col
         md="12"
@@ -18,7 +18,7 @@
           <v-card-title>
             Locations and Date:
           </v-card-title>
-          <v-data-table :headers="headers" :items="items" :items-per-page="5" @click:row="handleClick">
+          <v-data-table :headers="headers" :items="clientFilteredItems" :items-per-page="5" @click:row="handleClick">
             <template v-slot:item.timestamp="{ item }">
               {{ new Date(item.timestamp).toLocaleDateString($i18n.locale,$t('long')) }}
             </template>
@@ -40,7 +40,7 @@
         <client-only>
           <l-map ref="mymap" :zoom="zoom" :center="center" style="width: 100%;min-height:500px;">
             <l-tile-layer url="http://{s}.tile.osm.org/{z}/{x}/{y}.png" />
-            <l-marker v-for="(item, index) in items" :key="index" :lat-lng="[item.lat, item.lon]" />
+            <l-marker v-for="(item, index) in clientFilteredItems" :key="index" :lat-lng="[item.lat, item.lon]" />
           </l-map>
         </client-only>
       </v-col>
@@ -48,14 +48,9 @@
   </PExpandableContainer>
 </template>
 <script>
-
+import dateFilterMixin from '../mixins/dateFilterMixin'
 export default {
-  props: {
-    items: {
-      type: Array,
-      required: true
-    }
-  },
+  mixins: [dateFilterMixin],
   data: () => ({
     center: [],
     zoom: 13,

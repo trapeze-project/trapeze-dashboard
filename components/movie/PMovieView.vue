@@ -1,5 +1,5 @@
 <template>
-  <PExpandableContainer title="Your movie information." :subtitle="'We have collected '+items.length +' movies.'" icon="mdi-movie-open">
+  <PExpandableContainer :disabled="clientFilteredItems.length == 0" title="Your movie information." :subtitle="'We have collected '+clientFilteredItems.length +' movies.'" icon="mdi-movie-open">
     <div style="padding: 10px">
       <v-card-title>
         Movies
@@ -14,7 +14,7 @@
       </v-card-title>
       <v-data-table
         :headers="headers"
-        :items="items"
+        :items="clientFilteredItems"
         :search="search"
       >
         <template v-slot:item.thumbnail="{ item }">
@@ -34,13 +34,10 @@
 </template>
 
 <script>
+import searchableComponentMixin from '../mixins/searchableComponentMixin'
+import dateFilterMixin from '../mixins/dateFilterMixin'
 export default {
-  props: {
-    items: {
-      type: Array,
-      required: true
-    }
-  },
+  mixins: [searchableComponentMixin, dateFilterMixin],
   data: () => ({
     headers: [
       { text: 'Thumbnail', value: 'thumbnail' },
@@ -50,8 +47,12 @@ export default {
       { text: 'Total Watchtime', value: 'duration' },
       { text: 'Language', value: 'language' },
       { text: 'IP-Adress', value: 'ip_address' }
-    ],
-    search: ''
-  })
+    ]
+  }),
+  methods: {
+    filterItems (items, from, to) {
+      return items.filter(item => item.watched_on >= from && item.watched_on <= to)
+    }
+  }
 }
 </script>
