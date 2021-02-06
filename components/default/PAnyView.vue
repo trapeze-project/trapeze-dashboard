@@ -1,5 +1,5 @@
 <template>
-  <PExpandableContainer :title="dataType+' Log'" :subtitle="'We have collected '+clientFilteredItems.length +' '+dataType.toLowerCase()+'(s)'" icon="mdi-format-list-text">
+  <PExpandableContainer :disabled="clientFilteredItems.length == 0" :title="dataType+' Log'" :subtitle="'We have collected '+clientFilteredItems.length +' '+dataType.toLowerCase()+'(s)'" icon="mdi-format-list-text">
     <div style="padding: 10px">
       <v-card-title>
         {{ dataType }}s

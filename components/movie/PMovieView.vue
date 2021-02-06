@@ -1,5 +1,5 @@
 <template>
-  <PExpandableContainer title="Your movie information." :subtitle="'We have collected '+clientFilteredItems.length +' movies.'" icon="mdi-movie-open">
+  <PExpandableContainer :disabled="clientFilteredItems.length == 0" title="Your movie information." :subtitle="'We have collected '+clientFilteredItems.length +' movies.'" icon="mdi-movie-open">
     <div style="padding: 10px">
       <v-card-title>
         Movies

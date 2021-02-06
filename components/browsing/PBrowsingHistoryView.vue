@@ -1,5 +1,5 @@
 <template>
-  <PExpandableContainer title="Your browsing information." :subtitle="'We have collected '+clientFilteredItems.length +' items.'" icon="mdi-web">
+  <PExpandableContainer :disabled="clientFilteredItems.length == 0" title="Your browsing information." :subtitle="'We have collected '+clientFilteredItems.length +' items.'" icon="mdi-web">
     <div style="padding: 10px">
       <v-card-title>
         Browsing

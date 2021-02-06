@@ -2,6 +2,7 @@
   <v-card
     elevation="4"
     shaped
+    :disabled="disabled"
   >
     <div class="card-header">
       <v-icon v-if="icon" color="primary" x-large>
@@ -51,6 +52,10 @@ export default {
       type: String,
       required: false,
       default: undefined
+    },
+    disabled: {
+      type: Boolean,
+      default: false
     }
   },
   data: () => ({

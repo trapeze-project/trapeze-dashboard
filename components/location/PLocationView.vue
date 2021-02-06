@@ -1,5 +1,5 @@
 <template>
-  <PExpandableContainer title="Your location information." :subtitle="'We have collected '+clientFilteredItems.length +' locations.'" icon="location_on" @clicked="updateSize()">
+  <PExpandableContainer :disabled="clientFilteredItems.length == 0" title="Your location information." :subtitle="'We have collected '+clientFilteredItems.length +' locations.'" icon="location_on" @clicked="updateSize()">
     <v-row gutter style="padding:10px">
       <v-col
         md="12"
