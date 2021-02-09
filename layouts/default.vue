@@ -2,7 +2,7 @@
   <v-app>
     <v-navigation-drawer v-model="drawer" clipped app color="accent">
       <v-list nav dense>
-        <v-list-item-group v-model="group" color="coporate">
+        <v-list-item-group v-model="group" color="primary">
           <v-list-item v-for="(link, index) in links" :key="index" :to="localePath(link.to)" exact>
             <v-list-item-icon>
               <v-icon>
@@ -15,7 +15,7 @@
       </v-list>
     </v-navigation-drawer>
     <v-app-bar clipped-left app color="coporate">
-      <v-app-bar-nav-icon color="white" @click.stop="drawer = !drawer" />
+      <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
       <v-spacer />
       <div class="company-wrapper">
         <Logo />

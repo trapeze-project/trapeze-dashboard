@@ -20,8 +20,9 @@ a {
     background-color: transparent;
 }
 
-#logo::before {
+#logo {
     display: block;
-    content: var(--url)
+    content: var(--url);
+    max-height: 30px;
 }
 </style>
