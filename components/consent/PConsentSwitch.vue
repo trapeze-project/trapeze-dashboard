@@ -1,6 +1,6 @@
 <template>
   <v-sheet elevation="0" rounded class="consent-switch">
-    <v-switch v-model="active" />
+    <v-switch v-model="active" color="coporate" />
     <slot />
     <v-btn
       icon

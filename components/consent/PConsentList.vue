@@ -6,6 +6,7 @@
       style="width:50%; margin-left: auto"
       label="Search Policy"
       hide-details="auto"
+      color="coporate"
       clearable
     />
     <br>

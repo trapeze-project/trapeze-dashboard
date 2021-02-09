@@ -10,6 +10,7 @@
           label="Search"
           single-line
           hide-details
+          color="coporate"
         />
       </v-card-title>
       <v-data-table
