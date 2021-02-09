@@ -1,8 +1,8 @@
 <template>
   <v-app>
-    <v-navigation-drawer v-model="drawer" clipped app class="grey lighten-4">
+    <v-navigation-drawer v-model="drawer" clipped app color="accent">
       <v-list nav dense>
-        <v-list-item-group v-model="group" color="primary">
+        <v-list-item-group v-model="group" color="coporate">
           <v-list-item v-for="(link, index) in links" :key="index" :to="localePath(link.to)" exact>
             <v-list-item-icon>
               <v-icon>
@@ -14,8 +14,14 @@
         </v-list-item-group>
       </v-list>
     </v-navigation-drawer>
-    <v-app-bar clipped-left app>
-      <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
+    <v-app-bar clipped-left app color="coporate">
+      <v-app-bar-nav-icon color="white" @click.stop="drawer = !drawer" />
+      <v-spacer />
+      <div class="company-wrapper">
+        <Logo />
+        <b style="color: white"> {{ $config.logo.slogan.toUpperCase() }} </b>
+      </div>
+      <v-spacer />
     </v-app-bar>
     <v-main>
       <v-container fluid>
@@ -41,12 +47,15 @@ export default {
       { to: '/permissions', label: 'permissions', icon: 'gavel' }
     ],
     group: null
-  }),
-  watch: {
-    group () {
-      // eslint-disable-next-line spaced-comment
-      //this.drawer = false
-    }
-  }
+  })
 }
 </script>
+<style>
+.company-wrapper {
+  display: flex;
+  width: 95%;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: row nowrap;
+}
+</style>

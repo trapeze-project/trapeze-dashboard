@@ -5,7 +5,7 @@
     :disabled="disabled"
   >
     <div class="card-header">
-      <v-icon v-if="icon" color="primary" x-large>
+      <v-icon v-if="icon" color="coporate" x-large>
         {{ icon }}
       </v-icon>
       <div class="header-item">

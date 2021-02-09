@@ -17,7 +17,7 @@
     <v-card-actions>
       <v-spacer />
       <v-btn
-        color="primary"
+        color="coporate"
         text
         :to="href"
       >
