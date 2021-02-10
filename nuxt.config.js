@@ -71,6 +71,10 @@ export default {
   publicRuntimeConfig: {
     logo: Design.logo
   },
+  loading: {
+    color: Design.theme.light.primary,
+    height: '3px'
+  },
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
   }
