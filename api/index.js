@@ -1,4 +1,7 @@
+const fs = require('fs')
+const path = require('path')
 const express = require('express')
+const bodyParser = require('body-parser')
 
 const defaultMapping = require('./../mappings/DefaultViewMapping')
 const locationMapping = require('./../mappings/LocationViewMapping')
@@ -8,6 +11,12 @@ const movieMapping = require('./../mappings/MovieViewMapping')
 // eslint-disable-next-line import/order
 const formatter = require('../logic/index')({ mappings: [movieMapping, locationMapping, browserMapping], default: defaultMapping })
 const app = express()
+
+// parse application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: false }))
+
+// parse application/json
+app.use(bodyParser.json())
 
 app.get('/fetch', (req, res) => {
   if (req.query.original === 'true') {
@@ -24,6 +33,27 @@ app.get('/permissions', (req, res) => {
 
 app.get('/profile', (req, res) => {
   res.json(require('./../data/profile.json'))
+})
+
+app.get('/setup', (req, res) => {
+  res.json(require('./../design/design.config.json'))
+})
+
+app.put('/setup', (req, res) => {
+  // eslint-disable-next-line no-console
+  console.log(__dirname)
+  const desingPath = path.join(__dirname, '..', 'design', 'design.config.json')
+  // eslint-disable-next-line no-console
+  console.log(desingPath)
+  const data = JSON.stringify(req.body, null, 2)
+  fs.writeFile(desingPath, data, (err) => {
+    if (err) {
+      // eslint-disable-next-line no-console
+      console.log(err)
+      return res.status(400).send(err)
+    }
+    return res.status(200).send('succes')
+  })
 })
 
 module.exports = {
