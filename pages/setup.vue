@@ -26,11 +26,22 @@
           <v-subheader><b>LOGO</b></v-subheader>
           <v-divider />
           <br>
+          <small>Preview</small>
+          <div class="header-preview" :style="'background:'+ config.theme.light['coporate']">
+            <a id="logo" :style="cssVars" />
+            <v-spacer />
+            <b :style="'color:'+ config.theme.light['secondary']+';margin:10px;'"> {{ $config.logo.slogan.toUpperCase() }} </b>
+          </div>
+          <br>
           <v-text-field v-model="config.logo.url" label="Logo-Url" />
           <v-text-field
             v-model="config.logo.slogan"
             label="Slogan"
           />
+          <v-subheader><b>BACKGROUND</b></v-subheader>
+          <v-divider />
+          <br>
+          <v-text-field v-model="config.background.url" label="Background-Url" />
         </div>
         <br>
         <v-btn style="float: right;" color="primary" @click="commitChanges">
@@ -56,6 +67,13 @@ export default {
       type: 'success'
     }
   }),
+  computed: {
+    cssVars () {
+      return {
+        '--url': 'url(' + this.$config.logo.url + ')'
+      }
+    }
+  },
   methods: {
     commitChanges () {
       this.$axios.put('/api/setup', this.config).then((result) => {
@@ -69,6 +87,7 @@ export default {
       })
     }
   }
+
 }
 </script>
 
@@ -79,5 +98,23 @@ export default {
 }
 .color-picker {
     display: absolute;
+}
+a {
+    background-color: transparent;
+    margin: 10px;
+}
+
+#logo {
+    display: block;
+    content: var(--url);
+    max-height: 30px;
+}
+
+.header-preview {
+    height: 60px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-items: space-between;
+    align-items: center;
 }
 </style>

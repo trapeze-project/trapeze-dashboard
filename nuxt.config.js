@@ -70,7 +70,8 @@ export default {
     }
   },
   publicRuntimeConfig: {
-    logo: Design.logo
+    logo: Design.logo,
+    background: Design.background
   },
   loading: {
     color: Design.theme.light.primary,
