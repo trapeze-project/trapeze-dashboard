@@ -15,7 +15,7 @@
       </v-list>
     </v-navigation-drawer>
     <v-app-bar clipped-left app color="coporate">
-      <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
+      <v-app-bar-nav-icon color="secondary" @click.stop="drawer = !drawer" />
       <v-spacer />
       <div class="company-wrapper">
         <Logo />

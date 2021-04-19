@@ -16,40 +16,55 @@
       <v-list style="width: 60%">
         <br>
         <div>
-          <v-subheader><b>THEME</b></v-subheader>
-          <v-divider />
-          <div v-for="(item, key) in config.theme.light" :key="key">
-            <PColorPicker v-model="config.theme.light[key]">
-              {{ key+"-color" }}
-            </PColorPicker>
-          </div>
-          <v-subheader><b>HEADER</b></v-subheader>
-          <v-divider />
+          <PSitePreview :preview-config="config" style="position: sticky; top: 100px;z-index: 10" />
           <br>
-          <small>Preview</small>
-          <v-sheet class="header-preview" :style="'background:'+ config.theme.light['coporate']" elevation="4">
-            <a id="logo" :style="cssVars" />
-            <v-spacer />
-            <b :style="'color:'+ config.theme.light['secondary']+';margin:10px;'"> {{ config.logo.slogan.toUpperCase() }} </b>
-          </v-sheet>
+          <v-expansion-panels>
+            <v-expansion-panel>
+              <v-expansion-panel-header>
+                THEME
+              </v-expansion-panel-header>
+              <v-expansion-panel-content>
+                <div v-for="(item, key) in config.theme.light" :key="key">
+                  <PColorPicker v-model="config.theme.light[key]">
+                    {{ key+"-color" }}
+                  </PColorPicker>
+                </div>
+              </v-expansion-panel-content>
+            </v-expansion-panel>
+            <v-expansion-panel>
+              <v-expansion-panel-header>
+                HEADER
+              </v-expansion-panel-header>
+              <v-expansion-panel-content>
+                <v-text-field v-model="config.logo.url" label="Logo-Url" />
+                <v-text-field
+                  v-model="config.logo.slogan"
+                  label="Slogan"
+                />
+              </v-expansion-panel-content>
+            </v-expansion-panel>
+            <v-expansion-panel>
+              <v-expansion-panel-header>
+                FOOTER
+              </v-expansion-panel-header>
+              <v-expansion-panel-content>
+                <br>
+              </v-expansion-panel-content>
+            </v-expansion-panel>
+            <v-expansion-panel>
+              <v-expansion-panel-header>
+                BACKGROUND
+              </v-expansion-panel-header>
+              <v-expansion-panel-content>
+                <v-text-field v-model="config.background.url" label="Background-Url" />
+              </v-expansion-panel-content>
+            </v-expansion-panel>
+          </v-expansion-panels>
           <br>
-          <v-text-field v-model="config.logo.url" label="Logo-Url" />
-          <v-text-field
-            v-model="config.logo.slogan"
-            label="Slogan"
-          />
-          <v-subheader><b>FOOTER</b></v-subheader>
-          <v-divider />
-          <br>
-          <v-subheader><b>BACKGROUND</b></v-subheader>
-          <v-divider />
-          <br>
-          <v-text-field v-model="config.background.url" label="Background-Url" />
+          <v-btn style="float: right;" color="primary" @click="commitChanges">
+            Save
+          </v-btn>
         </div>
-        <br>
-        <v-btn style="float: right;" color="primary" @click="commitChanges">
-          Save
-        </v-btn>
       </v-list>
     </div>
   </div>
