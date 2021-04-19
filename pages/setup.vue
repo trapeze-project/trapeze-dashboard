@@ -23,21 +23,24 @@
               {{ key+"-color" }}
             </PColorPicker>
           </div>
-          <v-subheader><b>LOGO</b></v-subheader>
+          <v-subheader><b>HEADER</b></v-subheader>
           <v-divider />
           <br>
           <small>Preview</small>
-          <div class="header-preview" :style="'background:'+ config.theme.light['coporate']">
+          <v-sheet class="header-preview" :style="'background:'+ config.theme.light['coporate']" elevation="4">
             <a id="logo" :style="cssVars" />
             <v-spacer />
-            <b :style="'color:'+ config.theme.light['secondary']+';margin:10px;'"> {{ $config.logo.slogan.toUpperCase() }} </b>
-          </div>
+            <b :style="'color:'+ config.theme.light['secondary']+';margin:10px;'"> {{ config.logo.slogan.toUpperCase() }} </b>
+          </v-sheet>
           <br>
           <v-text-field v-model="config.logo.url" label="Logo-Url" />
           <v-text-field
             v-model="config.logo.slogan"
             label="Slogan"
           />
+          <v-subheader><b>FOOTER</b></v-subheader>
+          <v-divider />
+          <br>
           <v-subheader><b>BACKGROUND</b></v-subheader>
           <v-divider />
           <br>
