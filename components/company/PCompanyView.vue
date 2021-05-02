@@ -18,7 +18,9 @@
             <v-spacer />
             <div>
               <div v-if="item.adress">
-                {{ item.adress }}
+                <div v-for="adressPiece in item.adress.split(',')" :key="adressPiece">
+                  {{ adressPiece }}
+                </div>
               </div>
               <a v-if="item.href" :href="item.href">
                 {{ item.href }}
