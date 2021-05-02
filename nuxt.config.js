@@ -1,4 +1,5 @@
-import Design from './design/design.config'
+// eslint-disable-next-line nuxt/no-cjs-in-config
+const Design = require('./design/design.config.json')
 export default {
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
@@ -69,7 +70,8 @@ export default {
     }
   },
   publicRuntimeConfig: {
-    logo: Design.logo
+    logo: Design.logo,
+    background: Design.background
   },
   loading: {
     color: Design.theme.light.primary,
@@ -77,5 +79,6 @@ export default {
   },
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
-  }
+  },
+  watch: ['design']
 }

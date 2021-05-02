@@ -15,15 +15,15 @@
       </v-list>
     </v-navigation-drawer>
     <v-app-bar clipped-left app color="coporate">
-      <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
+      <v-app-bar-nav-icon color="secondary" @click.stop="drawer = !drawer" />
       <v-spacer />
       <div class="company-wrapper">
         <Logo />
-        <b style="color: white"> {{ $config.logo.slogan.toUpperCase() }} </b>
+        <b class="secondary--text"> {{ $config.logo.slogan.toUpperCase() }} </b>
       </div>
       <v-spacer />
     </v-app-bar>
-    <v-main>
+    <v-main class="main">
       <v-container fluid>
         <nuxt />
       </v-container>
@@ -47,7 +47,14 @@ export default {
       { to: '/permissions', label: 'permissions', icon: 'gavel' }
     ],
     group: null
-  })
+  }),
+  computed: {
+    cssVars () {
+      return {
+        '--url': 'url(' + this.$config.background.url + ')'
+      }
+    }
+  }
 }
 </script>
 <style>
@@ -57,5 +64,9 @@ export default {
   justify-content: space-between;
   align-items: center;
   flex-flow: row nowrap;
+}
+#app {
+  background: var(--url) no-repeat center center fixed !important;
+  background-size: cover;
 }
 </style>

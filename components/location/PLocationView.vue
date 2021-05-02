@@ -38,7 +38,7 @@
         order-xl="2"
       >
         <client-only>
-          <l-map ref="mymap" :zoom="zoom" :center="center" style="width: 100%;min-height:500px;">
+          <l-map ref="mymap" :zoom="zoom" :center="center" style="width: 100%;min-height:500px;z-index: 0">
             <l-tile-layer url="http://{s}.tile.osm.org/{z}/{x}/{y}.png" />
             <l-marker v-for="(item, index) in clientFilteredItems" :key="index" :lat-lng="[item.lat, item.lon]" />
           </l-map>
