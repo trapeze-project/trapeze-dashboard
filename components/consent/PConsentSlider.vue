@@ -2,7 +2,6 @@
   <div>
     <v-slider
       :value="calculateScore"
-      :tick-labels="consentLabels"
       :max="value.reduce((x,y) => x + y.consentRank,0)"
       :min="0"
       readonly
