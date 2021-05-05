@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1 class="title">
-      Activities
+      {{ $t('links.log') }}
     </h1>
     <v-divider />
     <br>

@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1 class="title">
-      Permissions
+      {{ $t('links.permissions') }}
     </h1>
     <v-divider />
 

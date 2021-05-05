@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1 class="title">
-      My Data
+      {{ $t('links.data') }}
     </h1>
     <v-divider />
     <div>

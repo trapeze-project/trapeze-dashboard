@@ -52,6 +52,10 @@
       }
     }
   },
+  "about": {
+    "provider": "Provider",
+    "controller": "Controller"
+  },
   "short": {
     "year": "numeric",
     "month": "short",

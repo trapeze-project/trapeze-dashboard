@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1 class="title">
-      My Profile
+      {{ $t('links.profile') }}
     </h1>
     <v-divider />
     <br>

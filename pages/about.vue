@@ -1,16 +1,26 @@
 <template>
   <div class="about">
     <h1 class="title">
-      About
+      {{ $t('links.about') }}
     </h1>
     <v-divider />
     <br>
-    <div v-for="(value, name) in companies" :key="name">
+    <div>
       <div class="title">
-        {{ name.charAt(0).toUpperCase() + name.slice(1) }}(s):
+        {{ $t('about.provider') }}(s):
       </div>
       <br>
-      <div v-for="(item, index) in value" :key="index">
+      <div v-for="(item, index) in companies.provider" :key="index">
+        <component :is="item.component" v-bind="item.data" />
+        <br>
+      </div>
+    </div>
+    <div>
+      <div class="title">
+        {{ $t('about.controller') }}(s):
+      </div>
+      <br>
+      <div v-for="(item, index) in companies.controller" :key="index">
         <component :is="item.component" v-bind="item.data" />
         <br>
       </div>
