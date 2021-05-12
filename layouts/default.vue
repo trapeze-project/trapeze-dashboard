@@ -19,7 +19,7 @@
       <v-spacer />
       <div class="company-wrapper">
         <Logo />
-        <b class="secondary--text"> {{ $config.logo.slogan.toUpperCase() }} </b>
+        <b class="secondary--text d-none d-sm-inline d-md-inline d-lg-inline"> {{ $config.logo.slogan.toUpperCase() }} </b>
       </div>
       <v-spacer />
     </v-app-bar>

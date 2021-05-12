@@ -6,24 +6,26 @@
       <div class="header-preview">
         <a id="logo" :style="cssVars" />
         <v-spacer />
-        <b :style="'color:'+ previewConfig.theme.light['secondary']+';margin:10px;'"> {{ previewConfig.logo.slogan.toUpperCase() }} </b>
+        <b :style="'color:'+ previewConfig.theme.light['secondary']+';margin:10px;'" class="secondary--text d-none d-md-inline d-lg-inline"> {{ previewConfig.logo.slogan.toUpperCase() }} </b>
       </div>
       <v-spacer />
     </v-app-bar>
-    <v-navigation-drawer v-model="drawer" style="width: 30%" clipped :color="previewConfig.theme.light.accent">
-      <v-list nav dense>
-        <v-list-item-group v-model="group" :color="previewConfig.theme.light.primary">
-          <v-list-item v-for="(link, index) in links" :key="index" :to="localePath(link.to)" exact>
-            <v-list-item-icon>
-              <v-icon>
-                {{ link.icon }}
-              </v-icon>
-            </v-list-item-icon>
-            <v-list-item-title>{{ $t('links.'+link.label) }}</v-list-item-title>
-          </v-list-item>
-        </v-list-item-group>
-      </v-list>
-    </v-navigation-drawer>
+    <div style="width:100%;margin:0;padding:0">
+      <v-col style="margin:0;padding:0" cols="7" sm="6" lg="4" xl="4">
+        <v-list nav dense clipped :color="previewConfig.theme.light.accent">
+          <v-list-item-group v-model="group" :color="previewConfig.theme.light.primary">
+            <v-list-item v-for="(link, index) in links" :key="index" :to="localePath(link.to)" exact>
+              <v-list-item-icon>
+                <v-icon>
+                  {{ link.icon }}
+                </v-icon>
+              </v-list-item-icon>
+              <v-list-item-title>{{ $t('links.'+link.label) }}</v-list-item-title>
+            </v-list-item>
+          </v-list-item-group>
+        </v-list>
+      </v-col>
+    </div>
   </v-sheet>
 </template>
 
@@ -36,7 +38,6 @@ export default {
     }
   },
   data: () => ({
-    drawer: true,
     links: [
       { label: 'home', icon: 'home' },
       { label: 'profile', icon: 'account_circle' },

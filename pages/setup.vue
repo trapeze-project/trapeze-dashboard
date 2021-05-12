@@ -16,7 +16,7 @@
       <v-list style="width: 60%">
         <br>
         <div>
-          <PSitePreview :preview-config="config" style="position: sticky; top: 100px;z-index: 10" />
+          <PSitePreview :preview-config="config" />
           <br>
           <v-expansion-panels>
             <v-expansion-panel>
