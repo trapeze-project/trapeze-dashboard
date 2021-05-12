@@ -37,7 +37,7 @@
 <script>
 export default {
   data: () => ({
-    drawer: true,
+    drawer: false,
     links: [
       { to: '/', label: 'home', icon: 'home' },
       { to: '/profile', label: 'profile', icon: 'account_circle' },

@@ -6,9 +6,9 @@
         lg="6"
         xl="6"
         sm="12"
-        xs="12"
+        cols="12"
         order-md="2"
-        order-xs="2"
+        order="2"
         order-sm="2"
         order-lg="1"
         order-xl="1"
@@ -30,15 +30,15 @@
         lg="6"
         xl="6"
         sm="12"
-        xs="12"
+        cols="12"
         order-md="1"
-        order-xs="1"
+        order="1"
         order-sm="1"
         order-lg="2"
         order-xl="2"
       >
         <client-only>
-          <l-map ref="mymap" :zoom="zoom" :center="center" style="width: 100%;min-height:500px;z-index: 0">
+          <l-map ref="mymap" :zoom="zoom" :center="center" style="width: 100%;min-height:300px;z-index: 0">
             <l-tile-layer url="http://{s}.tile.osm.org/{z}/{x}/{y}.png" />
             <l-marker v-for="(item, index) in clientFilteredItems" :key="index" :lat-lng="[item.lat, item.lon]" />
           </l-map>

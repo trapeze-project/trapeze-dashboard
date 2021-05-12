@@ -3,16 +3,30 @@
     <div style="padding: 10px">
       <v-card-title>
         {{ dataType }}s
-        <v-spacer />
-        <v-text-field
-          v-model="search"
-          append-icon="mdi-magnify"
-          label="Search"
-          single-line
-          hide-details
-          color="primary"
-        />
       </v-card-title>
+      <v-row>
+        <v-col
+          cols="10"
+          sm="10"
+          md="5"
+          lg="5"
+          xl="5"
+          style="width:100%"
+          offset="1"
+          offset-md="7"
+          offset-lg="7"
+        >
+          <v-text-field
+            v-model="search"
+            append-icon="mdi-magnify"
+            label="Search"
+            single-line
+            hide-details
+            color="primary"
+          />
+        </v-col>
+      </v-row>
+      <br>
       <v-data-table
         :headers="headers"
         :items="clientFilteredItems"

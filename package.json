@@ -22,6 +22,7 @@
     "nuxt-i18n": "^6.17.0",
     "nuxt-leaflet": "0.0.25",
     "vue-calendar-heatmap": "^0.8.4",
+    "vue-resize-text": "^0.1.1",
     "vue-tippy": "^4.10.0"
   },
   "devDependencies": {

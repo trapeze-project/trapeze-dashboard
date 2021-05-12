@@ -12,20 +12,24 @@
         <div v-for="(item,i) in info" :key="i">
           <v-divider />
           <v-list-item>
-            <div>
-              <v-list-item-title v-text="item.key" />
-            </div>
-            <v-spacer />
-            <div>
-              <div v-if="item.adress">
-                <div v-for="adressPiece in item.adress.split(',')" :key="adressPiece">
-                  {{ adressPiece }}
+            <v-row>
+              <v-col cols="12" md="6">
+                <v-list-item-title v-text="item.key" />
+              </v-col>
+              <v-col>
+                <address v-if="item.adress">
+                  <div v-for="adressPiece in item.adress.split(',')" :key="adressPiece">
+                    {{ adressPiece }}
+                  </div>
+                </address>
+                <a v-else-if="item.href" :href="item.href">
+                  {{ item.href }}
+                </a>
+                <div v-else>
+                  -------
                 </div>
-              </div>
-              <a v-if="item.href" :href="item.href">
-                {{ item.href }}
-              </a>
-            </div>
+              </v-col>
+            </v-row>
           </v-list-item>
         </div>
       </v-list>

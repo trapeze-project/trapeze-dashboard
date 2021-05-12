@@ -5,11 +5,11 @@
     :disabled="disabled"
   >
     <div class="card-header">
-      <v-icon v-if="icon" color="primary" x-large>
+      <v-icon v-if="icon" color="primary" x-large class="d-none d-sm-inline">
         {{ icon }}
       </v-icon>
       <div class="header-item">
-        <v-card-title class="title">
+        <v-card-title v-resize-text class="title">
           {{ title }}
         </v-card-title>
 
@@ -77,11 +77,11 @@ export default {
     justify-content: space-between;
     align-items: center;
     margin: 0;
-    padding: 0px 15px;
+    padding: 0px 6px;
 }
 .header-item {
     flex: 1;
-    margin: 0 0 0 10px;
+    margin: 0 0 0 2px;
     padding: 0;
 }
 
