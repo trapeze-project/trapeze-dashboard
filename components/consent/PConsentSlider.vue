@@ -11,11 +11,14 @@
         <i>high</i>
       </small>
     </div>
+    <div style="width:100%;display:flex;flex-flow:row nowwrap;align-items:center;justify-content:center;">
+      <v-progress-linear
+        style="width:70vw;"
+        :value="(calculateScore/value.reduce((x,y) => x + y.consentRank,0))*100"
+        rounded
+      />
+    </div>
 
-    <v-progress-linear
-      :value="(calculateScore/value.reduce((x,y) => x + y.consentRank,0))*100"
-      rounded
-    />
     <v-row>
       <v-col lg="6" xl="6" md="6" sm="12" xs="12">
         <v-card
