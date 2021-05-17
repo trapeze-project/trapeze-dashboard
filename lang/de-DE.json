@@ -1,0 +1,75 @@
+{
+  "links": {
+    "home": "Home",
+    "profile": "Mein Profil",
+    "about": "About",
+    "data": "Meine Daten",
+    "log": "Meine Activitäts Log",
+    "permissions": "Meine Berechtigungen"
+  },
+  "home": {
+    "title": "Home",
+    "items": {
+      "0": {
+        "title": "Untersuchen Sie die Daten, die Sie uns zur Verfügung stellen.",
+        "filename": "/derived-data.svg",
+        "content": "Um diesen Dienst nutzen zu können, mussten Sie eingige Information zu Ihrer Person preisgeben.",
+        "list": {
+          "listHeader": "Informationen könnten sein:",
+          "items": {
+            "0": "Email-Addresse, Benutzername and Passwort.",
+            "1": "Name und Anschrift.",
+            "2": "Geburtsdatum.",
+            "3": "Kontoinformationen"
+          }
+        }
+      },
+      "1": {
+        "title": "Untersuchen Sie welche Daten wir verarbeiten, während Sie diesen Dienst nutzen.",
+        "filename": "/service-data.svg",
+        "content": "Wenn Sie diesen Dienst nutzen und mit seinen Eigenschaften interagieren, entstehen Nutzungsdaten, welche von uns verarbeitet werden. Möglicherweise nutzen wir auch andere Datenquellen. Informieren Sie sich über diese Übersicht.",
+        "list": {
+          "listHeader": "Ihre personenbezogenen Daten könnten sein:",
+          "items": {
+            "0": "processed when using this service.",
+            "1": "obtained from other sources, e.g. services if you gave us permission.",
+            "2": "derived from your personal data."
+          }
+        }
+      },
+      "2": {
+        "title": "Understand what you agreed with!",
+        "filename": "/permissions.svg",
+        "content": "Terms and conditions, privacy policies and notices over notices, you dutifully agreed. Understand what you agree with and express your disagreement when necessary.",
+        "list": {
+          "listHeader": "This dashboard allows you to:",
+          "items": {
+            "0": "... disagree with certain processing practices, while still being able to use the service.",
+            "1": "... give permission to process your personal data.",
+            "2": "... revoke permission to process your personal data."
+          }
+        }
+      }
+    }
+  },
+  "about": {
+    "provider": "Anbieter",
+    "controller": "Regler"
+  },
+  "permissions": {
+    "advanced-button": "fortgeschritten"
+  },
+  "short": {
+    "year": "numeric",
+    "month": "short",
+    "day": "numeric"
+  },
+  "long": {
+    "year": "numeric",
+    "month": "short",
+    "day": "numeric",
+    "weekday": "short",
+    "hour": "numeric",
+    "minute": "numeric"
+  }
+}

@@ -53,8 +53,27 @@ export default {
             code: 'en',
             name: 'English',
             file: 'en-US.json'
+          },
+          {
+            code: 'de',
+            name: 'German',
+            file: 'de-DE.json'
+          },
+          {
+            code: 'it',
+            name: 'Italian',
+            file: 'it-IT.json'
+          },
+          {
+            code: 'fr',
+            name: 'French',
+            file: 'fr-FR.json'
           }
-        ]
+        ],
+        detectBrowserLanguage: {
+          useCookie: true,
+          alwaysRedirect: true
+        }
       }
     ]
   ],
