@@ -1,8 +1,5 @@
 <template>
   <div>
-    <v-subheader><b>Data Permissions</b></v-subheader>
-    <v-divider />
-    <br>
     <div class="consent-container">
       <PConsentIconButton
         v-for="item in value"

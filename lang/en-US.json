@@ -56,6 +56,9 @@
     "provider": "Provider",
     "controller": "Controller"
   },
+  "permissions": {
+    "advanced-button": "advanced"
+  },
   "short": {
     "year": "numeric",
     "month": "short",

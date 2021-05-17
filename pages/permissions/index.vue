@@ -4,24 +4,20 @@
       {{ $t('links.permissions') }}
     </h1>
     <v-divider />
-
     <br>
     <PConsentOverview v-model="consentSwitches" />
     <br>
     <PConsentSlider v-model="consentSwitches" :services="services" />
-    <!--<div class="permission-container">
-      <PConsentList :consents="consents" />
-    </div>-->
+    <v-row style="padding: 0 15px">
+      <v-spacer />
+      <v-btn color="primary" :href="localePath('/permissions/advanced')">
+        {{ $t('permissions.advanced-button') }}
+      </v-btn>
+    </v-row>
   </div>
 </template>
 <script>
 export default {
-  async asyncData ({ $axios }) {
-    const result = await $axios.$get('/api/permissions')
-    return {
-      consents: result
-    }
-  },
   data: () => ({
     consentSwitches: [
       { icon: 'mdi-map-marker', value: true, description: 'Location history', consentRank: 5, share: 'We can collect your location history and use it for anlyzing your actions etc.' },
@@ -42,9 +38,3 @@ export default {
   })
 }
 </script>
-<style scoped>
-.permission-container {
-  display: flex;
-  justify-content: center;
-}
-</style>
