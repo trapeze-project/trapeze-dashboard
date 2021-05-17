@@ -1,21 +1,21 @@
 <template>
   <div>
-    <v-slider
-      :value="calculateScore"
-      :max="value.reduce((x,y) => x + y.consentRank,0)"
-      :min="0"
-      readonly
-      step="1"
-    >
-      <template v-slot:prepend>
-        <v-subheader>min</v-subheader>
-      </template>
+    <div style="text-align:center">
+      <small v-if="(calculateScore/value.reduce((x,y) => x + y.consentRank,0))*100<25">
+        <i>low</i>
+      </small>
+      <small v-else-if="(calculateScore/value.reduce((x,y) => x + y.consentRank,0))*100<60">
+        <i>medium</i>
+      </small>
+      <small v-else>
+        <i>high</i>
+      </small>
+    </div>
 
-      <template v-slot:append>
-        <v-subheader>max</v-subheader>
-      </template>
-    </v-slider>
-
+    <v-progress-linear
+      :value="(calculateScore/value.reduce((x,y) => x + y.consentRank,0))*100"
+      rounded
+    />
     <v-row>
       <v-col lg="6" xl="6" md="6" sm="12" xs="12">
         <v-card
