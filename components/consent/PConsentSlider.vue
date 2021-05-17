@@ -20,7 +20,7 @@
     </div>
 
     <v-row>
-      <v-col lg="6" xl="6" md="6" sm="12" xs="12">
+      <v-col lg="6" xl="6" md="6" sm="12" cols="12">
         <v-card
           elevation="2"
         >
@@ -49,7 +49,7 @@
           </v-card-text>
         </v-card>
       </v-col>
-      <v-col lg="6" xl="6" md="6" sm="12" xs="12">
+      <v-col lg="6" xl="6" md="6" sm="12" cols="12">
         <v-card
           elevation="2"
         >
