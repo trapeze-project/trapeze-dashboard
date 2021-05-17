@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1 class="title">
-      {{ $t('links.permissions') }}
+      {{ $t('permissions.advanced-button').charAt(0).toUpperCase() + $t('permissions.advanced-button').slice(1) }}
     </h1>
     <v-divider />
     <div class="permission-container">
