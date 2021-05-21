@@ -78,7 +78,23 @@ export default {
     ]
   ],
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
-  axios: {},
+  axios: {
+    baseURL: 'http://localhost:3000'
+  },
+
+  publicRuntimeConfig: {
+    axios: {
+      browserBaseURL: process.env.BROWSER_BASE_URL
+    },
+    logo: Design.logo,
+    background: Design.background
+  },
+
+  privateRuntimeConfig: {
+    axios: {
+      baseURL: process.env.BASE_URL
+    }
+  },
   // Vuetify module configuration (https://go.nuxtjs.dev/config-vuetify)
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
@@ -87,10 +103,6 @@ export default {
         light: Design.theme.light
       }
     }
-  },
-  publicRuntimeConfig: {
-    logo: Design.logo,
-    background: Design.background
   },
   loading: {
     color: Design.theme.light.primary,
