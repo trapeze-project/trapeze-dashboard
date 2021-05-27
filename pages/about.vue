@@ -30,6 +30,7 @@
 
 <script>
 export default {
+  middleware: ['auth'],
   asyncData () {
     return { companies: require('@/data/about.json') }
   }

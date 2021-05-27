@@ -12,7 +12,9 @@
   },
   "dependencies": {
     "@ashwamegh/vue-link-preview": "^0.2.5",
+    "@nuxtjs/auth-next": "*",
     "@nuxtjs/axios": "^5.12.4",
+    "@nuxtjs/proxy": "^2.1.0",
     "body-parser": "^1.19.0",
     "core-js": "^3.6.5",
     "grabity": "^1.0.5",

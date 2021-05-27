@@ -43,6 +43,8 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+    '@nuxtjs/proxy',
+    '@nuxtjs/auth-next',
     'nuxt-leaflet',
     ['nuxt-i18n',
       {
@@ -79,20 +81,63 @@ export default {
   ],
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
   axios: {
-    baseURL: 'http://localhost:3000'
+    baseURL: 'https://test.backend.trapeze.raschke.cc',
+    proxyHeaders: false,
+    credentials: false
+    // proxy: true
   },
-
+  /* proxy: {
+    '/api/': {
+      target: process.env.BASE_URL,
+      pathRewrite: {
+        '^/api/': '/api/'
+      }
+    }
+  }, */
+  auth: {
+    redirect: {
+      login: '/login',
+      logout: '/',
+      callback: '/login',
+      home: '/'
+    },
+    strategies: {
+      local: {
+        token: {
+          property: 'token'
+          // required: true,
+          // type: 'Bearer'
+        },
+        user: {
+          property: 'user'
+          // autoFetch: true
+        },
+        endpoints: {
+          login: { url: '/auth/login/', method: 'post' },
+          logout: { url: '/auth/logout/', method: 'get' },
+          user: { url: '/users/', method: 'get' }
+        }
+      }
+    }
+    // plugins: ['@/plugins/config-url-auth.js']
+  },
   publicRuntimeConfig: {
     axios: {
-      browserBaseURL: process.env.BROWSER_BASE_URL
+      browserBaseURL: 'https://test.backend.trapeze.raschke.cc',
+      proxyHeaders: false,
+      credentials: false,
+      proxy: true
     },
     logo: Design.logo,
-    background: Design.background
+    background: Design.background,
+    authApiUrl: process.env.BASE_AUTH_URL
   },
-
   privateRuntimeConfig: {
     axios: {
-      baseURL: process.env.BASE_URL
+      baseURL: 'https://test.backend.trapeze.raschke.cc',
+      proxyHeaders: false,
+      credentials: false,
+      proxy: true
     }
   },
   // Vuetify module configuration (https://go.nuxtjs.dev/config-vuetify)
