@@ -12,8 +12,9 @@
 
 <script>
 export default {
-  async asyncData ({ $axios }) {
-    const result = await $axios.$get('/api/permissions')
+  middleware: ['auth'],
+  async asyncData ({ $axiosbase }) {
+    const result = await $axiosbase.$get('/api/permissions')
     return {
       consents: result
     }

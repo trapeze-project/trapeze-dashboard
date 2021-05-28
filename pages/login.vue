@@ -40,26 +40,12 @@ export default {
 
   }),
   methods: {
+    middleware: ['auth'],
     async userLogin () {
-      /* const response = await this.$axios.$post('/auth/login', {
-        username: 'henry',
-        password: '12341234'
-      })
-      // eslint-disable-next-line no-console
-      console.log(response)
-      const response1 = await this.$axios.$get('https://test.backend.trapeze.raschke.cc/users')
-      // eslint-disable-next-line no-console
-      console.log(response1) */
       try {
         // use strategy cookie instead of local
-        const response = await this.$auth.loginWith('cookie', { data: this.login }) 
+        await this.$auth.loginWith('cookie', { data: this.login })
         // eslint-disable-next-line no-console
-        console.log(response)
-
-        // retrieves all users now
-        const response1 = await this.$axios.$get('/users')
-        // eslint-disable-next-line no-console
-        console.log(response1)
       } catch (err) {
         // eslint-disable-next-line no-console
         console.log(err)

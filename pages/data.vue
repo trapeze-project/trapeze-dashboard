@@ -42,8 +42,9 @@
 </template>
 <script>
 export default {
-  async asyncData ({ $axios }) {
-    const result = await $axios.$get('/api/fetch')
+  middleware: ['auth'],
+  async asyncData ({ $axiosbase }) {
+    const result = await $axiosbase.$get('/api/fetch')
     return {
       components: result.components
     }

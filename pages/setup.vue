@@ -72,8 +72,9 @@
 
 <script>
 export default {
-  async asyncData ({ $axios }) {
-    const result = await $axios.$get('/api/setup')
+  middleware: ['auth'],
+  async asyncData ({ $axiosbase }) {
+    const result = await $axiosbase.$get('/api/setup')
     return {
       config: result
     }
@@ -94,7 +95,7 @@ export default {
   },
   methods: {
     commitChanges () {
-      this.$axios.put('/api/setup', this.config).then((result) => {
+      this.$axiosbase.put('/api/setup', this.config).then((result) => {
         this.alert.show = true
         this.alert.msg = 'Design changes have been changed'
         this.alert.type = 'success'

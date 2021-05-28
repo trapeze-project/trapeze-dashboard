@@ -25,7 +25,8 @@ export default {
   plugins: [
     '~/plugins/materialicons.js',
     '~/plugins/company-view.js',
-    '~/plugins/link-preview.client.js'
+    '~/plugins/link-preview.client.js',
+    '@/plugins/axios-plugin.js'
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
@@ -81,40 +82,25 @@ export default {
   ],
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
   axios: {
-    baseURL: 'https://test.backend.trapeze.raschke.cc', // TODO: configure in .env
+    baseURL: process.env.BASE_URL, // TODO: configure in .env
     proxyHeaders: false,
-    // credentials must be set to true in order for axios 
-    // to use cookies in subsequent requests 
-    credentials: true,
-    // proxy: true
+    // credentials must be set to true in order for axios
+    // to use cookies in subsequent requests
+    credentials: false
   },
-  /* proxy: {
-    '/api/': {
-      target: process.env.BASE_URL,
-      pathRewrite: {
-        '^/api/': '/api/'
-      }
-    }
-  }, */
   auth: {
-    redirect: {
-      login: '/login',
-      logout: '/',
-      callback: '/login',
-      home: '/'
-    },
     strategies: {
       // replaced strategy local with cookie
       // nothing else needed
       cookie: {
         user: {
-          property: 'user'
-          // autoFetch: true
+          property: false // <--- Default "user"
+          //   autoFetch: true
         },
         endpoints: {
-          login: { url: '/auth/login/', method: 'post' },
-          logout: { url: '/auth/logout/', method: 'get' },
-          user: { url: '/users/', method: 'get' }
+          login: { url: process.env.BASE_AUTH_URL_DEV + '/auth/login/', method: 'post', withCredentials: true },
+          logout: { url: process.env.BASE_AUTH_URL_DEV + '/auth/logout/', method: 'get', withCredentials: true },
+          user: { url: process.env.BASE_AUTH_URL_DEV + '/users/60b0ece95b286357ea85f751/', method: 'get', withCredentials: true }
         }
       }
     }
@@ -123,25 +109,10 @@ export default {
   // TODO:  check if config is necessary
   //        can't even tell when this is used
   publicRuntimeConfig: {
-    axios: {
-      browserBaseURL: 'https://test.backend.trapeze.raschke.cc', // TODO: configure in .env
-      proxyHeaders: false,
-      // must be set to true
-      credentials: true,
-      proxy: true
-    },
     logo: Design.logo,
     background: Design.background,
-    authApiUrl: process.env.BASE_AUTH_URL
-  },
-  // TODO: see publicRuntimeConfig
-  privateRuntimeConfig: {
-    axios: {
-      baseURL: 'https://test.backend.trapeze.raschke.cc',
-      proxyHeaders: false,
-      credentials: true,
-      proxy: true
-    }
+    authApiUrl: process.env.BASE_AUTH_URL_DEV,
+    baseURL: process.env.BASE_URL
   },
   // Vuetify module configuration (https://go.nuxtjs.dev/config-vuetify)
   vuetify: {

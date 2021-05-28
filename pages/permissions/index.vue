@@ -18,6 +18,7 @@
 </template>
 <script>
 export default {
+  middleware: ['auth'],
   data: () => ({
     consentSwitches: [
       { icon: 'mdi-map-marker', value: true, description: 'Location history', consentRank: 5, share: 'We can collect your location history and use it for anlyzing your actions etc.' },

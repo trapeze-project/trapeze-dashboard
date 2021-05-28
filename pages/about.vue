@@ -1,5 +1,6 @@
 <template>
   <div class="about">
+    {{ $auth.user }}
     <h1 class="title">
       {{ $t('links.about') }}
     </h1>
