@@ -51,9 +51,15 @@ export default {
       // eslint-disable-next-line no-console
       console.log(response1) */
       try {
-        const response = await this.$auth.loginWith('local', { data: this.login })
+        // use strategy cookie instead of local
+        const response = await this.$auth.loginWith('cookie', { data: this.login }) 
         // eslint-disable-next-line no-console
         console.log(response)
+
+        // retrieves all users now
+        const response1 = await this.$axios.$get('/users')
+        // eslint-disable-next-line no-console
+        console.log(response1)
       } catch (err) {
         // eslint-disable-next-line no-console
         console.log(err)

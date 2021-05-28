@@ -81,9 +81,11 @@ export default {
   ],
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
   axios: {
-    baseURL: 'https://test.backend.trapeze.raschke.cc',
+    baseURL: 'https://test.backend.trapeze.raschke.cc', // TODO: configure in .env
     proxyHeaders: false,
-    credentials: false
+    // credentials must be set to true in order for axios 
+    // to use cookies in subsequent requests 
+    credentials: true,
     // proxy: true
   },
   /* proxy: {
@@ -102,12 +104,9 @@ export default {
       home: '/'
     },
     strategies: {
-      local: {
-        token: {
-          property: 'token'
-          // required: true,
-          // type: 'Bearer'
-        },
+      // replaced strategy local with cookie
+      // nothing else needed
+      cookie: {
         user: {
           property: 'user'
           // autoFetch: true
@@ -121,22 +120,26 @@ export default {
     }
     // plugins: ['@/plugins/config-url-auth.js']
   },
+  // TODO:  check if config is necessary
+  //        can't even tell when this is used
   publicRuntimeConfig: {
     axios: {
-      browserBaseURL: 'https://test.backend.trapeze.raschke.cc',
+      browserBaseURL: 'https://test.backend.trapeze.raschke.cc', // TODO: configure in .env
       proxyHeaders: false,
-      credentials: false,
+      // must be set to true
+      credentials: true,
       proxy: true
     },
     logo: Design.logo,
     background: Design.background,
     authApiUrl: process.env.BASE_AUTH_URL
   },
+  // TODO: see publicRuntimeConfig
   privateRuntimeConfig: {
     axios: {
       baseURL: 'https://test.backend.trapeze.raschke.cc',
       proxyHeaders: false,
-      credentials: false,
+      credentials: true,
       proxy: true
     }
   },
@@ -158,6 +161,6 @@ export default {
   },
   watch: ['design'],
   server: {
-    host: '0.0.0.0'
+    host: '0.0.0.0' // TODO: remove and configure when running like `-> HOST=0 PORT=3000 npm run dev
   }
 }
