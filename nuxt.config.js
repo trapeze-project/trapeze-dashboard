@@ -1,3 +1,4 @@
+/* eslint-disable eqeqeq */
 // eslint-disable-next-line nuxt/no-cjs-in-config
 const Design = require('./design/design.config.json')
 export default {
@@ -25,8 +26,7 @@ export default {
   plugins: [
     '~/plugins/materialicons.js',
     '~/plugins/company-view.js',
-    '~/plugins/link-preview.client.js',
-    '@/plugins/axios-plugin.js'
+    '~/plugins/link-preview.client.js'
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
@@ -40,9 +40,7 @@ export default {
     '@nuxtjs/vuetify'
   ],
 
-  // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
-    // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     '@nuxtjs/proxy',
     '@nuxtjs/auth-next',
@@ -50,6 +48,7 @@ export default {
     ['nuxt-i18n',
       {
         lazy: true,
+        defaultLocale: 'en',
         langDir: 'lang/',
         locales: [
           {
@@ -82,20 +81,22 @@ export default {
   ],
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
   axios: {
-    baseURL: process.env.BASE_URL, // TODO: configure in .env
+    baseURL: process.env.BASE_URL,
     proxyHeaders: false,
-    // credentials must be set to true in order for axios
-    // to use cookies in subsequent requests
     credentials: false
   },
   auth: {
+    redirect: {
+      login: '/login',
+      logout: '/login',
+      callback: '/login',
+      home: '/'
+    },
     strategies: {
-      // replaced strategy local with cookie
-      // nothing else needed
       cookie: {
         user: {
-          property: false // <--- Default "user"
-          //   autoFetch: true
+          property: false,
+          autoFetch: true
         },
         endpoints: {
           login: { url: process.env.BASE_AUTH_URL_DEV + '/auth/login/', method: 'post', withCredentials: true },
@@ -104,17 +105,13 @@ export default {
         }
       }
     }
-    // plugins: ['@/plugins/config-url-auth.js']
   },
-  // TODO:  check if config is necessary
-  //        can't even tell when this is used
   publicRuntimeConfig: {
     logo: Design.logo,
     background: Design.background,
     authApiUrl: process.env.BASE_AUTH_URL_DEV,
     baseURL: process.env.BASE_URL
   },
-  // Vuetify module configuration (https://go.nuxtjs.dev/config-vuetify)
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
     theme: {
@@ -132,6 +129,7 @@ export default {
   },
   watch: ['design'],
   server: {
-    host: '0.0.0.0' // TODO: remove and configure when running like `-> HOST=0 PORT=3000 npm run dev
+    host: process.env.ENVIRONMENT == 'production' ? process.env.HOST : '0.0.0.0',
+    port: process.env.ENVIRONMENT == 'production' ? process.env.PORT : 3000
   }
 }

@@ -1,6 +1,5 @@
 <template>
   <div id="index">
-    {{ $auth.loggedIn }}
     <h1 class="title">
       {{ $t('home.title') }}
     </h1>
@@ -32,5 +31,6 @@
 
 <script>
 export default {
+  middleware: ['auth']
 }
 </script>

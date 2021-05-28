@@ -12,8 +12,8 @@
 <script>
 export default {
   middleware: ['auth'],
-  async asyncData ({ $axiosbase }) {
-    const result = await $axiosbase.$get('/api/profile')
+  async asyncData ({ $axios }) {
+    const result = await $axios.$get('/api/profile')
     return {
       items: result
     }

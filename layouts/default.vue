@@ -19,32 +19,38 @@
       <v-spacer />
       <div class="company-wrapper">
         <Logo />
-        <div>
-          <b class="secondary--text d-none d-sm-inline d-md-inline d-lg-inline" style="margin-right: 10px;"> {{ $config.logo.slogan.toUpperCase() }} </b>
-          <v-menu offset-y>
-            <template v-slot:activator="{ on, attrs }">
-              <v-btn
-                color="primary"
-                dark
-                outlined
-                elevation="0"
-                v-bind="attrs"
-                v-on="on"
-              >
-                {{ $i18n.locale }}
-              </v-btn>
-            </template>
-            <v-list>
-              <v-list-item
-                v-for="(locale) in availableLocales"
-                :key="locale.code"
-              >
-                <nuxt-link style="text-decoration: none;" :to="switchLocalePath(locale.code)">
-                  {{ locale.name }}
-                </nuxt-link>
-              </v-list-item>
-            </v-list>
-          </v-menu>
+        <div class="d-flex flex-row align-center justify-center">
+          <div>
+            <b class="secondary--text d-none d-sm-inline d-md-inline d-lg-inline" style="margin-right: 10px;"> {{ $config.logo.slogan.toUpperCase() }} </b>
+
+            <v-menu offset-y>
+              <template v-slot:activator="{ on, attrs }">
+                <v-btn
+                  color="primary"
+                  dark
+                  outlined
+                  elevation="0"
+                  v-bind="attrs"
+                  v-on="on"
+                >
+                  {{ $i18n.locale }}
+                </v-btn>
+              </template>
+              <v-list>
+                <v-list-item
+                  v-for="(locale) in availableLocales"
+                  :key="locale.code"
+                >
+                  <nuxt-link style="text-decoration: none;" :to="switchLocalePath(locale.code)">
+                    {{ locale.name }}
+                  </nuxt-link>
+                </v-list-item>
+              </v-list>
+            </v-menu>
+          </div>
+          <v-btn color="primary" class="ml-2" @click="logout">
+            Logout
+          </v-btn>
         </div>
       </div>
       <v-spacer />
@@ -82,6 +88,11 @@ export default {
     },
     availableLocales () {
       return this.$i18n.locales.filter(i => i.code !== this.$i18n.locale)
+    }
+  },
+  methods: {
+    async logout () {
+      await this.$auth.logout()
     }
   }
 }

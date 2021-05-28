@@ -59,6 +59,12 @@
   "permissions": {
     "advanced-button": "fortgeschritten"
   },
+  "login": {
+    "username": "Benutzername",
+    "password": "Passwort",
+    "login": "Einloggen",
+    "loginTitle": " Loggen Sie sich in Ihr Dashboard ein."
+  },
   "short": {
     "year": "numeric",
     "month": "short",

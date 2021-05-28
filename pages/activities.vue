@@ -13,8 +13,8 @@
 <script>
 export default {
   middleware: ['auth'],
-  async asyncData ({ $axiosbase }) {
-    const result = await $axiosbase.$get('/api/fetch?original=true')
+  async asyncData ({ $axios }) {
+    const result = await $axios.$get('/api/fetch?original=true')
     return {
       activities: result
     }

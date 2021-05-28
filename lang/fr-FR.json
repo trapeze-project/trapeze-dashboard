@@ -59,6 +59,12 @@
   "permissions": {
     "advanced-button": "advanced"
   },
+  "login": {
+    "username": "username",
+    "password": "password",
+    "login": "login",
+    "loginTitle": " Log into your dashboard."
+  },
   "short": {
     "year": "numeric",
     "month": "short",
