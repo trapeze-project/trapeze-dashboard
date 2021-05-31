@@ -7,11 +7,6 @@
         xl="6"
         sm="12"
         cols="12"
-        order-md="2"
-        order="2"
-        order-sm="2"
-        order-lg="1"
-        order-xl="1"
       >
         <div class="d-flex flex-column flex-nowrap" style="height: 100%">
           <div style="flex:1" />
