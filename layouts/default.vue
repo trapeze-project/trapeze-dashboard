@@ -89,6 +89,9 @@ export default {
       return this.$i18n.locales.filter(i => i.code !== this.$i18n.locale)
     }
   },
+  async mounted () {
+    await this.$auth.fetchUser()
+  },
   methods: {
     async logout () {
       await this.$auth.logout()
