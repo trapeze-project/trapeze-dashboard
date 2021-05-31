@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="consent-container">
+    <div class="d-flex flex-row align-center justify-center" style="width: 100%">
       <PConsentIconButton
         v-for="item in value"
         :key="item.description"
@@ -24,13 +24,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-.consent-container {
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-}
-</style>

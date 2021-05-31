@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <v-app-bar clipped-left app color="coporate">
-      <div class="company-wrapper">
+      <div class="d-flex justify-space-between align-center flex-row" style="width: 100%">
         <Logo />
         <div>
           <b class="secondary--text d-none d-sm-inline d-md-inline d-lg-inline" style="margin-right: 10px;"> {{ $config.logo.slogan.toUpperCase() }} </b>
@@ -59,13 +59,6 @@ export default {
 }
 </script>
 <style>
-.company-wrapper {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  align-items: center;
-  flex-flow: row nowrap;
-}
 #app {
   background: var(--url) no-repeat center center fixed !important;
   background-size: cover;

@@ -17,7 +17,7 @@
     <v-app-bar clipped-left app color="coporate">
       <v-app-bar-nav-icon color="secondary" @click.stop="drawer = !drawer" />
       <v-spacer />
-      <div class="company-wrapper">
+      <div class="d-flex justify-space-between align-center flex-row" style="width: 100%">
         <Logo />
         <div class="d-flex flex-row align-center justify-center">
           <div>
@@ -100,13 +100,6 @@ export default {
 }
 </script>
 <style>
-.company-wrapper {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  align-items: center;
-  flex-flow: row nowrap;
-}
 #app {
   background: var(--url) no-repeat center center fixed !important;
   background-size: cover;

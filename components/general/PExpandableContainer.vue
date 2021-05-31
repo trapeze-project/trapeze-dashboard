@@ -4,7 +4,7 @@
     shaped
     :disabled="disabled"
   >
-    <div class="card-header">
+    <div class="d-flex flex-row flex-nowrap justify-space-between align-center ma-0 pl-2 pr-2">
       <v-icon v-if="icon" color="primary" x-large class="d-none d-sm-inline">
         {{ icon }}
       </v-icon>
@@ -71,14 +71,6 @@ export default {
 </script>
 
 <style scoped>
-.card-header {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0;
-    padding: 0px 6px;
-}
 .header-item {
     flex: 1;
     margin: 0 0 0 2px;

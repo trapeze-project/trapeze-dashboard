@@ -1,5 +1,5 @@
 <template>
-  <v-sheet elevation="0" rounded class="consent-switch">
+  <v-sheet elevation="0" rounded class="d-flex align-center justify-space-between flex-row flex-nowrap text-left ml-2">
     <v-switch v-model="active" color="primary" />
     <slot />
     <v-btn
@@ -23,14 +23,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-.consent-switch {
-    text-align: left;
-    display: flex;
-    align-items: center;
-    margin-left: 20px;
-    justify-content: space-between;
-    flex-flow: row nowrap;
-}
-</style>

@@ -1,5 +1,5 @@
 <template>
-  <div class="button-container">
+  <div class="d-flex flex-column justify-space-between align-center" style="max-width:80px">
     <v-btn
       class="mx-2"
       small
@@ -37,12 +37,3 @@ export default {
   }
 }
 </script>
-<style scoped>
-.button-container {
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 80px;
-}
-</style>

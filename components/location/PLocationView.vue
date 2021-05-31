@@ -13,7 +13,7 @@
         order-lg="1"
         order-xl="1"
       >
-        <div class="table-row-column">
+        <div class="d-flex flex-column flex-nowrap" style="height: 100%">
           <div style="flex:1" />
           <v-card-title>
             Locations and Date:
@@ -26,6 +26,7 @@
         </div>
       </v-col>
       <v-col
+        class="d-none d-lg-block d-xl-block"
         md="12"
         lg="6"
         xl="6"
@@ -80,11 +81,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-.table-row-column {
-    display: flex;
-    flex-flow: column nowrap;
-    height: 100%;
-}
-</style>
