@@ -32,11 +32,6 @@
         xl="6"
         sm="12"
         cols="12"
-        order-md="1"
-        order="1"
-        order-sm="1"
-        order-lg="2"
-        order-xl="2"
       >
         <client-only>
           <l-map ref="mymap" :zoom="zoom" :center="center" style="width: 100%;min-height:300px;z-index: 0">
