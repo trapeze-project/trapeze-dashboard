@@ -3,9 +3,10 @@
     <h1 class="title">
       {{ $t('links.permissions') }}
     </h1>
+    <v-tour name="permissionTour" :steps="steps" />
     <v-divider />
     <br>
-    <PConsentOverview v-model="consentSwitches" />
+    <PConsentOverview v-model="consentSwitches" data-v-step="switches" />
     <br>
     <PConsentSlider v-model="consentSwitches" :services="services" />
     <v-row style="padding: 0 15px">
@@ -35,7 +36,47 @@ export default {
       Profile: 'You are getting personalized ads',
       'Physical Address': 'You are getting food delivery to your home',
       'Browsing activity': 'You are getting personalized ads'
+    },
+    steps: [
+      {
+        target: '[data-v-step="switches"]', // We're using document.querySelector() under the hood
+        params: {
+          highlight: true,
+          placement: 'bottom'
+        },
+        content: 'See your personal data you agreed us using to use <strong>Finder</strong>'
+      },
+      {
+        target: '[data-v-step="permissionLabel"]', // We're using document.querySelector() under the hood
+        params: {
+          highlight: true,
+          placement: 'top'
+        },
+        content: "See how much you're sharing with us."
+      },
+      {
+        target: '[data-v-step="share"]', // We're using document.querySelector() under the hood
+        params: {
+          highlight: true,
+          placement: 'right'
+        },
+        content: 'Learn more about the types of personal data you share with us...'
+      },
+      {
+        target: '[data-v-step="get"]', // We're using document.querySelector() under the hood
+        params: {
+          highlight: true,
+          placement: 'left'
+        },
+        content: '... and what you get in return,'
+      }
+    ]
+  }),
+  mounted () {
+    // may need to change for specific route
+    if (document.referrer.includes(window.location.hostname) === -1) {
+      this.$tours.permissionTour.start()
     }
-  })
+  }
 }
 </script>

@@ -1,5 +1,6 @@
 <template>
   <div id="index">
+    <v-tour name="indexTour" :steps="steps" />
     <h1 class="title">
       {{ $t('home.title') }}
     </h1>
@@ -10,20 +11,11 @@
         v-for="(item, idx) in Object.values($t('home.items'))"
         :key="idx"
         cols="12"
-        sm="9"
-        md="9"
-        lg="9"
+        sm="12"
+        md="4"
+        lg="4"
       >
-        <PExplainCard :title="item.title" :content="item.content" :filename="item.filename" href="/profile">
-          <div>
-            {{ item.list.listHeader }}
-            <ul>
-              <li v-for="(entry,ind) in Object.values(item.list.items)" :key="ind">
-                {{ entry }}
-              </li>
-            </ul>
-          </div>
-        </PExplainCard>
+        <PExplainCard :title="item.title" :content="item.content" :filename="item.filename" :href="item.link" />
       </v-col>
     </v-row>
   </div>
@@ -31,6 +23,80 @@
 
 <script>
 export default {
-  middleware: ['auth']
+  middleware: ['auth'],
+  data: () => ({
+    steps: [
+      {
+        target: '[data-v-step="0"]', // We're using document.querySelector() under the hood
+        header: {
+          title: 'Welcome to the Finder Privacy Dashboard'
+        },
+        params: {
+          highlight: true,
+          placement: 'right'
+        },
+        content: 'You can always return to this page by clicking the <strong>Home</strong> button!'
+      },
+      {
+        target: '[data-v-step="1"]', // We're using document.querySelector() under the hood
+        header: {
+          title: 'Profile'
+        },
+        params: {
+          highlight: true,
+          placement: 'right'
+        },
+        content: 'Review the data you provided us when signing up for this <strong>Finder GmbH</strong>.'
+      },
+      {
+        target: '[data-v-step="2"]', // We're using document.querySelector() under the hood
+        header: {
+          title: 'About us'
+        },
+        params: {
+          highlight: true,
+          placement: 'right'
+        },
+        content: 'Learn about <strong>Finder GmbH</strong> and companies involved in providing Finder.'
+      },
+      {
+        target: '[data-v-step="3"]', // We're using document.querySelector() under the hood
+        header: {
+          title: 'Data we collect'
+        },
+        params: {
+          highlight: true,
+          placement: 'right'
+        },
+        content: 'Explore the data we collected, when you used Finder.'
+      },
+      {
+        target: '[data-v-step="4"]', // We're using document.querySelector() under the hood
+        header: {
+          title: 'Permissions'
+        },
+        params: {
+          highlight: true,
+          placement: 'right'
+        },
+        content: 'Learn what you agreed with when accepting the terns and conditions'
+      },
+      {
+        target: '[data-v-step="5"]', // We're using document.querySelector() under the hood
+        header: {
+          title: 'Languages'
+        },
+        params: {
+          highlight: true
+        },
+        content: 'You can change the language of the dashboard'
+      }
+    ]
+  }),
+  mounted () {
+    if (document.referrer.includes(window.location.hostname) === -1) {
+      this.$tours.indexTour.start()
+    }
+  }
 }
 </script>

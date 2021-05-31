@@ -39,7 +39,7 @@
       </v-container>
     </v-main>
     <v-footer app>
-      <span>&copy; {{ new Date().getFullYear() }}</span>
+      <PFooter />
     </v-footer>
   </v-app>
 </template>

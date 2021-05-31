@@ -23,6 +23,6 @@ a {
 #logo {
     display: block;
     content: var(--url);
-    max-height: 30px;
+    max-height: 50px;
 }
 </style>

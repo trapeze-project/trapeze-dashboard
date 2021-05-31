@@ -3,7 +3,7 @@
     <v-navigation-drawer v-model="drawer" clipped app color="accent">
       <v-list nav dense>
         <v-list-item-group v-model="group" color="primary">
-          <v-list-item v-for="(link, index) in links" :key="index" :to="localePath(link.to)" exact>
+          <v-list-item v-for="(link, index) in links" :key="index" :data-v-step="index" :to="localePath(link.to)" exact>
             <v-list-item-icon>
               <v-icon>
                 {{ link.icon }}
@@ -22,11 +22,10 @@
         <div class="d-flex flex-row align-center justify-center">
           <div>
             <b class="secondary--text d-none d-sm-inline d-md-inline d-lg-inline" style="margin-right: 10px;"> {{ $config.logo.slogan.toUpperCase() }} </b>
-
             <v-menu offset-y>
               <template v-slot:activator="{ on, attrs }">
                 <v-btn
-                  color="primary"
+                  data-v-step="5"
                   dark
                   outlined
                   elevation="0"
@@ -48,7 +47,7 @@
               </v-list>
             </v-menu>
           </div>
-          <v-btn color="primary" class="ml-2" @click="logout">
+          <v-btn color="secondary" class="ml-2" outlined @click="logout">
             Logout
           </v-btn>
         </div>
@@ -61,7 +60,7 @@
       </v-container>
     </v-main>
     <v-footer app>
-      <span>&copy; {{ new Date().getFullYear() }}</span>
+      <PFooter />
     </v-footer>
   </v-app>
 </template>
@@ -75,7 +74,7 @@ export default {
       { to: '/profile', label: 'profile', icon: 'account_circle' },
       { to: '/about', label: 'about', icon: 'business' },
       { to: '/data', label: 'data', icon: 'folder' },
-      { to: '/activities', label: 'log', icon: 'toc' },
+      // disables activities route in navigation only for user test { to: '/activities', label: 'log', icon: 'toc' },
       { to: '/permissions', label: 'permissions', icon: 'gavel' }
     ],
     group: null

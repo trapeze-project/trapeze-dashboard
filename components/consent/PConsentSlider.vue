@@ -1,13 +1,13 @@
 <template>
   <div>
     <div style="text-align:center">
-      <small v-if="(calculateScore/value.reduce((x,y) => x + y.consentRank,0))*100<25">
+      <small v-if="(calculateScore/value.reduce((x,y) => x + y.consentRank,0))*100<25" data-v-step="permissionLabel">
         <i>low</i>
       </small>
-      <small v-else-if="(calculateScore/value.reduce((x,y) => x + y.consentRank,0))*100<60">
+      <small v-else-if="(calculateScore/value.reduce((x,y) => x + y.consentRank,0))*100<60" data-v-step="permissionLabel">
         <i>medium</i>
       </small>
-      <small v-else>
+      <small v-else data-v-step="permissionLabel">
         <i>high</i>
       </small>
     </div>
@@ -23,6 +23,7 @@
       <v-col lg="6" xl="6" md="6" sm="12" cols="12">
         <v-card
           elevation="2"
+          data-v-step="share"
         >
           <v-card-title>
             You share
@@ -52,6 +53,7 @@
       <v-col lg="6" xl="6" md="6" sm="12" cols="12">
         <v-card
           elevation="2"
+          data-v-step="get"
         >
           <v-card-title>
             You get

@@ -1,10 +1,10 @@
 <template>
   <v-card elevation="5" style="padding: 0px 2px" shaped>
     <v-row>
-      <v-col cols="12" lg="6" md="12" sm="12">
-        <v-img :src="filename" />
+      <v-col cols="12" lg="12" md="12" sm="12">
+        <v-img max-height="300px" :src="filename" />
       </v-col>
-      <v-col cols="12" lg="6" md="12" sm="12">
+      <v-col cols="12" lg="12" md="12" sm="12">
         <v-card-title>{{ title }}</v-card-title>
         <v-divider inset />
         <br>
@@ -19,7 +19,7 @@
       <v-btn
         color="primary"
         text
-        :to="href"
+        :to="localePath(href)"
       >
         Explore
       </v-btn>

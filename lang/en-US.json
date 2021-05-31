@@ -11,44 +11,22 @@
     "title": "Home",
     "items": {
       "0": {
-        "title": "Check the data you provided us with!",
+        "title": "Data you gave us",
         "filename": "/derived-data.svg",
-        "content": "You had to disclose certain personal information when signing up for this service. This dashboard helps you to manage the information you provided us with when signing up for the service.",
-        "list": {
-          "listHeader": "This information might be:",
-          "items": {
-            "0": "email address, username and password.",
-            "1": "real name and physical address",
-            "2": "date of birth.",
-            "3": "bank account information."
-          }
-        }
+        "link": "/profile",
+        "content": "Check the data you provided us with when signing up for the service."
       },
       "1": {
-        "title": "Learn about the data we process while you're using our service.",
+        "title": "Data we collect",
         "filename": "/service-data.svg",
-        "content": "When using the service and interacting with its features, you produce data we process. We might also use data from other data sources for the service provision. Learn all about it in this dashboard.",
-        "list": {
-          "listHeader": "Your personal data is:",
-          "items": {
-            "0": "processed when using this service.",
-            "1": "obtained from other sources, e.g. services if you gave us permission.",
-            "2": "derived from your personal data."
-          }
-        }
+        "link": "/data",
+        "content": "Learn about the data we collect and analyze while you're using our service."
       },
       "2": {
-        "title": "Understand what you agreed with!",
+        "title": "What you agreed",
         "filename": "/permissions.svg",
-        "content": "Terms and conditions, privacy policies and notices over notices, you dutifully agreed. Understand what you agree with and express your disagreement when necessary.",
-        "list": {
-          "listHeader": "This dashboard allows you to:",
-          "items": {
-            "0": "... disagree with certain processing practices, while still being able to use the service.",
-            "1": "... give permission to process your personal data.",
-            "2": "... revoke permission to process your personal data."
-          }
-        }
+        "link": "/permissions",
+        "content": "Terms and conditions, privacy policies and notices over notices you dutifully agreed."
       }
     }
   },
