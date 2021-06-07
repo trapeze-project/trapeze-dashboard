@@ -40,7 +40,7 @@
           {{ new Date(item.timestamp).toLocaleDateString($i18n.locale,$t('long')) }}
         </template>
         <template v-slot:item.url="{ item }">
-          <a :href="item.url">{{ item.url.match(/^.+?[^\/:](?=[?\/]|$)/)[0] }}</a>
+          <a :href="item.url" target="_blank">{{ item.url.match(/^.+?[^\/:](?=[?\/]|$)/)[0] }}</a>
         </template>
         <template v-slot:expanded-item="{ item }">
           <td :colspan="headers.length">

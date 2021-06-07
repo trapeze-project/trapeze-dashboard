@@ -1,7 +1,7 @@
 <template>
   <PExpandableContainer :title="title">
     <div style="padding: 20px 0px;">
-      <div style="text-align: center; padding: 10px 10px;">
+      <div style="text-align: center; padding: 10px 10px; display: none;">
         <v-img max-height="400px" eager contain :src="imgUrl" />
       </div>
       <br>

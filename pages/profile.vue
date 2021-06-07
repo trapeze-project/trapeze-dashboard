@@ -1,7 +1,8 @@
 <template>
   <div>
+    <v-tour name="indexTour" :steps="steps" />
     <h1 class="title">
-      {{ $t('links.profile') }}
+      {{ $t("links.profile") }}
     </h1>
     <v-divider />
     <br>
@@ -17,6 +18,31 @@ export default {
     return {
       items: result
     }
+  },
+  data: () => ({
+    steps: [
+      {
+        target: '[profile-v-step="0"]',
+        params: {
+          highlight: true,
+          placement: 'top'
+        },
+        content:
+          'Your data is grouped into multiple categories.'
+      },
+      {
+        target: '[profile-v-step="1"]',
+        params: {
+          highlight: true,
+          placement: 'left'
+        },
+        content:
+          'Click the little arrow to take a closer look on a certain category.'
+      }
+    ]
+  }),
+  mounted () {
+    this.$tours.indexTour.start()
   }
 }
 </script>

@@ -3,7 +3,7 @@
     <v-navigation-drawer v-model="drawer" clipped app color="accent">
       <v-list nav dense>
         <v-list-item-group v-model="group" color="primary">
-          <v-list-item v-for="(link, index) in links" :key="index" :data-v-step="index" :to="localePath(link.to)" exact>
+          <v-list-item v-for="(link, index) in links" :key="index" :index-v-step="index" :to="localePath(link.to)" exact>
             <v-list-item-icon>
               <v-icon>
                 {{ link.icon }}
@@ -25,7 +25,7 @@
             <v-menu offset-y>
               <template v-slot:activator="{ on, attrs }">
                 <v-btn
-                  data-v-step="5"
+                  index-v-step="5"
                   dark
                   outlined
                   elevation="0"
@@ -68,7 +68,7 @@
 <script>
 export default {
   data: () => ({
-    drawer: false,
+    drawer: true,
     links: [
       { to: '/', label: 'home', icon: 'home' },
       { to: '/profile', label: 'profile', icon: 'account_circle' },

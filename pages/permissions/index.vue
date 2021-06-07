@@ -6,7 +6,7 @@
     <v-tour name="permissionTour" :steps="steps" />
     <v-divider />
     <br>
-    <PConsentOverview v-model="consentSwitches" data-v-step="switches" />
+    <PConsentOverview v-model="consentSwitches" permission-v-step="0" />
     <br>
     <PConsentSlider v-model="consentSwitches" :services="services" />
     <v-row style="padding: 0 15px">
@@ -39,15 +39,15 @@ export default {
     },
     steps: [
       {
-        target: '[data-v-step="switches"]', // We're using document.querySelector() under the hood
+        target: '[permission-v-step="0"]',
         params: {
           highlight: true,
           placement: 'bottom'
         },
-        content: 'See your personal data you agreed us using to use <strong>Finder</strong>'
+        content: 'See your personal data you agreed us using to use <strong>Finder</strong>.'
       },
       {
-        target: '[data-v-step="permissionLabel"]', // We're using document.querySelector() under the hood
+        target: '[permission-v-step="1"]',
         params: {
           highlight: true,
           placement: 'top'
@@ -55,7 +55,7 @@ export default {
         content: "See how much you're sharing with us."
       },
       {
-        target: '[data-v-step="share"]', // We're using document.querySelector() under the hood
+        target: '[permission-v-step="2"]',
         params: {
           highlight: true,
           placement: 'right'
@@ -63,20 +63,20 @@ export default {
         content: 'Learn more about the types of personal data you share with us...'
       },
       {
-        target: '[data-v-step="get"]', // We're using document.querySelector() under the hood
+        target: '[permission-v-step="3"]',
         params: {
           highlight: true,
           placement: 'left'
         },
-        content: '... and what you get in return,'
+        content: '... and what you get in return.'
       }
     ]
   }),
   mounted () {
     // may need to change for specific route
-    if (document.referrer.includes(window.location.hostname) === -1) {
-      this.$tours.permissionTour.start()
-    }
+    // if (document.referrer.includes(window.location.hostname) === -1) {
+    this.$tours.permissionTour.start()
+    // }
   }
 }
 </script>

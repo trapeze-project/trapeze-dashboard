@@ -27,7 +27,7 @@ export default {
   data: () => ({
     steps: [
       {
-        target: '[data-v-step="0"]', // We're using document.querySelector() under the hood
+        target: '[index-v-step="0"]', // We're using document.querySelector() under the hood
         header: {
           title: 'Welcome to the Finder Privacy Dashboard'
         },
@@ -38,7 +38,7 @@ export default {
         content: 'You can always return to this page by clicking the <strong>Home</strong> button!'
       },
       {
-        target: '[data-v-step="1"]', // We're using document.querySelector() under the hood
+        target: '[index-v-step="1"]', // We're using document.querySelector() under the hood
         header: {
           title: 'Profile'
         },
@@ -49,7 +49,7 @@ export default {
         content: 'Review the data you provided us when signing up for this <strong>Finder GmbH</strong>.'
       },
       {
-        target: '[data-v-step="2"]', // We're using document.querySelector() under the hood
+        target: '[index-v-step="2"]', // We're using document.querySelector() under the hood
         header: {
           title: 'About us'
         },
@@ -60,7 +60,7 @@ export default {
         content: 'Learn about <strong>Finder GmbH</strong> and companies involved in providing Finder.'
       },
       {
-        target: '[data-v-step="3"]', // We're using document.querySelector() under the hood
+        target: '[index-v-step="3"]', // We're using document.querySelector() under the hood
         header: {
           title: 'Data we collect'
         },
@@ -71,7 +71,7 @@ export default {
         content: 'Explore the data we collected, when you used Finder.'
       },
       {
-        target: '[data-v-step="4"]', // We're using document.querySelector() under the hood
+        target: '[index-v-step="4"]', // We're using document.querySelector() under the hood
         header: {
           title: 'Permissions'
         },
@@ -82,7 +82,7 @@ export default {
         content: 'Learn what you agreed with when accepting the terns and conditions'
       },
       {
-        target: '[data-v-step="5"]', // We're using document.querySelector() under the hood
+        target: '[index-v-step="5"]', // We're using document.querySelector() under the hood
         header: {
           title: 'Languages'
         },
@@ -94,9 +94,9 @@ export default {
     ]
   }),
   mounted () {
-    if (document.referrer.includes(window.location.hostname) === -1) {
-      this.$tours.indexTour.start()
-    }
+    // if (document.referrer.includes(window.location.hostname) === -1) {
+    this.$tours.indexTour.start()
+    // }
   }
 }
 </script>

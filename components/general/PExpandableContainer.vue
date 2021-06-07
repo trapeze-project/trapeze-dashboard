@@ -3,6 +3,7 @@
     elevation="4"
     shaped
     :disabled="disabled"
+    profile-v-step="0"
   >
     <div class="d-flex flex-row flex-nowrap justify-space-between align-center ma-0 pl-2 pr-2">
       <v-icon v-if="icon" color="primary" x-large class="d-none d-sm-inline">
@@ -22,7 +23,13 @@
           icon
           @click="toogleShow()"
         >
-          <v-icon>{{ show ? 'mdi-chevron-up' : 'mdi-chevron-down' }}</v-icon>
+          <v-icon
+            profile-v-step="1"
+            about-v-step="2"
+            data-v-step="2"
+          >
+            {{ show ? 'mdi-chevron-up' : 'mdi-chevron-down' }}
+          </v-icon>
         </v-btn>
       </v-card-actions>
     </div>

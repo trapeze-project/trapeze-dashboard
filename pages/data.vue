@@ -1,10 +1,11 @@
 <template>
   <div>
+    <v-tour name="indexTour" :steps="steps" />
     <h1 class="title">
       {{ $t('links.data') }}
     </h1>
     <v-divider />
-    <div>
+    <div style="display: none;">
       <v-spacer />
       <v-menu
         ref="menu"
@@ -33,8 +34,8 @@
       </v-menu>
     </div>
     <br>
-    <div v-for="(item, index) in components" :key="index">
-      <component :is="item.component" v-bind="item" :from="Date.parse(dates[0])" :to="Date.parse(dates[1])" />
+    <div v-for="(item, index) in components.slice(1)" :key="index">
+      <component :is="item.component" :data-v-step="index" v-bind="item" :from="Date.parse(dates[0])" :to="Date.parse(dates[1])" />
       <br>
       <br>
     </div>
@@ -52,12 +53,54 @@ export default {
   data: () => ({
     searchTimeRange: [1],
     dates: [],
-    menu: false
+    menu: false,
+    steps: [
+      {
+        target: '[data-v-step="0"]',
+        params: {
+          highlight: true,
+          placement: 'top'
+        },
+        content:
+          'Your data is grouped into multiple categories.'
+      },
+      {
+        target: '[data-v-step="1"]',
+        params: {
+          highlight: true,
+          placement: 'top'
+        },
+        content:
+          'You can inspect each category individually.'
+      },
+      {
+        target: '[data-v-step="2"]',
+        params: {
+          highlight: true,
+          placement: 'top'
+        },
+        content:
+          'Click the little arrow to take a closer look on a certain category.'
+      }/*,
+      {
+        target: '[data-v-step="3"]',
+        params: {
+          highlight: true,
+          placement: 'left'
+        },
+        content:
+          'To delete some data, just click the bin icon next to the data. The controller will be notified to delete the data permanently.'
+      }
+      */
+    ]
   }),
   computed: {
     dateRangeText () {
       return this.dates.join(' ~ ')
     }
+  },
+  mounted () {
+    this.$tours.indexTour.start()
   }
 }
 </script>

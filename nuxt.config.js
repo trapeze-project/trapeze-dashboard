@@ -101,7 +101,7 @@ export default {
         endpoints: {
           login: { url: process.env.BASE_AUTH_URL_DEV + '/auth/login/', method: 'post', withCredentials: true },
           logout: { url: process.env.BASE_AUTH_URL_DEV + '/auth/logout/', method: 'get', withCredentials: true },
-          user: { url: process.env.BASE_AUTH_URL_DEV + '/users/60b0ece95b286357ea85f751/', method: 'get', withCredentials: true }
+          user: { url: process.env.BASE_AUTH_URL_DEV + '/users/me/', method: 'get', withCredentials: true }
         }
       }
     }

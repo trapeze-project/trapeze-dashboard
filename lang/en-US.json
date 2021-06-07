@@ -1,11 +1,11 @@
 {
   "links": {
     "home": "Home",
-    "profile": "My Profile",
+    "profile": "Profile",
     "about": "About",
-    "data": "My Data",
-    "log": "My Activity Log",
-    "permissions": "My Permissions"
+    "data": "Data",
+    "log": "Activity Log",
+    "permissions": "Permissions"
   },
   "home": {
     "title": "Home",
@@ -31,7 +31,7 @@
     }
   },
   "about": {
-    "provider": "Provider",
+    "provider": "Processor",
     "controller": "Controller"
   },
   "permissions": {

@@ -1,17 +1,17 @@
 <template>
   <div>
     <div style="text-align:center">
-      <small v-if="(calculateScore/value.reduce((x,y) => x + y.consentRank,0))*100<25" data-v-step="permissionLabel">
+      <small v-if="(calculateScore/value.reduce((x,y) => x + y.consentRank,0))*100<25" permission-v-step="1">
         <i>low</i>
       </small>
-      <small v-else-if="(calculateScore/value.reduce((x,y) => x + y.consentRank,0))*100<60" data-v-step="permissionLabel">
+      <small v-else-if="(calculateScore/value.reduce((x,y) => x + y.consentRank,0))*100<60" permission-v-step="1">
         <i>medium</i>
       </small>
-      <small v-else data-v-step="permissionLabel">
+      <small v-else permission-v-step="1">
         <i>high</i>
       </small>
     </div>
-    <div style="width:100%;display:flex;flex-flow:row nowwrap;align-items:center;justify-content:center;">
+    <div style="width:100%;display:flex;flex-flow:row nowwrap;align-items:center;justify-content:center;margin-bottom: 20px;">
       <v-progress-linear
         style="width:70vw;"
         :value="(calculateScore/value.reduce((x,y) => x + y.consentRank,0))*100"
@@ -23,7 +23,7 @@
       <v-col lg="6" xl="6" md="6" sm="12" cols="12">
         <v-card
           elevation="2"
-          data-v-step="share"
+          permission-v-step="2"
         >
           <v-card-title>
             You share
@@ -53,7 +53,7 @@
       <v-col lg="6" xl="6" md="6" sm="12" cols="12">
         <v-card
           elevation="2"
-          data-v-step="get"
+          permission-v-step="3"
         >
           <v-card-title>
             You get
