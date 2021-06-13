@@ -1,8 +1,11 @@
 <template>
   <div id="index">
     <v-tour name="indexTour" :steps="steps" />
-    <h1 class="title">
+    <h1 class="title align-center d-flex">
       {{ $t('home.title') }}
+      <v-icon class="ml-1" @click="$tours.indexTour.start()">
+        mdi-help-circle
+      </v-icon>
     </h1>
     <v-divider />
     <br>

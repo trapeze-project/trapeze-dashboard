@@ -1,9 +1,12 @@
 <template>
   <div>
-    <h1 class="title">
-      {{ $t('links.permissions') }}
-    </h1>
     <v-tour name="permissionTour" :steps="steps" />
+    <h1 class="title align-center d-flex">
+      {{ $t('links.permissions') }}
+      <v-icon class="ml-1" @click="$tours.permissionTour.start()">
+        mdi-help-circle
+      </v-icon>
+    </h1>
     <v-divider />
     <br>
     <PConsentOverview v-model="consentSwitches" permission-v-step="0" />

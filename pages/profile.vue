@@ -1,8 +1,11 @@
 <template>
   <div>
-    <v-tour name="loginTour" :steps="steps" />
-    <h1 class="title">
+    <v-tour name="profileTour" :steps="steps" />
+    <h1 class="title align-center d-flex">
       {{ $t("links.profile") }}
+      <v-icon class="ml-1" @click="$tours.profileTour.start()">
+        mdi-help-circle
+      </v-icon>
     </h1>
     <v-divider />
     <br>
@@ -44,7 +47,7 @@ export default {
   mounted () {
     if (this.$auth.user) {
       if (!localStorage.getItem('visitedProfile')) {
-        this.$tours.loginTour.start()
+        this.$tours.profileTour.start()
         localStorage.setItem('visitedProfile', true)
       }
     }
