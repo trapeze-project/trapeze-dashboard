@@ -4,15 +4,19 @@ const Design = require('./design/design.config.json')
 export default {
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
-    titleTemplate: '%s - dashboardvuetfy',
-    title: 'dashboardvuetfy',
+    titleTemplate: '%s - Finder | Privacy Dashboard by TRAPEZE',
+    title: 'Finder | Privacy Dashboard by TRAPEZE',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap",
+      },
     ]
   },
 
@@ -37,7 +41,7 @@ export default {
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
     // https://go.nuxtjs.dev/vuetify
-    '@nuxtjs/vuetify'
+    '@nuxtjs/vuetify',
   ],
 
   modules: [
@@ -48,7 +52,6 @@ export default {
     ['nuxt-i18n',
       {
         lazy: true,
-        defaultLocale: 'en',
         langDir: 'lang/',
         locales: [
           {
@@ -74,7 +77,8 @@ export default {
         ],
         detectBrowserLanguage: {
           useCookie: true,
-          alwaysRedirect: true
+          alwaysRedirect: true,
+          onlyOnRoot: true
         }
       }
     ]
@@ -129,7 +133,7 @@ export default {
   },
   watch: ['design'],
   server: {
-    host: process.env.ENVIRONMENT == 'production' ? process.env.HOST : '0.0.0.0',
+    host: process.env.ENVIRONMENT == 'production' ? process.env.HOST : 'localhost',
     port: process.env.ENVIRONMENT == 'production' ? process.env.PORT : 3000
   }
 }

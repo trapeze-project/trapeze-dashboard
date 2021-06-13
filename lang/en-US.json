@@ -1,4 +1,7 @@
 {
+  "general": {
+    "cancel": "Cancel"
+  },    
   "links": {
     "home": "Home",
     "profile": "Profile",
@@ -9,6 +12,7 @@
   },
   "home": {
     "title": "Home",
+    "explore-btn": "Explore",
     "items": {
       "0": {
         "title": "Data you gave us",
@@ -26,22 +30,68 @@
         "title": "What you agreed",
         "filename": "/permissions.svg",
         "link": "/permissions",
-        "content": "Terms and conditions, privacy policies and notices over notices you dutifully agreed."
+        "content": "Terms and conditions and privacy policies you dutifully agreed."
       }
     }
+  },
+  "profile": {
+    "title": "Account credentials",
+    "subtitle": "Your email address and password.",
+    "username": "EMAIL ADDRESS",
+    "password": "PASSWORD"
   },
   "about": {
     "provider": "Processor",
     "controller": "Controller"
   },
+  "data": {
+    "location": {
+      "title": "Your locations",
+      "subtitle": "Number of locations collected"
+    },
+    "browsing": {
+      "title": "Your browsing history",
+      "subtitle": "Number of visited websites collected"
+    },
+    "delete-dialog": {
+      "title": "Delete data",
+      "text": "Your data will be deleted. The controller will be notified about your request and will respond to it shortly.",
+      "btn": "Delete"
+    }
+  },
   "permissions": {
-    "advanced-button": "advanced"
+    "email-address": {
+      "label": "Email adress",
+      "get": "Required for logging into Finder and to send you notifications about places nearby.",
+      "share": "Your verified email address."
+    },
+    "profile": {
+      "label": "Profile",
+      "get": "You retrieve personalized recommendations that fit to you.",
+      "share": "We build a profile based on how you use Finder, what sparked your interest, and which places you visited."
+    },    
+    "current-location": {
+      "label": "Current location",
+      "get": "Your current position is used to identify places nearby.",
+      "share": "Your current location is obtained either via GPS, WiFi, or based on the cell tower your phone is connected to."
+    },
+    "location-history": {
+      "label": "Location history",
+      "get": "You retrieve personalized recommendations that fit to you.",
+      "share": "Your location history is used to enrich your interest profile with additional data."
+    },
+    "browsing-history": {
+      "label": "Browsing activity",
+      "get": "You retrieve personalized recommendations that fit to you.",
+      "share": "Your browsing history is used to enrich your interest profile with additional data."
+    },
+    "advanced-button": "Advanced"
   },
   "login": {
-    "username": "username",
-    "password": "password",
-    "login": "login",
-    "loginTitle": " Log into your dashboard."
+    "username": "Email",
+    "password": "Password",
+    "login": "Login",
+    "loginTitle": " Log into your Finder dashboard."
   },
   "short": {
     "year": "numeric",
@@ -55,5 +105,50 @@
     "weekday": "short",
     "hour": "numeric",
     "minute": "numeric"
+  },
+  "tour": {
+    "index": {
+      "step-0-title": "Welcome to the Finder Privacy Dashboard",
+      "step-0": "You can always return to this page by clicking the <strong>Home</strong> button!",
+      "step-1-title": "Profile",
+      "step-1": "Review the data you provided us when signing up for <strong>Finder</strong>.",
+      "step-2-title": "About us",
+      "step-2": "Learn about <strong>Finder GmbH</strong> and companies involved in providing Finder.",
+      "step-3-title": "Data we collect",
+      "step-3": "Explore the data we collected, when you used Finder.",
+      "step-4-title": "Permissions",
+      "step-4": "Learn what you agreed with when accepting the terns and conditions.",
+      "step-5-title": "Languages",
+      "step-5": "You can change the language of the dashboard."
+    },
+    "profile": {
+      "step-0": "Your data is grouped into multiple categories.",
+      "step-1": "Click the little arrow to take a closer look on a certain category."
+    },
+    "about": {
+      "step-0": "A controller is a company that processes your personal data. In this case us: Finder GmbH. There can be multiple controllers.",
+      "step-1": "A processor is a company that processes your personal data on behalf of the controller(s).",
+      "step-2": "Click the little arrow to take a closer look on a certain company."
+    },
+    "data": {
+      "step-0": "Your data is grouped into multiple categories.",
+      "step-1": "You can inspect each category individually.",
+      "step-2": "Click the little arrow to take a closer look on a certain category.",
+      "step-3": "To delete some data, just click the bin icon next to the data. The controller will be notified to delete the data permanently."
+    },
+    "permission": {
+      "step-0": "See your personal data you agreed us using to use <strong>Finder</strong>.",
+      "step-1": "See how much you're sharing with us.",
+      "step-2": "Learn more about the types of personal data you share with us...",
+      "step-3": "... and what you get in return."
+    }
+  },
+  "table-headers": {
+    "date": "Date",
+    "location": "Location",
+    "action": "Action",
+    "url": "URL",
+    "user-agent": "User Agent",
+    "ip": "IP-Address"
   }
 }

@@ -1,8 +1,13 @@
 <template>
   <div>
     <v-tour name="indexTour" :steps="steps" />
-    <h1 class="title">
+    <h1 class="title mb-2">
       {{ $t('links.data') }}
+      <v-btn icon outlined x-small color="black" @click="startTour">
+        <v-icon x-small>
+          mdi-help
+        </v-icon>
+      </v-btn>
     </h1>
     <v-divider />
     <div style="display: none;">
@@ -43,7 +48,7 @@
 </template>
 <script>
 export default {
-  middleware: ['auth'],
+  // middleware: ['auth'],
   async asyncData ({ $axios }) {
     const result = await $axios.$get('/api/fetch')
     return {
@@ -54,45 +59,7 @@ export default {
     searchTimeRange: [1],
     dates: [],
     menu: false,
-    steps: [
-      {
-        target: '[data-v-step="0"]',
-        params: {
-          highlight: true,
-          placement: 'top'
-        },
-        content:
-          'Your data is grouped into multiple categories.'
-      },
-      {
-        target: '[data-v-step="1"]',
-        params: {
-          highlight: true,
-          placement: 'top'
-        },
-        content:
-          'You can inspect each category individually.'
-      },
-      {
-        target: '[data-v-step="2"]',
-        params: {
-          highlight: true,
-          placement: 'top'
-        },
-        content:
-          'Click the little arrow to take a closer look on a certain category.'
-      }/*,
-      {
-        target: '[data-v-step="3"]',
-        params: {
-          highlight: true,
-          placement: 'left'
-        },
-        content:
-          'To delete some data, just click the bin icon next to the data. The controller will be notified to delete the data permanently.'
-      }
-      */
-    ]
+    steps: []
   }),
   computed: {
     dateRangeText () {
@@ -100,7 +67,53 @@ export default {
     }
   },
   mounted () {
-    this.$tours.indexTour.start()
+    this.setSteps()
+    if (!window.localStorage.getItem('data-visited')) {
+      window.localStorage.setItem('data-visited', true)
+      this.startTour()
+    }
+  },
+  methods: {
+    startTour () {
+      this.$tours.indexTour.start()
+    },
+    setSteps () {
+      this.steps = [
+        {
+          target: '[data-v-step="0"]',
+          params: {
+            highlight: true,
+            placement: 'top'
+          },
+          content: this.$i18n.t('tour.data.step-0')
+        },
+        {
+          target: '[data-v-step="1"]',
+          params: {
+            highlight: true,
+            placement: 'top'
+          },
+          content: this.$i18n.t('tour.data.step-1')
+        },
+        {
+          target: '[data-v-step="2"]',
+          params: {
+            highlight: true,
+            placement: 'top'
+          },
+          content: this.$i18n.t('tour.data.step-2')
+        }/*,
+        {
+          target: '[data-v-step="3"]',
+          params: {
+            highlight: true,
+            placement: 'left'
+          },
+          content: this.$i18n.t('tour.data.step-3')
+        }
+        */
+      ]
+    }
   }
 }
 </script>

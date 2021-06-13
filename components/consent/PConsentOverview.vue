@@ -1,12 +1,14 @@
 <template>
   <div>
-    <div class="d-flex flex-row align-center justify-center" style="width: 100%">
+    <div class="d-flex flex-row align-center justify-center" style="flex-wrap: wrap">
       <PConsentIconButton
+        class="ml-3 mr-3"
         v-for="item in value"
         :key="item.description"
         v-model="item.value"
         :icon="item.icon"
         :description="item.description"
+        permission-v-step="0"
         @input="$emit('value',value)"
       />
     </div>

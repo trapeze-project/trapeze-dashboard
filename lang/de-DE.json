@@ -1,47 +1,97 @@
 {
+  "general": {
+    "cancel": "Abbrechen"
+  },  
   "links": {
-    "home": "Home",
-    "profile": "Mein Profil",
-    "about": "About",
-    "data": "Meine Daten",
-    "log": "Meine Activitäts Log",
-    "permissions": "Meine Berechtigungen"
+    "home": "Start",
+    "profile": "Profil",
+    "about": "Über uns",
+    "data": "Daten",
+    "log": "Aktivitätslog",
+    "permissions": "Berechtigungen"
   },
   "home": {
-    "title": "Home",
+    "title": "Start",
+    "explore-btn": "Durchstöbern",
     "items": {
       "0": {
-        "title": "Data you gave us",
+        "title": "Daten, die Sie uns gegeben haben",
         "filename": "/derived-data.svg",
         "link": "/profile",
-        "content": "Check the data you provided us with when signing up for the service."
+        "content": "Überprüfen Sie die Daten, die Sie uns zur Verfügung gestellt haben, als Sie sich für den Service angemeldet haben."
       },
       "1": {
-        "title": "Data we collect",
+        "title": "Daten, die wir sammeln",
         "filename": "/service-data.svg",
         "link": "/data",
-        "content": "Learn about the data we collect and analyze while you're using our service."
+        "content": "Erfahren Sie mehr über die Daten, die wir sammeln und analysieren, während Sie unseren Service verwenden."
       },
       "2": {
-        "title": "What you agreed",
+        "title": "Was Sie zugestimmt haben",
         "filename": "/permissions.svg",
         "link": "/permissions",
-        "content": "Terms and conditions, privacy policies and notices over notices you dutifully agreed."
+        "content": "Allgemeine Geschäftsbedingungen und Datenschutzrichtlinien, denen Sie pflichtbewusst zugestimmt haben."
       }
     }
   },
+  "profile": {
+    "title": "Kontoinformationen",
+    "subtitle": "Ihre E-Mail-Adresse und Ihr Passwort.",
+    "username": "E-MAIL-ADDRESSE",
+    "password": "PASSWORT"
+  },
   "about": {
-    "provider": "Anbieter",
-    "controller": "Regler"
+    "provider": "Prozessor",
+    "controller": "Verantwortlicher"
+  },
+  "data": {
+    "location": {
+      "title": "Ihre Standorte",
+      "subtitle": "Anzahl der gesammelten Standorte"
+    },
+    "browsing": {
+      "title": "Ihre Browsing-Historie",
+      "subtitle": "Anzahl der besuchten Websites gesammelt"
+    },
+    "delete-dialog": {
+      "title": "Daten löschen",
+      "text": "Ihre Daten werden gelöscht. Der Verantwortliche wird über Ihre Anfrage informiert und wird diese in Kürze beantworten.",
+      "btn": "Löschen"
+    }
   },
   "permissions": {
-    "advanced-button": "fortgeschritten"
+    "email-address": {
+      "label": "E-Mail-Addresse",
+      "get": "Zur Anmeldung bei Finder und zum Senden von Benachrichtigungen über Orte in der Nähe.",
+      "share": "Ihre verifizierte E-Mail-Adresse."
+    },
+    "profile": {
+      "label": "Profil",
+      "get": "Sie erhalten personalisierte Empfehlungen, die zu Ihnen passen.",
+      "share": "Wir erstellen ein Profil, anhand dessen, wie Sie Finder verwenden, was Ihr Interesse weckt hat und welche Orte Sie besucht haben."
+    },    
+    "current-location": {
+      "label": "Aktueller Standort",
+      "get": "Ihre aktuelle Position wird verwendet, um Orte in der Nähe zu identifizieren.",
+      "share": "Ihr derzeitiger Standort wird entweder über GPS, WLAN, WLAN oder basierend auf dem Zellturm, mit dem Ihr Telefon angeschlossen ist, erhalten."
+    },
+    "location-history": {
+      "label": "Standortverlauf",
+      "get": "Sie erhalten personalisierte Empfehlungen, die zu Ihnen passen.",
+      "share": "Ihre Standortverlauf wird verwendet, um Ihr Interessenprofil mit zusätzlichen Daten anzureichern."
+    },
+    "browsing-history": {
+      "label": "Browsing-Aktivität",
+      "get": "Sie erhalten personalisierte Empfehlungen, die zu Ihnen passen.",
+      "share": "Ihre Browser-Historie wird verwendet, um Ihr Interessenprofil mit zusätzlichen Daten anzureichern."
+    },
+    "advanced-button": "Erweitert"
   },
   "login": {
-    "username": "Benutzername",
+    "username": "E-Mail",
     "password": "Passwort",
-    "login": "Einloggen",
-    "loginTitle": " Loggen Sie sich in Ihr Dashboard ein."
+    "login": "Anmeldung",
+    "loginTitle": "Melden Sie sich in Ihrem Finder-Dashboard an."
   },
   "short": {
     "year": "numeric",
@@ -55,5 +105,50 @@
     "weekday": "short",
     "hour": "numeric",
     "minute": "numeric"
+  },
+  "tour": {
+    "index": {
+      "step-0-title": "Willkommen im Privatsphäre-Bereich von Finder",
+      "step-0": "Sie können immer auf diese Seite zurückkehren, indem Sie auf die Schaltfläche <strong>Start</strong> klicken!",
+      "step-1-title": "Profil",
+      "step-1": "Überprüfen Sie die Daten, die Sie uns zur Verfügung gestellt haben, als Sie sich für <strong>Finder</strong> registriert haben.",
+      "step-2-title": "Über uns",
+      "step-2": "Erfahren Sie mehr über die <strongFinder GmbH</strong> und Unternehmen, die an der Bereitstellung von Finder beteiligt sind.",
+      "step-3-title": "Daten, die wir sammeln",
+      "step-3": "Erhalten Sie einen Einblick in die Daten, die wir gesammelt haben, während Sie Finder benutzt haben.",
+      "step-4-title": "Berechtigungen",
+      "step-4": "Erfahren Sie, was Sie beim Akzeptieren der Allgemeinen Geschäftsbedingungen zugestimmt haben.",
+      "step-5-title": "Sprachen",
+      "step-5": "Sie können die Sprache des Dashboards jederzeit ändern."
+    },
+    "profile": {
+      "step-0": "Ihre Daten werden in mehrere Kategorien gruppiert.",
+      "step-1": "Klicken Sie auf den kleinen Pfeil, um einen genaueren Blick auf eine bestimmte Kategorie zu erstellen."
+    },
+    "about": {
+      "step-0": "Ein Verantwortlicher ist ein Unternehmen, das Ihre personenbezogenen Daten verarbeitet. In diesem Fall wir: Finder GmbH. Es kann mehrere Verantwortliche geben.",
+      "step-1": "Ein Prozessor ist ein Unternehmen, das Ihre personenbezogenen Daten auf unseren Auftrag hin verarbeitet.",
+      "step-2": "Klicken Sie auf den kleinen Pfeil, um einen genaueren Blick auf ein bestimmtes Unternehmen zu erhalten."
+    },
+    "data": {
+      "step-0": "Ihre Daten werden in mehrere Kategorien gruppiert.",
+      "step-1": "Sie können jede Kategorie einzeln inspizieren.",
+      "step-2": "Klicken Sie auf den kleinen Pfeil, um einen genaueren Blick auf eine bestimmte Kategorie zu erhalten.",
+      "step-3": "Um einige Daten zu löschen, klicken Sie einfach auf das Papierkorb-Symbol. Der Verantwortliche wird benachrichtigt, um die Daten dauerhaft zu löschen."
+    },
+    "permission": {
+      "step-0": "Sehen Sie an welche persönlichen Daten wir verarbeiten, um Ihnen <strong>Finder</strong> anbieten zu können.",
+      "step-1": "Sehen Sie, wie viel Sie mit uns teilen.",
+      "step-2": "Erfahren Sie mehr über die Arten von personenbezogenen Daten, die Sie mit uns teilen ...",
+      "step-3": "... und was Sie dafür bekommen."
+    }
+  },
+  "table-headers": {
+    "date": "Datum",
+    "location": "Ort",
+    "action": "Aktion",
+    "url": "URL",
+    "user-agent": "User Agent",
+    "ip": "IP-Addresse"
   }
 }

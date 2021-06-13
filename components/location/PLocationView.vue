@@ -1,5 +1,11 @@
 <template>
-  <PExpandableContainer :disabled="clientFilteredItems.length == 0" title="Your location information." :subtitle="'We have collected '+clientFilteredItems.length +' locations.'" icon="location_on" @clicked="updateSize()">
+  <PExpandableContainer
+    :disabled="clientFilteredItems.length == 0"
+    :title="$i18n.t('data.location.title')"
+    :subtitle="$i18n.t('data.location.subtitle') + ': ' + clientFilteredItems.length"
+    icon="location_on"
+    @clicked="updateSize()"
+  >
     <v-row gutter style="padding:10px">
       <v-col
         md="12"
@@ -10,12 +16,16 @@
       >
         <div class="d-flex flex-column flex-nowrap" style="height: 100%">
           <div style="flex:1" />
-          <v-card-title>
-            Locations and Date:
-          </v-card-title>
           <v-data-table :headers="headers" :items="clientFilteredItems" :items-per-page="5" @click:row="handleClick">
             <template v-slot:item.timestamp="{ item }">
               {{ new Date(item.timestamp).toLocaleDateString($i18n.locale,$t('long')) }}
+            </template>
+            <template v-slot:item.delete="">
+              <v-btn icon outlined x-small color="black" @click="dialog = true">
+                <v-icon x-small>
+                  mdi-trash-can-outline
+                </v-icon>
+              </v-btn>
             </template>
           </v-data-table>
         </div>
@@ -36,6 +46,7 @@
         </client-only>
       </v-col>
     </v-row>
+    <PDeleteDialog :show-dialog="dialog" @close-dialog="dialog = false" />
   </PExpandableContainer>
 </template>
 <script>
@@ -43,19 +54,27 @@ import dateFilterMixin from '../mixins/dateFilterMixin'
 export default {
   mixins: [dateFilterMixin],
   data: () => ({
+    dialog: false,
     center: [],
     zoom: 13,
-    headers: [
-      { text: 'Date', value: 'timestamp' },
-      { text: 'Location', value: 'address' }
-    ]
+    headers: []
   }),
+  mounted () {
+    this.setHeader()
+  },
   created () {
     if (this.items !== undefined && this.items.length > 0) {
       this.changeCenter(this.items[0].lat, this.items[0].lon)
     }
   },
   methods: {
+    setHeader () {
+      this.headers = [
+        { text: this.$i18n.t('table-headers.date'), value: 'timestamp', align: 'start' },
+        { text: this.$i18n.t('table-headers.location'), value: 'address', align: 'start' },
+        { text: this.$i18n.t('table-headers.action'), value: 'delete', align: 'start' }
+      ]
+    },
     changeCenter (lat, lon) {
       this.center = [lat, lon]
     },

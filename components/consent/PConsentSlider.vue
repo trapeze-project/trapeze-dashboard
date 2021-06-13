@@ -73,7 +73,7 @@
                   <div class="font-weight-normal">
                     <strong>{{ item.description }}</strong>
                   </div>
-                  <div>{{ services[ item.description] }}</div>
+                  <div>{{ services[ value.indexOf(item)] }}</div>
                 </div>
               </v-timeline-item>
             </v-timeline>

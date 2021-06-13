@@ -1,28 +1,32 @@
 <template>
-  <v-card elevation="5" style="padding: 0px 2px" shaped>
+  <v-card class="h-100" elevation="5" style="padding: 0px 2px" shaped>
     <v-row>
       <v-col cols="12" lg="12" md="12" sm="12">
         <v-img max-height="300px" :src="filename" />
       </v-col>
       <v-col cols="12" lg="12" md="12" sm="12">
-        <v-card-title>{{ title }}</v-card-title>
-        <v-divider inset />
-        <br>
+        <v-card-title class="text-h5 mb-0" style="max-height: 64px;">
+          {{ title }}
+        </v-card-title>
+        <v-divider class="mt-9" inset />
         <v-card-text>
-          <p>{{ content }}</p>
+          <p class="text-h5 mb-0" style="max-height: 92px;">
+            {{ content }}
+          </p>
           <slot />
         </v-card-text>
       </v-col>
     </v-row>
-    <v-card-actions>
+    <v-card-actions class="mt-15">
       <v-spacer />
       <v-btn
         color="primary"
-        text
+        depressed
         :to="localePath(href)"
       >
-        Explore
+        {{ $t('home.explore-btn') }}
       </v-btn>
+      <v-spacer />
     </v-card-actions>
   </v-card>
 </template>

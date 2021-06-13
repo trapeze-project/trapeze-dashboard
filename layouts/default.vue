@@ -1,6 +1,14 @@
+/* eslint-disable */
 <template>
   <v-app>
-    <v-navigation-drawer v-model="drawer" clipped app color="accent">
+    <v-navigation-drawer
+      v-model="drawer"
+      clipped
+      app
+      mobile-breakpoint="0"
+      :mini-variant="$vuetify.breakpoint.mobile"
+      color="accent"
+    >
       <v-list nav dense>
         <v-list-item-group v-model="group" color="primary">
           <v-list-item v-for="(link, index) in links" :key="index" :index-v-step="index" :to="localePath(link.to)" exact>
@@ -14,6 +22,7 @@
         </v-list-item-group>
       </v-list>
     </v-navigation-drawer>
+
     <v-app-bar clipped-left app color="coporate">
       <v-app-bar-nav-icon color="secondary" @click.stop="drawer = !drawer" />
       <v-spacer />
@@ -59,7 +68,7 @@
         <nuxt />
       </v-container>
     </v-main>
-    <v-footer app>
+    <v-footer>
       <PFooter />
     </v-footer>
   </v-app>
@@ -100,6 +109,9 @@ export default {
 }
 </script>
 <style>
+.v-application {
+  font-family: 'Noto Sans JP', sans-serif;
+}
 #app {
   background: var(--url) no-repeat center center fixed !important;
   background-size: cover;

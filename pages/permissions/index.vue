@@ -1,15 +1,20 @@
 <template>
   <div>
-    <h1 class="title">
+    <h1 class="title mb-2">
       {{ $t('links.permissions') }}
+      <v-btn icon outlined x-small color="black" @click="startTour">
+        <v-icon x-small>
+          mdi-help
+        </v-icon>
+      </v-btn>
     </h1>
-    <v-tour name="permissionTour" :steps="steps" />
+    <v-tour name="indexTour" :steps="steps" />
     <v-divider />
     <br>
-    <PConsentOverview v-model="consentSwitches" permission-v-step="0" />
+    <PConsentOverview v-model="consentSwitches" />
     <br>
     <PConsentSlider v-model="consentSwitches" :services="services" />
-    <v-row style="padding: 0 15px">
+    <v-row style="display: none; padding: 0 15px">
       <v-spacer />
       <v-btn color="primary" :href="localePath('/permissions/advanced')">
         {{ $t('permissions.advanced-button') }}
@@ -19,64 +24,110 @@
 </template>
 <script>
 export default {
-  middleware: ['auth'],
+  // middleware: ['auth'],
   data: () => ({
-    consentSwitches: [
-      { icon: 'mdi-map-marker', value: true, description: 'Location history', consentRank: 5, share: 'We can collect your location history and use it for anlyzing your actions etc.' },
-      { icon: 'mdi-bank', value: false, description: 'Bank account', consentRank: 6, share: 'We have access to your bank account to file monthly payments.' },
-      { icon: 'mdi-email', value: true, description: 'Email adress', consentRank: 1, share: 'We have access to your email-adress and can give it to third parties.' },
-      { icon: 'mdi-account-circle', value: true, description: 'Profile', consentRank: 2, share: 'We have access to your profile information for analyzing your ...' },
-      { icon: 'mdi-home', value: false, description: 'Physical Address', consentRank: 3, share: 'We have access to your physical address for sending you packages.' },
-      { icon: 'mdi-web', value: true, description: 'Browsing activity', consentRank: 4, share: 'We have access to your browsing histroy for ...' }
-    ],
-    services: {
-      'Location history': 'You get the eatTogethter feature were we locate the neareest restaurant for you and your friends',
-      'Bank account': 'You are able to pay with paypal in all restaurants',
-      'Email adress': 'You are getting notifactions when a new rest is planing to open',
-      Profile: 'You are getting personalized ads',
-      'Physical Address': 'You are getting food delivery to your home',
-      'Browsing activity': 'You are getting personalized ads'
-    },
-    steps: [
-      {
-        target: '[permission-v-step="0"]',
-        params: {
-          highlight: true,
-          placement: 'bottom'
-        },
-        content: 'See your personal data you agreed us using to use <strong>Finder</strong>.'
-      },
-      {
-        target: '[permission-v-step="1"]',
-        params: {
-          highlight: true,
-          placement: 'top'
-        },
-        content: "See how much you're sharing with us."
-      },
-      {
-        target: '[permission-v-step="2"]',
-        params: {
-          highlight: true,
-          placement: 'right'
-        },
-        content: 'Learn more about the types of personal data you share with us...'
-      },
-      {
-        target: '[permission-v-step="3"]',
-        params: {
-          highlight: true,
-          placement: 'left'
-        },
-        content: '... and what you get in return.'
-      }
-    ]
+    consentSwitches: [],
+    services: [],
+    steps: []
   }),
   mounted () {
-    // may need to change for specific route
-    // if (document.referrer.includes(window.location.hostname) === -1) {
-    this.$tours.permissionTour.start()
-    // }
+    this.setSteps()
+    this.setConsentSwitchesAndServices()
+    if (!window.localStorage.getItem('permissions-visited')) {
+      window.localStorage.setItem('permissions-visited', 'true')
+      this.startTour()
+    }
+  },
+  methods: {
+    startTour () {
+      this.$tours.indexTour.start()
+    },
+    setSteps () {
+      this.steps = [
+        {
+          target: '[permission-v-step="0"]',
+          params: {
+            highlight: true,
+            placement: 'bottom',
+            enableScrolling: false
+          },
+          content: this.$i18n.t('tour.permission.step-0')
+        },
+        {
+          target: '[permission-v-step="1"]',
+          params: {
+            highlight: true,
+            placement: 'bottom',
+            enableScrolling: false
+          },
+          content: this.$i18n.t('tour.permission.step-1')
+        },
+        {
+          target: '[permission-v-step="2"]',
+          params: {
+            highlight: true,
+            placement: 'top',
+            enableScrolling: false
+          },
+          content: this.$i18n.t('tour.permission.step-2')
+        },
+        {
+          target: '[permission-v-step="3"]',
+          params: {
+            highlight: true,
+            placement: 'bottom',
+            enableScrolling: true
+          },
+          content: this.$i18n.t('tour.permission.step-3')
+        }
+      ]
+    },
+    setConsentSwitchesAndServices () {
+      this.consentSwitches = [
+        {
+          icon: 'mdi-email',
+          value: true,
+          description: this.$i18n.t('permissions.email-address.label'),
+          consentRank: 1,
+          share: this.$i18n.t('permissions.email-address.share')
+        },
+        {
+          icon: 'mdi-account-circle',
+          value: true,
+          description: this.$i18n.t('permissions.profile.label'),
+          consentRank: 2,
+          share: this.$i18n.t('permissions.profile.share')
+        },
+        {
+          icon: 'mdi-crosshairs-gps',
+          value: true,
+          description: this.$i18n.t('permissions.current-location.label'),
+          consentRank: 5,
+          share: this.$i18n.t('permissions.current-location.share')
+        },
+        {
+          icon: 'mdi-map-marker',
+          value: true,
+          description: this.$i18n.t('permissions.location-history.label'),
+          consentRank: 5,
+          share: this.$i18n.t('permissions.location-history.share')
+        },
+        {
+          icon: 'mdi-web',
+          value: true,
+          description: this.$i18n.t('permissions.browsing-history.label'),
+          consentRank: 4,
+          share: this.$i18n.t('permissions.browsing-history.share')
+        }
+      ]
+      this.services = [
+        this.$i18n.t('permissions.email-address.get'),
+        this.$i18n.t('permissions.profile.get'),
+        this.$i18n.t('permissions.current-location.get'),
+        this.$i18n.t('permissions.location-history.get'),
+        this.$i18n.t('permissions.browsing-history.get')
+      ]
+    }
   }
 }
 </script>
