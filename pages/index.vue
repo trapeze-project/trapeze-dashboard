@@ -3,7 +3,7 @@
     <v-tour name="indexTour" :steps="steps" />
     <h1 class="title align-center d-flex">
       {{ $t('home.title') }}
-      <v-icon class="ml-1" @click="$tours.indexTour.start()">
+      <v-icon class="ml-1" color="primary" @click="$tours.indexTour.start()">
         mdi-help-circle
       </v-icon>
     </h1>

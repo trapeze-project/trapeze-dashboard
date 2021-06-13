@@ -3,7 +3,7 @@
     <v-tour name="dataTour" :steps="steps" />
     <h1 class="title align-center d-flex">
       {{ $t('links.data') }}
-      <v-icon class="ml-1" @click="$tours.dataTour.start()">
+      <v-icon class="ml-1" color="primary" @click="$tours.dataTour.start()">
         mdi-help-circle
       </v-icon>
     </h1>

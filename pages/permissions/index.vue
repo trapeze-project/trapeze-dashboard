@@ -3,7 +3,7 @@
     <v-tour name="permissionTour" :steps="steps" />
     <h1 class="title align-center d-flex">
       {{ $t('links.permissions') }}
-      <v-icon class="ml-1" @click="$tours.permissionTour.start()">
+      <v-icon class="ml-1" color="primary" @click="$tours.permissionTour.start()">
         mdi-help-circle
       </v-icon>
     </h1>
