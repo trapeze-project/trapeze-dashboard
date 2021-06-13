@@ -9,17 +9,18 @@
     <PConsentOverview v-model="consentSwitches" permission-v-step="0" />
     <br>
     <PConsentSlider v-model="consentSwitches" :services="services" />
-    <v-row style="padding: 0 15px">
+    <!-- <v-row style="padding: 0 15px">
       <v-spacer />
       <v-btn color="primary" :href="localePath('/permissions/advanced')">
         {{ $t('permissions.advanced-button') }}
       </v-btn>
-    </v-row>
+    </v-row> -->
   </div>
 </template>
 <script>
 export default {
   middleware: ['auth'],
+  // TODO: ADD TO TRANSLATION
   data: () => ({
     consentSwitches: [
       { icon: 'mdi-map-marker', value: true, description: 'Location history', consentRank: 5, share: 'We can collect your location history and use it for anlyzing your actions etc.' },
@@ -73,10 +74,12 @@ export default {
     ]
   }),
   mounted () {
-    // may need to change for specific route
-    // if (document.referrer.includes(window.location.hostname) === -1) {
-    this.$tours.permissionTour.start()
-    // }
+    if (this.$auth.user) {
+      if (!localStorage.getItem('visitedPermission')) {
+        this.$tours.permissionTour.start()
+        localStorage.setItem('visitedPermission', true)
+      }
+    }
   }
 }
 </script>

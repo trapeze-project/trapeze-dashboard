@@ -93,6 +93,7 @@ export default {
   computed: {
     headers () {
       return [
+        // TODO: ADD TO TRANSLATION
         { text: 'Date', align: 'start', value: 'timestamp' },
         { text: 'Data', value: 'data' },
         { text: 'Purpose', value: 'purpose' },

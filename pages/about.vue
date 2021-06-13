@@ -1,6 +1,6 @@
 <template>
   <div class="about">
-    <v-tour name="indexTour" :steps="steps" />
+    <v-tour name="aboutTour" :steps="steps" />
     <h1 class="title">
       {{ $t('links.about') }}
     </h1>
@@ -67,7 +67,12 @@ export default {
     ]
   }),
   mounted () {
-    this.$tours.indexTour.start()
+    if (this.$auth.user) {
+      if (!localStorage.getItem('visitedAbout')) {
+        this.$tours.aboutTour.start()
+        localStorage.setItem('visitedAbout', true)
+      }
+    }
   }
 }
 </script>

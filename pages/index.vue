@@ -94,9 +94,12 @@ export default {
     ]
   }),
   mounted () {
-    // if (document.referrer.includes(window.location.hostname) === -1) {
-    this.$tours.indexTour.start()
-    // }
+    if (this.$auth.user) {
+      if (!localStorage.getItem('visitedIndex')) {
+        this.$tours.indexTour.start()
+        localStorage.setItem('visitedIndex', true)
+      }
+    }
   }
 }
 </script>

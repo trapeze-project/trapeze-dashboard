@@ -39,6 +39,7 @@
 
 <script>
 export default {
+  // TODO: ADD TO TRANSLATION
   props: {
     title: {
       type: String,

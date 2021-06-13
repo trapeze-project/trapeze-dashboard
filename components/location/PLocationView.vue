@@ -1,5 +1,38 @@
+
 <template>
   <PExpandableContainer :disabled="clientFilteredItems.length == 0" title="Your location information." :subtitle="'We have collected '+clientFilteredItems.length +' locations.'" icon="location_on" @clicked="updateSize()">
+    <v-dialog v-model="deleteDialog" max-width="400px">
+      <template>
+        <v-card>
+          <v-toolbar
+            color="primary"
+            dark
+          >
+            Deletion request
+          </v-toolbar>
+          <br>
+          <v-card-text>
+            <div>
+              By hitting send, you can send a request for deletetion to you controller.
+            </div>
+          </v-card-text>
+          <v-card-actions class="justify-end">
+            <v-btn
+              text
+              @click="abortDeletion"
+            >
+              Close
+            </v-btn>
+            <v-btn
+              text
+              @click="deleteItem"
+            >
+              Send
+            </v-btn>
+          </v-card-actions>
+        </v-card>
+      </template>
+    </v-dialog>
     <v-row gutter style="padding:10px">
       <v-col
         md="12"
@@ -16,6 +49,13 @@
           <v-data-table :headers="headers" :items="clientFilteredItems" :items-per-page="5" @click:row="handleClick">
             <template v-slot:item.timestamp="{ item }">
               {{ new Date(item.timestamp).toLocaleDateString($i18n.locale,$t('long')) }}
+            </template>
+            <template v-slot:item.actions="{ item }">
+              <v-icon
+                @click="openDeleteDialog(item)"
+              >
+                mdi-delete
+              </v-icon>
             </template>
           </v-data-table>
         </div>
@@ -47,7 +87,8 @@ export default {
     zoom: 13,
     headers: [
       { text: 'Date', value: 'timestamp' },
-      { text: 'Location', value: 'address' }
+      { text: 'Location', value: 'address' },
+      { text: 'Actions', value: 'actions' }
     ]
   }),
   created () {

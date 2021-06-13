@@ -3,6 +3,7 @@
     <div style="padding: 15px">
       <v-list>
         <v-list-item>
+          <!-- TODO: ADD TO TRANSLATION -->
           <v-subheader><b>USERNAME:</b></v-subheader>
           <v-spacer />
           <div>
