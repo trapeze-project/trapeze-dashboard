@@ -36,7 +36,7 @@
   },
   "profile": {
     "title": "Account credentials",
-    "subtitle": "Your email address and password.",
+    "subtitle": "Your email address and password",
     "username": "EMAIL ADDRESS",
     "password": "PASSWORD"
   },

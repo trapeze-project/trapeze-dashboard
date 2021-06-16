@@ -70,7 +70,7 @@ export default {
     this.setSteps()
     if (!window.localStorage.getItem('data-visited')) {
       window.localStorage.setItem('data-visited', true)
-      this.startTour()
+      this.$nextTick(() => this.startTour())
     }
   },
   methods: {

@@ -35,7 +35,7 @@ export default {
     this.setConsentSwitchesAndServices()
     if (!window.localStorage.getItem('permissions-visited')) {
       window.localStorage.setItem('permissions-visited', 'true')
-      this.startTour()
+      this.$nextTick(() => this.startTour())
     }
   },
   methods: {

@@ -36,7 +36,7 @@ export default {
     this.setSteps()
     if (!window.localStorage.getItem('index-visited')) {
       window.localStorage.setItem('index-visited', true)
-      this.startTour()
+      this.$nextTick(() => this.startTour())
     }
   },
   methods: {

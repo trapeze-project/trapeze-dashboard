@@ -56,9 +56,11 @@
               </v-list>
             </v-menu>
           </div>
+          <!--
           <v-btn color="secondary" class="ml-2" outlined @click="logout">
             Logout
           </v-btn>
+          -->
         </div>
       </div>
       <v-spacer />

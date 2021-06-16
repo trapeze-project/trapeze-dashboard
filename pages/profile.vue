@@ -32,7 +32,7 @@ export default {
     this.setSteps()
     if (!window.localStorage.getItem('profile-visited')) {
       window.localStorage.setItem('profile-visited', true)
-      this.startTour()
+      this.$nextTick(() => this.startTour())
     }
   },
   methods: {

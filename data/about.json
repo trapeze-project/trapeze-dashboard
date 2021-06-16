@@ -3,7 +3,7 @@
         {
             "component": "PCompanyView",
             "data": {
-                "title": "Finder GmbH.",
+                "title": "Finder GmbH",
                 "imgUrl": "https://www.fatcow.com/images/free-logos/Company-logo01.jpg",
                 "description": "Finder Inc. was founded in early 1984 in Oakland (US) by Norman Shephard and Stephan Doug. The same-named online service Finder is with 420 million users the most popular online service in the US. The service gained popularity as it was often mistaken for the app Tinder, since users, when installing the app, wrongly typed an F at the beginning, while they actually intended to type a T. Reasons for this circumstance is the close proximity of the two letters on the still very popular QWERTY keyboards. Users reported when they reckognized their mistake, weeks and even months have passed. Despite its popularity the service was subject to criticism over the past due to its alleged massive amount of data collection. (source: Wikipedia) ",
                 "info": [

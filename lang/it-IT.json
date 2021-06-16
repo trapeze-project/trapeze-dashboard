@@ -3,34 +3,34 @@
     "cancel": "Annulla"
   },
   "links": {
-    "home": "Casa",
+    "home": "Home",
     "profile": "Profilo",
-    "about": "Di",
+    "about": "Scopri di più",
     "data": "Dati",
     "log": "Registro delle attività",
     "permissions": "Autorizzazioni"
   },
   "home": {
-    "title": "Casa",
+    "title": "Home",
     "explore-btn": "Esplorare",
     "items": {
       "0": {
-        "title": "Dati che ci hai dato",
+        "title": "Dati che ci hai fornito",
         "filename": "/derived-data.svg",
         "link": "/profile",
-        "content": "Controlla i dati che ci hai fornito quando si registra per il servizio."
+        "content": "Controlla i dati forniti nel corso della registrazione al servizio."
       },
       "1": {
-        "title": "Dati che raccogliamo",
+        "title": "Dati raccolti",
         "filename": "/service-data.svg",
         "link": "/data",
-        "content": "Scopri i dati che raccogliamo e analizziamo mentre stai usando il nostro servizio."
+        "content": "Scopri di più sui dati raccolti e analizzati mentre usi il nostro servizio."
       },
       "2": {
-        "title": "Cosa hai concordato",
+        "title": "Termini concordati",
         "filename": "/permissions.svg",
         "link": "/permissions",
-        "content": "Termini e condizioni e politiche sulla privacy concordate diligentemente."
+        "content": "Termini, condizioni e politiche sulla privacy concordate diligentemente."
       }
     }
   },
@@ -38,24 +38,24 @@
     "title": "Credenziali dell'account",
     "subtitle": "Il tuo indirizzo email e la password",
     "username": "INDIRIZZO E-MAIL",
-    "password": "PAROLA D'ORDINE"
+    "password": "PASSWORD"
   },
   "about": {
-    "provider": "Processore",
-    "controller": "Controllora"
+    "provider": "Elaboratore dei dati",
+    "controller": "Titolare del trattamento"
   },
   "data": {
     "location": {
-      "title": "Le informazioni sulla tua posizione",
-      "subtitle": "Numero di luoghi raccolti"
+      "title": "Le informazioni sulla tua geolocalizzazione",
+      "subtitle": "Numero di geolocalizzazioni raccolte"
     },
     "browsing": {
-      "title": "La tua storia di navigazione.",
+      "title": "La tua cronologia di navigazione",
       "subtitle": "Numero di siti Web visitati raccolti"
     },
     "delete-dialog": {
       "title": "Elimina dati",
-      "text": "I tuoi dati verranno cancellati. Il responsabile del trattamento verrà informato della tua richiesta e ti risponderà a breve.",
+      "text": "I tuoi dati verranno cancellati. Il titolare del trattamento verrà informato della tua richiesta e ti risponderà a breve.",
       "btn": "Elimina"
     }
   },
@@ -67,21 +67,21 @@
     },
     "profile": {
       "label": "Profilo",
-      "get": "Recupera raccomandazioni personalizzate che si adattano a te.",
-      "share": "Costruiamo un profilo in base a come usi il Finder, ciò che ha suscitato il tuo interesse e quali ti trovi visitati."
+      "get": "Recupera delle raccomandazioni personalizzate che si adattano a te.",
+      "share": "Costruiamo un profilo in base a come usi il Finder, ciò che ha suscitato il tuo interesse e quali luoghi hai visitato."
     },    
     "current-location": {
-      "label": "Posizione attuale",
-      "get": "La tua posizione corrente viene utilizzata per identificare i luoghi nelle vicinanze.",
-      "share": "La posizione corrente è ottenuta tramite GPS, WiFi, o in base alla torre cellulare a cui il telefono è collegato."
+      "label": "Geolocalizzazione attuale",
+      "get": "La tua geolocalizzazione attuale viene utilizzata per identificare luoghi nelle vicinanze.",
+      "share": "La tua geolocalizzazione attuale è ottenuta tramite GPS, WiFi, o in base al ripetitore o antenna a cui il tuo telefono è collegato."
     },
     "location-history": {
-      "label": "Storia della posizione",
-      "get": "Recupera raccomandazioni personalizzate che si adattano a te.",
-      "share": "La tua storia della posizione è utilizzata per arricchire il tuo profilo di interesse con dati aggiuntivi."
+      "label": "Cronologia delle tue geolocalizzazioni",
+      "get": "Recupera delle raccomandazioni personalizzate che si adattano a te.",
+      "share": "La cronologia delle tue geolocalizzazioni è utilizzata per arricchire il tuo profilo di interessi con dati aggiuntivi."
     },
     "browsing-history": {
-      "label": "Attività di navigazione",
+      "label": "Cronologia di navigazione",
       "get": "Recupera raccomandazioni personalizzate che si adattano a te.",
       "share": "La tua cronologia di navigazione viene utilizzata per arricchire il tuo profilo di interesse con dati aggiuntivi."
     },
@@ -89,9 +89,9 @@
   },
   "login": {
     "username": "E-mail",
-    "password": "Parola d'ordine",
+    "password": "Password",
     "login": "login",
-    "loginTitle": "Accedi al tuo dashboard del Finder."
+    "loginTitle": "Accedi al dashboard del Finder."
   },
   "short": {
     "year": "numeric",
@@ -108,44 +108,44 @@
   },
   "tour": {
     "index": {
-      "step-0-title": "Benvenuti nella cruscotto sulla privacy del Finder",
+      "step-0-title": "Benvenuti sul dashboard del Finder relativo alla privacy",
       "step-0": "Puoi sempre tornare a questa pagina facendo clic sul pulsante <strong> Home </strong>!",
       "step-1-title": "Profilo",
-      "step-1": "Controlla i dati che ci hai fornito al momento della registrazione per <strong> Finder </strong>.",
+      "step-1": "Controlla i dati che ci hai fornito al momento della registrazione per il <strong> Finder </strong>.",
       "step-2-title": "Chi siamo",
-      "step-2": "Scopri di <strong> Finder GmbH </strong> e aziende coinvolte nel fornire Finder.",
+      "step-2": "Scopri di più sul <strong> Finder GmbH </strong> e sulle aziende coinvolte nel fornire il Finder.",
       "step-3-title": "Dati che raccogliamo",
-      "step-3": "Esplora i dati che abbiamo raccolto, quando hai usato il cercatore.",
+      "step-3": "Esplora i dati che abbiamo raccolto quando hai usato il browser.",
       "step-4-title": "Autorizzazioni",
-      "step-4": "Scopri cosa hai concordato quando accetti i termini e le condizioni.",
-      "step-5-title": "Le lingue",
-      "step-5": "È possibile modificare la lingua del cruscotto."
+      "step-4": "Scopri cos’hai concordato accettando i termini e le condizioni del servizio.",
+      "step-5-title": "Lingue",
+      "step-5": "È possibile modificare la lingua del dashboard."
     },
     "profile": {
-      "step-0": "I tuoi dati sono raggruppati in più categorie.",
-      "step-1": "Fai clic sulla piccola freccia per dare un'occhiata più da vicino su una determinata categoria."
+      "step-0": "I tuoi dati sono raggruppati in varie categorie.",
+      "step-1": "Fai clic sulla piccola freccia per dare un'occhiata più da vicino ad una determinata categoria."
     },
     "about": {
-      "step-0": "Un controller è un'azienda che elabora i tuoi dati personali.In questo caso ci siamo: Finder GmbH. Ci possono essere più controller.",
-      "step-1": "Un processore è un'azienda che elabora i tuoi dati personali per conto del / i controller.",
-      "step-2": "Fai clic sulla piccola freccia per dare un'occhiata più da vicino su una certa azienda."
+      "step-0": "Un titolare del trattamento è un'azienda che elabora i tuoi dati personali.In questo caso noi siamo: Finder GmbH. Ci possono essere più titolari del trattamento.",
+      "step-1": "Un elaboratore dei dati è un'azienda che elabora i tuoi dati personali per conto del / i titolare/i del trattamento.",
+      "step-2": "Fai clic sulla piccola freccia per dare un'occhiata più da vicino ad una certa azienda."
     },
     "data": {
       "step-0": "I tuoi dati sono raggruppati in più categorie.",
       "step-1": "Puoi ispezionare ogni categoria individualmente.",
       "step-2": "Fai clic sulla piccola freccia per dare un'occhiata più da vicino su una determinata categoria.",
-      "step-3": "Per eliminare alcuni dati, basta fare clic sull'icona Bin accanto ai dati. Il controller verrà comunicato per eliminare i dati in modo permanente."
+      "step-3": "Per eliminare alcuni dati, basta fare clic sull'icona Cestino accanto ai dati. Il titolare del trattamento verrà notificato della tua intenzione di eliminare i dati in modo permanente."
     },
     "permission": {
-      "step-0": "Guarda i tuoi dati personali che hai concordato usando per utilizzare <strong> Finder </strong>.",
+      "step-0": "Dai un’occhiata ai dati personali che hai concordato che noi utilizzassimo per il <strong> Finder </strong>.",
       "step-1": "Guarda quanto stai condividendo con noi.",
-      "step-2": "Ulteriori informazioni sui tipi di dati personali che condividi con noi ...",
+      "step-2": "Ulteriori informazioni sul tipo di dati personali che condividi con noi ...",
       "step-3": "... e ciò che ottieni in cambio."
     }
   },
   "table-headers": {
     "date": "Data",
-    "location": "Posizione",
+    "location": "Geolocalizzazione",
     "action": "Azione",
     "url": "URL",
     "user-agent": "Agente utente",
