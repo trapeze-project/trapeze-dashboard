@@ -60,6 +60,15 @@
     }
   },
   "permissions": {
+    "headings": {
+      "share": "You share",
+      "get": "You get"
+    },
+    "slider": {
+      "low": "Low",
+      "medium": "Medium",
+      "high": "High"
+    },
     "email-address": {
       "label": "Email adress",
       "get": "Required for logging into Finder and to send you notifications about places nearby.",

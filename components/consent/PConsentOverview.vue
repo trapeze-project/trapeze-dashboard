@@ -5,7 +5,7 @@
         v-for="item in value"
         :key="item.description"
         v-model="item.value"
-        class="ml-3 mr-3"
+        class="ml-6 mr-6"
         :icon="item.icon"
         :description="item.description"
         permission-v-step="0"

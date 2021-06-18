@@ -60,6 +60,15 @@
     }
   },
   "permissions": {
+    "headings": {
+      "share": "Cosa condividi",
+      "get": "Cosa ottieni"
+    },
+    "slider": {
+      "low": "Basso",
+      "medium": "Medio",
+      "high": "Alto"
+    },      
     "email-address": {
       "label": "Indirizzo e-mail",
       "get": "Richiesto per l'accesso al Finder e per inviarti notifiche sui luoghi nelle vicinanze.",

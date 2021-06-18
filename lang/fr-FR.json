@@ -60,6 +60,15 @@
     }
   },
   "permissions": {
+    "headings": {
+      "share": "Vous partagez",
+      "get": "Vous obtenez"
+    },
+    "slider": {
+      "low": "Basse",
+      "medium": "Moyenne",
+      "high": "Haute"
+    },        
     "email-address": {
       "label": "Adresse e-mail",
       "get": "Requis pour vous connecter à Finder et vous envoyer des notifications sur les lieux à proximité.",

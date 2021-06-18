@@ -35,6 +35,9 @@ export default {
       this.$nextTick(() => this.startTour())
     }
   },
+  beforeDestroy () {
+    this.$tours.indexTour.stop()
+  },
   methods: {
     startTour () {
       this.$tours.indexTour.start()
