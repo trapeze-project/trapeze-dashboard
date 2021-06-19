@@ -116,6 +116,12 @@
     "minute": "numeric"
   },
   "tour": {
+    "buttons": {
+      "skip": "Passer le tour",
+      "prev": "Précédent",
+      "next": "Suivant",
+      "finish": "Terminer"
+    },    
     "index": {
       "step-0-title": "Bienvenue sur le Tableau de bord Finder Confidentialité",
       "step-0": "Vous pouvez toujours revenir à cette page en cliquant sur le bouton <strong> Accueil </strong>!",

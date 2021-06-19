@@ -116,6 +116,12 @@
     "minute": "numeric"
   },
   "tour": {
+    "buttons": {
+      "skip": "Skip tour",
+      "prev": "Previous",
+      "next": "Next",
+      "finish": "Finish"
+    },
     "index": {
       "step-0-title": "Welcome to the Finder Privacy Dashboard",
       "step-0": "You can always return to this page by clicking the <strong>Home</strong> button!",

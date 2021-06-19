@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-tour name="indexTour" :steps="steps" />
+    <v-tour name="indexTour" :steps="steps" :options="options" />
     <h1 class="title mb-2">
       {{ $t('links.data') }}
       <v-btn icon outlined x-small color="black" @click="startTour">
@@ -59,7 +59,8 @@ export default {
     searchTimeRange: [1],
     dates: [],
     menu: false,
-    steps: []
+    steps: [],
+    options: {}
   }),
   computed: {
     dateRangeText () {
@@ -67,6 +68,7 @@ export default {
     }
   },
   mounted () {
+    this.setLabels()
     this.setSteps()
     if (!window.localStorage.getItem('data-visited')) {
       window.localStorage.setItem('data-visited', true)
@@ -79,6 +81,16 @@ export default {
   methods: {
     startTour () {
       this.$tours.indexTour.start()
+    },
+    setLabels () {
+      this.options = {
+        labels: {
+          buttonSkip: this.$i18n.t('tour.buttons.skip'),
+          buttonPrevious: this.$i18n.t('tour.buttons.prev'),
+          buttonNext: this.$i18n.t('tour.buttons.next'),
+          buttonStop: this.$i18n.t('tour.buttons.finish')
+        }
+      }
     },
     setSteps () {
       this.steps = [

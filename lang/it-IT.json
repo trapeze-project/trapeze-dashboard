@@ -116,6 +116,12 @@
     "minute": "numeric"
   },
   "tour": {
+    "buttons": {
+      "skip": "Salta tour",
+      "prev": "Indietro",
+      "next": "Avanti",
+      "finish": "Finire"
+    },    
     "index": {
       "step-0-title": "Benvenuti sul dashboard del Finder relativo alla privacy",
       "step-0": "Puoi sempre tornare a questa pagina facendo clic sul pulsante <strong> Home </strong>!",

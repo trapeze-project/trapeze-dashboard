@@ -1,6 +1,6 @@
 <template>
   <div id="index">
-    <v-tour name="indexTour" :steps="steps" />
+    <v-tour name="indexTour" :steps="steps" :options="options" />
     <h1 class="title mb-2">
       {{ $t('home.title') }}
       <v-btn icon outlined x-small color="black" @click="startTour">
@@ -30,9 +30,11 @@
 export default {
   // middleware: ['auth'],
   data: () => ({
-    steps: []
+    steps: [],
+    options: {}
   }),
   mounted () {
+    this.setLabels()
     this.setSteps()
     if (!window.localStorage.getItem('index-visited')) {
       window.localStorage.setItem('index-visited', true)
@@ -45,6 +47,16 @@ export default {
   methods: {
     startTour () {
       this.$tours.indexTour.start()
+    },
+    setLabels () {
+      this.options = {
+        labels: {
+          buttonSkip: this.$i18n.t('tour.buttons.skip'),
+          buttonPrevious: this.$i18n.t('tour.buttons.prev'),
+          buttonNext: this.$i18n.t('tour.buttons.next'),
+          buttonStop: this.$i18n.t('tour.buttons.finish')
+        }
+      }
     },
     setSteps () {
       this.steps = [

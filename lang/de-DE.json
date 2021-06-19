@@ -116,6 +116,12 @@
     "minute": "numeric"
   },
   "tour": {
+    "buttons": {
+      "skip": "Tour überspringen",
+      "prev": "Zurück",
+      "next": "Weiter",
+      "finish": "Beenden"
+    },    
     "index": {
       "step-0-title": "Willkommen im Privatsphäre-Bereich von Finder",
       "step-0": "Sie können immer auf diese Seite zurückkehren, indem Sie auf die Schaltfläche <strong>Start</strong> klicken!",
