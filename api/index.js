@@ -24,6 +24,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
 app.get('/fetch', (req, res) => {
+  // TODO: ADD TO TRANSLATION
   if (req.query.original === 'true') {
     return res.json(require('./../data/data.json'))
   }

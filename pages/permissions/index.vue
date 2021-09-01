@@ -19,7 +19,7 @@
       <v-btn color="primary" :href="localePath('/permissions/advanced')">
         {{ $t('permissions.advanced-button') }}
       </v-btn>
-    </v-row>
+    </v-row> -->
   </div>
 </template>
 <script>

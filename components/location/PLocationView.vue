@@ -1,3 +1,4 @@
+
 <template>
   <PExpandableContainer
     :disabled="clientFilteredItems.length == 0"

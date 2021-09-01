@@ -1,5 +1,37 @@
 <template>
   <PExpandableContainer :disabled="clientFilteredItems.length == 0" title="Your movie information." :subtitle="'We have collected '+clientFilteredItems.length +' movies.'" icon="mdi-movie-open">
+    <v-dialog v-model="deleteDialog" max-width="400px">
+      <template>
+        <v-card>
+          <v-toolbar
+            color="primary"
+            dark
+          >
+            Deletion request
+          </v-toolbar>
+          <br>
+          <v-card-text>
+            <div>
+              By hitting send, you can send a request for deletetion to you controller.
+            </div>
+          </v-card-text>
+          <v-card-actions class="justify-end">
+            <v-btn
+              text
+              @click="abortDeletion"
+            >
+              Close
+            </v-btn>
+            <v-btn
+              text
+              @click="deleteItem"
+            >
+              Send
+            </v-btn>
+          </v-card-actions>
+        </v-card>
+      </template>
+    </v-dialog>
     <div style="padding: 10px">
       <v-card-title>
         Movies
@@ -44,6 +76,13 @@
         <template v-slot:item.watched_on="{ item }">
           {{ new Date(item.watched_on).toLocaleDateString($i18n.locale,$t('long')) }}
         </template>
+        <template v-slot:item.actions="{ item }">
+          <v-icon
+            @click="openDeleteDialog(item)"
+          >
+            mdi-delete
+          </v-icon>
+        </template>
       </v-data-table>
     </div>
   </PExpandableContainer>
@@ -62,7 +101,8 @@ export default {
       { text: 'Genre', value: 'movie_genre' },
       { text: 'Total Watchtime', value: 'duration' },
       { text: 'Language', value: 'language' },
-      { text: 'IP-Adress', value: 'ip_address' }
+      { text: 'IP-Adress', value: 'ip_address' },
+      { text: 'Actions', value: 'actions' }
     ]
   }),
   methods: {
