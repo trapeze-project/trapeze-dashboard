@@ -12,7 +12,9 @@
   },
   "dependencies": {
     "@ashwamegh/vue-link-preview": "^0.2.5",
+    "@nuxtjs/auth-next": "*",
     "@nuxtjs/axios": "^5.12.4",
+    "@nuxtjs/proxy": "^2.1.0",
     "body-parser": "^1.19.0",
     "core-js": "^3.6.5",
     "grabity": "^1.0.5",
@@ -23,7 +25,8 @@
     "nuxt-leaflet": "0.0.25",
     "vue-calendar-heatmap": "^0.8.4",
     "vue-resize-text": "^0.1.1",
-    "vue-tippy": "^4.10.0"
+    "vue-tippy": "^4.10.0",
+    "vue-tour": "^2.0.0"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^3.1.0",

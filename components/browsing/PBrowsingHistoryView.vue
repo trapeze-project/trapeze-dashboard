@@ -1,9 +1,11 @@
 <template>
-  <PExpandableContainer :disabled="clientFilteredItems.length == 0" title="Your browsing information." :subtitle="'We have collected '+clientFilteredItems.length +' items.'" icon="mdi-web">
+  <PExpandableContainer
+    :disabled="clientFilteredItems.length == 0"
+    :title="$i18n.t('data.browsing.title')"
+    :subtitle="$i18n.t('data.browsing.subtitle') + ': ' + clientFilteredItems.length"
+    icon="mdi-web"
+  >
     <div style="padding: 10px">
-      <v-card-title>
-        Browsing
-      </v-card-title>
       <v-row>
         <v-col
           cols="10"
@@ -40,15 +42,23 @@
           {{ new Date(item.timestamp).toLocaleDateString($i18n.locale,$t('long')) }}
         </template>
         <template v-slot:item.url="{ item }">
-          <a :href="item.url">{{ item.url.match(/^.+?[^\/:](?=[?\/]|$)/)[0] }}</a>
+          <a :href="item.url" target="_blank">{{ item.url.match(/^.+?[^\/:](?=[?\/]|$)/)[0] }}</a>
         </template>
         <template v-slot:expanded-item="{ item }">
           <td :colspan="headers.length">
             <link-preview :url="item.url" />
           </td>
         </template>
+        <template v-slot:item.delete="">
+          <v-btn icon outlined x-small color="black" @click="dialog = true">
+            <v-icon x-small>
+              mdi-trash-can-outline
+            </v-icon>
+          </v-btn>
+        </template>
       </v-data-table>
     </div>
+    <PDeleteDialog :show-dialog="dialog" @close-dialog="dialog = false" />
   </PExpandableContainer>
 </template>
 
@@ -58,14 +68,24 @@ import dateFilterMixin from '../mixins/dateFilterMixin'
 export default {
   mixins: [searchableComponentMixin, dateFilterMixin],
   data: () => ({
-    headers: [
-      { text: 'URL', value: 'url' },
-      { text: 'Date', value: 'timestamp' },
-      { text: 'User Agent', value: 'user_agent' },
-      { text: 'IP-Adress', value: 'ip_address' }
-    ],
+    dialog: false,
+    headers: [],
     expanded: [],
     singleExpand: false
-  })
+  }),
+  mounted () {
+    this.setHeader()
+  },
+  methods: {
+    setHeader () {
+      this.headers = [
+        { text: this.$i18n.t('table-headers.url'), value: 'url' },
+        { text: this.$i18n.t('table-headers.date'), value: 'timestamp' },
+        { text: this.$i18n.t('table-headers.user-agent'), value: 'user_agent' },
+        { text: this.$i18n.t('table-headers.ip'), value: 'ip_address' },
+        { text: this.$i18n.t('table-headers.action'), value: 'delete' }
+      ]
+    }
+  }
 }
 </script>

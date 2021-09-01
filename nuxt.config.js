@@ -1,17 +1,22 @@
+/* eslint-disable eqeqeq */
 // eslint-disable-next-line nuxt/no-cjs-in-config
 const Design = require('./design/design.config.json')
 export default {
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
-    titleTemplate: '%s - dashboardvuetfy',
-    title: 'dashboardvuetfy',
+    titleTemplate: '%s - Finder | Privacy Dashboard by TRAPEZE',
+    title: 'Finder | Privacy Dashboard by TRAPEZE',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap",
+      },
     ]
   },
 
@@ -36,13 +41,13 @@ export default {
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
     // https://go.nuxtjs.dev/vuetify
-    '@nuxtjs/vuetify'
+    '@nuxtjs/vuetify',
   ],
 
-  // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
-    // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+    '@nuxtjs/proxy',
+    '@nuxtjs/auth-next',
     'nuxt-leaflet',
     ['nuxt-i18n',
       {
@@ -72,30 +77,45 @@ export default {
         ],
         detectBrowserLanguage: {
           useCookie: true,
-          alwaysRedirect: true
+          alwaysRedirect: true,
+          onlyOnRoot: true
         }
       }
     ]
   ],
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
   axios: {
-    baseURL: 'http://localhost:3000'
+    baseURL: process.env.BASE_URL,
+    proxyHeaders: false,
+    credentials: false
   },
-
-  publicRuntimeConfig: {
-    axios: {
-      browserBaseURL: process.env.BROWSER_BASE_URL
+  auth: {
+    redirect: {
+      login: '/login',
+      logout: '/login',
+      callback: '/login',
+      home: '/'
     },
-    logo: Design.logo,
-    background: Design.background
-  },
-
-  privateRuntimeConfig: {
-    axios: {
-      baseURL: process.env.BASE_URL
+    strategies: {
+      cookie: {
+        user: {
+          property: false,
+          autoFetch: true
+        },
+        endpoints: {
+          login: { url: process.env.BASE_AUTH_URL_DEV + '/auth/login/', method: 'post', withCredentials: true },
+          logout: { url: process.env.BASE_AUTH_URL_DEV + '/auth/logout/', method: 'get', withCredentials: true },
+          user: { url: process.env.BASE_AUTH_URL_DEV + '/users/me/', method: 'get', withCredentials: true }
+        }
+      }
     }
   },
-  // Vuetify module configuration (https://go.nuxtjs.dev/config-vuetify)
+  publicRuntimeConfig: {
+    logo: Design.logo,
+    background: Design.background,
+    authApiUrl: process.env.BASE_AUTH_URL_DEV,
+    baseURL: process.env.BASE_URL
+  },
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
     theme: {
@@ -113,6 +133,7 @@ export default {
   },
   watch: ['design'],
   server: {
-    host: '0.0.0.0'
+    host: process.env.ENVIRONMENT == 'production' ? process.env.HOST : 'localhost',
+    port: process.env.ENVIRONMENT == 'production' ? process.env.PORT : 3000
   }
 }

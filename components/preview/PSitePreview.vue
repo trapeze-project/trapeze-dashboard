@@ -3,7 +3,7 @@
     <v-app-bar style="z-index: 1" clipped-left :color="previewConfig.theme.light.coporate">
       <v-app-bar-nav-icon color="secondary" />
       <v-spacer />
-      <div class="header-preview">
+      <div class="d-flex flex-row flex-nowrap justify-space-between align-center" style="height:60px; width: 100%">
         <a id="logo" :style="cssVars" />
         <v-spacer />
         <b :style="'color:'+ previewConfig.theme.light['secondary']+';margin:10px;'" class="secondary--text d-none d-md-inline d-lg-inline"> {{ previewConfig.logo.slogan.toUpperCase() }} </b>
@@ -67,14 +67,5 @@ a {
     display: block;
     content: var(--url);
     max-height: 30px;
-}
-
-.header-preview {
-    height: 60px;
-    width: 100%;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-items: space-between;
-    align-items: center;
 }
 </style>

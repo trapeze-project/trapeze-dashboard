@@ -1,17 +1,24 @@
 <template>
-  <PExpandableContainer title="Account credentials" subtitle="Your username (in this case: email address) and password." icon="account_circle">
+  <PExpandableContainer
+    :title="$i18n.t('profile.title')"
+    :subtitle="$i18n.t('profile.subtitle')"
+    icon="account_circle"
+  >
     <div style="padding: 15px">
       <v-list>
-        <div v-for="(item, index) in items" :key="index">
-          <v-list-item>
-            <v-subheader><b>{{ item.title.toUpperCase() }}:</b></v-subheader>
-            <v-spacer />
-            <div>
-              {{ item.description }}
-            </div>
-          </v-list-item>
-          <v-divider inset />
-        </div>
+        <v-list-item>
+          <v-subheader><b>{{ $t('profile.username') }}:</b></v-subheader>
+          <v-spacer />
+          <div>
+            {{ items.user.username }}
+          </div>
+        </v-list-item>
+        <v-list-item>
+          <v-subheader><b>{{ $t('profile.password') }}:</b></v-subheader>
+          <v-spacer />
+          <div>***</div>
+        </v-list-item>
+        <v-divider inset />
       </v-list>
     </div>
   </PExpandableContainer>
@@ -20,7 +27,7 @@
 export default {
   props: {
     items: {
-      type: Array,
+      type: Object,
       required: true
     }
   }

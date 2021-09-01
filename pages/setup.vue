@@ -72,6 +72,7 @@
 
 <script>
 export default {
+  middleware: ['auth'],
   async asyncData ({ $axios }) {
     const result = await $axios.$get('/api/setup')
     return {

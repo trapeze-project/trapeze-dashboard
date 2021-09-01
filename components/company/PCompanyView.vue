@@ -1,20 +1,14 @@
 <template>
   <PExpandableContainer :title="title">
-    <div style="padding: 20px 0px;">
-      <div style="text-align: center; padding: 10px 10px;">
-        <v-img max-height="400px" eager contain :src="imgUrl" />
-      </div>
-      <br>
-      <div style="padding: 10px 10px;">
-        {{ description }}
-      </div>
+    <div style="padding-bottom: 20px">
       <v-list>
         <div v-for="(item,i) in info" :key="i">
-          <v-divider />
           <v-list-item>
             <v-row>
               <v-col cols="12" md="6">
-                <v-list-item-title v-text="item.key" />
+                <v-list-item-title>
+                  {{ item.key[$i18n.locale] }}
+                </v-list-item-title>
               </v-col>
               <v-col>
                 <address v-if="item.adress">
@@ -39,6 +33,7 @@
 
 <script>
 export default {
+  // TODO: ADD TO TRANSLATION
   props: {
     title: {
       type: String,

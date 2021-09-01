@@ -13,9 +13,29 @@ export default {
       required: false
     }
   },
+  data: () => ({
+    deleteDialog: false,
+    selectedForDel: null
+  }),
   methods: {
     filterItems (items, from, to) {
       return items.filter(item => item.timestamp >= from && item.timestamp <= to)
+    },
+    openDeleteDialog (item) {
+      this.selectedForDel = item
+      this.deleteDialog = true
+    },
+    // temporary solution
+    deleteItem () {
+      const index = this.items.indexOf(this.selectedForDel)
+      if (index > -1) {
+        this.items.splice(index, 1)
+      }
+      this.abortDeletion()
+    },
+    abortDeletion () {
+      this.selectedForDel = null
+      this.deleteDialog = false
     }
   },
   computed: {

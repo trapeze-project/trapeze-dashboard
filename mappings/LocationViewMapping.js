@@ -27,7 +27,7 @@ module.exports = {
       query += res.reverseGeoKey
       const response = await axios.get(query)
       return response.data.results[0].formatted */
-      return 'Mock Data 123'
+      return data.streetName;
     }
   }
 }

@@ -1,63 +1,106 @@
 {
+  "general": {
+    "cancel": "Annuler"
+  },  
   "links": {
-    "home": "Home",
-    "profile": "My Profile",
-    "about": "About",
-    "data": "My Data",
-    "log": "My Activity Log",
-    "permissions": "My Permissions"
+    "home": "Accueil",
+    "profile": "Profil",
+    "about": "À propos",
+    "data": "Données",
+    "log": "Journal d'activité",
+    "permissions": "Autorisation"
   },
   "home": {
-    "title": "Home",
+    "title": "Accueil",
+    "explore-btn": "Explorer",
     "items": {
       "0": {
-        "title": "Check the data you provided us with!",
+        "title": "Données que vous nous avez fournies",
         "filename": "/derived-data.svg",
-        "content": "You had to disclose certain personal information when signing up for this service. This dashboard helps you to manage the information you provided us with when signing up for the service.",
-        "list": {
-          "listHeader": "This information might be:",
-          "items": {
-            "0": "email address, username and password.",
-            "1": "real name and physical address",
-            "2": "date of birth.",
-            "3": "bank account information."
-          }
-        }
+        "link": "/profile",
+        "content": "Vérifiez les données que vous avez fournies lors de votre inscription au service."
       },
       "1": {
-        "title": "Learn about the data we process while you're using our service.",
+        "title": "Données que nous collectons",
         "filename": "/service-data.svg",
-        "content": "When using the service and interacting with its features, you produce data we process. We might also use data from other data sources for the service provision. Learn all about it in this dashboard.",
-        "list": {
-          "listHeader": "Your personal data is:",
-          "items": {
-            "0": "processed when using this service.",
-            "1": "obtained from other sources, e.g. services if you gave us permission.",
-            "2": "derived from your personal data."
-          }
-        }
+        "link": "/data",
+        "content": "Découvrez les données que nous collectons et analysons lorsque vous utilisez notre service."
       },
       "2": {
-        "title": "Understand what you agreed with!",
+        "title": "Ce que vous avez accepté",
         "filename": "/permissions.svg",
-        "content": "Terms and conditions, privacy policies and notices over notices, you dutifully agreed. Understand what you agree with and express your disagreement when necessary.",
-        "list": {
-          "listHeader": "This dashboard allows you to:",
-          "items": {
-            "0": "... disagree with certain processing practices, while still being able to use the service.",
-            "1": "... give permission to process your personal data.",
-            "2": "... revoke permission to process your personal data."
-          }
-        }
+        "link": "/permissions",
+        "content": "Termes et conditions et politiques de confidentialité que vous avez acceptées."
       }
     }
   },
+  "profile": {
+    "title": "Détails du compte",
+    "subtitle": "Votre adresse e-mail et votre mot de passe",
+    "username": "ADRESSE E-MAIL",
+    "password": "MOT DE PASSE"
+  },
   "about": {
-    "provider": "Provider",
-    "controller": "Controller"
+    "provider": "Sous-traitant",
+    "controller": "Responsable de traitement"
+  },
+  "data": {
+    "location": {
+      "title": "Vos informations de localisation",
+      "subtitle": "Nombre d'emplacements collectés"
+    },
+    "browsing": {
+      "title": "Votre historique de navigation",
+      "subtitle": "Nombre de sites Web visités collectés"
+    },
+    "delete-dialog": {
+      "title": "Supprimer les données",
+      "text": "Vos données seront supprimées. Le responsable de traitement sera informé de votre demande et y répondra dans les plus brefs délais.",
+      "btn": "Supprimer"
+    }
   },
   "permissions": {
-    "advanced-button": "advanced"
+    "headings": {
+      "share": "Vous partagez",
+      "get": "Vous obtenez"
+    },
+    "slider": {
+      "low": "Basse",
+      "medium": "Moyenne",
+      "high": "Haute"
+    },        
+    "email-address": {
+      "label": "Adresse e-mail",
+      "get": "Requis pour vous connecter à Finder et vous envoyer des notifications sur les lieux à proximité.",
+      "share": "Votre adresse email vérifiée."
+    },
+    "profile": {
+      "label": "Profil",
+      "get": "Vous récupérez des recommandations personnalisées qui vous conviennent.",
+      "share": "Nous construisons un profil basé sur la manière dont vous utilisez Finder, ce qui a suscité votre intérêt et que vous avez visité."
+    },    
+    "current-location": {
+      "label": "Localisation actuelle",
+      "get": "Votre position actuelle est utilisée pour identifier des endroits à proximité.",
+      "share": "Votre localisation actuelle est obtenue via GPS, WiFi ou en fonction de l'antenne relais à laquelle votre téléphone est connecté."
+    },
+    "location-history": {
+      "label": "Historique de localisation",
+      "get": "Vous récupérez des recommandations personnalisées qui vous conviennent.",
+      "share": "Votre historique de localisation est utilisé pour enrichir votre profil d'intérêts avec des données supplémentaires."
+    },
+    "browsing-history": {
+      "label": "Activité de navigation",
+      "get": "Vous récupérez des recommandations personnalisées qui vous conviennent.",
+      "share": "Votre historique de navigation est utilisé pour enrichir votre profil d'intérêts avec des données supplémentaires."
+    },
+    "advanced-button": "Avancée"
+  },
+  "login": {
+    "username": "E-mail",
+    "password": "Mot de passe",
+    "login": "Connexion",
+    "loginTitle": "Connectez-vous à votre tableau de bord Finder."
   },
   "short": {
     "year": "numeric",
@@ -71,5 +114,56 @@
     "weekday": "short",
     "hour": "numeric",
     "minute": "numeric"
+  },
+  "tour": {
+    "buttons": {
+      "skip": "Passer le tour",
+      "prev": "Précédent",
+      "next": "Suivant",
+      "finish": "Terminer"
+    },    
+    "index": {
+      "step-0-title": "Bienvenue sur le Tableau de bord Finder Confidentialité",
+      "step-0": "Vous pouvez toujours revenir à cette page en cliquant sur le bouton <strong> Accueil </strong>!",
+      "step-1-title": "Profil",
+      "step-1": "Passez en revue les données que vous avez fournies lors de votre inscription à <strong>Finder</strong>.",
+      "step-2-title": "À propos de nous",
+      "step-2": "En savoir plus sur <strong> Finder GmbH </strong> et les entreprises impliquées dans la gestion de Finder.",
+      "step-3-title": "Données que nous collectons",
+      "step-3": "Explorez les données que nous avons collectées lorsque vous avez utilisé Finder.",
+      "step-4-title": "Autorisation",
+      "step-4": "Découvrez ce que vous avez accepté en consentant aux termes et conditions.",
+      "step-5-title": "Langues",
+      "step-5": "Vous pouvez changer la langue du tableau de bord."
+    },
+    "profile": {
+      "step-0": "Vos données sont regroupées en plusieurs catégories.",
+      "step-1": "Cliquez sur la petite flèche pour examiner de plus près une de ces catégories ."
+    },
+    "about": {
+      "step-0": "Un responsable de traitement est une entité ou entreprise qui traite vos données personnelles.Dans le cas présent, il s'agira de nous: Finder GmbH.Il peut y avoir plusieurs responsables de traitement.",
+      "step-1": "Un sous-traitant est une entité ou entreprise qui traite vos données personnelles pour le compte du ou des responsables de traitement.",
+      "step-2": "Cliquez sur la petite flèche pour examiner de plus près une de ces entreprises ."
+    },
+    "data": {
+      "step-0": "Vos données sont regroupées en plusieurs catégories.",
+      "step-1": "Vous pouvez inspecter chaque catégorie individuellement.",
+      "step-2": "Cliquez sur la petite flèche pour examiner de plus près une de ces catégories.",
+      "step-3": "Pour supprimer certaines données, cliquez simplement sur la corbeille à côté des données.Le responsable de traitement sera notifié pour supprimer définitivement les données."
+    },
+    "permission": {
+      "step-0": "Consultez vos données personnelles que vous avez acceptées qu'on utilise en se rendant sur <strong> Finder </strong>.",
+      "step-1": "Vous pouvez consulter la quantité de données que vous partagez.",
+      "step-2": "En savoir plus sur les types de données personnelles que vous partagez avec nous ...",
+      "step-3": "... et ce que vous obtenez en retour."
+    }
+  },
+  "table-headers": {
+    "date": "Date",
+    "location": "Emplacement",
+    "action": "Action",
+    "url": "URL",
+    "user-agent": "Agent utilisateur",
+    "ip": "Adresse IP"
   }
 }

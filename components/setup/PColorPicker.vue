@@ -1,6 +1,6 @@
 /* eslint-disable vue/html-self-closing */
 <template>
-  <div class="setup-color-list-item">
+  <div class="d-flex flex-row justify-space-between align-baseline mt-2 flex-nowrap">
     <slot />
     <v-menu
       ref="menu"
@@ -57,13 +57,3 @@ export default {
   }
 }
 </script>
-<style scoped>
-.setup-color-list-item {
-    margin-top: 10px;
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-    flex-flow: row nowrap;
-    display: relative;
-}
-</style>

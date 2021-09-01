@@ -1,12 +1,14 @@
 <template>
   <div>
-    <div class="consent-container">
+    <div class="d-flex flex-row align-center justify-center" style="flex-wrap: wrap">
       <PConsentIconButton
         v-for="item in value"
         :key="item.description"
         v-model="item.value"
+        class="ml-6 mr-6"
         :icon="item.icon"
         :description="item.description"
+        permission-v-step="0"
         @input="$emit('value',value)"
       />
     </div>
@@ -24,13 +26,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-.consent-container {
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-}
-</style>
