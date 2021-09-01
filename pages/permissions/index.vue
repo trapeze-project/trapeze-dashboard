@@ -8,7 +8,7 @@
         </v-icon>
       </v-btn>
     </h1>
-    <v-tour name="indexTour" :steps="steps" />
+    <v-tour name="indexTour" :steps="steps" :options="options" />
     <v-divider />
     <br>
     <PConsentOverview v-model="consentSwitches" />
@@ -28,19 +28,34 @@ export default {
   data: () => ({
     consentSwitches: [],
     services: [],
-    steps: []
+    steps: [],
+    options: {}
   }),
   mounted () {
+    this.setLabels()
     this.setSteps()
     this.setConsentSwitchesAndServices()
     if (!window.localStorage.getItem('permissions-visited')) {
       window.localStorage.setItem('permissions-visited', 'true')
-      this.startTour()
+      this.$nextTick(() => this.startTour())
     }
+  },
+  beforeDestroy () {
+    this.$tours.indexTour.stop()
   },
   methods: {
     startTour () {
       this.$tours.indexTour.start()
+    },
+    setLabels () {
+      this.options = {
+        labels: {
+          buttonSkip: this.$i18n.t('tour.buttons.skip'),
+          buttonPrevious: this.$i18n.t('tour.buttons.prev'),
+          buttonNext: this.$i18n.t('tour.buttons.next'),
+          buttonStop: this.$i18n.t('tour.buttons.finish')
+        }
+      }
     },
     setSteps () {
       this.steps = [

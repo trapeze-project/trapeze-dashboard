@@ -1,5 +1,5 @@
 <template>
-  <div class="d-flex flex-column justify-space-between align-center" style="max-width:80px">
+  <div class="d-flex flex-column justify-space-between align-center" style="width:100px">
     <v-btn
       class="mx-2"
       small
@@ -14,7 +14,7 @@
         {{ icon }}
       </v-icon>
     </v-btn>
-    <v-subheader style="word-wrap:break-word;text-align:center">
+    <v-subheader class="d-block" style="word-wrap:break-word;text-align:center">
       {{ description }}
     </v-subheader>
   </div>

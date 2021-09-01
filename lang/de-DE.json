@@ -18,13 +18,13 @@
         "title": "Daten, die Sie uns gegeben haben",
         "filename": "/derived-data.svg",
         "link": "/profile",
-        "content": "Überprüfen Sie die Daten, die Sie uns zur Verfügung gestellt haben, als Sie sich für den Service angemeldet haben."
+        "content": "Überprüfen Sie die Daten, die Sie uns zur Verfügung gestellt haben, als Sie sich für den Dienst angemeldet haben."
       },
       "1": {
         "title": "Daten, die wir sammeln",
         "filename": "/service-data.svg",
         "link": "/data",
-        "content": "Erfahren Sie mehr über die Daten, die wir sammeln und analysieren, während Sie unseren Service verwenden."
+        "content": "Erfahren Sie mehr über Daten, die wir sammeln und analysieren, während Sie unseren Dienst nutzen."
       },
       "2": {
         "title": "Was Sie zugestimmt haben",
@@ -36,12 +36,12 @@
   },
   "profile": {
     "title": "Kontoinformationen",
-    "subtitle": "Ihre E-Mail-Adresse und Ihr Passwort.",
+    "subtitle": "Ihre E-Mail-Adresse und Ihr Passwort",
     "username": "E-MAIL-ADDRESSE",
     "password": "PASSWORT"
   },
   "about": {
-    "provider": "Prozessor",
+    "provider": "Auftragsverarbeiter",
     "controller": "Verantwortlicher"
   },
   "data": {
@@ -51,7 +51,7 @@
     },
     "browsing": {
       "title": "Ihre Browsing-Historie",
-      "subtitle": "Anzahl der besuchten Websites gesammelt"
+      "subtitle": "Anzahl der besuchten Websites"
     },
     "delete-dialog": {
       "title": "Daten löschen",
@@ -60,6 +60,15 @@
     }
   },
   "permissions": {
+    "headings": {
+      "share": "Sie teilen",
+      "get": "Sie erhalten"
+    },
+    "slider": {
+      "low": "Niedrig",
+      "medium": "Mittel",
+      "high": "Hoch"
+    },    
     "email-address": {
       "label": "E-Mail-Addresse",
       "get": "Zur Anmeldung bei Finder und zum Senden von Benachrichtigungen über Orte in der Nähe.",
@@ -68,17 +77,17 @@
     "profile": {
       "label": "Profil",
       "get": "Sie erhalten personalisierte Empfehlungen, die zu Ihnen passen.",
-      "share": "Wir erstellen ein Profil, anhand dessen, wie Sie Finder verwenden, was Ihr Interesse weckt hat und welche Orte Sie besucht haben."
+      "share": "Wir erstellen ein Profil, anhand dessen, wie Sie Finder verwenden, was Ihr Interesse geweckt hat und welche Orte Sie besucht haben."
     },    
     "current-location": {
       "label": "Aktueller Standort",
       "get": "Ihre aktuelle Position wird verwendet, um Orte in der Nähe zu identifizieren.",
-      "share": "Ihr derzeitiger Standort wird entweder über GPS, WLAN, WLAN oder basierend auf dem Zellturm, mit dem Ihr Telefon angeschlossen ist, erhalten."
+      "share": "Ihr derzeitiger Standort wird entweder über GPS, WLAN oder über den Mobilfunkmast, mit dem Ihr Telefon verbunden ist, bestimmt."
     },
     "location-history": {
       "label": "Standortverlauf",
       "get": "Sie erhalten personalisierte Empfehlungen, die zu Ihnen passen.",
-      "share": "Ihre Standortverlauf wird verwendet, um Ihr Interessenprofil mit zusätzlichen Daten anzureichern."
+      "share": "Ihr Standortverlauf wird verwendet, um Ihr Interessenprofil mit zusätzlichen Daten anzureichern."
     },
     "browsing-history": {
       "label": "Browsing-Aktivität",
@@ -107,13 +116,19 @@
     "minute": "numeric"
   },
   "tour": {
+    "buttons": {
+      "skip": "Tour überspringen",
+      "prev": "Zurück",
+      "next": "Weiter",
+      "finish": "Beenden"
+    },    
     "index": {
       "step-0-title": "Willkommen im Privatsphäre-Bereich von Finder",
       "step-0": "Sie können immer auf diese Seite zurückkehren, indem Sie auf die Schaltfläche <strong>Start</strong> klicken!",
       "step-1-title": "Profil",
       "step-1": "Überprüfen Sie die Daten, die Sie uns zur Verfügung gestellt haben, als Sie sich für <strong>Finder</strong> registriert haben.",
       "step-2-title": "Über uns",
-      "step-2": "Erfahren Sie mehr über die <strongFinder GmbH</strong> und Unternehmen, die an der Bereitstellung von Finder beteiligt sind.",
+      "step-2": "Erfahren Sie mehr über die <strong>Finder GmbH</strong> und Unternehmen, die an der Bereitstellung von Finder beteiligt sind.",
       "step-3-title": "Daten, die wir sammeln",
       "step-3": "Erhalten Sie einen Einblick in die Daten, die wir gesammelt haben, während Sie Finder benutzt haben.",
       "step-4-title": "Berechtigungen",
@@ -123,11 +138,11 @@
     },
     "profile": {
       "step-0": "Ihre Daten werden in mehrere Kategorien gruppiert.",
-      "step-1": "Klicken Sie auf den kleinen Pfeil, um einen genaueren Blick auf eine bestimmte Kategorie zu erstellen."
+      "step-1": "Klicken Sie auf den kleinen Pfeil, um einen genaueren Blick auf eine bestimmte Kategorie zu erhalten."
     },
     "about": {
       "step-0": "Ein Verantwortlicher ist ein Unternehmen, das Ihre personenbezogenen Daten verarbeitet. In diesem Fall wir: Finder GmbH. Es kann mehrere Verantwortliche geben.",
-      "step-1": "Ein Prozessor ist ein Unternehmen, das Ihre personenbezogenen Daten auf unseren Auftrag hin verarbeitet.",
+      "step-1": "Ein Auftragsverarbeiter ist ein Unternehmen, das Ihre personenbezogenen Daten auf unseren Auftrag hin verarbeitet.",
       "step-2": "Klicken Sie auf den kleinen Pfeil, um einen genaueren Blick auf ein bestimmtes Unternehmen zu erhalten."
     },
     "data": {
@@ -137,7 +152,7 @@
       "step-3": "Um einige Daten zu löschen, klicken Sie einfach auf das Papierkorb-Symbol. Der Verantwortliche wird benachrichtigt, um die Daten dauerhaft zu löschen."
     },
     "permission": {
-      "step-0": "Sehen Sie an welche persönlichen Daten wir verarbeiten, um Ihnen <strong>Finder</strong> anbieten zu können.",
+      "step-0": "Sehen Sie sich an welche persönlichen Daten wir verarbeiten, um Ihnen <strong>Finder</strong> anbieten zu können.",
       "step-1": "Sehen Sie, wie viel Sie mit uns teilen.",
       "step-2": "Erfahren Sie mehr über die Arten von personenbezogenen Daten, die Sie mit uns teilen ...",
       "step-3": "... und was Sie dafür bekommen."

@@ -5,19 +5,19 @@
         <v-img max-height="300px" :src="filename" />
       </v-col>
       <v-col cols="12" lg="12" md="12" sm="12">
-        <v-card-title class="text-h5 mb-0" style="max-height: 64px;">
+        <v-card-title class="text-h6 mb-0" style="max-height: 64px;">
           {{ title }}
         </v-card-title>
         <v-divider class="mt-9" inset />
         <v-card-text>
-          <p class="text-h5 mb-0" style="max-height: 92px;">
+          <p class="text-h7 mb-0" style="max-height: 92px;">
             {{ content }}
           </p>
           <slot />
         </v-card-text>
       </v-col>
     </v-row>
-    <v-card-actions class="mt-15">
+    <v-card-actions class="mt-10">
       <v-spacer />
       <v-btn
         color="primary"

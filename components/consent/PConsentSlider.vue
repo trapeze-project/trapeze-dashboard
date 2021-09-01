@@ -2,13 +2,13 @@
   <div>
     <div style="text-align:center">
       <small v-if="(calculateScore/value.reduce((x,y) => x + y.consentRank,0))*100<25" permission-v-step="1">
-        <i>low</i>
+        <i>{{ $t('permissions.slider.low') }}</i>
       </small>
       <small v-else-if="(calculateScore/value.reduce((x,y) => x + y.consentRank,0))*100<60" permission-v-step="1">
-        <i>medium</i>
+        <i>{{ $t('permissions.slider.medium') }}</i>
       </small>
       <small v-else permission-v-step="1">
-        <i>high</i>
+        <i>{{ $t('permissions.slider.high') }}</i>
       </small>
     </div>
     <div style="width:100%;display:flex;flex-flow:row nowwrap;align-items:center;justify-content:center;margin-bottom: 20px;">
@@ -26,7 +26,7 @@
           permission-v-step="2"
         >
           <v-card-title>
-            You share
+            {{ $t('permissions.headings.share') }}
           </v-card-title>
           <v-card-text>
             <v-timeline
@@ -56,7 +56,7 @@
           permission-v-step="3"
         >
           <v-card-title>
-            You get
+            {{ $t('permissions.headings.get') }}
           </v-card-title>
           <v-card-text>
             <v-timeline

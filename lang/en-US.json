@@ -36,7 +36,7 @@
   },
   "profile": {
     "title": "Account credentials",
-    "subtitle": "Your email address and password.",
+    "subtitle": "Your email address and password",
     "username": "EMAIL ADDRESS",
     "password": "PASSWORD"
   },
@@ -60,6 +60,15 @@
     }
   },
   "permissions": {
+    "headings": {
+      "share": "You share",
+      "get": "You get"
+    },
+    "slider": {
+      "low": "Low",
+      "medium": "Medium",
+      "high": "High"
+    },
     "email-address": {
       "label": "Email adress",
       "get": "Required for logging into Finder and to send you notifications about places nearby.",
@@ -107,6 +116,12 @@
     "minute": "numeric"
   },
   "tour": {
+    "buttons": {
+      "skip": "Skip tour",
+      "prev": "Previous",
+      "next": "Next",
+      "finish": "Finish"
+    },
     "index": {
       "step-0-title": "Welcome to the Finder Privacy Dashboard",
       "step-0": "You can always return to this page by clicking the <strong>Home</strong> button!",

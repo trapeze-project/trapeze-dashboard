@@ -1,6 +1,15 @@
 <template>
   <div style="width:100">
-    <a id="logo" :style="cssVars" href="/" title="Home" />
+    <a
+      id="logo"
+      class="text-h5"
+      style="font-family: 'Noto Sans JP', sans-serif !important; color: white; text-decoration: none;"
+      href="/"
+      title="Home"
+    >
+      Privacy Dashboard
+    </a>
+    <!--<a id="logo" :style="cssVars" href="/" title="Home" />-->
   </div>
 </template>
 
