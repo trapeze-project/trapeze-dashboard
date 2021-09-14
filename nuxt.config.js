@@ -103,9 +103,9 @@ export default {
           autoFetch: true
         },
         endpoints: {
-          login: { url: process.env.BASE_AUTH_URL_DEV + '/auth/login/', method: 'post', withCredentials: true },
-          logout: { url: process.env.BASE_AUTH_URL_DEV + '/auth/logout/', method: 'get', withCredentials: true },
-          user: { url: process.env.BASE_AUTH_URL_DEV + '/users/me/', method: 'get', withCredentials: true }
+          login: { url: process.env.AUTH_URL + '/auth/login/', method: 'post', withCredentials: true },
+          logout: { url: process.env.AUTH_URL + '/auth/logout/', method: 'get', withCredentials: true },
+          user: { url: process.env.AUTH_URL + '/users/me/', method: 'get', withCredentials: true }
         }
       }
     }
@@ -113,7 +113,7 @@ export default {
   publicRuntimeConfig: {
     logo: Design.logo,
     background: Design.background,
-    authApiUrl: process.env.BASE_AUTH_URL_DEV,
+    authApiUrl: process.env.AUTH_URL,
     baseURL: process.env.BASE_URL
   },
   vuetify: {
@@ -133,7 +133,7 @@ export default {
   },
   watch: ['design'],
   server: {
-    host: process.env.ENVIRONMENT == 'production' ? process.env.HOST : 'localhost',
-    port: process.env.ENVIRONMENT == 'production' ? process.env.PORT : 3000
+    host: process.env.HOST,
+    port: process.env.PORT
   }
 }
