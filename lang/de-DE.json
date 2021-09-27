@@ -1,7 +1,7 @@
 {
   "general": {
     "cancel": "Abbrechen"
-  },  
+  },
   "links": {
     "home": "Start",
     "profile": "Profil",
@@ -16,19 +16,19 @@
     "items": {
       "0": {
         "title": "Daten, die Sie uns gegeben haben",
-        "filename": "/derived-data.svg",
+        "filename": "./derived-data.svg",
         "link": "/profile",
         "content": "Überprüfen Sie die Daten, die Sie uns zur Verfügung gestellt haben, als Sie sich für den Dienst angemeldet haben."
       },
       "1": {
         "title": "Daten, die wir sammeln",
-        "filename": "/service-data.svg",
+        "filename": "./service-data.svg",
         "link": "/data",
         "content": "Erfahren Sie mehr über Daten, die wir sammeln und analysieren, während Sie unseren Dienst nutzen."
       },
       "2": {
         "title": "Was Sie zugestimmt haben",
-        "filename": "/permissions.svg",
+        "filename": "./permissions.svg",
         "link": "/permissions",
         "content": "Allgemeine Geschäftsbedingungen und Datenschutzrichtlinien, denen Sie pflichtbewusst zugestimmt haben."
       }
@@ -68,7 +68,7 @@
       "low": "Niedrig",
       "medium": "Mittel",
       "high": "Hoch"
-    },    
+    },
     "email-address": {
       "label": "E-Mail-Addresse",
       "get": "Zur Anmeldung bei Finder und zum Senden von Benachrichtigungen über Orte in der Nähe.",
@@ -78,7 +78,7 @@
       "label": "Profil",
       "get": "Sie erhalten personalisierte Empfehlungen, die zu Ihnen passen.",
       "share": "Wir erstellen ein Profil, anhand dessen, wie Sie Finder verwenden, was Ihr Interesse geweckt hat und welche Orte Sie besucht haben."
-    },    
+    },
     "current-location": {
       "label": "Aktueller Standort",
       "get": "Ihre aktuelle Position wird verwendet, um Orte in der Nähe zu identifizieren.",
@@ -121,7 +121,7 @@
       "prev": "Zurück",
       "next": "Weiter",
       "finish": "Beenden"
-    },    
+    },
     "index": {
       "step-0-title": "Willkommen im Privatsphäre-Bereich von Finder",
       "step-0": "Sie können immer auf diese Seite zurückkehren, indem Sie auf die Schaltfläche <strong>Start</strong> klicken!",
