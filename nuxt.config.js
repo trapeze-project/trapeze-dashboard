@@ -12,7 +12,7 @@ export default {
       { hid: 'description', name: 'description', content: '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'icon', type: 'image/x-icon', href: './favicon.ico' },
       {
         rel: "stylesheet",
         href: "https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap",
@@ -135,5 +135,8 @@ export default {
   server: {
     host: process.env.HOST,
     port: process.env.PORT
+  },
+  router: {
+    base: process.env.ROUTER_BASE || "/"
   }
 }
