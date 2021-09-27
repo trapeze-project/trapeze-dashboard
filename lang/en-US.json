@@ -1,7 +1,7 @@
 {
   "general": {
     "cancel": "Cancel"
-  },    
+  },
   "links": {
     "home": "Home",
     "profile": "Profile",
@@ -16,19 +16,19 @@
     "items": {
       "0": {
         "title": "Data you gave us",
-        "filename": "/derived-data.svg",
+        "filename": "./derived-data.svg",
         "link": "/profile",
         "content": "Check the data you provided us with when signing up for the service."
       },
       "1": {
         "title": "Data we collect",
-        "filename": "/service-data.svg",
+        "filename": "./service-data.svg",
         "link": "/data",
         "content": "Learn about the data we collect and analyze while you're using our service."
       },
       "2": {
         "title": "What you agreed",
-        "filename": "/permissions.svg",
+        "filename": "./permissions.svg",
         "link": "/permissions",
         "content": "Terms and conditions and privacy policies you dutifully agreed."
       }
@@ -78,7 +78,7 @@
       "label": "Profile",
       "get": "You retrieve personalized recommendations that fit to you.",
       "share": "We build a profile based on how you use Finder, what sparked your interest, and which places you visited."
-    },    
+    },
     "current-location": {
       "label": "Current location",
       "get": "Your current position is used to identify places nearby.",

@@ -1,7 +1,7 @@
 {
   "general": {
     "cancel": "Annuler"
-  },  
+  },
   "links": {
     "home": "Accueil",
     "profile": "Profil",
@@ -16,19 +16,19 @@
     "items": {
       "0": {
         "title": "Données que vous nous avez fournies",
-        "filename": "/derived-data.svg",
+        "filename": "./derived-data.svg",
         "link": "/profile",
         "content": "Vérifiez les données que vous avez fournies lors de votre inscription au service."
       },
       "1": {
         "title": "Données que nous collectons",
-        "filename": "/service-data.svg",
+        "filename": "./service-data.svg",
         "link": "/data",
         "content": "Découvrez les données que nous collectons et analysons lorsque vous utilisez notre service."
       },
       "2": {
         "title": "Ce que vous avez accepté",
-        "filename": "/permissions.svg",
+        "filename": "./permissions.svg",
         "link": "/permissions",
         "content": "Termes et conditions et politiques de confidentialité que vous avez acceptées."
       }
@@ -68,7 +68,7 @@
       "low": "Basse",
       "medium": "Moyenne",
       "high": "Haute"
-    },        
+    },
     "email-address": {
       "label": "Adresse e-mail",
       "get": "Requis pour vous connecter à Finder et vous envoyer des notifications sur les lieux à proximité.",
@@ -78,7 +78,7 @@
       "label": "Profil",
       "get": "Vous récupérez des recommandations personnalisées qui vous conviennent.",
       "share": "Nous construisons un profil basé sur la manière dont vous utilisez Finder, ce qui a suscité votre intérêt et que vous avez visité."
-    },    
+    },
     "current-location": {
       "label": "Localisation actuelle",
       "get": "Votre position actuelle est utilisée pour identifier des endroits à proximité.",
@@ -121,7 +121,7 @@
       "prev": "Précédent",
       "next": "Suivant",
       "finish": "Terminer"
-    },    
+    },
     "index": {
       "step-0-title": "Bienvenue sur le Tableau de bord Finder Confidentialité",
       "step-0": "Vous pouvez toujours revenir à cette page en cliquant sur le bouton <strong> Accueil </strong>!",
