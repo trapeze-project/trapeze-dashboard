@@ -8,7 +8,7 @@
         <v-card-title class="text-h6 mb-0" style="max-height: 64px;">
           {{ title }}
         </v-card-title>
-        <v-divider class="mt-9" inset />
+<!--        <v-divider class="mt-9" inset />-->
         <v-card-text>
           <p class="text-h7 mb-0" style="max-height: 92px;">
             {{ content }}
@@ -20,9 +20,10 @@
     <v-card-actions class="mt-10">
       <v-spacer />
       <v-btn
+        width="50%"
         color="primary"
         depressed
-        :to="localePath(href)"
+        :to="localePath()"
       >
         {{ $t('home.explore-btn') }}
       </v-btn>

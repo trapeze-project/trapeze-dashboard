@@ -68,7 +68,7 @@
       "low": "Basso",
       "medium": "Medio",
       "high": "Alto"
-    },      
+    },
     "email-address": {
       "label": "Indirizzo e-mail",
       "get": "Richiesto per l'accesso al Finder e per inviarti notifiche sui luoghi nelle vicinanze.",
@@ -78,7 +78,7 @@
       "label": "Profilo",
       "get": "Recupera delle raccomandazioni personalizzate che si adattano a te.",
       "share": "Costruiamo un profilo in base a come usi il Finder, ciò che ha suscitato il tuo interesse e quali luoghi hai visitato."
-    },    
+    },
     "current-location": {
       "label": "Geolocalizzazione attuale",
       "get": "La tua geolocalizzazione attuale viene utilizzata per identificare luoghi nelle vicinanze.",
@@ -114,49 +114,6 @@
     "weekday": "short",
     "hour": "numeric",
     "minute": "numeric"
-  },
-  "tour": {
-    "buttons": {
-      "skip": "Salta tour",
-      "prev": "Indietro",
-      "next": "Avanti",
-      "finish": "Finire"
-    },    
-    "index": {
-      "step-0-title": "Benvenuti sul dashboard del Finder relativo alla privacy",
-      "step-0": "Puoi sempre tornare a questa pagina facendo clic sul pulsante <strong> Home </strong>!",
-      "step-1-title": "Profilo",
-      "step-1": "Controlla i dati che ci hai fornito al momento della registrazione per il <strong> Finder </strong>.",
-      "step-2-title": "Chi siamo",
-      "step-2": "Scopri di più sul <strong> Finder GmbH </strong> e sulle aziende coinvolte nel fornire il Finder.",
-      "step-3-title": "Dati che raccogliamo",
-      "step-3": "Esplora i dati che abbiamo raccolto quando hai usato il browser.",
-      "step-4-title": "Autorizzazioni",
-      "step-4": "Scopri cos’hai concordato accettando i termini e le condizioni del servizio.",
-      "step-5-title": "Lingue",
-      "step-5": "È possibile modificare la lingua del dashboard."
-    },
-    "profile": {
-      "step-0": "I tuoi dati sono raggruppati in varie categorie.",
-      "step-1": "Fai clic sulla piccola freccia per dare un'occhiata più da vicino ad una determinata categoria."
-    },
-    "about": {
-      "step-0": "Un titolare del trattamento è un'azienda che elabora i tuoi dati personali.In questo caso noi siamo: Finder GmbH. Ci possono essere più titolari del trattamento.",
-      "step-1": "Un elaboratore dei dati è un'azienda che elabora i tuoi dati personali per conto del / i titolare/i del trattamento.",
-      "step-2": "Fai clic sulla piccola freccia per dare un'occhiata più da vicino ad una certa azienda."
-    },
-    "data": {
-      "step-0": "I tuoi dati sono raggruppati in più categorie.",
-      "step-1": "Puoi ispezionare ogni categoria individualmente.",
-      "step-2": "Fai clic sulla piccola freccia per dare un'occhiata più da vicino su una determinata categoria.",
-      "step-3": "Per eliminare alcuni dati, basta fare clic sull'icona Cestino accanto ai dati. Il titolare del trattamento verrà notificato della tua intenzione di eliminare i dati in modo permanente."
-    },
-    "permission": {
-      "step-0": "Dai un’occhiata ai dati personali che hai concordato che noi utilizzassimo per il <strong> Finder </strong>.",
-      "step-1": "Guarda quanto stai condividendo con noi.",
-      "step-2": "Ulteriori informazioni sul tipo di dati personali che condividi con noi ...",
-      "step-3": "... e ciò che ottieni in cambio."
-    }
   },
   "table-headers": {
     "date": "Data",

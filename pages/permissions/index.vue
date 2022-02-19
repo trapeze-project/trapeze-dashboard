@@ -2,13 +2,7 @@
   <div>
     <h1 class="title mb-2">
       {{ $t('links.permissions') }}
-      <v-btn icon outlined x-small color="black" @click="startTour">
-        <v-icon x-small>
-          mdi-help
-        </v-icon>
-      </v-btn>
     </h1>
-    <v-tour name="indexTour" :steps="steps" :options="options" />
     <v-divider />
     <br>
     <PConsentOverview v-model="consentSwitches" />
@@ -32,70 +26,11 @@ export default {
     options: {}
   }),
   mounted () {
-    this.setLabels()
-    this.setSteps()
     this.setConsentSwitchesAndServices()
-    if (!window.localStorage.getItem('permissions-visited')) {
-      window.localStorage.setItem('permissions-visited', 'true')
-      this.$nextTick(() => this.startTour())
-    }
   },
-  beforeDestroy () {
-    this.$tours.indexTour.stop()
-  },
+
   methods: {
-    startTour () {
-      this.$tours.indexTour.start()
-    },
     setLabels () {
-      this.options = {
-        labels: {
-          buttonSkip: this.$i18n.t('tour.buttons.skip'),
-          buttonPrevious: this.$i18n.t('tour.buttons.prev'),
-          buttonNext: this.$i18n.t('tour.buttons.next'),
-          buttonStop: this.$i18n.t('tour.buttons.finish')
-        }
-      }
-    },
-    setSteps () {
-      this.steps = [
-        {
-          target: '[permission-v-step="0"]',
-          params: {
-            highlight: true,
-            placement: 'bottom',
-            enableScrolling: false
-          },
-          content: this.$i18n.t('tour.permission.step-0')
-        },
-        {
-          target: '[permission-v-step="1"]',
-          params: {
-            highlight: true,
-            placement: 'bottom',
-            enableScrolling: false
-          },
-          content: this.$i18n.t('tour.permission.step-1')
-        },
-        {
-          target: '[permission-v-step="2"]',
-          params: {
-            highlight: true,
-            placement: 'top',
-            enableScrolling: false
-          },
-          content: this.$i18n.t('tour.permission.step-2')
-        },
-        {
-          target: '[permission-v-step="3"]',
-          params: {
-            highlight: true,
-            placement: 'bottom',
-            enableScrolling: true
-          },
-          content: this.$i18n.t('tour.permission.step-3')
-        }
-      ]
     },
     setConsentSwitchesAndServices () {
       this.consentSwitches = [

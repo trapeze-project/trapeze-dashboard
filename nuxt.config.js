@@ -14,9 +14,9 @@ export default {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       {
-        rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap",
-      },
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css?family=Comfortaa'
+      }
     ]
   },
 
@@ -41,7 +41,7 @@ export default {
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
     // https://go.nuxtjs.dev/vuetify
-    '@nuxtjs/vuetify',
+    '@nuxtjs/vuetify'
   ],
 
   modules: [

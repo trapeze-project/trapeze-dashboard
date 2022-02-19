@@ -3,11 +3,11 @@
     <a
       id="logo"
       class="text-h5"
-      style="font-family: 'Noto Sans JP', sans-serif !important; color: white; text-decoration: none;"
+      style="font-family: 'Comfortaa', sans-serif !important; color: white; text-decoration: none;"
       href="/"
       title="Home"
     >
-      Privacy Dashboard
+      TRAPEZE Privacy Dashboard
     </a>
     <!--<a id="logo" :style="cssVars" href="/" title="Home" />-->
   </div>
