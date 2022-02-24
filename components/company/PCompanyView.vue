@@ -1,5 +1,5 @@
 <template>
-  <v-card style="margin-top: 25%">
+  <v-card style="margin-top: 28%">
     <v-img
       height="250"
       src="/company.png"

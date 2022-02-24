@@ -1,7 +1,9 @@
 <template>
-  <h1 style="margin-top: 5%">
-    FREQUENTLY ASKED QUESTIONS
-  </h1>
+  <v-app>
+    <h1>
+      FREQUENTLY ASKED QUESTIONS
+    </h1>
+  </v-app>
 </template>
 
 <script>

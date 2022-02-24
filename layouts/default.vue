@@ -42,7 +42,9 @@
         </v-row>
       </v-col>
       <v-col cols="8">
-        <nuxt />
+        <v-main>
+          <nuxt />
+        </v-main>
       </v-col>
       <v-col cols="2">
         <PCompanyView />

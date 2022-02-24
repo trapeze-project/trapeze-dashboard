@@ -1,7 +1,9 @@
 <template>
-  <h1 style="margin-top: 5%">
-    This is consent menu
-  </h1>
+  <v-app>
+    <h1>
+      This is consent menu
+    </h1>
+  </v-app>
 </template>
 
 <script>

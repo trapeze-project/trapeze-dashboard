@@ -2,7 +2,7 @@
   <div id="index">
     <v-row justify="center" align="center">
       <v-col>
-        <v-card style="margin-top: 5%">
+        <v-card>
           <v-card-title>
             {{ $t('home.title') }}
           </v-card-title>
