@@ -8,7 +8,6 @@
         <v-card-title class="text-h6 mb-0" style="max-height: 64px;">
           {{ title }}
         </v-card-title>
-<!--        <v-divider class="mt-9" inset />-->
         <v-card-text>
           <p class="text-h7 mb-0" style="max-height: 92px;">
             {{ content }}
