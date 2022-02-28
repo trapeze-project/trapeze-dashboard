@@ -1,9 +1,9 @@
 <template>
-  <v-app>
+  <div>
     <h1>
       This is consent helper
-    </h1>
-  </v-app>
+    </h1>    
+  </div>
 </template>
 
 <script>

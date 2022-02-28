@@ -1,9 +1,7 @@
 <template>
-  <v-app>
     <h1>
       FREQUENTLY ASKED QUESTIONS
     </h1>
-  </v-app>
 </template>
 
 <script>
