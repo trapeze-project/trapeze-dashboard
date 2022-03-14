@@ -1,48 +1,15 @@
 /* eslint-disable */
 <template>
   <v-app>
-
     <v-app-bar clipped-left app color="primary">
       <Logo />
     </v-app-bar>
 
     <v-main>
       <v-container fluid>
-
         <v-row>
           <v-col cols="2">
-            <v-row>
-              <v-col>
-                <v-list nav dense>
-                  <v-list-item-title class="title">
-                    {{ $t('sidebar-title.navigation') }}
-                  </v-list-item-title>
-                  <v-card>
-                    <v-list-item-group v-model="group" color="primary">
-                      <v-list-item v-for="(link, index) in links" :key="index" :index-v-step="index" :to="localePath(link.to)" exact>
-                        <v-list-item-title>
-                          {{ $t('links.'+link.label) }}
-                        </v-list-item-title>
-                      </v-list-item>
-                    </v-list-item-group>
-                  </v-card>
-                </v-list>
-                <v-list nav dense>
-                  <v-list-item-title class="title">
-                    {{ $t('sidebar-title.update') }}
-                  </v-list-item-title>
-                  <v-card>
-                    <v-list-item-group v-model="group" color="primary">
-                      <v-list-item v-for="(link, index) in links_update" :key="index" :index-v-step="index" :to="localePath(link.to)" exact>
-                        <v-list-item-title>
-                          {{ $t('links-update.'+link.label) }}
-                        </v-list-item-title>
-                      </v-list-item>
-                    </v-list-item-group>
-                  </v-card>
-                </v-list>
-              </v-col>
-            </v-row>
+            <PNavigation :links="links" :links-update="linksUpdate" />
           </v-col>
           <v-col cols="8">
             <nuxt />
@@ -51,10 +18,8 @@
             <PCompanyView />
           </v-col>
         </v-row>
-
       </v-container>
     </v-main>
-
   </v-app>
 </template>
 
@@ -68,7 +33,7 @@ export default {
       { to: '/helper', label: 'consent_helper' },
       { to: '/faq', label: 'faq' }
     ],
-    links_update: [
+    linksUpdate: [
       { to: '/update', label: 'policy_update' },
       { to: '/revokation', label: 'consent_revokation' },
       { to: '/request', label: 'consent_request' }
@@ -83,14 +48,6 @@ export default {
     },
     availableLocales () {
       return this.$i18n.locales.filter(i => i.code !== this.$i18n.locale)
-    }
-  },
-  async mounted () {
-    await this.$auth.fetchUser()
-  },
-  methods: {
-    async logout () {
-      await this.$auth.logout()
     }
   }
 }

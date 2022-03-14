@@ -1,6 +1,15 @@
 {
   "general": {
-    "cancel": "Cancel"
+    "cancel": "Cancel",
+    "category": "Data Categories",
+    "location": "Location Data",
+    "advertising": "Advertising",
+    "policy": "Consent Request - Policy Update (due 1 March 2022)",
+    "warning": "Warning",
+    "unrelatedData": "Unrelated Data Category",
+    "bioData": "Biometric Data",
+    "unrelatedDataText": "It is very unusual that fingerprints are used for advertising purposes.",
+    "bioDataText": "Fingerprints are particularly sensitive, since they facilitate identity theft. It is recommended to only provide consent for fingerprint data where absolutely necessary."
   },
   "links": {
     "home": "Home",
@@ -8,7 +17,7 @@
     "consent_helper": "Consent Helper",
     "faq": "FAQ"
   },
-    "links-update": {
+    "linksUpdate": {
         "policy_update": "5 Feb 2022 - Policy Update",
         "consent_revokation": "1 Feb 2022 - Consent Revokation",
         "consent_request": "3 Jan 2021 - Consent Request"
@@ -47,19 +56,19 @@
       "0": {
         "title": "Consent",
         "filename": "/consent.png",
-        "link": "/",
+        "link": "/consent?tab=consent",
         "content": "View all consent interactions between you and us."
       },
       "1": {
         "title": "Data",
         "filename": "/data.png",
-        "link": "/",
+        "link": "/consent?tab=data",
         "content": "Tell us which data categories we may process."
       },
       "2": {
         "title": "Purposes",
         "filename": "/purpose.png",
-        "link": "/",
+        "link": "/consent?tab=purpose",
         "content": "Tell us which purposes we may address."
       }
     }
@@ -152,5 +161,20 @@
     "url": "URL",
     "user-agent": "User Agent",
     "ip": "IP-Address"
+  },
+  "consent": {
+    "title":"Consent Helper",
+    "location": "Your location data",
+    "purpose": "Purposes",
+    "text": "Location data is data that tells us where you have been at what time. We collect location data via GPS if you give permission in the Clover mobile application. We use your location data to customize our advertising, to plan our marketing geographically, and to prevent fraud via geographic identity verification.",
+    "text_ad": "Advertising is an integral part of our business model, which guarantees that we can continue to provide you with our restaurant recommandations. We use the below data categories to customize advertising. Tell us below which data categories we may use to customize our advertising. [learn more]",
+    "ad": "Advertisement",
+    "marketing": "Marketing",
+    "id": "Identity Verification",
+    "name": "Name",
+    "fingerprint": "Fingerprint",
+    "bank": "Bank Account",
+    "credit": "Credit Card Number",
+    "sensitivity": "Sensitivity: "
   }
 }

@@ -22,7 +22,7 @@
         width="50%"
         color="primary"
         depressed
-        :to="localePath()"
+        :to="localePath(href)"
       >
         {{ $t('home.explore-btn') }}
       </v-btn>

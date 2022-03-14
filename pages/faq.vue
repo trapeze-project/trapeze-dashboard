@@ -1,7 +1,9 @@
 <template>
-    <h1>
+  <div>
+    <h2>
       FREQUENTLY ASKED QUESTIONS
-    </h1>
+    </h2>
+  </div>
 </template>
 
 <script>

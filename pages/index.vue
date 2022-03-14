@@ -24,7 +24,7 @@
               style="float: right"
               color="primary"
               depressed
-              :to="localePath()"
+              :to="localePath('/helper')"
             >
               {{ $t('links.consent_helper') }}
             </v-btn>
