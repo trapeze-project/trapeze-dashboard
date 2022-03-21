@@ -12,6 +12,9 @@
       {{ $t('company.position') }}<br>
       {{ $t('company.email') }}<br>
       {{ $t('company.pos-name') }}<br>
+      <v-btn color="primary">
+        {{ $t('company.contact') }}
+      </v-btn>
     </v-card-text>
   </v-card>
 </template>

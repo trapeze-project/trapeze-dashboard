@@ -4,7 +4,6 @@
     "category": "Data Categories",
     "location": "Location Data",
     "advertising": "Advertising",
-    "policy": "Consent Request - Policy Update (due 1 March 2022)",
     "warning": "Warning",
     "unrelatedData": "Unrelated Data Category",
     "bioData": "Biometric Data",
@@ -32,6 +31,7 @@
   "add2": "123456, Clover City, Italy",
   "website": "https://clover.com",
   "email": "cclover@clover.com",
+  "contact": "Contact",
   "position": "Data Protection Officer (DPO)",
   "pos-name": "Mr. Charles Clover"
 },

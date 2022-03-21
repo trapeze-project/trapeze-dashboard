@@ -12,7 +12,21 @@
       <v-card-text>
         {{ $t('consent.text') }}
       </v-card-text>
-      <PDataCategory :categoryTitle="categoryTitle" />
+      <v-row>
+        <v-col cols="4">
+          <p class="ml-4 font-weight-bold">
+            {{ $t('consent.purpose') }}
+          </p>
+          <v-card class="ml-2">
+            <PDataCategory
+              :categories="categories"
+            />
+          </v-card>
+        </v-col>
+      </v-row>
+      <PSensitivity
+        :sensitivity="sensitivity"
+      />
       <div class="text-center">
         <v-pagination
           v-model="page"
@@ -30,7 +44,9 @@ export default {
   data () {
     return {
       categoryTitle: 'consent.purpose',
-      page: 1
+      page: 1,
+      categories: ['Advertising', 'Marketing', 'Identity Verification'],
+      sensitivity: 30
     }
   }
 }

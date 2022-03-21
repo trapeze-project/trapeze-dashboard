@@ -30,289 +30,73 @@
         </v-tabs>
         <v-tabs-items v-model="tab">
           <v-tab-item value="consent">
-            <v-simple-table>
-              <thead>
-                <tr>
-                  <th>
-                    Date
-                  </th>
-                  <th>
-                    Event
-                  </th>
-                  <th>
-                    Policy
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>5 Feb 2022 14:00 CEST</td>
-                  <td>Consent Request - Policy Update</td>
-                  <td>clover-pol.v2.pdf (inactive)</td>
-                </tr>
-                <tr>
-                  <td>1 Feb 2022 16:38 CEST</td>
-                  <td>Consent Revocation</td>
-                  <td>clover-pol.v1.pdf (active)</td>
-                </tr>
-                <tr>
-                  <td>3 Jan 2022 14:05 CEST</td>
-                  <td>Consent Giving</td>
-                  <td>clover-pol.v1.pdf (active)</td>
-                </tr>
-                <tr>
-                  <td>
-                    3 Jan 2022 14:05 CEST
-                  </td>
-                  <td>Consent Request - Account Creation</td>
-                  <td>clover-pol.v1.pdf (active)</td>
-                </tr>
-              </tbody>
-            </v-simple-table>
-            <div class="mt-4">
-              <v-card>
-                <v-card-title style="background-color: #F5F5F5">
-                  {{ $t('general.policy') }}
-                </v-card-title>
-                <v-card-text>
-                  <p>
-                    date: 5 Feb 2022, 14:00 pm
-                  </p>
-                  <p>
-                    from: Mr. Charles Clover (cclover@clover.com)
-                  </p>
-                  <p>
-                    Dear client,
-                  </p>
-                  <p>
-                    on behalf of Clover Company, I kindly request you to define your consent with respect to our new privacy  policy (clover-pol.v2). Our new privacy policy will take effect on 1 March 2022 and replace our former privacy
-                    policy (clover-pol.v1). Please click on the "View Changes" Button to see the differences between the old and new policy version and conveniently adjust your settings.
-                  </p>
-                  <p>
-                    I am eager to answer any of your questions related to our privacy policies.
-                  </p>
-                  <p>
-                    Kind regards,
-                  </p>
-                  <p>
-                    Charles Clover
-                  </p>
-                  <p />
-                  <p>......</p>
-                  <p />
-                  <p>
-                    Data Protection Officer <br>
-                    Clover Company
-                    <v-btn class="info float-right">
-                      View Changes
-                    </v-btn>
-                  </p>
-                </v-card-text>
-              </v-card>
+            <v-data-table
+              :headers="headers_email"
+              :items="emails"
+              item-key="date"
+              class="elevation-1"
+              single-select
+              @click:row="handleClick_email"
+            />
+            <div v-show="isHidden_email" class="mt-4">
+              <PEmail :date="date" :event="event" />
             </div>
           </v-tab-item>
           <v-tab-item value="data">
-            <v-simple-table>
-              <thead>
-                <tr>
-                  <th>
-                    Data
-                  </th>
-                  <th>
-                    Purposes
-                  </th>
-                  <th>
-                    Recipient
-                  </th>
-                  <th>
-                    Issues
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Location</td>
-                  <td>None</td>
-                  <td>None</td>
-                  <td>0 issues</td>
-                </tr>
-                <tr>
-                  <td>Bank Account</td>
-                  <td>Advertising, Marketing</td>
-                  <td>Company A</td>
-                  <td class="red--text">
-                    2 issues
-                  </td>
-                </tr>
-                <tr>
-                  <td>Credit Card Number</td>
-                  <td>Advertising, Marketing, Identity Verification</td>
-                  <td>Company A</td>
-                  <td class="red--text">
-                    2 issues
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    Fingerprint
-                  </td>
-                  <td>Advertising</td>
-                  <td>Company A</td>
-                  <td class="red--text">
-                    1 issue
-                  </td>
-                </tr>
-                <tr>
-                  <td>Name</td>
-                  <td>Advertising, Marketing, Identity Verification, and 5 more</td>
-                  <td>Company A</td>
-                  <td>
-                    0 issues
-                  </td>
-                </tr>
-              </tbody>
-            </v-simple-table>
-            <div class="mt-4">
+            <v-data-table
+              :headers="headers_data"
+              :items="data"
+              item-key="data"
+              class="elevation-1"
+              single-select
+              @click:row="handleClick_data"
+            />
+            <div v-show="isHidden_data" class="mt-4">
               <v-card>
-                <v-card-title style="background-color: #F5F5F5">
-                  {{ $t('general.location') }}
-                  <v-switch style="margin-left: 13%" />
-                </v-card-title>
-                <v-divider />
-                <v-card-text>
-                  {{ $t('consent.text') }}
-                </v-card-text>
-                <PDataCategory :category-title="categoryTitle" />
+                <PDataHeader
+                  :category="category"
+                />
+                <v-row>
+                  <v-col cols="4">
+                    <v-card class="ml-2">
+                      <PDataCategory
+                        :categories="categories[category]"
+                      />
+                    </v-card>
+                  </v-col>
+                </v-row>
+                <PSensitivity
+                  :sensitivity="sensitivity[category]"
+                />
               </v-card>
             </div>
           </v-tab-item>
           <v-tab-item value="purpose">
-            <v-simple-table>
-              <thead>
-                <tr>
-                  <th>
-                    Purposes
-                  </th>
-                  <th>
-                    Data
-                  </th>
-                  <th>
-                    Issues
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Service Optimization</td>
-                  <td>None</td>
-                  <td>0 issues</td>
-                </tr>
-                <tr>
-                  <td>Advertising</td>
-                  <td>Name, Fingerprint, Bank Account, Credit Card Number</td>
-                  <td>
-                    <p class="text-bold warning rounded_corner">
-                      1 issue
-                    </p>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Marketing</td>
-                  <td>Bank Account, Credit Card Number</td>
-                  <td>
-                    0 issues
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    Identity Verification
-                  </td>
-                  <td>Name</td>
-                  <td>
-                    0 issues
-                  </td>
-                </tr>
-                <tr>
-                  <td>Authentication</td>
-                  <td>Name, Fingerprint</td>
-                  <td>
-                    0 issues
-                  </td>
-                </tr>
-              </tbody>
-            </v-simple-table>
-            <div class="mt-4">
-              <v-card>
-                <v-card-title style="background-color: #F5F5F5">
-                  {{ $t('general.advertising') }}
-                  <v-switch style="margin-left: 11%" />
-                </v-card-title>
-                <v-divider />
-                <v-card-text>
-                  {{ $t('consent.text_ad') }}
-                </v-card-text>
-                <div class="ml-3">
-                  <p class="font-weight-black">
-                    {{ $t(categoryTitle) }}:
-                  </p>
-                  <p />
-                  <v-row>
-                    <v-col cols="4">
-                      <v-card>
-                        <v-simple-table>
-                          <thead />
-                          <tbody>
-                            <tr>
-                              <td>
-                                {{ $t('consent.name') }}
-                              </td>
-                              <v-switch />
-                            </tr>
-                            <tr>
-                              <td class="warning">
-                                {{ $t('consent.fingerprint') }}
-                              </td>
-                              <v-switch />
-                            </tr>
-                            <tr>
-                              <td>{{ $t('consent.bank') }} </td>
-                              <v-switch />
-                            </tr>
-                            <tr>
-                              <td>{{ $t('consent.credit') }} </td>
-                              <v-switch />
-                            </tr>
-                          </tbody>
-                        </v-simple-table>
-                      </v-card>
-                    </v-col>
-                    <v-col>
-                      <v-card class="warning">
-                        <v-card-title class="text-uppercase">
-                          {{ $t('general.warning') }}:
-                        </v-card-title>
-                        <v-divider />
-                        <v-card-text>
-                          {{ $t('general.unrelatedData') }}:
-                        </v-card-text>
-                        <v-card-text>
-                          <li>
-                            {{ $t('general.unrelatedDataText') }}
-                          </li>
-                        </v-card-text>
-                        <v-card-text>
-                          {{ $t('general.bioData') }}:
-                        </v-card-text>
-                        <v-card-text>
-                          <li>
-                            {{ $t('general.bioDataText') }}
-                          </li>
-                        </v-card-text>
-                      </v-card>
-                    </v-col>
-                  </v-row>
-                </div>
-              </v-card>
+            <v-data-table
+              :headers="headers_purpose"
+              :items="purpose"
+              item-key="purpose"
+              class="elevation-1"
+              single-select
+              @click:row="handleClick_purpose"
+            />
+            <div v-show="isHidden_purpose" class="mt-4">
+              <PDataHeader
+                :category="category"
+              />
+              <v-row>
+                <v-col>
+                  <v-card class="ml-2">
+                    <PDataCategory
+                      :category="category"
+                      :categories="categories[category]"
+                    />
+                  </v-card>
+                </v-col>
+                <v-col class="mb-4 mr-4">
+                  <PPurpose />
+                </v-col>
+              </v-row>
             </div>
           </v-tab-item>
         </v-tabs-items>
@@ -336,13 +120,147 @@
 export default {
   data () {
     return {
+      emails: [
+        {
+          date: '5 Feb 2022 14:00 CEST',
+          event: 'Consent Request - Policy Update',
+          policy: 'clover-pol.v2.pdf  (inactive)'
+        },
+        {
+          date: '1 Feb 2022 16:38 CEST',
+          event: 'Consent Revocation',
+          policy: 'clover-pol.v1.pdf (active)'
+        },
+        {
+          date: '3 Jan 2022 14:05 CEST',
+          event: 'Consent Giving',
+          policy: 'clover-pol.v1.pdf  (active)'
+        },
+        {
+          date: '3 Jan 2022 14:00 CEST',
+          event: 'Consent Request - Account Creation',
+          policy: 'clover-pol.v1.pdf  (active)'
+        }
+      ],
+      headers_email: [
+        {
+          text: 'Date',
+          align: 'start',
+          value: 'date'
+        },
+        { text: 'Event', value: 'event' },
+        { text: 'Policy', value: 'policy' }
+      ],
+      data: [
+        {
+          data: 'Location',
+          purpose: 'None',
+          recipient: 'None',
+          issue: '0 issues'
+        },
+        {
+          data: 'Bank Account',
+          purpose: 'Advertising, Marketing',
+          recipient: 'Company A',
+          issue: '2 issues'
+        },
+        {
+          data: 'Credit Card Number',
+          purpose: 'Advertising, Marketing, Identity Verification',
+          recipient: 'Company A',
+          issue: '2 issues'
+        },
+        {
+          data: 'Fingerprint',
+          purpose: 'Advertising',
+          recipient: 'Company A',
+          issue: '1 issue'
+        },
+        {
+          data: 'Name',
+          purpose: 'Advertising, Marketing, Identity Verification, and 5 more',
+          recipient: 'Company A',
+          issue: '0 issues'
+        }
+      ],
+      headers_data: [
+        {
+          text: 'Data',
+          align: 'start',
+          value: 'data'
+        },
+        { text: 'Purposes', value: 'purpose' },
+        { text: 'Recipient', value: 'recipient' },
+        { text: 'Issues', value: 'issue' }
+      ],
+      purpose: [
+        {
+          data: 'None',
+          purpose: 'Service Optimization',
+          issue: '0 issues'
+        },
+        {
+          data: 'Name, Fingerprint, Bank account, Credit Card Number',
+          purpose: 'Advertising',
+          issue: '2 issues'
+        },
+        {
+          data: 'Bank Account, Credit Card Number',
+          purpose: 'Marketing',
+          issue: '2 issues'
+        },
+        {
+          data: 'Name',
+          purpose: 'Identity Verification',
+          issue: '1 issue'
+        },
+        {
+          data: 'Name, Fingerprint',
+          purpose: 'Authentication',
+          issue: '0 issues'
+        }
+      ],
+      headers_purpose: [
+        {
+          text: 'Purposes',
+          align: 'start',
+          value: 'purpose'
+        },
+        { text: 'Data', value: 'data' },
+        { text: 'Issues', value: 'issue' }
+      ],
       categoryTitle: 'general.category',
       items: [
         'Consent', 'Data', 'Purposes'
       ],
       href: [
         'consent', 'data', 'purposes'
-      ]
+      ],
+      isHidden_email: false,
+      isHidden_data: false,
+      isHidden_purpose: false,
+      date: '',
+      event: '',
+      category: '',
+      categories: {
+        Name: ['Advertising', 'Marketing', 'Identity Verification'],
+        Fingerprint: ['Advertising'],
+        Location: [],
+        'Credit Card Number': ['Advertising', 'Marketing', 'Identity Verification'],
+        'Bank Account': ['Advertising', 'Marketing'],
+        'Service Optimization': [],
+        Advertising: ['Name', 'Fingerprint', 'Bank account', 'Credit Card Number'],
+        Marketing: ['Bank Account', 'Credit Card Number'],
+        'Identity Verification': ['Name'],
+        Authentication: ['Name', 'Fingerprint']
+      },
+      sensitivity: {
+        Name: 30,
+        Fingerprint: 10,
+        Location: 0,
+        'Credit Card Number': 50,
+        'Bank Account': 20
+      }
     }
   },
   computed: {
@@ -354,9 +272,29 @@ export default {
         return this.$route.query.tab
       }
     }
+  },
+  methods: {
+    handleClick_email (item, row) {
+      this.isHidden_email = true
+      row.select(true)
+      this.date = item.date
+      this.event = item.event
+    },
+    handleClick_data (item, row) {
+      this.isHidden_data = true
+      row.select(true)
+      this.category = item.data
+    },
+    handleClick_purpose (item, row) {
+      this.isHidden_purpose = true
+      row.select(true)
+      this.category = item.purpose
+    }
   }
 }
 </script>
 <style>
-
+tr.v-data-table__selected {
+  background: #0085FC !important;
+}
 </style>
