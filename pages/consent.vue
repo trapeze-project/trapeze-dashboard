@@ -3,7 +3,7 @@
     <h2>
       Consent Menu
       <v-btn class=" float-right error">
-        Revoke All
+        {{ $t('general.revoke') }}
       </v-btn>
     </h2>
     <div>
@@ -51,24 +51,16 @@
               single-select
               @click:row="handleClick_data"
             />
-            <div v-show="isHidden_data" class="mt-4">
-              <v-card>
-                <PDataHeader
-                  :category="category"
-                />
-                <v-row>
-                  <v-col cols="4">
-                    <v-card class="ml-2">
-                      <PDataCategory
-                        :categories="categories[category]"
-                      />
-                    </v-card>
-                  </v-col>
-                </v-row>
-                <PSensitivity
-                  :sensitivity="sensitivity[category]"
-                />
-              </v-card>
+            <div v-show="isHidden_data">
+              <PDataHeader
+                :category="category"
+              />
+              <PDataCategory
+                :categories="categories[category]"
+              />
+              <PSensitivity
+                :sensitivity="sensitivity[category]"
+              />
             </div>
           </v-tab-item>
           <v-tab-item value="purpose">
@@ -86,15 +78,13 @@
               />
               <v-row>
                 <v-col>
-                  <v-card class="ml-2">
-                    <PDataCategory
-                      :category="category"
-                      :categories="categories[category]"
-                    />
-                  </v-card>
+                  <PDataCategoryPurpose
+                    :category="category"
+                    :categories="categories[category]"
+                  />
                 </v-col>
                 <v-col class="mb-4 mr-4">
-                  <PPurpose />
+                  <PPurposeCard />
                 </v-col>
               </v-row>
             </div>

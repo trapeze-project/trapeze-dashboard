@@ -28,7 +28,8 @@ export default {
   props: {
     sensitivity: {
       type: Number,
-      required: true
+      required: true,
+      default: 0
     }
   }
 }

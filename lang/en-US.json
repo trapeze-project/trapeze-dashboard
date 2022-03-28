@@ -1,10 +1,12 @@
 {
   "general": {
     "cancel": "Cancel",
+    "revoke": "Revoke all",
     "category": "Data Categories",
     "location": "Location Data",
     "advertising": "Advertising",
     "warning": "Warning",
+    "access": "Access data",
     "unrelatedData": "Unrelated Data Category",
     "bioData": "Biometric Data",
     "unrelatedDataText": "It is very unusual that fingerprints are used for advertising purposes.",

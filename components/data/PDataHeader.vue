@@ -5,15 +5,19 @@
         <v-card-title style="background-color: #F5F5F5">
           {{ category }}
           <v-switch style="margin-left: 15%" />
+          <v-spacer />
+          <v-btn color="orange">
+            {{ $t('general.access') }}
+          </v-btn>
         </v-card-title>
         <v-divider />
+      </v-col>
+    </v-row>
+    <v-row>
+      <v-col>
         <v-card-text>
           {{ $t('consent.text') }}
         </v-card-text>
-        <p class="font-weight-black ml-4">
-          {{ $t('general.category') }}:
-        </p>
-        <p />
       </v-col>
     </v-row>
   </div>
@@ -24,7 +28,10 @@ export default {
   props: {
     category: {
       type: String,
-      required: true
+      required: true,
+      default () {
+        return []
+      }
     }
   }
 }
