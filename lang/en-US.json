@@ -169,7 +169,7 @@
     "location": "Your location data",
     "purpose": "Purposes",
     "text": "Location data is data that tells us where you have been at what time. We collect location data via GPS if you give permission in the Clover mobile application. We use your location data to customize our advertising, to plan our marketing geographically, and to prevent fraud via geographic identity verification.",
-    "text_ad": "Advertising is an integral part of our business model, which guarantees that we can continue to provide you with our restaurant recommandations. We use the below data categories to customize advertising. Tell us below which data categories we may use to customize our advertising. [learn more]",
+    "text_ad": "Advertising is an integral part of our business model, which guarantees that we can continue to provide you with our restaurant recommandations. We use the below data categories to customize advertising. Tell us below which data categories we may use to customize our advertising.",
     "ad": "Advertisement",
     "marketing": "Marketing",
     "id": "Identity Verification",
@@ -177,6 +177,8 @@
     "fingerprint": "Fingerprint",
     "bank": "Bank Account",
     "credit": "Credit Card Number",
-    "sensitivity": "Sensitivity: "
+    "sensitivity": "Sensitivity: ",
+    "sensitivityText": "You can configure how sensitive this data is to you. We treat very sensitive data differently and with extensive care",
+    "sensitivityHeader": "How sensitive is this data to you?"
   }
 }

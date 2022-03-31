@@ -57,6 +57,7 @@
               />
               <PDataCategory
                 :categories="categories[category]"
+                :showDataCard="showDataCard"
               />
               <PSensitivity
                 :sensitivity="sensitivity[category]"
@@ -79,12 +80,9 @@
               <v-row>
                 <v-col>
                   <PDataCategoryPurpose
-                    :category="category"
+                    :showDataCard="showDataCard"
                     :categories="categories[category]"
                   />
-                </v-col>
-                <v-col class="mb-4 mr-4">
-                  <PPurposeCard />
                 </v-col>
               </v-row>
             </div>
@@ -250,7 +248,8 @@ export default {
         Location: 0,
         'Credit Card Number': 50,
         'Bank Account': 20
-      }
+      },
+      showDataCard: false
     }
   },
   computed: {
@@ -274,11 +273,13 @@ export default {
       this.isHidden_data = true
       row.select(true)
       this.category = item.data
+      this.showDataCard = false
     },
     handleClick_purpose (item, row) {
       this.isHidden_purpose = true
       row.select(true)
       this.category = item.purpose
+      this.showDataCard = false
     }
   }
 }

@@ -15,13 +15,10 @@
         {{ $t('consent.purpose') }}
       </p>
       <v-row>
-        <v-col cols="4">
+        <v-col>
           <PDataCategoryHelper
             :categories="categories"
           />
-        </v-col>
-        <v-col>
-          <PConsentHelperDataCard />
         </v-col>
       </v-row>
       <div class="text-center">

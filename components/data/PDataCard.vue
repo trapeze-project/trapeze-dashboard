@@ -6,7 +6,7 @@
       </v-card-title>
       <v-divider />
       <v-card-text>
-        {{ $t('consent.text_ad') }}
+        {{ $t('consent.text_ad') }} [learn more]
         <p />
         <v-row>
           <v-col cols="2">

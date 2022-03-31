@@ -2,7 +2,7 @@
   <div>
     <p class="font-weight-black ml-4">
       {{ $t('consent.sensitivity') }}
-      <v-tooltip top>
+      <v-tooltip right max-width="25%" color="white">
         <template v-slot:activator="{ on, attrs }">
           <v-icon
             small
@@ -12,12 +12,19 @@
             mdi-information-outline
           </v-icon>
         </template>
-        <span>This is info</span>
+        <v-card>
+          <v-card-title style="background-color: #F5F5F5">
+            {{ $t('consent.sensitivityHeader') }}
+          </v-card-title>
+          <v-divider />
+          <v-card-text>
+            {{ $t('consent.sensitivityText') }}
+          </v-card-text>
+        </v-card>
       </v-tooltip>
     </p>
     <v-slider
       style="max-width: 30%"
-      readonly
       :value="sensitivity"
     />
   </div>

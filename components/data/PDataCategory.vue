@@ -14,6 +14,7 @@
             hide-default-header
             hide-default-footer
             single-select
+            item-key="name"
             @click:row="handleClick_dataCat"
           >
             <template #item.name="{ item }">
@@ -23,7 +24,7 @@
         </v-card>
       </v-col>
       <v-col v-show="showDataCard">
-        <PDataCard :category-name="categoryName" />
+        <PDataCard :categoryName="categoryName" />
       </v-col>
     </v-row>
     <p />
@@ -39,12 +40,16 @@ export default {
       default () {
         return []
       }
+    },
+    showDataCard: {
+      type: Boolean,
+      required: true,
+      default: false
     }
   },
   data () {
     return {
       categoryName: '',
-      showDataCard: false,
       headers: [
         {
           text: 'Name',
@@ -62,7 +67,6 @@ export default {
     handleClick_dataCat (item, row) {
       this.showDataCard = true
       row.select(true)
-      console.log(row.isSelected)
       this.categoryName = item.name
     }
   }

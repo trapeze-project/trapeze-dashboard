@@ -2,11 +2,11 @@
   <div>
     <v-card class="mr-2">
       <v-card-title>
-        {{ $t('general.advertising') }}
+        {{ categoryName }}
       </v-card-title>
       <v-divider />
       <v-card-text>
-        {{ $t('consent.text_ad') }}
+        {{ $t('consent.text_ad') }} You have selected {{ categoryName }} [learn more]
       </v-card-text>
     </v-card>
   </div>
@@ -14,7 +14,13 @@
 
 <script>
 export default {
-
+  props: {
+    categoryName: {
+      type: String,
+      required: true,
+      default: ''
+    }
+  }
 }
 </script>
 

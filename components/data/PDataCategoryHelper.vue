@@ -1,21 +1,26 @@
 <template>
   <div>
     <v-row>
-      <v-col>
+      <v-col cols="4">
         <v-card class="ml-2">
-          <v-simple-table>
-            <thead />
-            <tbody>
-              <tr
-                v-for="item in categories"
-                :key="item"
-              >
-                <td>{{ item }}</td>
-                <v-switch />
-              </tr>
-            </tbody>
-          </v-simple-table>
+          <v-data-table
+            :headers="headers"
+            :items="categoriesTransformed"
+            class="elevation-1"
+            hide-default-header
+            hide-default-footer
+            single-select
+            item-key="name"
+            @click:row="handleClick"
+          >
+            <template #item.name="{ item }">
+              {{ item.name }}
+            </template>
+          </v-data-table>
         </v-card>
+      </v-col>
+      <v-col v-show="isHidden_helper">
+        <PConsentHelperDataCard :categoryName="categoryName" />
       </v-col>
     </v-row>
     <p />
@@ -31,6 +36,30 @@ export default {
       default () {
         return []
       }
+    }
+  },
+  data () {
+    return {
+      isHidden_helper: false,
+      categoryName: '',
+      headers: [
+        {
+          text: 'Name',
+          value: 'name'
+        }
+      ]
+    }
+  },
+  computed: {
+    categoriesTransformed () {
+      return this.categories.map(item => ({ name: item }))
+    }
+  },
+  methods: {
+    handleClick (item, row) {
+      this.isHidden_helper = true
+      row.select(true)
+      this.categoryName = item.name
     }
   }
 }
