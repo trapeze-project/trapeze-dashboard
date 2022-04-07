@@ -51,13 +51,14 @@
               single-select
               @click:row="handleClick_data"
             />
-            <div v-show="isHidden_data">
+            <div v-if="isHidden_data">
               <PDataHeader
                 :category="category"
               />
               <PDataCategory
                 :categories="categories[category]"
                 :showDataCard="showDataCard"
+                :key="category"
               />
               <PSensitivity
                 :sensitivity="sensitivity[category]"

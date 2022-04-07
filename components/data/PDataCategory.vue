@@ -68,6 +68,9 @@ export default {
       this.showDataCard = true
       row.select(true)
       this.categoryName = item.name
+    },
+    uniqID () {
+      return Math.floor(Math.random() * 100)
     }
   }
 }
