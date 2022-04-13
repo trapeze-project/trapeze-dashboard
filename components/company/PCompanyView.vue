@@ -12,12 +12,12 @@
       {{ $t('company.position') }}<br>
       {{ $t('company.email') }}<br>
       {{ $t('company.pos-name') }}<br>
-      <v-btn color="primary">
-        {{ $t('company.contact') }}
-      </v-btn>
+      <PContactFirm class="mt-3" :companyName="$t('company.name')"  :btnName="$t('company.contact')" :email="$t('company.email')"/>
     </v-card-text>
   </v-card>
 </template>
 
 <script>
+export default {
+}
 </script>
