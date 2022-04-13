@@ -2,8 +2,6 @@
 <template>
   <v-app>
     <v-app-bar clipped-left app color="primary">
-      <v-app-bar-nav-icon color="secondary" @click.stop="drawer = !drawer" />
-      <v-spacer />
       <div class="d-flex justify-space-between align-center flex-row" style="width: 100%">
         <Logo />
         <div class="d-flex flex-row align-center justify-center">
