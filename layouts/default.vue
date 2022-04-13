@@ -2,7 +2,48 @@
 <template>
   <v-app>
     <v-app-bar clipped-left app color="primary">
-      <Logo />
+      <v-app-bar-nav-icon color="secondary" @click.stop="drawer = !drawer" />
+      <v-spacer />
+      <div class="d-flex justify-space-between align-center flex-row" style="width: 100%">
+        <Logo />
+        <div class="d-flex flex-row align-center justify-center">
+          <div>
+            <b class="secondary--text d-none d-sm-inline d-md-inline d-lg-inline" style="margin-right: 10px;"> {{ $config.logo.slogan.toUpperCase() }} </b>
+            <v-menu offset-y>
+              <template v-slot:activator="{ on, attrs }">
+                <v-btn
+                  index-v-step="5"
+                  dark
+                  outlined
+                  elevation="0"
+                  v-bind="attrs"
+                  v-on="on"
+                  disabled
+                >
+                  <!-- the button will be enanbled later -->
+                  {{ $i18n.locale }}
+                </v-btn>
+              </template>
+              <v-list>
+                <v-list-item
+                  v-for="(locale) in availableLocales"
+                  :key="locale.code"
+                >
+                  <nuxt-link style="text-decoration: none;" :to="switchLocalePath(locale.code)">
+                    {{ locale.name }}
+                  </nuxt-link>
+                </v-list-item>
+              </v-list>
+            </v-menu>
+          </div>
+          <!--
+          <v-btn color="secondary" class="ml-2" outlined @click="logout">
+            Logout
+          </v-btn>
+          -->
+        </div>
+      </div>
+      <v-spacer />
     </v-app-bar>
 
     <v-main>
