@@ -73,7 +73,16 @@
               class="elevation-1"
               single-select
               @click:row="handleClick_purpose"
-            />
+              >
+                <template v-slot:item.issue="{item}">
+                  <v-chip
+                    label
+                    :color="item.issue === '0 issues' ? 'transparent':'orange'"
+                  >
+                    {{ item.issue }}
+                  </v-chip>
+                </template>
+            </v-data-table>
             <div v-show="isHidden_purpose" class="mt-4">
               <PDataHeader
                 :category="category"
@@ -288,5 +297,7 @@ export default {
 <style>
 tr.v-data-table__selected {
   background: #0085FC !important;
+  color:white
 }
+
 </style>
