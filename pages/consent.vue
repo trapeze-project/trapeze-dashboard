@@ -276,15 +276,6 @@ export default {
       }
     }
   },
-  // created () {
-  //   if (this.$route.query.selectEvent) {
-  //     // this.isHidden_email = true
-  //     const updatedConsent = this.$route.query.selectEvent.split(' - ')
-  //     const updatedConsentDate = updatedConsent[0]
-  //     const updatedConsentEvent = updatedConsent[1]
-  //     this.selectedTabs = this.emails.filter(email => email.date.includes(updatedConsentDate) && email.event.includes(updatedConsentEvent))
-  //   }
-  // },
   watch: {
     $route () {
       if (this.$route.query.selectEvent) {
