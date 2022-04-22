@@ -8,6 +8,8 @@
     </h2>
     <div>
       <v-card>
+        <p>{{this.$route.query.selectEvent}}</p>
+        <p>{{selectedTabs}}</p>
         <v-tabs
           v-model="tab"
           background-color="grey lighten-4"
@@ -31,6 +33,7 @@
         <v-tabs-items v-model="tab">
           <v-tab-item value="consent">
             <v-data-table
+              v-model="selectedTabs"
               :headers="headers_email"
               :items="emails"
               item-key="date"
@@ -38,7 +41,7 @@
               single-select
               @click:row="handleClick_email"
             />
-            <div v-show="isHidden_email" class="mt-4">
+            <div v-show="isHidden_email" class="mt-4" id="PEmail">
               <PEmail :date="date" :event="event" />
             </div>
           </v-tab-item>
@@ -118,6 +121,7 @@
 export default {
   data () {
     return {
+      selectedTabs: [],
       emails: [
         {
           date: '5 Feb 2022 14:00 CEST',
@@ -269,6 +273,36 @@ export default {
       },
       get () {
         return this.$route.query.tab
+      }
+    }
+  },
+  // created () {
+  //   if (this.$route.query.selectEvent) {
+  //     // this.isHidden_email = true
+  //     const updatedConsent = this.$route.query.selectEvent.split(' - ')
+  //     const updatedConsentDate = updatedConsent[0]
+  //     const updatedConsentEvent = updatedConsent[1]
+  //     this.selectedTabs = this.emails.filter(email => email.date.includes(updatedConsentDate) && email.event.includes(updatedConsentEvent))
+  //   }
+  // },
+  watch: {
+    $route () {
+      if (this.$route.query.selectEvent) {
+        // this.isHidden_email = true
+        const updatedConsent = this.$route.query.selectEvent.split(' - ')
+        const updatedConsentDate = updatedConsent[0]
+        const updatedConsentEvent = updatedConsent[1]
+        this.selectedTabs = this.emails.filter(email => email.date.includes(updatedConsentDate) && email.event.includes(updatedConsentEvent))
+        if (this.selectedTabs.length === 0) {
+          this.isHidden_email = false
+        } else {
+          this.isHidden_email = true
+          this.date = this.selectedTabs[0].date
+          this.event = this.selectedTabs[0].event
+        }
+      } else {
+        this.isHidden_email = false
+        this.selectedTabs = []
       }
     }
   },
