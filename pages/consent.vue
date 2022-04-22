@@ -275,24 +275,9 @@ export default {
     }
   },
   watch: {
-    $route () {
-      if (this.$route.query.selectEvent) {
-        // this.isHidden_email = true
-        const updatedConsent = this.$route.query.selectEvent.split(' - ')
-        const updatedConsentDate = updatedConsent[0]
-        const updatedConsentEvent = updatedConsent[1]
-        this.selectedTabs = this.emails.filter(email => email.date.includes(updatedConsentDate) && email.event.includes(updatedConsentEvent))
-        if (this.selectedTabs.length === 0) {
-          this.isHidden_email = false
-        } else {
-          this.isHidden_email = true
-          this.date = this.selectedTabs[0].date
-          this.event = this.selectedTabs[0].event
-        }
-      } else {
-        this.isHidden_email = false
-        this.selectedTabs = []
-      }
+    $route: {
+      immediate: true,
+      handler: 'onUrlChange'
     }
   },
   methods: {
@@ -313,6 +298,25 @@ export default {
       row.select(true)
       this.category = item.purpose
       this.showDataCard = false
+    },
+    onUrlChange (newURL) {
+      if (newURL.query.selectEvent) {
+        // this.isHidden_email = true
+        const updatedConsent = newURL.query.selectEvent.split(' - ')
+        const updatedConsentDate = updatedConsent[0]
+        const updatedConsentEvent = updatedConsent[1]
+        this.selectedTabs = this.emails.filter(email => email.date.includes(updatedConsentDate) && email.event.includes(updatedConsentEvent))
+        if (this.selectedTabs.length === 0) {
+          this.isHidden_email = false
+        } else {
+          this.isHidden_email = true
+          this.date = this.selectedTabs[0].date
+          this.event = this.selectedTabs[0].event
+        }
+      } else {
+        this.isHidden_email = false
+        this.selectedTabs = []
+      }
     }
   }
 }
