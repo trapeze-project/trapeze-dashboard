@@ -21,7 +21,7 @@
         </v-list-item-title>
         <v-card>
           <v-list-item-group color="primary">
-            <v-list-item v-for="link in linksUpdate" :key="$t('linksUpdate.'+link.label)" @click="counter = $t('linksUpdate.'+link.label)" :to="localePath('/consent?tab=consent'+'&selectEvent='+$t('linksUpdate.'+link.label))" exact>
+            <v-list-item v-for="link in linksUpdate" :key="$t('linksUpdate.'+link.label)" :to="localePath('/consent?tab=consent'+'&selectEvent='+$t('linksUpdate.'+link.label))" exact>
               <v-list-item-title>
                 {{ $t('linksUpdate.'+link.label) }}
               </v-list-item-title>
