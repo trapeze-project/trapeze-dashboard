@@ -8,8 +8,6 @@
     </h2>
     <div>
       <v-card>
-        <p>{{this.$route.query.selectEvent}}</p>
-        <p>{{selectedTabs}}</p>
         <v-tabs
           v-model="tab"
           background-color="grey lighten-4"

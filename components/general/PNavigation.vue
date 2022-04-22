@@ -29,18 +29,12 @@
           </v-list-item-group>
        </v-card>
       </v-list>
-      <p>{{ counter }}</p>
     </v-col>
   </v-row>
 </template>
 
 <script>
 export default {
-  data () {
-    return {
-      counter: ''
-    }
-  },
   props: {
     links: {
       type: Array,
