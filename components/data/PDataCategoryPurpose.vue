@@ -18,7 +18,14 @@
             @click:row="handleClick"
           >
             <template #item.name="{ item }">
-              {{ item.name }}
+              <v-row style="height: 10px" class="mb-8">
+                <v-col cols="8">
+                  {{ item.name }}
+                </v-col>
+                <v-col>
+                  <v-switch class="mt-n1 ml-8" />
+                </v-col>
+              </v-row>
             </template>
           </v-data-table>
         </v-card>

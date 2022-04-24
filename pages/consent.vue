@@ -50,15 +50,25 @@
               class="elevation-1"
               single-select
               @click:row="handleClick_data"
-            />
+            >
+              <template v-slot:item.issue="{item}">
+                <v-chip
+                  label
+                  :color="'transparent'"
+                  :text-color="item.issue === '0 issues' ? 'black':'red'"
+                >
+                  {{ item.issue }}
+                </v-chip>
+              </template>
+            </v-data-table>
             <div v-if="isHidden_data">
               <PDataHeader
                 :category="category"
               />
               <PDataCategory
-                :categories="categories[category]"
-                :showDataCard="showDataCard"
                 :key="category"
+                :categories="categories[category]"
+                :show-data-card="showDataCard"
               />
               <PSensitivity
                 :sensitivity="sensitivity[category]"
@@ -73,15 +83,15 @@
               class="elevation-1"
               single-select
               @click:row="handleClick_purpose"
-              >
-                <template v-slot:item.issue="{item}">
-                  <v-chip
-                    label
-                    :color="item.issue === '0 issues' ? 'transparent':'orange'"
-                  >
-                    {{ item.issue }}
-                  </v-chip>
-                </template>
+            >
+              <template v-slot:item.issue="{item}">
+                <v-chip
+                  label
+                  :color="item.issue === '0 issues' ? 'transparent':'orange'"
+                >
+                  {{ item.issue }}
+                </v-chip>
+              </template>
             </v-data-table>
             <div v-show="isHidden_purpose" class="mt-4">
               <PDataHeader
@@ -90,7 +100,7 @@
               <v-row>
                 <v-col>
                   <PDataCategoryPurpose
-                    :showDataCard="showDataCard"
+                    :show-data-card="showDataCard"
                     :categories="categories[category]"
                   />
                 </v-col>

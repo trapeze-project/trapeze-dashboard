@@ -4,7 +4,7 @@
       <v-col>
         <v-card-title style="background-color: #F5F5F5">
           {{ category }}
-          <v-switch style="margin-left: 15%" />
+          <v-switch style="position: absolute; margin-left: 265px" />
           <v-spacer />
           <v-btn color="orange">
             {{ $t('general.access') }}
