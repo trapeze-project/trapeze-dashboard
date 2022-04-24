@@ -31,6 +31,7 @@
         <v-tabs-items v-model="tab">
           <v-tab-item value="consent">
             <v-data-table
+              v-model="selectedTabs"
               :headers="headers_email"
               :items="emails"
               item-key="date"
@@ -38,7 +39,7 @@
               single-select
               @click:row="handleClick_email"
             />
-            <div v-show="isHidden_email" class="mt-4">
+            <div v-show="isHidden_email" class="mt-4" id="PEmail">
               <PEmail :date="date" :event="event" />
             </div>
           </v-tab-item>
@@ -128,6 +129,7 @@
 export default {
   data () {
     return {
+      selectedTabs: [],
       emails: [
         {
           date: '5 Feb 2022 14:00 CEST',
@@ -282,6 +284,12 @@ export default {
       }
     }
   },
+  watch: {
+    $route: {
+      immediate: true,
+      handler: 'onUrlChange'
+    }
+  },
   methods: {
     handleClick_email (item, row) {
       this.isHidden_email = true
@@ -300,6 +308,25 @@ export default {
       row.select(true)
       this.category = item.purpose
       this.showDataCard = false
+    },
+    onUrlChange (newURL) {
+      if (newURL.query.selectEvent) {
+        // this.isHidden_email = true
+        const updatedConsent = newURL.query.selectEvent.split(' - ')
+        const updatedConsentDate = updatedConsent[0]
+        const updatedConsentEvent = updatedConsent[1]
+        this.selectedTabs = this.emails.filter(email => email.date.includes(updatedConsentDate) && email.event.includes(updatedConsentEvent))
+        if (this.selectedTabs.length === 0) {
+          this.isHidden_email = false
+        } else {
+          this.isHidden_email = true
+          this.date = this.selectedTabs[0].date
+          this.event = this.selectedTabs[0].event
+        }
+      } else {
+        this.isHidden_email = false
+        this.selectedTabs = []
+      }
     }
   }
 }

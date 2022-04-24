@@ -74,7 +74,7 @@ export default {
     ],
     linksUpdate: [
       { to: '/update', label: 'policy_update' },
-      { to: '/revokation', label: 'consent_revokation' },
+      { to: '/revocation', label: 'consent_revocation' },
       { to: '/request', label: 'consent_request' }
     ],
     group: null
