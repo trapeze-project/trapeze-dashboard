@@ -1,7 +1,8 @@
 <template>
-  <v-card>
+  <v-card style="position: fixed">
     <v-img
       height="250"
+      width="300"
       src="/company.png"
     />
     <v-card-text>
