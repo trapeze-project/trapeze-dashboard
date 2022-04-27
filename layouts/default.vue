@@ -16,9 +16,7 @@
                   elevation="0"
                   v-bind="attrs"
                   v-on="on"
-                  disabled
                 >
-                  <!-- the button will be enanbled later -->
                   {{ $i18n.locale }}
                 </v-btn>
               </template>

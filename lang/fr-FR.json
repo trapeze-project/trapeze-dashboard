@@ -1,106 +1,147 @@
 {
   "general": {
-    "cancel": "Annuler"
+    "cancel": "Cancel",
+    "revoke": "Revoke all",
+    "category": "Data Categories",
+    "location": "Location Data",
+    "advertising": "Advertising",
+    "warning": "Warning",
+    "access": "Access data",
+    "unrelatedData": "Unrelated Data Category",
+    "bioData": "Biometric Data",
+    "unrelatedDataText": "It is very unusual that fingerprints are used for advertising purposes.",
+    "bioDataText": "Fingerprints are particularly sensitive, since they facilitate identity theft. It is recommended to only provide consent for fingerprint data where absolutely necessary."
   },
   "links": {
-    "home": "Accueil",
-    "profile": "Profil",
-    "about": "À propos",
-    "data": "Données",
-    "log": "Journal d'activité",
-    "permissions": "Autorisation"
+    "home": "Home",
+    "consent_menu": "Consent Menu",
+    "consent_helper": "Consent Helper",
+    "faq": "FAQ"
+  },
+  "linksUpdate": {
+    "policy_update": "5 Feb 2022 - Policy Update",
+    "consent_revocation": "1 Feb 2022 - Consent Revocation",
+    "consent_request": "3 Jan 2021 - Consent Request"
+  },
+  "sidebar-title": {
+    "navigation": "Navigation",
+    "update": "Updates"
+  },
+  "company": {
+    "name": "Clover Company",
+    "add1": "Clover Street",
+    "add2": "123456, Clover City, Italy",
+    "website": "https://clover.com",
+    "email": "cclover@clover.com",
+    "contact": "Contact",
+    "position": "Data Protection Officer (DPO)",
+    "pos-name": "Mr. Charles Clover"
   },
   "home": {
-    "title": "Accueil",
-    "explore-btn": "Explorer",
+    "title": "Bienvenue dans votre tableau de bord personnel de la vie privée !  ",
+    "explore-btn": "View",
+    "welcome-msg": "Chez Clover Company, nous voulons que vous compreniez comment nous traitons vos données personnelles.",
+    "welcome-msg2": "In questo cruscotto, è possibile visualizzare quali dati personali trattiamo e per quali scopi. Il dashboard vi permette di limitare il nostro trattamento dei vostri dati personali configurando il vostro consenso. È possibile",
+    "welcome-msg3": "Le menu en bas à gauche vous donne un aperçu rapide des interactions les plus récentes entre vous et nous en matière de consentement.",
+    "welcome-msg4": "Si vous ne connaissez pas encore le tableau de bord de la vie privée, nous vous recommandons d'essayer l'aide au consentement.",
+    "purpose": {
+      "0": {
+        "name": "revoke and give consent,"},
+      "1": {
+        "name": "deactivate and activate data categories,"},
+      "2": {
+        "name": "deactivate and activate purposes."
+      }
+    },
+    "help": "Consent Help",
     "items": {
       "0": {
-        "title": "Données que vous nous avez fournies",
-        "filename": "/derived-data.svg",
-        "link": "/profile",
-        "content": "Vérifiez les données que vous avez fournies lors de votre inscription au service."
+        "title": "Consent",
+        "filename": "/consent.png",
+        "link": "/consent?tab=consent",
+        "content": "View all consent interactions between you and us."
       },
       "1": {
-        "title": "Données que nous collectons",
-        "filename": "/service-data.svg",
-        "link": "/data",
-        "content": "Découvrez les données que nous collectons et analysons lorsque vous utilisez notre service."
+        "title": "Data",
+        "filename": "/data.png",
+        "link": "/consent?tab=data",
+        "content": "Tell us which data categories we may process."
       },
       "2": {
-        "title": "Ce que vous avez accepté",
-        "filename": "/permissions.svg",
-        "link": "/permissions",
-        "content": "Termes et conditions et politiques de confidentialité que vous avez acceptées."
+        "title": "Purposes",
+        "filename": "/purpose.png",
+        "link": "/consent?tab=purpose",
+        "content": "Tell us which purposes we may address."
       }
     }
   },
   "profile": {
-    "title": "Détails du compte",
-    "subtitle": "Votre adresse e-mail et votre mot de passe",
-    "username": "ADRESSE E-MAIL",
-    "password": "MOT DE PASSE"
+    "title": "Account credentials",
+    "subtitle": "Your email address and password",
+    "username": "EMAIL ADDRESS",
+    "password": "PASSWORD"
   },
   "about": {
-    "provider": "Sous-traitant",
-    "controller": "Responsable de traitement"
+    "provider": "Processor",
+    "controller": "Controller"
   },
   "data": {
     "location": {
-      "title": "Vos informations de localisation",
-      "subtitle": "Nombre d'emplacements collectés"
+      "title": "Your locations",
+      "subtitle": "Number of locations collected"
     },
     "browsing": {
-      "title": "Votre historique de navigation",
-      "subtitle": "Nombre de sites Web visités collectés"
+      "title": "Your browsing history",
+      "subtitle": "Number of visited websites collected"
     },
     "delete-dialog": {
-      "title": "Supprimer les données",
-      "text": "Vos données seront supprimées. Le responsable de traitement sera informé de votre demande et y répondra dans les plus brefs délais.",
-      "btn": "Supprimer"
+      "title": "Delete data",
+      "text": "Your data will be deleted. The controller will be notified about your request and will respond to it shortly.",
+      "btn": "Delete"
     }
   },
   "permissions": {
     "headings": {
-      "share": "Vous partagez",
-      "get": "Vous obtenez"
+      "share": "You share",
+      "get": "You get"
     },
     "slider": {
-      "low": "Basse",
-      "medium": "Moyenne",
-      "high": "Haute"
+      "low": "Low",
+      "medium": "Medium",
+      "high": "High"
     },
     "email-address": {
-      "label": "Adresse e-mail",
-      "get": "Requis pour vous connecter à Finder et vous envoyer des notifications sur les lieux à proximité.",
-      "share": "Votre adresse email vérifiée."
+      "label": "Email adress",
+      "get": "Required for logging into Finder and to send you notifications about places nearby.",
+      "share": "Your verified email address."
     },
     "profile": {
-      "label": "Profil",
-      "get": "Vous récupérez des recommandations personnalisées qui vous conviennent.",
-      "share": "Nous construisons un profil basé sur la manière dont vous utilisez Finder, ce qui a suscité votre intérêt et que vous avez visité."
+      "label": "Profile",
+      "get": "You retrieve personalized recommendations that fit to you.",
+      "share": "We build a profile based on how you use Finder, what sparked your interest, and which places you visited."
     },
     "current-location": {
-      "label": "Localisation actuelle",
-      "get": "Votre position actuelle est utilisée pour identifier des endroits à proximité.",
-      "share": "Votre localisation actuelle est obtenue via GPS, WiFi ou en fonction de l'antenne relais à laquelle votre téléphone est connecté."
+      "label": "Current location",
+      "get": "Your current position is used to identify places nearby.",
+      "share": "Your current location is obtained either via GPS, WiFi, or based on the cell tower your phone is connected to."
     },
     "location-history": {
-      "label": "Historique de localisation",
-      "get": "Vous récupérez des recommandations personnalisées qui vous conviennent.",
-      "share": "Votre historique de localisation est utilisé pour enrichir votre profil d'intérêts avec des données supplémentaires."
+      "label": "Location history",
+      "get": "You retrieve personalized recommendations that fit to you.",
+      "share": "Your location history is used to enrich your interest profile with additional data."
     },
     "browsing-history": {
-      "label": "Activité de navigation",
-      "get": "Vous récupérez des recommandations personnalisées qui vous conviennent.",
-      "share": "Votre historique de navigation est utilisé pour enrichir votre profil d'intérêts avec des données supplémentaires."
+      "label": "Browsing activity",
+      "get": "You retrieve personalized recommendations that fit to you.",
+      "share": "Your browsing history is used to enrich your interest profile with additional data."
     },
-    "advanced-button": "Avancée"
+    "advanced-button": "Advanced"
   },
   "login": {
-    "username": "E-mail",
-    "password": "Mot de passe",
-    "login": "Connexion",
-    "loginTitle": "Connectez-vous à votre tableau de bord Finder."
+    "username": "Email",
+    "password": "Password",
+    "login": "Login",
+    "loginTitle": " Log into your Finder dashboard."
   },
   "short": {
     "year": "numeric",
@@ -117,10 +158,27 @@
   },
   "table-headers": {
     "date": "Date",
-    "location": "Emplacement",
+    "location": "Location",
     "action": "Action",
     "url": "URL",
-    "user-agent": "Agent utilisateur",
-    "ip": "Adresse IP"
+    "user-agent": "User Agent",
+    "ip": "IP-Address"
+  },
+  "consent": {
+    "title":"Consent Helper",
+    "location": "Your location data",
+    "purpose": "Purposes",
+    "text": "Location data is data that tells us where you have been at what time. We collect location data via GPS if you give permission in the Clover mobile application. We use your location data to customize our advertising, to plan our marketing geographically, and to prevent fraud via geographic identity verification.",
+    "text_ad": "Advertising is an integral part of our business model, which guarantees that we can continue to provide you with our restaurant recommandations. We use the below data categories to customize advertising. Tell us below which data categories we may use to customize our advertising.",
+    "ad": "Advertisement",
+    "marketing": "Marketing",
+    "id": "Identity Verification",
+    "name": "Name",
+    "fingerprint": "Fingerprint",
+    "bank": "Bank Account",
+    "credit": "Credit Card Number",
+    "sensitivity": "Sensitivity: ",
+    "sensitivityText": "You can configure how sensitive this data is to you. We treat very sensitive data differently and with extensive care",
+    "sensitivityHeader": "How sensitive is this data to you?"
   }
 }
