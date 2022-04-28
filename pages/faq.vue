@@ -3,7 +3,7 @@
     <h2>
       FREQUENTLY ASKED QUESTIONS
     </h2>
-    <v-expansion-panels>
+    <v-expansion-panels accordion>
       <v-expansion-panel v-for="category in faq" :key="category.title" class="mb-1">
         <v-expansion-panel-header color="primary">
           <template v-slot:actions>
