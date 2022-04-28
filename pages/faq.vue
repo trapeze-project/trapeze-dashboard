@@ -6,18 +6,23 @@
     <v-expansion-panels>
       <v-expansion-panel v-for="category in faq" :key="category.title" class="mb-1">
         <v-expansion-panel-header color="primary">
-          <span class="white--text">{{category.title}}</span>
           <template v-slot:actions>
-            <v-icon >
+            <v-icon class="icon" >
               $expand
             </v-icon>
           </template>
+          <span class="white--text header">{{category.title}}</span>
         </v-expansion-panel-header>
         <v-expansion-panel-content>
           <v-expansion-panels class="mt-1">
             <v-expansion-panel v-for="inquiry in category.quesitionsANDAnswers" :key="inquiry.question" class="mb-1">
               <v-expansion-panel-header color="primary">
-                <span class="white--text">{{inquiry.question}}</span>
+                <template v-slot:actions>
+                  <v-icon class="icon" left>
+                    $expand
+                  </v-icon>
+                </template>
+                <span class="white--text header">{{inquiry.question}}</span>
               </v-expansion-panel-header>
               <v-expansion-panel-content>
                 <p class="my-5">{{inquiry.answer}}</p>
@@ -62,5 +67,12 @@ export default {
 <style scoped>
 a{
   text-decoration:none;
+}
+.icon {
+  order: 0;
+}
+
+.header {
+  order: 1;
 }
 </style>
