@@ -39,7 +39,7 @@
               single-select
               @click:row="handleClick_email"
             />
-            <div v-show="isHidden_email" class="mt-4" id="PEmail">
+            <div v-show="isHidden_email" id="PEmail" class="mt-4">
               <PEmail :date="date" :event="event" />
             </div>
           </v-tab-item>

@@ -8,42 +8,48 @@
         <v-btn
           dark
           v-bind="attrs"
-          v-on="on"
           color="primary"
+          v-on="on"
         >
-          {{btnName}}
+          {{ btnName }}
         </v-btn>
       </template>
 
       <v-card>
         <v-card-title>
-          New Message to {{companyName}}
-          <v-spacer></v-spacer>
-          <v-btn small fab @click="dialog = false" depressed color="white" >
-            <v-icon color="grey">mdi-window-close</v-icon>
+          New Message to {{ companyName }}
+          <v-spacer />
+          <v-btn small fab depressed color="white" @click="dialog = false">
+            <v-icon color="grey">
+              mdi-window-close
+            </v-icon>
           </v-btn>
         </v-card-title>
-        <v-divider></v-divider>
+        <v-divider />
         <v-card-text>
-          <p class="mt-4 mb-1 black--text">Recipient:</p>
+          <p class="mt-4 mb-1 black--text">
+            Recipient:
+          </p>
           <v-text-field
+            v-model="recipient"
             persistent-hint
             outlined
             dence
-            v-model="recipient"
-          ></v-text-field>
-          <p class="mt-1 mb-1 black--text">Message:</p>
+          />
+          <p class="mt-1 mb-1 black--text">
+            Message:
+          </p>
           <v-textarea
+            v-model="message"
             auto-grow
             outlined
             rows="3"
             row-height="30"
-            v-model="message"
-          ></v-textarea>
+          />
         </v-card-text>
 
         <v-card-actions>
-          <v-spacer></v-spacer>
+          <v-spacer />
           <v-btn
             class="custom-transform-class text-none"
             dark
@@ -67,7 +73,21 @@
 
 <script>
 export default {
-  props: ['companyName', 'btnName', 'email'],
+  props: {
+    companyName: {
+      type: String,
+      required: true
+    },
+    btnName: {
+      type: String,
+      required: true
+    },
+    email: {
+      type: String,
+      required: true
+    }
+  },
+
   data () {
     return {
       dialog: false,

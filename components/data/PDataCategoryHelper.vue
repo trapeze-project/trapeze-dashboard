@@ -20,7 +20,7 @@
         </v-card>
       </v-col>
       <v-col v-show="isHidden_helper">
-        <PConsentHelperDataCard :categoryName="categoryName" />
+        <PConsentHelperDataCard :category-name="categoryName" />
       </v-col>
     </v-row>
     <p />

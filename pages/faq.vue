@@ -4,35 +4,33 @@
       FREQUENTLY ASKED QUESTIONS
     </h2>
     <v-card>
-      <v-container fluid >
+      <v-container fluid>
         <v-row no-gutters>
-          <v-col cols="9" >
+          <v-col cols="9">
             <div>find out more about the TRAPEZE privacy dashboard and its underlying concepts.</div>
             <div>Do not forget to let us kknow if you cannot find information you are interested in.</div>
           </v-col>
-          <v-col cols="3" >
-            <v-btn class="custom-transform-class text-none blue white--text"  depressed>
+          <v-col cols="3">
+            <v-btn class="custom-transform-class text-none blue white--text" depressed>
               I Cannot find an Answer
             </v-btn>
           </v-col>
         </v-row>
-        <v-divider></v-divider>
+        <v-divider />
       </v-container>
-      <v-container fluid >
+      <v-container fluid>
         <v-row no-gutters>
-          <v-col cols="7" >
-
-          </v-col>
-          <v-col cols="4" >
+          <v-col cols="7" />
+          <v-col cols="4">
             <v-text-field
               placeholder="Describe what you are curious about."
               outlined
               dense
-            ></v-text-field>
+            />
           </v-col>
-          <v-col cols="1" >
+          <v-col cols="1">
             <v-btn depressed class="transparent">
-              <v-icon color="blue" >
+              <v-icon color="blue">
                 mdi-magnify
               </v-icon>
             </v-btn>
@@ -43,11 +41,11 @@
         <v-expansion-panel v-for="category in faq" :key="category.title" class="mb-1">
           <v-expansion-panel-header color="primary">
             <template v-slot:actions>
-              <v-icon class="icon" >
+              <v-icon class="icon">
                 $expand
               </v-icon>
             </template>
-            <span class="white--text header">{{category.title}}</span>
+            <span class="white--text header">{{ category.title }}</span>
           </v-expansion-panel-header>
           <v-expansion-panel-content>
             <v-expansion-panels class="mt-1">
@@ -58,17 +56,19 @@
                       $expand
                     </v-icon>
                   </template>
-                  <span class="white--text header">{{inquiry.question}}</span>
+                  <span class="white--text header">{{ inquiry.question }}</span>
                 </v-expansion-panel-header>
                 <v-expansion-panel-content>
-                  <p class="my-5">{{inquiry.answer}}</p>
+                  <p class="my-5">
+                    {{ inquiry.answer }}
+                  </p>
                   <div v-if="inquiry.linksAndSources.length" class="mt-4 grey--text">
                     <span class="font-weight-bold">
                       Links and Sources:
                     </span>
                     <ol>
                       <li v-for="link in inquiry.linksAndSources" :key="link">
-                        <a :href="link" class="grey--text">{{link}}</a>
+                        <a :href="link" class="grey--text">{{ link }}</a>
                       </li>
                     </ol>
                   </div>
