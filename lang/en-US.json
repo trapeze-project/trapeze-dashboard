@@ -83,6 +83,12 @@
         "filename": "/purpose.png",
         "link": "/consent?tab=purpose",
         "content": "Tell us which purposes we may address."
+      },
+      "3": {
+        "title": "Purposes",
+        "filename": "/purpose.png",
+        "link": "/consent?tab=purpose",
+        "content": "Tell us which purposes we may address."
       }
     }
   },

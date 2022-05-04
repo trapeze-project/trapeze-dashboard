@@ -13,12 +13,6 @@
           v-model="tab"
           background-color="grey lighten-4"
         >
-          <!--          <v-tab-->
-          <!--            v-for="item in items"-->
-          <!--            :key="item"-->
-          <!--          >-->
-          <!--            {{ item }}-->
-          <!--          </v-tab>-->
           <v-tab href="#consent">
             Consent
           </v-tab>
@@ -29,21 +23,17 @@
             Purposes
           </v-tab>
         </v-tabs>
+
         <v-tabs-items v-model="tab">
           <v-tab-item value="consent">
-            <v-data-table
-              v-model="selectedTabs"
-              :headers="headers_email"
-              :items="emails"
-              item-key="date"
-              class="elevation-1"
-              single-select
-              @click:row="handleClick_email"
+
+            <PConsentTab 
+              :selectedTabs="selectedTabs"
+              @selected="(e) => this.selectedTabs = e"
             />
-            <div v-show="isHidden_email" id="PEmail" class="mt-4">
-              <PEmail :date="date" :event="event" />
-            </div>
+
           </v-tab-item>
+
           <v-tab-item value="data">
             <v-data-table
               :headers="headers_data"
@@ -63,6 +53,7 @@
                 </v-chip>
               </template>
             </v-data-table>
+
             <div v-if="isHidden_data">
               <PDataHeader
                 :category="category"
@@ -77,6 +68,7 @@
               />
             </div>
           </v-tab-item>
+
           <v-tab-item value="purpose">
             <v-data-table
               :headers="headers_purpose"
@@ -131,37 +123,6 @@ export default {
   data () {
     return {
       selectedTabs: [],
-      emails: [
-        {
-          date: '5 Feb 2022 14:00 CEST',
-          event: 'Consent Request - Policy Update',
-          policy: 'clover-pol.v2.pdf  (inactive)'
-        },
-        {
-          date: '1 Feb 2022 16:38 CEST',
-          event: 'Consent Revocation',
-          policy: 'clover-pol.v1.pdf (active)'
-        },
-        {
-          date: '3 Jan 2022 14:05 CEST',
-          event: 'Consent Giving',
-          policy: 'clover-pol.v1.pdf  (active)'
-        },
-        {
-          date: '3 Jan 2022 14:00 CEST',
-          event: 'Consent Request - Account Creation',
-          policy: 'clover-pol.v1.pdf  (active)'
-        }
-      ],
-      headers_email: [
-        {
-          text: 'Date',
-          align: 'start',
-          value: 'date'
-        },
-        { text: 'Event', value: 'event' },
-        { text: 'Policy', value: 'policy' }
-      ],
       data: [
         {
           data: 'Location',
@@ -247,11 +208,9 @@ export default {
       href: [
         'consent', 'data', 'purposes'
       ],
-      isHidden_email: false,
+      
       isHidden_data: false,
       isHidden_purpose: false,
-      date: '',
-      event: '',
       category: '',
       categories: {
         Name: ['Advertising', 'Marketing', 'Identity Verification'],
@@ -292,12 +251,6 @@ export default {
     }
   },
   methods: {
-    handleClick_email (item, row) {
-      this.isHidden_email = true
-      row.select(true)
-      this.date = item.date
-      this.event = item.event
-    },
     handleClick_data (item, row) {
       this.isHidden_data = true
       row.select(true)

@@ -1,7 +1,6 @@
-/* eslint-disable */
 <template>
   <v-app>
-    <v-app-bar app clipped-left hide-on-scroll color="primary">
+    <v-app-bar app clipped-left color="primary">
       <div
         class="d-flex justify-space-between align-center flex-row"
         style="width: 100%"
@@ -71,7 +70,6 @@
 <script>
 export default {
   data: () => ({
-    drawer: true,
   }),
   computed: {
     cssVars() {
@@ -85,6 +83,3 @@ export default {
   },
 };
 </script>
-
-<style>
-</style>
