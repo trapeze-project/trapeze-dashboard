@@ -1,6 +1,5 @@
 <template>
   <div id="index">
-
     <v-row justify="center" align="center">
       <v-col>
         <v-card>
@@ -24,14 +23,14 @@
             <p>
               {{ $t("home.welcome-msg4") }}
             </p>
-            
+
             <v-btn
               class="black--text"
               color="primary"
               depressed
-              :to="localePath('/helper')"
+              :to="localePath('/help')"
             >
-              {{ $t("links.consent_helper") }}
+              {{ $t("btn.labels.consent-guide") }}
             </v-btn>
           </v-card-text>
         </v-card>

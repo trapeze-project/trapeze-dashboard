@@ -45,11 +45,6 @@
               </v-list>
             </v-menu>
           </div>
-          <!--
-          <v-btn color="secondary" class="ml-2" outlined @click="logout">
-            Logout
-          </v-btn>
-          -->
         </div>
       </div>
       <v-spacer />
@@ -59,7 +54,7 @@
       <v-container fluid>
         <v-row>
           <v-col cols="2">
-            <PNavigation :links="links" :links-update="linksUpdate" />
+            <PNavigation />
           </v-col>
           <v-col cols="8">
             <nuxt />
@@ -77,18 +72,6 @@
 export default {
   data: () => ({
     drawer: true,
-    links: [
-      { to: "/", label: "home" },
-      { to: "/consent", label: "consent_menu" },
-      { to: "/helper", label: "consent_helper" },
-      { to: "/faq", label: "faq" },
-    ],
-    linksUpdate: [
-      { to: "/update", label: "policy_update" },
-      { to: "/revocation", label: "consent_revocation" },
-      { to: "/request", label: "consent_request" },
-    ],
-    group: null,
   }),
   computed: {
     cssVars() {

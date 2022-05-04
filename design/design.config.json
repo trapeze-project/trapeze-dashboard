@@ -1,14 +1,7 @@
 {
   "theme": {
     "light": {
-      "primary": "#EED216",
-      "coporate": "#12B4FF",
-      "accent": "#E1F5FD",
-      "secondary": "#FFFFFF",
-      "error": "#FF5252",
-      "info": "#2196F3",
-      "success": "#4CAF50",
-      "warning": "#FFC107"
+      "primary": "#EED216"
     }
   },
   "logo": {

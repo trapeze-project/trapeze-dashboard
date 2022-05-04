@@ -12,31 +12,40 @@
     "unrelatedDataText": "It is very unusual that fingerprints are used for advertising purposes.",
     "bioDataText": "Fingerprints are particularly sensitive, since they facilitate identity theft. It is recommended to only provide consent for fingerprint data where absolutely necessary."
   },
-  "links": {
-    "home": "Home",
-    "consent_menu": "Consent Menu",
-    "consent_helper": "Consent Helper",
-    "faq": "FAQ"
+  "nav": {
+    "labels": {
+      "home": "Home",
+      "consent": "Consent",
+      "data": "Data",
+      "purposes": "Purposes",
+      "help": "Help",
+      "faq": "FAQ"
+    }
   },
-    "linksUpdate": {
-        "policy_update": "5 Feb 2022 - Policy Update",
-        "consent_revocation": "1 Feb 2022 - Consent Revocation",
-        "consent_request": "3 Jan 2021 - Consent Request"
-    },
+  "btn": {
+    "labels": {
+      "consent-guide": "Consent Guide"
+    }
+  },
+  "updates": {
+    "1": "Policy Update",
+    "2": "Consent Revocation",
+    "3": "Consent Request"
+  },
   "sidebar-title": {
     "navigation": "Navigation",
     "update": "Updates"
   },
-"company": {
-  "name": "Clover Company",
-  "add1": "Clover Street",
-  "add2": "123456, Clover City, Italy",
-  "website": "https://clover.com",
-  "email": "cclover@clover.com",
-  "contact": "Contact",
-  "position": "Data Protection Officer (DPO)",
-  "pos-name": "Mr. Charles Clover"
-},
+  "company": {
+    "name": "Clover Company",
+    "add1": "Clover Street",
+    "add2": "123456, Clover City, Italy",
+    "website": "https://clover.com",
+    "email": "cclover@clover.com",
+    "contact": "Contact",
+    "position": "Data Protection Officer (DPO)",
+    "pos-name": "Mr. Charles Clover"
+  },
   "home": {
     "title": "Welcome to your personal privacy dashboard! ",
     "explore-btn": "View",
@@ -46,12 +55,14 @@
     "welcome-msg4": "If you are new to the privacy dashboard, we recommend you to try out the consent helper.",
     "purpose": {
       "0": {
-      "name": "revoke and give consent,"},
+        "name": "revoke and give consent,"
+      },
       "1": {
-      "name": "deactivate and activate data categories,"},
+        "name": "deactivate and activate data categories,"
+      },
       "2": {
-      "name": "deactivate and activate purposes."
-    }
+        "name": "deactivate and activate purposes."
+      }
     },
     "help": "Consent Help",
     "items": {
@@ -165,7 +176,7 @@
     "ip": "IP-Address"
   },
   "consent": {
-    "title":"Consent Helper",
+    "title": "Consent Helper",
     "location": "Your location data",
     "purpose": "Purposes",
     "text": "Location data is data that tells us where you have been at what time. We collect location data via GPS if you give permission in the Clover mobile application. We use your location data to customize our advertising, to plan our marketing geographically, and to prevent fraud via geographic identity verification.",

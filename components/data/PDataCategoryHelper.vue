@@ -2,7 +2,7 @@
   <div>
     <v-row>
       <v-col cols="4">
-        <v-card class="ml-1">
+        
           <v-data-table
             :headers="headers"
             :items="categoriesTransformed"
@@ -17,7 +17,7 @@
               {{ item.name }}
             </template>
           </v-data-table>
-        </v-card>
+        
       </v-col>
       <v-col v-show="isHidden_helper">
         <PConsentHelperDataCard :category-name="categoryName" />
