@@ -1,23 +1,27 @@
 /* eslint-disable */
 <template>
   <v-app>
-    <v-app-bar
-      clipped-left
-      app
-      hide-on-scroll
-      color="primary"
-    >
-      <div class="d-flex justify-space-between align-center flex-row" style="width: 100%">
+    <v-app-bar app clipped-left hide-on-scroll color="primary">
+      <div
+        class="d-flex justify-space-between align-center flex-row"
+        style="width: 100%"
+      >
         <Logo />
         <div class="d-flex flex-row align-center justify-center">
           <div>
-            <b class="secondary--text d-none d-sm-inline d-md-inline d-lg-inline" style="margin-right: 10px;"> {{ $config.logo.slogan.toUpperCase() }} </b>
+            <b
+              class="secondary--text d-none d-sm-inline d-md-inline d-lg-inline"
+              style="margin-right: 10px"
+            >
+              {{ $config.logo.slogan.toUpperCase() }}
+            </b>
             <v-menu offset-y>
               <template v-slot:activator="{ on, attrs }">
                 <v-btn
                   index-v-step="5"
                   dark
                   outlined
+                  color="black"
                   elevation="0"
                   v-bind="attrs"
                   v-on="on"
@@ -27,10 +31,14 @@
               </template>
               <v-list>
                 <v-list-item
-                  v-for="(locale) in availableLocales"
+                  v-for="locale in availableLocales"
                   :key="locale.code"
+                  color="black"
                 >
-                  <nuxt-link style="text-decoration: none;" :to="switchLocalePath(locale.code)">
+                  <nuxt-link
+                    style="color: black; text-decoration: none"
+                    :to="switchLocalePath(locale.code)"
+                  >
                     {{ locale.name }}
                   </nuxt-link>
                 </v-list-item>
@@ -70,36 +78,30 @@ export default {
   data: () => ({
     drawer: true,
     links: [
-      { to: '/', label: 'home' },
-      { to: '/consent', label: 'consent_menu' },
-      { to: '/helper', label: 'consent_helper' },
-      { to: '/faq', label: 'faq' }
+      { to: "/", label: "home" },
+      { to: "/consent", label: "consent_menu" },
+      { to: "/helper", label: "consent_helper" },
+      { to: "/faq", label: "faq" },
     ],
     linksUpdate: [
-      { to: '/update', label: 'policy_update' },
-      { to: '/revocation', label: 'consent_revocation' },
-      { to: '/request', label: 'consent_request' }
+      { to: "/update", label: "policy_update" },
+      { to: "/revocation", label: "consent_revocation" },
+      { to: "/request", label: "consent_request" },
     ],
-    group: null
+    group: null,
   }),
   computed: {
-    cssVars () {
+    cssVars() {
       return {
-        '--url': 'url(' + this.$config.background.url + ')'
-      }
+        "--url": "url(" + this.$config.background.url + ")",
+      };
     },
-    availableLocales () {
-      return this.$i18n.locales.filter(i => i.code !== this.$i18n.locale)
-    }
-  }
-}
+    availableLocales() {
+      return this.$i18n.locales.filter((i) => i.code !== this.$i18n.locale);
+    },
+  },
+};
 </script>
+
 <style>
-.v-application {
-  font-family: 'Comfortaa', sans-serif;
-}
-#app {
-  background: var(--url) no-repeat center center fixed !important;
-  background-size: cover;
-}
 </style>

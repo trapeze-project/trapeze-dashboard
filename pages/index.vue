@@ -1,14 +1,15 @@
 <template>
   <div id="index">
+
     <v-row justify="center" align="center">
       <v-col>
         <v-card>
           <v-card-title>
-            {{ $t('home.title') }}
+            {{ $t("home.title") }}
           </v-card-title>
           <v-card-text>
-            {{ $t('home.welcome-msg') }} <br><br>
-            {{ $t('home.welcome-msg2') }} <br>
+            <p>{{ $t("home.welcome-msg") }}</p>
+            <p>{{ $t("home.welcome-msg2") }}</p>
             <ul>
               <li
                 v-for="(item, idx) in Object.values($t('home.purpose'))"
@@ -17,22 +18,26 @@
                 {{ item.name }}
               </li>
             </ul>
-            <v-divider />
-            <br>
-            {{ $t('home.welcome-msg4') }}
+
+            <v-divider class="my-3" />
+
+            <p>
+              {{ $t("home.welcome-msg4") }}
+            </p>
+            
             <v-btn
-              style="float: right"
+              class="black--text"
               color="primary"
               depressed
               :to="localePath('/helper')"
             >
-              {{ $t('links.consent_helper') }}
+              {{ $t("links.consent_helper") }}
             </v-btn>
-            <v-spacer />
           </v-card-text>
         </v-card>
       </v-col>
     </v-row>
+
     <v-row justify="center" align="center">
       <v-col
         v-for="(item, idx) in Object.values($t('home.items'))"
@@ -41,7 +46,12 @@
         md="4"
         lg="4"
       >
-        <PExplainCard :title="item.title" :content="item.content" :filename="item.filename" :href="item.link" />
+        <PExplainCard
+          :title="item.title"
+          :content="item.content"
+          :filename="item.filename"
+          :href="item.link"
+        />
       </v-col>
     </v-row>
   </div>
@@ -52,12 +62,9 @@ export default {
   // middleware: ['auth'],
   data: () => ({
     steps: [],
-    options: {}
+    options: {},
   }),
-  mounted () {
-
-  },
-  methods: {
-  }
-}
+  mounted() {},
+  methods: {},
+};
 </script>

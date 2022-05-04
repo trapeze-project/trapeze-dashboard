@@ -4,19 +4,15 @@ const Design = require('./design/design.config.json')
 export default {
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
-    titleTemplate: '%s - Finder | Privacy Dashboard by TRAPEZE',
-    title: 'Finder | Privacy Dashboard by TRAPEZE',
+    titleTemplate: 'Privacy Dashboard : TRAPEZE',
+    title: 'Privacy Dashboard : TRAPEZE',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      {
-        rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css?family=Comfortaa'
-      }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }
     ]
   },
 
@@ -36,7 +32,7 @@ export default {
   // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
   buildModules: [
     // https://go.nuxtjs.dev/eslint
-    '@nuxtjs/eslint-module',
+    // '@nuxtjs/eslint-module',
     // https://go.nuxtjs.dev/vuetify
     '@nuxtjs/vuetify'
   ],

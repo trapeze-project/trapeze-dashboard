@@ -1,7 +1,7 @@
 {
   "theme": {
     "light": {
-      "primary": "#0085FC",
+      "primary": "#EED216",
       "coporate": "#12B4FF",
       "accent": "#E1F5FD",
       "secondary": "#FFFFFF",
@@ -12,7 +12,7 @@
     }
   },
   "logo": {
-    "url": "/finder-logo.png",
+    "url": "/trapeze_logo.png",
     "slogan": ""
   },
   "background": {

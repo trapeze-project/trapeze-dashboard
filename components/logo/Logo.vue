@@ -1,15 +1,11 @@
 <template>
-  <div style="width:100">
+  <div>
     <a
       id="logo"
-      class="text-h5"
-      style="font-family: 'Comfortaa', sans-serif !important; color: white; text-decoration: none;"
+      :style="cssVars"
       href="/"
       title="Home"
-    >
-      TRAPEZE Privacy Dashboard
-    </a>
-    <!--<a id="logo" :style="cssVars" href="/" title="Home" />-->
+    />
   </div>
 </template>
 
@@ -24,14 +20,11 @@ export default {
   }
 }
 </script>
-<style scoped>
-a {
-    background-color: transparent;
-}
 
+<style scoped>
 #logo {
     display: block;
     content: var(--url);
-    max-height: 50px;
+    max-width: 224px;
 }
 </style>

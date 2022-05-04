@@ -1,9 +1,10 @@
 <template>
   <div>
-    <h2>
-      FREQUENTLY ASKED QUESTIONS
-    </h2>
     <v-card>
+      <v-card-title>
+        Frequently Asked Questions
+      </v-card-title>
+
       <v-container fluid>
         <v-row no-gutters>
           <v-col cols="9">

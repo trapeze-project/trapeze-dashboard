@@ -1,13 +1,14 @@
 <template>
   <div>
-    <h2>
-      Consent Menu
-      <v-btn class=" float-right error">
-        {{ $t('general.revoke') }}
-      </v-btn>
-    </h2>
     <div>
       <v-card>
+        <v-card-title>
+          Consent Menu
+        </v-card-title>
+        
+        <v-btn class=" float-right error">
+          {{ $t('general.revoke') }}
+        </v-btn>
         <v-tabs
           v-model="tab"
           background-color="grey lighten-4"

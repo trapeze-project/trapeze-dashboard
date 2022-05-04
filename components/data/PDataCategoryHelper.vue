@@ -2,7 +2,7 @@
   <div>
     <v-row>
       <v-col cols="4">
-        <v-card class="ml-2">
+        <v-card class="ml-1">
           <v-data-table
             :headers="headers"
             :items="categoriesTransformed"
@@ -33,38 +33,37 @@ export default {
     categories: {
       type: Array,
       required: true,
-      default () {
-        return []
-      }
-    }
+      default() {
+        return [];
+      },
+    },
   },
-  data () {
+  data() {
     return {
       isHidden_helper: false,
-      categoryName: '',
+      categoryName: "",
       headers: [
         {
-          text: 'Name',
-          value: 'name'
-        }
-      ]
-    }
+          text: "Name",
+          value: "name",
+        },
+      ],
+    };
   },
   computed: {
-    categoriesTransformed () {
-      return this.categories.map(item => ({ name: item }))
-    }
+    categoriesTransformed() {
+      return this.categories.map((item) => ({ name: item }));
+    },
   },
   methods: {
-    handleClick (item, row) {
-      this.isHidden_helper = true
-      row.select(true)
-      this.categoryName = item.name
-    }
-  }
-}
+    handleClick(item, row) {
+      this.isHidden_helper = true;
+      row.select(true);
+      this.categoryName = item.name;
+    },
+  },
+};
 </script>
 
 <style scoped>
-
 </style>
