@@ -18,11 +18,9 @@
 
 <script>
 export default {
-  props: {
-    selectedTabs: Array,
-  },
   data() {
     return {
+      selectedTabs: [],
       date: '',
       event: '',
       isHidden_email: false,

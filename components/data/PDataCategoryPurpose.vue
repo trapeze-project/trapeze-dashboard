@@ -22,7 +22,7 @@
                 <v-col cols="8">
                   {{ item.name }}
                 </v-col>
-                <v-col>
+                <v-col cols="4">
                   <v-switch class="mt-n1 ml-8" />
                 </v-col>
               </v-row>

@@ -1,7 +1,7 @@
 <template>
   <div>
     <p class="font-weight-black ml-4">
-      {{ $t('general.category') }}
+      {{ $t("general.category") }}
     </p>
     <p />
     <v-row>
@@ -22,7 +22,7 @@
                 <v-col cols="8">
                   {{ item.name }}
                 </v-col>
-                <v-col>
+                <v-col cols="4">
                   <v-switch class="mt-n1 ml-8" />
                 </v-col>
               </v-row>
@@ -44,40 +44,40 @@ export default {
     categories: {
       type: Array,
       required: true,
-      default () {
-        return []
-      }
+      default() {
+        return [];
+      },
     },
     showDataCard: {
       type: Boolean,
       required: true,
-      default: false
-    }
+      default: false,
+    },
   },
-  data () {
+  data() {
     return {
-      categoryName: '',
+      categoryName: "",
       headers: [
         {
-          text: 'Name',
-          value: 'name'
-        }
-      ]
-    }
+          text: "Name",
+          value: "name",
+        },
+      ],
+    };
   },
   computed: {
-    categoriesTransformed () {
-      return this.categories.map(item => ({ name: item }))
-    }
+    categoriesTransformed() {
+      return this.categories.map((item) => ({ name: item }));
+    },
   },
   methods: {
-    handleClick_dataCat (item, row) {
-      this.showDataCard = true
-      row.select(true)
-      this.categoryName = item.name
-    }
-  }
-}
+    handleClick_dataCat(item, row) {
+      this.showDataCard = true;
+      row.select(true);
+      this.categoryName = item.name;
+    },
+  },
+};
 </script>
 
 <style scoped>
