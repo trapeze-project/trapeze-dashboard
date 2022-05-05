@@ -12,7 +12,9 @@
         </v-row>
       </v-card-title>
 
-      <v-tabs v-model="tab" background-color="grey lighten-4">
+      <v-tabs v-model="tab" background-color="primary">
+        <v-tabs-slider color="black"></v-tabs-slider>
+
         <v-tab v-for="(tab, index) in tabs" :key="index" :href="'#' + tab.name">
           {{ tab.label }}
         </v-tab>
@@ -73,5 +75,9 @@ export default {
 tr.v-data-table__selected {
   background: #0085fc !important;
   color: white;
+}
+
+.v-tab--active {
+  color: black !important;
 }
 </style>
