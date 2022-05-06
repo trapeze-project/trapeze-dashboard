@@ -47,15 +47,11 @@ export default {
       default () {
         return []
       }
-    },
-    showDataCard: {
-      type: Boolean,
-      required: true,
-      default: false
     }
   },
   data () {
     return {
+      showDataCard: false,
       headers: [
         {
           text: 'Name',

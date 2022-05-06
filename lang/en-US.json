@@ -68,25 +68,25 @@
     "items": {
       "0": {
         "title": "Consent",
-        "filename": "/consent.png",
+        "filename": "/img/consent.png",
         "link": "/consent?tab=consent",
         "content": "View all consent interactions between you and us."
       },
       "1": {
         "title": "Data",
-        "filename": "/data.png",
+        "filename": "/img/data.png",
         "link": "/consent?tab=data",
         "content": "Tell us which data categories we may process."
       },
       "2": {
         "title": "Purposes",
-        "filename": "/purpose.png",
+        "filename": "/img/purpose.png",
         "link": "/consent?tab=purpose",
         "content": "Tell us which purposes we may address."
       },
       "3": {
         "title": "Purposes",
-        "filename": "/purpose.png",
+        "filename": "/img/purpose.png",
         "link": "/consent?tab=purpose",
         "content": "Tell us which purposes we may address."
       }

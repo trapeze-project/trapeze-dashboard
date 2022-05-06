@@ -48,14 +48,10 @@ export default {
         return [];
       },
     },
-    showDataCard: {
-      type: Boolean,
-      required: true,
-      default: false,
-    },
   },
   data() {
     return {
+      showDataCard: false,
       categoryName: "",
       headers: [
         {

@@ -1,6 +1,6 @@
 /* eslint-disable eqeqeq */
 // eslint-disable-next-line nuxt/no-cjs-in-config
-const Design = require('./design/design.config.json')
+const Design = require('./design.config.json')
 export default {
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
@@ -19,7 +19,6 @@ export default {
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [],
   serverMiddleware: [
-    '~/api/index.js'
   ],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
@@ -27,7 +26,12 @@ export default {
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
-  components: true,
+  components: [
+    {
+      path: '~/components', // will get any components nested in let's say /components/test too
+      pathPrefix: false,
+    },
+  ],
 
   // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
   buildModules: [
@@ -41,8 +45,7 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/proxy',
     '@nuxtjs/auth-next',
-    'nuxt-leaflet',
-    ['nuxt-i18n',
+    ['@nuxtjs/i18n',
       {
         lazy: true,
         langDir: 'lang/',

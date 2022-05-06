@@ -1,6 +1,6 @@
 <template>
   <v-card>
-    <v-img src="/company.png" />
+    <v-img src="/img/company.png" />
     <v-card-text>
       {{ $t("company.name") }}<br />
       {{ $t("company.add1") }}<br />
