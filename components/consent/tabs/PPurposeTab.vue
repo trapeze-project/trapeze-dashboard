@@ -2,55 +2,48 @@
   <div>
     <v-data-table
       :headers="headers"
-      :items="imports.data"
-      item-key="data"
-      class="elevation-1"
+      :items="imports.purposes"
+      item-key="purpose"
       single-select
       @click:row="select"
     >
       <template v-slot:item.issue="{ item }">
         <v-chip
           label
-          :color="'transparent'"
-          :text-color="item.issue === '0 issues' ? 'black' : 'red'"
+          :color="item.issue === '0 issues' ? 'transparent' : 'orange'"
         >
           {{ item.issue }}
         </v-chip>
       </template>
     </v-data-table>
-
-    <div v-if="view.show">
-      <PDataHeader :category="view.selected" />
-
-      <PDataCategory
-        :category="view.selected"
-        :key="view.selected"
-        :categories="imports.dataPurposesMap[view.selected]"
-      />
-
-      <PSensitivity :sensitivity="imports.sensitivity[view.selected]" />
-    </div>
+    
+    <PDetails 
+      class="mt-4"
+      v-show="view.show"
+      :heading="view.selected"
+      :subitems="imports.dataPurposesMap[view.selected]"
+      :showSensitivity="false"
+    />
+    
   </div>
 </template>
 
 <script>
-import data from "../../../static/data/data.json";
-import sensitivity from "../../../static/data/sensitivity.json";
+import purposes from "../../../static/data/purposes.json";
 import dataPurposesMap from "../../../static/data/data.purposes.map.json";
 
 export default {
   data() {
     return {
       imports: {
-        data: data,
-        sensitivity: sensitivity,
+        purposes: purposes,
         dataPurposesMap: dataPurposesMap,
       },
       view: {
         selected: "",
         show: false,
       },
-      headers: Object.keys(data[0]).map((e) => ({
+      headers: Object.keys(purposes[0]).map((e) => ({
         text: e.charAt(0).toUpperCase() + e.slice(1),
         value: e,
         align: "start",
@@ -60,7 +53,7 @@ export default {
   methods: {
     select(item, row) {
       row.select(true);
-      this.view.selected = item.data;
+      this.view.selected = item.purpose;
       this.view.show = true;
     },
   },

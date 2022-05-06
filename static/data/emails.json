@@ -1,0 +1,22 @@
+[
+  {
+    "date": "5 Feb 2022 14:00 CEST",
+    "event": "Consent Request - Policy Update",
+    "policy": "clover-pol.v2.pdf  (inactive)"
+  },
+  {
+    "date": "1 Feb 2022 16:38 CEST",
+    "event": "Consent Revocation",
+    "policy": "clover-pol.v1.pdf (active)"
+  },
+  {
+    "date": "3 Jan 2022 14:05 CEST",
+    "event": "Consent Giving",
+    "policy": "clover-pol.v1.pdf  (active)"
+  },
+  {
+    "date": "3 Jan 2022 14:00 CEST",
+    "event": "Consent Request - Account Creation",
+    "policy": "clover-pol.v1.pdf  (active)"
+  }
+]

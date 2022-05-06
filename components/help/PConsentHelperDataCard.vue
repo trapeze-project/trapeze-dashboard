@@ -6,7 +6,8 @@
       </v-card-title>
       <v-divider />
       <v-card-text>
-        {{ $t('consent.text_ad') }} You have selected {{ categoryName }} [learn more]
+        {{ $t("consent.text_ad") }} You have selected {{ categoryName }} [learn
+        more]
       </v-card-text>
     </v-card>
   </div>
@@ -18,12 +19,11 @@ export default {
     categoryName: {
       type: String,
       required: true,
-      default: ''
-    }
-  }
-}
+      default: "",
+    },
+  },
+};
 </script>
 
 <style scoped>
-
 </style>

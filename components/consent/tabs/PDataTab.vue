@@ -2,9 +2,8 @@
   <div>
     <v-data-table
       :headers="headers"
-      :items="imports.purposes"
-      item-key="purpose"
-      class="elevation-1"
+      :items="imports.data"
+      item-key="data"
       single-select
       @click:row="select"
     >
@@ -17,34 +16,34 @@
         </v-chip>
       </template>
     </v-data-table>
+
+    <PDetails 
+      class="mt-4"
+      v-show="view.show"
+      :heading="view.selected"
+      :subitems="imports.dataPurposesMap[view.selected]"
+      :showSensitivity="true"
+    />
     
-    <div v-show="view.show" class="mt-4">
-      <PDataHeader :category="view.selected" />
-      <v-row>
-        <v-col>
-          <PDataCategoryPurpose :categories="imports.dataPurposesMap[view.selected]" />
-        </v-col>
-      </v-row>
-    </div>
   </div>
 </template>
 
 <script>
-import purposes from "../../../static/data/purposes.json";
+import data from "../../../static/data/data.json";
 import dataPurposesMap from "../../../static/data/data.purposes.map.json";
 
 export default {
   data() {
     return {
       imports: {
-        purposes: purposes,
+        data: data,
         dataPurposesMap: dataPurposesMap,
       },
       view: {
         selected: "",
         show: false,
       },
-      headers: Object.keys(purposes[0]).map((e) => ({
+      headers: Object.keys(data[0]).map((e) => ({
         text: e.charAt(0).toUpperCase() + e.slice(1),
         value: e,
         align: "start",
@@ -54,7 +53,7 @@ export default {
   methods: {
     select(item, row) {
       row.select(true);
-      this.view.selected = item.purpose;
+      this.view.selected = item.data;
       this.view.show = true;
     },
   },

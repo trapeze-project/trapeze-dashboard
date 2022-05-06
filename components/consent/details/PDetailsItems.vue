@@ -1,26 +1,36 @@
 <template>
   <div>
+    <p class="font-weight-black ml-4">
+      {{ $t("general.category") }}
+    </p>
+    <p />
     <v-row>
       <v-col cols="4">
-        
+        <v-card class="ml-2">
           <v-data-table
             :headers="headers"
             :items="categoriesTransformed"
-            class="elevation-1"
             hide-default-header
             hide-default-footer
             single-select
             item-key="name"
-            @click:row="handleClick"
+            @click:row="handleClick_dataCat"
           >
             <template #item.name="{ item }">
-              {{ item.name }}
+              <v-row align="center" justify="center">
+                <v-col class="fill-height" cols="8">
+                  {{ item.name }}
+                </v-col>
+                <v-col cols="4">
+                  <v-switch />
+                </v-col>
+              </v-row>
             </template>
           </v-data-table>
-        
+        </v-card>
       </v-col>
-      <v-col v-show="isHidden_helper">
-        <PConsentHelperDataCard :category-name="categoryName" />
+      <v-col v-show="showDataCard">
+        <PDetailsCard :category-name="categoryName" />
       </v-col>
     </v-row>
     <p />
@@ -40,7 +50,7 @@ export default {
   },
   data() {
     return {
-      isHidden_helper: false,
+      showDataCard: false,
       categoryName: "",
       headers: [
         {
@@ -56,8 +66,8 @@ export default {
     },
   },
   methods: {
-    handleClick(item, row) {
-      this.isHidden_helper = true;
+    handleClick_dataCat(item, row) {
+      this.showDataCard = true;
       row.select(true);
       this.categoryName = item.name;
     },
@@ -66,4 +76,7 @@ export default {
 </script>
 
 <style scoped>
+tr.v-data-table__selected {
+  background: #000000 !important;
+}
 </style>

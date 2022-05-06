@@ -72,11 +72,6 @@ export default {
 </script>
 
 <style>
-tr.v-data-table__selected {
-  background: #0085fc !important;
-  color: white;
-}
-
 .v-tab--active {
   color: black !important;
 }
