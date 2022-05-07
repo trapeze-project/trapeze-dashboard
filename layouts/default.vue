@@ -2,7 +2,7 @@
   <v-app>
     <PNavBar />    
 
-    <v-main>
+    <v-main class="mt-1">
       <v-container fluid>
         <v-row>
           <v-col cols="2">

@@ -1,0 +1,45 @@
+[
+  {
+    "title": "TRAPEZE",
+    "qna": [
+      {
+        "question": "What is TRAPEZE?",
+        "answer": "TRAPEZE is a research project funded by the European Union. TRAPEZE is an acronym for Transparency, Privacy and Security for European citizens. TRAPEZE is part of the Horizon2020 funding programm",
+        "references": [
+          "http://trapeze-project.eu/",
+          "https://ec.europa.eu/info/research-and-innovation/funding/funding-opportunities/funding-programmes-and-open-calls/horizon-2020_en"
+        ]
+      },
+      {
+        "question": "Which institutions are part of TRAPEZE?",
+        "answer": "",
+        "references": []
+      },
+      {
+        "question": "who hosts this dashboard?",
+        "answer": "",
+        "references": []
+      }
+    ]
+  },
+  {
+    "title": "Consent",
+    "qna": []
+  },
+  {
+    "title": "Personal Data",
+    "qna": []
+  },
+  {
+    "title": "Purposes",
+    "qna": []
+  },
+  {
+    "title": "Consent Helper",
+    "qna": []
+  },
+  {
+    "title": "Glossary",
+    "qna": []
+  }
+]

@@ -1,27 +1,40 @@
 <template>
   <div>
     <v-row>
-      <v-col cols="4">
+      <v-col>
         <v-data-table
           :headers="headers"
           :items="categoriesTransformed"
           class="elevation-1"
-          hide-default-header
           hide-default-footer
           single-select
           item-key="name"
           @click:row="handleClick"
         >
-          <template #item.name="{ item }">
-            {{ item.name }}
+          <template v-slot:item="{ item }">
+            <tr>
+              <td>
+                {{ item.name }}
+              </td>
+              <td>
+                <v-radio :name="item.name" value="0" />
+              </td>
+              <td>
+                <v-radio :name="item.name" value="1" />
+              </td>
+              <td>
+                <v-radio :name="item.name" value="2" />
+              </td>
+            </tr>
           </template>
         </v-data-table>
       </v-col>
-      <v-col v-show="isHidden_helper">
+    </v-row>
+    <v-row v-show="isHidden_helper">
+      <v-col>
         <PConsentHelperDataCard :category-name="categoryName" />
       </v-col>
     </v-row>
-    <p />
   </div>
 </template>
 
@@ -42,8 +55,24 @@ export default {
       categoryName: "",
       headers: [
         {
-          text: "Name",
+          text: "Purpose",
+          align: "start",
           value: "name",
+        },
+        {
+          text: "Fine",
+          align: "start",
+          value: "fine",
+        },
+        {
+          text: "Neutral",
+          align: "start",
+          value: "neutral",
+        },
+        {
+          text: "No",
+          align: "start",
+          value: "no",
         },
       ],
     };
@@ -62,6 +91,3 @@ export default {
   },
 };
 </script>
-
-<style scoped>
-</style>

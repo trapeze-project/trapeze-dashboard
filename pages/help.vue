@@ -48,7 +48,7 @@
                 <PDataCategoryHelper class="mt-3" :categories="categories" />
               </div>
 
-              <div class="text-center">
+              <div class="text-center mt-5 mb-1">
                 <v-btn
                   class="black--text"
                   color="light"

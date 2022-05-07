@@ -1,6 +1,5 @@
 <template>
   <v-card flat>
-    
     <v-card-title>
       <span>{{ event }}</span>
     </v-card-title>
@@ -14,11 +13,8 @@
     <v-card-text>
       <p v-html="emailText" />
 
-      <v-btn class="black--text" color="primary">
-        View Changes
-      </v-btn>
+      <v-btn class="black--text" color="primary"> View Changes </v-btn>
     </v-card-text>
-
   </v-card>
 </template>
 
@@ -29,17 +25,17 @@ export default {
   props: {
     date: {
       type: String,
-      required: true
+      required: true,
     },
     event: {
       type: String,
-      required: true
-    }
+      required: true,
+    },
   },
-  data () {
+  data() {
     return {
-      emailText: email.text
+      emailText: email.text,
     };
-  }
-}
+  },
+};
 </script>
