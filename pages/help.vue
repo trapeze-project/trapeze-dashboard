@@ -59,9 +59,17 @@
                 <v-btn
                   class="black--text"
                   color="primary"
+                  v-if="page < dataTypes.length"
                   :disabled="page === dataTypes.length"
                   @click="page++"
                   >Next</v-btn
+                >
+                <v-btn
+                  class="black--text"
+                  color="primary"
+                  v-if="page === dataTypes.length"
+                  :to="localePath('/consent?tab=purpose')"
+                  >View issues</v-btn
                 >
               </div>
             </v-stepper-content>

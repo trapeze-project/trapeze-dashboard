@@ -12,7 +12,7 @@
 
     <v-card-actions>
       <v-spacer />
-      <v-btn color="primary" depressed :to="localePath(href)">
+      <v-btn class="black--text" color="primary" depressed :to="localePath(href)">
         {{ $t("home.explore-btn") }}
       </v-btn>
       <v-spacer />

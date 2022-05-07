@@ -32,15 +32,15 @@
         <v-card-actions>
           <v-spacer />
           <v-btn
-            class="custom-transform-class text-none"
-            dark
-            color="grey"
+            class="black-text"
+            depressed
+            color="lightgrey"
             @click="dialog = false"
           >
             Cancel
           </v-btn>
           <v-btn
-            class="custom-transform-class text-none"
+            class="black--text"
             color="primary"
             @click="dialog = false"
           >
@@ -78,6 +78,3 @@ export default {
   },
 };
 </script>
-
-<style>
-</style>

@@ -85,10 +85,10 @@
         "content": "Tell us which purposes we may address."
       },
       "3": {
-        "title": "Purposes",
-        "filename": "/img/purpose.png",
-        "link": "/consent?tab=purpose",
-        "content": "Tell us which purposes we may address."
+        "title": "TRAPEZE",
+        "filename": "/img/favicon.png",
+        "link": "http://trapeze-project.eu",
+        "content": "Learn more about TRAPEZE on our website."
       }
     }
   },

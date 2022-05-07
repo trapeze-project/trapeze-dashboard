@@ -5,34 +5,39 @@
         <v-data-table
           :headers="headers"
           :items="categoriesTransformed"
-          class="elevation-1"
           hide-default-footer
           single-select
           item-key="name"
-          @click:row="handleClick"
+          @click:row="select"
         >
-          <template v-slot:item="{ item }">
+          <template v-slot:item="{ item, index }">
             <tr>
               <td>
                 {{ item.name }}
               </td>
               <td>
-                <v-radio :name="item.name" value="0" />
+                <v-radio-group v-model="preferences[index]">
+                  <v-radio class="justify-center" :name="item.name" value="0" />
+                </v-radio-group>
               </td>
               <td>
-                <v-radio :name="item.name" value="1" />
+                <v-radio-group v-model="preferences[index]">
+                  <v-radio class="justify-center" :name="item.name" value="1" />
+                </v-radio-group>
               </td>
               <td>
-                <v-radio :name="item.name" value="2" />
+                <v-radio-group v-model="preferences[index]">
+                  <v-radio class="justify-center" :name="item.name" value="2" />
+                </v-radio-group>
               </td>
             </tr>
           </template>
         </v-data-table>
       </v-col>
     </v-row>
-    <v-row v-show="isHidden_helper">
+    <v-row v-show="view.show">
       <v-col>
-        <PConsentHelperDataCard :category-name="categoryName" />
+        <PConsentHelperDataCard :category-name="view.selected" />
       </v-col>
     </v-row>
   </div>
@@ -51,8 +56,11 @@ export default {
   },
   data() {
     return {
-      isHidden_helper: false,
-      categoryName: "",
+      preferences: [],
+      view: {
+        selected: "",
+        show: false
+      },
       headers: [
         {
           text: "Purpose",
@@ -60,19 +68,19 @@ export default {
           value: "name",
         },
         {
-          text: "Fine",
-          align: "start",
+          text: "Comfortable",
+          align: "center",
           value: "fine",
         },
         {
-          text: "Neutral",
-          align: "start",
-          value: "neutral",
+          text: "Not comfortable",
+          align: "center",
+          value: "no",
         },
         {
-          text: "No",
-          align: "start",
-          value: "no",
+          text: "No opinion",
+          align: "center  ",
+          value: "neutral",
         },
       ],
     };
@@ -83,10 +91,10 @@ export default {
     },
   },
   methods: {
-    handleClick(item, row) {
-      this.isHidden_helper = true;
+    select(item, row) {
       row.select(true);
-      this.categoryName = item.name;
+      this.view.selected = item.name;
+      this.view.show = true;
     },
   },
 };
