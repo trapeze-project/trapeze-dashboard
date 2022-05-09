@@ -17,17 +17,32 @@
               </td>
               <td>
                 <v-radio-group v-model="preferences[index]">
-                  <v-radio class="justify-center" :name="item.name" value="0" />
+                  <v-radio
+                    class="justify-center"
+                    :name="item.name"
+                    value="0"
+                    color="green"
+                  />
                 </v-radio-group>
               </td>
               <td>
                 <v-radio-group v-model="preferences[index]">
-                  <v-radio class="justify-center" :name="item.name" value="1" />
+                  <v-radio
+                    class="justify-center"
+                    :name="item.name"
+                    value="1"
+                    color="darkgrey"
+                  />
                 </v-radio-group>
               </td>
               <td>
                 <v-radio-group v-model="preferences[index]">
-                  <v-radio class="justify-center" :name="item.name" value="2" />
+                  <v-radio
+                    class="justify-center"
+                    :name="item.name"
+                    value="2"
+                    color="red"
+                  />
                 </v-radio-group>
               </td>
             </tr>
@@ -59,7 +74,7 @@ export default {
       preferences: [],
       view: {
         selected: "",
-        show: false
+        show: false,
       },
       headers: [
         {
@@ -73,12 +88,12 @@ export default {
           value: "fine",
         },
         {
-          text: "Not comfortable",
+          text: "No opinion",
           align: "center",
           value: "no",
         },
         {
-          text: "No opinion",
+          text: "Not comfortable",
           align: "center  ",
           value: "neutral",
         },

@@ -37,19 +37,19 @@
     "update": "Updates"
   },
   "company": {
-    "name": "Clover Company",
-    "add1": "Clover Street",
-    "add2": "123456, Clover City, Italy",
-    "website": "https://clover.com",
-    "email": "cclover@clover.com",
+    "name": "Company Name",
+    "add1": "Company Name Street",
+    "add2": "123456, Company Name City, Italy",
+    "website": "https://company.name.com",
+    "email": "name@company.name.com",
     "contact": "Contact",
     "position": "Data Protection Officer (DPO)",
-    "pos-name": "Mr. Charles Clover"
+    "pos-name": "Data Protection Officer Name"
   },
   "home": {
     "title": "Welcome to your personal privacy dashboard! ",
     "explore-btn": "View",
-    "welcome-msg": "We at Clover Company want you to understand how we process your personal data.",
+    "welcome-msg": "We at Company Name want you to understand how we process your personal data.",
     "welcome-msg2": "In this dashboard, you can view what personal data we process and for which purposes. The dashboard allows you to limit our processing of your personal data by configuring your consent. You can",
     "welcome-msg3": "The menu in the bottom left gives you a quick overview of the most recent consent-related interactions between you and us.",
     "welcome-msg4": "If you are new to the privacy dashboard, we recommend you to try out the consent helper.",
@@ -64,7 +64,7 @@
         "name": "deactivate and activate purposes."
       }
     },
-    "help": "Consent Help",
+    "help": "Consent Guide",
     "items": {
       "0": {
         "title": "Consent",
@@ -93,10 +93,10 @@
     }
   },
   "consent": {
-    "title": "Consent Helper",
+    "title": "Consent Guide",
     "location": "Your location data",
     "purpose": "Purposes",
-    "text": "Location data is data that tells us where you have been at what time. We collect location data via GPS if you give permission in the Clover mobile application. We use your location data to customize our advertising, to plan our marketing geographically, and to prevent fraud via geographic identity verification.",
+    "text": "Location data is data that tells us where you have been at what time. We collect location data via GPS if you give permission in the Company Name mobile application. We use your location data to customize our advertising, to plan our marketing geographically, and to prevent fraud via geographic identity verification.",
     "text_ad": "Advertising is an integral part of our business model, which guarantees that we can continue to provide you with our restaurant recommandations. We use the below data categories to customize advertising. Tell us below which data categories we may use to customize our advertising.",
     "ad": "Advertisement",
     "marketing": "Marketing",
