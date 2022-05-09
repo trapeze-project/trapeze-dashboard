@@ -12,163 +12,91 @@
     "unrelatedDataText": "It is very unusual that fingerprints are used for advertising purposes.",
     "bioDataText": "Fingerprints are particularly sensitive, since they facilitate identity theft. It is recommended to only provide consent for fingerprint data where absolutely necessary."
   },
-  "links": {
-    "home": "Home",
-    "consent_menu": "Consent Menu",
-    "consent_helper": "Consent Helper",
-    "faq": "FAQ"
+  "nav": {
+    "labels": {
+      "home": "Home",
+      "consent": "Consent",
+      "data": "Data",
+      "purposes": "Purposes",
+      "help": "Help",
+      "faq": "FAQ"
+    }
   },
-  "linksUpdate": {
-    "policy_update": "5 Feb 2022 - Policy Update",
-    "consent_revocation": "1 Feb 2022 - Consent Revocation",
-    "consent_request": "3 Jan 2021 - Consent Request"
+  "btn": {
+    "labels": {
+      "consent-guide": "Consent Guide"
+    }
+  },
+  "updates": {
+    "1": "Policy Update",
+    "2": "Consent Revocation",
+    "3": "Consent Request"
   },
   "sidebar-title": {
     "navigation": "Navigation",
     "update": "Updates"
   },
   "company": {
-    "name": "Clover Company",
-    "add1": "Clover Street",
-    "add2": "123456, Clover City, Italy",
-    "website": "https://clover.com",
-    "email": "cclover@clover.com",
+    "name": "Company Name",
+    "add1": "Company Name Street",
+    "add2": "123456, Company Name City, Italy",
+    "website": "https://company.name.com",
+    "email": "name@company.name.com",
     "contact": "Contact",
     "position": "Data Protection Officer (DPO)",
-    "pos-name": "Mr. Charles Clover"
+    "pos-name": "Data Protection Officer Name"
   },
   "home": {
-    "title": "Benvenuto nel tuo cruscotto personale della privacy! ",
+    "title": "Welcome to your personal privacy dashboard! ",
     "explore-btn": "View",
-    "welcome-msg": "Noi della Clover Company vogliamo che tu capisca come trattiamo i tuoi dati personali.",
-    "welcome-msg2": "In questo cruscotto, è possibile visualizzare quali dati personali trattiamo e per quali scopi. Il dashboard vi permette di limitare il nostro trattamento dei vostri dati personali configurando il vostro consenso. È possibile",
-    "welcome-msg3": "Il menu in basso a sinistra ti offre una rapida panoramica delle più recenti interazioni tra te e noi relative al consenso.",
-    "welcome-msg4": "Se sei nuovo alla dashboard della privacy, ti consigliamo di provare l'aiutante del consenso.",
+    "welcome-msg": "We at Company Name want you to understand how we process your personal data.",
+    "welcome-msg2": "In this dashboard, you can view what personal data we process and for which purposes. The dashboard allows you to limit our processing of your personal data by configuring your consent. You can",
+    "welcome-msg3": "The menu in the bottom left gives you a quick overview of the most recent consent-related interactions between you and us.",
+    "welcome-msg4": "If you are new to the privacy dashboard, we recommend you to try out the consent helper.",
     "purpose": {
       "0": {
-        "name": "revoke and give consent,"},
+        "name": "revoke and give consent,"
+      },
       "1": {
-        "name": "deactivate and activate data categories,"},
+        "name": "deactivate and activate data categories,"
+      },
       "2": {
         "name": "deactivate and activate purposes."
       }
     },
-    "help": "Consent Help",
+    "help": "Consent Guide",
     "items": {
       "0": {
         "title": "Consent",
-        "filename": "/consent.png",
+        "filename": "/img/consent.png",
         "link": "/consent?tab=consent",
         "content": "View all consent interactions between you and us."
       },
       "1": {
         "title": "Data",
-        "filename": "/data.png",
+        "filename": "/img/data.png",
         "link": "/consent?tab=data",
         "content": "Tell us which data categories we may process."
       },
       "2": {
         "title": "Purposes",
-        "filename": "/purpose.png",
+        "filename": "/img/purpose.png",
         "link": "/consent?tab=purpose",
         "content": "Tell us which purposes we may address."
+      },
+      "3": {
+        "title": "TRAPEZE",
+        "filename": "/img/favicon.png",
+        "link": "http://trapeze-project.eu",
+        "content": "Learn more about TRAPEZE on our website."
       }
     }
   },
-  "profile": {
-    "title": "Account credentials",
-    "subtitle": "Your email address and password",
-    "username": "EMAIL ADDRESS",
-    "password": "PASSWORD"
-  },
-  "about": {
-    "provider": "Processor",
-    "controller": "Controller"
-  },
-  "data": {
-    "location": {
-      "title": "Your locations",
-      "subtitle": "Number of locations collected"
-    },
-    "browsing": {
-      "title": "Your browsing history",
-      "subtitle": "Number of visited websites collected"
-    },
-    "delete-dialog": {
-      "title": "Delete data",
-      "text": "Your data will be deleted. The controller will be notified about your request and will respond to it shortly.",
-      "btn": "Delete"
-    }
-  },
-  "permissions": {
-    "headings": {
-      "share": "You share",
-      "get": "You get"
-    },
-    "slider": {
-      "low": "Low",
-      "medium": "Medium",
-      "high": "High"
-    },
-    "email-address": {
-      "label": "Email adress",
-      "get": "Required for logging into Finder and to send you notifications about places nearby.",
-      "share": "Your verified email address."
-    },
-    "profile": {
-      "label": "Profile",
-      "get": "You retrieve personalized recommendations that fit to you.",
-      "share": "We build a profile based on how you use Finder, what sparked your interest, and which places you visited."
-    },
-    "current-location": {
-      "label": "Current location",
-      "get": "Your current position is used to identify places nearby.",
-      "share": "Your current location is obtained either via GPS, WiFi, or based on the cell tower your phone is connected to."
-    },
-    "location-history": {
-      "label": "Location history",
-      "get": "You retrieve personalized recommendations that fit to you.",
-      "share": "Your location history is used to enrich your interest profile with additional data."
-    },
-    "browsing-history": {
-      "label": "Browsing activity",
-      "get": "You retrieve personalized recommendations that fit to you.",
-      "share": "Your browsing history is used to enrich your interest profile with additional data."
-    },
-    "advanced-button": "Advanced"
-  },
-  "login": {
-    "username": "Email",
-    "password": "Password",
-    "login": "Login",
-    "loginTitle": " Log into your Finder dashboard."
-  },
-  "short": {
-    "year": "numeric",
-    "month": "short",
-    "day": "numeric"
-  },
-  "long": {
-    "year": "numeric",
-    "month": "short",
-    "day": "numeric",
-    "weekday": "short",
-    "hour": "numeric",
-    "minute": "numeric"
-  },
-  "table-headers": {
-    "date": "Date",
-    "location": "Location",
-    "action": "Action",
-    "url": "URL",
-    "user-agent": "User Agent",
-    "ip": "IP-Address"
-  },
   "consent": {
-    "title":"Consent Helper",
+    "title": "Consent Guide",
     "location": "Your location data",
     "purpose": "Purposes",
-    "text": "Location data is data that tells us where you have been at what time. We collect location data via GPS if you give permission in the Clover mobile application. We use your location data to customize our advertising, to plan our marketing geographically, and to prevent fraud via geographic identity verification.",
+    "text": "Location data is data that tells us where you have been at what time. We collect location data via GPS if you give permission in the Company Name mobile application. We use your location data to customize our advertising, to plan our marketing geographically, and to prevent fraud via geographic identity verification.",
     "text_ad": "Advertising is an integral part of our business model, which guarantees that we can continue to provide you with our restaurant recommandations. We use the below data categories to customize advertising. Tell us below which data categories we may use to customize our advertising.",
     "ad": "Advertisement",
     "marketing": "Marketing",
