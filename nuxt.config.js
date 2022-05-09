@@ -113,7 +113,7 @@ export default {
     baseURL: process.env.BASE_URL
   },
   vuetify: {
-    customVariables: ['~/assets/variables.scss'],
+    // customVariables: ['~/assets'],
     theme: {
       themes: {
         light: Design.theme.light
