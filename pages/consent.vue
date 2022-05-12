@@ -3,7 +3,7 @@
     <v-card>
       <v-card-title>
         <v-row>
-          <v-col cols="8">Consent Menu</v-col>
+          <v-col cols="8">{{$t("consent.consent-menu")}}</v-col>
           <v-col cols="4">
             <v-btn class="float-right error">
               {{ $t("general.revoke") }}
@@ -22,15 +22,18 @@
 
       <v-tabs-items v-model="tab">
         <v-tab-item value="consent">
-          <PConsentTab />
+          <!-- <PConsentTab /> -->
+          <PTabTable tabName="consent" />
         </v-tab-item>
 
         <v-tab-item value="data">
-          <PDataTab />
+          <!-- <PDataTab /> -->
+          <PTabTable tabName="data" />
         </v-tab-item>
 
         <v-tab-item value="purpose">
-          <PPurposeTab />
+          <!-- <PPurposeTab /> -->
+          <PTabTable tabName="purpose" />
         </v-tab-item>
       </v-tabs-items>
     </v-card>

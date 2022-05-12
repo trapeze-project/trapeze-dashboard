@@ -37,14 +37,14 @@
             color="lightgrey"
             @click="dialog = false"
           >
-            Cancel
+            {{$t("btn.labels.cancel")}}
           </v-btn>
           <v-btn
             class="black--text"
             color="primary"
             @click="dialog = false"
           >
-            Send message
+            {{$t("btn.labels.send-message")}}
           </v-btn>
         </v-card-actions>
       </v-card>

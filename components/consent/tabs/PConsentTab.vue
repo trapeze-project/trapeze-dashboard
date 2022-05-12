@@ -1,7 +1,6 @@
 <template>
   <div>
     <v-data-table
-      v-model="selected"
       :headers="headers"
       :items="emails"
       item-key="date"
@@ -10,7 +9,7 @@
       @click:row="select"
     />
 
-    <div v-show="view.show" id="PEmail" class="mt-4">
+    <div v-if="view.show" id="PEmail" class="mt-4">
       <PEmail :date="view.selected.date" :event="view.selected.event" />
     </div>
   </div>

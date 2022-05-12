@@ -19,7 +19,7 @@
 
     <PDetails 
       class="mt-4"
-      v-show="view.show"
+      v-if="view.show"
       :heading="view.selected"
       :subitems="imports.dataPurposesMap[view.selected]"
       :showSensitivity="true"

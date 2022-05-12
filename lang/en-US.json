@@ -25,7 +25,13 @@
   "btn": {
     "labels": {
       "consent-guide": "Consent Guide",
-      "i-can-not-find-an-answer": "I can't find an answer"
+      "i-can-not-find-an-answer": "I can't find an answer",
+      "undo-changes": "Undo changes",
+      "submit-changes": "Submit Changes",
+      "see-changes": "See Changes",
+      "view-changes": "View Changes",
+      "send-message": "Send message",
+      "cancel": "Cancel"
     }
   },
   "placeholder": {
@@ -102,6 +108,7 @@
     }
   },
   "consent": {
+    "consent-menu": "Consent Menu",
     "title": "Consent Guide",
     "location": "Your location data",
     "purpose": "Purposes",
