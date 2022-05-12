@@ -22,17 +22,14 @@
 
       <v-tabs-items v-model="tab">
         <v-tab-item value="consent">
-          <!-- <PConsentTab /> -->
           <PTabTable tabName="consent" />
         </v-tab-item>
 
         <v-tab-item value="data">
-          <!-- <PDataTab /> -->
           <PTabTable tabName="data" />
         </v-tab-item>
 
         <v-tab-item value="purpose">
-          <!-- <PPurposeTab /> -->
           <PTabTable tabName="purpose" />
         </v-tab-item>
       </v-tabs-items>
