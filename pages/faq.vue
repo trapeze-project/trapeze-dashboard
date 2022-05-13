@@ -1,20 +1,16 @@
 <template>
   <div>
     <v-card>
-      <v-card-title> Frequently Asked Questions </v-card-title>
+      <v-card-title> {{$t("qna.header")}} </v-card-title>
 
       <v-card-text>
         <v-row>
           <v-col cols="7">
-            <p>
-              Find out more about the TRAPEZE privacy dashboard and its
-              underlying concepts.Do not forget to let us know if you cannot
-              find information you are interested in.
-            </p>
+            <p> {{$t("qna.introduction")}} </p>
           </v-col>
           <v-col cols="5" align="right">
             <v-btn class="black--text" color="primary" depressed>
-              I cannot find an answer
+              {{ $t("btn.labels.i-can-not-find-an-answer") }}
             </v-btn>
           </v-col>
         </v-row>
@@ -24,7 +20,7 @@
         <v-row align="center" justify="center">
           <v-col class="fill-height">
             <v-text-field
-              placeholder="Search for a question or an answer"
+              :placeholder="$t('placeholder.search-for-a-question-or-an-answer')"
               outlined
               dense
               append-icon="mdi-magnify"
@@ -68,7 +64,7 @@
                       v-if="inquiry.references.length"
                       class="mt-4 black--text"
                     >
-                      <span class="font-weight-bold"> Links and Sources: </span>
+                      <span class="font-weight-bold"> {{$t("qna.links-and-sources")}}: </span>
                       <ol>
                         <li v-for="link in inquiry.references" :key="link">
                           <a :href="link" class="black--text">{{ link }}</a>
