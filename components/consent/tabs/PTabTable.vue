@@ -27,6 +27,9 @@
     <div v-if="view.showPEmail" id="PEmail" class="mt-4">
       <PEmail :date="view.selected.date" :event="view.selected.event" />
     </div>
+    <div>userPrefences: {{this.$route.params}}</div>
+    <div>{{this.$nuxt.$route.name}}</div>
+    <div>{{this.category}}</div>
   </div>
 </template>
 
@@ -122,6 +125,7 @@ export default {
         })
         return total;
       },{});
+      console.log(this.imports.purposeMap)
     },
 
   },
@@ -147,9 +151,23 @@ export default {
         let values = Object.values(this.imports.purposeMap);
         for(let i = 0; i < keys.length ; i++){
           let obj = new Object();
-          obj.purpose = keys[i]
+          obj.purpose = keys[i];
           obj.data = values[i].join(', ');
-          obj.issue = '0 issues'
+          obj.issue = '0 issues';
+          if(this.$route.params.allUserChoices){
+            let issues = [];
+            for(let j = 0 ; j < values[i].length ; j++){
+              let purpose = keys[i]
+              let data = values[i][j]
+              console.log(purpose , data)
+              if(this.$route.params.allUserChoices[data.toLowerCase()]){
+                if(this.$route.params.allUserChoices[data.toLowerCase()][purpose] !== 'Comfortable'){
+                  issues.push(data)
+                }
+              }
+            }
+            obj.issue = issues.length +' issues'
+          }
           result.push(obj);
         }
       }

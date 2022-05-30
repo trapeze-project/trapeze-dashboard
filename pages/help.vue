@@ -45,7 +45,7 @@
                   {{ $t("consent.purpose") }}
                 </p>
 
-                <PDataCategoryHelper class="mt-3" :categories="categories" />
+                <PDataCategoryHelper class="mt-3" :categories="categories" @userChoinces="collectUserChoices"/>
               </div>
 
               <div class="text-center mt-5 mb-1">
@@ -68,7 +68,7 @@
                   class="black--text"
                   color="primary"
                   v-if="page === dataTypes.length"
-                  :to="localePath('/consent?tab=purpose')"
+                  @click="loadConsentPage()"
                   >View issues</v-btn
                 >
               </div>
@@ -76,6 +76,7 @@
           </v-stepper-items>
         </v-stepper>
       </v-card-text>
+      <div>{{this.allUserChoices}}</div>
     </v-card>
   </div>
 </template>
@@ -85,10 +86,21 @@ export default {
   name: "Helper",
   data() {
     return {
+      allUserChoices:{},
       page: 1,
       dataTypes: ["location", "bank", "credit", "fingerprint", "name"],
       categories: ["Advertising", "Marketing", "Identity Verification"],
     };
   },
+  methods: {
+    collectUserChoices(userChoices){
+      this.allUserChoices[this.dataTypes[this.page-1]] = userChoices;
+    },
+    loadConsentPage(){
+      const consentPageRoute = this.$router.options.routes.find(route => route.path === this.localePath('/consent'))
+      this.$router.push({name: 'consent___en' ,query:{ tab: 'purpose' },params: {allUserChoices: this.allUserChoices}})
+
+    }
+  }
 };
 </script>
