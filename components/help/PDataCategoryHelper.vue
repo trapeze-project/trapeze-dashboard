@@ -110,11 +110,9 @@ export default {
   methods: {
     select(item, row) {
       row.select(true);
-      console.log('lol')
       this.view.selected = item.name;
       this.view.show = true;
       this.checkUserChoiceCompleted();
-      console.log('lol')
     },
     checkUserChoiceCompleted(){
       if(this.preferences.filter(x => x !== null).length === this.categories.length){
