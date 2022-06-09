@@ -17,16 +17,26 @@
       </template>
     </v-data-table>
     
+    <div>param {{this.$route.params.allUserChoices}}</div>
+    <div>userChoices {{this.userChoices}}</div>
+    <div>{{view.selected[this.tabName]}}</div>
+    <div>category {{this.category}}</div>
+    <div>calculateBottonsValues: {{calculateBottonsValues}}</div>
+    <v-btn color="primary" @click="revokeAll()" >revoke All</v-btn>
+    
     <PDetails 
       class="mt-4"
       v-if="view.showPDetails"
       :heading="view.selected[this.tabName]"
       :subitems= "pDetailsSubItemsMap[view.selected[this.tabName]]"
       :showSensitivity="false"
+      :switchesValues="this.calculateBottonsValues"
+      @changeSwitchValues="changeSwitchValues"
     />
     <div v-if="view.showPEmail" id="PEmail" class="mt-4">
       <PEmail :date="view.selected.date" :event="view.selected.event" />
     </div>
+
   </div>
 </template>
 
@@ -60,7 +70,8 @@ export default {
         showPEmail: false,
       },
       headers: "",
-      pDetailsSubItemsMap: ""
+      pDetailsSubItemsMap: "",
+      userChoices:"",
     };
   },
   created(){
@@ -84,7 +95,12 @@ export default {
         text: e.charAt(0).toUpperCase() + e.slice(1),
         value: e,
         align: "start",
-      }));
+      })
+    );
+    if(this.$route.params.allUserChoices){
+      // this.userChoices = this.$route.params.allUserChoices
+      this.userChoices =  JSON.parse(JSON.stringify(this.$route.params.allUserChoices)); 
+    }
   },
   methods: {
     select(item, row) {
@@ -123,7 +139,22 @@ export default {
         return total;
       },{});
     },
-
+    changeSwitchValues(modifiedSwitchValues){
+      Object.keys(this.userChoices).forEach(key => {
+        if(modifiedSwitchValues[key] != null){
+          //this.userChoices[key] = modifiedSwitchValues[key]
+          this.userChoices[key] =  JSON.parse(JSON.stringify(modifiedSwitchValues[key])); 
+          
+        }
+      })     
+    },
+    revokeAll(){
+      Object.keys(this.userChoices).forEach(key1 => {
+        Object.keys(this.userChoices[key1]).forEach(key2 => {
+          this.userChoices[key1][key2] = true;
+        });
+      });
+    }
   },
   computed: {
     category(){
@@ -151,23 +182,27 @@ export default {
           obj.data = values[i].join(', ');
           obj.issue = '0 issues';
           if(this.$route.params.allUserChoices){
-            let issues = [];
-            for(let j = 0 ; j < values[i].length ; j++){
-              let purpose = keys[i]
-              let data = values[i][j]
-              if(this.$route.params.allUserChoices[data]){
-                if(this.$route.params.allUserChoices[data][purpose] !== 'Comfortable'){
-                  issues.push(data)
-                }
-              }
-            }
-            obj.issue = issues.length +' issues'
+            let issuesCounter = Object.values(this.userChoices[obj.purpose]).reduce((total, currentValue)=>{
+              return currentValue === true? total : total+1
+            },0);
+            obj.issue = issuesCounter +' issues'
           }
           result.push(obj);
         }
       }
       return result
 
+    },
+    calculateBottonsValues(){
+      if(this.$route.params.allUserChoices){
+        if(this.view.selected  !== ''){  
+          let purposesChoices = JSON.parse(JSON.stringify(this.userChoices[this.view.selected[this.tabName]])); 
+          return purposesChoices
+        }else{
+          return []
+        }
+        
+      }
     }
   }
 };

@@ -120,7 +120,9 @@ export default {
         for (let i =0 ; i < this.categories.length ; i++) {
           choices[this.categories[i]]= this.headers[Number(this.preferences[i])+1].text
         }
-        console.log(choices)
+        Object.keys(choices).forEach(key => {
+          choices[key] = choices[key]==='Comfortable'? true :false;
+        });
         this.$emit("userChoinces", choices);
       }
     }

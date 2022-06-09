@@ -22,7 +22,7 @@
                   {{ item.name }}
                 </v-col>
                 <v-col cols="4">
-                  <v-switch />
+                  <v-switch v-model="localSwitchValues[item.name]" @click="changeSwitchValues()"/>
                 </v-col>
               </v-row>
             </template>
@@ -34,6 +34,7 @@
       </v-col>
     </v-row>
     <p />
+    <div>localSwitchValues : {{this.localSwitchValues}}</div>
   </div>
 </template>
 
@@ -47,6 +48,17 @@ export default {
         return [];
       },
     },
+    switchvalues:{
+      type: Object,
+      required: false,
+      default() {
+        return [];
+      },
+    },
+    purpose:{
+      type: String,
+      required: true,
+    }
   },
   data() {
     return {
@@ -58,6 +70,7 @@ export default {
           value: "name",
         },
       ],
+      localSwitchValues:this.switchvalues
     };
   },
   computed: {
@@ -71,6 +84,11 @@ export default {
       row.select(true);
       this.categoryName = item.name;
     },
+    changeSwitchValues(){
+      let obj ={}
+      obj[this.purpose]=this.localSwitchValues
+      this.$emit('changeSwitchValues',obj)
+    }
   },
 };
 </script>
