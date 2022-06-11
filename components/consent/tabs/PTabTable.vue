@@ -17,13 +17,6 @@
       </template>
     </v-data-table>
     
-    <div>param {{this.$route.params.allUserChoices}}</div>
-    <div>userChoices {{this.userChoices}}</div>
-    <div>{{view.selected[this.tabName]}}</div>
-    <div>category {{this.category}}</div>
-    <div>calculateBottonsValues: {{calculateBottonsValues}}</div>
-    <v-btn color="primary" @click="revokeAll()" >revoke All</v-btn>
-    
     <PDetails 
       class="mt-4"
       v-if="view.showPDetails"
@@ -31,6 +24,7 @@
       :subitems= "pDetailsSubItemsMap[view.selected[this.tabName]]"
       :showSensitivity="false"
       :switchesValues="this.calculateBottonsValues"
+      :key="Object.values(this.calculateBottonsValues).toString()"
       @changeSwitchValues="changeSwitchValues"
     />
     <div v-if="view.showPEmail" id="PEmail" class="mt-4">
@@ -142,7 +136,6 @@ export default {
     changeSwitchValues(modifiedSwitchValues){
       Object.keys(this.userChoices).forEach(key => {
         if(modifiedSwitchValues[key] != null){
-          //this.userChoices[key] = modifiedSwitchValues[key]
           this.userChoices[key] =  JSON.parse(JSON.stringify(modifiedSwitchValues[key])); 
           
         }
@@ -182,10 +175,12 @@ export default {
           obj.data = values[i].join(', ');
           obj.issue = '0 issues';
           if(this.$route.params.allUserChoices){
-            let issuesCounter = Object.values(this.userChoices[obj.purpose]).reduce((total, currentValue)=>{
-              return currentValue === true? total : total+1
-            },0);
-            obj.issue = issuesCounter +' issues'
+            if(this.userChoices[obj.purpose]){
+              let issuesCounter = Object.values(this.userChoices[obj.purpose]).reduce((total, currentValue)=>{
+                return currentValue === true? total : total+1
+              },0);
+              obj.issue = issuesCounter +' issues'
+            }
           }
           result.push(obj);
         }
@@ -202,6 +197,8 @@ export default {
           return []
         }
         
+      }else{
+        return []
       }
     }
   }

@@ -35,7 +35,6 @@
       </v-tabs-items>
     </v-card>
     <PReceiptBtns class="mt-4" />
-    <div>********************* {{this.tab}}</div>
   </div>
 </template>
 

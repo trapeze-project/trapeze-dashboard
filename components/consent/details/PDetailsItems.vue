@@ -34,7 +34,6 @@
       </v-col>
     </v-row>
     <p />
-    <div>localSwitchValues : {{this.localSwitchValues}}</div>
   </div>
 </template>
 
