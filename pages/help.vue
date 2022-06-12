@@ -78,7 +78,6 @@
         </v-stepper>
       </v-card-text>
     </v-card>
-    {{this.allUserChoices}}
   </div>
 
 </template>
