@@ -144,7 +144,7 @@ export default {
     revokeAll(){
       Object.keys(this.userChoices).forEach(key1 => {
         Object.keys(this.userChoices[key1]).forEach(key2 => {
-          this.userChoices[key1][key2] = true;
+          this.userChoices[key1][key2] = false;
         });
       });
     }
