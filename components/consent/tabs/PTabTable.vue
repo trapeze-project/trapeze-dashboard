@@ -52,7 +52,6 @@ export default {
   },
   data() {
     return {
-      lol:"",
       imports: {
         category: "",
         categoryMap: "",
@@ -197,13 +196,13 @@ export default {
             let issuesCounter = dataCatergories[i].reduce((total, datacategory)=>{
               if(this.userChoices[purposes[i]][datacategory]){
                 if(this.consentHelperUserChoices[purposes[i]][datacategory] === "Comfortable"){
-                  return (total+1)
+                  return total
                 }
                 if(this.consentHelperUserChoices[purposes[i]][datacategory] === "No opinion"){
-                  return total
+                  return (total+1)
                 }
                 if(this.consentHelperUserChoices[purposes[i]][datacategory] === "Not comfortable"){
-                  return total
+                  return (total+1)
                 }
               }else{ // this.userChoices[purposes[i]][datacategory] ===false
                 if(this.consentHelperUserChoices[purposes[i]][datacategory] === "Comfortable"){
@@ -231,10 +230,7 @@ export default {
         if(this.view.selected  !== ''){  
           let purposesChoices = JSON.parse(JSON.stringify(this.userChoices[this.view.selected[this.tabName]])); 
           return purposesChoices
-        }else{
-          return []
         }
-
     }
   }
 };
