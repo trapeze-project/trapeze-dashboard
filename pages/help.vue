@@ -91,7 +91,7 @@ export default {
       imports: {
         dataCategoryMap: "",
       },
-      allUserChoices:{},
+      consentHelperUserChoices:{},
       page: 1,
     };
   },
@@ -100,20 +100,20 @@ export default {
   },
   methods: {
     collectUserChoices(userChoices){
-      //this.allUserChoices[Object.keys(this.imports.dataCategoryMap)[this.page-1]] = userChoices;
+      //this.consentHelperUserChoices[Object.keys(this.imports.dataCategoryMap)[this.page-1]] = userChoices;
       let userChoicesPurposes = Object.keys(userChoices);
      
       for(let i = 0;i<userChoicesPurposes.length; i++){
-        if( this.allUserChoices[userChoicesPurposes[i]] == null){
-          this.allUserChoices[userChoicesPurposes[i]] = new Object();
+        if( this.consentHelperUserChoices[userChoicesPurposes[i]] == null){
+          this.consentHelperUserChoices[userChoicesPurposes[i]] = new Object();
         }
-        this.allUserChoices[userChoicesPurposes[i]][Object.keys(this.imports.dataCategoryMap)[this.page-1]] = userChoices[userChoicesPurposes[i]]
+        this.consentHelperUserChoices[userChoicesPurposes[i]][Object.keys(this.imports.dataCategoryMap)[this.page-1]] = userChoices[userChoicesPurposes[i]]
         
       }
     },
     loadConsentPage(){
       const consentPageRoute = this.$router.options.routes.find(route => route.path === this.localePath('/consent'))
-      this.$router.push({name: consentPageRoute.name ,query:{ tab: 'purpose' },params: {allUserChoices: this.allUserChoices}})
+      this.$router.push({name: consentPageRoute.name ,query:{ tab: 'purpose' },params: {consentHelperUserChoices: this.consentHelperUserChoices}})
 
     },
     calculateDataCategoryMap(){

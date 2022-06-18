@@ -30,7 +30,6 @@
     <div v-if="view.showPEmail" id="PEmail" class="mt-4">
       <PEmail :date="view.selected.date" :event="view.selected.event" />
     </div>
-
   </div>
 </template>
 
@@ -53,6 +52,7 @@ export default {
   },
   data() {
     return {
+      lol:"",
       imports: {
         category: "",
         categoryMap: "",
@@ -66,6 +66,7 @@ export default {
       headers: "",
       pDetailsSubItemsMap: "",
       userChoices:"",
+      consentHelperUserChoices:""
     };
   },
   created(){
@@ -91,10 +92,27 @@ export default {
         align: "start",
       })
     );
-    if(this.$route.params.allUserChoices){
-      // this.userChoices = this.$route.params.allUserChoices
-      this.userChoices =  JSON.parse(JSON.stringify(this.$route.params.allUserChoices)); 
+    if(this.$route.params.consentHelperUserChoices){
+      this.consentHelperUserChoices =  JSON.parse(JSON.stringify(this.$route.params.consentHelperUserChoices)); 
+    } 
+    if(this.tabName === "purpose"){
+      this.userChoices =  JSON.parse(JSON.stringify(Object.keys(this.imports.purposeMap).reduce((total, currentValue)=>{
+        total[currentValue]=this.imports.purposeMap[currentValue].reduce((total, currentValue)=>{
+          total[currentValue] = true
+          return total
+        },{});
+        return total
+      },{})));
+    }else if(this.tabName === "data"){
+      this.userChoices =  JSON.parse(JSON.stringify(Object.keys(this.imports.categoryMap).reduce((total, currentValue)=>{
+        total[currentValue]=this.imports.categoryMap[currentValue].reduce((total, currentValue)=>{
+          total[currentValue] = true
+          return total
+        },{});
+        return total
+      },{})));
     }
+    
   },
   methods: {
     select(item, row) {
@@ -167,20 +185,41 @@ export default {
           result.push(obj);
         }
       }else if( this.tabName === "purpose"){
-        let keys = Object.keys(this.imports.purposeMap);
-        let values = Object.values(this.imports.purposeMap);
-        for(let i = 0; i < keys.length ; i++){
+        let purposes = Object.keys(this.imports.purposeMap);
+        let dataCatergories = Object.values(this.imports.purposeMap);
+
+        //consentHelperUserChoices 
+        for(let i = 0; i < purposes.length ; i++){
           let obj = new Object();
-          obj.purpose = keys[i];
-          obj.data = values[i].join(', ');
-          obj.issue = '0 issues';
-          if(this.$route.params.allUserChoices){
-            if(this.userChoices[obj.purpose]){
-              let issuesCounter = Object.values(this.userChoices[obj.purpose]).reduce((total, currentValue)=>{
-                return currentValue === true? total : total+1
-              },0);
-              obj.issue = issuesCounter +' issues'
-            }
+          obj.purpose = purposes[i];
+          obj.data = dataCatergories[i].join(', ');
+          if(this.$route.params.consentHelperUserChoices){
+            let issuesCounter = dataCatergories[i].reduce((total, datacategory)=>{
+              if(this.userChoices[purposes[i]][datacategory]){
+                if(this.consentHelperUserChoices[purposes[i]][datacategory] === "Comfortable"){
+                  return (total+1)
+                }
+                if(this.consentHelperUserChoices[purposes[i]][datacategory] === "No opinion"){
+                  return total
+                }
+                if(this.consentHelperUserChoices[purposes[i]][datacategory] === "Not comfortable"){
+                  return total
+                }
+              }else{ // this.userChoices[purposes[i]][datacategory] ===false
+                if(this.consentHelperUserChoices[purposes[i]][datacategory] === "Comfortable"){
+                  return total
+                }
+                if(this.consentHelperUserChoices[purposes[i]][datacategory] === "No opinion"){
+                  return total
+                }
+                if(this.consentHelperUserChoices[purposes[i]][datacategory] === "Not comfortable"){
+                  return total
+                }
+              }
+            },0);
+            obj.issue = issuesCounter +' issues'
+          }else{
+            obj.issue = '0 issues'
           }
           result.push(obj);
         }
@@ -189,17 +228,13 @@ export default {
 
     },
     calculateBottonsValues(){
-      if(this.$route.params.allUserChoices){
         if(this.view.selected  !== ''){  
           let purposesChoices = JSON.parse(JSON.stringify(this.userChoices[this.view.selected[this.tabName]])); 
           return purposesChoices
         }else{
           return []
         }
-        
-      }else{
-        return []
-      }
+
     }
   }
 };
