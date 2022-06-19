@@ -14,8 +14,7 @@
                 :complete="false"
                 :step="index + 1"
               >
-                <!-- {{ $t("consent." + type) }} -->
-                {{type}}
+                {{ $t("consent." + type.toLowerCase()) }}
               </v-stepper-step>
 
               <v-divider
@@ -33,7 +32,7 @@
             >
               <div>
                 <div>
-                  {{ $t("consent." + type) }}
+                  {{ $t("consent." + type.toLowerCase()) }}
                 </div>
 
                 <v-divider class="my-3" />
@@ -55,7 +54,7 @@
                   color="light"
                   :disabled="page === 1"
                   @click="page--"
-                  >Back</v-btn
+                  >{{$t("btn.labels.back")}}</v-btn
                 >
                 <v-btn
                   class="black--text"
@@ -63,14 +62,14 @@
                   v-if="page < Object.keys(imports.dataCategoryMap).length"
                   :disabled="page === Object.keys(imports.dataCategoryMap).length"
                   @click="page++"
-                  >Next</v-btn
+                  >{{$t("btn.labels.next")}}</v-btn
                 >
                 <v-btn
                   class="black--text"
                   color="primary"
                   v-if="page === Object.keys(imports.dataCategoryMap).length"
                   @click="loadConsentPage()"
-                  >View issues</v-btn
+                  >{{$t("btn.labels.view-issues")}}</v-btn
                 >
               </div>
             </v-stepper-content>

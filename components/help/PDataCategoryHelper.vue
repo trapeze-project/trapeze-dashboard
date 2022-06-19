@@ -130,7 +130,6 @@ export default {
         Object.keys(choices).forEach(key => {
           choices[key] = choices[key]
         });
-        console.log(choices)
         this.$emit("userChoinces", choices);
       }
     }

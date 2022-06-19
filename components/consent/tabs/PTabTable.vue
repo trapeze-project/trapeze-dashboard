@@ -16,7 +16,18 @@
         </v-chip>
       </template>
     </v-data-table>
-    
+
+    <PWarnings
+      v-if="view.showPDetails && this.$route.params.consentHelperUserChoices && warnings[this.view.selected.purpose]"
+      :selectedWarnings="warnings[this.view.selected.purpose]"
+      :purpose="this.view.selected.purpose"
+      @ignoreWarning="ignoreWarning"
+      :key="this.view.selected.purpose"
+    />
+
+
+
+
     <PDetails 
       class="mt-4"
       v-if="view.showPDetails"
@@ -38,8 +49,10 @@ import purposes from "../../../static/data/purposes.json";
 import examplePolicy from "../../../static/data/example.policy.json";
 import data from "../../../static/data/data.json";
 import emails from "../../../static/data/emails.json";
+import PWarnings from '../PWarnings.vue';
 
 export default {
+  components: { PWarnings },
   props: {
     tabName: {
       type: String,
@@ -65,7 +78,8 @@ export default {
       headers: "",
       pDetailsSubItemsMap: "",
       userChoices:"",
-      consentHelperUserChoices:""
+      consentHelperUserChoices:"",
+      warnings:"",
     };
   },
   created(){
@@ -91,9 +105,7 @@ export default {
         align: "start",
       })
     );
-    if(this.$route.params.consentHelperUserChoices){
-      this.consentHelperUserChoices =  JSON.parse(JSON.stringify(this.$route.params.consentHelperUserChoices)); 
-    } 
+
     if(this.tabName === "purpose"){
       this.userChoices =  JSON.parse(JSON.stringify(Object.keys(this.imports.purposeMap).reduce((total, currentValue)=>{
         total[currentValue]=this.imports.purposeMap[currentValue].reduce((total, currentValue)=>{
@@ -102,6 +114,10 @@ export default {
         },{});
         return total
       },{})));
+      if(this.$route.params.consentHelperUserChoices){
+        this.consentHelperUserChoices =  JSON.parse(JSON.stringify(this.$route.params.consentHelperUserChoices));
+        this.warnings = this.calculateWarrnings()
+      } 
     }else if(this.tabName === "data"){
       this.userChoices =  JSON.parse(JSON.stringify(Object.keys(this.imports.categoryMap).reduce((total, currentValue)=>{
         total[currentValue]=this.imports.categoryMap[currentValue].reduce((total, currentValue)=>{
@@ -150,6 +166,26 @@ export default {
         return total;
       },{});
     },
+    calculateWarrnings(){
+      let result = {}
+      for(const purpose of Object.keys(this.userChoices)){
+        for(const dataCategory of Object.keys(this.userChoices[purpose]))
+          if(this.userChoices[purpose][dataCategory]){
+            if(["No opinion","Not comfortable"].includes(this.consentHelperUserChoices[purpose][dataCategory])){
+              if(!result[purpose]){
+                result[purpose] = {}
+              }
+              result[purpose][dataCategory] = {
+                givenConsentValue : this.userChoices[purpose][dataCategory],
+                consentHelperChoice : this.consentHelperUserChoices[purpose][dataCategory]
+              }
+            }
+        }
+      }
+      return result;
+
+    },
+
     changeSwitchValues(modifiedSwitchValues){
       Object.keys(this.userChoices).forEach(key => {
         if(modifiedSwitchValues[key] != null){
@@ -157,6 +193,12 @@ export default {
           
         }
       })     
+    },
+    ignoreWarning(purpose,dataCategory){
+      delete (this.warnings[purpose])[dataCategory]
+      let yo = JSON.parse(JSON.stringify(this.warnings)); 
+      this.warnings = JSON.parse(JSON.stringify(yo)); 
+
     },
     revokeAll(){
       Object.keys(this.userChoices).forEach(key1 => {
@@ -173,49 +215,21 @@ export default {
         return emails;
       }
       if (this.tabName === "data"){ 
-        let keys = Object.keys(this.imports.categoryMap);
-        let values = Object.values(this.imports.categoryMap);
-        for(let i = 0; i < keys.length ; i++){
+        for(const dataCategory of Object.keys(this.imports.categoryMap)){
           let obj = new Object();
-          obj.data = keys[i]
-          obj.purpose = values[i].join(', ');
+          obj.data = dataCategory
+          obj.purpose = this.imports.categoryMap[dataCategory].join(', ');
           obj.recipient = 'Company A'
           obj.issue = '0 issues'
           result.push(obj);
         }
       }else if( this.tabName === "purpose"){
-        let purposes = Object.keys(this.imports.purposeMap);
-        let dataCatergories = Object.values(this.imports.purposeMap);
-
-        //consentHelperUserChoices 
-        for(let i = 0; i < purposes.length ; i++){
+        for(const purpose of Object.keys(this.imports.purposeMap)){
           let obj = new Object();
-          obj.purpose = purposes[i];
-          obj.data = dataCatergories[i].join(', ');
-          if(this.$route.params.consentHelperUserChoices){
-            let issuesCounter = dataCatergories[i].reduce((total, datacategory)=>{
-              if(this.userChoices[purposes[i]][datacategory]){
-                if(this.consentHelperUserChoices[purposes[i]][datacategory] === "Comfortable"){
-                  return total
-                }
-                if(this.consentHelperUserChoices[purposes[i]][datacategory] === "No opinion"){
-                  return (total+1)
-                }
-                if(this.consentHelperUserChoices[purposes[i]][datacategory] === "Not comfortable"){
-                  return (total+1)
-                }
-              }else{ // this.userChoices[purposes[i]][datacategory] ===false
-                if(this.consentHelperUserChoices[purposes[i]][datacategory] === "Comfortable"){
-                  return total
-                }
-                if(this.consentHelperUserChoices[purposes[i]][datacategory] === "No opinion"){
-                  return total
-                }
-                if(this.consentHelperUserChoices[purposes[i]][datacategory] === "Not comfortable"){
-                  return total
-                }
-              }
-            },0);
+          obj.purpose = purpose;
+          obj.data = this.imports.purposeMap[purpose].join(', ');
+          if(this.$route.params.consentHelperUserChoices && this.warnings[purpose]){
+            let issuesCounter = Object.keys(this.warnings[purpose]).length
             obj.issue = issuesCounter +' issues'
           }else{
             obj.issue = '0 issues'
