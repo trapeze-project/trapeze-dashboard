@@ -22,7 +22,7 @@
                   {{ item.name }}
                 </v-col>
                 <v-col cols="4">
-                  <v-switch v-model="localSwitchValues[item.name]" @click="changeSwitchValues()"/>
+                  <v-switch v-model="localSwitchValues[item.name]" @change="changeUserChoice(item.name)"/>
                 </v-col>
               </v-row>
             </template>
@@ -88,8 +88,8 @@ export default {
       obj[this.purpose]=this.localSwitchValues
       this.$emit('changeSwitchValues',obj)
     },
-    lol(){
-      console.log("looooooooooooooooooooooooooooooooooool")
+    changeUserChoice(dataCategory){
+      this.$emit('changeUserChoice',this.purpose,dataCategory ,this.localSwitchValues[dataCategory]);
     }
   },
 };

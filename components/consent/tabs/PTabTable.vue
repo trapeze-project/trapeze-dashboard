@@ -37,11 +37,12 @@
       :showSensitivity="false"
       :switchesValues="this.calculateBottonsValues"
       :key="Object.values(this.calculateBottonsValues).toString()"
-      @changeSwitchValues="changeSwitchValues"
+      @changeUserChoice="changeUserChoice"
     />
     <div v-if="view.showPEmail" id="PEmail" class="mt-4">
       <PEmail :date="view.selected.date" :event="view.selected.event" />
     </div>
+    {{this.userChoices}}
   </div>
 </template>
 
@@ -50,10 +51,8 @@ import purposes from "../../../static/data/purposes.json";
 import examplePolicy from "../../../static/data/example.policy.json";
 import data from "../../../static/data/data.json";
 import emails from "../../../static/data/emails.json";
-import PWarnings from '../PWarnings.vue';
 
 export default {
-  components: { PWarnings },
   props: {
     tabName: {
       type: String,
