@@ -42,7 +42,6 @@
     <div v-if="view.showPEmail" id="PEmail" class="mt-4">
       <PEmail :date="view.selected.date" :event="view.selected.event" />
     </div>
-    {{this.userChoices}}
   </div>
 </template>
 
@@ -169,7 +168,7 @@ export default {
     calculateWarrnings(){
       let result = {}
       for(const purpose of Object.keys(this.userChoices)){
-        for(const dataCategory of Object.keys(this.userChoices[purpose]))
+        for(const dataCategory of Object.keys(this.userChoices[purpose])){
           if(this.userChoices[purpose][dataCategory]){
             if(["No opinion","Not comfortable"].includes(this.consentHelperUserChoices[purpose][dataCategory])){
               if(!result[purpose]){
@@ -180,19 +179,11 @@ export default {
                 consentHelperChoice : this.consentHelperUserChoices[purpose][dataCategory]
               }
             }
+          }
         }
       }
       return result;
 
-    },
-
-    changeSwitchValues(modifiedSwitchValues){
-      Object.keys(this.userChoices).forEach(key => {
-        if(modifiedSwitchValues[key] != null){
-          this.userChoices[key] =  JSON.parse(JSON.stringify(modifiedSwitchValues[key])); 
-          
-        }
-      })     
     },
     ignoreWarning(purpose,dataCategory){
       delete (this.warnings[purpose])[dataCategory]
@@ -202,6 +193,18 @@ export default {
     },
     changeUserChoice(purpose,dataCategory ,newConsentValue){
       this.userChoices[purpose][dataCategory] = newConsentValue;
+      this.fixWarningIfExist(purpose,dataCategory ,newConsentValue)
+    },
+    fixWarningIfExist(purpose,dataCategory ,newConsentValue){
+      if(this.$route.params.consentHelperUserChoices){
+        if(["No opinion","Not comfortable"].includes(this.consentHelperUserChoices[purpose][dataCategory])){
+          if(newConsentValue===false){
+            if(this.warnings[purpose][dataCategory]){
+              this.ignoreWarning(purpose,dataCategory);
+            }
+          }
+        }
+      }
     },
     revokeAll(){
       Object.keys(this.userChoices).forEach(key1 => {
