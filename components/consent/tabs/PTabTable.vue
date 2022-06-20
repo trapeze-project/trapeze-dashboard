@@ -18,7 +18,7 @@
     </v-data-table>
 
     <PWarnings
-      v-if="view.showPDetails && this.$route.params.consentHelperUserChoices && warnings[this.view.selected.purpose]"
+      v-if="view.showPDetails && this.$route.params.consentHelperUserChoices && Object.keys(this.warnings[this.view.selected.purpose]).length"
       :selectedWarnings="warnings[this.view.selected.purpose]"
       :purpose="this.view.selected.purpose"
       :key="this.view.selected.purpose"
@@ -185,31 +185,31 @@ export default {
       return result;
 
     },
-    ignoreWarning(purpose,dataCategory){
-      delete (this.warnings[purpose])[dataCategory]
+    ignoreWarning(parent,child){
+      delete (this.warnings[parent])[child]
       let yo = JSON.parse(JSON.stringify(this.warnings)); 
       this.warnings = JSON.parse(JSON.stringify(yo)); 
 
     },
-    changeUserChoice(purpose,dataCategory ,newConsentValue){
-      this.userChoices[purpose][dataCategory] = newConsentValue;
-      this.fixWarningIfExist(purpose,dataCategory ,newConsentValue)
+    changeUserChoice(parent,child ,newConsentValue){
+      this.userChoices[parent][child] = newConsentValue;
+      this.fixWarningIfExist(parent,child ,newConsentValue)
     },
-    fixWarningIfExist(purpose,dataCategory ,newConsentValue){
+    fixWarningIfExist(parent,child ,newConsentValue){
       if(this.$route.params.consentHelperUserChoices){
-        if(["No opinion","Not comfortable"].includes(this.consentHelperUserChoices[purpose][dataCategory])){
+        if(["No opinion","Not comfortable"].includes(this.consentHelperUserChoices[parent][child])){
           if(newConsentValue===false){
-            if(this.warnings[purpose][dataCategory]){
-              this.ignoreWarning(purpose,dataCategory);
+            if(this.warnings[parent][child]){
+              this.ignoreWarning(parent,child);
             }
           }
         }
       }
     },
     revokeAll(){
-      Object.keys(this.userChoices).forEach(key1 => {
-        Object.keys(this.userChoices[key1]).forEach(key2 => {
-          this.userChoices[key1][key2] = false;
+      Object.keys(this.userChoices).forEach(parent => {
+        Object.keys(this.userChoices[parent]).forEach(child => {
+          this.changeUserChoice(parent,child ,false)
         });
       });
     }

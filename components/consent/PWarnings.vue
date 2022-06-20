@@ -1,6 +1,6 @@
 <template>
-  <div v-if="true">
-    Display warnings
+  <div >
+    Warnings
     <v-alert
       shaped
       dense
@@ -23,10 +23,11 @@
         </v-col>
       </v-row>
     </v-alert>
-    <div >
+    <div class="float-right">
       <v-btn class="white--text " color="red" @click="fixAllWarnigs">Fix All</v-btn>
       <v-btn class="black--text " color="primary" @click="closeAllWarnings">Ignore All</v-btn>
     </div>
+    <br/>
   </div>
 </template>
 
@@ -73,7 +74,6 @@ export default {
     fixAllWarnigs(){
       for(const dataCategory of Object.keys(this.warningSwitches)){
         if(this.warningSwitches[dataCategory] == true){
-          console.log(dataCategory)
           this.fixWarnig(dataCategory);
         }
       }
