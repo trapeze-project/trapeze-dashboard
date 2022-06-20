@@ -193,7 +193,7 @@ export default {
     },
     changeUserChoice(parent,child ,newConsentValue){
       this.userChoices[parent][child] = newConsentValue;
-      this.fixWarningIfExist(parent,child ,newConsentValue)
+      //this.fixWarningIfExist(parent,child ,newConsentValue)
     },
     fixWarningIfExist(parent,child ,newConsentValue){
       if(this.$route.params.consentHelperUserChoices){

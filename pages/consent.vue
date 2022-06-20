@@ -26,7 +26,7 @@
         </v-tab-item>
 
         <v-tab-item value="data">
-          <PTabTable tabName="data" />
+          <PTabTable tabName="data" ref="data"/>
         </v-tab-item>
 
         <v-tab-item value="purpose">
