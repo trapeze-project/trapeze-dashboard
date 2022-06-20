@@ -21,8 +21,9 @@
       v-if="view.showPDetails && this.$route.params.consentHelperUserChoices && warnings[this.view.selected.purpose]"
       :selectedWarnings="warnings[this.view.selected.purpose]"
       :purpose="this.view.selected.purpose"
-      @ignoreWarning="ignoreWarning"
       :key="this.view.selected.purpose"
+      @ignoreWarning="ignoreWarning"
+      @changeUserChoice="changeUserChoice"
     />
 
 
@@ -199,6 +200,9 @@ export default {
       let yo = JSON.parse(JSON.stringify(this.warnings)); 
       this.warnings = JSON.parse(JSON.stringify(yo)); 
 
+    },
+    changeUserChoice(purpose,dataCategory ,newConsentValue){
+      this.userChoices[purpose][dataCategory] = newConsentValue;
     },
     revokeAll(){
       Object.keys(this.userChoices).forEach(key1 => {

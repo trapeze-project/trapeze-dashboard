@@ -87,6 +87,9 @@ export default {
       let obj ={}
       obj[this.purpose]=this.localSwitchValues
       this.$emit('changeSwitchValues',obj)
+    },
+    lol(){
+      console.log("looooooooooooooooooooooooooooooooooool")
     }
   },
 };
