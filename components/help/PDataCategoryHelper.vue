@@ -128,9 +128,8 @@ export default {
           choices[purpose]= this.headers[Number(this.preferences[purpose])+1].text
         }
         Object.keys(choices).forEach(key => {
-          choices[key] = choices[key]==='Comfortable'? true :false;
+          choices[key] = choices[key]
         });
-        console.log(choices)
         this.$emit("userChoinces", choices);
       }
     }

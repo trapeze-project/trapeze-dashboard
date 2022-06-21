@@ -14,8 +14,7 @@
                 :complete="false"
                 :step="index + 1"
               >
-                <!-- {{ $t("consent." + type) }} -->
-                {{type}}
+                {{ $t("consent." + type.toLowerCase()) }}
               </v-stepper-step>
 
               <v-divider
@@ -33,7 +32,7 @@
             >
               <div>
                 <div>
-                  {{ $t("consent." + type) }}
+                  {{ $t("consent." + type.toLowerCase()) }}
                 </div>
 
                 <v-divider class="my-3" />
@@ -55,7 +54,7 @@
                   color="light"
                   :disabled="page === 1"
                   @click="page--"
-                  >Back</v-btn
+                  >{{$t("btn.labels.back")}}</v-btn
                 >
                 <v-btn
                   class="black--text"
@@ -63,14 +62,14 @@
                   v-if="page < Object.keys(imports.dataCategoryMap).length"
                   :disabled="page === Object.keys(imports.dataCategoryMap).length"
                   @click="page++"
-                  >Next</v-btn
+                  >{{$t("btn.labels.next")}}</v-btn
                 >
                 <v-btn
                   class="black--text"
                   color="primary"
                   v-if="page === Object.keys(imports.dataCategoryMap).length"
                   @click="loadConsentPage()"
-                  >View issues</v-btn
+                  >{{$t("btn.labels.view-issues")}}</v-btn
                 >
               </div>
             </v-stepper-content>
@@ -91,7 +90,7 @@ export default {
       imports: {
         dataCategoryMap: "",
       },
-      allUserChoices:{},
+      consentHelperUserChoices:{},
       page: 1,
     };
   },
@@ -100,20 +99,20 @@ export default {
   },
   methods: {
     collectUserChoices(userChoices){
-      //this.allUserChoices[Object.keys(this.imports.dataCategoryMap)[this.page-1]] = userChoices;
+      //this.consentHelperUserChoices[Object.keys(this.imports.dataCategoryMap)[this.page-1]] = userChoices;
       let userChoicesPurposes = Object.keys(userChoices);
      
       for(let i = 0;i<userChoicesPurposes.length; i++){
-        if( this.allUserChoices[userChoicesPurposes[i]] == null){
-          this.allUserChoices[userChoicesPurposes[i]] = new Object();
+        if( this.consentHelperUserChoices[userChoicesPurposes[i]] == null){
+          this.consentHelperUserChoices[userChoicesPurposes[i]] = new Object();
         }
-        this.allUserChoices[userChoicesPurposes[i]][Object.keys(this.imports.dataCategoryMap)[this.page-1]] = userChoices[userChoicesPurposes[i]]
+        this.consentHelperUserChoices[userChoicesPurposes[i]][Object.keys(this.imports.dataCategoryMap)[this.page-1]] = userChoices[userChoicesPurposes[i]]
         
       }
     },
     loadConsentPage(){
       const consentPageRoute = this.$router.options.routes.find(route => route.path === this.localePath('/consent'))
-      this.$router.push({name: consentPageRoute.name ,query:{ tab: 'purpose' },params: {allUserChoices: this.allUserChoices}})
+      this.$router.push({name: consentPageRoute.name ,query:{ tab: 'purpose' },params: {consentHelperUserChoices: this.consentHelperUserChoices}})
 
     },
     calculateDataCategoryMap(){

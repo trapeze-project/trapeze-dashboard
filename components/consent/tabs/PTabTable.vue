@@ -16,7 +16,19 @@
         </v-chip>
       </template>
     </v-data-table>
-    
+
+    <PWarnings
+      v-if="view.showPDetails && this.$route.params.consentHelperUserChoices && Object.keys(this.warnings[this.view.selected.purpose]).length"
+      :selectedWarnings="warnings[this.view.selected.purpose]"
+      :purpose="this.view.selected.purpose"
+      :key="this.view.selected.purpose"
+      @ignoreWarning="ignoreWarning"
+      @changeUserChoice="changeUserChoice"
+    />
+
+
+
+
     <PDetails 
       class="mt-4"
       v-if="view.showPDetails"
@@ -25,12 +37,11 @@
       :showSensitivity="false"
       :switchesValues="this.calculateBottonsValues"
       :key="Object.values(this.calculateBottonsValues).toString()"
-      @changeSwitchValues="changeSwitchValues"
+      @changeUserChoice="changeUserChoice"
     />
     <div v-if="view.showPEmail" id="PEmail" class="mt-4">
       <PEmail :date="view.selected.date" :event="view.selected.event" />
     </div>
-
   </div>
 </template>
 
@@ -66,6 +77,8 @@ export default {
       headers: "",
       pDetailsSubItemsMap: "",
       userChoices:"",
+      consentHelperUserChoices:"",
+      warnings:"",
     };
   },
   created(){
@@ -91,10 +104,29 @@ export default {
         align: "start",
       })
     );
-    if(this.$route.params.allUserChoices){
-      // this.userChoices = this.$route.params.allUserChoices
-      this.userChoices =  JSON.parse(JSON.stringify(this.$route.params.allUserChoices)); 
+
+    if(this.tabName === "purpose"){
+      this.userChoices =  JSON.parse(JSON.stringify(Object.keys(this.imports.purposeMap).reduce((total, currentValue)=>{
+        total[currentValue]=this.imports.purposeMap[currentValue].reduce((total, currentValue)=>{
+          total[currentValue] = true
+          return total
+        },{});
+        return total
+      },{})));
+      if(this.$route.params.consentHelperUserChoices){
+        this.consentHelperUserChoices =  JSON.parse(JSON.stringify(this.$route.params.consentHelperUserChoices));
+        this.warnings = this.calculateWarrnings()
+      } 
+    }else if(this.tabName === "data"){
+      this.userChoices =  JSON.parse(JSON.stringify(Object.keys(this.imports.categoryMap).reduce((total, currentValue)=>{
+        total[currentValue]=this.imports.categoryMap[currentValue].reduce((total, currentValue)=>{
+          total[currentValue] = true
+          return total
+        },{});
+        return total
+      },{})));
     }
+    
   },
   methods: {
     select(item, row) {
@@ -133,18 +165,51 @@ export default {
         return total;
       },{});
     },
-    changeSwitchValues(modifiedSwitchValues){
-      Object.keys(this.userChoices).forEach(key => {
-        if(modifiedSwitchValues[key] != null){
-          this.userChoices[key] =  JSON.parse(JSON.stringify(modifiedSwitchValues[key])); 
-          
+    calculateWarrnings(){
+      let result = {}
+      for(const purpose of Object.keys(this.userChoices)){
+        for(const dataCategory of Object.keys(this.userChoices[purpose])){
+          if(this.userChoices[purpose][dataCategory]){
+            if(["No opinion","Not comfortable"].includes(this.consentHelperUserChoices[purpose][dataCategory])){
+              if(!result[purpose]){
+                result[purpose] = {}
+              }
+              result[purpose][dataCategory] = {
+                givenConsentValue : this.userChoices[purpose][dataCategory],
+                consentHelperChoice : this.consentHelperUserChoices[purpose][dataCategory]
+              }
+            }
+          }
         }
-      })     
+      }
+      return result;
+
+    },
+    ignoreWarning(parent,child){
+      delete (this.warnings[parent])[child]
+      let yo = JSON.parse(JSON.stringify(this.warnings)); 
+      this.warnings = JSON.parse(JSON.stringify(yo)); 
+
+    },
+    changeUserChoice(parent,child ,newConsentValue){
+      this.userChoices[parent][child] = newConsentValue;
+      //this.fixWarningIfExist(parent,child ,newConsentValue)
+    },
+    fixWarningIfExist(parent,child ,newConsentValue){
+      if(this.$route.params.consentHelperUserChoices){
+        if(["No opinion","Not comfortable"].includes(this.consentHelperUserChoices[parent][child])){
+          if(newConsentValue===false){
+            if(this.warnings[parent][child]){
+              this.ignoreWarning(parent,child);
+            }
+          }
+        }
+      }
     },
     revokeAll(){
-      Object.keys(this.userChoices).forEach(key1 => {
-        Object.keys(this.userChoices[key1]).forEach(key2 => {
-          this.userChoices[key1][key2] = false;
+      Object.keys(this.userChoices).forEach(parent => {
+        Object.keys(this.userChoices[parent]).forEach(child => {
+          this.changeUserChoice(parent,child ,false)
         });
       });
     }
@@ -156,31 +221,24 @@ export default {
         return emails;
       }
       if (this.tabName === "data"){ 
-        let keys = Object.keys(this.imports.categoryMap);
-        let values = Object.values(this.imports.categoryMap);
-        for(let i = 0; i < keys.length ; i++){
+        for(const dataCategory of Object.keys(this.imports.categoryMap)){
           let obj = new Object();
-          obj.data = keys[i]
-          obj.purpose = values[i].join(', ');
+          obj.data = dataCategory
+          obj.purpose = this.imports.categoryMap[dataCategory].join(', ');
           obj.recipient = 'Company A'
           obj.issue = '0 issues'
           result.push(obj);
         }
       }else if( this.tabName === "purpose"){
-        let keys = Object.keys(this.imports.purposeMap);
-        let values = Object.values(this.imports.purposeMap);
-        for(let i = 0; i < keys.length ; i++){
+        for(const purpose of Object.keys(this.imports.purposeMap)){
           let obj = new Object();
-          obj.purpose = keys[i];
-          obj.data = values[i].join(', ');
-          obj.issue = '0 issues';
-          if(this.$route.params.allUserChoices){
-            if(this.userChoices[obj.purpose]){
-              let issuesCounter = Object.values(this.userChoices[obj.purpose]).reduce((total, currentValue)=>{
-                return currentValue === true? total : total+1
-              },0);
-              obj.issue = issuesCounter +' issues'
-            }
+          obj.purpose = purpose;
+          obj.data = this.imports.purposeMap[purpose].join(', ');
+          if(this.$route.params.consentHelperUserChoices && this.warnings[purpose]){
+            let issuesCounter = Object.keys(this.warnings[purpose]).length
+            obj.issue = issuesCounter +' issues'
+          }else{
+            obj.issue = '0 issues'
           }
           result.push(obj);
         }
@@ -189,17 +247,10 @@ export default {
 
     },
     calculateBottonsValues(){
-      if(this.$route.params.allUserChoices){
         if(this.view.selected  !== ''){  
           let purposesChoices = JSON.parse(JSON.stringify(this.userChoices[this.view.selected[this.tabName]])); 
           return purposesChoices
-        }else{
-          return []
         }
-        
-      }else{
-        return []
-      }
     }
   }
 };
