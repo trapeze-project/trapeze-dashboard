@@ -4,14 +4,14 @@
 
     <v-main class="mt-1">
       <v-container fluid>
-        <v-row>
-          <v-col cols="2">
+        <v-row >
+          <v-col class="hidden-sm-and-down" md="2" lg = "2">
             <PNavigation />
           </v-col>
-          <v-col cols="8">
+          <v-col sm="12" md="8" lg="8" >
             <nuxt />
           </v-col>
-          <v-col cols="2">
+          <v-col class="hidden-sm-and-down" md="2" lg="2">
             <PCompanyView />
           </v-col>
         </v-row>

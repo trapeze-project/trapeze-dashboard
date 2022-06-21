@@ -1,6 +1,7 @@
 <template>
   <div>
-    <a id="logo" :style="cssVars" href="/" title="Home" />
+    <a v-if="!$vuetify.breakpoint.smAndDown" id="logo" :style="cssVars" href="/" title="Home" />
+    <a v-if="$vuetify.breakpoint.smAndDown" id="logo" :style="cssVars_sm" href="/" title="Home" />
   </div>
 </template>
 
@@ -12,6 +13,11 @@ export default {
         "--url": "url(" + this.$config.logo.url + ")",
       };
     },
+    cssVars_sm() {
+      return {
+        "--url": "url(" + this.$config.logo.url_sm + ")",
+      };
+    },
   },
 };
 </script>
@@ -21,5 +27,6 @@ export default {
   display: block;
   content: var(--url);
   max-width: 224px;
+  max-height: 50px;
 }
 </style>
