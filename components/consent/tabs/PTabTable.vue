@@ -18,6 +18,7 @@
     </v-data-table>
 
     <PWarnings
+      id="PWarnings"
       v-if="view.showPDetails && this.$route.params.consentHelperUserChoices && Object.keys(this.warnings[this.view.selected.purpose]).length"
       :selectedWarnings="warnings[this.view.selected.purpose]"
       :purpose="this.view.selected.purpose"
@@ -30,6 +31,7 @@
 
 
     <PDetails 
+      id="PDetails"
       class="mt-4"
       v-if="view.showPDetails"
       :heading="view.selected[this.tabName]"
@@ -42,6 +44,8 @@
     <div v-if="view.showPEmail" id="PEmail" class="mt-4">
       <PEmail :date="view.selected.date" :event="view.selected.event" />
     </div>
+    <div id="lol"></div>
+    <v-btn @click="scrollpage">scrolldown</v-btn>
   </div>
 </template>
 
@@ -138,6 +142,11 @@ export default {
       if(this.tabName === 'consent'){
         this.view.showPEmail = true;
       }
+    
+      //vue.$nextTick Defer the callback to be executed after the next DOM update cycle. Use it immediately after you’ve changed some data to wait for the DOM update.
+      this.$nextTick(() => {
+        this.scrollpage();
+      });
     },
     calculateCategoryMap(){
       this.imports.categoryMap =  examplePolicy.reduce((total, currentValue)=>{
@@ -193,7 +202,7 @@ export default {
     },
     changeUserChoice(parent,child ,newConsentValue){
       this.userChoices[parent][child] = newConsentValue;
-      //this.fixWarningIfExist(parent,child ,newConsentValue)
+      this.fixWarningIfExist(parent,child ,newConsentValue)
     },
     fixWarningIfExist(parent,child ,newConsentValue){
       if(this.$route.params.consentHelperUserChoices){
@@ -212,6 +221,21 @@ export default {
           this.changeUserChoice(parent,child ,false)
         });
       });
+    },
+    scrollpage(){
+      if(this.tabName === "consent"){
+        document.getElementById("PEmail").scrollIntoView({behavior: 'smooth'});
+      }
+      if (this.tabName === "data"){ 
+        document.getElementById("PDetails").scrollIntoView({behavior: 'smooth'});
+      }
+      if( this.tabName === "purpose"){
+        if(this.view.showPDetails && this.$route.params.consentHelperUserChoices && Object.keys(this.warnings[this.view.selected.purpose]).length){
+          document.getElementById("PWarnings").scrollIntoView({behavior: 'smooth'});
+        }else{
+          document.getElementById("PDetails").scrollIntoView({behavior: 'smooth'});
+        }
+      }
     }
   },
   computed: {
