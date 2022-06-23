@@ -11,14 +11,15 @@
       :key="dataCategory"
       v-model="warningSwitches[dataCategory]"
     >
-      <v-row align="center">
-        <v-col class="grow">
+      <v-row align="center" class="pa-1">
+        <v-col class="" cols="12" sm="12" md="8" lg="10">
           <p> you have {{ selectedWarnings[dataCategory]["givenConsentValue"]? "" : "not" }} given consent to the data controller to use your {{dataCategory}} data for the purpose of {{purpose}}. but your choice in ConsentHelper was {{selectedWarnings[dataCategory]["consentHelperChoice"]}} </p>
         </v-col>
-        <v-col class="shrink">
+        <v-spacer></v-spacer>
+        <v-col class="" cols="6" sm="2" md="2" lg="1" align="right">
           <v-btn @click="fixWarnig(dataCategory)">fix</v-btn>
         </v-col>
-        <v-col class="shrink">
+        <v-col class="" cols="6" sm="2" md="2" lg="1" align="right">
           <v-btn @click="closeWarnig(dataCategory)">ignore</v-btn>
         </v-col>
       </v-row>

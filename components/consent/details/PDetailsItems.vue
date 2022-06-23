@@ -5,8 +5,8 @@
     </p>
     <p />
     <v-row>
-      <v-col cols="4">
-        <v-card class="ml-2">
+      <v-col cols="12" xs="12" sm="12" md="6">
+        <v-card class="mx-2">
           <v-data-table
             :headers="headers"
             :items="categoriesTransformed"
@@ -18,10 +18,10 @@
           >
             <template #item.name="{ item }">
               <v-row align="center" justify="center">
-                <v-col class="fill-height" cols="8">
+                <v-col class="fill-height " cols="9">
                   {{ item.name }}
                 </v-col>
-                <v-col cols="4">
+                <v-col cols="3">
                   <v-switch v-model="localSwitchValues[item.name]" @change="changeUserChoice(item.name)"/>
                 </v-col>
               </v-row>
@@ -29,7 +29,7 @@
           </v-data-table>
         </v-card>
       </v-col>
-      <v-col v-show="showDataCard">
+      <v-col v-show="showDataCard" cols="12" xs="12" sm="12" md="6">
         <PDetailsCard :category-name="categoryName" />
       </v-col>
     </v-row>
