@@ -1,5 +1,6 @@
 <template>
   <div>
+    <PNotification ref="helpNotification" />
     <v-card>
       <v-card-title>
         {{ $t("consent.title") }}
@@ -119,7 +120,8 @@ export default {
     },
     loadConsentPage(){
       if(this.dataCategoryCompletedChoosement.length !== Object.keys(this.imports.dataCategoryMap).length){
-        alert("complete all steps first")
+        let text = this.$t("snackbar.msg.please-complete-the-consent-guide")
+        this.$refs["helpNotification"].showNotification(text);
       }else{
         const consentPageRoute = this.$router.options.routes.find(route => route.path === this.localePath('/consent'))
         this.$router.push({name: consentPageRoute.name ,query:{ tab: 'purpose' },params: {consentHelperUserChoices: this.consentHelperUserChoices}})

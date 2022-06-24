@@ -1,5 +1,6 @@
 <template>
   <div>
+    <PNotification ref="consentNotification" />
     <v-card>
       <v-card-title>
         <v-row>
@@ -34,7 +35,11 @@
         </v-tab-item>
       </v-tabs-items>
     </v-card>
-    <PReceiptBtns v-if="tab !== 'consent' " class="mt-4" @undoChanges="$refs[tab].loadPreviousState()" @submitChanges="true" />
+    <PReceiptBtns
+      v-if="tab !== 'consent' "
+      class="mt-4"
+      @undoChanges="$refs[tab].loadPreviousState()"
+      @submitChanges="$refs['consentNotification'].showNotification($t('snackbar.msg.submission-succesful'))" />
   </div>
 </template>
 

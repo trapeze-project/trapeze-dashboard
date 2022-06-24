@@ -37,6 +37,12 @@
       "view-issues": "View issues"
     }
   },
+  "snackbar":{
+    "msg":{
+      "please-complete-the-consent-guide": "please complete the consent guide",
+      "submission-succesful": "Submission Succesful"
+    }
+  },
   "placeholder": {
     "search-for-a-question-or-an-answer": "Search for a question or an answer"
   },
