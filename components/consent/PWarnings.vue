@@ -9,7 +9,6 @@
       type="warning"
       v-for="dataCategory in Object.keys(selectedWarnings)"
       :key="dataCategory"
-      v-model="warningSwitches[dataCategory]"
     >
       <v-row align="center">
         <v-col class="grow">
@@ -37,45 +36,21 @@ export default {
     selectedWarnings:Object,
     purpose: String
   },
-  data(){
-    return{
-      warningSwitches :""
-    }
-  },
-  created(){
-    let lol = {}
-    for(const dataCategory of Object.keys(this.selectedWarnings)){
-      lol[dataCategory] = true
-    }
-    this.warningSwitches = JSON.parse(JSON.stringify(lol)); 
-  },
   methods: {
     closeWarnig(dataCategory){
-      this.warningSwitches[dataCategory] = false;
       this.$emit('ignoreWarning',this.purpose,dataCategory)
     },
     closeAllWarnings(){
-      for(const dataCategory of Object.keys(this.warningSwitches)){
-        if(this.warningSwitches[dataCategory] == true){
-          this.closeWarnig(dataCategory);
-        }
+      for(const dataCategory of Object.keys(this.selectedWarnings)){
+        this.closeWarnig(dataCategory);
       }
     },
     fixWarnig(dataCategory){
-      let newConsentValue;
-      if(this.selectedWarnings[dataCategory]["consentHelperChoice"] == "Comfortable"){ // No opinion // Comfortable // Not comfortable
-        newConsentValue = true;
-      }else{
-        newConsentValue = false;
-      }
-      this.closeWarnig(dataCategory);
-      this.$emit('changeUserChoice',this.purpose,dataCategory ,newConsentValue);
+      this.$emit('changeUserChoice',this.purpose,dataCategory ,false);
     },
     fixAllWarnigs(){
-      for(const dataCategory of Object.keys(this.warningSwitches)){
-        if(this.warningSwitches[dataCategory] == true){
-          this.fixWarnig(dataCategory);
-        }
+      for(const dataCategory of Object.keys(this.selectedWarnings)){
+        this.fixWarnig(dataCategory);
       }
     }
   },

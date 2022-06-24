@@ -92,6 +92,7 @@ export default {
       },
       consentHelperUserChoices:{},
       page: 1,
+      dataCategoryCompletedChoosement :[]
     };
   },
   created() {
@@ -101,19 +102,28 @@ export default {
     collectUserChoices(userChoices){
       //this.consentHelperUserChoices[Object.keys(this.imports.dataCategoryMap)[this.page-1]] = userChoices;
       let userChoicesPurposes = Object.keys(userChoices);
-     
+      let dataCategory = Object.keys(this.imports.dataCategoryMap)[this.page-1]
+      // mark the data category as compeleted
+      if(!this.dataCategoryCompletedChoosement.includes(dataCategory)){
+        this.dataCategoryCompletedChoosement.push(dataCategory)
+      }
+
+      // saving user choices in consentHelperUserChoices
       for(let i = 0;i<userChoicesPurposes.length; i++){
         if( this.consentHelperUserChoices[userChoicesPurposes[i]] == null){
           this.consentHelperUserChoices[userChoicesPurposes[i]] = new Object();
         }
-        this.consentHelperUserChoices[userChoicesPurposes[i]][Object.keys(this.imports.dataCategoryMap)[this.page-1]] = userChoices[userChoicesPurposes[i]]
+        this.consentHelperUserChoices[userChoicesPurposes[i]][dataCategory] = userChoices[userChoicesPurposes[i]]
         
       }
     },
     loadConsentPage(){
-      const consentPageRoute = this.$router.options.routes.find(route => route.path === this.localePath('/consent'))
-      this.$router.push({name: consentPageRoute.name ,query:{ tab: 'purpose' },params: {consentHelperUserChoices: this.consentHelperUserChoices}})
-
+      if(this.dataCategoryCompletedChoosement.length !== Object.keys(this.imports.dataCategoryMap).length){
+        alert("complete all steps first")
+      }else{
+        const consentPageRoute = this.$router.options.routes.find(route => route.path === this.localePath('/consent'))
+        this.$router.push({name: consentPageRoute.name ,query:{ tab: 'purpose' },params: {consentHelperUserChoices: this.consentHelperUserChoices}})
+      }
     },
     calculateDataCategoryMap(){
       this.imports.dataCategoryMap =  examplePolicy.reduce((total, currentValue)=>{

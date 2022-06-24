@@ -34,7 +34,7 @@
         </v-tab-item>
       </v-tabs-items>
     </v-card>
-    <PReceiptBtns class="mt-4" />
+    <PReceiptBtns v-if="tab !== 'consent' " class="mt-4" @undoChanges="$refs[tab].loadPreviousState()" @submitChanges="true" />
   </div>
 </template>
 

@@ -79,6 +79,7 @@ export default {
       userChoices:"",
       consentHelperUserChoices:"",
       warnings:"",
+      states:[]
     };
   },
   created(){
@@ -185,22 +186,26 @@ export default {
       return result;
 
     },
-    ignoreWarning(parent,child){
+    ignoreWarning(parent,child,saveState = true){
+      if(saveState){
+        this.saveState()
+      }
       delete (this.warnings[parent])[child]
       let yo = JSON.parse(JSON.stringify(this.warnings)); 
       this.warnings = JSON.parse(JSON.stringify(yo)); 
 
     },
     changeUserChoice(parent,child ,newConsentValue){
+      this.saveState()
       this.userChoices[parent][child] = newConsentValue;
-      //this.fixWarningIfExist(parent,child ,newConsentValue)
+      this.fixWarningIfExist(parent,child ,newConsentValue)
     },
     fixWarningIfExist(parent,child ,newConsentValue){
       if(this.$route.params.consentHelperUserChoices){
         if(["No opinion","Not comfortable"].includes(this.consentHelperUserChoices[parent][child])){
           if(newConsentValue===false){
             if(this.warnings[parent][child]){
-              this.ignoreWarning(parent,child);
+              this.ignoreWarning(parent,child , false);
             }
           }
         }
@@ -212,6 +217,27 @@ export default {
           this.changeUserChoice(parent,child ,false)
         });
       });
+    },
+    saveState(){
+      let state = {}
+      state.view = {}
+      state.view.selected = JSON.parse(JSON.stringify(this.view.selected))
+      state.view.showPDetails = JSON.parse(JSON.stringify(this.view.showPDetails))
+      state.userChoices = JSON.parse(JSON.stringify(this.userChoices))
+      state.warnings = JSON.parse(JSON.stringify(this.warnings))
+      this.states.push(state)
+
+    },
+    loadPreviousState(){
+      if(this.states.length){
+        let state = this.states.pop();
+        this.view.showPDetails = JSON.parse(JSON.stringify(state.view.showPDetails))
+        this.view.selected = JSON.parse(JSON.stringify(state.view.selected))
+        setTimeout(()=>{ // to let the see the switcher switching
+          this.userChoices = JSON.parse(JSON.stringify(state.userChoices))
+          this.warnings = JSON.parse(JSON.stringify(state.warnings))
+        }, 500)
+      }
     }
   },
   computed: {
