@@ -38,19 +38,23 @@ export default {
   },
   methods: {
     closeWarnig(dataCategory){
+      this.$emit('saveState');
       this.$emit('ignoreWarning',this.purpose,dataCategory)
     },
     closeAllWarnings(){
+      this.$emit('saveState');
       for(const dataCategory of Object.keys(this.selectedWarnings)){
-        this.closeWarnig(dataCategory);
+        this.$emit('ignoreWarning',this.purpose,dataCategory)
       }
     },
     fixWarnig(dataCategory){
+      this.$emit('saveState');
       this.$emit('changeUserChoice',this.purpose,dataCategory ,false);
     },
     fixAllWarnigs(){
+      this.$emit('saveState');
       for(const dataCategory of Object.keys(this.selectedWarnings)){
-        this.fixWarnig(dataCategory);
+        this.$emit('changeUserChoice',this.purpose,dataCategory ,false);
       }
     }
   },

@@ -24,6 +24,7 @@
       :key="this.view.selected.purpose"
       @ignoreWarning="ignoreWarning"
       @changeUserChoice="changeUserChoice"
+      @saveState="saveState"
     />
 
 
@@ -38,6 +39,7 @@
       :switchesValues="this.calculateBottonsValues"
       :key="Object.values(this.calculateBottonsValues).toString()"
       @changeUserChoice="changeUserChoice"
+      @saveState="saveState"
     />
     <div v-if="view.showPEmail" id="PEmail" class="mt-4">
       <PEmail :date="view.selected.date" :event="view.selected.event" />
@@ -186,17 +188,13 @@ export default {
       return result;
 
     },
-    ignoreWarning(parent,child,saveState = true){
-      if(saveState){
-        this.saveState()
-      }
+    ignoreWarning(parent,child){
       delete (this.warnings[parent])[child]
       let yo = JSON.parse(JSON.stringify(this.warnings)); 
       this.warnings = JSON.parse(JSON.stringify(yo)); 
 
     },
     changeUserChoice(parent,child ,newConsentValue){
-      this.saveState()
       this.userChoices[parent][child] = newConsentValue;
       this.fixWarningIfExist(parent,child ,newConsentValue)
     },
@@ -205,13 +203,14 @@ export default {
         if(["No opinion","Not comfortable"].includes(this.consentHelperUserChoices[parent][child])){
           if(newConsentValue===false){
             if(this.warnings[parent][child]){
-              this.ignoreWarning(parent,child , false);
+              this.ignoreWarning(parent,child);
             }
           }
         }
       }
     },
     revokeAll(){
+      this.saveState();
       Object.keys(this.userChoices).forEach(parent => {
         Object.keys(this.userChoices[parent]).forEach(child => {
           this.changeUserChoice(parent,child ,false)

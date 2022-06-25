@@ -83,12 +83,8 @@ export default {
       row.select(true);
       this.categoryName = item.name;
     },
-    changeSwitchValues(){
-      let obj ={}
-      obj[this.purpose]=this.localSwitchValues
-      this.$emit('changeSwitchValues',obj)
-    },
     changeUserChoice(dataCategory){
+      this.$emit('saveState');
       this.$emit('changeUserChoice',this.purpose,dataCategory ,this.localSwitchValues[dataCategory]);
     }
   },
