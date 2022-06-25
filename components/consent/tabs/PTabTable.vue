@@ -6,6 +6,7 @@
       :item-key="headers[0].value"
       single-select
       @click:row="select"
+      mobile-breakpoint="0"
     >
       <template v-if="tabName === 'purpose' || tabName === 'data'"  v-slot:item.issue="{ item }">
         <v-chip
@@ -44,8 +45,6 @@
     <div v-if="view.showPEmail" id="PEmail" class="mt-4">
       <PEmail :date="view.selected.date" :event="view.selected.event" />
     </div>
-    <div id="lol"></div>
-    <v-btn @click="scrollpage">scrolldown</v-btn>
   </div>
 </template>
 
