@@ -22,7 +22,7 @@
                   {{ item.name }}
                 </v-col>
                 <v-col cols="4">
-                  <v-switch />
+                  <v-switch v-model="localSwitchValues[item.name]" @change="changeUserChoice(item.name)"/>
                 </v-col>
               </v-row>
             </template>
@@ -47,6 +47,17 @@ export default {
         return [];
       },
     },
+    switchvalues:{
+      type: Object,
+      required: false,
+      default() {
+        return [];
+      },
+    },
+    purpose:{
+      type: String,
+      required: true,
+    }
   },
   data() {
     return {
@@ -58,6 +69,7 @@ export default {
           value: "name",
         },
       ],
+      localSwitchValues:this.switchvalues
     };
   },
   computed: {
@@ -71,6 +83,10 @@ export default {
       row.select(true);
       this.categoryName = item.name;
     },
+    changeUserChoice(dataCategory){
+      this.$emit('saveState');
+      this.$emit('changeUserChoice',this.purpose,dataCategory ,this.localSwitchValues[dataCategory]);
+    }
   },
 };
 </script>

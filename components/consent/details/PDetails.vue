@@ -3,7 +3,7 @@
     <PDetailsHeader :category="heading" />
     <v-row>
       <v-col>
-        <PDetailsItems :categories="subitems" />
+        <PDetailsItems :purpose="heading" :categories="subitems" :switchvalues="switchesValues" :key="heading" v-on="$listeners" />
       </v-col>
     </v-row>
     <PSensitivity v-show="showSensitivity" :sensitivity="sensitivity[heading]" />
@@ -18,6 +18,7 @@ export default {
     heading: String,
     subitems: Array,
     showSensitivity: Boolean,
+    switchesValues: Object
   },
   data() {
     return {

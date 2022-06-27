@@ -1,11 +1,12 @@
 <template>
   <div>
+    <PNotification ref="consentNotification" />
     <v-card>
       <v-card-title>
         <v-row>
           <v-col cols="8">{{$t("consent.consent-menu")}}</v-col>
           <v-col cols="4">
-            <v-btn class="float-right error">
+            <v-btn v-if="tab !== 'consent' " class="float-right error" @click="$refs[tab].revokeAll()">
               {{ $t("general.revoke") }}
             </v-btn>
           </v-col>
@@ -26,15 +27,19 @@
         </v-tab-item>
 
         <v-tab-item value="data">
-          <PTabTable tabName="data" />
+          <PTabTable tabName="data" ref="data"/>
         </v-tab-item>
 
         <v-tab-item value="purpose">
-          <PTabTable tabName="purpose" />
+          <PTabTable tabName="purpose" ref="purpose"/>
         </v-tab-item>
       </v-tabs-items>
     </v-card>
-    <PReceiptBtns class="mt-4" />
+    <PReceiptBtns
+      v-if="tab !== 'consent' "
+      class="mt-4"
+      @undoChanges="$refs[tab].loadPreviousState()"
+      @submitChanges="$refs['consentNotification'].showNotification($t('snackbar.msg.submission-succesful'))" />
   </div>
 </template>
 

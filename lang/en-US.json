@@ -31,7 +31,16 @@
       "see-changes": "See Changes",
       "view-changes": "View Changes",
       "send-message": "Send message",
-      "cancel": "Cancel"
+      "cancel": "Cancel",
+      "back": "Back",
+      "next": "Next",
+      "view-issues": "View issues"
+    }
+  },
+  "snackbar":{
+    "msg":{
+      "please-complete-the-consent-guide": "please complete the consent guide",
+      "submission-succesful": "Submission Succesful"
     }
   },
   "placeholder": {

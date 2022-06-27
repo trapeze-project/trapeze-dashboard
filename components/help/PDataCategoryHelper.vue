@@ -10,38 +10,18 @@
           item-key="name"
           @click:row="select"
         >
-          <template v-slot:item="{ item, index }">
-            <tr>
-              <td>
+          <template v-slot:item="{ item, index }" >
+            <tr @click="checkUserChoiceCompleted" >
+              <td >
                 {{ item.name }}
               </td>
-              <td>
-                <v-radio-group v-model="preferences[index]">
+              <td v-for="radio in radioList" :key="radio.key">
+                <v-radio-group v-model="preferences[item.name]">
                   <v-radio
                     class="justify-center"
                     :name="item.name"
-                    value="0"
-                    color="green"
-                  />
-                </v-radio-group>
-              </td>
-              <td>
-                <v-radio-group v-model="preferences[index]">
-                  <v-radio
-                    class="justify-center"
-                    :name="item.name"
-                    value="1"
-                    color="darkgrey"
-                  />
-                </v-radio-group>
-              </td>
-              <td>
-                <v-radio-group v-model="preferences[index]">
-                  <v-radio
-                    class="justify-center"
-                    :name="item.name"
-                    value="2"
-                    color="red"
+                    :value="radio.value"
+                    :color="radio.color"
                   />
                 </v-radio-group>
               </td>
@@ -50,7 +30,7 @@
         </v-data-table>
       </v-col>
     </v-row>
-    <v-row v-show="view.show">
+    <v-row v-if="view.show">
       <v-col>
         <PConsentHelperDataCard :category-name="view.selected" />
       </v-col>
@@ -69,33 +49,62 @@ export default {
       },
     },
   },
+  created(){
+    let obj1 = new Object();
+    for(let purpose of this.categories){
+      obj1[purpose] = null
+    }
+    this.preferences = JSON.parse(JSON.stringify(obj1))
+    
+  },
   data() {
     return {
-      preferences: [],
+      preferences: {},
       view: {
         selected: "",
         show: false,
       },
+      radioList: [
+        {
+          key:'Comfortable',
+          value:0,
+          color:"green"
+        },
+        {
+          key:'No opinion',
+          value:1,
+          color:"red"
+        },
+        {
+          key:'Not comfortable',
+          value:2,
+          color:"red"
+        },
+      ],
       headers: [
         {
           text: "Purpose",
           align: "start",
           value: "name",
+          sortable: true,
         },
         {
           text: "Comfortable",
           align: "center",
           value: "fine",
+          sortable: false,
         },
         {
           text: "No opinion",
           align: "center",
           value: "no",
+          sortable: false,
         },
         {
           text: "Not comfortable",
           align: "center  ",
           value: "neutral",
+          sortable: false,
         },
       ],
     };
@@ -110,7 +119,20 @@ export default {
       row.select(true);
       this.view.selected = item.name;
       this.view.show = true;
+      this.checkUserChoiceCompleted();
     },
-  },
+    checkUserChoiceCompleted(){
+      if(Object.values(this.preferences).filter(x => x !== null).length === this.categories.length){
+        let choices = new Object()
+        for (let purpose of this.categories) {
+          choices[purpose]= this.headers[Number(this.preferences[purpose])+1].text
+        }
+        Object.keys(choices).forEach(key => {
+          choices[key] = choices[key]
+        });
+        this.$emit("userChoinces", choices);
+      }
+    }
+  }
 };
 </script>
