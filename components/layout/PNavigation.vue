@@ -2,7 +2,7 @@
   <div>
     <v-row>
       <v-col>
-        <v-card>
+        <v-card outlined color="transparent">
           <v-list>
             <v-subheader>
               {{ $t("sidebar-title.navigation") }}

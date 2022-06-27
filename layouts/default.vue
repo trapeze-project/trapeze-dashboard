@@ -3,12 +3,9 @@
     <PNavBar />
     <v-main class="mt-1">
       <v-container fluid>
-        <v-row>
-          <v-col class="hidden-sm-and-down" md="2" lg="2">
-            <PNavigation />
-          </v-col>
-          <v-col v-if="$vuetify.breakpoint.smAndDown" cols="12">
-            <v-icon @click.stop="drawer = !drawer">
+        <v-row v-if="$vuetify.breakpoint.smAndDown">
+          <v-col>
+            <v-icon size="30" @click.stop="drawer = !drawer">
               mdi-view-sequential
             </v-icon>
             <v-navigation-drawer
@@ -18,6 +15,24 @@
             >
               <PNavigation />
             </v-navigation-drawer>
+          </v-col>
+          <v-col>
+            <v-btn icon class="float-right" @click.stop="drawerController = !drawerController">
+              <v-img src="/img/company.png" max-width="50" max-height="50" />
+            </v-btn>
+            <v-navigation-drawer
+              v-model="drawerController"
+              absolute
+              temporary
+              right
+            >
+              <PCompanyView />
+            </v-navigation-drawer>
+          </v-col>
+        </v-row>
+        <v-row>
+          <v-col class="hidden-sm-and-down" md="2" lg="2">
+            <PNavigation />
           </v-col>
           <v-col sm="12" md="8" lg="8">
             <nuxt />
@@ -36,6 +51,7 @@ export default {
   data () {
     return {
       drawer: null,
+      drawerController: null,
       group: null
     }
   }
