@@ -1,12 +1,12 @@
 <template>
   <div>
     <v-card>
-      <v-card-title> {{$t("qna.header")}} </v-card-title>
+      <v-card-title> {{ $t("qna.header") }} </v-card-title>
 
       <v-card-text>
         <v-row>
           <v-col cols="7">
-            <p> {{$t("qna.introduction")}} </p>
+            <p> {{ $t("qna.introduction") }} </p>
           </v-col>
           <v-col cols="5" align="right" sm="12">
             <v-btn class="black--text" color="primary" depressed>
@@ -37,7 +37,9 @@
           >
             <v-expansion-panel-header>
               <template v-slot:actions>
-                <v-icon class="icon"> $expand </v-icon>
+                <v-icon class="icon">
+                  $expand
+                </v-icon>
               </template>
               <span class="header">{{ category.title }}</span>
             </v-expansion-panel-header>
@@ -49,7 +51,9 @@
                 >
                   <v-expansion-panel-header>
                     <template v-slot:actions>
-                      <v-icon class="icon" left> $expand </v-icon>
+                      <v-icon class="icon" left>
+                        $expand
+                      </v-icon>
                     </template>
                     <span class="header">{{
                       inquiry.question
@@ -64,7 +68,7 @@
                       v-if="inquiry.references.length"
                       class="mt-4 black--text"
                     >
-                      <span class="font-weight-bold"> {{$t("qna.links-and-sources")}}: </span>
+                      <span class="font-weight-bold"> {{ $t("qna.links-and-sources") }}: </span>
                       <ol>
                         <li v-for="link in inquiry.references" :key="link">
                           <a :href="link" class="black--text">{{ link }}</a>
@@ -83,16 +87,16 @@
 </template>
 
 <script>
-import faq from "../static/data/faq.json";
+import faq from '../static/data/faq.json'
 
 export default {
-  name: "Faq",
-  data() {
+  name: 'Faq',
+  data () {
     return {
-      faq: faq,
-    };
-  },
-};
+      faq
+    }
+  }
+}
 </script>
 
 <style scoped>
