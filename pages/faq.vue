@@ -5,13 +5,8 @@
 
       <v-card-text>
         <v-row>
-          <v-col cols="7">
+          <v-col>
             <p> {{ $t("qna.introduction") }} </p>
-          </v-col>
-          <v-col cols="5" align="right" sm="12">
-            <v-btn class="black--text" color="primary" depressed>
-              {{ $t("btn.labels.i-can-not-find-an-answer") }}
-            </v-btn>
           </v-col>
         </v-row>
 
