@@ -40,7 +40,7 @@
   "snackbar":{
     "msg":{
       "please-complete-the-consent-guide": "please complete the consent guide",
-      "submission-succesful": "Submission Succesful"
+      "submission-successful": "Submission Succesful"
     }
   },
   "placeholder": {

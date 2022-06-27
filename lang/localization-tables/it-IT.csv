@@ -1,0 +1,89 @@
+general|cancel;Cancel
+general|revoke;Revoke all
+general|category;Data Categories
+general|location;Location Data
+general|advertising;Advertising
+general|warning;Warning
+general|access;Access data
+general|unrelatedData;Unrelated Data Category
+general|bioData;Biometric Data
+general|unrelatedDataText;It is very unusual that fingerprints are used for advertising purposes.
+general|bioDataText;Fingerprints are particularly sensitive, since they facilitate identity theft. It is recommended to only provide consent for fingerprint data where absolutely necessary.
+nav|labels|home;Home
+nav|labels|consent;Consent
+nav|labels|data;Data
+nav|labels|purposes;Purposes
+nav|labels|help;Help
+nav|labels|faq;FAQ
+btn|labels|consent-guide;Consent Guide
+btn|labels|i-can-not-find-an-answer;I can't find an answer
+btn|labels|undo-changes;Undo changes
+btn|labels|submit-changes;Submit Changes
+btn|labels|see-changes;See Changes
+btn|labels|view-changes;View Changes
+btn|labels|send-message;Send message
+btn|labels|cancel;Cancel
+btn|labels|back;Back
+btn|labels|next;Next
+btn|labels|view-issues;View issues
+snackbar|msg|please-complete-the-consent-guide;please complete the consent guide
+snackbar|msg|submission-successful;Submission Succesful
+placeholder|search-for-a-question-or-an-answer;Search for a question or an answer
+updates|1;Policy Update
+updates|2;Consent Revocation
+updates|3;Consent Request
+sidebar-title|navigation;Navigation
+sidebar-title|update;Updates
+qna|links-and-sources;Links and Sources
+qna|header;Frequently Asked Questions
+qna|introduction;Find out more about the TRAPEZE privacy dashboard and its underlying concepts.Do not forget to let us know if you cannot find information you are interested in.
+company|name;Company Name
+company|add1;Company Name Street
+company|add2;123456, Company Name City, Italy
+company|website;https://company.name.com
+company|email;name@company.name.com
+company|contact;Contact
+company|position;Data Protection Officer (DPO)
+company|pos-name;Data Protection Officer Name
+home|title;Welcome to your personal privacy dashboard! 
+home|explore-btn;View
+home|welcome-msg;We at Company Name want you to understand how we process your personal data.
+home|welcome-msg2;In this dashboard, you can view what personal data we process and for which purposes. The dashboard allows you to limit our processing of your personal data by configuring your consent. You can
+home|welcome-msg3;The menu in the bottom left gives you a quick overview of the most recent consent-related interactions between you and us.
+home|welcome-msg4;If you are new to the privacy dashboard, we recommend you to try out the consent helper.
+home|purpose|0|name;revoke and give consent,
+home|purpose|1|name;deactivate and activate data categories,
+home|purpose|2|name;deactivate and activate purposes.
+home|help;Consent Guide
+home|items|0|title;Consent
+home|items|0|filename;/img/consent.png
+home|items|0|link;/consent?tab=consent
+home|items|0|content;View all consent interactions between you and us.
+home|items|1|title;Data
+home|items|1|filename;/img/data.png
+home|items|1|link;/consent?tab=data
+home|items|1|content;Tell us which data categories we may process.
+home|items|2|title;Purposes
+home|items|2|filename;/img/purpose.png
+home|items|2|link;/consent?tab=purpose
+home|items|2|content;Tell us which purposes we may address.
+home|items|3|title;TRAPEZE
+home|items|3|filename;/img/favicon.png
+home|items|3|link;http://trapeze-project.eu
+home|items|3|content;Learn more about TRAPEZE on our website.
+consent|consent-menu;Consent Menu
+consent|title;Consent Guide
+consent|location;Your location data
+consent|purpose;Purposes
+consent|text;Location data is data that tells us where you have been at what time. We collect location data via GPS if you give permission in the Company Name mobile application. We use your location data to customize our advertising, to plan our marketing geographically, and to prevent fraud via geographic identity verification.
+consent|text_ad;Advertising is an integral part of our business model, which guarantees that we can continue to provide you with our restaurant recommandations. We use the below data categories to customize advertising. Tell us below which data categories we may use to customize our advertising.
+consent|ad;Advertisement
+consent|marketing;Marketing
+consent|id;Identity Verification
+consent|name;Name
+consent|fingerprint;Fingerprint
+consent|bank;Bank Account
+consent|credit;Credit Card Number
+consent|sensitivity;Sensitivity: 
+consent|sensitivityText;You can configure how sensitive this data is to you. We treat very sensitive data differently and with extensive care
+consent|sensitivityHeader;How sensitive is this data to you?

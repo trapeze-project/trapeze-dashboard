@@ -24,8 +24,27 @@
   },
   "btn": {
     "labels": {
-      "consent-guide": "Consent Guide"
+      "consent-guide": "Consent Guide",
+      "i-can-not-find-an-answer": "I can't find an answer",
+      "undo-changes": "Undo changes",
+      "submit-changes": "Submit Changes",
+      "see-changes": "See Changes",
+      "view-changes": "View Changes",
+      "send-message": "Send message",
+      "cancel": "Cancel",
+      "back": "Back",
+      "next": "Next",
+      "view-issues": "View issues"
     }
+  },
+  "snackbar":{
+    "msg":{
+      "please-complete-the-consent-guide": "please complete the consent guide",
+      "submission-successful": "Submission Succesful"
+    }
+  },
+  "placeholder": {
+    "search-for-a-question-or-an-answer": "Search for a question or an answer"
   },
   "updates": {
     "1": "Policy Update",
@@ -35,6 +54,11 @@
   "sidebar-title": {
     "navigation": "Navigation",
     "update": "Updates"
+  },
+  "qna":{
+    "links-and-sources": "Links and Sources",
+    "header": "Frequently Asked Questions",
+    "introduction": "Find out more about the TRAPEZE privacy dashboard and its underlying concepts.Do not forget to let us know if you cannot find information you are interested in."
   },
   "company": {
     "name": "Company Name",
@@ -93,6 +117,7 @@
     }
   },
   "consent": {
+    "consent-menu": "Consent Menu",
     "title": "Consent Guide",
     "location": "Your location data",
     "purpose": "Purposes",
