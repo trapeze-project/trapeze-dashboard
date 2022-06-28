@@ -23,9 +23,12 @@
               :placeholder="$t('placeholder.search-for-a-question-or-an-answer')"
               outlined
               dense
+              clearable
               append-icon="mdi-magnify"
-              @click:append="() => {}"
-            />
+              v-model="userQuestion"
+              @click:append="search"
+            >
+            </v-text-field>
           </v-col>
         </v-row>
 
@@ -79,6 +82,9 @@
         </v-expansion-panels>
       </v-card-text>
     </v-card>
+    <div>
+      {{this.userQuestion}}
+    </div>
   </div>
 </template>
 
@@ -90,8 +96,15 @@ export default {
   data() {
     return {
       faq: faq,
+      userQuestion:""
+
     };
   },
+  methods:{
+    search(){
+      console.log("Okay I will Search ...")
+    }
+  }
 };
 </script>
 
