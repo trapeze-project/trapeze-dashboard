@@ -27,12 +27,30 @@
               append-icon="mdi-magnify"
               v-model="userQuestion"
               @click:append="search"
+              v-on:keyup.enter="search"
             >
             </v-text-field>
           </v-col>
         </v-row>
+        
+        <v-card v-if="searching">
+          <v-card-title>{{this.matchedQNA.question}}</v-card-title>
+          <v-card-text>
+            <div>{{this.matchedQNA.answer}}</div>
+          </v-card-text>
+          <v-card-actions>
+            <ol>
+                <div class="text--primary"> {{$t("qna.links-and-sources")}}: </div>
+                <li v-for="link in matchedQNA.references" :key="link">
+                  <a :href="link" class="black--text">{{ link }}</a>
+                </li>
+            </ol>
+          </v-card-actions>
+        </v-card>
 
-        <v-expansion-panels accordion>
+
+
+        <v-expansion-panels accordion v-if="!searching">
           <v-expansion-panel
             v-for="category in faq"
             :key="category.title"
@@ -82,9 +100,6 @@
         </v-expansion-panels>
       </v-card-text>
     </v-card>
-    <div>
-      {{this.userQuestion}}
-    </div>
   </div>
 </template>
 
@@ -96,13 +111,40 @@ export default {
   data() {
     return {
       faq: faq,
-      userQuestion:""
+      userQuestion:"",
+      matchedQNA:"",
+      searching:false
 
     };
   },
+  watch: {
+    userQuestion(newuserQuestion, olduserQuestion) {
+      if (!newuserQuestion) {
+        this.searching = false;
+      }
+    }
+  },
   methods:{
     search(){
-      console.log("Okay I will Search ...")
+      let keywords = this.userQuestion.replace(/[&\/\\#,+()$~%.'":*?<>{}]/g, '').split(" ");
+      let modfaq = []
+      for (const category of this.faq){
+        for(const qna of category["qna"]){
+          let matchedKeywords = 0;
+          for(const keyword of keywords){
+            if(qna["question"].includes(keyword) || qna["answer"].includes(keyword)){
+              matchedKeywords++;
+            }
+          }
+          [qna ,matchedKeywords]
+          modfaq.push([qna ,matchedKeywords])
+        }
+      }
+      modfaq.sort(function(a, b) {
+          return b[1] - a[1];
+      });
+      this.matchedQNA = modfaq[0][0]
+      this.searching = true;
     }
   }
 };
