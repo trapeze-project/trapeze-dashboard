@@ -4,13 +4,23 @@
       top
       v-model="snackbar"
       :timeout="timeout"
-      color="orange darken-2"
+      color="green darken-1"
     >
       {{ text }}
+      <template v-slot:action="{ attrs }">
+        <v-btn
+          color="green lighten-4"
+          icon
+          v-bind="attrs"
+          @click="snackbar = false"
+        >
+          <v-icon>mdi-close</v-icon>
+        </v-btn>
+      </template>
 
       <v-progress-linear
         v-model="valueDeterminate"
-        color="orange lighten-2"
+        color="green lighten-2"
       ></v-progress-linear>
     </v-snackbar>
   </div>
