@@ -115,8 +115,6 @@
     "title": "Consent Guide",
     "location": "Your location data",
     "purpose": "Purposes",
-    "text": "Location data is data that tells us where you have been at what time. We collect location data via GPS if you give permission in the Company Name mobile application. We use your location data to customize our advertising, to plan our marketing geographically, and to prevent fraud via geographic identity verification.",
-    "text_ad": "Advertising is an integral part of our business model, which guarantees that we can continue to provide you with our restaurant recommandations. We use the below data categories to customize advertising. Tell us below which data categories we may use to customize our advertising.",
     "ad": "Advertisement",
     "marketing": "Marketing",
     "id": "Identity Verification",
@@ -127,5 +125,11 @@
     "sensitivity": "Sensitivity: ",
     "sensitivityText": "You can configure how sensitive this data is to you. We treat very sensitive data differently and with extensive care",
     "sensitivityHeader": "How sensitive is this data to you?"
-  }
+  },
+  "location": "Location data is data that tells us where you have been at what time. We collect location data via GPS if you give permission in the Company Name mobile application. We use your location data to customize our advertising, to plan our marketing geographically, and to prevent fraud via geographic identity verification.",
+  "name": "We collect your name to properly address you. We store your name from your profile.",
+  "fingerprint": "Biometric data such as fingerprint is used to verify your credentials and prevent identity theft.",
+  "marketing": "Text for marketing category",
+  "advertising": "Advertising is an integral part of our business model, which guarantees that we can continue to provide you with our restaurant recommandations.",
+  "identity verification": "Text for identity verification category"
 }

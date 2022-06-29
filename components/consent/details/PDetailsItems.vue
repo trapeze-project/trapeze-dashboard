@@ -22,7 +22,7 @@
                   {{ item.name }}
                 </v-col>
                 <v-col cols="3">
-                  <v-switch v-model="localSwitchValues[item.name]" @change="changeUserChoice(item.name)"/>
+                  <v-switch v-model="localSwitchValues[item.name]" @change="changeUserChoice(item.name)" />
                 </v-col>
               </v-row>
             </template>
@@ -43,56 +43,56 @@ export default {
     categories: {
       type: Array,
       required: true,
-      default() {
-        return [];
-      },
+      default () {
+        return []
+      }
     },
-    switchvalues:{
+    switchvalues: {
       type: Object,
       required: false,
-      default() {
-        return [];
-      },
+      default () {
+        return []
+      }
     },
-    purpose:{
+    purpose: {
       type: String,
-      required: true,
+      required: true
     }
   },
-  data() {
+  data () {
     return {
       showDataCard: false,
-      categoryName: "",
+      categoryName: '',
       headers: [
         {
-          text: "Name",
-          value: "name",
-        },
+          text: 'Name',
+          value: 'name'
+        }
       ],
-      localSwitchValues:this.switchvalues
-    };
-  },
-  computed: {
-    categoriesTransformed() {
-      return this.categories.map((item) => ({ name: item }));
-    },
-  },
-  methods: {
-    handleClick_dataCat(item, row) {
-      this.showDataCard = true;
-      row.select(true);
-      this.categoryName = item.name;
-    },
-    changeSwitchValues(){
-      let obj ={}
-      obj[this.purpose]=this.localSwitchValues
-      this.$emit('changeSwitchValues',obj)
-    },
-    changeUserChoice(dataCategory){
-      this.$emit('changeUserChoice',this.purpose,dataCategory ,this.localSwitchValues[dataCategory]);
+      localSwitchValues: this.switchvalues
     }
   },
-};
+  computed: {
+    categoriesTransformed () {
+      return this.categories.map(item => ({ name: item }))
+    }
+  },
+  methods: {
+    handleClick_dataCat (item, row) {
+      this.showDataCard = true
+      row.select(true)
+      this.categoryName = item.name
+    },
+    changeSwitchValues () {
+      const obj = {}
+      obj[this.purpose] = this.localSwitchValues
+      this.$emit('changeSwitchValues', obj)
+    },
+    changeUserChoice (dataCategory) {
+      this.$emit('changeUserChoice', this.purpose, dataCategory, this.localSwitchValues[dataCategory])
+    }
+  }
+}
 </script>
 
 <style scoped>

@@ -8,18 +8,18 @@
 <script>
 export default {
   computed: {
-    cssVars() {
+    cssVars () {
       return {
-        "--url": "url(" + this.$config.logo.url + ")",
-      };
+        '--url': 'url(' + this.$config.logo.url + ')'
+      }
     },
-    cssVars_sm() {
+    cssVars_sm () {
       return {
-        "--url": "url(" + this.$config.logo.url_sm + ")",
-      };
-    },
-  },
-};
+        '--url': 'url(' + this.$config.logo.url_sm + ')'
+      }
+    }
+  }
+}
 </script>
 
 <style scoped>

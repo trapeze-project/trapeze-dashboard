@@ -6,7 +6,7 @@
       </v-card-title>
       <v-divider />
       <v-card-text>
-        {{ $t("consent.text_ad") }} [learn more]
+        {{ $t(categoryName.toLowerCase()) }}
         <p />
         <v-row>
           <v-col cols="2">
@@ -29,10 +29,10 @@ export default {
     categoryName: {
       type: String,
       required: true,
-      default: "",
-    },
-  },
-};
+      default: ''
+    }
+  }
+}
 </script>
 
 <style scoped>

@@ -13,29 +13,31 @@
     <v-card-text>
       <p v-html="emailText" />
 
-      <v-btn class="black--text" color="primary"> {{$t("btn.labels.view-changes")}} </v-btn>
+      <v-btn class="black--text" color="primary">
+        {{ $t("btn.labels.view-changes") }}
+      </v-btn>
     </v-card-text>
   </v-card>
 </template>
 
 <script>
-import email from "../../static/data/emailText.json";
+import email from '../../static/data/emailText.json'
 
 export default {
   props: {
     date: {
       type: String,
-      required: true,
+      required: true
     },
     event: {
       type: String,
-      required: true,
-    },
+      required: true
+    }
   },
-  data() {
+  data () {
     return {
-      emailText: email.text,
-    };
-  },
-};
+      emailText: email.text
+    }
+  }
+}
 </script>
