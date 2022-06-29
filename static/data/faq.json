@@ -124,7 +124,7 @@
     "qna": [
       {
         "question": "What is the Consent Guide?",
-        "answer": "The Consent Guide is a tool that allows you to avoid having to read through lengthy privacy policies. It will guide you through a number of questions that allow us to understand your consent preferences. On the basis of these consent preferences, we suggest consent configurations and point you toward potential issues with your currently given consent. It might for instance be that you are not willing to share your location for the purpose of marketing, yet for the purpose of restaurant recommnedations. ",
+        "answer": "The Consent Guide is a tool that allows you to avoid having to read through lengthy privacy policies. It will guide you through a number of questions that allow us to understand your consent preferences. On the basis of these consent preferences, we suggest consent configurations and point you toward potential issues with your currently given consent. It might for instance be that you are not willing to share your location for the purpose of marketing, yet for the purpose of restaurant recommendations. ",
         "references": []
       }
     ]
@@ -134,7 +134,7 @@
     "qna": [
       {
         "question": "Consent",
-        "answer": "According to the GDPR (Art. 4 (11)), consent is a data subject's (your) clear affirmation towards a data controller (us) to process your personal data. Note that data controllers (we) do not always have to collect consent from data subjects (you) to process personal data. For example, a deliverly service needs to process a data subject's (your) address in order to comply with a delivery order. In this case, data controllers (we) do not need to collect consent.",
+        "answer": "According to the GDPR (Art. 4 (11)), consent is a data subject's (your) clear affirmation towards a data controller (us) to process your personal data. Note that data controllers (we) do not always have to collect consent from data subjects (you) to process personal data. For example, a delivery service needs to process a data subject's (your) address in order to comply with a delivery order. In this case, data controllers (we) do not need to collect consent.",
         "references": [
           "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32016R0679"
         ]
