@@ -8,7 +8,7 @@
       mobile-breakpoint="0"
       @click:row="select"
     >
-      <template v-if="tabName === 'purpose' || tabName === 'data'" v-slot:item.issue="{ item }">
+      <template v-if="tabName === 'purpose' " v-slot:item.issue="{ item }">
         <v-chip
           label
           :color="item.issue === '0 issues' ? 'transparent' : 'orange'"
@@ -92,8 +92,6 @@ export default {
           const obj = new Object()
           obj.data = dataCategory
           obj.purpose = this.imports.categoryMap[dataCategory].join(', ')
-          obj.recipient = 'Company A'
-          obj.issue = '0 issues'
           result.push(obj)
         }
       } else if (this.tabName === 'purpose') {
