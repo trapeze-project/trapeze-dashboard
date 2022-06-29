@@ -40,7 +40,7 @@
           </v-card-text>
           <v-card-actions>
             <ol>
-                <div class="text--primary"> {{$t("qna.links-and-sources")}}: </div>
+                <div class="text--primary" v-show="matchedQNA.references.length"> {{$t("qna.links-and-sources")}}: </div>
                 <li v-for="link in matchedQNA.references" :key="link">
                   <a :href="link" class="black--text">{{ link }}</a>
                 </li>
@@ -85,7 +85,7 @@
                       v-if="inquiry.references.length"
                       class="mt-4 black--text"
                     >
-                      <span class="font-weight-bold"> {{$t("qna.links-and-sources")}}: </span>
+                      <span class="font-weight-bold" v-show="inquiry.references.length"> {{$t("qna.links-and-sources")}}: </span>
                       <ol>
                         <li v-for="link in inquiry.references" :key="link">
                           <a :href="link" class="black--text">{{ link }}</a>
@@ -132,7 +132,7 @@ export default {
         for(const qna of category["qna"]){
           let matchedKeywords = 0;
           for(const keyword of keywords){
-            if(qna["question"].includes(keyword) || qna["answer"].includes(keyword)){
+            if(qna["question"].toLowerCase().includes(keyword.toLowerCase()) || qna["answer"].toLowerCase().includes(keyword.toLowerCase())){
               matchedKeywords++;
             }
           }
