@@ -7,17 +7,6 @@
       <v-divider />
       <v-card-text>
         {{ $t(categoryName.toLowerCase()) }}
-        <p />
-        <v-row>
-          <v-col cols="2">
-            <v-img src="/img/pie_chart.jpg" max-width="100" max-height="100" />
-          </v-col>
-          <v-col>
-            <p class="mt-6">
-              0 % of your data are used for the purpose of {{ categoryName }}
-            </p>
-          </v-col>
-        </v-row>
       </v-card-text>
     </v-card>
   </div>

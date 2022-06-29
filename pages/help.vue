@@ -38,7 +38,7 @@
                 <v-divider class="my-3" />
 
                 <div class="my-3">
-                  {{ $t("consent.text") }}
+                  {{ $t(type.toLowerCase()) }}
                 </div>
 
                 <p class="font-weight-bold">
