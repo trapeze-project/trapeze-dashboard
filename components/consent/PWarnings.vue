@@ -12,7 +12,7 @@
     >
       <v-row align="center">
         <v-col class="grow">
-          <p> you have {{ selectedWarnings[dataCategory]["givenConsentValue"]? "" : "not" }} given consent to the data controller to use your {{dataCategory}} data for the purpose of {{purpose}}. but your choice in ConsentHelper was {{selectedWarnings[dataCategory]["consentHelperChoice"]}} </p>
+          <p> you have {{ selectedWarnings[dataCategory]["givenConsentValue"]? "" : "not" }} given consent to the data controller to use your {{$t(dataCategory)}} data for the purpose of {{$t(purpose)}}. but your choice in ConsentHelper was {{$t(selectedWarnings[dataCategory]["consentHelperChoice"])}} </p>
         </v-col>
         <v-col class="shrink">
           <v-btn @click="fixWarnig(dataCategory)">fix</v-btn>

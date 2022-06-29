@@ -13,7 +13,7 @@
           <template v-slot:item="{ item, index }" >
             <tr @click="checkUserChoiceCompleted" >
               <td >
-                {{ item.name }}
+                {{ $t(item.name) }}
               </td>
               <td v-for="radio in radioList" :key="radio.key">
                 <v-radio-group v-model="preferences[item.name]">
@@ -66,42 +66,42 @@ export default {
       },
       radioList: [
         {
-          key:'Comfortable',
+          key:'consent-helper.comfortable',
           value:0,
           color:"green"
         },
         {
-          key:'No opinion',
+          key:'consent-helper.no-opinion',
           value:1,
           color:"red"
         },
         {
-          key:'Not comfortable',
+          key:'consent-helper.not-comfortable',
           value:2,
           color:"red"
         },
       ],
       headers: [
         {
-          text: "Purpose",
+          text: this.$t('consent-helper.purpose'),
           align: "start",
           value: "name",
           sortable: true,
         },
         {
-          text: "Comfortable",
+          text: this.$t('consent-helper.comfortable'),
           align: "center",
           value: "fine",
           sortable: false,
         },
         {
-          text: "No opinion",
+          text: this.$t('consent-helper.no-opinion'),
           align: "center",
           value: "no",
           sortable: false,
         },
         {
-          text: "Not comfortable",
+          text: this.$t('consent-helper.not-comfortable'),
           align: "center  ",
           value: "neutral",
           sortable: false,
@@ -125,7 +125,7 @@ export default {
       if(Object.values(this.preferences).filter(x => x !== null).length === this.categories.length){
         let choices = new Object()
         for (let purpose of this.categories) {
-          choices[purpose]= this.headers[Number(this.preferences[purpose])+1].text
+          choices[purpose]= this.radioList[Number(this.preferences[purpose])].key
         }
         Object.keys(choices).forEach(key => {
           choices[key] = choices[key]

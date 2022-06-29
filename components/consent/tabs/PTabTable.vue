@@ -18,23 +18,20 @@
     </v-data-table>
 
     <PWarnings
-      v-if="view.showPDetails && this.$route.params.consentHelperUserChoices && Object.keys(this.warnings[this.view.selected.purpose]).length"
-      :selectedWarnings="warnings[this.view.selected.purpose]"
-      :purpose="this.view.selected.purpose"
-      :key="this.view.selected.purpose"
+      v-if="view.showPDetails && this.$route.params.consentHelperUserChoices && Object.keys(this.warnings[this.view.selected.untranslated]).length"
+      :selectedWarnings="warnings[this.view.selected.untranslated]"
+      :purpose="this.view.selected.untranslated"
+      :key="this.view.selected.untranslated"
       @ignoreWarning="ignoreWarning"
       @changeUserChoice="changeUserChoice"
       @saveState="saveState"
     />
 
-
-
-
     <PDetails 
       class="mt-4"
       v-if="view.showPDetails"
-      :heading="view.selected[this.tabName]"
-      :subitems= "pDetailsSubItemsMap[view.selected[this.tabName]]"
+      :heading="view.selected.untranslated"
+      :subitems= "pDetailsSubItemsMap[view.selected.untranslated]"
       :showSensitivity="false"
       :switchesValues="this.calculateBottonsValues"
       :key="Object.values(this.calculateBottonsValues).toString()"
@@ -44,6 +41,7 @@
     <div v-if="view.showPEmail" id="PEmail" class="mt-4">
       <PEmail :date="view.selected.date" :event="view.selected.event" />
     </div>
+    <div>{{this.$route.params.consentHelperUserChoices}}</div>
   </div>
 </template>
 
@@ -144,9 +142,9 @@ export default {
     },
     calculateCategoryMap(){
       this.imports.categoryMap =  examplePolicy.reduce((total, currentValue)=>{
-        let purpose = currentValue["dpv:Purpose"]["@class"].substring(4)
+        let purpose = currentValue["dpv:Purpose"]["@class"].replace(':','.').replace(/ /g,'-').toLowerCase();
         currentValue["dpv:PersonalDataCategory"].forEach((item, index)=>{
-          let personalDataCategory = item["@class"].substring(4);
+          let personalDataCategory = item["@class"].replace(':','.').replace(/ /g,'-').toLowerCase();
           if(!(personalDataCategory in total)){
             total[personalDataCategory] =[]
           }
@@ -157,9 +155,9 @@ export default {
     },
     calculatePurposeMap(){
       this.imports.purposeMap = examplePolicy.reduce((total, currentValue)=>{
-        let purpose = currentValue["dpv:Purpose"]["@class"].substring(4)
+        let purpose = currentValue["dpv:Purpose"]["@class"].replace(':','.').replace(/ /g,'-').toLowerCase();
         currentValue["dpv:PersonalDataCategory"].forEach((item, index)=>{
-          let personalDataCategory = item["@class"].substring(4);
+          let personalDataCategory = item["@class"].replace(':','.').replace(/ /g,'-').toLowerCase();
           if(!(purpose in total)){
             total[purpose] =[]
           }
@@ -173,7 +171,7 @@ export default {
       for(const purpose of Object.keys(this.userChoices)){
         for(const dataCategory of Object.keys(this.userChoices[purpose])){
           if(this.userChoices[purpose][dataCategory]){
-            if(["No opinion","Not comfortable"].includes(this.consentHelperUserChoices[purpose][dataCategory])){
+            if(["consent-helper.no-opinion","consent-helper.not-comfortable"].includes(this.consentHelperUserChoices[purpose][dataCategory])){
               if(!result[purpose]){
                 result[purpose] = {}
               }
@@ -248,8 +246,9 @@ export default {
       if (this.tabName === "data"){ 
         for(const dataCategory of Object.keys(this.imports.categoryMap)){
           let obj = new Object();
-          obj.data = dataCategory
-          obj.purpose = this.imports.categoryMap[dataCategory].join(', ');
+          obj.untranslated = dataCategory;
+          obj.data = this.$t(dataCategory);
+          obj.purpose = this.imports.categoryMap[dataCategory].map((item)=>{return this.$t(item)}).join(', ');
           obj.recipient = 'Company A'
           obj.issue = '0 issues'
           result.push(obj);
@@ -257,8 +256,9 @@ export default {
       }else if( this.tabName === "purpose"){
         for(const purpose of Object.keys(this.imports.purposeMap)){
           let obj = new Object();
-          obj.purpose = purpose;
-          obj.data = this.imports.purposeMap[purpose].join(', ');
+          obj.untranslated = purpose;
+          obj.purpose = this.$t(purpose);
+          obj.data = this.imports.purposeMap[purpose].map((item)=>{return this.$t(item)}).join(', ');
           if(this.$route.params.consentHelperUserChoices && this.warnings[purpose]){
             let issuesCounter = Object.keys(this.warnings[purpose]).length
             obj.issue = issuesCounter +' issues'
@@ -272,9 +272,8 @@ export default {
 
     },
     calculateBottonsValues(){
-        if(this.view.selected  !== ''){  
-          let purposesChoices = JSON.parse(JSON.stringify(this.userChoices[this.view.selected[this.tabName]])); 
-          return purposesChoices
+        if(this.view.selected  !== ''){
+          return JSON.parse(JSON.stringify(this.userChoices[this.view.selected.untranslated])); 
         }
     }
   }
