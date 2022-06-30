@@ -1,6 +1,7 @@
 <template>
   <div >
-    Warnings
+    <b class="ml-3">{{$t('consent.warnings')}}</b>
+    
     <v-alert
       shaped
       dense
@@ -9,6 +10,7 @@
       type="warning"
       v-for="dataCategory in Object.keys(selectedWarnings)"
       :key="dataCategory"
+      class="mx-1"
     >
       <v-row align="center">
         <v-col class="grow">

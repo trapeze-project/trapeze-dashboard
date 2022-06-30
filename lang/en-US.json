@@ -140,7 +140,8 @@
     "credit": "Credit Card Number",
     "sensitivity": "Sensitivity: ",
     "sensitivityText": "You can configure how sensitive this data is to you. We treat very sensitive data differently and with extensive care",
-    "sensitivityHeader": "How sensitive is this data to you?"
+    "sensitivityHeader": "How sensitive is this data to you?",
+    "warnings":"Warnings"
   },
   "consent-helper":{
     "purpose": "Purpose",

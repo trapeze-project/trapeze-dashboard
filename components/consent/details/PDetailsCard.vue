@@ -2,7 +2,7 @@
   <div>
     <v-card class="mr-4">
       <v-card-title>
-        {{ categoryName }}
+        {{ $t(categoryName) }}
       </v-card-title>
       <v-divider />
       <v-card-text>
