@@ -19,7 +19,7 @@
             <template #item.name="{ item }">
               <v-row align="center" justify="center">
                 <v-col class="fill-height" cols="8">
-                  {{ item.name }}
+                  {{$t(item.name)}}
                 </v-col>
                 <v-col cols="4">
                   <v-switch v-model="localSwitchValues[item.name]" @change="changeUserChoice(item.name)"/>

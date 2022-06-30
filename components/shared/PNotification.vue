@@ -4,13 +4,23 @@
       top
       v-model="snackbar"
       :timeout="timeout"
-      color="orange darken-2"
+      :color="`${color} darken-1`"
     >
       {{ text }}
+      <template v-slot:action="{ attrs }">
+        <v-btn
+          icon
+          :color="`${color} lighten-4`"
+          v-bind="attrs"
+          @click="snackbar = false"
+        >
+          <v-icon>mdi-close</v-icon>
+        </v-btn>
+      </template>
 
       <v-progress-linear
+        :color="`${color} lighten-2`"
         v-model="valueDeterminate"
-        color="orange lighten-2"
       ></v-progress-linear>
     </v-snackbar>
   </div>
@@ -22,6 +32,7 @@
       return{
         snackbar: false,
         text: null,
+        color:"",
         timeout: 5000,
         valueDeterminate : 100,
         interval: null,
@@ -30,8 +41,9 @@
       } 
     },
     methods:{
-      showNotification(text){
+      showNotification(text, color){
         this.text = text
+        this.color = color
         clearInterval(this.interval)
         this.snackbar = true;
         this.valueDeterminate = 100
