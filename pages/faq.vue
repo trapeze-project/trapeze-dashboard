@@ -110,12 +110,23 @@ export default {
   name: "Faq",
   data() {
     return {
-      faq: faq,
+      faq: "",
       userQuestion:"",
       matchedQNA:"",
       searching:false
 
     };
+  },
+  created(){
+    if(this.$i18n.locale === 'en'){
+      this.faq  =faq
+    }else if(this.$i18n.locale === 'de'){
+      this.faq  =faq
+    }else if(this.$i18n.locale === 'it'){
+      this.faq  =faq
+    }else if(this.$i18n.locale === 'fr'){
+      this.faq  =faq
+    }
   },
   watch: {
     userQuestion(newuserQuestion, olduserQuestion) {
