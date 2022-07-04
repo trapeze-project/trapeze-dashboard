@@ -17,7 +17,7 @@ export default {
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
-  css: [],
+  css: ['~/assets/css/main'],
   serverMiddleware: [
   ],
 
@@ -29,8 +29,8 @@ export default {
   components: [
     {
       path: '~/components', // will get any components nested in let's say /components/test too
-      pathPrefix: false,
-    },
+      pathPrefix: false
+    }
   ],
 
   // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)

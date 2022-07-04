@@ -6,6 +6,7 @@
   },
   "logo": {
     "url": "/img/trapeze_logo.png",
+    "url_sm": "/img/favicon.png",
     "slogan": "| Privacy Dashboard"
   },
   "background": {

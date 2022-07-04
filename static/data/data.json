@@ -1,32 +1,22 @@
 [
   {
     "data": "Location",
-    "purpose": "None",
-    "recipient": "None",
-    "issue": "0 issues"
+    "purpose": "None"
   },
   {
     "data": "Bank Account",
-    "purpose": "Advertising, Marketing",
-    "recipient": "Company A",
-    "issue": "2 issues"
+    "purpose": "Advertising, Marketing"
   },
   {
     "data": "Credit Card Number",
-    "purpose": "Advertising, Marketing, Identity Verification",
-    "recipient": "Company A",
-    "issue": "2 issues"
+    "purpose": "Advertising, Marketing, Identity Verification"
   },
   {
     "data": "Fingerprint",
-    "purpose": "Advertising",
-    "recipient": "Company A",
-    "issue": "1 issue"
+    "purpose": "Advertising"
   },
   {
     "data": "Name",
-    "purpose": "Advertising, Marketing, Identity Verification, and 5 more",
-    "recipient": "Company A",
-    "issue": "0 issues"
+    "purpose": "Advertising, Marketing, Identity Verification, and 5 more"
   }
 ]

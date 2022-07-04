@@ -3,7 +3,7 @@
     <PDetailsHeader :category="heading" />
     <v-row>
       <v-col>
-        <PDetailsItems :purpose="heading" :categories="subitems" :switchvalues="switchesValues" :key="heading" v-on="$listeners" />
+        <PDetailsItems :key="heading" :purpose="heading" :categories="subitems" :switchvalues="switchesValues" v-on="$listeners" />
       </v-col>
     </v-row>
     <PSensitivity v-show="showSensitivity" :sensitivity="sensitivity[heading]" />
@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import sensitivity from "../../../static/data/sensitivity.json";
+import sensitivity from '../../../static/data/sensitivity.json'
 
 export default {
   props: {
@@ -20,10 +20,10 @@ export default {
     showSensitivity: Boolean,
     switchesValues: Object
   },
-  data() {
+  data () {
     return {
-      sensitivity: sensitivity
-    };
-  },
-};
+      sensitivity
+    }
+  }
+}
 </script>
