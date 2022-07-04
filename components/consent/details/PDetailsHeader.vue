@@ -13,7 +13,7 @@
     <v-divider />
 
     <v-card-text>
-      {{ $t("consent.text") }}
+      {{ $t(category.toLowerCase()) }}
     </v-card-text>
   </v-card>
 </template>
@@ -24,12 +24,12 @@ export default {
     category: {
       type: String,
       required: true,
-      default() {
-        return [];
-      },
-    },
-  },
-};
+      default () {
+        return []
+      }
+    }
+  }
+}
 </script>
 
 <style scoped>

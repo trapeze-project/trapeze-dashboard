@@ -2,7 +2,7 @@
   <div>
     <v-row>
       <v-col>
-        <v-card>
+        <v-card outlined color="transparent">
           <v-list>
             <v-subheader>
               {{ $t("sidebar-title.navigation") }}
@@ -33,20 +33,20 @@ export default {
     group: {
       type: null,
       required: false,
-      default: null,
-    },
+      default: null
+    }
   },
-  data() {
+  data () {
     return {
       links: [
-        { to: "/", label: "nav.labels.home" },
-        { to: "/consent?tab=consent", label: "nav.labels.consent" },
-        { to: "/consent?tab=data", label: "nav.labels.data" },
-        { to: "/consent?tab=purpose", label: "nav.labels.purposes" },
-        { to: "/help", label: "nav.labels.help" },
-        { to: "/faq", label: "nav.labels.faq" },
+        { to: '/', label: 'nav.labels.home' },
+        { to: '/consent?tab=consent', label: 'nav.labels.consent' },
+        { to: '/consent?tab=data', label: 'nav.labels.data' },
+        { to: '/consent?tab=purpose', label: 'nav.labels.purposes' },
+        { to: '/help', label: 'nav.labels.help' },
+        { to: '/faq', label: 'nav.labels.faq' }
       ]
-    };
-  },
-};
+    }
+  }
+}
 </script>

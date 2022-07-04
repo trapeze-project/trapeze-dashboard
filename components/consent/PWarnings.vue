@@ -3,6 +3,9 @@
     <b class="ml-3">{{$t('consent.warnings')}}</b>
     
     <v-alert
+      v-for="dataCategory in Object.keys(selectedWarnings)"
+      :key="dataCategory"
+      v-model="warningSwitches[dataCategory]"
       shaped
       dense
       dark
@@ -16,26 +19,49 @@
         <v-col class="grow">
           <p> you have {{ selectedWarnings[dataCategory]["givenConsentValue"]? "" : "not" }} given consent to the data controller to use your {{$t(dataCategory)}} data for the purpose of {{$t(purpose)}}. but your choice in ConsentHelper was {{$t(selectedWarnings[dataCategory]["consentHelperChoice"])}} </p>
         </v-col>
-        <v-col class="shrink">
-          <v-btn @click="fixWarnig(dataCategory)">fix</v-btn>
+        <v-spacer />
+        <v-col
+          class=""
+          cols="6"
+          sm="2"
+          md="2"
+          lg="1"
+          align="right"
+        >
+          <v-btn @click="fixWarnig(dataCategory)">
+            fix
+          </v-btn>
         </v-col>
-        <v-col class="shrink">
-          <v-btn @click="closeWarnig(dataCategory)">ignore</v-btn>
+        <v-col
+          class=""
+          cols="6"
+          sm="2"
+          md="2"
+          lg="1"
+          align="right"
+        >
+          <v-btn @click="closeWarnig(dataCategory)">
+            ignore
+          </v-btn>
         </v-col>
       </v-row>
     </v-alert>
     <div class="float-right">
-      <v-btn class="white--text " color="red" @click="fixAllWarnigs">Fix All</v-btn>
-      <v-btn class="black--text " color="primary" @click="closeAllWarnings">Ignore All</v-btn>
+      <v-btn class="white--text " color="red" @click="fixAllWarnigs">
+        Fix All
+      </v-btn>
+      <v-btn class="black--text " color="primary" @click="closeAllWarnings">
+        Ignore All
+      </v-btn>
     </div>
-    <br/>
+    <br>
   </div>
 </template>
 
 <script>
 export default {
   props: {
-    selectedWarnings:Object,
+    selectedWarnings: Object,
     purpose: String
   },
   methods: {
@@ -59,7 +85,7 @@ export default {
         this.$emit('changeUserChoice',this.purpose,dataCategory ,false);
       }
     }
-  },
+  }
 }
 </script>
 

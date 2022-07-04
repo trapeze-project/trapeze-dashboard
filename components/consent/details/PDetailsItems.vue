@@ -5,8 +5,8 @@
     </p>
     <p />
     <v-row>
-      <v-col cols="4">
-        <v-card class="ml-2">
+      <v-col cols="12" xs="12" sm="12" md="6">
+        <v-card class="mx-2">
           <v-data-table
             :headers="headers"
             :items="categoriesTransformed"
@@ -21,15 +21,15 @@
                 <v-col class="fill-height" cols="8">
                   {{$t(item.name)}}
                 </v-col>
-                <v-col cols="4">
-                  <v-switch v-model="localSwitchValues[item.name]" @change="changeUserChoice(item.name)"/>
+                <v-col cols="3">
+                  <v-switch v-model="localSwitchValues[item.name]" @change="changeUserChoice(item.name)" />
                 </v-col>
               </v-row>
             </template>
           </v-data-table>
         </v-card>
       </v-col>
-      <v-col v-show="showDataCard">
+      <v-col v-show="showDataCard" cols="12" xs="12" sm="12" md="6">
         <PDetailsCard :category-name="categoryName" />
       </v-col>
     </v-row>
@@ -43,52 +43,52 @@ export default {
     categories: {
       type: Array,
       required: true,
-      default() {
-        return [];
-      },
+      default () {
+        return []
+      }
     },
-    switchvalues:{
+    switchvalues: {
       type: Object,
       required: false,
-      default() {
-        return [];
-      },
+      default () {
+        return []
+      }
     },
-    purpose:{
+    purpose: {
       type: String,
-      required: true,
+      required: true
     }
   },
-  data() {
+  data () {
     return {
       showDataCard: false,
-      categoryName: "",
+      categoryName: '',
       headers: [
         {
-          text: "Name",
-          value: "name",
-        },
+          text: 'Name',
+          value: 'name'
+        }
       ],
-      localSwitchValues:this.switchvalues
-    };
+      localSwitchValues: this.switchvalues
+    }
   },
   computed: {
-    categoriesTransformed() {
-      return this.categories.map((item) => ({ name: item }));
-    },
+    categoriesTransformed () {
+      return this.categories.map(item => ({ name: item }))
+    }
   },
   methods: {
-    handleClick_dataCat(item, row) {
-      this.showDataCard = true;
-      row.select(true);
-      this.categoryName = item.name;
+    handleClick_dataCat (item, row) {
+      this.showDataCard = true
+      row.select(true)
+      this.categoryName = item.name
     },
     changeUserChoice(dataCategory){
       this.$emit('saveState');
       this.$emit('changeUserChoice',this.purpose,dataCategory ,this.localSwitchValues[dataCategory]);
     }
-  },
-};
+  }
+}
 </script>
 
 <style scoped>
