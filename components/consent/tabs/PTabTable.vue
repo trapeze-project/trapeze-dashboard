@@ -295,7 +295,7 @@ export default {
         if(this.view.selected  !== ''){
           return JSON.parse(JSON.stringify(this.userChoices[this.view.selected.untranslated])); 
         }
-      }
+      
     }
   }
 }
