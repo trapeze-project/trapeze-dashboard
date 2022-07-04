@@ -1,6 +1,5 @@
-[
-  {
-    "title": "TRAPEZE",
+{
+  "TRAPEZE":{
     "qna": [
       {
         "question": "What is TRAPEZE?",
@@ -49,8 +48,7 @@
       }
     ]
   },
-  {
-    "title": "Consent",
+  "Consent":{
     "qna": [
       {
         "question": "What is consent?",
@@ -95,8 +93,7 @@
       }
     ]
   },
-  {
-    "title": "Personal Data",
+  "Personal Data":{
     "qna": [
       {
         "question": "What is personal data?",
@@ -107,8 +104,7 @@
       }
     ]
   },
-  {
-    "title": "Purposes",
+  "Purposes":{
     "qna": [
       {
         "question": "What is a purpose?",
@@ -119,8 +115,7 @@
       }
     ]
   },
-  {
-    "title": "Consent Guide",
+  "Consent Guide":{
     "qna": [
       {
         "question": "What is the Consent Guide?",
@@ -129,8 +124,7 @@
       }
     ]
   },
-  {
-    "title": "Glossary",
+  "Glossary":{
     "qna": [
       {
         "question": "Consent",
@@ -234,4 +228,4 @@
       }
     ]
   }
-]
+}

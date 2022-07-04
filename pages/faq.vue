@@ -47,8 +47,8 @@
 
         <v-expansion-panels accordion v-if="!searching">
           <v-expansion-panel
-            v-for="category in faq"
-            :key="category.title"
+            v-for="category in Object.keys(this.faq)"
+            :key="category"
             class="mb-1"
           >
             <v-expansion-panel-header>
@@ -57,12 +57,12 @@
                   $expand
                 </v-icon>
               </template>
-              <span class="header">{{ category.title }}</span>
+              <span class="header">{{ category }}</span>
             </v-expansion-panel-header>
             <v-expansion-panel-content>
               <v-expansion-panels flat>
                 <v-expansion-panel
-                  v-for="inquiry in category.qna"
+                  v-for="inquiry in faq[category]['qna']"
                   :key="inquiry.question"
                 >
                   <v-expansion-panel-header>
@@ -142,8 +142,8 @@ export default {
     search(){
       let keywords = this.userQuestion.replace(/[&\/\\#,+()$~%.'":*?<>{}]/g, '').split(" ");
       let modfaq = []
-      for (const category of this.faq){
-        for(const qna of category["qna"]){
+      for (const category of Object.keys(this.faq)){
+        for(const qna of this.faq[category]["qna"]){
           let matchedKeywords = 0;
           for(const keyword of keywords){
             if(qna["question"].toLowerCase().includes(keyword.toLowerCase()) || qna["answer"].toLowerCase().includes(keyword.toLowerCase())){
