@@ -222,7 +222,7 @@ export default {
         document.getElementById('PDetails').scrollIntoView({ behavior: 'smooth' })
       }
       if (this.tabName === 'purpose') {
-        if (this.view.showPDetails && this.$route.params.consentHelperUserChoices && Object.keys(this.warnings[this.view.selected.purpose]).length) {
+        if (this.view.showPDetails && this.$route.params.consentHelperUserChoices && Object.keys(this.warnings[this.view.selected.untranslated]).length) {
           document.getElementById('PWarnings').scrollIntoView({ behavior: 'smooth' })
         } else {
           document.getElementById('PDetails').scrollIntoView({ behavior: 'smooth' })

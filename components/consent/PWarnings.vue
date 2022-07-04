@@ -13,8 +13,7 @@
     >
       <v-row align="center" class="pa-1">
         <v-col class="" cols="12" sm="12" md="8" lg="10">
-          <p> you have {{ selectedWarnings[dataCategory]["givenConsentValue"]? "" : "not" }} given consent to the data controller to use your {{$t(dataCategory)}} data for the purpose of {{$t(purpose)}}. but your choice in ConsentHelper was {{$t(selectedWarnings[dataCategory]["consentHelperChoice"])}} </p>
-        </v-col>
+          <p>{{$t('consent.warningMsg',{dataCategory:$t(dataCategory) , purpose: $t(purpose) , helperChoices:$t(selectedWarnings[dataCategory]["consentHelperChoice"])})}}</p>        </v-col>
         <v-spacer />
         <v-col
           class=""
