@@ -103,11 +103,7 @@
 </template>
 
 <script>
-import faqEnUS from "../static/data/faq-enUS.json";
-import faqDeDE from "../static/data/faq-deDE.json";
-import faqItIT from "../static/data/faq-itIT.json";
-import faqFrFR from "../static/data/faq-frFR.json";
-
+import faq from "../static/data/faq.json";
 
 export default {
   name: 'Faq',
@@ -122,13 +118,13 @@ export default {
   },
   created(){
     if(this.$i18n.locale === 'en'){
-      this.faq  = faqEnUS
+      this.faq  =faq
     }else if(this.$i18n.locale === 'de'){
-      this.faq  =faqDeDE
+      this.faq  =faq
     }else if(this.$i18n.locale === 'it'){
-      this.faq  =faqItIT
+      this.faq  =faq
     }else if(this.$i18n.locale === 'fr'){
-      this.faq  =faqFrFR
+      this.faq  =faq
     }
   },
   watch: {
