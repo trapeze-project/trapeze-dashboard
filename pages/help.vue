@@ -20,7 +20,7 @@
               <v-divider
                 v-if="index < Object.keys(imports.dataCategoryMap).length - 1"
                 :key="`${index}-divider`"
-              />
+              ></v-divider>
             </template>
           </v-stepper-header>
 
@@ -38,14 +38,14 @@
                 <v-divider class="my-3" />
 
                 <div class="my-3">
-                  {{ $t(type.toLowerCase()) }}
+                  {{ $t("consent.text") }}
                 </div>
 
                 <p class="font-weight-bold">
                   {{ $t("consent-helper.purpose") }}
                 </p>
 
-                <PDataCategoryHelper class="mt-3" :categories="imports.dataCategoryMap[Object.keys(imports.dataCategoryMap)[page-1]]" @userChoinces="collectUserChoices" />
+                <PDataCategoryHelper class="mt-3" :categories="imports.dataCategoryMap[Object.keys(imports.dataCategoryMap)[page-1]]" @userChoinces="collectUserChoices"/>
               </div>
 
               <div class="text-center mt-5 mb-1">
@@ -54,26 +54,23 @@
                   color="light"
                   :disabled="page === 1"
                   @click="page--"
+                  >{{$t("btn.labels.back")}}</v-btn
                 >
-                  {{ $t("btn.labels.back") }}
-                </v-btn>
                 <v-btn
-                  v-if="page < Object.keys(imports.dataCategoryMap).length"
                   class="black--text"
                   color="primary"
+                  v-if="page < Object.keys(imports.dataCategoryMap).length"
                   :disabled="page === Object.keys(imports.dataCategoryMap).length"
                   @click="page++"
+                  >{{$t("btn.labels.next")}}</v-btn
                 >
-                  {{ $t("btn.labels.next") }}
-                </v-btn>
                 <v-btn
-                  v-if="page === Object.keys(imports.dataCategoryMap).length"
                   class="black--text"
                   color="primary"
+                  v-if="page === Object.keys(imports.dataCategoryMap).length"
                   @click="loadConsentPage()"
+                  >{{$t("btn.labels.view-issues")}}</v-btn
                 >
-                  {{ $t("btn.labels.view-issues") }}
-                </v-btn>
               </div>
             </v-stepper-content>
           </v-stepper-items>
@@ -81,23 +78,24 @@
       </v-card-text>
     </v-card>
   </div>
+
 </template>
 
 <script>
-import examplePolicy from '../static/data/example.policy.json'
+import examplePolicy from "../static/data/example.policy.json";
 export default {
-  name: 'Helper',
-  data () {
+  name: "Helper",
+  data() {
     return {
       imports: {
-        dataCategoryMap: ''
+        dataCategoryMap: "",
       },
       consentHelperUserChoices:{},
       page: 1,
       dataCategoryCompletedChoosement :[]
     };
   },
-  created () {
+  created() {
     this.calculateDataCategoryMap()
   },
   methods: {
@@ -138,10 +136,10 @@ export default {
           }
           total[personalDataCategory].push(purpose)
         })
-        return total
-      }, {})
-    }
-
+        return total;
+      },{});
+    },
+    
   }
-}
+};
 </script>

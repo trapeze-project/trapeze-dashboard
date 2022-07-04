@@ -26,21 +26,21 @@ export default {
     title: {
       type: String,
       required: true,
-      default: 'Title'
+      default: "Title",
     },
     content: {
       type: String,
       required: true,
-      default: 'Content'
+      default: "Content",
     },
     filename: {
       type: String,
-      required: true
+      required: true,
     },
     href: {
       type: String,
-      required: true
-    }
-  }
-}
+      required: true,
+    },
+  },
+};
 </script>

@@ -1,12 +1,17 @@
 <template>
   <div>
     <v-card>
-      <v-card-title> {{ $t("qna.header") }} </v-card-title>
+      <v-card-title> {{$t("qna.header")}} </v-card-title>
 
       <v-card-text>
         <v-row>
-          <v-col>
-            <p> {{ $t("qna.introduction") }} </p>
+          <v-col cols="7">
+            <p> {{$t("qna.introduction")}} </p>
+          </v-col>
+          <v-col cols="5" align="right">
+            <v-btn class="black--text" color="primary" depressed>
+              {{ $t("btn.labels.i-can-not-find-an-answer") }}
+            </v-btn>
           </v-col>
         </v-row>
 
@@ -53,9 +58,7 @@
           >
             <v-expansion-panel-header>
               <template v-slot:actions>
-                <v-icon class="icon">
-                  $expand
-                </v-icon>
+                <v-icon class="icon"> $expand </v-icon>
               </template>
               <span class="header">{{ category.title }}</span>
             </v-expansion-panel-header>
@@ -67,9 +70,7 @@
                 >
                   <v-expansion-panel-header>
                     <template v-slot:actions>
-                      <v-icon class="icon" left>
-                        $expand
-                      </v-icon>
+                      <v-icon class="icon" left> $expand </v-icon>
                     </template>
                     <span class="header">{{
                       inquiry.question
@@ -110,8 +111,8 @@ import faqFrFR from "../static/data/faq-frFR.json";
 
 
 export default {
-  name: 'Faq',
-  data () {
+  name: "Faq",
+  data() {
     return {
       faq: "",
       userQuestion:"",

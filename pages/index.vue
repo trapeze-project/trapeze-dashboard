@@ -2,7 +2,7 @@
   <div id="index">
     <v-row justify="center" align="center">
       <v-col>
-        <PWlcmMsg />
+        <PWlcmMsg/>
       </v-col>
     </v-row>
 
@@ -27,5 +27,5 @@
 
 <script>
 export default {
-}
+};
 </script>
