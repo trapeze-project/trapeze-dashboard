@@ -45,8 +45,6 @@
     <div v-if="view.showPEmail" id="PEmail" class="mt-4">
       <PEmail :date="view.selected.date" :event="view.selected.event" />
     </div>
-    <div>{{this.warnings}}</div>
-    <div>{{this.consentHelperUserChoices}}</div>
   </div>
 </template>
 
