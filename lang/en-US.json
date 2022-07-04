@@ -22,6 +22,14 @@
       "faq": "FAQ"
     }
   },
+  "dpv":{
+    "location":"location",
+    "name":"name",
+    "fingerprint":"fingerprint",
+    "identity-verification":"identity verification",
+    "marketing":"marketing",
+    "advertising":"advertising"
+  },
   "btn": {
     "labels": {
       "consent-guide": "Consent Guide",
@@ -35,6 +43,12 @@
       "back": "Back",
       "next": "Next",
       "view-issues": "View issues"
+    }
+  },
+  "snackbar":{
+    "msg":{
+      "please-complete-the-consent-guide": "please complete the consent guide",
+      "submission-succesful": "Submission Succesful"
     }
   },
   "placeholder": {
@@ -82,39 +96,58 @@
         "name": "deactivate and activate purposes."
       }
     },
-    "help": "Consent Guide",
     "items": {
-      "0": {
-        "title": "Consent",
-        "filename": "/img/consent.png",
-        "link": "/consent?tab=consent",
-        "content": "View all consent interactions between you and us."
-      },
-      "1": {
-        "title": "Data",
-        "filename": "/img/data.png",
-        "link": "/consent?tab=data",
-        "content": "Tell us which data categories we may process."
-      },
-      "2": {
-        "title": "Purposes",
-        "filename": "/img/purpose.png",
-        "link": "/consent?tab=purpose",
-        "content": "Tell us which purposes we may address."
-      },
-      "3": {
-        "title": "TRAPEZE",
-        "filename": "/img/favicon.png",
-        "link": "http://trapeze-project.eu",
-        "content": "Learn more about TRAPEZE on our website."
+        "0": {
+            "title": "Consent",
+            "filename": "/img/consent.png",
+            "link": "/consent?tab=consent",
+            "content": "View when and what consent you gave us."
+        },
+        "1": {
+            "title": "Data",
+            "filename": "/img/data.png",
+            "link": "/consent?tab=data",
+            "content": "Tell us which data categories we may process."
+        },
+        "2": {
+            "title": "Purposes",
+            "filename": "/img/purpose.png",
+            "link": "/consent?tab=purpose",
+            "content": "Tell us which purposes we may address."
+        },
+        "3": {
+            "title": "TRAPEZE",
+            "filename": "/img/favicon.png",
+            "link": "http://trapeze-project.eu",
+            "content": "Learn more about TRAPEZE."
       }
+    },
+    "consent": {
+        "consent-menu": "Consent Menu",
+        "title": "Consent Guide",
+        "location": "Your location data",
+        "purpose": "Purposes",
+        "text": "Location data is data that tells us where you have been at what time. We collect location data via GPS if you give permission in the Company Name mobile application. We use your location data to customize our advertising, to plan our marketing geographically, and to prevent fraud via geographic identity verification.",
+        "text_ad": "Advertising is an integral part of our business model, which guarantees that we can continue to provide you with our restaurant recommandations. We use the below data categories to customize advertising. Tell us below which data categories we may use to customize our advertising.",
+        "ad": "Advertisement",
+        "marketing": "Marketing",
+        "id": "Identity Verification",
+        "name": "Name",
+        "fingerprint": "Fingerprint",
+        "bank": "Bank Account",
+        "credit": "Credit Card Number",
+        "sensitivity": "Sensitivity: ",
+        "sensitivityText": "You can configure how sensitive this data is to you. We treat very sensitive data differently and with extensive care",
+        "sensitivityHeader": "How sensitive is this data to you?"
     }
   },
   "consent": {
     "consent-menu": "Consent Menu",
     "title": "Consent Guide",
-    "location": "Location",
-    "purpose": "Purposes",
+    "location": "Your location data",
+    "purposes": "Purposes",
+    "text": "Location data is data that tells us where you have been at what time. We collect location data via GPS if you give permission in the Company Name mobile application. We use your location data to customize our advertising, to plan our marketing geographically, and to prevent fraud via geographic identity verification.",
+    "text_ad": "Advertising is an integral part of our business model, which guarantees that we can continue to provide you with our restaurant recommandations. We use the below data categories to customize advertising. Tell us below which data categories we may use to customize our advertising.",
     "ad": "Advertisement",
     "marketing": "Marketing",
     "id": "Identity Verification",
@@ -124,9 +157,16 @@
     "credit": "Credit Card Number",
     "sensitivity": "Sensitivity: ",
     "sensitivityText": "You can configure how sensitive this data is to you. We treat very sensitive data differently and with extensive care",
-    "sensitivityHeader": "How sensitive is this data to you?"
+    "sensitivityHeader": "How sensitive is this data to you?",
+    "warnings":"Warnings"
   },
-  "location": "Location data is data that tells us where you have been at what time. We collect location data via GPS if you give permission in the Company Name mobile application. We use your location data to customize our advertising, to plan our marketing geographically, and to prevent fraud via geographic identity verification.",
+  "consent-helper":{
+    "purpose": "Purpose",
+    "comfortable":"Comfortable",
+    "no-opinion":"No opinion",
+    "not-comfortable":"Not comfortable"
+  },
+    "location": "Location data is data that tells us where you have been at what time. We collect location data via GPS if you give permission in the Company Name mobile application. We use your location data to customize our advertising, to plan our marketing geographically, and to prevent fraud via geographic identity verification.",
   "name": "We collect your name to properly address you. We store your name from your profile.",
   "fingerprint": "Biometric data such as fingerprint is used to verify your credentials and prevent identity theft.",
   "marketing": "Text for marketing category",
