@@ -15,9 +15,8 @@
                 :complete="false"
                 :step="index + 1"
               >
-                {{ $t("consent." + type.toLowerCase()) }}
+                {{ $t(type) }}
               </v-stepper-step>
-
               <v-divider
                 v-if="index < Object.keys(imports.dataCategoryMap).length - 1"
                 :key="`${index}-divider`"
@@ -33,7 +32,7 @@
             >
               <div>
                 <div>
-                  {{ $t("consent." + type.toLowerCase()) }}
+                  {{ $t(type) }}
                 </div>
 
                 <v-divider class="my-3" />
@@ -43,7 +42,7 @@
                 </div>
 
                 <p class="font-weight-bold">
-                  {{ $t("consent.purpose") }}
+                  {{ $t("consent-helper.purpose") }}
                 </p>
 
                 <PDataCategoryHelper class="mt-3" :categories="imports.dataCategoryMap[Object.keys(imports.dataCategoryMap)[page-1]]" @userChoinces="collectUserChoices"/>
@@ -121,17 +120,17 @@ export default {
     loadConsentPage(){
       if(this.dataCategoryCompletedChoosement.length !== Object.keys(this.imports.dataCategoryMap).length){
         let text = this.$t("snackbar.msg.please-complete-the-consent-guide")
-        this.$refs["helpNotification"].showNotification(text);
+        this.$refs["helpNotification"].showNotification(text , "orange");
       }else{
         const consentPageRoute = this.$router.options.routes.find(route => route.path === this.localePath('/consent'))
         this.$router.push({name: consentPageRoute.name ,query:{ tab: 'purpose' },params: {consentHelperUserChoices: this.consentHelperUserChoices}})
       }
     },
     calculateDataCategoryMap(){
-      this.imports.dataCategoryMap =  examplePolicy.reduce((total, currentValue)=>{
-        let purpose = currentValue["dpv:Purpose"]["@class"].substring(4)
+      this.imports.dataCategoryMap = examplePolicy.reduce((total, currentValue)=>{
+        let purpose = currentValue["dpv:Purpose"]["@class"].replace(':','.').replace(/ /g,'-').toLowerCase();
         currentValue["dpv:PersonalDataCategory"].forEach((item, index)=>{
-          let personalDataCategory = item["@class"].substring(4);
+          let personalDataCategory = item["@class"].replace(':','.').replace(/ /g,'-').toLowerCase();
           if(!(personalDataCategory in total)){
             total[personalDataCategory] =[]
           }

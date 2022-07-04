@@ -39,7 +39,11 @@
       v-if="tab !== 'consent' "
       class="mt-4"
       @undoChanges="$refs[tab].loadPreviousState()"
+<<<<<<< HEAD
       @submitChanges="$refs['consentNotification'].showNotification($t('snackbar.msg.submission-successful'))" />
+=======
+      @submitChanges="$refs['consentNotification'].showNotification($t('snackbar.msg.submission-succesful'), 'green')" />
+>>>>>>> 6e0bb85c77a4616534e74eadc191d414ffcca50e
   </div>
 </template>
 
