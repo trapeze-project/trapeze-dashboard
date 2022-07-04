@@ -19,7 +19,7 @@
         </v-card>
       </v-tooltip>
     </p>
-    <v-slider
+    <v-slider 
       class="px-3"
       color="black"
       track-color="grey"
@@ -29,7 +29,7 @@
       ticks="always"
       tick-size="4"
       :tick-labels="['Not sensitive', 'a little sensitive', 'neutral', 'sensitive', 'very sensitive']"
-      :value="sensitivity"
+      :value="sensitivity" 
     />
   </div>
 </template>
@@ -40,8 +40,8 @@ export default {
     sensitivity: {
       type: Number,
       required: true,
-      default: 0
-    }
-  }
-}
+      default: 0,
+    },
+  },
+};
 </script>

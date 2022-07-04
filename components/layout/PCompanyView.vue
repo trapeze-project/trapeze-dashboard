@@ -1,5 +1,5 @@
 <template>
-  <v-card outlined color="transparent">
+  <v-card>
     <v-img src="/img/company.png" />
     <v-card-text>
       {{ $t("company.name") }}<br />

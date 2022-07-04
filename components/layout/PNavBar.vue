@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar app clipped-left absolute color="primary">
+  <v-app-bar app clipped-left color="primary">
     <div
       class="d-flex justify-space-between align-center flex-row"
       style="width: 100%"
@@ -48,14 +48,14 @@
 <script>
 export default {
   computed: {
-    cssVars () {
+    cssVars() {
       return {
-        '--url': 'url(' + this.$config.background.url + ')'
-      }
+        "--url": "url(" + this.$config.background.url + ")",
+      };
     },
-    availableLocales () {
-      return this.$i18n.locales.filter(i => i.code !== this.$i18n.locale)
-    }
-  }
-}
+    availableLocales() {
+      return this.$i18n.locales.filter((i) => i.code !== this.$i18n.locale);
+    },
+  },
+};
 </script>

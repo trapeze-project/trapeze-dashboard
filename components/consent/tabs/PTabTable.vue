@@ -5,10 +5,9 @@
       :items="category"
       :item-key="headers[0].value"
       single-select
-      mobile-breakpoint="0"
       @click:row="select"
     >
-      <template v-if="tabName === 'purpose' " v-slot:item.issue="{ item }">
+      <template v-if="tabName === 'purpose' || tabName === 'data'"  v-slot:item.issue="{ item }">
         <v-chip
           label
           :color="item.issue === '0 issues' ? 'transparent' : 'orange'"
@@ -20,7 +19,6 @@
 
     <PWarnings
       v-if="view.showPDetails && this.$route.params.consentHelperUserChoices && Object.keys(this.warnings[this.view.selected.untranslated]).length"
-      id="PWarnings"
       :selectedWarnings="warnings[this.view.selected.untranslated]"
       :purpose="this.view.selected.untranslated"
       :key="this.view.selected.untranslated"
@@ -30,7 +28,6 @@
     />
 
     <PDetails 
-      id="PDetails"
       class="mt-4"
       v-if="view.showPDetails"
       :heading="view.selected.untranslated"
@@ -38,11 +35,6 @@
       :showSensitivity="false"
       :switchesValues="this.calculateBottonsValues"
       :key="Object.values(this.calculateBottonsValues).toString()"
-      class="mt-4"
-      :heading="view.selected[this.tabName]"
-      :subitems="pDetailsSubItemsMap[view.selected[this.tabName]]"
-      :show-sensitivity="false"
-      :switches-values="this.calculateBottonsValues"
       @changeUserChoice="changeUserChoice"
       @saveState="saveState"
     />
@@ -54,33 +46,33 @@
 </template>
 
 <script>
-import purposes from '../../../static/data/purposes.json'
-import examplePolicy from '../../../static/data/example.policy.json'
-import data from '../../../static/data/data.json'
-import emails from '../../../static/data/emails.json'
+import purposes from "../../../static/data/purposes.json";
+import examplePolicy from "../../../static/data/example.policy.json";
+import data from "../../../static/data/data.json";
+import emails from "../../../static/data/emails.json";
 
 export default {
   props: {
     tabName: {
       type: String,
       required: true,
-      validator (value) {
+      validator(value) {
         // The value must match one of these strings
         return ['consent', 'data', 'purpose'].includes(value)
       }
-    }
+    },
   },
-  data () {
+  data() {
     return {
       imports: {
-        category: '',
-        categoryMap: '',
-        purposeMap: ''
+        category: "",
+        categoryMap: "",
+        purposeMap: ""
       },
       view: {
-        selected: '',
+        selected: "",
         showPDetails: false,
-        showPEmail: false
+        showPEmail: false,
       },
       headers: "",
       pDetailsSubItemsMap: "",
@@ -88,68 +80,65 @@ export default {
       consentHelperUserChoices:"",
       warnings:"",
       states:[]
-    }
+    };
   },
-  created () {
-    if (this.tabName === 'consent') {
-      this.imports.category = emails
+  created(){
+    if(this.tabName === "consent"){
+      this.imports.category = emails;
     }
-    if (this.tabName === 'data') {
-      this.imports.category = data
+    if (this.tabName === "data"){ 
+      this.imports.category = data;
       this.calculateCategoryMap()
       this.calculatePurposeMap()
       this.pDetailsSubItemsMap = this.imports.categoryMap
     }
-    if (this.tabName === 'purpose') {
-      this.imports.category = purposes
+    if( this.tabName === "purpose"){
+      this.imports.category = purposes;
       this.calculateCategoryMap()
       this.calculatePurposeMap()
       this.pDetailsSubItemsMap = this.imports.purposeMap
-    }
-    this.headers = Object.keys(this.imports.category[0]).map(e => ({
-      text: e.charAt(0).toUpperCase() + e.slice(1),
-      value: e,
-      align: 'start'
-    })
-    )
 
-    if (this.tabName === 'purpose') {
-      this.userChoices = JSON.parse(JSON.stringify(Object.keys(this.imports.purposeMap).reduce((total, currentValue) => {
-        total[currentValue] = this.imports.purposeMap[currentValue].reduce((total, currentValue) => {
-          total[currentValue] = true
-          return total
-        }, {})
-        return total
-      }, {})))
-      if (this.$route.params.consentHelperUserChoices) {
-        this.consentHelperUserChoices = JSON.parse(JSON.stringify(this.$route.params.consentHelperUserChoices))
-        this.warnings = this.calculateWarrnings()
-      }
-    } else if (this.tabName === 'data') {
-      this.userChoices = JSON.parse(JSON.stringify(Object.keys(this.imports.categoryMap).reduce((total, currentValue) => {
-        total[currentValue] = this.imports.categoryMap[currentValue].reduce((total, currentValue) => {
-          total[currentValue] = true
-          return total
-        }, {})
-        return total
-      }, {})))
     }
+    this.headers = Object.keys(this.imports.category[0]).map((e) => ({
+        text: e.charAt(0).toUpperCase() + e.slice(1),
+        value: e,
+        align: "start",
+      })
+    );
+
+    if(this.tabName === "purpose"){
+      this.userChoices =  JSON.parse(JSON.stringify(Object.keys(this.imports.purposeMap).reduce((total, currentValue)=>{
+        total[currentValue]=this.imports.purposeMap[currentValue].reduce((total, currentValue)=>{
+          total[currentValue] = true
+          return total
+        },{});
+        return total
+      },{})));
+      if(this.$route.params.consentHelperUserChoices){
+        this.consentHelperUserChoices =  JSON.parse(JSON.stringify(this.$route.params.consentHelperUserChoices));
+        this.warnings = this.calculateWarrnings()
+      } 
+    }else if(this.tabName === "data"){
+      this.userChoices =  JSON.parse(JSON.stringify(Object.keys(this.imports.categoryMap).reduce((total, currentValue)=>{
+        total[currentValue]=this.imports.categoryMap[currentValue].reduce((total, currentValue)=>{
+          total[currentValue] = true
+          return total
+        },{});
+        return total
+      },{})));
+    }
+    
   },
   methods: {
-    select (item, row) {
-      row.select(true)
-      this.view.selected = item
-      if (this.tabName === 'purpose' || this.tabName === 'data') {
-        this.view.showPDetails = true
+    select(item, row) {
+      row.select(true);
+      this.view.selected = item;
+      if(this.tabName === 'purpose' || this.tabName === 'data'){
+        this.view.showPDetails = true;
       }
-      if (this.tabName === 'consent') {
-        this.view.showPEmail = true
+      if(this.tabName === 'consent'){
+        this.view.showPEmail = true;
       }
-
-      // vue.$nextTick Defer the callback to be executed after the next DOM update cycle. Use it immediately after you’ve changed some data to wait for the DOM update.
-      this.$nextTick(() => {
-        this.scrollpage()
-      })
     },
     calculateCategoryMap(){
       this.imports.categoryMap =  examplePolicy.reduce((total, currentValue)=>{
@@ -161,8 +150,8 @@ export default {
           }
           total[personalDataCategory].push(purpose)
         })
-        return total
-      }, {})
+        return total;
+      },{});
     },
     calculatePurposeMap(){
       this.imports.purposeMap = examplePolicy.reduce((total, currentValue)=>{
@@ -174,8 +163,8 @@ export default {
           }
           total[purpose].push(personalDataCategory)
         })
-        return total
-      }, {})
+        return total;
+      },{});
     },
     calculateWarrnings(){
       let result = {}
@@ -187,30 +176,32 @@ export default {
                 result[purpose] = {}
               }
               result[purpose][dataCategory] = {
-                givenConsentValue: this.userChoices[purpose][dataCategory],
-                consentHelperChoice: this.consentHelperUserChoices[purpose][dataCategory]
+                givenConsentValue : this.userChoices[purpose][dataCategory],
+                consentHelperChoice : this.consentHelperUserChoices[purpose][dataCategory]
               }
             }
           }
         }
       }
-      return result
+      return result;
+
     },
-    ignoreWarning (parent, child) {
+    ignoreWarning(parent,child){
       delete (this.warnings[parent])[child]
-      const yo = JSON.parse(JSON.stringify(this.warnings))
-      this.warnings = JSON.parse(JSON.stringify(yo))
+      let yo = JSON.parse(JSON.stringify(this.warnings)); 
+      this.warnings = JSON.parse(JSON.stringify(yo)); 
+
     },
     changeUserChoice(parent,child ,newConsentValue){
       this.userChoices[parent][child] = newConsentValue;
       this.fixWarningIfExist(parent,child ,newConsentValue)
     },
-    fixWarningIfExist (parent, child, newConsentValue) {
-      if (this.$route.params.consentHelperUserChoices) {
-        if (['No opinion', 'Not comfortable'].includes(this.consentHelperUserChoices[parent][child])) {
-          if (newConsentValue === false) {
-            if (this.warnings[parent][child]) {
-              this.ignoreWarning(parent, child)
+    fixWarningIfExist(parent,child ,newConsentValue){
+      if(this.$route.params.consentHelperUserChoices){
+        if(["No opinion","Not comfortable"].includes(this.consentHelperUserChoices[parent][child])){
+          if(newConsentValue===false){
+            if(this.warnings[parent][child]){
+              this.ignoreWarning(parent,child);
             }
           }
         }
@@ -223,21 +214,6 @@ export default {
           this.changeUserChoice(parent,child ,false)
         });
       });
-    },
-    scrollpage () {
-      if (this.tabName === 'consent') {
-        document.getElementById('PEmail').scrollIntoView({ behavior: 'smooth' })
-      }
-      if (this.tabName === 'data') {
-        document.getElementById('PDetails').scrollIntoView({ behavior: 'smooth' })
-      }
-      if (this.tabName === 'purpose') {
-        if (this.view.showPDetails && this.$route.params.consentHelperUserChoices && Object.keys(this.warnings[this.view.selected.purpose]).length) {
-          document.getElementById('PWarnings').scrollIntoView({ behavior: 'smooth' })
-        } else {
-          document.getElementById('PDetails').scrollIntoView({ behavior: 'smooth' })
-        }
-      }
     },
     saveState(){
       let state = {}
@@ -298,10 +274,8 @@ export default {
     calculateBottonsValues(){
         if(this.view.selected  !== ''){
           return JSON.parse(JSON.stringify(this.userChoices[this.view.selected.untranslated])); 
->>>>>>> components/consent/tabs/PTabTable.vue
         }
-      }
     }
   }
-}
+};
 </script>
