@@ -96,6 +96,32 @@
         "name": "deactivate and activate purposes."
       }
     },
+    "items": {
+        "0": {
+            "title": "Consent",
+            "filename": "/img/consent.png",
+            "link": "/consent?tab=consent",
+            "content": "View when and what consent you gave us."
+        },
+        "1": {
+            "title": "Data",
+            "filename": "/img/data.png",
+            "link": "/consent?tab=data",
+            "content": "Tell us which data categories we may process."
+        },
+        "2": {
+            "title": "Purposes",
+            "filename": "/img/purpose.png",
+            "link": "/consent?tab=purpose",
+            "content": "Tell us which purposes we may address."
+        },
+        "3": {
+            "title": "TRAPEZE",
+            "filename": "/img/favicon.png",
+            "link": "http://trapeze-project.eu",
+            "content": "Learn more about TRAPEZE."
+      }
+    },
     "consent": {
         "consent-menu": "Consent Menu",
         "title": "Consent Guide",
