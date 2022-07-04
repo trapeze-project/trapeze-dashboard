@@ -215,19 +215,19 @@ export default {
       }
     },
     scrollpage () {
-      // if (this.tabName === 'consent') {
-      //   document.getElementById('PEmail').scrollIntoView({ behavior: 'smooth' })
-      // }
-      // if (this.tabName === 'data') {
-      //   document.getElementById('PDetails').scrollIntoView({ behavior: 'smooth' })
-      // }
-      // if (this.tabName === 'purpose') {
-      //   if (this.view.showPDetails && this.$route.params.consentHelperUserChoices && Object.keys(this.warnings[this.view.selected.purpose]).length) {
-      //     document.getElementById('PWarnings').scrollIntoView({ behavior: 'smooth' })
-      //   } else {
-      //     document.getElementById('PDetails').scrollIntoView({ behavior: 'smooth' })
-      //   }
-      // }
+      if (this.tabName === 'consent') {
+        document.getElementById('PEmail').scrollIntoView({ behavior: 'smooth' })
+      }
+      if (this.tabName === 'data') {
+        document.getElementById('PDetails').scrollIntoView({ behavior: 'smooth' })
+      }
+      if (this.tabName === 'purpose') {
+        if (this.view.showPDetails && this.$route.params.consentHelperUserChoices && Object.keys(this.warnings[this.view.selected.purpose]).length) {
+          document.getElementById('PWarnings').scrollIntoView({ behavior: 'smooth' })
+        } else {
+          document.getElementById('PDetails').scrollIntoView({ behavior: 'smooth' })
+        }
+      }
     },
     revokeAll(){
       this.saveState();
