@@ -19,29 +19,33 @@
     </v-data-table>
 
     <PWarnings
-      v-if="view.showPDetails && this.$route.params.consentHelperUserChoices && Object.keys(this.warnings[this.view.selected.purpose]).length"
       id="PWarnings"
-      :key="this.view.selected.purpose"
-      :selected-warnings="warnings[this.view.selected.purpose]"
-      :purpose="this.view.selected.purpose"
+      v-if="view.showPDetails && this.$route.params.consentHelperUserChoices && Object.keys(this.warnings[this.view.selected.untranslated]).length"
+      :selectedWarnings="warnings[this.view.selected.untranslated]"
+      :purpose="this.view.selected.untranslated"
+      :key="this.view.selected.untranslated"
       @ignoreWarning="ignoreWarning"
       @changeUserChoice="changeUserChoice"
+      @saveState="saveState"
     />
 
+
     <PDetails
-      v-if="view.showPDetails"
       id="PDetails"
-      :key="Object.values(this.calculateBottonsValues).toString()"
       class="mt-4"
-      :heading="view.selected[this.tabName]"
-      :subitems="pDetailsSubItemsMap[view.selected[this.tabName]]"
-      :show-sensitivity="false"
-      :switches-values="this.calculateBottonsValues"
+      v-if="view.showPDetails"
+      :heading="view.selected.untranslated"
+      :subitems= "pDetailsSubItemsMap[view.selected.untranslated]"
+      :showSensitivity="false"
+      :switchesValues="this.calculateBottonsValues"
+      :key="Object.values(this.calculateBottonsValues).toString()"
       @changeUserChoice="changeUserChoice"
+      @saveState="saveState"
     />
     <div v-if="view.showPEmail" id="PEmail" class="mt-4">
       <PEmail :date="view.selected.date" :event="view.selected.event" />
     </div>
+    <div>{{this.$route.params.consentHelperUserChoices}}</div>
   </div>
 </template>
 
@@ -74,47 +78,12 @@ export default {
         showPDetails: false,
         showPEmail: false
       },
-      headers: '',
-      pDetailsSubItemsMap: '',
-      userChoices: '',
-      consentHelperUserChoices: '',
-      warnings: ''
-    }
-  },
-  computed: {
-    category () {
-      const result = []
-      if (this.tabName === 'consent') {
-        return emails
-      }
-      if (this.tabName === 'data') {
-        for (const dataCategory of Object.keys(this.imports.categoryMap)) {
-          const obj = new Object()
-          obj.data = dataCategory
-          obj.purpose = this.imports.categoryMap[dataCategory].join(', ')
-          result.push(obj)
-        }
-      } else if (this.tabName === 'purpose') {
-        for (const purpose of Object.keys(this.imports.purposeMap)) {
-          const obj = new Object()
-          obj.purpose = purpose
-          obj.data = this.imports.purposeMap[purpose].join(', ')
-          if (this.$route.params.consentHelperUserChoices && this.warnings[purpose]) {
-            const issuesCounter = Object.keys(this.warnings[purpose]).length
-            obj.issue = issuesCounter + ' issues'
-          } else {
-            obj.issue = '0 issues'
-          }
-          result.push(obj)
-        }
-      }
-      return result
-    },
-    calculateBottonsValues () {
-      if (this.view.selected !== '') {
-        const purposesChoices = JSON.parse(JSON.stringify(this.userChoices[this.view.selected[this.tabName]]))
-        return purposesChoices
-      }
+      headers: "",
+      pDetailsSubItemsMap: "",
+      userChoices:"",
+      consentHelperUserChoices:"",
+      warnings:"",
+      states:[]
     }
   },
   created () {
@@ -178,39 +147,39 @@ export default {
         this.scrollpage()
       })
     },
-    calculateCategoryMap () {
-      this.imports.categoryMap = examplePolicy.reduce((total, currentValue) => {
-        const purpose = currentValue['dpv:Purpose']['@class'].substring(4)
-        currentValue['dpv:PersonalDataCategory'].forEach((item, index) => {
-          const personalDataCategory = item['@class'].substring(4)
-          if (!(personalDataCategory in total)) {
-            total[personalDataCategory] = []
+    calculateCategoryMap(){
+      this.imports.categoryMap =  examplePolicy.reduce((total, currentValue)=>{
+        let purpose = currentValue["dpv:Purpose"]["@class"].replace(':','.').replace(/ /g,'-').toLowerCase();
+        currentValue["dpv:PersonalDataCategory"].forEach((item, index)=>{
+          let personalDataCategory = item["@class"].replace(':','.').replace(/ /g,'-').toLowerCase();
+          if(!(personalDataCategory in total)){
+            total[personalDataCategory] =[]
           }
           total[personalDataCategory].push(purpose)
         })
         return total
       }, {})
     },
-    calculatePurposeMap () {
-      this.imports.purposeMap = examplePolicy.reduce((total, currentValue) => {
-        const purpose = currentValue['dpv:Purpose']['@class'].substring(4)
-        currentValue['dpv:PersonalDataCategory'].forEach((item, index) => {
-          const personalDataCategory = item['@class'].substring(4)
-          if (!(purpose in total)) {
-            total[purpose] = []
+    calculatePurposeMap(){
+      this.imports.purposeMap = examplePolicy.reduce((total, currentValue)=>{
+        let purpose = currentValue["dpv:Purpose"]["@class"].replace(':','.').replace(/ /g,'-').toLowerCase();
+        currentValue["dpv:PersonalDataCategory"].forEach((item, index)=>{
+          let personalDataCategory = item["@class"].replace(':','.').replace(/ /g,'-').toLowerCase();
+          if(!(purpose in total)){
+            total[purpose] =[]
           }
           total[purpose].push(personalDataCategory)
         })
         return total
       }, {})
     },
-    calculateWarrnings () {
-      const result = {}
-      for (const purpose of Object.keys(this.userChoices)) {
-        for (const dataCategory of Object.keys(this.userChoices[purpose])) {
-          if (this.userChoices[purpose][dataCategory]) {
-            if (['No opinion', 'Not comfortable'].includes(this.consentHelperUserChoices[purpose][dataCategory])) {
-              if (!result[purpose]) {
+    calculateWarrnings(){
+      let result = {}
+      for(const purpose of Object.keys(this.userChoices)){
+        for(const dataCategory of Object.keys(this.userChoices[purpose])){
+          if(this.userChoices[purpose][dataCategory]){
+            if(["consent-helper.no-opinion","consent-helper.not-comfortable"].includes(this.consentHelperUserChoices[purpose][dataCategory])){
+              if(!result[purpose]){
                 result[purpose] = {}
               }
               result[purpose][dataCategory] = {
@@ -228,9 +197,9 @@ export default {
       const yo = JSON.parse(JSON.stringify(this.warnings))
       this.warnings = JSON.parse(JSON.stringify(yo))
     },
-    changeUserChoice (parent, child, newConsentValue) {
-      this.userChoices[parent][child] = newConsentValue
-      this.fixWarningIfExist(parent, child, newConsentValue)
+    changeUserChoice(parent,child ,newConsentValue){
+      this.userChoices[parent][child] = newConsentValue;
+      this.fixWarningIfExist(parent,child ,newConsentValue)
     },
     fixWarningIfExist (parent, child, newConsentValue) {
       if (this.$route.params.consentHelperUserChoices) {
@@ -242,13 +211,6 @@ export default {
           }
         }
       }
-    },
-    revokeAll () {
-      Object.keys(this.userChoices).forEach((parent) => {
-        Object.keys(this.userChoices[parent]).forEach((child) => {
-          this.changeUserChoice(parent, child, false)
-        })
-      })
     },
     scrollpage () {
       if (this.tabName === 'consent') {
@@ -262,6 +224,76 @@ export default {
           document.getElementById('PWarnings').scrollIntoView({ behavior: 'smooth' })
         } else {
           document.getElementById('PDetails').scrollIntoView({ behavior: 'smooth' })
+        }
+      }
+    },
+    revokeAll(){
+      this.saveState();
+      Object.keys(this.userChoices).forEach(parent => {
+        Object.keys(this.userChoices[parent]).forEach(child => {
+          this.changeUserChoice(parent,child ,false)
+        });
+      });
+    },
+    saveState(){
+      let state = {}
+      state.view = {}
+      state.view.selected = JSON.parse(JSON.stringify(this.view.selected))
+      state.view.showPDetails = JSON.parse(JSON.stringify(this.view.showPDetails))
+      state.userChoices = JSON.parse(JSON.stringify(this.userChoices))
+      state.warnings = JSON.parse(JSON.stringify(this.warnings))
+      this.states.push(state)
+
+    },
+    loadPreviousState(){
+      if(this.states.length){
+        let state = this.states.pop();
+        this.view.showPDetails = JSON.parse(JSON.stringify(state.view.showPDetails))
+        this.view.selected = JSON.parse(JSON.stringify(state.view.selected))
+        setTimeout(()=>{ // to let the see the switcher switching
+          this.userChoices = JSON.parse(JSON.stringify(state.userChoices))
+          this.warnings = JSON.parse(JSON.stringify(state.warnings))
+        }, 500)
+      }
+    }
+  },
+  computed: {
+    category(){
+      let result = []
+      if(this.tabName === "consent"){
+        return emails;
+      }
+      if (this.tabName === "data"){ 
+        for(const dataCategory of Object.keys(this.imports.categoryMap)){
+          let obj = new Object();
+          obj.untranslated = dataCategory;
+          obj.data = this.$t(dataCategory);
+          obj.purpose = this.imports.categoryMap[dataCategory].map((item)=>{return this.$t(item)}).join(', ');
+          obj.recipient = 'Company A'
+          obj.issue = '0 issues'
+          result.push(obj);
+        }
+      }else if( this.tabName === "purpose"){
+        for(const purpose of Object.keys(this.imports.purposeMap)){
+          let obj = new Object();
+          obj.untranslated = purpose;
+          obj.purpose = this.$t(purpose);
+          obj.data = this.imports.purposeMap[purpose].map((item)=>{return this.$t(item)}).join(', ');
+          if(this.$route.params.consentHelperUserChoices && this.warnings[purpose]){
+            let issuesCounter = Object.keys(this.warnings[purpose]).length
+            obj.issue = issuesCounter +' issues'
+          }else{
+            obj.issue = '0 issues'
+          }
+          result.push(obj);
+        }
+      }
+      return result
+
+    },
+    calculateBottonsValues(){
+        if(this.view.selected  !== ''){
+          return JSON.parse(JSON.stringify(this.userChoices[this.view.selected.untranslated])); 
         }
       }
     }

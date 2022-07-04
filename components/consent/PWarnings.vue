@@ -1,6 +1,6 @@
 <template>
-  <div>
-    Warnings
+  <div >
+    <b class="ml-3">{{$t('consent.warnings')}}</b>
     <v-alert
       v-for="dataCategory in Object.keys(selectedWarnings)"
       :key="dataCategory"
@@ -10,10 +10,11 @@
       dark
       prominent
       type="warning"
+      class="mx-1"
     >
       <v-row align="center" class="pa-1">
         <v-col class="" cols="12" sm="12" md="8" lg="10">
-          <p> you have {{ selectedWarnings[dataCategory]["givenConsentValue"]? "" : "not" }} given consent to the data controller to use your {{ dataCategory }} data for the purpose of {{ purpose }}. but your choice in ConsentHelper was {{ selectedWarnings[dataCategory]["consentHelperChoice"] }} </p>
+          <p> you have {{ selectedWarnings[dataCategory]["givenConsentValue"]? "" : "not" }} given consent to the data controller to use your {{$t(dataCategory)}} data for the purpose of {{$t(purpose)}}. but your choice in ConsentHelper was {{$t(selectedWarnings[dataCategory]["consentHelperChoice"])}} </p>
         </v-col>
         <v-spacer />
         <v-col
@@ -60,45 +61,25 @@ export default {
     selectedWarnings: Object,
     purpose: String
   },
-  data () {
-    return {
-      warningSwitches: ''
-    }
-  },
-  created () {
-    const lol = {}
-    for (const dataCategory of Object.keys(this.selectedWarnings)) {
-      lol[dataCategory] = true
-    }
-    this.warningSwitches = JSON.parse(JSON.stringify(lol))
-  },
   methods: {
-    closeWarnig (dataCategory) {
-      this.warningSwitches[dataCategory] = false
-      this.$emit('ignoreWarning', this.purpose, dataCategory)
+    closeWarnig(dataCategory){
+      this.$emit('saveState');
+      this.$emit('ignoreWarning',this.purpose,dataCategory)
     },
-    closeAllWarnings () {
-      for (const dataCategory of Object.keys(this.warningSwitches)) {
-        if (this.warningSwitches[dataCategory] == true) {
-          this.closeWarnig(dataCategory)
-        }
+    closeAllWarnings(){
+      this.$emit('saveState');
+      for(const dataCategory of Object.keys(this.selectedWarnings)){
+        this.$emit('ignoreWarning',this.purpose,dataCategory)
       }
     },
-    fixWarnig (dataCategory) {
-      let newConsentValue
-      if (this.selectedWarnings[dataCategory].consentHelperChoice == 'Comfortable') { // No opinion // Comfortable // Not comfortable
-        newConsentValue = true
-      } else {
-        newConsentValue = false
-      }
-      this.closeWarnig(dataCategory)
-      this.$emit('changeUserChoice', this.purpose, dataCategory, newConsentValue)
+    fixWarnig(dataCategory){
+      this.$emit('saveState');
+      this.$emit('changeUserChoice',this.purpose,dataCategory ,false);
     },
-    fixAllWarnigs () {
-      for (const dataCategory of Object.keys(this.warningSwitches)) {
-        if (this.warningSwitches[dataCategory] == true) {
-          this.fixWarnig(dataCategory)
-        }
+    fixAllWarnigs(){
+      this.$emit('saveState');
+      for(const dataCategory of Object.keys(this.selectedWarnings)){
+        this.$emit('changeUserChoice',this.purpose,dataCategory ,false);
       }
     }
   }
