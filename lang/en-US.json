@@ -172,5 +172,5 @@
   "fingerprint": "Biometric data such as fingerprint is used to verify your credentials and prevent identity theft.",
   "marketing": "Text for marketing category",
   "advertising": "Advertising is an integral part of our business model, which guarantees that we can continue to provide you with our restaurant recommandations.",
-  "identity verification": "Text for identity verification category"
+  "identity-verification": "Text for identity verification category"
 }

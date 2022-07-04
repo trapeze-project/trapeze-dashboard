@@ -45,7 +45,8 @@
     <div v-if="view.showPEmail" id="PEmail" class="mt-4">
       <PEmail :date="view.selected.date" :event="view.selected.event" />
     </div>
-    <div>{{this.$route.params.consentHelperUserChoices}}</div>
+    <div>{{this.warnings}}</div>
+    <div>{{this.consentHelperUserChoices}}</div>
   </div>
 </template>
 
@@ -200,10 +201,11 @@ export default {
     changeUserChoice(parent,child ,newConsentValue){
       this.userChoices[parent][child] = newConsentValue;
       this.fixWarningIfExist(parent,child ,newConsentValue)
+      console.log()
     },
     fixWarningIfExist (parent, child, newConsentValue) {
       if (this.$route.params.consentHelperUserChoices) {
-        if (['No opinion', 'Not comfortable'].includes(this.consentHelperUserChoices[parent][child])) {
+        if (['consent-helper.not-comfortable', 'consent-helper.no-opinion'].includes(this.consentHelperUserChoices[parent][child])) {
           if (newConsentValue === false) {
             if (this.warnings[parent][child]) {
               this.ignoreWarning(parent, child)
@@ -213,19 +215,19 @@ export default {
       }
     },
     scrollpage () {
-      if (this.tabName === 'consent') {
-        document.getElementById('PEmail').scrollIntoView({ behavior: 'smooth' })
-      }
-      if (this.tabName === 'data') {
-        document.getElementById('PDetails').scrollIntoView({ behavior: 'smooth' })
-      }
-      if (this.tabName === 'purpose') {
-        if (this.view.showPDetails && this.$route.params.consentHelperUserChoices && Object.keys(this.warnings[this.view.selected.purpose]).length) {
-          document.getElementById('PWarnings').scrollIntoView({ behavior: 'smooth' })
-        } else {
-          document.getElementById('PDetails').scrollIntoView({ behavior: 'smooth' })
-        }
-      }
+      // if (this.tabName === 'consent') {
+      //   document.getElementById('PEmail').scrollIntoView({ behavior: 'smooth' })
+      // }
+      // if (this.tabName === 'data') {
+      //   document.getElementById('PDetails').scrollIntoView({ behavior: 'smooth' })
+      // }
+      // if (this.tabName === 'purpose') {
+      //   if (this.view.showPDetails && this.$route.params.consentHelperUserChoices && Object.keys(this.warnings[this.view.selected.purpose]).length) {
+      //     document.getElementById('PWarnings').scrollIntoView({ behavior: 'smooth' })
+      //   } else {
+      //     document.getElementById('PDetails').scrollIntoView({ behavior: 'smooth' })
+      //   }
+      // }
     },
     revokeAll(){
       this.saveState();

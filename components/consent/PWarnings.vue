@@ -4,7 +4,6 @@
     <v-alert
       v-for="dataCategory in Object.keys(selectedWarnings)"
       :key="dataCategory"
-      v-model="warningSwitches[dataCategory]"
       shaped
       dense
       dark

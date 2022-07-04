@@ -32,7 +32,7 @@
             >
               <div>
                 <div>
-                  {{ $t(type) }}
+                  {{ $t(type.replace('dpv.','')) }}
                 </div>
 
                 <v-divider class="my-3" />
