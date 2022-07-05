@@ -43,10 +43,10 @@
             "back": "Zur\u00fcck",
             "next": "Weiter",
             "view-issues": "Fragebogen Abschließen",
-            "fix":"fixen",
-            "fix-all":"alles fixen",
+            "fix":"beheben",
+            "fix-all":"alle beheben",
             "ignore":"ignorieren",
-            "ignore-all":"alles ignorieren"
+            "ignore-all":"alle ignorieren"
         }
     },
     "snackbar": {
