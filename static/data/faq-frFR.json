@@ -3,7 +3,7 @@
         "qnas": {
             "qna1": {
                 "question": "Qu'est-ce que le TRAPEZE ?",
-                "answer": "TRAPEZE est un projet de recherche financ\u00e9 par l'Union europ\u00e9enne. TRAPEZE est l'acronyme de Transparency, Privacy and Security for European citizens. TRAPEZE fait partie du programme de financement Horizon2020 de l'Union europ\u00e9enne. Le projet, d'une dur\u00e9e de 3 ans, a \u00e9t\u00e9 men\u00e9 entre septembre 2020 et ao\u00fbt 2023.",
+                "answer": "TRAPEZE est un projet de recherche financ\u00e9 par l'Union europ\u00e9enne. TRAPEZE est l'acronyme de \"TRAnsparency, Privacy and security for European citiZEns\". TRAPEZE fait partie du programme de financement Horizon2020 de l'Union europ\u00e9enne. Le projet, d'une dur\u00e9e de 3 ans, a \u00e9t\u00e9 men\u00e9 entre septembre 2020 et ao\u00fbt 2023.",
                 "references": {
                     "ref1": "http://trapeze-project.eu/",
                     "ref2": "https://ec.europa.eu/info/research-and-innovation/funding/funding-opportunities/funding-programmes-and-open-calls/horizon-2020_en"
@@ -31,16 +31,12 @@
             "qna3": {
                 "question": "Qui h\u00e9berge le tableau de bord de la vie priv\u00e9e de TRAPEZE ?",
                 "answer": "Le tableau de bord de confidentialit\u00e9 de TRAPEZE est h\u00e9berg\u00e9 par nous, le responsable du traitement des donn\u00e9es indiqu\u00e9 dans la banni\u00e8re \u00e0 droite.",
-                "references": {
-                    "ref1": ""
-                }
+                "references": { }
             },
             "qna4": {
                 "question": "Que puis-je faire sur le tableau de bord de la vie priv\u00e9e de TRAPEZE ?",
                 "answer": "Sur le tableau de bord de la confidentialit\u00e9 de TRAPEZE, vous pouvez voir notre politique de confidentialit\u00e9 active et quand nous avons recueilli votre consentement. Plus pr\u00e9cis\u00e9ment, vous pouvez voir comment nous traitons vos donn\u00e9es et dans quel but. Vous pouvez nous contacter si vous avez des questions sur le traitement de vos donn\u00e9es. Vous pouvez \u00e9galement r\u00e9voquer votre consentement de mani\u00e8re pratique ou donner plus de consentement pour am\u00e9liorer notre service si vous le souhaitez.",
-                "references": {
-                    "ref1": ""
-                }
+                "references": { }
             },
             "qna5": {
                 "question": "Pourquoi utilisez-vous le tableau de bord de confidentialit\u00e9 de TRAPEZE ?",
@@ -78,30 +74,24 @@
             "qna4": {
                 "question": "Les responsables du traitement des donn\u00e9es suppriment-ils mes donn\u00e9es personnelles lorsque je r\u00e9voque mon consentement ?",
                 "answer": "D\u00e8s que vous r\u00e9voquez votre consentement, les responsables du traitement des donn\u00e9es (nous) doivent cesser le traitement de vos donn\u00e9es personnelles et les supprimer pour toutes les fins pour lesquelles vous avez r\u00e9voqu\u00e9 votre consentement.",
-                "references": {
-                    "ref1": ""
-                }
+                "references": { }
             },
             "qna5": {
                 "question": "Pourquoi devrais-je r\u00e9voquer mon consentement, alors que je peux demander la suppression de mes donn\u00e9es personnelles ?",
                 "answer": "La r\u00e9vocation du consentement est plus rigoureuse que la demande de suppression de vos donn\u00e9es personnelles. Les demandes de suppression n'emp\u00eachent pas la collecte future de vos donn\u00e9es personnelles. Lorsque vous r\u00e9voquez votre consentement, les responsables du traitement des donn\u00e9es (nous) doivent supprimer les donn\u00e9es \u00e0 caract\u00e8re personnel qui font l'objet du consentement r\u00e9voqu\u00e9 et ( !) ne doivent pas collecter de donn\u00e9es \u00e0 caract\u00e8re personnel apr\u00e8s la suppression.",
-                "references": {
-                    "ref1": ""
-                }
+                "references": { }
             },
             "qna6": {
                 "question": "Que puis-je faire si j'ai oubli\u00e9 ce \u00e0 quoi j'ai consenti ?",
-                "answer": "Selon le GDPR (art. 7 1.), les responsables du traitement des donn\u00e9es (nous) doivent d\u00e9montrer qu'ils ont recueilli votre consentement. <<<TROUVER O\u00d9 ILS DOIVENT PROUVER QU'IL EST VALIDE>>.",
+                "answer": "Selon le GDPR (art. 7 1.), les responsables du traitement des donn\u00e9es (nous) doivent d\u00e9montrer qu'ils ont recueilli votre consentement.",
                 "references": {
-                    "ref1": ""
+                    "ref1": "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX%3A32016R0679"
                 }
             },
             "qna7": {
                 "question": "Le consentement expire-t-il ?",
                 "answer": "Non, le consentement n'expire pas. Toutefois, les responsables du traitement des donn\u00e9es (nous) doivent recueillir \u00e0 nouveau le consentement s'ils veulent traiter vos donn\u00e9es personnelles \u00e0 de nouvelles fins.",
-                "references": {
-                    "ref1": ""
-                }
+                "references": { }
             }
         }
     },
@@ -132,9 +122,7 @@
             "qna1": {
                 "question": "Qu'est-ce que le Guide du consentement ?",
                 "answer": "Le guide du consentement est un outil qui vous permet d'\u00e9viter de lire de longues politiques de confidentialit\u00e9. Il vous guidera \u00e0 travers un certain nombre de questions qui nous permettront de comprendre vos pr\u00e9f\u00e9rences en mati\u00e8re de consentement. Sur la base de ces pr\u00e9f\u00e9rences, nous sugg\u00e9rons des configurations de consentement et vous indiquons les probl\u00e8mes potentiels li\u00e9s \u00e0 votre consentement actuel. Il se peut, par exemple, que vous ne souhaitiez pas partager votre localisation \u00e0 des fins de marketing, mais pour des recommandations de restaurants.",
-                "references": {
-                    "ref1": ""
-                }
+                "references": { }
             }
         }
     },

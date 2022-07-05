@@ -3,7 +3,7 @@
         "qnas": {
             "qna1": {
                 "question": "Was ist TRAPEZE?",
-                "answer": "TRAPEZE ist ein von der Europ\u00e4ischen Union finanziertes Forschungsprojekt. TRAPEZE ist ein Akronym f\u00fcr Transparenz, Datenschutz und Sicherheit f\u00fcr europ\u00e4ische B\u00fcrger. TRAPEZE ist Teil des F\u00f6rderprogramms Horizon2020 der Europ\u00e4ischen Union. Das dreij\u00e4hrige Projekt wurde zwischen September 2020 und August 2023 durchgef\u00fchrt.",
+                "answer": "TRAPEZE ist ein von der Europ\u00e4ischen Union finanziertes Forschungsprojekt. TRAPEZE ist ein Akronym f\u00fcr \"TRAnsparency, Privacy and security for European citiZEns\". TRAPEZE ist Teil des F\u00f6rderprogramms Horizon2020 der Europ\u00e4ischen Union. Das dreij\u00e4hrige Projekt wurde zwischen September 2020 und August 2023 durchgef\u00fchrt.",
                 "references": {
                     "ref1": "http://trapeze-project.eu/",
                     "ref2": "https://ec.europa.eu/info/research-and-innovation/funding/funding-opportunities/funding-programmes-and-open-calls/horizon-2020_en"
@@ -31,20 +31,16 @@
             "qna3": {
                 "question": "Wer hostet das TRAPEZE-Datenschutz-Dashboard?",
                 "answer": "Das TRAPEZE-Datenschutz-Dashboard wird von uns gehostet, dem Datenverantwortlichen, der im Banner auf der rechten Seite angezeigt wird.",
-                "references": {
-                    "ref1":""
-                  } 
+                "references": { }
             },
             "qna4": {
                 "question": "Was kann ich auf dem TRAPEZE-Datenschutz-Dashboard machen?",
-                "answer": "Auf dem TRAPEZE-Datenschutz-Dashboard k\u00f6nnen Sie unsere aktive Datenschutzpolitik einsehen und sehen, wann wir Ihre Zustimmung eingeholt haben. Insbesondere k\u00f6nnen Sie sehen, wie und wof\u00fcr wir Ihre Daten verarbeiten. Sie k\u00f6nnen sich an uns wenden, wenn Sie Fragen zur Verarbeitung Ihrer Daten durch uns haben. Sie k\u00f6nnen auch bequem Ihre Einwilligung widerrufen oder weitere Einwilligungen erteilen, um unseren Service zu verbessern, wenn Sie m\u00f6chten.",
-                "references": {
-                    "ref1":""
-                  } 
+                "answer": "Auf dem TRAPEZE-Datenschutz-Dashboard k\u00f6nnen Sie unsere aktive Datenschutzerklärung einsehen und sehen, wann wir Ihre Einwilligung eingeholt haben. Insbesondere k\u00f6nnen Sie sehen, wie und wof\u00fcr wir Ihre Daten verarbeiten. Sie k\u00f6nnen sich an uns wenden, wenn Sie Fragen zur Verarbeitung Ihrer Daten durch uns haben. Sie k\u00f6nnen auch bequem Ihre Einwilligung widerrufen oder weitere Einwilligungen erteilen, um unseren Service zu verbessern, wenn Sie m\u00f6chten.",
+                "references": { }
             },
             "qna5": {
                 "question": "Warum verwenden Sie das TRAPEZE Datenschutz-Dashboard?",
-                "answer": "Das TRAPEZE-Datenschutz-Dashboard ist eine Software, die Datenverantwortliche wie wir nutzen k\u00f6nnen, um Ihnen zu verdeutlichen, wie und wof\u00fcr wir Ihre personenbezogenen Daten verarbeiten. Wir nutzen das TRAPEZE Privacy Dashboard und passen es an. Es ist f\u00fcr alle Beteiligten einfacher, wenn sich die f\u00fcr die Datenverarbeitung Verantwortlichen (wir) und die betroffenen Personen (Sie) dar\u00fcber einig sind, wie die Einwilligung und die Verarbeitung Ihrer Daten kommuniziert werden sollen.",
+                "answer": "Das TRAPEZE-Datenschutz-Dashboard ist eine Software, die Datenverantwortliche wie wir nutzen k\u00f6nnen, um Ihnen zu verdeutlichen, wie und wof\u00fcr wir Ihre personenbezogenen Daten verarbeiten. Wir nutzen eine an uns zugeschnittene Version des TRAPEZE-Datenschutz-Dashbaord. Es ist f\u00fcr alle Beteiligten einfacher, wenn sich die f\u00fcr die Datenverantwortlichen (wir) und die betroffenen Personen (Sie) dar\u00fcber einig sind, wie die Einwilligung und die Verarbeitung Ihrer Daten kommuniziert werden sollen.",
                 "references": {
                     "ref1": "http://trapeze-project.eu/",
                     "ref2": "https://ec.europa.eu/info/research-and-innovation/funding/funding-opportunities/funding-programmes-and-open-calls/horizon-2020_en"
@@ -56,7 +52,7 @@
         "qnas": {
             "qna1": {
                 "question": "Was ist eine Einwilligung?",
-                "answer": "Gem\u00e4\u00df der Datenschutz-Grundverordnung (Artikel 4 Absatz 11) ist die Einwilligung eine eindeutige, best\u00e4tigende Handlung gegen\u00fcber einem f\u00fcr die Verarbeitung Verantwortlichen (uns), um Ihre personenbezogenen Daten zu verarbeiten. Beachten Sie, dass die f\u00fcr die Datenverarbeitung Verantwortlichen (wir) nicht immer eine Einwilligung von Ihnen f\u00fcr die Verarbeitung Ihrer personenbezogenen Daten einholen m\u00fcssen. So muss beispielsweise ein Lieferdienst Ihre Adresse verarbeiten, um seinen Lieferauftrag zu erf\u00fcllen. Hierf\u00fcr muss keine Einwilligung eingeholt werden.",
+                "answer": "Gem\u00e4\u00df der Datenschutz-Grundverordnung (Artikel 4 Absatz 11) ist die Einwilligung eine eindeutige, best\u00e4tigende Handlung gegen\u00fcber einem f\u00fcr die Verarbeitung Verantwortlichen (uns), um Ihre personenbezogenen Daten zu verarbeiten. Beachten Sie, dass die f\u00fcr die Datenverarbeitung Datenverantwortlichen (wir) nicht immer eine Einwilligung von Ihnen f\u00fcr die Verarbeitung Ihrer personenbezogenen Daten einholen m\u00fcssen. So muss beispielsweise ein Lieferdienst Ihre Adresse verarbeiten, um seinen Lieferauftrag zu erf\u00fcllen. Hierf\u00fcr muss keine Einwilligung eingeholt werden.",
                 "references": {
                     "ref1": "https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX%3A32016R0679"
                 }
@@ -78,30 +74,24 @@
             "qna4": {
                 "question": "L\u00f6schen die f\u00fcr die Datenverarbeitung Verantwortlichen meine personenbezogenen Daten, wenn ich meine Einwilligung widerrufe?",
                 "answer": "Sobald Sie Ihre Einwilligung widerrufen, m\u00fcssen die f\u00fcr die Datenverarbeitung Verantwortlichen (wir) die Verarbeitung Ihrer personenbezogenen Daten f\u00fcr die Zwecke, f\u00fcr die Sie Ihre Einwilligung widerrufen haben, einstellen und l\u00f6schen.",
-                "references": {
-                    "ref1":""
-                  } 
+                "references": { }
             },
             "qna5": {
                 "question": "Warum sollte ich meine Einwilligung widerrufen, wenn ich die L\u00f6schung meiner personenbezogenen Daten beantragen kann?",
                 "answer": "Der Widerruf der Einwilligung ist strenger als ein Antrag auf L\u00f6schung Ihrer personenbezogenen Daten. L\u00f6schungsantr\u00e4ge verhindern nicht die k\u00fcnftige Erhebung Ihrer personenbezogenen Daten. Wenn Sie Ihre Einwilligung widerrufen, m\u00fcssen die f\u00fcr die Datenverarbeitung Verantwortlichen (wir) die personenbezogenen Daten l\u00f6schen, die Gegenstand der widerrufenen Einwilligung sind, und (!) d\u00fcrfen nach der L\u00f6schung keine personenbezogenen Daten mehr erheben.",
-                "references": {
-                    "ref1":""
-                  } 
+                "references": { }
             },
             "qna6": {
                 "question": "Was kann ich tun, wenn ich vergessen habe, wozu ich eingewilligt habe?",
-                "answer": "Gem\u00e4\u00df der DSGVO (Artikel 7 Absatz 1) m\u00fcssen die f\u00fcr die Datenverarbeitung Verantwortlichen (wir) nachweisen, dass sie eine Einwilligung von Ihnen eingeholt haben. <<<FINDEN SIE, WO SIE NACHWEISEN M\u00dcSSEN, DASS SIE G\u00dcLTIG IST>>>",
+                "answer": "Gem\u00e4\u00df der DSGVO (Artikel 7 Absatz 1) m\u00fcssen die f\u00fcr die Datenverarbeitung Verantwortlichen (wir) nachweisen, dass sie eine Einwilligung von Ihnen eingeholt haben.",
                 "references": {
-                    "ref1":""
-                  } 
+                    "ref1": "https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX%3A32016R0679"
+                }
             },
             "qna7": {
                 "question": "Verj\u00e4hren Einwilligungen?",
                 "answer": "Nein, Einwilligungen verj\u00e4hren nicht. Allerdings m\u00fcssen die f\u00fcr die Datenverarbeitung Verantwortlichen (wir) die Einwilligung erneut einholen, wenn sie Ihre personenbezogenen Daten f\u00fcr neue Zwecke verarbeiten wollen.",
-                "references": {
-                    "ref1":""
-                  } 
+                "references": { }
             }
         }
     },
@@ -132,9 +122,7 @@
             "qna1": {
                 "question": "Was ist der Einwilligungsassistent?",
                 "answer": "Der Einwilligungsassistent ist ein Hilfsmittel, mit dem Sie sich das Durchlesen langatmiger Datenschutzrichtlinien ersparen k\u00f6nnen. Er f\u00fchrt Sie durch eine Reihe von Fragen, die es uns erm\u00f6glichen, Ihre Einwilligungspr\u00e4ferenzen zu verstehen. Auf der Grundlage dieser Einwilligungspr\u00e4ferenzen schlagen wir Einwilligungskonfigurationen vor und weisen Sie auf m\u00f6gliche Probleme mit Ihrer derzeit erteilten Einwilligung hin. Es k\u00f6nnte zum Beispiel sein, dass Sie nicht bereit sind, Ihren Standort f\u00fcr Marketingzwecke weiterzugeben, aber f\u00fcr Restaurantempfehlungen.",
-                "references": {
-                    "ref1":""
-                  } 
+                "references": { }
             }
         }
     },
@@ -142,7 +130,7 @@
         "qnas": {
             "qna1": {
                 "question": "Einwilligung",
-                "answer": "Gem\u00e4\u00df der DSGVO (Artikel 4 Absatz 11) ist die Einwilligung die eindeutige Zustimmung einer betroffenen Person (von Ihnen) gegen\u00fcber einem f\u00fcr die Verarbeitung Verantwortlichen (uns) zur Verarbeitung Ihrer personenbezogenen Daten. Beachten Sie, dass die f\u00fcr die Datenverarbeitung Verantwortlichen (wir) nicht immer die Einwilligung der betroffenen Personen (Sie) zur Verarbeitung personenbezogener Daten einholen m\u00fcssen. Zum Beispiel muss ein Lieferdienst die Adresse einer betroffenen Person (Ihre) verarbeiten, um einen Lieferauftrag zu erf\u00fcllen. In diesem Fall m\u00fcssen die f\u00fcr die Datenverarbeitung Verantwortlichen (wir) keine Einwilligung einholen.",
+                "answer": "Gem\u00e4\u00df der DSGVO (Artikel 4 Absatz 11) ist die Einwilligung die eindeutige Zustimmung einer betroffenen Person (von Ihnen) gegen\u00fcber einem f\u00fcr die Datenverarbeitung Verantwortlichen (uns) zur Verarbeitung Ihrer personenbezogenen Daten. Beachten Sie, dass die f\u00fcr die Datenverarbeitung Verantwortlichen (wir) nicht immer die Einwilligung der betroffenen Personen (Sie) zur Verarbeitung personenbezogener Daten einholen m\u00fcssen. Zum Beispiel muss ein Lieferdienst die Adresse einer betroffenen Person (Ihre) verarbeiten, um einen Lieferauftrag ausführen zu können. In diesem Fall m\u00fcssen die f\u00fcr die Datenverarbeitung Verantwortlichen (wir) keine Einwilligung einholen.",
                 "references": {
                     "ref1": "https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX%3A32016R0679"
                 }
@@ -155,15 +143,15 @@
                 }
             },
             "qna3": {
-                "question": "Datenkontrolleur",
-                "answer": "Gem\u00e4\u00df der DSGVO (Artikel 4 Absatz 7) m\u00fcssen die f\u00fcr die Verarbeitung Verantwortlichen (wir) den betroffenen Personen (Ihnen) deutlich machen, wie und f\u00fcr welche Zwecke sie personenbezogene Daten verarbeiten. Die f\u00fcr die Datenverarbeitung Verantwortlichen werden oft nur als \"f\u00fcr die Verarbeitung Verantwortliche\" bezeichnet.",
+                "question": "Datenverantwortlicher",
+                "answer": "Gem\u00e4\u00df der DSGVO (Artikel 4 Absatz 7) m\u00fcssen die f\u00fcr die Datenverarbeitung Verantwortlichen (wir) den betroffenen Personen (Ihnen) deutlich machen, wie und f\u00fcr welche Zwecke sie personenbezogene Daten verarbeiten. Die f\u00fcr die Datenverarbeitung Verantwortlichen werden oft nur als \"f\u00fcr die Verantwortliche\" bezeichnet.",
                 "references": {
                     "ref1": "https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX%3A32016R0679"
                 }
             },
             "qna4": {
                 "question": "Datenverarbeiter",
-                "answer": "Gem\u00e4\u00df der DSGVO (Artikel 4 (8)) werden Ihre personenbezogenen Daten von Datenverarbeitern verarbeitet. Datenverarbeiter und f\u00fcr die Datenverarbeitung Verantwortliche (wir) k\u00f6nnen ein und dasselbe sein, m\u00fcssen es aber nicht. Wenn dies nicht der Fall ist, geben die f\u00fcr die Datenverarbeitung Verantwortlichen (wir) in der Regel weder den Zweck der Verarbeitung noch die personenbezogenen Daten an, die vom Datenverarbeiter verarbeitet werden sollen. Datenverarbeiter werden oft nur als \"Auftragsverarbeiter\" bezeichnet.",
+                "answer": "Gem\u00e4\u00df der DSGVO (Artikel 4 (8)) werden Ihre personenbezogenen Daten von Datenverarbeitern verarbeitet. Datenverantwortliche (wir) können auch Datenverarbeiter sein, m\u00fcssen es aber nicht. Wenn dies nicht der Fall ist, geben die f\u00fcr die Datenverarbeitung Verantwortlichen (wir) in der Regel weder den Zweck der Verarbeitung noch die personenbezogenen Daten an, die vom Datenverarbeiter verarbeitet werden sollen. Datenverarbeiter werden oft nur als \"Auftragsverarbeiter\" bezeichnet.",
                 "references": {
                     "ref1": "https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX%3A32016R0679"
                 }
@@ -176,14 +164,14 @@
                 }
             },
             "qna6": {
-                "question": "Daten-Empf\u00e4nger",
-                "answer": "Gem\u00e4\u00df der DSGVO (Artikel 4 Absatz 9) ist jeder, dem die personenbezogenen Daten einer Person (Ihre) offengelegt werden, ein Datenempf\u00e4nger. Datenempf\u00e4nger sind in der Regel f\u00fcr die Datenverarbeitung Verantwortliche und Datenverarbeiter. Datenempf\u00e4nger werden oft nur als \"Empf\u00e4nger\" bezeichnet.",
+                "question": "Datenempf\u00e4nger",
+                "answer": "Gem\u00e4\u00df der DSGVO (Artikel 4 Absatz 9) ist jeder, dem die personenbezogenen (Ihre) Daten einer betroffenen Person offengelegt werden, ein Datenempf\u00e4nger. Datenempf\u00e4nger sind in der Regel f\u00fcr die Datenverarbeitung Verantwortliche und auch Datenverarbeiter. Datenempf\u00e4nger werden oft nur als \"Empf\u00e4nger\" bezeichnet.",
                 "references": {
                     "ref1": "https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX%3A32016R0679"
                 }
             },
             "qna7": {
-                "question": "Daten Subjekt",
+                "question": "Betroffene Person",
                 "answer": "Gem\u00e4\u00df der DSGVO sind Sie eine betroffene Person, da Sie zum Beispiel durch Ihren Namen oder Ihre Sozialversicherungsnummer identifizierbar sind.",
                 "references": {
                     "ref1": "https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX%3A32016R0679"
@@ -191,7 +179,7 @@
             },
             "qna8": {
                 "question": "DSGVO",
-                "answer": "Die Allgemeine Datenschutzverordnung ist die in der Europ\u00e4ischen Union geltende Datenschutzgesetzgebung. Sie wurde im Mai 2016 verabschiedet und trat im Mai 2018 in Kraft.",
+                "answer": "Die Datenschutzgrundverordnung ist die in der Europ\u00e4ischen Union geltende Datenschutzregelung. Sie wurde im Mai 2016 verabschiedet und trat im Mai 2018 in Kraft.",
                 "references": {
                     "ref1": "https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX%3A32016R0679"
                 }
@@ -205,13 +193,13 @@
             },
             "qna10": {
                 "question": "Verarbeitung",
-                "answer": "Gem\u00e4\u00df der DSGVO (Artikel 4 (2)) ist nur die Verarbeitung personenbezogener Daten geregelt. Artikel 6 legt insbesondere fest, dass die Verarbeitung personenbezogener Daten rechtm\u00e4\u00dfig ist, wenn die betroffenen Personen (Sie) eingewilligt haben oder die Verarbeitung zur Erf\u00fcllung eines Vertrags erforderlich ist. Ein Lieferdienst muss keine Einwilligung einholen, um die Adresse einer betroffenen Person (Ihre) zum Zweck der Lieferung zu verarbeiten, wenn die Lieferung Teil eines Kaufvertrags ist. Die Verarbeitung umfasst auch die Erhebung und Speicherung personenbezogener Daten.",
+                "answer": "Gem\u00e4\u00df der DSGVO (Artikel 4 (2)) beschränkt sich auf die Verarbeitung personenbezogener Daten. Artikel 6 legt insbesondere fest, dass die Verarbeitung personenbezogener Daten rechtm\u00e4\u00dfig ist, wenn die betroffenen Personen (Sie) eingewilligt haben oder die Verarbeitung zur Erf\u00fcllung eines Vertrags erforderlich ist. Ein Lieferdienst muss keine Einwilligung einholen, um die Adresse einer betroffenen Person (Ihre) zum Zweck der Lieferung zu verarbeiten, wenn die Lieferung Teil eines Kaufvertrags ist. Die Verarbeitung umfasst auch die Erhebung und Speicherung personenbezogener Daten.",
                 "references": {
                     "ref1": "https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX%3A32016R0679"
                 }
             },
             "qna11": {
-                "question": "Profilerstellung",
+                "question": "Profiling",
                 "answer": "Gem\u00e4\u00df der DSGVO (Artikel 4 (4)) ist Profiling jede Form der automatisierten Verarbeitung personenbezogener Daten mit dem Ziel, spezifische Informationen \u00fcber eine betroffene Person (Sie) zu gewinnen. Profiling wird \u00fcblicherweise verwendet, um die Wahrscheinlichkeit abzusch\u00e4tzen, dass eine betroffene Person (Sie) ein bestimmtes Produkt kauft oder einen Kredit nicht zur\u00fcckzahlen kann.",
                 "references": {
                     "ref1": "https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX%3A32016R0679"
@@ -232,7 +220,7 @@
                 }
             },
             "qna14": {
-                "question": "Drittpartei",
+                "question": "Dritte",
                 "answer": "Gem\u00e4\u00df der GDPR (Artikel 4 (10)) werden Dritte direkt von den Datenverantwortlichen (uns) und/oder den Datenverarbeitern zur Verarbeitung personenbezogener Daten erm\u00e4chtigt.",
                 "references": {
                     "ref1": "https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX%3A32016R0679"
