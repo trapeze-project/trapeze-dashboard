@@ -1,137 +1,137 @@
 {
     "general": {
-        "cancel": "Cancel",
-        "revoke": "Revoke all",
-        "category": "Data Categories",
-        "location": "Location Data",
-        "advertising": "Advertising",
-        "warning": "Warning",
-        "access": "Access data",
-        "unrelatedData": "Unrelated Data Category",
-        "bioData": "Biometric Data",
-        "unrelatedDataText": "It is very unusual that fingerprints are used for advertising purposes.",
-        "bioDataText": "Fingerprints are particularly sensitive, since they facilitate identity theft. It is recommended to only provide consent for fingerprint data where absolutely necessary."
+        "cancel": "Abbrechen",
+        "revoke": "Alles widerrufen",
+        "category": "Datenkategorien",
+        "location": "Standortdaten",
+        "advertising": "Werbung",
+        "warning": "Warnung",
+        "access": "Zugangsdaten",
+        "unrelatedData": "Nicht verwandte Datenkategorie",
+        "bioData": "Biometrische Daten",
+        "unrelatedDataText": "Es ist sehr ungew\u00f6hnlich, dass Fingerabdr\u00fccke zu Werbezwecken verwendet werden.",
+        "bioDataText": "Fingerabdr\ufffdcke sind besonders sensibel, da sie es erm\u00f6glichen Ihre Identit\u00e4t zu stehlen. Es wird empfohlen, die Zustimmung zur Nutzung von Fingerabdr\u00fccken nur dann zu erteilen, wenn dies unbedingt erforderlich ist."
     },
     "nav": {
         "labels": {
-            "home": "Home",
-            "consent": "Consent",
-            "data": "Data",
-            "purposes": "Purposes",
-            "help": "Help",
+            "home": "Start",
+            "consent": "Einwilligungen",
+            "data": "Daten",
+            "purposes": "Zwecke",
+            "help": "Hilfe",
             "faq": "FAQ"
         }
     },
     "btn": {
         "labels": {
-            "consent-guide": "Consent Guide",
-            "i-can-not-find-an-answer": "I can't find an answer",
-            "undo-changes": "Undo changes",
-            "submit-changes": "Submit Changes",
-            "see-changes": "See Changes",
-            "view-changes": "View Changes",
-            "send-message": "Send message",
-            "cancel": "Cancel",
-            "back": "Back",
-            "next": "Next",
-            "view-issues": "View issues"
+            "consent-guide": "Einwilligungsassistent",
+            "i-can-not-find-an-answer": "Ich finde keine Antwort auf meine Frage",
+            "undo-changes": "\u00c4nderungen r\u00fcckg\u00e4ngig machen",
+            "submit-changes": "\u00c4nderungen speichern",
+            "see-changes": "\u00c4nderungen anzeigen",
+            "view-changes": "\u00c4nderungen anzeigen",
+            "send-message": "Nachricht senden",
+            "cancel": "Abbrechen",
+            "back": "Zur\u00fcck",
+            "next": "Weiter",
+            "view-issues": "Probleme anzeigen"
         }
     },
     "snackbar": {
         "msg": {
-            "please-complete-the-consent-guide": "please complete the consent guide",
-            "submission-successful": "Submission Succesful"
+            "please-complete-the-consent-guide": "Bitte schlie\u00dfen Sie den Fragenbogen des Einwilligungsassistenten ab",
+            "submission-successful": "Speichern erfolgreich"
         }
     },
     "placeholder": {
-        "search-for-a-question-or-an-answer": "Search for a question or an answer"
+        "search-for-a-question-or-an-answer": "Suche nach einer Frage oder einer Antwort"
     },
     "updates": {
-        "1": "Policy Update",
-        "2": "Consent Revocation",
-        "3": "Consent Request"
+        "1": "Aktualisierung der Richtlinie",
+        "2": "Widerruf der Einwilligung",
+        "3": "Einwilligungsanfrage"
     },
     "sidebar-title": {
-        "navigation": "Navigation",
-        "update": "Updates"
+        "navigation": "Men\u00fc",
+        "update": "Aktualisierungen"
     },
     "qna": {
-        "links-and-sources": "Links and Sources",
-        "header": "Frequently Asked Questions",
-        "introduction": "Find out more about the TRAPEZE privacy dashboard and its underlying concepts. Do not forget to let us know if you cannot find the information you are interested in."
+        "links-and-sources": "Links und Quellen",
+        "header": "H\u00e4ufig gestellte Fragen (FAQ)",
+        "introduction": "Erfahren Sie mehr \u00fcber das TRAPEZE-Datenschutz-Dashboard und dessen zugrunde liegenden Konzepte. Geben Sie uns gerne Bescheid, falls Sie Ihre gew\u00fcnschten Informationen nicht finden k\u00f6nnen."
     },
     "company": {
-        "name": "Company Name",
-        "add1": "Company Name Street",
-        "add2": "123456, Company Name City, Italy",
-        "website": "https://company.name.com",
-        "email": "name@company.name.com",
-        "contact": "Contact",
-        "position": "Data Protection Officer (DPO)",
-        "pos-name": "Data Protection Officer Name"
+        "name": "Firmenname",
+        "add1": "Firmenname Stra\u00dfe",
+        "add2": "123456, Firmenname Stadt, Italien",
+        "website": "https://firma.name.com",
+        "email": "name@firma.name.com",
+        "contact": "Kontakt",
+        "position": "Datenschutzbeauftragter (DSB)",
+        "pos-name": "Name des Datenschutzbeauftragten"
     },
     "home": {
-        "title": "Welcome to your personal privacy dashboard! ",
-        "explore-btn": "View",
-        "welcome-msg": "We at Company Name want you to understand how we process your personal data.",
-        "welcome-msg2": "In this dashboard, you can view what of your personal data we process and for which purposes. Limit our processing of your personal data by configuring your consent. You can",
-        "welcome-msg3": "The menu in the bottom left gives you a quick overview of the most recent consent-related interactions between you and us.",
-        "welcome-msg4": "If you are new to the TRAPEZE privacy dashboard, we recommend you to get started with the Consent Guide.",
+        "title": "Willkommen in Ihrem pers\u00f6nlichen Datenschutz-Dashboard!",
+        "explore-btn": "Ansehen",
+        "welcome-msg": "Wir bei Firmenname m\u00f6chten, dass Sie verstehen, wie wir Ihre personenbezogenen Daten verarbeiten.",
+        "welcome-msg2": "In diesem Dashboard k\u00f6nnen Sie einsehen, welche Ihrer personenbezogenen Daten wir verarbeiten und zu welchen Zwecken. Schr\u00e4nken Sie die Verarbeitung Ihrer personenbezogenen Daten ein, indem Sie Ihre Einwilligung konfigurieren. Sie k\u00f6nnen",
+        "welcome-msg3": "Das Men\u00fc unten links gibt Ihnen einen schnellen \u00dcberblick \u00fcber die letzten einwilligungsbezogenen Interaktionen zwischen Ihnen und uns.",
+        "welcome-msg4": "Wenn Sie mit dem TRAPEZE-Datenschutz-Dashboard noch nicht vertraut sind, empfehlen wir Ihnen, mit dem Einwilligungsassistenten zu beginnen.",
         "purpose": {
             "0": {
-                "name": "revoke and give consent,"
+                "name": "widerrufen und ihre Einwilligung erteilen,"
             },
             "1": {
-                "name": "deactivate and activate data categories,"
+                "name": "Datenkategorien deaktivieren und aktivieren,"
             },
             "2": {
-                "name": "deactivate and activate purposes."
+                "name": "Zwecke aktivieren und deaktivieren."
             }
         },
-        "help": "Consent Guide",
+        "help": "Hilfe",
         "items": {
             "0": {
-                "title": "Consent",
+                "title": "Einwilligungen",
                 "filename": "/img/consent.png",
                 "link": "/consent?tab=consent",
-                "content": "View when and what consent you gave us."
+                "content": "Sehen Sie, wann und welche Einwilligung Sie uns gegeben haben."
             },
             "1": {
-                "title": "Data",
+                "title": "Daten",
                 "filename": "/img/data.png",
                 "link": "/consent?tab=data",
-                "content": "Tell us which data categories we may process."
+                "content": "Teilen Sie uns mit, welche Datenkategorien wir verarbeiten d\u00fcrfen."
             },
             "2": {
-                "title": "Purposes",
+                "title": "Zwecke",
                 "filename": "/img/purpose.png",
                 "link": "/consent?tab=purpose",
-                "content": "Tell us which purposes we may address."
+                "content": "Teilen Sie uns mit, zu welchen Zwecken wir Ihre Daten verarbeiten d\u00fcrfen."
             },
             "3": {
                 "title": "TRAPEZE",
                 "filename": "/img/favicon.png",
                 "link": "http://trapeze-project.eu",
-                "content": "Learn more about TRAPEZE."
+                "content": "Erfahren Sie mehr \u00fcber TRAPEZE."
             }
         }
     },
     "consent": {
-        "consent-menu": "Consent Menu",
-        "title": "Consent Guide",
-        "location": "Your location data",
-        "purpose": "Purposes",
-        "text": "Location data is data that tells us where you have been at what time. We collect location data via GPS if you give permission in the Company Name mobile application. We use your location data to customize our advertising, to plan our marketing geographically, and to prevent fraud via geographic identity verification.",
-        "text_ad": "Advertising is an integral part of our business model, which guarantees that we can continue to provide you with our restaurant recommandations. We use the below data categories to customize advertising. Tell us below which data categories we may use to customize our advertising.",
-        "ad": "Advertisement",
+        "consent-menu": "\u00dcbersicht",
+        "title": "\u00dcbersicht",
+        "location": "Ihre Standortdaten",
+        "purpose": "Zwecke",
+        "text": "Standortdaten sind Daten, die uns sagen, wo Sie zu welcher Zeit waren. Wir erfassen Standortdaten \u00fcber GPS, wenn Sie in unserer app die Erlaubnis dazu erteilen. Wir verwenden Ihre Standortdaten, um unsere Werbung anzupassen, unser Marketing geografisch zu planen und Betrug durch geografische Identit\u00e4tspr\u00fcfung zu verhindern.",
+        "text_ad": "Werbung ist ein integraler Bestandteil unseres Gesch\u00e4ftsmodells, der garantiert, dass wir Ihnen weiterhin lokale Restaurants empfehlen k\u00f6nnen. Wir verwenden die folgenden Datenkategorien, um Werbung anzupassen. Teilen Sie uns unten mit, welche Datenkategorien wir verwenden d\u00fcrfen, um unsere Werbung anzupassen.",
+        "ad": "Werbung",
         "marketing": "Marketing",
-        "id": "Identity Verification",
+        "id": "Identit\u00e4tspr\u00fcfung",
         "name": "Name",
-        "fingerprint": "Fingerprint",
-        "bank": "Bank Account",
-        "credit": "Credit Card Number",
-        "sensitivity": "Sensitivity: ",
-        "sensitivityText": "You can configure how sensitive this data is to you. We treat very sensitive data differently and with extensive care",
-        "sensitivityHeader": "How sensitive is this data to you?"
+        "fingerprint": "Fingerabdr\u00fccke",
+        "bank": "Kontodaten",
+        "credit": "Kreditkartennummer",
+        "sensitivity": "Sensibilitat:",
+        "sensitivityText": "Sie k\u00f6nnen konfigurieren, wie sensibel diese Daten f\u00fcr Sie sind. Wir behandeln sehr sensible Daten gesondert und mit gro\u00dfer Sorgfalt",
+        "sensitivityHeader": "Wie sensibel sind diese Daten f\u00fcr Sie?"
     }
 }
