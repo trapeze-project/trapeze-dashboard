@@ -23,12 +23,12 @@
     }
   },
   "dpv":{
-    "location":"location",
-    "name":"name",
-    "fingerprint":"fingerprint",
-    "identity-verification":"identity verification",
-    "marketing":"marketing",
-    "advertising":"advertising"
+    "location":"Location",
+    "name":"Name",
+    "fingerprint":"Fingerprint",
+    "identity-verification":"Identity Verification",
+    "marketing":"Marketing",
+    "advertising":"Advertising"
   },
   "btn": {
     "labels": {
@@ -160,7 +160,8 @@
     "sensitivityText": "You can configure how sensitive this data is to you. We treat very sensitive data differently and with extensive care",
     "sensitivityHeader": "How sensitive is this data to you?",
     "warnings":"Warnings",
-    "warningMsg":"you have given consent to the data controller to use your {dataCategory} data for the purpose of {purpose}. but your choice in ConsentHelper was {helperChoices}"
+    "warningMsg":"you have given consent to the data controller to use your {dataCategory} data for the purpose of {purpose}. but your choice in ConsentHelper was {helperChoices}",
+    "issues":"issues"
 
   },
   "consent-helper":{

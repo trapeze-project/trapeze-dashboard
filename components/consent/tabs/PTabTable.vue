@@ -11,7 +11,7 @@
       <template v-if="tabName === 'purpose' " v-slot:item.issue="{ item }">
         <v-chip
           label
-          :color="item.issue === '0 issues' ? 'transparent' : 'orange'"
+          :color="item.issue === '0 '+$t('consent.issues') ? 'transparent' : 'orange'"
         >
           {{ item.issue }}
         </v-chip>
@@ -270,7 +270,7 @@ export default {
           obj.data = this.$t(dataCategory);
           obj.purpose = this.imports.categoryMap[dataCategory].map((item)=>{return this.$t(item)}).join(', ');
           obj.recipient = 'Company A'
-          obj.issue = '0 issues'
+          obj.issue = '0 '+ this.$t('consent.issues')
           result.push(obj);
         }
       }else if( this.tabName === "purpose"){
@@ -281,9 +281,9 @@ export default {
           obj.data = this.imports.purposeMap[purpose].map((item)=>{return this.$t(item)}).join(', ');
           if(this.$route.params.consentHelperUserChoices && this.warnings[purpose]){
             let issuesCounter = Object.keys(this.warnings[purpose]).length
-            obj.issue = issuesCounter +' issues'
+            obj.issue = issuesCounter +' '+ this.$t('consent.issues')
           }else{
-            obj.issue = '0 issues'
+            obj.issue = '0 '+ this.$t('consent.issues')
           }
           result.push(obj);
         }

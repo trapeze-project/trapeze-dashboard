@@ -6,7 +6,7 @@
       </v-card-title>
       <v-divider />
       <v-card-text>
-        {{ $t(categoryName.toLowerCase()) }}
+        {{ $t(categoryName.replace('dpv.','')) }}
       </v-card-text>
     </v-card>
   </div>
