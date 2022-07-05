@@ -10,7 +10,7 @@
         "unrelatedData": "Nicht verwandte Datenkategorie",
         "bioData": "Biometrische Daten",
         "unrelatedDataText": "Es ist sehr ungew\u00f6hnlich, dass Fingerabdr\u00fccke zu Werbezwecken verwendet werden.",
-        "bioDataText": "Fingerabdr\ufffdcke sind besonders sensibel, da sie es erm\u00f6glichen Ihre Identit\u00e4t zu stehlen. Es wird empfohlen, die Zustimmung zur Nutzung von Fingerabdr\u00fccken nur dann zu erteilen, wenn dies unbedingt erforderlich ist."
+        "bioDataText": "Fingerabdr\u00fccke sind besonders sensibel, da sie es erm\u00f6glichen Ihre Identit\u00e4t zu stehlen. Es wird empfohlen, die Zustimmung zur Nutzung von Fingerabdr\u00fccken nur dann zu erteilen, wenn dies unbedingt erforderlich ist."
     },
     "nav": {
         "labels": {
@@ -21,6 +21,14 @@
             "help": "Hilfe",
             "faq": "FAQ"
         }
+    },
+    "dpv": {
+        "location": "Standort",
+        "name": "Name",
+        "fingerprint": "Fingerabdr\u00fccke",
+        "identity-verification": "Identit\u00e4tspr\u00fcfung",
+        "marketing": "Marketing",
+        "advertising": "Werbung"
     },
     "btn": {
         "labels": {
@@ -114,15 +122,33 @@
                 "link": "http://trapeze-project.eu",
                 "content": "Erfahren Sie mehr \u00fcber TRAPEZE."
             }
+        },
+        "consent": {
+            "consent-menu": "\u00dcbersicht",
+            "title": "\u00dcbersicht",
+            "location": "Ihre Standortdaten",
+            "purpose": "Zwecke",
+            "text": "Standortdaten sind Daten, die uns sagen, wo Sie zu welcher Zeit waren. Wir erfassen Standortdaten \u00fcber GPS, wenn Sie in unserer app die Erlaubnis dazu erteilen. Wir verwenden Ihre Standortdaten, um unsere Werbung anzupassen, unser Marketing geografisch zu planen und Betrug durch geografische Identit\u00e4tspr\u00fcfung zu verhindern.",
+            "text_ad": "Werbung ist ein integraler Bestandteil unseres Gesch\u00e4ftsmodells, der garantiert, dass wir Ihnen weiterhin lokale Restaurants empfehlen k\u00f6nnen. Wir verwenden die folgenden Datenkategorien, um Werbung anzupassen. Teilen Sie uns unten mit, welche Datenkategorien wir verwenden d\u00fcrfen, um unsere Werbung anzupassen.",
+            "ad": "Werbung",
+            "marketing": "Marketing",
+            "id": "Identit\u00e4tspr\u00fcfung",
+            "name": "Name",
+            "fingerprint": "Fingerabdr\u00fccke",
+            "bank": "Kontodaten",
+            "credit": "Kreditkartennummer",
+            "sensitivity": "Sensibilitat:",
+            "sensitivityText": "Sie k\u00f6nnen konfigurieren, wie sensibel diese Daten f\u00fcr Sie sind. Wir behandeln sehr sensible Daten gesondert und mit gro\u00dfer Sorgfalt",
+            "sensitivityHeader": "Wie sensibel sind diese Daten f\u00fcr Sie?"
         }
     },
     "consent": {
         "consent-menu": "\u00dcbersicht",
-        "title": "\u00dcbersicht",
+        "title": "Einwilligungsassistent",
         "location": "Ihre Standortdaten",
-        "purpose": "Zwecke",
-        "text": "Standortdaten sind Daten, die uns sagen, wo Sie zu welcher Zeit waren. Wir erfassen Standortdaten \u00fcber GPS, wenn Sie in unserer app die Erlaubnis dazu erteilen. Wir verwenden Ihre Standortdaten, um unsere Werbung anzupassen, unser Marketing geografisch zu planen und Betrug durch geografische Identit\u00e4tspr\u00fcfung zu verhindern.",
-        "text_ad": "Werbung ist ein integraler Bestandteil unseres Gesch\u00e4ftsmodells, der garantiert, dass wir Ihnen weiterhin lokale Restaurants empfehlen k\u00f6nnen. Wir verwenden die folgenden Datenkategorien, um Werbung anzupassen. Teilen Sie uns unten mit, welche Datenkategorien wir verwenden d\u00fcrfen, um unsere Werbung anzupassen.",
+        "purposes": "Zwecke",
+        "text": "Standortdaten sind Daten, die uns sagen, wo Sie sich zu welcher Zeit aufgehalten haben. Wir erfassen Standortdaten \u00fcber GPS, wenn Sie dies in der mobilen Anwendung von Company Name zulassen. Wir verwenden Ihre Standortdaten, um unsere Werbung anzupassen, unser Marketing geografisch zu planen und um Betrug durch geografische Identit\u00e4tspr\u00fcfung zu verhindern.",
+        "text_ad": "Werbung ist ein integraler Bestandteil unseres Gesch\u00e4ftsmodells, der sicherstellt, dass wir Ihnen weiterhin unsere Restaurantempfehlungen zur Verf\u00fcgung stellen k\u00f6nnen. Wir verwenden die unten aufgef\u00fchrten Datenkategorien, um die Werbung zu personalisieren. Teilen Sie uns im Folgenden mit, welche Datenkategorien wir verwenden d\u00fcrfen, um unsere Werbung zu individualisieren.",
         "ad": "Werbung",
         "marketing": "Marketing",
         "id": "Identit\u00e4tspr\u00fcfung",
@@ -130,8 +156,23 @@
         "fingerprint": "Fingerabdr\u00fccke",
         "bank": "Kontodaten",
         "credit": "Kreditkartennummer",
-        "sensitivity": "Sensibilitat:",
-        "sensitivityText": "Sie k\u00f6nnen konfigurieren, wie sensibel diese Daten f\u00fcr Sie sind. Wir behandeln sehr sensible Daten gesondert und mit gro\u00dfer Sorgfalt",
-        "sensitivityHeader": "Wie sensibel sind diese Daten f\u00fcr Sie?"
-    }
+        "sensitivity": "Sensibilit\u00e4t:",
+        "sensitivityText": "Sie k\u00f6nnen einstellen, wie sensibel diese Daten f\u00fcr Sie sind. Wir behandeln sehr sensible Daten anders und mit gro\u00dfer Sorgfalt",
+        "sensitivityHeader": "Wie sensibel sind diese Daten f\u00fcr Sie?",
+        "warnings": "Warnungen",
+        "warningMsg": "Sie haben dem f\u00fcr die Datenverarbeitung Verantwortlichen Ihre Zustimmung zur Verwendung Ihrer {dataCategory}-Daten f\u00fcr den Zweck {purpose} gegeben, aber Ihre Wahl in ConsentHelper war {helperChoices}",
+        "issues": "Probleme"
+    },
+    "consent-helper": {
+        "purpose": "Zweck",
+        "comfortable": "Akzeptabel",
+        "no-opinion": "Unentschlossen",
+        "not-comfortable": "Inakzeptabel"
+    },
+    "location": "Standortdaten sind Daten, die uns sagen, wo Sie sich zu welcher Zeit aufgehalten haben. Wir erfassen Standortdaten \u00fcber GPS, wenn Sie dies in der mobilen Anwendung von Company Name zulassen. Wir verwenden Ihre Standortdaten, um unsere Werbung anzupassen, unser Marketing geografisch zu planen und um Betrug durch geografische Identit\u00e4tspr\u00fcfung zu verhindern.",
+    "name": "Wir erfassen Ihren Namen, um Sie richtig ansprechen zu k\u00f6nnen. Wir speichern Ihren Namen aus Ihrem Profil.",
+    "fingerprint": "Biometrische Daten wie z. B. Fingerabdr\u00fccke werden verwendet, um Ihre Anmeldedaten zu \u00fcberpr\u00fcfen und Identit\u00e4tsdiebstahl zu verhindern.",
+    "marketing": "Text f\u00fcr die Kategorie Marketing",
+    "advertising": "Werbung ist ein integraler Bestandteil unseres Gesch\u00e4ftsmodells, das garantiert, dass wir Ihnen weiterhin unsere Restaurantempfehlungen zur Verf\u00fcgung stellen k\u00f6nnen.",
+    "identity-verification": "Text f\u00fcr die Kategorie Identit\u00e4tspr\u00fcfung"
 }
