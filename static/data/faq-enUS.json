@@ -31,13 +31,15 @@
       "qna3":{
         "question": "Who hosts the TRAPEZE privacy dashboard?",
         "answer": "The TRAPEZE privacy dashboard is hosted by us, the data controller shown in the banner on the right-hand side.",
-        "references": {}
-      },
+        "references": {
+          "ref1":""
+        }      },
       "qna4":{
         "question": "What can I do on the TRAPEZE privacy dashboard?",
         "answer": "On the TRAPEZE privacy dashboard, you can see our active privacy policy and when we collected consent from you. Specifically, you can see how we process your data and what for. You can contact us if you have questions about us processing your data. You can also conveniently revoke consent or give more consent to improve our service if you like.",
-        "references": {}
-      },
+        "references": {
+          "ref1":""
+        }      },
       "qna5":{
         "question": "Why do you use the TRAPEZE privacy dashboard?",
         "answer": "The TRAPEZE privacy dashboard is a piece of software that data controllers like us can use to make clear to you how and for what we process your personal data. We use the TRAPEZE privacy dashboard and customize it. It is easier for everyone like this when all data controllers (we) and data subjects (you) agree on how to communicate consent and the processing of your data.",
@@ -74,23 +76,27 @@
       "qna4":{
         "question": "Do data controllers delete my personal data when I revoke my consent?",
         "answer": "As soone as you revoke your consent, data controllers (we) must stop processing of and delete your personal data for any purposes you revoked consent for.",
-        "references": {}
-      },
+        "references": {
+          "ref1":""
+        }      },
       "qna5":{
         "question": "Why should I revoke consent, when I can request deletion of my personal data?",
         "answer": "Revoking consent is more rigorous than requesting the deletion of your personal data. Requests for deletion do not prevent future collection of your personal data. When you revoke consent, data controllers (we) must delete the personal data that are subject to the revoked consent and (!) must not collect personal data after deletion. ",
-        "references": {}
-      },
+        "references": {
+          "ref1":""
+        }      },
       "qna6":{
         "question": "What can I do if I forgot what I consented to?",
         "answer": "According to the GDPR (Art. 7 1.), data controllers (we) need to demonstrate that they collected consent from you. <<<FIND WHERE THEY HAVE TO PROVE THAT IT IS VALID>>>",
-        "references": {}
-      },
+        "references": {
+          "ref1":""
+        }      },
       "qna7":{
         "question": "Does consent expire?",
         "answer": "No, consent does not expire. However, data controllers (we) must collect consent again if they want to process your personal data for new purposes.",
-        "references": {}
-      }
+        "references": {
+          "ref1":""
+        }      }
     }
   },
   "Personal Data":{
@@ -120,7 +126,9 @@
       "qna1":{
         "question": "What is the Consent Guide?",
         "answer": "The Consent Guide is a tool that allows you to avoid having to read through lengthy privacy policies. It will guide you through a number of questions that allow us to understand your consent preferences. On the basis of these consent preferences, we suggest consent configurations and point you toward potential issues with your currently given consent. It might for instance be that you are not willing to share your location for the purpose of marketing, yet for the purpose of restaurant recommendations. ",
-        "references": {}
+        "references": {
+          "ref1":""
+        }
       }
     }
   },
