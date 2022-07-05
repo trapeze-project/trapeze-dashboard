@@ -30,11 +30,17 @@
             },
             "qna3": {
                 "question": "Wer hostet das TRAPEZE-Datenschutz-Dashboard?",
-                "answer": "Das TRAPEZE-Datenschutz-Dashboard wird von uns gehostet, dem Datenverantwortlichen, der im Banner auf der rechten Seite angezeigt wird."
+                "answer": "Das TRAPEZE-Datenschutz-Dashboard wird von uns gehostet, dem Datenverantwortlichen, der im Banner auf der rechten Seite angezeigt wird.",
+                "references": {
+                    "ref1":""
+                  } 
             },
             "qna4": {
                 "question": "Was kann ich auf dem TRAPEZE-Datenschutz-Dashboard machen?",
-                "answer": "Auf dem TRAPEZE-Datenschutz-Dashboard k\u00f6nnen Sie unsere aktive Datenschutzpolitik einsehen und sehen, wann wir Ihre Zustimmung eingeholt haben. Insbesondere k\u00f6nnen Sie sehen, wie und wof\u00fcr wir Ihre Daten verarbeiten. Sie k\u00f6nnen sich an uns wenden, wenn Sie Fragen zur Verarbeitung Ihrer Daten durch uns haben. Sie k\u00f6nnen auch bequem Ihre Einwilligung widerrufen oder weitere Einwilligungen erteilen, um unseren Service zu verbessern, wenn Sie m\u00f6chten."
+                "answer": "Auf dem TRAPEZE-Datenschutz-Dashboard k\u00f6nnen Sie unsere aktive Datenschutzpolitik einsehen und sehen, wann wir Ihre Zustimmung eingeholt haben. Insbesondere k\u00f6nnen Sie sehen, wie und wof\u00fcr wir Ihre Daten verarbeiten. Sie k\u00f6nnen sich an uns wenden, wenn Sie Fragen zur Verarbeitung Ihrer Daten durch uns haben. Sie k\u00f6nnen auch bequem Ihre Einwilligung widerrufen oder weitere Einwilligungen erteilen, um unseren Service zu verbessern, wenn Sie m\u00f6chten.",
+                "references": {
+                    "ref1":""
+                  } 
             },
             "qna5": {
                 "question": "Warum verwenden Sie das TRAPEZE Datenschutz-Dashboard?",
@@ -71,19 +77,31 @@
             },
             "qna4": {
                 "question": "L\u00f6schen die f\u00fcr die Datenverarbeitung Verantwortlichen meine personenbezogenen Daten, wenn ich meine Einwilligung widerrufe?",
-                "answer": "Sobald Sie Ihre Einwilligung widerrufen, m\u00fcssen die f\u00fcr die Datenverarbeitung Verantwortlichen (wir) die Verarbeitung Ihrer personenbezogenen Daten f\u00fcr die Zwecke, f\u00fcr die Sie Ihre Einwilligung widerrufen haben, einstellen und l\u00f6schen."
+                "answer": "Sobald Sie Ihre Einwilligung widerrufen, m\u00fcssen die f\u00fcr die Datenverarbeitung Verantwortlichen (wir) die Verarbeitung Ihrer personenbezogenen Daten f\u00fcr die Zwecke, f\u00fcr die Sie Ihre Einwilligung widerrufen haben, einstellen und l\u00f6schen.",
+                "references": {
+                    "ref1":""
+                  } 
             },
             "qna5": {
                 "question": "Warum sollte ich meine Einwilligung widerrufen, wenn ich die L\u00f6schung meiner personenbezogenen Daten beantragen kann?",
-                "answer": "Der Widerruf der Einwilligung ist strenger als ein Antrag auf L\u00f6schung Ihrer personenbezogenen Daten. L\u00f6schungsantr\u00e4ge verhindern nicht die k\u00fcnftige Erhebung Ihrer personenbezogenen Daten. Wenn Sie Ihre Einwilligung widerrufen, m\u00fcssen die f\u00fcr die Datenverarbeitung Verantwortlichen (wir) die personenbezogenen Daten l\u00f6schen, die Gegenstand der widerrufenen Einwilligung sind, und (!) d\u00fcrfen nach der L\u00f6schung keine personenbezogenen Daten mehr erheben."
+                "answer": "Der Widerruf der Einwilligung ist strenger als ein Antrag auf L\u00f6schung Ihrer personenbezogenen Daten. L\u00f6schungsantr\u00e4ge verhindern nicht die k\u00fcnftige Erhebung Ihrer personenbezogenen Daten. Wenn Sie Ihre Einwilligung widerrufen, m\u00fcssen die f\u00fcr die Datenverarbeitung Verantwortlichen (wir) die personenbezogenen Daten l\u00f6schen, die Gegenstand der widerrufenen Einwilligung sind, und (!) d\u00fcrfen nach der L\u00f6schung keine personenbezogenen Daten mehr erheben.",
+                "references": {
+                    "ref1":""
+                  } 
             },
             "qna6": {
                 "question": "Was kann ich tun, wenn ich vergessen habe, wozu ich eingewilligt habe?",
-                "answer": "Gem\u00e4\u00df der DSGVO (Artikel 7 Absatz 1) m\u00fcssen die f\u00fcr die Datenverarbeitung Verantwortlichen (wir) nachweisen, dass sie eine Einwilligung von Ihnen eingeholt haben. <<<FINDEN SIE, WO SIE NACHWEISEN M\u00dcSSEN, DASS SIE G\u00dcLTIG IST>>>"
+                "answer": "Gem\u00e4\u00df der DSGVO (Artikel 7 Absatz 1) m\u00fcssen die f\u00fcr die Datenverarbeitung Verantwortlichen (wir) nachweisen, dass sie eine Einwilligung von Ihnen eingeholt haben. <<<FINDEN SIE, WO SIE NACHWEISEN M\u00dcSSEN, DASS SIE G\u00dcLTIG IST>>>",
+                "references": {
+                    "ref1":""
+                  } 
             },
             "qna7": {
                 "question": "Verj\u00e4hren Einwilligungen?",
-                "answer": "Nein, Einwilligungen verj\u00e4hren nicht. Allerdings m\u00fcssen die f\u00fcr die Datenverarbeitung Verantwortlichen (wir) die Einwilligung erneut einholen, wenn sie Ihre personenbezogenen Daten f\u00fcr neue Zwecke verarbeiten wollen."
+                "answer": "Nein, Einwilligungen verj\u00e4hren nicht. Allerdings m\u00fcssen die f\u00fcr die Datenverarbeitung Verantwortlichen (wir) die Einwilligung erneut einholen, wenn sie Ihre personenbezogenen Daten f\u00fcr neue Zwecke verarbeiten wollen.",
+                "references": {
+                    "ref1":""
+                  } 
             }
         }
     },
@@ -113,7 +131,10 @@
         "qnas": {
             "qna1": {
                 "question": "Was ist der Einwilligungsassistent?",
-                "answer": "Der Einwilligungsassistent ist ein Hilfsmittel, mit dem Sie sich das Durchlesen langatmiger Datenschutzrichtlinien ersparen k\u00f6nnen. Er f\u00fchrt Sie durch eine Reihe von Fragen, die es uns erm\u00f6glichen, Ihre Einwilligungspr\u00e4ferenzen zu verstehen. Auf der Grundlage dieser Einwilligungspr\u00e4ferenzen schlagen wir Einwilligungskonfigurationen vor und weisen Sie auf m\u00f6gliche Probleme mit Ihrer derzeit erteilten Einwilligung hin. Es k\u00f6nnte zum Beispiel sein, dass Sie nicht bereit sind, Ihren Standort f\u00fcr Marketingzwecke weiterzugeben, aber f\u00fcr Restaurantempfehlungen."
+                "answer": "Der Einwilligungsassistent ist ein Hilfsmittel, mit dem Sie sich das Durchlesen langatmiger Datenschutzrichtlinien ersparen k\u00f6nnen. Er f\u00fchrt Sie durch eine Reihe von Fragen, die es uns erm\u00f6glichen, Ihre Einwilligungspr\u00e4ferenzen zu verstehen. Auf der Grundlage dieser Einwilligungspr\u00e4ferenzen schlagen wir Einwilligungskonfigurationen vor und weisen Sie auf m\u00f6gliche Probleme mit Ihrer derzeit erteilten Einwilligung hin. Es k\u00f6nnte zum Beispiel sein, dass Sie nicht bereit sind, Ihren Standort f\u00fcr Marketingzwecke weiterzugeben, aber f\u00fcr Restaurantempfehlungen.",
+                "references": {
+                    "ref1":""
+                  } 
             }
         }
     },
