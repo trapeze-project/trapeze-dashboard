@@ -1,137 +1,178 @@
 {
     "general": {
-        "cancel": "Cancel",
-        "revoke": "Revoke all",
-        "category": "Data Categories",
-        "location": "Location Data",
-        "advertising": "Advertising",
-        "warning": "Warning",
-        "access": "Access data",
-        "unrelatedData": "Unrelated Data Category",
-        "bioData": "Biometric Data",
-        "unrelatedDataText": "It is very unusual that fingerprints are used for advertising purposes.",
-        "bioDataText": "Fingerprints are particularly sensitive, since they facilitate identity theft. It is recommended to only provide consent for fingerprint data where absolutely necessary."
+        "cancel": "Annullamento",
+        "revoke": "Revocare tutti",
+        "category": "Categorie di dati",
+        "location": "Dati sulla posizione",
+        "advertising": "Pubblicit\u00e0",
+        "warning": "Avvertenze",
+        "access": "Accesso ai dati",
+        "unrelatedData": "Categoria di dati non correlati",
+        "bioData": "Dati biometrici",
+        "unrelatedDataText": "\u00c8 molto insolito che le impronte digitali vengano utilizzate per scopi pubblicitari.",
+        "bioDataText": "Le impronte digitali sono particolarmente sensibili, in quanto facilitano il furto di identit\u00e0. Si raccomanda di fornire il consenso per i dati relativi alle impronte digitali solo se assolutamente necessario."
     },
     "nav": {
         "labels": {
-            "home": "Home",
-            "consent": "Consent",
-            "data": "Data",
-            "purposes": "Purposes",
-            "help": "Help",
+            "home": "Casa",
+            "consent": "Consenso",
+            "data": "Dati",
+            "purposes": "Scopi",
+            "help": "Aiuto",
             "faq": "FAQ"
         }
     },
+    "dpv": {
+        "location": "Location",
+        "name": "Nome",
+        "fingerprint": "Impronta digitale",
+        "identity-verification": "Verifica dell'identit\u00e0",
+        "marketing": "Marketing",
+        "advertising": "Pubblicit\u00e0"
+    },
     "btn": {
         "labels": {
-            "consent-guide": "Consent Guide",
-            "i-can-not-find-an-answer": "I can't find an answer",
-            "undo-changes": "Undo changes",
-            "submit-changes": "Submit Changes",
-            "see-changes": "See Changes",
-            "view-changes": "View Changes",
-            "send-message": "Send message",
-            "cancel": "Cancel",
+            "consent-guide": "Guida al consenso",
+            "i-can-not-find-an-answer": "Non riesco a trovare una risposta",
+            "undo-changes": "Annullare le modifiche",
+            "submit-changes": "Invia le modifiche",
+            "see-changes": "Vedere le modifiche",
+            "view-changes": "Visualizza le modifiche",
+            "send-message": "Invia il messaggio",
+            "cancel": "Annullamento",
             "back": "Back",
-            "next": "Next",
-            "view-issues": "View issues"
+            "next": "Indietro",
+            "view-issues": "Visualizza i problemi"
         }
     },
     "snackbar": {
         "msg": {
-            "please-complete-the-consent-guide": "please complete the consent guide",
-            "submission-successful": "Submission Succesful"
+            "please-complete-the-consent-guide": "compilare la guida al consenso",
+            "submission-succesful": "Presentazione riuscita"
         }
     },
     "placeholder": {
-        "search-for-a-question-or-an-answer": "Search for a question or an answer"
+        "search-for-a-question-or-an-answer": "Cercare una domanda o una risposta"
     },
     "updates": {
-        "1": "Policy Update",
-        "2": "Consent Revocation",
-        "3": "Consent Request"
+        "1": "Aggiornamento sulla politica",
+        "2": "Revoca del consenso",
+        "3": "Richiesta di consenso"
     },
     "sidebar-title": {
-        "navigation": "Navigation",
-        "update": "Updates"
+        "navigation": "Navigazione",
+        "update": "Aggiornamenti"
     },
     "qna": {
-        "links-and-sources": "Links and Sources",
-        "header": "Frequently Asked Questions",
-        "introduction": "Find out more about the TRAPEZE privacy dashboard and its underlying concepts. Do not forget to let us know if you cannot find the information you are interested in."
+        "links-and-sources": "Link e fonti",
+        "header": "Domande frequenti",
+        "introduction": "Per saperne di pi\u00f9 sul cruscotto della privacy di TRAPEZE e sui concetti che ne stanno alla base, non dimenticate di comunicarci se non riuscite a trovare le informazioni che vi interessano."
     },
     "company": {
-        "name": "Company Name",
-        "add1": "Company Name Street",
-        "add2": "123456, Company Name City, Italy",
-        "website": "https://company.name.com",
-        "email": "name@company.name.com",
-        "contact": "Contact",
-        "position": "Data Protection Officer (DPO)",
-        "pos-name": "Data Protection Officer Name"
+        "name": "Nome della societ\u00e0",
+        "add1": "Nome dell'azienda Via",
+        "add2": "123456, Nome dell'azienda Citt\u00e0, Italia",
+        "website": "https://societa.nome.com",
+        "email": "nome@societa.nome.com",
+        "contact": "Contatto",
+        "position": "Responsabile della protezione dei dati (DPO)",
+        "pos-name": "Nome del responsabile della protezione dei dati"
     },
     "home": {
-        "title": "Welcome to your personal privacy dashboard! ",
-        "explore-btn": "View",
-        "welcome-msg": "We at Company Name want you to understand how we process your personal data.",
-        "welcome-msg2": "In this dashboard, you can view what of your personal data we process and for which purposes. Limit our processing of your personal data by configuring your consent. You can",
-        "welcome-msg3": "The menu in the bottom left gives you a quick overview of the most recent consent-related interactions between you and us.",
-        "welcome-msg4": "If you are new to the TRAPEZE privacy dashboard, we recommend you to get started with the Consent Guide.",
+        "title": "Benvenuti nel vostro cruscotto personale per la privacy!",
+        "explore-btn": "Vista",
+        "welcome-msg": "Noi di Nome Azienda desideriamo che l'utente comprenda come trattiamo i suoi dati personali.",
+        "welcome-msg2": "In this dashboard, you can view what personal data we process and for which purposes. The dashboard allows you to limit our processing of your personal data by configuring your consent. You can",
+        "welcome-msg3": "Il menu in basso a sinistra offre una rapida panoramica delle pi\u00f9 recenti interazioni relative al consenso tra l'utente e noi.",
+        "welcome-msg4": "Il menu in basso a sinistra offre una rapida panoramica delle pi\u00f9 recenti interazioni relative al consenso tra l'utente e noi.",
         "purpose": {
             "0": {
-                "name": "revoke and give consent,"
+                "name": "revocare e dare il consenso,"
             },
             "1": {
-                "name": "deactivate and activate data categories,"
+                "name": "disattivare e attivare le categorie di dati,"
             },
             "2": {
-                "name": "deactivate and activate purposes."
+                "name": "disattivare e attivare gli scopi."
             }
         },
-        "help": "Consent Guide",
+        "help": "Aiuto",
         "items": {
             "0": {
-                "title": "Consent",
+                "title": "Consenso",
                 "filename": "/img/consent.png",
                 "link": "/consent?tab=consent",
-                "content": "View when and what consent you gave us."
+                "content": "Visualizzare quando e quale consenso ci avete dato."
             },
             "1": {
-                "title": "Data",
+                "title": "Dati",
                 "filename": "/img/data.png",
                 "link": "/consent?tab=data",
-                "content": "Tell us which data categories we may process."
+                "content": "Ci dica quali categorie di dati possiamo trattare."
             },
             "2": {
-                "title": "Purposes",
+                "title": "Scopi",
                 "filename": "/img/purpose.png",
                 "link": "/consent?tab=purpose",
-                "content": "Tell us which purposes we may address."
+                "content": "Ci dica a quali scopi possiamo rivolgerci."
             },
             "3": {
                 "title": "TRAPEZE",
                 "filename": "/img/favicon.png",
                 "link": "http://trapeze-project.eu",
-                "content": "Learn more about TRAPEZE."
+                "content": "Per saperne di pi\u00f9 su TRAPEZE."
             }
+        },
+        "consent": {
+            "consent-menu": "Menu Consenso",
+            "title": "Guida al consenso",
+            "location": "I vostri dati sulla posizione",
+            "purpose": "Scopi",
+            "text": "I dati sulla posizione sono dati che ci dicono dove siete stati in quale momento. Raccogliamo i dati sulla posizione tramite GPS se l'utente fornisce l'autorizzazione nell'applicazione mobile Company Name. Utilizziamo i dati sulla posizione dell'utente per personalizzare la nostra pubblicit\u00e0, per pianificare il nostro marketing a livello geografico e per prevenire le frodi attraverso la verifica dell'identit\u00e0 geografica.",
+            "text_ad": "La pubblicit\u00e0 \u00e8 parte integrante del nostro modello di business, che ci permette di continuare a fornirvi le nostre raccomandazioni sui ristoranti. Utilizziamo le seguenti categorie di dati per personalizzare la pubblicit\u00e0. Indicate qui di seguito quali categorie di dati possiamo utilizzare per personalizzare la nostra pubblicit\u00e0.",
+            "ad": "Pubblicit\u00e0",
+            "marketing": "Marketing",
+            "id": "Verifica dell'identit\u00e0",
+            "name": "Nome",
+            "fingerprint": "Impronta digitale",
+            "bank": "Conto corrente bancario",
+            "credit": "Numero di carta di credito",
+            "sensitivity": "Sensibilit\u00e0:",
+            "sensitivityText": "Potete configurare il grado di sensibilit\u00e0 di questi dati. I dati molto sensibili vengono trattati in modo diverso e con grande attenzione.",
+            "sensitivityHeader": "Quanto sono sensibili questi dati per voi?"
         }
     },
     "consent": {
-        "consent-menu": "Consent Menu",
-        "title": "Consent Guide",
-        "location": "Your location data",
-        "purpose": "Purposes",
-        "text": "Location data is data that tells us where you have been at what time. We collect location data via GPS if you give permission in the Company Name mobile application. We use your location data to customize our advertising, to plan our marketing geographically, and to prevent fraud via geographic identity verification.",
-        "text_ad": "Advertising is an integral part of our business model, which guarantees that we can continue to provide you with our restaurant recommandations. We use the below data categories to customize advertising. Tell us below which data categories we may use to customize our advertising.",
-        "ad": "Advertisement",
+        "consent-menu": "Menu Consenso",
+        "title": "Guida al consenso",
+        "location": "I vostri dati sulla posizione",
+        "purposes": "Scopi",
+        "text": "I dati sulla posizione sono dati che ci dicono dove siete stati in quale momento. Raccogliamo i dati sulla posizione tramite GPS se l'utente fornisce l'autorizzazione nell'applicazione mobile Company Name. Utilizziamo i dati sulla posizione dell'utente per personalizzare la nostra pubblicit\u00e0, per pianificare il nostro marketing a livello geografico e per prevenire le frodi attraverso la verifica dell'identit\u00e0 geografica.",
+        "text_ad": "La pubblicit\u00e0 \u00e8 parte integrante del nostro modello di business, che ci permette di continuare a fornirvi le nostre raccomandazioni sui ristoranti. Utilizziamo le seguenti categorie di dati per personalizzare la pubblicit\u00e0. Indicate qui di seguito quali categorie di dati possiamo utilizzare per personalizzare la nostra pubblicit\u00e0.",
+        "ad": "Pubblicit\u00e0",
         "marketing": "Marketing",
-        "id": "Identity Verification",
-        "name": "Name",
-        "fingerprint": "Fingerprint",
-        "bank": "Bank Account",
-        "credit": "Credit Card Number",
-        "sensitivity": "Sensitivity: ",
-        "sensitivityText": "You can configure how sensitive this data is to you. We treat very sensitive data differently and with extensive care",
-        "sensitivityHeader": "How sensitive is this data to you?"
-    }
+        "id": "Verifica dell'identit\u00e0",
+        "name": "Nome",
+        "fingerprint": "Impronta digitale",
+        "bank": "Conto corrente bancario",
+        "credit": "Numero di carta di credito",
+        "sensitivity": "Sensibilit\u00e0:",
+        "sensitivityText": "Potete configurare il grado di sensibilit\u00e0 di questi dati. I dati molto sensibili vengono trattati in modo diverso e con grande attenzione.",
+        "sensitivityHeader": "Quanto sono sensibili questi dati per voi?",
+        "warnings": "Avvertenze",
+        "warningMsg": "l'utente ha dato il consenso al titolare del trattamento per l'utilizzo dei suoi dati {dataCategory} per lo scopo di {purpose}. ma la sua scelta in ConsentHelper \u00e8 stata {helperChoices}",
+        "issues": "questioni"
+    },
+    "consent-helper": {
+        "purpose": "Scopo",
+        "comfortable": "Confortevole",
+        "no-opinion": "Nessuna opinione",
+        "not-comfortable": "Non confortevole"
+    },
+    "location": "I dati sulla posizione sono dati che ci dicono dove siete stati in quale momento. Raccogliamo i dati sulla posizione tramite GPS se l'utente fornisce l'autorizzazione nell'applicazione mobile Company Name. Utilizziamo i dati sulla posizione dell'utente per personalizzare la nostra pubblicit\u00e0, per pianificare il nostro marketing a livello geografico e per prevenire le frodi attraverso la verifica dell'identit\u00e0 geografica.",
+    "name": "Raccogliamo il vostro nome per indirizzarvi correttamente. Memorizziamo il vostro nome dal vostro profilo.",
+    "fingerprint": "I dati biometrici, come le impronte digitali, vengono utilizzati per verificare le credenziali e prevenire il furto di identit\u00e0.",
+    "marketing": "Testo per la categoria marketing",
+    "advertising": "La pubblicit\u00e0 \u00e8 parte integrante del nostro modello di business, che ci garantisce di continuare a fornirvi le nostre raccomandazioni sui ristoranti.",
+    "identity-verification": "Testo per la categoria di verifica dell'identit\u00e0"
 }
