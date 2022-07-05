@@ -34,9 +34,9 @@
             <div>{{this.matchedQNA.answer}}</div>
           </v-card-text>
           <v-card-actions>
-            <div v-if="Object.values(matchedQNA.references).length">>
+            <div v-if="Object.values(matchedQNA.references).length">
               <ol>
-                  <div class="text--primary" v-show="Object.values(matchedQNA.references).length"> {{$t("qna.links-and-sources")}}: </div>
+                  <span class="text--primary" v-show="Object.values(matchedQNA.references).length"> {{$t("qna.links-and-sources")}}: </span>
                   <li v-for="link in Object.values(matchedQNA.references)" :key="link">
                     <a :href="link" class="black--text">{{ link }}</a>
                   </li>
