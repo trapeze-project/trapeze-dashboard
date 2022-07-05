@@ -48,7 +48,7 @@
     "snackbar": {
         "msg": {
             "please-complete-the-consent-guide": "compilare la guida al consenso",
-            "submission-succesful": "Presentazione riuscita"
+            "submission-successful": "Presentazione riuscita"
         }
     },
     "placeholder": {
@@ -172,7 +172,7 @@
     "location": "I dati sulla posizione sono dati che ci dicono dove siete stati in quale momento. Raccogliamo i dati sulla posizione tramite GPS se l'utente fornisce l'autorizzazione nell'applicazione mobile Company Name. Utilizziamo i dati sulla posizione dell'utente per personalizzare la nostra pubblicit\u00e0, per pianificare il nostro marketing a livello geografico e per prevenire le frodi attraverso la verifica dell'identit\u00e0 geografica.",
     "name": "Raccogliamo il vostro nome per indirizzarvi correttamente. Memorizziamo il vostro nome dal vostro profilo.",
     "fingerprint": "I dati biometrici, come le impronte digitali, vengono utilizzati per verificare le credenziali e prevenire il furto di identit\u00e0.",
-    "marketing": "Testo per la categoria marketing",
+    "marketing": "Il marketing è essenziale per noi perché operiamo in mercati molto diversi. Riconosciamo le preferenze regionali e possiamo quindi adattare i nostri prodotti ai vostri clienti.",
     "advertising": "La pubblicit\u00e0 \u00e8 parte integrante del nostro modello di business, che ci garantisce di continuare a fornirvi le nostre raccomandazioni sui ristoranti.",
-    "identity-verification": "Testo per la categoria di verifica dell'identit\u00e0"
+    "identity-verification": "La verifica dell'identità è un processo di sicurezza che garantisce che l'utente sia una persona reale e non un bot. Utilizziamo inoltre la verifica dell'identità per prevenire frodi, come il furto di identità o il furto di dati. Inoltre, ci assicuriamo che abbiate più di 16 anni."
 }

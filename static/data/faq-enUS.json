@@ -75,7 +75,7 @@
       },
       "qna4":{
         "question": "Do data controllers delete my personal data when I revoke my consent?",
-        "answer": "As soone as you revoke your consent, data controllers (we) must stop processing of and delete your personal data for any purposes you revoked consent for.",
+        "answer": "As soon as you revoke your consent, data controllers (we) must stop processing of and delete your personal data for any purposes you revoked consent for.",
         "references": {
           "ref1":""
         }      },

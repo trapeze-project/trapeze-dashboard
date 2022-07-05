@@ -16,14 +16,14 @@
         "labels": {
             "home": "Start",
             "consent": "Einwilligungen",
-            "data": "Daten",
+            "data": "Datenkategorien",
             "purposes": "Zwecke",
             "help": "Hilfe",
             "faq": "FAQ"
         }
     },
     "dpv": {
-        "location": "Standort",
+        "location": "Standortdaten",
         "name": "Name",
         "fingerprint": "Fingerabdr\u00fccke",
         "identity-verification": "Identit\u00e4tspr\u00fcfung",
@@ -42,12 +42,12 @@
             "cancel": "Abbrechen",
             "back": "Zur\u00fcck",
             "next": "Weiter",
-            "view-issues": "Probleme anzeigen"
+            "view-issues": "Fragebogen Abschließen"
         }
     },
     "snackbar": {
         "msg": {
-            "please-complete-the-consent-guide": "Bitte schlie\u00dfen Sie den Fragenbogen des Einwilligungsassistenten ab",
+            "please-complete-the-consent-guide": "Sie haben noch nicht alle Fragen beantwortet. Sie können den Fragebogen erst abschließen, wenn Sie alle Fragen beantwortet haben.",
             "submission-successful": "Speichern erfolgreich"
         }
     },
@@ -82,18 +82,18 @@
         "title": "Willkommen in Ihrem pers\u00f6nlichen Datenschutz-Dashboard!",
         "explore-btn": "Ansehen",
         "welcome-msg": "Wir bei Firmenname m\u00f6chten, dass Sie verstehen, wie wir Ihre personenbezogenen Daten verarbeiten.",
-        "welcome-msg2": "In diesem Dashboard k\u00f6nnen Sie einsehen, welche Ihrer personenbezogenen Daten wir verarbeiten und zu welchen Zwecken. Schr\u00e4nken Sie die Verarbeitung Ihrer personenbezogenen Daten ein, indem Sie Ihre Einwilligung konfigurieren. Sie k\u00f6nnen",
+        "welcome-msg2": "In diesem Dashboard k\u00f6nnen Sie einsehen, welche Ihrer personenbezogenen Daten wir verarbeiten und zu welchen Zwecken. Schr\u00e4nken Sie die Verarbeitung Ihrer personenbezogenen Daten ein, indem Sie Ihre Einwilligungen konfigurieren. Sie k\u00f6nnen",
         "welcome-msg3": "Das Men\u00fc unten links gibt Ihnen einen schnellen \u00dcberblick \u00fcber die letzten einwilligungsbezogenen Interaktionen zwischen Ihnen und uns.",
         "welcome-msg4": "Wenn Sie mit dem TRAPEZE-Datenschutz-Dashboard noch nicht vertraut sind, empfehlen wir Ihnen, mit dem Einwilligungsassistenten zu beginnen.",
         "purpose": {
             "0": {
-                "name": "widerrufen und ihre Einwilligung erteilen,"
+                "name": "Einwilligungen widerrufen oder erteilen,"
             },
             "1": {
-                "name": "Datenkategorien deaktivieren und aktivieren,"
+                "name": "Datenkategorien deaktivieren oder aktivieren,"
             },
             "2": {
-                "name": "Zwecke aktivieren und deaktivieren."
+                "name": "Zwecke aktivieren oder deaktivieren."
             }
         },
         "help": "Hilfe",
@@ -102,10 +102,10 @@
                 "title": "Einwilligungen",
                 "filename": "/img/consent.png",
                 "link": "/consent?tab=consent",
-                "content": "Sehen Sie, wann und welche Einwilligung Sie uns gegeben haben."
+                "content": "Überprüfen Sie, wann Sie uns welche Einwilligung gegeben haben."
             },
             "1": {
-                "title": "Daten",
+                "title": "Datenkategorien",
                 "filename": "/img/data.png",
                 "link": "/consent?tab=data",
                 "content": "Teilen Sie uns mit, welche Datenkategorien wir verarbeiten d\u00fcrfen."
@@ -120,7 +120,7 @@
                 "title": "TRAPEZE",
                 "filename": "/img/favicon.png",
                 "link": "http://trapeze-project.eu",
-                "content": "Erfahren Sie mehr \u00fcber TRAPEZE."
+                "content": "Erfahren Sie mehr \u00fcber das TRAPEZE-Projekt der Europäischen Union."
             }
         },
         "consent": {
@@ -128,7 +128,7 @@
             "title": "\u00dcbersicht",
             "location": "Ihre Standortdaten",
             "purpose": "Zwecke",
-            "text": "Standortdaten sind Daten, die uns sagen, wo Sie zu welcher Zeit waren. Wir erfassen Standortdaten \u00fcber GPS, wenn Sie in unserer app die Erlaubnis dazu erteilen. Wir verwenden Ihre Standortdaten, um unsere Werbung anzupassen, unser Marketing geografisch zu planen und Betrug durch geografische Identit\u00e4tspr\u00fcfung zu verhindern.",
+            "text": "Standortdaten sind Daten, die uns sagen, wo Sie zu welcher Zeit waren. Wir erfassen Standortdaten \u00fcber GPS, wenn Sie in unserer app die Erlaubnis dazu erteilen. Wir verwenden Ihre Standortdaten, um unsere Werbung anzupassen, unser Marketing geografisch zu planen und Betrug durch geografische Identit\u00e4tspr\u00fcfung zu vermeiden.",
             "text_ad": "Werbung ist ein integraler Bestandteil unseres Gesch\u00e4ftsmodells, der garantiert, dass wir Ihnen weiterhin lokale Restaurants empfehlen k\u00f6nnen. Wir verwenden die folgenden Datenkategorien, um Werbung anzupassen. Teilen Sie uns unten mit, welche Datenkategorien wir verwenden d\u00fcrfen, um unsere Werbung anzupassen.",
             "ad": "Werbung",
             "marketing": "Marketing",
@@ -160,19 +160,19 @@
         "sensitivityText": "Sie k\u00f6nnen einstellen, wie sensibel diese Daten f\u00fcr Sie sind. Wir behandeln sehr sensible Daten anders und mit gro\u00dfer Sorgfalt",
         "sensitivityHeader": "Wie sensibel sind diese Daten f\u00fcr Sie?",
         "warnings": "Warnungen",
-        "warningMsg": "Sie haben dem f\u00fcr die Datenverarbeitung Verantwortlichen Ihre Zustimmung zur Verwendung Ihrer {dataCategory}-Daten f\u00fcr den Zweck {purpose} gegeben, aber Ihre Wahl in ConsentHelper war {helperChoices}",
+        "warningMsg": "Sie haben dem f\u00fcr die Datenverarbeitung Verantwortlichen Ihre Einwilligung zur Verwendung Ihrer Daten in der Datenkategorie \"{dataCategory}\" f\u00fcr den Zweck \"{purpose}\" gegeben. Im Einwilligungsassistenten haben Sie jedoch angegeben, dass Sie damit \"{helperChoices}\" sind.",
         "issues": "Probleme"
     },
     "consent-helper": {
         "purpose": "Zweck",
-        "comfortable": "Akzeptabel",
+        "comfortable": "Einverstanden",
         "no-opinion": "Unentschlossen",
-        "not-comfortable": "Inakzeptabel"
+        "not-comfortable": "Nicht Einverstanden"
     },
-    "location": "Standortdaten sind Daten, die uns sagen, wo Sie sich zu welcher Zeit aufgehalten haben. Wir erfassen Standortdaten \u00fcber GPS, wenn Sie dies in der mobilen Anwendung von Company Name zulassen. Wir verwenden Ihre Standortdaten, um unsere Werbung anzupassen, unser Marketing geografisch zu planen und um Betrug durch geografische Identit\u00e4tspr\u00fcfung zu verhindern.",
-    "name": "Wir erfassen Ihren Namen, um Sie richtig ansprechen zu k\u00f6nnen. Wir speichern Ihren Namen aus Ihrem Profil.",
-    "fingerprint": "Biometrische Daten wie z. B. Fingerabdr\u00fccke werden verwendet, um Ihre Anmeldedaten zu \u00fcberpr\u00fcfen und Identit\u00e4tsdiebstahl zu verhindern.",
-    "marketing": "Text f\u00fcr die Kategorie Marketing",
+    "location": "Standortdaten sind Daten, die uns zeigen, wo Sie sich zu welcher Zeit aufgehalten haben. Wir erfassen Standortdaten \u00fcber GPS, wenn Sie uns dazu die Erlaubnis in der mobilen Anwendung von Company Name gegeben haben. Wir verwenden Ihre Standortdaten, um unsere Werbung anzupassen, unser Marketing geografisch zu planen und um Betrug durch geografische Identit\u00e4tspr\u00fcfung zu verhindern.",
+    "name": "Wir erfassen Ihren Namen, um Sie richtig ansprechen zu k\u00f6nnen. Ihren Namen entnehmen wir Ihrem Nutzerprofil.",
+    "fingerprint": "Biometrische Daten wie z. B. Fingerabdr\u00fccke werden verwendet, um Ihre Anmeldedaten zu \u00fcberpr\u00fcfen und Identit\u00e4tsdiebstahl zu vermeiden.",
+    "marketing": "Marketing ist für uns essentiell, da wir in sehr unterschiedlichen Märkten aktiv sind. Wir erkennen dabei regionale Vorlieben und können so unsere Produkte für Sie als Kunden anpassen.",
     "advertising": "Werbung ist ein integraler Bestandteil unseres Gesch\u00e4ftsmodells, das garantiert, dass wir Ihnen weiterhin unsere Restaurantempfehlungen zur Verf\u00fcgung stellen k\u00f6nnen.",
-    "identity-verification": "Text f\u00fcr die Kategorie Identit\u00e4tspr\u00fcfung"
+    "identity-verification": "Identit\u00e4tspr\u00fcfung ist ein Sicherheitsprozess bei welchem wir sicherstellen, dass Sie eine echten Person sind und nicht etwa ein Bot. Außerdem dient uns die Identiätsprüfung dazu Betrug, wie zum Beispiel durch Identitäsdiebstahl oder Datendiebstahl, vorzubeugen. Desweiteren stellen wir sicher, dass Sie älter als 16 Jahre alt sind."
 }
