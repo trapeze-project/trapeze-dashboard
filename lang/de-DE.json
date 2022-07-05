@@ -173,16 +173,16 @@
             "labels":{
                 "consent":"Einwilligungen",
                 "data-category":"Datenkategorien",
-                "purpose" : "Zweck"
+                "purpose" : "Zwecke"
             }
         },
         "ptable":{
             "header":{
                 "values":{
                     "date":"Datum",
-                    "event":"Einlass",
-                    "policy":"Politik",
-                    "data":"Daten",
+                    "event":"Ereignis",
+                    "policy":"Datenschutzerklärung",
+                    "data":"Datenkategorie",
                     "purpose":"Zweck",
                     "issue":"Probleme"
                 }
