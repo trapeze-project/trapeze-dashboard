@@ -1,179 +1,178 @@
 {
-  "general": {
-    "cancel": "Cancel",
-    "revoke": "Revoke all",
-    "category": "Data Categories",
-    "location": "Location Data",
-    "advertising": "Advertising",
-    "warning": "Warning",
-    "access": "Access data",
-    "unrelatedData": "Unrelated Data Category",
-    "bioData": "Biometric Data",
-    "unrelatedDataText": "It is very unusual that fingerprints are used for advertising purposes.",
-    "bioDataText": "Fingerprints are particularly sensitive, since they facilitate identity theft. It is recommended to only provide consent for fingerprint data where absolutely necessary."
-  },
-  "nav": {
-    "labels": {
-      "home": "Home",
-      "consent": "Consent",
-      "data": "Data",
-      "purposes": "Purposes",
-      "help": "Help",
-      "faq": "FAQ"
-    }
-  },
-  "dpv":{
-    "location":"Location",
-    "name":"Name",
-    "fingerprint":"Fingerprint",
-    "identity-verification":"Identity Verification",
-    "marketing":"Marketing",
-    "advertising":"Advertising"
-  },
-  "btn": {
-    "labels": {
-      "consent-guide": "Consent Guide",
-      "i-can-not-find-an-answer": "I can't find an answer",
-      "undo-changes": "Undo changes",
-      "submit-changes": "Submit Changes",
-      "see-changes": "See Changes",
-      "view-changes": "View Changes",
-      "send-message": "Send message",
-      "cancel": "Cancel",
-      "back": "Back",
-      "next": "Next",
-      "view-issues": "View issues"
-    }
-  },
-  "snackbar":{
-    "msg":{
-      "please-complete-the-consent-guide": "please complete the consent guide",
-      "submission-succesful": "Submission Succesful"
-    }
-  },
-  "placeholder": {
-    "search-for-a-question-or-an-answer": "Search for a question or an answer"
-  },
-  "updates": {
-    "1": "Policy Update",
-    "2": "Consent Revocation",
-    "3": "Consent Request"
-  },
-  "sidebar-title": {
-    "navigation": "Navigation",
-    "update": "Updates"
-  },
-  "qna":{
-    "links-and-sources": "Links and Sources",
-    "header": "Frequently Asked Questions",
-    "introduction": "Find out more about the TRAPEZE privacy dashboard and its underlying concepts.Do not forget to let us know if you cannot find information you are interested in."
-  },
-  "company": {
-    "name": "Company Name",
-    "add1": "Company Name Street",
-    "add2": "123456, Company Name City, Italy",
-    "website": "https://company.name.com",
-    "email": "name@company.name.com",
-    "contact": "Contact",
-    "position": "Data Protection Officer (DPO)",
-    "pos-name": "Data Protection Officer Name"
-  },
-  "home": {
-    "title": "Welcome to your personal privacy dashboard! ",
-    "explore-btn": "View",
-    "welcome-msg": "We at Company Name want you to understand how we process your personal data.",
-    "welcome-msg2": "In this dashboard, you can view what personal data we process and for which purposes. The dashboard allows you to limit our processing of your personal data by configuring your consent. You can",
-    "welcome-msg3": "The menu in the bottom left gives you a quick overview of the most recent consent-related interactions between you and us.",
-    "welcome-msg4": "If you are new to the privacy dashboard, we recommend you to try out the consent helper.",
-    "purpose": {
-      "0": {
-        "name": "revoke and give consent,"
-      },
-      "1": {
-        "name": "deactivate and activate data categories,"
-      },
-      "2": {
-        "name": "deactivate and activate purposes."
-      }
+    "general": {
+        "cancel": "Cancel",
+        "revoke": "Revoke all",
+        "category": "Data Categories",
+        "location": "Location Data",
+        "advertising": "Advertising",
+        "warning": "Warning",
+        "access": "Access data",
+        "unrelatedData": "Unrelated Data Category",
+        "bioData": "Biometric Data",
+        "unrelatedDataText": "It is very unusual that fingerprints are used for advertising purposes.",
+        "bioDataText": "Fingerprints are particularly sensitive, since they facilitate identity theft. It is recommended to only provide consent for fingerprint data where absolutely necessary."
     },
-    "items": {
-        "0": {
-            "title": "Consent",
-            "filename": "/img/consent.png",
-            "link": "/consent?tab=consent",
-            "content": "View when and what consent you gave us."
+    "nav": {
+        "labels": {
+            "home": "Home",
+            "consent": "Consent",
+            "data": "Data",
+            "purposes": "Purposes",
+            "help": "Help",
+            "faq": "FAQ"
+        }
+    },
+    "dpv": {
+        "location": "Location",
+        "name": "Name",
+        "fingerprint": "Fingerprint",
+        "identity-verification": "Identity Verification",
+        "marketing": "Marketing",
+        "advertising": "Advertising"
+    },
+    "btn": {
+        "labels": {
+            "consent-guide": "Consent Guide",
+            "i-can-not-find-an-answer": "I can't find an answer",
+            "undo-changes": "Undo changes",
+            "submit-changes": "Submit Changes",
+            "see-changes": "See Changes",
+            "view-changes": "View Changes",
+            "send-message": "Send message",
+            "cancel": "Cancel",
+            "back": "Back",
+            "next": "Next",
+            "view-issues": "View issues"
+        }
+    },
+    "snackbar": {
+        "msg": {
+            "please-complete-the-consent-guide": "please complete the consent guide",
+            "submission-succesful": "Submission Succesful"
+        }
+    },
+    "placeholder": {
+        "search-for-a-question-or-an-answer": "Search for a question or an answer"
+    },
+    "updates": {
+        "1": "Policy Update",
+        "2": "Consent Revocation",
+        "3": "Consent Request"
+    },
+    "sidebar-title": {
+        "navigation": "Navigation",
+        "update": "Updates"
+    },
+    "qna": {
+        "links-and-sources": "Links and Sources",
+        "header": "Frequently Asked Questions",
+        "introduction": "Find out more about the TRAPEZE privacy dashboard and its underlying concepts.Do not forget to let us know if you cannot find information you are interested in."
+    },
+    "company": {
+        "name": "Company Name",
+        "add1": "Company Name Street",
+        "add2": "123456, Company Name City, Italy",
+        "website": "https://company.name.com",
+        "email": "name@company.name.com",
+        "contact": "Contact",
+        "position": "Data Protection Officer (DPO)",
+        "pos-name": "Data Protection Officer Name"
+    },
+    "home": {
+        "title": "Welcome to your personal privacy dashboard! ",
+        "explore-btn": "View",
+        "welcome-msg": "We at Company Name want you to understand how we process your personal data.",
+        "welcome-msg2": "In this dashboard, you can view what personal data we process and for which purposes. The dashboard allows you to limit our processing of your personal data by configuring your consent. You can",
+        "welcome-msg3": "The menu in the bottom left gives you a quick overview of the most recent consent-related interactions between you and us.",
+        "welcome-msg4": "If you are new to the privacy dashboard, we recommend you to try out the consent helper.",
+        "purpose": {
+            "0": {
+                "name": "revoke and give consent,"
+            },
+            "1": {
+                "name": "deactivate and activate data categories,"
+            },
+            "2": {
+                "name": "deactivate and activate purposes."
+            }
         },
-        "1": {
-            "title": "Data",
-            "filename": "/img/data.png",
-            "link": "/consent?tab=data",
-            "content": "Tell us which data categories we may process."
+        "help": "Help",
+        "items": {
+            "0": {
+                "title": "Consent",
+                "filename": "/img/consent.png",
+                "link": "/consent?tab=consent",
+                "content": "View when and what consent you gave us."
+            },
+            "1": {
+                "title": "Data",
+                "filename": "/img/data.png",
+                "link": "/consent?tab=data",
+                "content": "Tell us which data categories we may process."
+            },
+            "2": {
+                "title": "Purposes",
+                "filename": "/img/purpose.png",
+                "link": "/consent?tab=purpose",
+                "content": "Tell us which purposes we may address."
+            },
+            "3": {
+                "title": "TRAPEZE",
+                "filename": "/img/favicon.png",
+                "link": "http://trapeze-project.eu",
+                "content": "Learn more about TRAPEZE."
+            }
         },
-        "2": {
-            "title": "Purposes",
-            "filename": "/img/purpose.png",
-            "link": "/consent?tab=purpose",
-            "content": "Tell us which purposes we may address."
-        },
-        "3": {
-            "title": "TRAPEZE",
-            "filename": "/img/favicon.png",
-            "link": "http://trapeze-project.eu",
-            "content": "Learn more about TRAPEZE."
-      }
+        "consent": {
+            "consent-menu": "Consent Menu",
+            "title": "Consent Guide",
+            "location": "Your location data",
+            "purpose": "Purposes",
+            "text": "Location data is data that tells us where you have been at what time. We collect location data via GPS if you give permission in the Company Name mobile application. We use your location data to customize our advertising, to plan our marketing geographically, and to prevent fraud via geographic identity verification.",
+            "text_ad": "Advertising is an integral part of our business model, which guarantees that we can continue to provide you with our restaurant recommandations. We use the below data categories to customize advertising. Tell us below which data categories we may use to customize our advertising.",
+            "ad": "Advertisement",
+            "marketing": "Marketing",
+            "id": "Identity Verification",
+            "name": "Name",
+            "fingerprint": "Fingerprint",
+            "bank": "Bank Account",
+            "credit": "Credit Card Number",
+            "sensitivity": "Sensitivity: ",
+            "sensitivityText": "You can configure how sensitive this data is to you. We treat very sensitive data differently and with extensive care",
+            "sensitivityHeader": "How sensitive is this data to you?"
+        }
     },
     "consent": {
-      "consent-menu": "Consent Menu",
-      "title": "Consent Guide",
-      "location": "Your location data",
-      "purpose": "Purposes",
-      "text": "Location data is data that tells us where you have been at what time. We collect location data via GPS if you give permission in the Company Name mobile application. We use your location data to customize our advertising, to plan our marketing geographically, and to prevent fraud via geographic identity verification.",
-      "text_ad": "Advertising is an integral part of our business model, which guarantees that we can continue to provide you with our restaurant recommandations. We use the below data categories to customize advertising. Tell us below which data categories we may use to customize our advertising.",
-      "ad": "Advertisement",
-      "marketing": "Marketing",
-      "id": "Identity Verification",
-      "name": "Name",
-      "fingerprint": "Fingerprint",
-      "bank": "Bank Account",
-      "credit": "Credit Card Number",
-      "sensitivity": "Sensitivity: ",
-      "sensitivityText": "You can configure how sensitive this data is to you. We treat very sensitive data differently and with extensive care",
-      "sensitivityHeader": "How sensitive is this data to you?"
-    }
-  },
-  "consent": {
-    "consent-menu": "Consent Menu",
-    "title": "Consent Guide",
-    "location": "Your location data",
-    "purposes": "Purposes",
-    "text": "Location data is data that tells us where you have been at what time. We collect location data via GPS if you give permission in the Company Name mobile application. We use your location data to customize our advertising, to plan our marketing geographically, and to prevent fraud via geographic identity verification.",
-    "text_ad": "Advertising is an integral part of our business model, which guarantees that we can continue to provide you with our restaurant recommandations. We use the below data categories to customize advertising. Tell us below which data categories we may use to customize our advertising.",
-
-    "ad": "Advertisement",
-    "marketing": "Marketing",
-    "id": "Identity Verification",
-    "name": "Name",
-    "fingerprint": "Fingerprint",
-    "bank": "Bank Account",
-    "credit": "Credit Card Number",
-    "sensitivity": "Sensitivity: ",
-    "sensitivityText": "You can configure how sensitive this data is to you. We treat very sensitive data differently and with extensive care",
-    "sensitivityHeader": "How sensitive is this data to you?",
-    "warnings":"Warnings",
-    "warningMsg":"you have given consent to the data controller to use your {dataCategory} data for the purpose of {purpose}. but your choice in ConsentHelper was {helperChoices}",
-    "issues":"issues"
-
-  },
-  "consent-helper":{
-    "purpose": "Purpose",
-    "comfortable":"Comfortable",
-    "no-opinion":"No opinion",
-    "not-comfortable":"Not comfortable"
-  },
-  "location": "Location data is data that tells us where you have been at what time. We collect location data via GPS if you give permission in the Company Name mobile application. We use your location data to customize our advertising, to plan our marketing geographically, and to prevent fraud via geographic identity verification.",
-  "name": "We collect your name to properly address you. We store your name from your profile.",
-  "fingerprint": "Biometric data such as fingerprint is used to verify your credentials and prevent identity theft.",
-  "marketing": "Text for marketing category",
-  "advertising": "Advertising is an integral part of our business model, which guarantees that we can continue to provide you with our restaurant recommandations.",
-  "identity-verification": "Text for identity verification category"
+        "consent-menu": "Consent Menu",
+        "title": "Consent Guide",
+        "location": "Your location data",
+        "purposes": "Purposes",
+        "text": "Location data is data that tells us where you have been at what time. We collect location data via GPS if you give permission in the Company Name mobile application. We use your location data to customize our advertising, to plan our marketing geographically, and to prevent fraud via geographic identity verification.",
+        "text_ad": "Advertising is an integral part of our business model, which guarantees that we can continue to provide you with our restaurant recommandations. We use the below data categories to customize advertising. Tell us below which data categories we may use to customize our advertising.",
+        "ad": "Advertisement",
+        "marketing": "Marketing",
+        "id": "Identity Verification",
+        "name": "Name",
+        "fingerprint": "Fingerprint",
+        "bank": "Bank Account",
+        "credit": "Credit Card Number",
+        "sensitivity": "Sensitivity: ",
+        "sensitivityText": "You can configure how sensitive this data is to you. We treat very sensitive data differently and with extensive care",
+        "sensitivityHeader": "How sensitive is this data to you?",
+        "warnings": "Warnings",
+        "warningMsg": "you have given consent to the data controller to use your {dataCategory} data for the purpose of {purpose}. but your choice in ConsentHelper was {helperChoices}",
+        "issues": "issues"
+    },
+    "consent-helper": {
+        "purpose": "Purpose",
+        "comfortable": "Comfortable",
+        "no-opinion": "No opinion",
+        "not-comfortable": "Not comfortable"
+    },
+    "location": "Location data is data that tells us where you have been at what time. We collect location data via GPS if you give permission in the Company Name mobile application. We use your location data to customize our advertising, to plan our marketing geographically, and to prevent fraud via geographic identity verification.",
+    "name": "We collect your name to properly address you. We store your name from your profile.",
+    "fingerprint": "Biometric data such as fingerprint is used to verify your credentials and prevent identity theft.",
+    "marketing": "Text for marketing category",
+    "advertising": "Advertising is an integral part of our business model, which guarantees that we can continue to provide you with our restaurant recommandations.",
+    "identity-verification": "Text for identity verification category"
 }
