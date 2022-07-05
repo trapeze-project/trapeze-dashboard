@@ -42,7 +42,11 @@
             "cancel": "Abbrechen",
             "back": "Zur\u00fcck",
             "next": "Weiter",
-            "view-issues": "Fragebogen Abschließen"
+            "view-issues": "Fragebogen Abschließen",
+            "fix":"fixen",
+            "fix-all":"alles fixen",
+            "ignore":"ignorieren",
+            "ignore-all":"alles ignorieren"
         }
     },
     "snackbar": {

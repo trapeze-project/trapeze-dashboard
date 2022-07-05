@@ -24,7 +24,7 @@
           align="right"
         >
           <v-btn @click="fixWarnig(dataCategory)">
-            fix
+            {{$t('btn.labels.fix')}}
           </v-btn>
         </v-col>
         <v-col
@@ -36,17 +36,17 @@
           align="right"
         >
           <v-btn @click="closeWarnig(dataCategory)">
-            ignore
+            {{$t('btn.labels.ignore')}}
           </v-btn>
         </v-col>
       </v-row>
     </v-alert>
     <div class="float-right">
       <v-btn class="white--text " color="red" @click="fixAllWarnigs">
-        Fix All
+        {{$t('btn.labels.fix-all')}}
       </v-btn>
       <v-btn class="black--text " color="primary" @click="closeAllWarnings">
-        Ignore All
+        {{$t('btn.labels.ignore-all')}}
       </v-btn>
     </div>
     <br>
