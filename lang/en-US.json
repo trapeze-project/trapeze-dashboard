@@ -42,7 +42,12 @@
             "cancel": "Cancel",
             "back": "Back",
             "next": "Next",
-            "view-issues": "View issues"
+            "view-issues": "View issues",
+            "fix":"Fix",
+            "fix-all":"Fix All",
+            "ignore":"Ignore",
+            "ignore-all":"Ignore All"
+
         }
     },
     "snackbar": {

@@ -42,7 +42,11 @@
             "cancel": "Annuler",
             "back": "Pr\u00e9c\u00e9dent",
             "next": "Prochain",
-            "view-issues": "Afficher les probl\u00e8mes"
+            "view-issues": "Afficher les probl\u00e8mes",
+            "fix":"réparer",
+            "fix-all":"réparer tout",
+            "ignore":"ignorer",
+            "ignore-all":"ignorer tout"
         }
     },
     "snackbar": {
