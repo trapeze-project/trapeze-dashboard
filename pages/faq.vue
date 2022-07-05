@@ -34,12 +34,14 @@
             <div>{{this.matchedQNA.answer}}</div>
           </v-card-text>
           <v-card-actions>
-            <ol>
-                <div class="text--primary" v-show="matchedQNA.references.length"> {{$t("qna.links-and-sources")}}: </div>
-                <li v-for="link in matchedQNA.references" :key="link">
-                  <a :href="link" class="black--text">{{ link }}</a>
-                </li>
-            </ol>
+            <div v-if="Object.values(matchedQNA.references).length">>
+              <ol>
+                  <div class="text--primary" v-show="Object.values(matchedQNA.references).length"> {{$t("qna.links-and-sources")}}: </div>
+                  <li v-for="link in Object.values(matchedQNA.references)" :key="link">
+                    <a :href="link" class="black--text">{{ link }}</a>
+                  </li>
+              </ol>
+            </div>
           </v-card-actions>
         </v-card>
 
@@ -62,8 +64,8 @@
             <v-expansion-panel-content>
               <v-expansion-panels flat>
                 <v-expansion-panel
-                  v-for="inquiry in faq[category]['qna']"
-                  :key="inquiry.question"
+                  v-for="qna in Object.keys(faq[category]['qnas'])"
+                  :key="faq[category]['qnas'][qna].question"
                 >
                   <v-expansion-panel-header>
                     <template v-slot:actions>
@@ -72,21 +74,21 @@
                       </v-icon>
                     </template>
                     <span class="header">{{
-                      inquiry.question
+                      faq[category]['qnas'][qna].question
                     }}</span>
                   </v-expansion-panel-header>
 
                   <v-expansion-panel-content>
                     <p>
-                      {{ inquiry.answer }}
+                      {{  faq[category]['qnas'][qna].answer }}
                     </p>
                     <div
-                      v-if="inquiry.references.length"
+                      v-if="Object.values(faq[category]['qnas'][qna].references).length"
                       class="mt-4 black--text"
                     >
-                      <span class="font-weight-bold" v-show="inquiry.references.length"> {{$t("qna.links-and-sources")}}: </span>
+                      <span class="font-weight-bold"> {{$t("qna.links-and-sources")}}: </span>
                       <ol>
-                        <li v-for="link in inquiry.references" :key="link">
+                        <li v-for="link in Object.values(faq[category]['qnas'][qna].references)" :key="link">
                           <a :href="link" class="black--text">{{ link }}</a>
                         </li>
                       </ol>
@@ -143,7 +145,7 @@ export default {
       let keywords = this.userQuestion.replace(/[&\/\\#,+()$~%.'":*?<>{}]/g, '').split(" ");
       let modfaq = []
       for (const category of Object.keys(this.faq)){
-        for(const qna of this.faq[category]["qna"]){
+        for(const qna of Object.values(this.faq[category]["qnas"])){
           let matchedKeywords = 0;
           for(const keyword of keywords){
             if(qna["question"].toLowerCase().includes(keyword.toLowerCase()) || qna["answer"].toLowerCase().includes(keyword.toLowerCase())){
