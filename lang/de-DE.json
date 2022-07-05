@@ -12,6 +12,9 @@
         "unrelatedDataText": "Es ist sehr ungew\u00f6hnlich, dass Fingerabdr\u00fccke zu Werbezwecken verwendet werden.",
         "bioDataText": "Fingerabdr\u00fccke sind besonders sensibel, da sie es erm\u00f6glichen Ihre Identit\u00e4t zu stehlen. Es wird empfohlen, die Zustimmung zur Nutzung von Fingerabdr\u00fccken nur dann zu erteilen, wenn dies unbedingt erforderlich ist."
     },
+    "layout":{
+        "privacy-dashboard":"Datenschutz-Dashboard"
+    },
     "nav": {
         "labels": {
             "home": "Start",
@@ -165,7 +168,26 @@
         "sensitivityHeader": "Wie sensibel sind diese Daten f\u00fcr Sie?",
         "warnings": "Warnungen",
         "warningMsg": "Sie haben dem f\u00fcr die Datenverarbeitung Verantwortlichen Ihre Einwilligung zur Verwendung Ihrer Daten in der Datenkategorie \"{dataCategory}\" f\u00fcr den Zweck \"{purpose}\" gegeben. Im Einwilligungsassistenten haben Sie jedoch angegeben, dass Sie damit \"{helperChoices}\" sind.",
-        "issues": "Probleme"
+        "issues": "Probleme",
+        "tab":{
+            "labels":{
+                "consent":"Einwilligungen",
+                "data-category":"Datenkategorien",
+                "purpose" : "Zweck"
+            }
+        },
+        "ptable":{
+            "header":{
+                "values":{
+                    "date":"Datum",
+                    "event":"Einlass",
+                    "policy":"Politik",
+                    "data":"Daten",
+                    "purpose":"Zweck",
+                    "issue":"Probleme"
+                }
+            }
+        }
     },
     "consent-helper": {
         "purpose": "Zweck",

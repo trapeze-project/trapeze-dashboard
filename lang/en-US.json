@@ -12,6 +12,9 @@
         "unrelatedDataText": "It is very unusual that fingerprints are used for advertising purposes.",
         "bioDataText": "Fingerprints are particularly sensitive, since they facilitate identity theft. It is recommended to only provide consent for fingerprint data where absolutely necessary."
     },
+    "layout":{
+        "privacy-dashboard":"privacy dashboard"
+    },
     "nav": {
         "labels": {
             "home": "Home",
@@ -166,7 +169,28 @@
         "sensitivityHeader": "How sensitive is this data to you?",
         "warnings": "Warnings",
         "warningMsg": "you have given consent to the data controller to use your {dataCategory} data for the purpose of {purpose}. but your choice in ConsentHelper was {helperChoices}",
-        "issues": "issues"
+        "issues": "issues",
+        "tab":{
+            "labels":{
+                "consent":"Consent",
+                "data-category":"Data Category",
+                "purpose" : "Purpose"
+            }
+        },
+        "ptable":{
+            "header":{
+                "values":{
+                    "date":"Date",
+                    "event":"Event",
+                    "policy":"Policy",
+                    "data":"Data",
+                    "purpose":"Purpose",
+                    "issue":"Issue"
+                }
+            }
+        }
+
+
     },
     "consent-helper": {
         "purpose": "Purpose",

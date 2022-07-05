@@ -52,15 +52,15 @@ export default {
       tabs: [
         {
           name: 'consent',
-          label: 'Consent'
+          label: this.$t('consent.tab.labels.consent')
         },
         {
           name: 'data',
-          label: 'Data'
+          label: this.$t('consent.tab.labels.data-category')
         },
         {
           name: 'purpose',
-          label: 'Purpose'
+          label: this.$t('consent.tab.labels.purpose')
         }
       ]
     }

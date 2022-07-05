@@ -12,6 +12,9 @@
         "unrelatedDataText": "Il est tr\u00e8s inhabituel que les empreintes digitales soient utilis\u00e9es \u00e0 des fins publicitaires.",
         "bioDataText": "Les empreintes digitales sont particuli\ufffdrement sensibles, car elles facilitent le vol d'identit\u00e9. Il est recommand\u00e9 de ne donner son consentement pour les donn\u00e9es dactyloscopiques que lorsque cela est absolument n\u00e9cessaire."
     },
+    "layout":{
+        "privacy-dashboard":"tableau de bord de confidentialité"
+    },
     "nav": {
         "labels": {
             "home": "Domicile",
@@ -165,7 +168,29 @@
         "sensitivityHeader": "Dans quelle mesure ces donn\u00e9es sont-elles sensibles pour vous ?",
         "warnings": "Avertissements",
         "warningMsg": "vous avez donn\u00e9 votre consentement au responsable du traitement pour qu'il utilise vos donn\u00e9es de {dataCategory} dans le but de {purpose}, mais votre choix dans ConsentHelper \u00e9tait {helperChoices}.",
-        "issues": "questions"
+        "issues": "questions",
+        "consent":"Consentement",
+        "data-category":"Catégorie de données",
+        "purpose" : "Objectif",
+        "tab":{
+            "labels":{
+                "consent":"Consentement",
+                "data-category":"Catégorie de données",
+                "purpose" : "Objectif"
+            }
+        },
+        "ptable":{
+            "header":{
+                "values":{
+                    "date":"Date",
+                    "event":"Un événement",
+                    "policy":"Politique",
+                    "data":"Les Données",
+                    "purpose":"Objectif",
+                    "issue":"Publier"
+                }
+            }
+        }
     },
     "consent-helper": {
         "purpose": "Objectif",

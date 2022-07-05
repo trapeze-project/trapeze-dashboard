@@ -87,26 +87,20 @@ export default {
   },
   created () {
     if (this.tabName === 'consent') {
-      this.imports.category = emails
+      this.headers = this.calculatePTableHeaders(["date","event","policy"])
     }
     if (this.tabName === 'data') {
-      this.imports.category = data
+      this.headers = this.calculatePTableHeaders(["data","purpose"])
       this.calculateCategoryMap()
       this.calculatePurposeMap()
       this.pDetailsSubItemsMap = this.imports.categoryMap
     }
     if (this.tabName === 'purpose') {
-      this.imports.category = purposes
+      this.headers = this.calculatePTableHeaders(["purpose","data","issue"])
       this.calculateCategoryMap()
       this.calculatePurposeMap()
       this.pDetailsSubItemsMap = this.imports.purposeMap
     }
-    this.headers = Object.keys(this.imports.category[0]).map(e => ({
-      text: e.charAt(0).toUpperCase() + e.slice(1),
-      value: e,
-      align: 'start'
-    })
-    )
 
     if (this.tabName === 'purpose') {
       this.userChoices = JSON.parse(JSON.stringify(Object.keys(this.imports.purposeMap).reduce((total, currentValue) => {
@@ -145,6 +139,13 @@ export default {
       this.$nextTick(() => {
         this.scrollpage()
       })
+    },
+    calculatePTableHeaders(header){
+      return header.map(e => ({
+        text: this.$t('consent.ptable.header.values.'+e),
+        value: e,
+        align: 'start'
+      }))
     },
     calculateCategoryMap(){
       this.imports.categoryMap =  examplePolicy.reduce((total, currentValue)=>{

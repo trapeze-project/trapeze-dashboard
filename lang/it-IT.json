@@ -12,6 +12,9 @@
         "unrelatedDataText": "\u00c8 molto insolito che le impronte digitali vengano utilizzate per scopi pubblicitari.",
         "bioDataText": "Le impronte digitali sono particolarmente sensibili, in quanto facilitano il furto di identit\u00e0. Si raccomanda di fornire il consenso per i dati relativi alle impronte digitali solo se assolutamente necessario."
     },
+    "layout":{
+        "privacy-dashboard":"dashboard sulla privacy"
+    },
     "nav": {
         "labels": {
             "home": "Casa",
@@ -165,7 +168,26 @@
         "sensitivityHeader": "Quanto sono sensibili questi dati per voi?",
         "warnings": "Avvertenze",
         "warningMsg": "l'utente ha dato il consenso al titolare del trattamento per l'utilizzo dei suoi dati {dataCategory} per lo scopo di {purpose}. ma la sua scelta in ConsentHelper \u00e8 stata {helperChoices}",
-        "issues": "questioni"
+        "issues": "questioni",
+        "tab":{
+            "labels":{
+                "consent":"Consenso",
+                "data-category":"Categoria di dati",
+                "purpose" : "Scopo"
+            }
+        },
+        "ptable":{
+            "header":{
+                "values":{
+                    "date":"Data",
+                    "event":"Evento",
+                    "policy":"Politica",
+                    "data":"Dati",
+                    "purpose":"Scopo",
+                    "issue":"Questioni"
+                }
+            }
+        }
     },
     "consent-helper": {
         "purpose": "Scopo",
