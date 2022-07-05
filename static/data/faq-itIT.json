@@ -3,7 +3,7 @@
         "qnas": {
             "qna1": {
                 "question": "Che cos'\u00e8 il TRAPEZE?",
-                "answer": "TRAPEZE \u00e8 un progetto di ricerca finanziato dall'Unione Europea. TRAPEZE \u00e8 l'acronimo di Transparency, Privacy and Security for European citizens. TRAPEZE fa parte del programma di finanziamento Horizon2020 dell'Unione Europea. Il progetto, della durata di 3 anni, \u00e8 stato condotto tra settembre 2020 e agosto 2023.",
+                "answer": "TRAPEZE \u00e8 un progetto di ricerca finanziato dall'Unione Europea. TRAPEZE \u00e8 l'acronimo di \"TRAnsparency, Privacy and security for European citiZEns\". TRAPEZE fa parte del programma di finanziamento Horizon2020 dell'Unione Europea. Il progetto, della durata di 3 anni, \u00e8 stato condotto tra settembre 2020 e agosto 2023.",
                 "references": {
                     "ref1": "http://trapeze-project.eu/",
                     "ref2": "https://ec.europa.eu/info/research-and-innovation/funding/funding-opportunities/funding-programmes-and-open-calls/horizon-2020_en"
@@ -31,16 +31,12 @@
             "qna3": {
                 "question": "Chi ospita il cruscotto della privacy di TRAPEZE?",
                 "answer": "Il cruscotto della privacy di TRAPEZE \u00e8 ospitato da noi, il responsabile del trattamento dei dati indicato nel banner a destra.",
-                "references": {
-                    "ref1": ""
-                }
+                "references": { }
             },
             "qna4": {
                 "question": "Cosa posso fare nel cruscotto della privacy di TRAPEZE?",
                 "answer": "Nel cruscotto sulla privacy di TRAPEZE \u00e8 possibile vedere la nostra politica sulla privacy attiva e quando abbiamo raccolto il consenso dell'utente. In particolare, \u00e8 possibile vedere come trattiamo i vostri dati e per quali scopi. Potete contattarci se avete domande sul trattamento dei vostri dati. Se lo desidera, pu\u00f2 anche revocare il consenso o darne un altro per migliorare il nostro servizio.",
-                "references": {
-                    "ref1": ""
-                }
+                "references": { }
             },
             "qna5": {
                 "question": "Perch\u00e9 si utilizza il cruscotto della privacy di TRAPEZE?",
@@ -78,30 +74,24 @@
             "qna4": {
                 "question": "I responsabili del trattamento cancellano i miei dati personali quando revoco il mio consenso?",
                 "answer": "Non appena l'utente revoca il proprio consenso, i responsabili del trattamento dei dati (noi) devono interrompere l'elaborazione e cancellare i dati personali dell'utente per le finalit\u00e0 per cui ha revocato il consenso.",
-                "references": {
-                    "ref1": ""
-                }
+                "references": { }
             },
             "qna5": {
                 "question": "Perch\u00e9 dovrei revocare il consenso, quando posso richiedere la cancellazione dei miei dati personali?",
                 "answer": "La revoca del consenso \u00e8 pi\u00f9 rigorosa della richiesta di cancellazione dei dati personali. Le richieste di cancellazione non impediscono la futura raccolta dei vostri dati personali. Quando si revoca il consenso, i responsabili del trattamento (noi) devono cancellare i dati personali oggetto del consenso revocato e (!) non devono raccogliere i dati personali dopo la cancellazione. ",
-                "references": {
-                    "ref1": ""
-                }
+                "references": { }
             },
             "qna6": {
                 "question": "Cosa posso fare se ho dimenticato il mio consenso?",
-                "answer": "Secondo il RGPD (Art. 7 1.), i responsabili del trattamento dei dati (noi) devono dimostrare di aver raccolto il consenso dell'utente. <<TROVA DOVE DEVONO DIMOSTRARE CHE \u00c8 VALIDO>>.",
+                "answer": "Secondo il RGPD (Art. 7 1.), i responsabili del trattamento dei dati (noi) devono dimostrare di aver raccolto il consenso dell'utente.",
                 "references": {
-                    "ref1": ""
+                    "ref1": "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX%3A32016R0679"
                 }
             },
             "qna7": {
                 "question": "Il consenso scade?",
                 "answer": "No, il consenso non scade. Tuttavia, i responsabili del trattamento dei dati (noi) devono raccogliere nuovamente il consenso se vogliono trattare i vostri dati personali per nuovi scopi.",
-                "references": {
-                    "ref1": ""
-                }
+                "references": { }
             }
         }
     },
@@ -132,9 +122,7 @@
             "qna1": {
                 "question": "Che cos'\u00e8 la Guida al consenso?",
                 "answer": "La Guida al consenso \u00e8 uno strumento che consente di evitare la lettura di lunghe informative sulla privacy. Vi guider\u00e0 attraverso una serie di domande che ci permetteranno di capire le vostre preferenze di consenso. Sulla base di queste preferenze di consenso, suggeriamo configurazioni di consenso e vi indichiamo potenziali problemi con il consenso attualmente fornito. Ad esempio, l'utente potrebbe non essere disposto a condividere la propria posizione per scopi di marketing, ma per ricevere consigli sui ristoranti. ",
-                "references": {
-                    "ref1": ""
-                }
+                "references": {  }
             }
         }
     },
