@@ -1,5 +1,5 @@
 <template>
-  <v-card flat>
+  <v-card flat v-if="event === 'Consent Request - Policy Update'">
     <v-card-title>
       <span>{{ event }}</span>
     </v-card-title>
