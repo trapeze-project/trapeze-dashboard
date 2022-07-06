@@ -1,7 +1,7 @@
 <template>
-  <v-card flat v-if="event === 'Consent Request - Policy Update'">
+  <v-card flat v-if="event === 'consent-request-policy-update'">
     <v-card-title>
-      <span>{{ event }}</span>
+      <span>{{ $t("consent.consent.ptable.events.values."+event) }}</span>
     </v-card-title>
 
     <v-card-subtitle>

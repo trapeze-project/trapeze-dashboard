@@ -7,7 +7,7 @@
       single-select
       mobile-breakpoint="0"
       @click:row="select"
-      :footer-props="{'items-per-page-text': $t('consent.'+tabName+'.ptable.header.footer.rows-per-page')}"
+      :footer-props="{'items-per-page-text': $t('consent.'+tabName+'.ptable.footer.rows-per-page')}"
     >
       <template v-if="tabName === 'purpose' " v-slot:item.issue="{ item }">
         <v-chip
@@ -44,7 +44,7 @@
       @saveState="saveState"
     />
     <div v-if="view.showPEmail" id="PEmail" class="mt-4">
-      <PEmail :date="view.selected.date" :event="view.selected.event" />
+      <PEmail :date="view.selected.date" :event="view.selected.untranslatedEvent" />
     </div>
   </div>
 </template>
@@ -263,9 +263,16 @@ export default {
     category(){
       let result = []
       if(this.tabName === "consent"){
-        return emails;
-      }
-      if (this.tabName === "data"){ 
+        for(const notification of emails){
+            let obj = new Object();
+            obj.date = notification.date
+            obj.event = this.$t("consent.consent.ptable.events.values."+notification.event)
+            obj.untranslatedEvent = notification.event
+            let policyArr = notification.policy.replace(")","").replace("(","").split(' ')
+            obj.policy = policyArr[0] +' ('+ this.$t('consent.consent.ptable.policy.'+policyArr[1]) +')'
+            result.push(obj);
+        }
+      }else if (this.tabName === "data"){ 
         for(const dataCategory of Object.keys(this.imports.categoryMap)){
           let obj = new Object();
           obj.untranslated = dataCategory;

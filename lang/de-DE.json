@@ -183,10 +183,22 @@
                         "date":"Datum",
                         "event":"Einlass",
                         "policy":"Politik"
-                    },
-                    "footer":{
-                        "rows-per-page":"Zeilen pro Seite"
                     }
+                },
+                "events":{
+                    "values":{
+                        "consent-request-policy-update":"Zustimmungsanfrage - Richtlinienaktualisierung",
+                        "consent-revocation":"Widerruf der Einwilligung",
+                        "consent-giving":"Zustimmungserteilung",
+                        "consent-request-account-creation":"Zustimmungsanfrage - Kontoerstellung"
+                    }
+                },
+                "policy":{
+                    "active":"aktiv",
+                    "inactive":"inaktiv"
+                },
+                "footer":{
+                    "rows-per-page":"Zeilen pro Seite"
                 }
             }
         },
@@ -196,10 +208,10 @@
                     "values":{
                         "data":"Daten",
                         "purposes":"Zwecke"
-                    },
-                    "footer":{
-                        "rows-per-page":"Zeilen pro Seite"
                     }
+                },
+                "footer":{
+                    "rows-per-page":"Zeilen pro Seite"
                 }
             }
         },
@@ -210,10 +222,10 @@
                         "purpose":"Zweck",
                         "data":"Daten",
                         "issue":"Probleme"
-                    },
-                    "footer":{
-                        "rows-per-page":"Zeilen pro Seite"
                     }
+                },
+                "footer":{
+                    "rows-per-page":"Zeilen pro Seite"
                 }
             }
         }

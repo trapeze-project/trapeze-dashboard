@@ -180,9 +180,23 @@
         "consent":{
             "ptable":{
                 "header":{
-                    "date":"Date",
-                    "event":"Event",
-                    "policy":"Policy"
+                    "values":{
+                        "date":"Date",
+                        "event":"Event",
+                        "policy":"Policy"
+                    }
+                },
+                "events":{
+                    "values":{
+                        "consent-request-policy-update":"Consent Request - Policy Update",
+                        "consent-revocation":"Consent Revocation",
+                        "consent-giving":"Consent Giving",
+                        "consent-request-account-creation":"Consent Request - Account Creation"
+                    }
+                },
+                "policy":{
+                    "active":"active",
+                    "inactive":"inactive"
                 },
                 "footer":{
                     "rows-per-page":"Rows per page"
@@ -195,11 +209,12 @@
                     "values":{
                         "data":"Data",
                         "purposes":"Purposes"
-                    },
-                    "footer":{
-                        "rows-per-page":"Rows per page"
                     }
+                },
+                "footer":{
+                    "rows-per-page":"Rows per page"
                 }
+                
             }
         },
         "purpose":{
@@ -209,10 +224,10 @@
                         "purpose":"Purpose",
                         "data":"Data",
                         "issue":"Issue"
-                    },
-                    "footer":{
-                        "rows-per-page":"Rows per page"
                     }
+                },
+                "footer":{
+                    "rows-per-page":"Rows per page"
                 }
             }
         }

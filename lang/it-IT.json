@@ -183,10 +183,22 @@
                         "date":"Data",
                         "event":"Evento",
                         "policy":"Politica"
-                    },
-                    "footer":{
-                        "rows-per-page":"Righe per pagina"
                     }
+                },
+                "events":{
+                    "values":{
+                        "consent-request-policy-update":"Richiesta di consenso - Aggiornamento delle norme",
+                        "consent-revocation":"Revoca del consenso",
+                        "consent-giving":"Dare il consenso",
+                        "consent-request-account-creation":"Richiesta di consenso - Creazione account"
+                    }
+                },
+                "policy":{
+                    "active":"attiva",
+                    "inactive":"non attivo"
+                },
+                "footer":{
+                    "rows-per-page":"Righe per pagina"
                 }
             }
         },
@@ -196,10 +208,10 @@
                     "values":{
                         "data":"Dati",
                         "purposes":"Scopi"
-                    },
-                    "footer":{
-                        "rows-per-page":"Righe per pagina"
                     }
+                },
+                "footer":{
+                    "rows-per-page":"Righe per pagina"
                 }
             }
         },
@@ -210,10 +222,10 @@
                         "purpose":"Scopo",
                         "data":"Dati",
                         "issue":"Questioni"
-                    },
-                    "footer":{
-                        "rows-per-page":"Righe per pagina"
                     }
+                },
+                "footer":{
+                    "rows-per-page":"Righe per pagina"
                 }
             }
         }

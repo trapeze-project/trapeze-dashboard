@@ -184,10 +184,22 @@
                         "date":"Date",
                         "event":"Un événement",
                         "policy":"Politique"
-                    },
-                    "footer":{
-                        "rows-per-page":"Lignes par page"
                     }
+                },
+                "events":{
+                    "values":{
+                        "consent-request-policy-update":"Demande de consentement - Mise à jour de la politique",
+                        "consent-revocation":"Révocation du consentement",
+                        "consent-giving":"Donner son consentement",
+                        "consent-request-account-creation":"Demande de consentement - Création de compte"
+                    }
+                },
+                "policy":{
+                    "active":"active",
+                    "inactive":"inactive"
+                },
+                "footer":{
+                    "rows-per-page":"Lignes par page"
                 }
             }
         },
@@ -197,10 +209,10 @@
                     "values":{
                         "data":"Les Données",
                         "purpose":"Fins"
-                    },
-                    "footer":{
-                        "rows-per-page":"Lignes par page"
                     }
+                },
+                "footer":{
+                    "rows-per-page":"Lignes par page"
                 }
             }
         },
@@ -211,10 +223,10 @@
                         "purpose":"Objectif",
                         "data":"Les Données",
                         "issue":"Publier"
-                    },
-                    "footer":{
-                        "rows-per-page":"Lignes par page"
                     }
+                },
+                "footer":{
+                    "rows-per-page":"Lignes par page"
                 }
             }
         }
