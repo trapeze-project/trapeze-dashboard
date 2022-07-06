@@ -36,8 +36,11 @@ export default {
   },
   data () {
     return {
-      emailText: email.text
+      emailText: ""
     }
+  },
+  created(){
+    this.emailText = email[this.$i18n.locale];
   }
 }
 </script>
