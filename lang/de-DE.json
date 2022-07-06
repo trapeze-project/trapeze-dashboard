@@ -176,7 +176,6 @@
                 "purpose" : "Zwecke"
             }
         },
-<<<<<<< HEAD
         "consent":{
             "ptable":{
                 "header":{
@@ -215,17 +214,6 @@
                     "footer":{
                         "rows-per-page":"Zeilen pro Seite"
                     }
-=======
-        "ptable":{
-            "header":{
-                "values":{
-                    "date":"Datum",
-                    "event":"Ereignis",
-                    "policy":"Datenschutzerklärung",
-                    "data":"Datenkategorie",
-                    "purpose":"Zweck",
-                    "issue":"Probleme"
->>>>>>> 70d63250b13fdf2207d248fe645c8d4fd137f195
                 }
             }
         }
