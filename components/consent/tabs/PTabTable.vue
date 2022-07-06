@@ -21,7 +21,7 @@
 
     <PWarnings
       id="PWarnings"
-      v-if="view.showPDetails && this.$route.params.consentHelperUserChoices && Object.keys(this.warnings[this.view.selected.untranslated]).length"
+      v-if="view.showPDetails && this.$route.params.consentHelperUserChoices && this.warnings[this.view.selected.untranslated]&& Object.keys(this.warnings[this.view.selected.untranslated]).length"
       :selectedWarnings="warnings[this.view.selected.untranslated]"
       :purpose="this.view.selected.untranslated"
       :key="this.view.selected.untranslated"
@@ -222,7 +222,7 @@ export default {
         document.getElementById('PDetails').scrollIntoView({ behavior: 'smooth' })
       }
       if (this.tabName === 'purpose') {
-        if (this.view.showPDetails && this.$route.params.consentHelperUserChoices && Object.keys(this.warnings[this.view.selected.untranslated]).length) {
+        if (this.view.showPDetails && this.$route.params.consentHelperUserChoices && this.warnings[this.view.selected.untranslated] &&Object.keys(this.warnings[this.view.selected.untranslated]).length) {
           document.getElementById('PWarnings').scrollIntoView({ behavior: 'smooth' })
         } else {
           document.getElementById('PDetails').scrollIntoView({ behavior: 'smooth' })
@@ -289,7 +289,7 @@ export default {
           obj.purpose = this.$t(purpose);
           obj.data = this.imports.purposeMap[purpose].map((item)=>{return this.$t(item)}).join(', ');
           if(this.$route.params.consentHelperUserChoices && this.warnings[purpose]){
-            let issuesCounter = Object.keys(this.warnings[purpose]).length
+            let issuesCounter = Object.keys(this.warnings?.[purpose])?.length
             obj.issue = issuesCounter +' '+ this.$t('consent.issues')
           }else{
             obj.issue = '0 '+ this.$t('consent.issues')
