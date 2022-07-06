@@ -176,15 +176,44 @@
                 "purpose" : "Scopo"
             }
         },
-        "ptable":{
-            "header":{
-                "values":{
-                    "date":"Data",
-                    "event":"Evento",
-                    "policy":"Politica",
-                    "data":"Dati",
-                    "purpose":"Scopo",
-                    "issue":"Questioni"
+        "consent":{
+            "ptable":{
+                "header":{
+                    "values":{
+                        "date":"Data",
+                        "event":"Evento",
+                        "policy":"Politica"
+                    },
+                    "footer":{
+                        "rows-per-page":"Righe per pagina"
+                    }
+                }
+            }
+        },
+        "data":{
+            "ptable":{
+                "header":{
+                    "values":{
+                        "data":"Dati",
+                        "purposes":"Scopi"
+                    },
+                    "footer":{
+                        "rows-per-page":"Righe per pagina"
+                    }
+                }
+            }
+        },
+        "purpose":{
+            "ptable":{
+                "header":{
+                    "values":{
+                        "purpose":"Scopo",
+                        "data":"Dati",
+                        "issue":"Questioni"
+                    },
+                    "footer":{
+                        "rows-per-page":"Righe per pagina"
+                    }
                 }
             }
         }

@@ -169,9 +169,7 @@
         "warnings": "Avertissements",
         "warningMsg": "vous avez donn\u00e9 votre consentement au responsable du traitement pour qu'il utilise vos donn\u00e9es de {dataCategory} dans le but de {purpose}, mais votre choix dans ConsentHelper \u00e9tait {helperChoices}.",
         "issues": "questions",
-        "consent":"Consentement",
         "data-category":"Catégorie de données",
-        "purpose" : "Objectif",
         "tab":{
             "labels":{
                 "consent":"Consentement",
@@ -179,15 +177,44 @@
                 "purpose" : "Objectif"
             }
         },
-        "ptable":{
-            "header":{
-                "values":{
-                    "date":"Date",
-                    "event":"Un événement",
-                    "policy":"Politique",
-                    "data":"Les Données",
-                    "purpose":"Objectif",
-                    "issue":"Publier"
+        "consent":{
+            "ptable":{
+                "header":{
+                    "values":{
+                        "date":"Date",
+                        "event":"Un événement",
+                        "policy":"Politique"
+                    },
+                    "footer":{
+                        "rows-per-page":"Lignes par page"
+                    }
+                }
+            }
+        },
+        "data":{
+            "ptable":{
+                "header":{
+                    "values":{
+                        "data":"Les Données",
+                        "purpose":"Fins"
+                    },
+                    "footer":{
+                        "rows-per-page":"Lignes par page"
+                    }
+                }
+            }
+        },
+        "purpose":{
+            "ptable":{
+                "header":{
+                    "values":{
+                        "purpose":"Objectif",
+                        "data":"Les Données",
+                        "issue":"Publier"
+                    },
+                    "footer":{
+                        "rows-per-page":"Lignes par page"
+                    }
                 }
             }
         }

@@ -7,6 +7,7 @@
       single-select
       mobile-breakpoint="0"
       @click:row="select"
+      :footer-props="{'items-per-page-text': $t('consent.'+tabName+'.ptable.header.footer.rows-per-page')}"
     >
       <template v-if="tabName === 'purpose' " v-slot:item.issue="{ item }">
         <v-chip
@@ -90,7 +91,7 @@ export default {
       this.headers = this.calculatePTableHeaders(["date","event","policy"])
     }
     if (this.tabName === 'data') {
-      this.headers = this.calculatePTableHeaders(["data","purpose"])
+      this.headers = this.calculatePTableHeaders(["data","purposes"])
       this.calculateCategoryMap()
       this.calculatePurposeMap()
       this.pDetailsSubItemsMap = this.imports.categoryMap
@@ -142,7 +143,7 @@ export default {
     },
     calculatePTableHeaders(header){
       return header.map(e => ({
-        text: this.$t('consent.ptable.header.values.'+e),
+        text: this.$t('consent.'+this.tabName+'.ptable.header.values.'+e),
         value: e,
         align: 'start'
       }))
@@ -269,7 +270,7 @@ export default {
           let obj = new Object();
           obj.untranslated = dataCategory;
           obj.data = this.$t(dataCategory);
-          obj.purpose = this.imports.categoryMap[dataCategory].map((item)=>{return this.$t(item)}).join(', ');
+          obj.purposes = this.imports.categoryMap[dataCategory].map((item)=>{return this.$t(item)}).join(', ');
           obj.recipient = 'Company A'
           obj.issue = '0 '+ this.$t('consent.issues')
           result.push(obj);

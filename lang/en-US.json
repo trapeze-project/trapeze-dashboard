@@ -177,15 +177,42 @@
                 "purpose" : "Purpose"
             }
         },
-        "ptable":{
-            "header":{
-                "values":{
+        "consent":{
+            "ptable":{
+                "header":{
                     "date":"Date",
                     "event":"Event",
-                    "policy":"Policy",
-                    "data":"Data",
-                    "purpose":"Purpose",
-                    "issue":"Issue"
+                    "policy":"Policy"
+                },
+                "footer":{
+                    "rows-per-page":"Rows per page"
+                }
+            }
+        },
+        "data":{
+            "ptable":{
+                "header":{
+                    "values":{
+                        "data":"Data",
+                        "purposes":"Purposes"
+                    },
+                    "footer":{
+                        "rows-per-page":"Rows per page"
+                    }
+                }
+            }
+        },
+        "purpose":{
+            "ptable":{
+                "header":{
+                    "values":{
+                        "purpose":"Purpose",
+                        "data":"Data",
+                        "issue":"Issue"
+                    },
+                    "footer":{
+                        "rows-per-page":"Rows per page"
+                    }
                 }
             }
         }

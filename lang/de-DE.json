@@ -176,15 +176,44 @@
                 "purpose" : "Zweck"
             }
         },
-        "ptable":{
-            "header":{
-                "values":{
-                    "date":"Datum",
-                    "event":"Einlass",
-                    "policy":"Politik",
-                    "data":"Daten",
-                    "purpose":"Zweck",
-                    "issue":"Probleme"
+        "consent":{
+            "ptable":{
+                "header":{
+                    "values":{
+                        "date":"Datum",
+                        "event":"Einlass",
+                        "policy":"Politik"
+                    },
+                    "footer":{
+                        "rows-per-page":"Zeilen pro Seite"
+                    }
+                }
+            }
+        },
+        "data":{
+            "ptable":{
+                "header":{
+                    "values":{
+                        "data":"Daten",
+                        "purposes":"Zwecke"
+                    },
+                    "footer":{
+                        "rows-per-page":"Zeilen pro Seite"
+                    }
+                }
+            }
+        },
+        "purpose":{
+            "ptable":{
+                "header":{
+                    "values":{
+                        "purpose":"Zweck",
+                        "data":"Daten",
+                        "issue":"Probleme"
+                    },
+                    "footer":{
+                        "rows-per-page":"Zeilen pro Seite"
+                    }
                 }
             }
         }
