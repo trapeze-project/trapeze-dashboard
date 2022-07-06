@@ -187,10 +187,10 @@
                 },
                 "events":{
                     "values":{
-                        "consent-request-policy-update":"Zustimmungsanfrage - Richtlinienaktualisierung",
+                        "consent-request-policy-update":"Einwilligungsanfrage - Richtlinienaktualisierung",
                         "consent-revocation":"Widerruf der Einwilligung",
-                        "consent-giving":"Zustimmungserteilung",
-                        "consent-request-account-creation":"Zustimmungsanfrage - Kontoerstellung"
+                        "consent-giving":"Einwilligungserteilung",
+                        "consent-request-account-creation":"Einwilligungsanfrage - Kontoerstellung"
                     }
                 },
                 "policy":{
