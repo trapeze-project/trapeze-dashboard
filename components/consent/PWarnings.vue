@@ -11,35 +11,16 @@
       type="warning"
       class="mx-1"
     >
-      <v-row align="center" class="pa-1">
-        <v-col class="" cols="12" sm="12" md="8" lg="10">
-          <p>{{$t('consent.warningMsg',{dataCategory:$t(dataCategory) , purpose: $t(purpose) , helperChoices:$t(selectedWarnings[dataCategory]["consentHelperChoice"])})}}</p>        </v-col>
-        <v-spacer />
-        <v-col
-          class=""
-          cols="6"
-          sm="2"
-          md="2"
-          lg="1"
-          align="right"
-        >
-          <v-btn @click="fixWarnig(dataCategory)">
-            {{$t('btn.labels.fix')}}
-          </v-btn>
-        </v-col>
-        <v-col
-          class=""
-          cols="6"
-          sm="2"
-          md="2"
-          lg="1"
-          align="right"
-        >
-          <v-btn @click="closeWarnig(dataCategory)">
-            {{$t('btn.labels.ignore')}}
-          </v-btn>
-        </v-col>
-      </v-row>
+      <p>{{$t('consent.warningMsg',{dataCategory:$t(dataCategory) , purpose: $t(purpose) , helperChoices:$t(selectedWarnings[dataCategory]["consentHelperChoice"])})}}</p>
+      <v-spacer />
+      <div class="mb-1 float-right">
+        <v-btn @click="fixWarnig(dataCategory)">
+          {{$t('btn.labels.fix')}}
+        </v-btn>
+        <v-btn @click="closeWarnig(dataCategory)">
+          {{$t('btn.labels.ignore')}}
+        </v-btn>
+      </div>
     </v-alert>
     <div class="float-right">
       <v-btn class="white--text " color="red" @click="fixAllWarnigs">
