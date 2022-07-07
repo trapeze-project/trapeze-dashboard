@@ -12,7 +12,7 @@
 
     <v-card-actions>
       <v-spacer />
-      <v-btn class="black--text" color="primary" depressed :to="localePath(href)">
+      <v-btn v-bind="btnProps">
         {{ $t("home.explore-btn") }}
       </v-btn>
       <v-spacer />
@@ -40,6 +40,29 @@ export default {
     href: {
       type: String,
       required: true
+    }
+  },
+  data () {
+    return {
+      btnProps:""
+    };
+  },
+  created(){
+    this.btnProps = this.calculateButtonProps()
+
+  },
+  methods:{
+    calculateButtonProps(){
+      let obj ={}
+      if(this.href.startsWith('http')){
+        obj.href = this.href
+      }else{
+        obj.to = this.localePath(this.href)
+      }
+      obj.depressed = true;
+      obj.class = "black--text"
+      obj.color="primary"
+      return obj
     }
   }
 }
