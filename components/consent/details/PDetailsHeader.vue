@@ -2,7 +2,6 @@
   <v-card flat>
     <v-card-title>
       {{ $t(category) }}
-      
 
       <v-spacer />
 

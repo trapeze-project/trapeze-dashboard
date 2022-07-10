@@ -19,7 +19,7 @@
             <template #item.name="{ item }">
               <v-row align="center" justify="center">
                 <v-col class="fill-height" cols="9">
-                  {{$t(item.name)}}
+                  {{ $t(item.name) }}
                 </v-col>
                 <v-col cols="3">
                   <v-switch v-model="localSwitchValues[item.name]" @change="changeUserChoice(item.name)" />
@@ -83,9 +83,9 @@ export default {
       row.select(true)
       this.categoryName = item.name
     },
-    changeUserChoice(dataCategory){
-      this.$emit('saveState');
-      this.$emit('changeUserChoice',this.purpose,dataCategory ,this.localSwitchValues[dataCategory]);
+    changeUserChoice (dataCategory) {
+      this.$emit('saveState')
+      this.$emit('changeUserChoice', this.purpose, dataCategory, this.localSwitchValues[dataCategory])
     }
   }
 }

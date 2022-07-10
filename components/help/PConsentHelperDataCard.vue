@@ -19,8 +19,8 @@ export default {
     categoryName: {
       type: String,
       required: true,
-      default: "",
-    },
-  },
-};
+      default: ''
+    }
+  }
+}
 </script>

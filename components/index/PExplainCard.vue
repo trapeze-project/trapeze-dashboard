@@ -44,24 +44,23 @@ export default {
   },
   data () {
     return {
-      btnProps:""
-    };
+      btnProps: ''
+    }
   },
-  created(){
+  created () {
     this.btnProps = this.calculateButtonProps()
-
   },
-  methods:{
-    calculateButtonProps(){
-      let obj ={}
-      if(this.href.startsWith('http')){
+  methods: {
+    calculateButtonProps () {
+      const obj = {}
+      if (this.href.startsWith('http')) {
         obj.href = this.href
-      }else{
+      } else {
         obj.to = this.localePath(this.href)
       }
-      obj.depressed = true;
-      obj.class = "black--text"
-      obj.color="primary"
+      obj.depressed = true
+      obj.class = 'black--text'
+      obj.color = 'primary'
       return obj
     }
   }

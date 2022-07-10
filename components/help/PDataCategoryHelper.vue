@@ -10,9 +10,9 @@
           item-key="name"
           @click:row="select"
         >
-          <template v-slot:item="{ item, index }" >
-            <tr @click="checkUserChoiceCompleted" >
-              <td >
+          <template v-slot:item="{ item }">
+            <tr @click="checkUserChoiceCompleted">
+              <td>
                 {{ $t(item.name) }}
               </td>
               <td v-for="radio in radioList" :key="radio.key">
@@ -44,95 +44,94 @@ export default {
     categories: {
       type: Array,
       required: true,
-      default() {
-        return [];
-      },
-    },
-  },
-  created(){
-    let obj1 = new Object();
-    for(let purpose of this.categories){
-      obj1[purpose] = null
+      default () {
+        return []
+      }
     }
-    this.preferences = JSON.parse(JSON.stringify(obj1))
-    
   },
-  data() {
+  data () {
     return {
       preferences: {},
       view: {
-        selected: "",
-        show: false,
+        selected: '',
+        show: false
       },
       radioList: [
         {
-          key:'consent-helper.comfortable',
-          value:0,
-          color:"green"
+          key: 'consent-helper.comfortable',
+          value: 0,
+          color: 'green'
         },
         {
-          key:'consent-helper.no-opinion',
-          value:1,
-          color:"red"
+          key: 'consent-helper.no-opinion',
+          value: 1,
+          color: 'red'
         },
         {
-          key:'consent-helper.not-comfortable',
-          value:2,
-          color:"red"
-        },
+          key: 'consent-helper.not-comfortable',
+          value: 2,
+          color: 'red'
+        }
       ],
       headers: [
         {
           text: this.$t('consent-helper.purpose'),
-          align: "start",
-          value: "name",
-          sortable: true,
+          align: 'start',
+          value: 'name',
+          sortable: true
         },
         {
           text: this.$t('consent-helper.comfortable'),
-          align: "center",
-          value: "fine",
-          sortable: false,
+          align: 'center',
+          value: 'fine',
+          sortable: false
         },
         {
           text: this.$t('consent-helper.no-opinion'),
-          align: "center",
-          value: "no",
-          sortable: false,
+          align: 'center',
+          value: 'no',
+          sortable: false
         },
         {
           text: this.$t('consent-helper.not-comfortable'),
-          align: "center  ",
-          value: "neutral",
-          sortable: false,
-        },
-      ],
-    };
+          align: 'center  ',
+          value: 'neutral',
+          sortable: false
+        }
+      ]
+    }
   },
   computed: {
-    categoriesTransformed() {
-      return this.categories.map((item) => ({ name: item }));
-    },
+    categoriesTransformed () {
+      return this.categories.map(item => ({ name: item }))
+    }
+  },
+  created () {
+    const obj1 = {}
+    for (const purpose of this.categories) {
+      obj1[purpose] = null
+    }
+    this.preferences = JSON.parse(JSON.stringify(obj1))
   },
   methods: {
-    select(item, row) {
-      row.select(true);
-      this.view.selected = item.name;
-      this.view.show = true;
-      this.checkUserChoiceCompleted();
+    select (item, row) {
+      row.select(true)
+      this.view.selected = item.name
+      this.view.show = true
+      this.checkUserChoiceCompleted()
     },
-    checkUserChoiceCompleted(){
-      if(Object.values(this.preferences).filter(x => x !== null).length === this.categories.length){
-        let choices = new Object()
-        for (let purpose of this.categories) {
-          choices[purpose]= this.radioList[Number(this.preferences[purpose])].key
+    checkUserChoiceCompleted () {
+      if (Object.values(this.preferences).filter(x => x !== null).length === this.categories.length) {
+        const choices = {}
+        for (const purpose of this.categories) {
+          choices[purpose] = this.radioList[Number(this.preferences[purpose])].key
         }
-        Object.keys(choices).forEach(key => {
+        Object.keys(choices).forEach((key) => {
           choices[key] = choices[key]
-        });
-        this.$emit("userChoinces", choices);
+        })
+        this.$emit('userChoinces', choices)
       }
     }
   }
-};
+}
 </script>
