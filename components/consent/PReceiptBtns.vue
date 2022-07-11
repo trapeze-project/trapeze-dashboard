@@ -1,6 +1,6 @@
 <template>
   <div class="float-right">
-    <v-btn class="white--text" color="red" @click="undoChanges">
+    <v-btn class="white--text" :disabled="disableUndoLastChangeBtn" color="red" @click="undoLastChange">
       {{ $t("btn.labels.undo-last-change") }}
     </v-btn>
     <!-- <v-btn class="mx-3">{{$t("btn.labels.see-changes")}}</v-btn> -->
@@ -12,9 +12,14 @@
 
 <script>
 export default {
+  props: {
+    disableUndoLastChangeBtn: {
+      type: Boolean,
+    }
+  },
   methods: {
-    undoChanges () {
-      this.$emit('undoChanges')
+    undoLastChange () {
+      this.$emit('undoLastChange')
     },
     submitChanges () {
       this.$emit('submitChanges')

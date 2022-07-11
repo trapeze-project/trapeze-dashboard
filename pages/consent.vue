@@ -40,7 +40,8 @@
     <PReceiptBtns
       v-if="tab !== 'consent' "
       class="mt-4"
-      @undoChanges="$refs[tab].loadPreviousState()"
+      :disableUndoLastChangeBtn="disableUndoLastChangeBtn"
+      @undoLastChange="$refs[tab].loadPreviousState()"
       @submitChanges="$refs['consentNotification'].showNotification($t('snackbar.msg.submission-successful'), 'green')" />
   </div>
 </template>
@@ -62,8 +63,22 @@ export default {
           name: 'purpose',
           label: this.$t('consent.tab.labels.purpose')
         }
-      ]
+      ],
+      disableUndoLastChangeBtn: true
     }
+  },
+  mounted() {
+    this.$watch(
+      "$refs."+this.tab+".states",
+      (new_value, old_value) => {
+        if(this.$refs[this.tab]){
+          console.log(this.$refs[this.tab].states.length === 0)
+          this.disableUndoLastChangeBtn = this.$refs[this.tab].states.length === 0
+        }else{
+          this.disableUndoLastChangeBtn =  false;
+        }
+      }
+    );
   },
   computed: {
     tab: {
