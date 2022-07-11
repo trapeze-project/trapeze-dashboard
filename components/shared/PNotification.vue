@@ -44,6 +44,7 @@ export default {
     showNotification (text, color) {
       this.text = text
       this.color = color
+      this.timeout = text.split(' ').length  *2500
       clearInterval(this.interval)
       this.snackbar = true
       this.valueDeterminate = 100
