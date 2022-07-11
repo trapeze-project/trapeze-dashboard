@@ -37,7 +37,7 @@
         "labels": {
             "consent-guide": "Consent Guide",
             "i-can-not-find-an-answer": "I can't find an answer",
-            "undo-changes": "Undo changes",
+            "undo-last-change": "Undo last change",
             "submit-changes": "Submit Changes",
             "see-changes": "See Changes",
             "view-changes": "View Changes",

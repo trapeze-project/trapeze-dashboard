@@ -37,7 +37,7 @@
         "labels": {
             "consent-guide": "Einwilligungsassistent",
             "i-can-not-find-an-answer": "Ich finde keine Antwort auf meine Frage",
-            "undo-changes": "\u00c4nderungen r\u00fcckg\u00e4ngig machen",
+            "undo-last-change": "letzte \u00c4nderungen r\u00fcckg\u00e4ngig machen",
             "submit-changes": "\u00c4nderungen speichern",
             "see-changes": "\u00c4nderungen anzeigen",
             "view-changes": "\u00c4nderungen anzeigen",

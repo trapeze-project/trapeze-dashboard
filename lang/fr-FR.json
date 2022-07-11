@@ -37,7 +37,7 @@
         "labels": {
             "consent-guide": "Guide du consentement",
             "i-can-not-find-an-answer": "Je ne trouve pas de r\u00e9ponse",
-            "undo-changes": "Annuler les modifications",
+            "undo-last-change": "Annuler la dernière modification",
             "submit-changes": "Soumettre des modifications",
             "see-changes": "Voir les modifications",
             "view-changes": "Afficher les modifications",
