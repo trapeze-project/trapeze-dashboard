@@ -1,0 +1,2 @@
+Contact: <your email address or the email address of the person in your organization you want me to notify when a security vulnerability is found>
+OpenBugBounty: https://openbugbounty.org/bugbounty/agdarcangelo/
