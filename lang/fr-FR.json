@@ -55,7 +55,8 @@
     "snackbar": {
         "msg": {
             "please-complete-the-consent-guide": "veuillez remplir le guide de consentement",
-            "submission-successful": "Soumission r\u00e9ussie"
+            "submission-successful": "Soumission r\u00e9ussie",
+            "message-sent": "message envoyé"
         }
     },
     "placeholder": {

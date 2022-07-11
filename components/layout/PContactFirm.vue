@@ -1,5 +1,6 @@
 <template>
   <div>
+    <PNotification ref="notification" />
     <v-dialog v-model="dialog" width="500">
       <template v-slot:activator="{ on, attrs }">
         <v-btn class="black--text" v-bind="attrs" color="primary" v-on="on">
@@ -48,7 +49,7 @@
           <v-btn
             class="black--text"
             color="primary"
-            @click="dialog = false"
+            @click="sendMessage"
           >
             {{ $t("btn.labels.send-message") }}
           </v-btn>
@@ -80,6 +81,14 @@ export default {
       dialog: false,
       recipient: this.email.match(/@.+(?=[.])/)[0],
       message: ''
+    }
+  },
+  methods: {
+    sendMessage(){
+      this.dialog = false;
+      const text = this.$t('snackbar.msg.message-sent')
+      console.log(text)
+      this.$refs.notification.showNotification(text, 'green')
     }
   }
 }

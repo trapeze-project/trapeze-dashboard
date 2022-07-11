@@ -55,7 +55,8 @@
     "snackbar": {
         "msg": {
             "please-complete-the-consent-guide": "Sie haben noch nicht alle Fragen beantwortet. Sie können den Fragebogen erst abschließen, wenn Sie alle Fragen beantwortet haben.",
-            "submission-successful": "Speichern erfolgreich"
+            "submission-successful": "Speichern erfolgreich",
+            "message-sent": "Nachricht gesendet"
         }
     },
     "placeholder": {
