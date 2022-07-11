@@ -18,7 +18,8 @@
               <td v-for="radio in radioList" :key="radio.key">
                 <v-radio-group v-model="preferences[item.name]">
                   <v-radio
-                    class="justify-center"
+                    style="max-width: 20px"
+                    class="justify-left"
                     :name="item.name"
                     :value="radio.value"
                     :color="radio.color"
@@ -82,19 +83,19 @@ export default {
         },
         {
           text: this.$t('consent-helper.comfortable'),
-          align: 'center',
+          align: 'left',
           value: 'fine',
           sortable: false
         },
         {
           text: this.$t('consent-helper.no-opinion'),
-          align: 'center',
+          align: 'left',
           value: 'no',
           sortable: false
         },
         {
           text: this.$t('consent-helper.not-comfortable'),
-          align: 'center  ',
+          align: 'left  ',
           value: 'neutral',
           sortable: false
         }
