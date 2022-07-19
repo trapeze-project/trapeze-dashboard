@@ -15,6 +15,7 @@
         lg="3"
       >
         <PExplainCard
+          class="fill-height"
           :title="item.title"
           :content="item.content"
           :filename="item.filename"
