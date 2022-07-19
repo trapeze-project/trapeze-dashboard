@@ -76,7 +76,7 @@ ul li:first-child{
   margin-top: 4px;
 }
 
-.warningsList-enter-from{
+.warningsList-enter , .warningsList-leave-to{
   opacity: 0;
   transform: scale(0.6);
 }
@@ -86,15 +86,6 @@ ul li:first-child{
 }
 .warningsList-enter-active{
   transition: all 0.4s ease;
-}
-
-.warningsList-leave-from{
-  opacity: 1;
-  transform: scale(1);
-}
-.warningsList-leave-to{
-  opacity: 0;
-  transform: scale(0.6);
 }
 .warningsList-leave-active{
   transition: all 0.4s ease;
