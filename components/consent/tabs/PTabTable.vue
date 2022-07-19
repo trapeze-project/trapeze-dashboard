@@ -22,14 +22,13 @@
     <PWarnings
       v-if="view.showPDetails && this.$route.params.consentHelperUserChoices && this.warnings[this.view.selected.untranslated]&& Object.keys(this.warnings[this.view.selected.untranslated]).length"
       id="PWarnings"
-      :key="this.view.selected.untranslated"
       :selected-warnings="warnings[this.view.selected.untranslated]"
       :purpose="this.view.selected.untranslated"
       @ignoreWarning="ignoreWarning"
       @changeUserChoice="changeUserChoice"
       @saveState="saveState"
     />
-
+<!-- :key="this.view.selected.untranslated" -->
     <PDetails
       v-if="view.showPDetails"
       id="PDetails"
