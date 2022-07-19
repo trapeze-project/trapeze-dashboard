@@ -85,14 +85,14 @@ ul li:first-child{
   transform: scale(1);
 }
 .warningsList-enter-active{
-  transition: all 0.4s ease;
+  transition: all 0.5s ease;
 }
 .warningsList-leave-active{
-  transition: all 0.4s ease;
+  transition: all 0.5s ease;
   position: absolute;
 }
 .warningsList-move{
-  transition: all 0.3s ease;
+  transition: all 0.4s ease;
 }
 
 </style>
