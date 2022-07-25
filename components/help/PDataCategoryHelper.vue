@@ -20,7 +20,7 @@
                       v-on="on"
                     >{{ $t(item.name) }}</span>
                   </template>
-                  <span>{{$t(item.name.split(".")[1])}}</span>
+                  <div style="max-width: 300px">{{$t(item.name.split(".")[1])}}</div>
                 </v-tooltip>
               </td>
               <td v-for="radio in radioList" :key="radio.key">
