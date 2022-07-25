@@ -13,7 +13,15 @@
           <template v-slot:item="{ item }">
             <tr @click="checkUserChoiceCompleted">
               <td>
-                {{ $t(item.name) }}
+                <v-tooltip bottom>
+                  <template v-slot:activator="{ on, attrs }">
+                    <span
+                      v-bind="attrs"
+                      v-on="on"
+                    >{{ $t(item.name) }}</span>
+                  </template>
+                  <span>{{$t(item.name.split(".")[1])}}</span>
+                </v-tooltip>
               </td>
               <td v-for="radio in radioList" :key="radio.key">
                 <v-radio-group v-model="preferences[item.name]">
