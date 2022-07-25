@@ -168,13 +168,13 @@
         "sensitivityText": "Potete configurare il grado di sensibilit\u00e0 di questi dati. I dati molto sensibili vengono trattati in modo diverso e con grande attenzione.",
         "sensitivityHeader": "Quanto sono sensibili questi dati per voi?",
         "warnings": "Avvertenze",
-        "warningMsg": "l'utente ha dato il consenso al titolare del trattamento per l'utilizzo dei suoi dati {dataCategory} per lo scopo di {purpose}. ma la sua scelta in ConsentHelper \u00e8 stata {helperChoices}",
+        "warningMsg": "l'utente ha dato il consenso al titolare del trattamento per l'utilizzo dei suoi dati {dataCategory} per la finalità di {purpose}. ma la sua scelta in ConsentHelper \u00e8 stata {helperChoices}",
         "issues": "questioni",
         "tab":{
             "labels":{
                 "consent":"Consenso",
                 "data-category":"Categoria di dati",
-                "purpose" : "Scopo"
+                "purpose" : "Finalità"
             }
         },
         "consent":{
@@ -220,7 +220,7 @@
             "ptable":{
                 "header":{
                     "values":{
-                        "purpose":"Scopo",
+                        "purpose":"Finalità",
                         "data":"Dati",
                         "issue":"Questioni"
                     }
@@ -232,7 +232,7 @@
         }
     },
     "consent-helper": {
-        "purpose": "Scopo",
+        "purpose": "Finalità",
         "comfortable": "Confortevole",
         "no-opinion": "Nessuna opinione",
         "not-comfortable": "Non confortevole"

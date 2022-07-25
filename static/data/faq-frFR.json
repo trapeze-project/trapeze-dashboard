@@ -48,7 +48,7 @@
             }
         }
     },
-    "Consent": {
+    "Consentement": {
         "qnas": {
             "qna1": {
                 "question": "Qu'est-ce que le consentement ?",
@@ -95,7 +95,7 @@
             }
         }
     },
-    "Personal Data": {
+    "Données à Caractère Personnel": {
         "qnas": {
             "qna1": {
                 "question": "Qu'est-ce qu'une donn\u00e9e personnelle ?",
@@ -106,10 +106,10 @@
             }
         }
     },
-    "Purposes": {
+    "Finalités": {
         "qnas": {
             "qna1": {
-                "question": "Qu'est-ce qu'un objectif?",
+                "question": "Qu'est-ce qu'une finalité?",
                 "answer": "Selon le RGPD (article 5, paragraphe 1, point b)), les responsables du traitement doivent vous indiquer clairement \u00e0 quelles fins ils collectent vos donn\u00e9es personnelles. Il est par exemple ill\u00e9gal de collecter vos donn\u00e9es personnelles dans le but pr\u00e9cis de recommandations d'emploi personnalis\u00e9es et de les utiliser ensuite \u00e0 des fins de marketing.",
                 "references": {
                     "ref1": "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX%3A32016R0679"
@@ -117,16 +117,16 @@
             }
         }
     },
-    "Consent Guide": {
+    "Guide du Consentement": {
         "qnas": {
             "qna1": {
-                "question": "Qu'est-ce que le Guide du consentement ?",
-                "answer": "Le guide du consentement est un outil qui vous permet d'\u00e9viter de lire de longues politiques de confidentialit\u00e9. Il vous guidera \u00e0 travers un certain nombre de questions qui nous permettront de comprendre vos pr\u00e9f\u00e9rences en mati\u00e8re de consentement. Sur la base de ces pr\u00e9f\u00e9rences, nous sugg\u00e9rons des configurations de consentement et vous indiquons les probl\u00e8mes potentiels li\u00e9s \u00e0 votre consentement actuel. Il se peut, par exemple, que vous ne souhaitiez pas partager votre localisation \u00e0 des fins de marketing, mais pour des recommandations de restaurants.",
+                "question": "Qu'est-ce que le Guide du Consentement ?",
+                "answer": "Le Guide du Consentement est un outil qui vous permet d'\u00e9viter de lire de longues politiques de confidentialit\u00e9. Il vous guidera \u00e0 travers un certain nombre de questions qui nous permettront de comprendre vos pr\u00e9f\u00e9rences en mati\u00e8re de consentement. Sur la base de ces pr\u00e9f\u00e9rences, nous sugg\u00e9rons des configurations de consentement et vous indiquons les probl\u00e8mes potentiels li\u00e9s \u00e0 votre consentement actuel. Il se peut, par exemple, que vous ne souhaitiez pas partager votre localisation \u00e0 des fins de marketing, mais pour des recommandations de restaurants.",
                 "references": { }
             }
         }
     },
-    "Glossary": {
+    "Glossaire": {
         "qnas": {
             "qna1": {
                 "question": "Consentement",
@@ -143,14 +143,14 @@
                 }
             },
             "qna3": {
-                "question": "Contr\u00f4leur des donn\u00e9es",
+                "question": "Responsable du Traitement",
                 "answer": "Selon le RGPD (Art. 4 (7)), les responsables du traitement des donn\u00e9es (nous) doivent indiquer clairement aux personnes concern\u00e9es (vous) comment et \u00e0 quelles fins ils traitent les donn\u00e9es personnelles. Les responsables du traitement des donn\u00e9es sont souvent uniquement appel\u00e9s \"contr\u00f4leurs\".",
                 "references": {
                     "ref1": "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX%3A32016R0679"
                 }
             },
             "qna4": {
-                "question": "Processeur de donn\u00e9es",
+                "question": "Sous-traitant",
                 "answer": "Selon le RGPD (Art. 4 (8)), les processeurs de donn\u00e9es traitent vos donn\u00e9es personnelles. Les processeurs de donn\u00e9es et les contr\u00f4leurs de donn\u00e9es (nous) peuvent \u00eatre une seule et m\u00eame personne, mais pas n\u00e9cessairement. Si ce n'est pas le cas, les contr\u00f4leurs de donn\u00e9es (nous) ne disent g\u00e9n\u00e9ralement ni la finalit\u00e9 du traitement ni quelles donn\u00e9es personnelles doivent \u00eatre trait\u00e9es par le sous-traitant de donn\u00e9es. Les sous-traitants de donn\u00e9es sont souvent uniquement appel\u00e9s \"sous-traitants\".",
                 "references": {
                     "ref1": "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX%3A32016R0679"
@@ -164,7 +164,7 @@
                 }
             },
             "qna6": {
-                "question": "Destinataire des donn\u00e9es",
+                "question": "Destinataire",
                 "answer": "Selon le RGPD (Art. 4 (9)), toute personne \u00e0 laquelle les donn\u00e9es personnelles d'un sujet (votre) sont divulgu\u00e9es est un destinataire de donn\u00e9es. Les destinataires de donn\u00e9es sont g\u00e9n\u00e9ralement des contr\u00f4leurs de donn\u00e9es et des processeurs de donn\u00e9es. Les destinataires de donn\u00e9es sont souvent uniquement appel\u00e9s \"destinataires\".",
                 "references": {
                     "ref1": "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX%3A32016R0679"
@@ -192,7 +192,7 @@
                 }
             },
             "qna10": {
-                "question": "Traitement des donn\u00e9es",
+                "question": "Traitement",
                 "answer": "Selon le RGPD (Art. 4 (2)), seul le traitement des donn\u00e9es personnelles est r\u00e9glement\u00e9. L'art. 6 d\u00e9finit notamment que le traitement des donn\u00e9es \u00e0 caract\u00e8re personnel est licite si les personnes concern\u00e9es (vous) ont donn\u00e9 leur consentement ou si le traitement est n\u00e9cessaire au respect d'un contrat. Un service de livraison n'a pas besoin de recueillir le consentement pour traiter l'adresse d'une personne concern\u00e9e (vous) \u00e0 des fins de livraison si la livraison fait partie d'un contrat d'achat. Le traitement implique \u00e9galement la collecte et le stockage de donn\u00e9es \u00e0 caract\u00e8re personnel.",
                 "references": {
                     "ref1": "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX%3A32016R0679"
@@ -213,14 +213,14 @@
                 }
             },
             "qna13": {
-                "question": "Objectif",
+                "question": "Finalité",
                 "answer": "Selon le RGPD (article 5, paragraphe 1, point b)), les responsables du traitement des donn\u00e9es (nous) doivent vous indiquer clairement dans quel but ils collectent des donn\u00e9es \u00e0 caract\u00e8re personnel. Il est par exemple ill\u00e9gal de collecter des donn\u00e9es \u00e0 caract\u00e8re personnel \u00e0 des fins de recommandations d'emploi personnalis\u00e9es et de les utiliser ult\u00e9rieurement \u00e0 des fins de marketing.",
                 "references": {
                     "ref1": "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX%3A32016R0679"
                 }
             },
             "qna14": {
-                "question": "Troisi\u00e8me partie",
+                "question": "Tiers",
                 "answer": "Selon le RGPD (Art. 4 (10)), les tiers sont directement autoris\u00e9s par les contr\u00f4leurs de donn\u00e9es (nous) et/ou les processeurs de donn\u00e9es \u00e0 traiter les donn\u00e9es personnelles.",
                 "references": {
                     "ref1": "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX%3A32016R0679"
