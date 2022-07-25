@@ -13,7 +13,7 @@
           <template v-slot:item="{ item }">
             <tr @click="checkUserChoiceCompleted">
               <td>
-                <v-tooltip bottom>
+                <v-tooltip bottom open-delay=600>
                   <template v-slot:activator="{ on, attrs }">
                     <span
                       v-bind="attrs"
