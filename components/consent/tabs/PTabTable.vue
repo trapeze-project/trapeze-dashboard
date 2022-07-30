@@ -14,7 +14,9 @@
           label
           :color="item.issue === '0 '+$t('consent.issues') ? 'transparent' : 'orange'"
         >
-          {{ item.issue }}
+          <div id="issues">
+            {{ item.issue }}
+          </div>
         </v-chip>
       </template>
     </v-data-table>

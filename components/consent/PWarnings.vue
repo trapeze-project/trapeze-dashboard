@@ -4,6 +4,7 @@
     <transition-group tag="ul" name="warningsList" appear>
       <li v-for="dataCategory in Object.keys(selectedWarnings)" :key="dataCategory">
         <v-alert
+          id="issues"
           shaped
           dense
           dark
