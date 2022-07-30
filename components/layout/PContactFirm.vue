@@ -79,12 +79,8 @@ export default {
   data () {
     return {
       dialog: false,
-      recipient: this.email.match(/@.+(?=[.])/)[0],
       message: ''
     }
-  },
-  created(){
-    console.log('lol')
   },
   methods: {
     sendMessage(){
