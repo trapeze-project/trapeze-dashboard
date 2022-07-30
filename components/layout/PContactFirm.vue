@@ -23,7 +23,7 @@
           <p class="mt-4 mb-1 black--text">
             {{$t("contact.recipient")}}:
           </p>
-          <v-text-field v-model="recipient" persistent-hint outlined dence />
+          <v-text-field v-model="this.email.match(/@.+(?=[.])/)[0]" persistent-hint outlined dence disabled />
           <p class="mt-1 mb-1 black--text">
             {{$t("contact.message")}}:
           </p>
@@ -82,6 +82,9 @@ export default {
       recipient: this.email.match(/@.+(?=[.])/)[0],
       message: ''
     }
+  },
+  created(){
+    console.log('lol')
   },
   methods: {
     sendMessage(){
