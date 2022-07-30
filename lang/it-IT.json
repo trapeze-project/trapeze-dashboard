@@ -237,6 +237,11 @@
         "no-opinion": "Nessuna opinione",
         "not-comfortable": "Non confortevole"
     },
+    "contact":{
+        "new-message-to":"Nuovo messaggio a",
+        "recipient":"Destinataria",
+        "message":"Messaggio"
+    },
     "location": "I dati sulla posizione sono dati che ci dicono dove siete stati in quale momento. Raccogliamo i dati sulla posizione tramite GPS se l'utente fornisce l'autorizzazione nell'applicazione mobile Company Name. Utilizziamo i dati sulla posizione dell'utente per personalizzare la nostra pubblicit\u00e0, per pianificare il nostro marketing a livello geografico e per prevenire le frodi attraverso la verifica dell'identit\u00e0 geografica.",
     "name": "Raccogliamo il vostro nome per indirizzarvi correttamente. Memorizziamo il vostro nome dal vostro profilo.",
     "fingerprint": "I dati biometrici, come le impronte digitali, vengono utilizzati per verificare le credenziali e prevenire il furto di identit\u00e0.",

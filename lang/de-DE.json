@@ -237,6 +237,11 @@
         "no-opinion": "Unentschlossen",
         "not-comfortable": "Nicht Einverstanden"
     },
+    "contact":{
+        "new-message-to":"Neue Nachricht an",
+        "recipient":"Empfänger",
+        "message":"Nachricht"
+    },
     "location": "Standortdaten sind Daten, die uns zeigen, wo Sie sich zu welcher Zeit aufgehalten haben. Wir erfassen Standortdaten \u00fcber GPS, wenn Sie uns dazu die Erlaubnis in der mobilen Anwendung von Company Name gegeben haben. Wir verwenden Ihre Standortdaten, um unsere Werbung anzupassen, unser Marketing geografisch zu planen und um Betrug durch geografische Identit\u00e4tspr\u00fcfung zu verhindern.",
     "name": "Wir erfassen Ihren Namen, um Sie richtig ansprechen zu k\u00f6nnen. Ihren Namen entnehmen wir Ihrem Nutzerprofil.",
     "fingerprint": "Biometrische Daten wie z. B. Fingerabdr\u00fccke werden verwendet, um Ihre Anmeldedaten zu \u00fcberpr\u00fcfen und Identit\u00e4tsdiebstahl zu vermeiden.",
