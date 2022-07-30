@@ -80,8 +80,8 @@
         "name": "Nom de l'entreprise",
         "add1": "Nom de l'entreprise Rue",
         "add2": "123456, Nom de l'entreprise Ville, Italie",
-        "website": "https://company.name.com",
-        "email": "name@company.name.com",
+        "website": "https://nom.de.l'entreprise.com",
+        "email": "name@nom.de.l'entreprise.com",
         "contact": "Contacter",
         "position": "D\u00e9l\u00e9gu\u00e9 \u00e0 la protection des donn\u00e9es (DPD)",
         "pos-name": "Nom du d\u00e9l\u00e9gu\u00e9 \u00e0 la protection des donn\u00e9es"
@@ -237,6 +237,11 @@
         "comfortable": "Confortable",
         "no-opinion": "Sans opinion",
         "not-comfortable": "Pas confortable"
+    },
+    "contact":{
+        "new-message-to":"Nouveau message à",
+        "recipient":"Destinataire",
+        "message":"Message "
     },
     "location": "Les donn\u00e9es de localisation sont des donn\u00e9es qui nous indiquent o\u00f9 vous avez \u00e9t\u00e9 \u00e0 quel moment. Nous collectons les donn\u00e9es de localisation par GPS si vous nous en donnez l'autorisation dans l'application mobile Nom de l'entreprise. Nous utilisons vos donn\u00e9es de localisation pour personnaliser notre publicit\u00e9, pour planifier notre marketing g\u00e9ographiquement et pour pr\u00e9venir la fraude via la v\u00e9rification g\u00e9ographique de l'identit\u00e9.",
     "name": "Nous recueillons votre nom pour vous adresser correctement. Nous enregistrons votre nom \u00e0 partir de votre profil.",
