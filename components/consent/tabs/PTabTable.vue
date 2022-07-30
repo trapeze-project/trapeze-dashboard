@@ -61,6 +61,10 @@ export default {
         // The value must match one of these strings
         return ['consent', 'data', 'purpose'].includes(value)
       }
+    },
+    userChoices: {
+      type: Object,
+      required: false,
     }
   },
   data () {
@@ -77,10 +81,20 @@ export default {
       },
       headers: '',
       pDetailsSubItemsMap: '',
-      userChoices: '',
+      modifiedUserChoices: '',
       consentHelperUserChoices: '',
       warnings: '',
       states: []
+    }
+  },
+  watch:{
+    userChoices:{
+      handler: function(new_value, old_value){
+        if(JSON.stringify(new_value) !== JSON.stringify(old_value)){
+          this.modifiedUserChoices = new_value;
+        }
+      },
+      deep:true
     }
   },
   computed: {
@@ -125,7 +139,7 @@ export default {
     },
     calculateBottonsValues () {
       if (this.view.selected !== '') {
-        return JSON.parse(JSON.stringify(this.userChoices[this.view.selected.untranslated]))
+        return JSON.parse(JSON.stringify(this.modifiedUserChoices[this.view.selected.untranslated]))
       }
     }
   },
@@ -147,25 +161,16 @@ export default {
     }
 
     if (this.tabName === 'purpose') {
-      this.userChoices = JSON.parse(JSON.stringify(Object.keys(this.imports.purposeMap).reduce((total, currentValue) => {
-        total[currentValue] = this.imports.purposeMap[currentValue].reduce((total, currentValue) => {
-          total[currentValue] = true
-          return total
-        }, {})
-        return total
-      }, {})))
+
+      this.modifiedUserChoices = JSON.parse(JSON.stringify(this.userChoices))
+
+
       if (this.$route.params.consentHelperUserChoices) {
         this.consentHelperUserChoices = JSON.parse(JSON.stringify(this.$route.params.consentHelperUserChoices))
         this.warnings = this.calculateWarrnings()
       }
     } else if (this.tabName === 'data') {
-      this.userChoices = JSON.parse(JSON.stringify(Object.keys(this.imports.categoryMap).reduce((total, currentValue) => {
-        total[currentValue] = this.imports.categoryMap[currentValue].reduce((total, currentValue) => {
-          total[currentValue] = true
-          return total
-        }, {})
-        return total
-      }, {})))
+      this.modifiedUserChoices = JSON.parse(JSON.stringify(this.userChoices))
     }
   },
   methods: {
@@ -219,15 +224,15 @@ export default {
     },
     calculateWarrnings () {
       const result = {}
-      for (const purpose of Object.keys(this.userChoices)) {
-        for (const dataCategory of Object.keys(this.userChoices[purpose])) {
-          if (this.userChoices[purpose][dataCategory]) {
+      for (const purpose of Object.keys(this.modifiedUserChoices)) {
+        for (const dataCategory of Object.keys(this.modifiedUserChoices[purpose])) {
+          if (this.modifiedUserChoices[purpose][dataCategory]) {
             if (['consent-helper.no-opinion', 'consent-helper.not-comfortable'].includes(this.consentHelperUserChoices[purpose][dataCategory])) {
               if (!result[purpose]) {
                 result[purpose] = {}
               }
               result[purpose][dataCategory] = {
-                givenConsentValue: this.userChoices[purpose][dataCategory],
+                givenConsentValue: this.modifiedUserChoices[purpose][dataCategory],
                 consentHelperChoice: this.consentHelperUserChoices[purpose][dataCategory]
               }
             }
@@ -242,7 +247,7 @@ export default {
       this.warnings = JSON.parse(JSON.stringify(yo))
     },
     changeUserChoice (parent, child, newConsentValue) {
-      this.userChoices[parent][child] = newConsentValue
+      this.modifiedUserChoices[parent][child] = newConsentValue
       this.fixWarningIfExist(parent, child, newConsentValue)
       console.log()
     },
@@ -274,8 +279,8 @@ export default {
     },
     revokeAll () {
       this.saveState()
-      Object.keys(this.userChoices).forEach((parent) => {
-        Object.keys(this.userChoices[parent]).forEach((child) => {
+      Object.keys(this.modifiedUserChoices).forEach((parent) => {
+        Object.keys(this.modifiedUserChoices[parent]).forEach((child) => {
           this.changeUserChoice(parent, child, false)
         })
       })
@@ -285,7 +290,7 @@ export default {
       state.view = {}
       state.view.selected = JSON.parse(JSON.stringify(this.view.selected))
       state.view.showPDetails = JSON.parse(JSON.stringify(this.view.showPDetails))
-      state.userChoices = JSON.parse(JSON.stringify(this.userChoices))
+      state.modifiedUserChoices = JSON.parse(JSON.stringify(this.modifiedUserChoices))
       state.warnings = JSON.parse(JSON.stringify(this.warnings))
       this.states.push(state)
     },
@@ -295,7 +300,7 @@ export default {
         this.view.showPDetails = JSON.parse(JSON.stringify(state.view.showPDetails))
         this.view.selected = JSON.parse(JSON.stringify(state.view.selected))
         setTimeout(() => { // to let the see the switcher switching
-          this.userChoices = JSON.parse(JSON.stringify(state.userChoices))
+          this.modifiedUserChoices = JSON.parse(JSON.stringify(state.modifiedUserChoices))
           this.warnings = JSON.parse(JSON.stringify(state.warnings))
         }, 500)
       }

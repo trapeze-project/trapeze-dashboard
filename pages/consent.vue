@@ -28,12 +28,12 @@
           <PTabTable tab-name="consent" />
         </v-tab-item>
 
-        <v-tab-item value="data">
-          <PTabTable ref="data" tab-name="data" />
+        <v-tab-item value="data" :eager="true">
+          <PTabTable ref="data" tab-name="data" :userChoices="invertUserChoices(userChoices)" />
         </v-tab-item>
 
-        <v-tab-item value="purpose">
-          <PTabTable ref="purpose" tab-name="purpose" />
+        <v-tab-item value="purpose" :eager="true">
+          <PTabTable ref="purpose" tab-name="purpose" :userChoices="userChoices" />
         </v-tab-item>
       </v-tabs-items>
     </v-card>
@@ -43,10 +43,12 @@
       :disableUndoLastChangeBtn="disableUndoLastChangeBtn"
       @undoLastChange="$refs[tab].loadPreviousState()"
       @submitChanges="$refs['consentNotification'].showNotification($t('snackbar.msg.submission-successful'), 'green')" />
+
   </div>
 </template>
 
 <script>
+import examplePolicy from '../static/data/example.policy.json'
 export default {
   data () {
     return {
@@ -64,12 +66,21 @@ export default {
           label: this.$t('consent.tab.labels.purpose')
         }
       ],
-      disableUndoLastChangeBtn: true
+      disableUndoLastChangeBtn: true,
+      userChoices:"",
+      purposeMap:"",
+      invertedUserChoices : ""
     }
+  },
+  created(){
+    this.calculatePurposeMap()
+    this.getUserChoices();
+    this.invertedUserChoices = this.invertUserChoices(this.userChoices)
+
   },
   mounted() {
     this.$watch(
-      "$refs."+this.tab+".states",
+      "$refs.data.states",
       (new_value, old_value) => {
         if(this.$refs[this.tab]){
           this.disableUndoLastChangeBtn = this.$refs[this.tab].states.length === 0
@@ -77,6 +88,28 @@ export default {
           this.disableUndoLastChangeBtn =  false;
         }
       }
+    );
+    this.$watch(
+      "$refs.purpose.states",
+      (new_value, old_value) => {
+        if(this.$refs[this.tab]){
+          this.disableUndoLastChangeBtn = this.$refs[this.tab].states.length === 0
+        }else{
+          this.disableUndoLastChangeBtn =  false;
+        }
+      }
+    );
+    this.$watch(
+      "$refs.purpose.modifiedUserChoices",{
+      handler: (new_value, old_value) => {
+          this.userChoices=JSON.parse(JSON.stringify(new_value))
+      } , deep:true }
+    );
+    this.$watch(
+      "$refs.data.modifiedUserChoices",{
+      handler: (new_value, old_value) => {
+          this.userChoices=this.invertUserChoices(JSON.parse(JSON.stringify(new_value)))
+      } , deep:true }
     );
   },
   computed: {
@@ -87,6 +120,42 @@ export default {
       get () {
         return this.$route.query.tab
       }
+    }
+  },
+  methods:{
+    calculatePurposeMap () {
+      this.purposeMap = examplePolicy.reduce((total, currentValue) => {
+        const purpose = currentValue['dpv:Purpose']['@class'].replace(':', '.').replace(/ /g, '-').toLowerCase()
+        currentValue['dpv:PersonalDataCategory'].forEach((item, index) => {
+          const personalDataCategory = item['@class'].replace(':', '.').replace(/ /g, '-').toLowerCase()
+          if (!(purpose in total)) {
+            total[purpose] = []
+          }
+          total[purpose].push(personalDataCategory)
+        })
+        return total
+      }, {})
+    },
+    getUserChoices(){
+      this.userChoices = JSON.parse(JSON.stringify(Object.keys(this.purposeMap).reduce((total, currentValue) => {
+        total[currentValue] = this.purposeMap[currentValue].reduce((total, currentValue) => {
+          total[currentValue] = true
+          return total
+        }, {})
+        return total
+      }, {})))
+    },
+    invertUserChoices(userChoices){
+      return Object.keys(userChoices).reduce((total, a) => {
+        let b = userChoices[a];
+        Object.keys(b).forEach(element => {
+          if(!total.hasOwnProperty(element)){
+            total[element]={};
+          }
+          total[element][a] = userChoices[a][element];
+        });
+        return total;
+      }, {});
     }
   }
 }
