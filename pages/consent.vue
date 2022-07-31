@@ -29,11 +29,11 @@
         </v-tab-item>
 
         <v-tab-item value="data" :eager="true">
-          <PTabTable ref="data" tab-name="data" :userChoices="invertUserChoices(userChoices)" />
+          <PTabTable ref="data" tab-name="data" :userChoices="invertUserChoices(userChoices)" :warnings="invertWarnings(warnings)" />
         </v-tab-item>
 
         <v-tab-item value="purpose" :eager="true">
-          <PTabTable ref="purpose" tab-name="purpose" :userChoices="userChoices" />
+          <PTabTable ref="purpose" tab-name="purpose" :userChoices="userChoices" :warnings="warnings" />
         </v-tab-item>
       </v-tabs-items>
     </v-card>
@@ -69,7 +69,9 @@ export default {
       disableUndoLastChangeBtn: true,
       userChoices:"",
       purposeMap:"",
-      invertedUserChoices : ""
+      invertedUserChoices : "",
+      consentHelperUserChoices:"",
+      warnings:""
     }
   },
   created(){
@@ -77,6 +79,13 @@ export default {
     this.getUserChoices();
     this.invertedUserChoices = this.invertUserChoices(this.userChoices)
 
+
+    if(this.$route.params.consentHelperUserChoices){
+      this.consentHelperUserChoices = JSON.parse(JSON.stringify(this.$route.params.consentHelperUserChoices));
+      console.log("got parameters")
+      this.calculateWarnings()
+    }
+    
   },
   mounted() {
     this.$watch(
@@ -111,6 +120,19 @@ export default {
           this.userChoices=this.invertUserChoices(JSON.parse(JSON.stringify(new_value)))
       } , deep:true }
     );
+    this.$watch(
+      "$refs.purpose.modifiedWarnings",{
+      handler: (new_value, old_value) => {
+          this.warnings=JSON.parse(JSON.stringify(new_value))
+      } , deep:true }
+    );
+    this.$watch(
+      "$refs.data.modifiedWarnings",{
+      handler: (new_value, old_value) => {
+          this.warnings=this.invertWarnings(JSON.parse(JSON.stringify(new_value)))
+      } , deep:true }
+    );
+
   },
   computed: {
     tab: {
@@ -153,6 +175,40 @@ export default {
             total[element]={};
           }
           total[element][a] = userChoices[a][element];
+        });
+        return total;
+      }, {});
+    },
+    calculateWarnings () {
+      this.warnings = {}
+      for (const purpose of Object.keys(this.userChoices)) {
+        for (const dataCategory of Object.keys(this.userChoices[purpose])) {
+          if (this.userChoices[purpose][dataCategory]) {
+            if (['consent-helper.no-opinion', 'consent-helper.not-comfortable'].includes(this.consentHelperUserChoices[purpose][dataCategory])) {
+              if (!this.warnings[purpose]) {
+                this.warnings[purpose] = {}
+              }
+              this.warnings[purpose][dataCategory] = {
+                givenConsentValue: this.userChoices[purpose][dataCategory],
+                consentHelperChoice: this.consentHelperUserChoices[purpose][dataCategory]
+              }
+            }
+          }
+        }
+      }
+    },
+    invertWarnings(warnings){
+      return Object.keys(warnings).reduce((total, a) => {
+        let b = warnings[a];
+        Object.keys(b).forEach(element => {
+          if(!total.hasOwnProperty(element)){
+            total[element]={};
+          }
+          if(!total[element].hasOwnProperty(a)){
+            total[element][a]={};
+          }
+          total[element][a]["givenConsentValue"] = warnings[a][element]["givenConsentValue"];
+          total[element][a]["consentHelperChoice"] = warnings[a][element]["consentHelperChoice"];
         });
         return total;
       }, {});

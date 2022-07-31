@@ -208,7 +208,8 @@
                 "header":{
                     "values":{
                         "data":"Daten",
-                        "purposes":"Zwecke"
+                        "purposes":"Zwecke",
+                        "issue":"Probleme"
                     }
                 },
                 "footer":{

@@ -209,7 +209,8 @@
                 "header":{
                     "values":{
                         "data":"Les Données",
-                        "purposes":"Finalités"
+                        "purposes":"Finalités",
+                        "issue":"Publier"
                     }
                 },
                 "footer":{

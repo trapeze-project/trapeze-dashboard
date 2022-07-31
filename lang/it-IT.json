@@ -208,7 +208,8 @@
                 "header":{
                     "values":{
                         "data":"Dati",
-                        "purposes":"Scopi"
+                        "purposes":"Scopi",
+                        "issue":"Questioni"
                     }
                 },
                 "footer":{
