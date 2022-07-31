@@ -40,9 +40,10 @@
     <PReceiptBtns
       v-if="tab !== 'consent' "
       class="mt-4"
-      :disableUndoLastChangeBtn="disableUndoLastChangeBtn"
-      @undoLastChange="$refs[tab].loadPreviousState()"
-      @submitChanges="$refs['consentNotification'].showNotification($t('snackbar.msg.submission-successful'), 'green')" />
+      :disableUndoLastChangeBtn="disableUndoLastChangeBtnForData && disableUndoLastChangeBtnForPurpose "
+      @undoLastChange="undoLastChange"
+      @submitChanges="submitChanges" />
+      <!-- :disableUndoLastChangeBtn="(disableUndoLastChangeBtnForData && tab=='data') || (disableUndoLastChangeBtnForPurpose && tab=='purpose') " -->
 
   </div>
 </template>
@@ -66,7 +67,8 @@ export default {
           label: this.$t('consent.tab.labels.purpose')
         }
       ],
-      disableUndoLastChangeBtn: true,
+      disableUndoLastChangeBtnForData: true,
+      disableUndoLastChangeBtnForPurpose: true,
       userChoices:"",
       purposeMap:"",
       invertedUserChoices : "",
@@ -91,21 +93,13 @@ export default {
     this.$watch(
       "$refs.data.states",
       (new_value, old_value) => {
-        if(this.$refs[this.tab]){
-          this.disableUndoLastChangeBtn = this.$refs[this.tab].states.length === 0
-        }else{
-          this.disableUndoLastChangeBtn =  false;
-        }
+          this.disableUndoLastChangeBtnForData = this.$refs['data'].states.length === 0
       }
     );
     this.$watch(
       "$refs.purpose.states",
       (new_value, old_value) => {
-        if(this.$refs[this.tab]){
-          this.disableUndoLastChangeBtn = this.$refs[this.tab].states.length === 0
-        }else{
-          this.disableUndoLastChangeBtn =  false;
-        }
+        this.disableUndoLastChangeBtnForPurpose = this.$refs['purpose'].states.length === 0
       }
     );
     this.$watch(
@@ -145,6 +139,24 @@ export default {
     }
   },
   methods:{
+    submitChanges(){
+      this.$refs['consentNotification'].showNotification(this.$t('snackbar.msg.submission-successful'), 'green')
+      this.$refs['data'].states = []
+      this.$refs['purpose'].states = []
+    },
+    undoLastChange(){
+      if(this.disableUndoLastChangeBtnForData && this.tab==='data' && !this.disableUndoLastChangeBtnForPurpose){
+        this.$router.replace({ query: { ...this.$route.query, tab:'purpose' } })
+      }else if(this.disableUndoLastChangeBtnForPurpose && this.tab==='purpose' && !this.disableUndoLastChangeBtnForData){
+        this.$router.replace({ query: { ...this.$route.query, tab:'data' } })
+      }
+      setTimeout(()=>{
+        this.$refs[this.tab].loadPreviousState()
+      },900)
+      
+      
+    },
+
     calculatePurposeMap () {
       this.purposeMap = examplePolicy.reduce((total, currentValue) => {
         const purpose = currentValue['dpv:Purpose']['@class'].replace(':', '.').replace(/ /g, '-').toLowerCase()
