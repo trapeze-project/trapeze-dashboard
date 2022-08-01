@@ -13,7 +13,7 @@
     <v-card-actions>
       <v-spacer />
       <v-btn v-bind="btnProps">
-        {{ $t("home.explore-btn") }}
+        {{ this.btnLabel}}
       </v-btn>
       <v-spacer />
     </v-card-actions>
@@ -44,24 +44,26 @@ export default {
   },
   data () {
     return {
+      btnLabel: '',
       btnProps: ''
     }
   },
   created () {
-    this.btnProps = this.calculateButtonProps()
+    this.calculateButtonProperties()
   },
   methods: {
-    calculateButtonProps () {
-      const obj = {}
+    calculateButtonProperties () {
+      this.btnProps = {};
       if (this.href.startsWith('http')) {
-        obj.href = this.href
+        this.btnLabel = this.$t('btn.labels.visit-website');
+        this.btnProps.href = this.href;
       } else {
-        obj.to = this.localePath(this.href)
+        this.btnLabel = this.$t('btn.labels.view');
+        this.btnProps.to = this.localePath(this.href);
       }
-      obj.depressed = true
-      obj.class = 'black--text'
-      obj.color = 'primary'
-      return obj
+      this.btnProps.depressed = true
+      this.btnProps.class = 'black--text'
+      this.btnProps.color = 'primary'
     }
   }
 }

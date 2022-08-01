@@ -46,10 +46,20 @@
             "back": "Back",
             "next": "Next",
             "view-issues": "View issues",
+<<<<<<< HEAD
             "fix": "Fix",
             "fix-all": "Fix All",
             "ignore": "Ignore",
             "ignore-all": "Ignore All"
+=======
+            "fix":"Fix",
+            "fix-all":"Fix All",
+            "ignore":"Ignore",
+            "ignore-all":"Ignore All",
+            "view":"View",
+            "visit-website":"visit Webiste"
+
+>>>>>>> 89bb2b1e546cda88d1295b08a3e305df077fe975
         }
     },
     "snackbar": {
