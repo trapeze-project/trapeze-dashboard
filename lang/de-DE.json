@@ -46,10 +46,12 @@
             "back": "Zur\u00fcck",
             "next": "Weiter",
             "view-issues": "Fragebogen Abschlie\u00dfen",
-            "fix": "beheben",
-            "fix-all": "alle beheben",
-            "ignore": "ignorieren",
-            "ignore-all": "alle ignorieren"
+            "fix": "Beheben",
+            "fix-all": "Alle beheben",
+            "ignore": "Ignorieren",
+            "ignore-all": "Alle ignorieren",
+            "view": "Ansehen",
+            "visit-website": "Webseite besuchen"
         }
     },
     "snackbar": {
@@ -237,10 +239,10 @@
         "no-opinion": "Unentschlossen",
         "not-comfortable": "Nicht Einverstanden"
     },
-    "contact":{
-        "new-message-to":"Neue Nachricht an",
-        "recipient":"Empfänger",
-        "message":"Nachricht"
+    "contact": {
+        "new-message-to": "Neue Nachricht an",
+        "recipient": "Empf\u00e4nger",
+        "message": "Nachricht"
     },
     "location": "Standortdaten sind Daten, die uns zeigen, wo Sie sich zu welcher Zeit aufgehalten haben. Wir erfassen Standortdaten \u00fcber GPS, wenn Sie uns dazu die Erlaubnis in der mobilen Anwendung von Company Name gegeben haben. Wir verwenden Ihre Standortdaten, um unsere Werbung anzupassen, unser Marketing geografisch zu planen und um Betrug durch geografische Identit\u00e4tspr\u00fcfung zu verhindern.",
     "name": "Wir erfassen Ihren Namen, um Sie richtig ansprechen zu k\u00f6nnen. Ihren Namen entnehmen wir Ihrem Nutzerprofil.",

@@ -46,13 +46,12 @@
             "back": "Back",
             "next": "Next",
             "view-issues": "View issues",
-            "fix":"Fix",
-            "fix-all":"Fix All",
-            "ignore":"Ignore",
-            "ignore-all":"Ignore All",
-            "view":"View",
-            "visit-website":"visit Webiste"
-
+            "fix": "Fix",
+            "fix-all": "Fix All",
+            "ignore": "Ignore",
+            "ignore-all": "Ignore All",
+            "view": "View",
+            "visit-website": "Visit Website"
         }
     },
     "snackbar": {
@@ -90,7 +89,7 @@
         "pos-name": "Data Protection Officer Name"
     },
     "home": {
-        "title": "Welcome to your personal privacy dashboard! ",
+        "title": "Welcome to your personal privacy dashboard!",
         "explore-btn": "View",
         "welcome-msg": "We at Company Name want you to understand how we process your personal data.",
         "welcome-msg2": "In this dashboard, you can view what personal data we process and for which purposes. The dashboard allows you to limit our processing of your personal data by configuring your consent. You can:",
@@ -148,7 +147,7 @@
             "fingerprint": "Fingerprint",
             "bank": "Bank Account",
             "credit": "Credit Card Number",
-            "sensitivity": "Sensitivity: ",
+            "sensitivity": "Sensitivity:",
             "sensitivityText": "You can configure how sensitive this data is to you. We treat very sensitive data differently and with extensive care",
             "sensitivityHeader": "How sensitive is this data to you?"
         }
@@ -167,7 +166,7 @@
         "fingerprint": "Fingerprint",
         "bank": "Bank Account",
         "credit": "Credit Card Number",
-        "sensitivity": "Sensitivity: ",
+        "sensitivity": "Sensitivity:",
         "sensitivityText": "You can configure how sensitive this data is to you. We treat very sensitive data differently and with extensive care",
         "sensitivityHeader": "How sensitive is this data to you?",
         "warnings": "Warnings",
@@ -206,13 +205,13 @@
                 }
             }
         },
-        "data":{
-            "ptable":{
-                "header":{
-                    "values":{
-                        "data":"Data",
-                        "purposes":"Purposes",
-                        "issue":"Issue"
+        "data": {
+            "ptable": {
+                "header": {
+                    "values": {
+                        "data": "Data",
+                        "purposes": "Purposes",
+                        "issue": "Issue"
                     }
                 },
                 "footer": {
@@ -241,10 +240,10 @@
         "no-opinion": "No opinion",
         "not-comfortable": "Not comfortable"
     },
-    "contact":{
-        "new-message-to":"New Message to",
-        "recipient":"Recipient",
-        "message":"Message"
+    "contact": {
+        "new-message-to": "New Message to",
+        "recipient": "Recipient",
+        "message": "Message"
     },
     "location": "Location data is data that tells us where you have been at what time. We collect location data via GPS if you give permission in the Company Name mobile application. We use your location data to customize our advertising, to plan our marketing geographically, and to prevent fraud via geographic identity verification.",
     "name": "We collect your name to properly address you. We store your name from your profile.",
