@@ -21,7 +21,7 @@
             "consent": "Einwilligungen",
             "data": "Datenkategorien",
             "purposes": "Zwecke",
-            "help": "Hilfe",
+            "help": "Einwilligungsassistent",
             "faq": "FAQ"
         }
     },
@@ -104,7 +104,7 @@
                 "name": "Zwecke aktivieren oder deaktivieren."
             }
         },
-        "help": "Hilfe",
+        "help": "Einwilligungsassistent",
         "items": {
             "0": {
                 "title": "Einwilligungen",
@@ -133,7 +133,7 @@
         },
         "consent": {
             "consent-menu": "\u00dcbersicht",
-            "title": "\u00dcbersicht",
+            "title": "Einwilligungen",
             "location": "Ihre Standortdaten",
             "purpose": "Zwecke",
             "text": "Standortdaten sind Daten, die uns sagen, wo Sie zu welcher Zeit waren. Wir erfassen Standortdaten \u00fcber GPS, wenn Sie in unserer app die Erlaubnis dazu erteilen. Wir verwenden Ihre Standortdaten, um unsere Werbung anzupassen, unser Marketing geografisch zu planen und Betrug durch geografische Identit\u00e4tspr\u00fcfung zu vermeiden.",

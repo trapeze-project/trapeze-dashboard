@@ -35,7 +35,7 @@
     },
     "btn": {
         "labels": {
-            "consent-guide": "Consent Guide",
+            "consent-guide": "Consent Assistant",
             "i-can-not-find-an-answer": "I can't find an answer",
             "undo-last-change": "Undo last change",
             "submit-changes": "Submit Changes",
@@ -54,7 +54,7 @@
     },
     "snackbar": {
         "msg": {
-            "please-complete-the-consent-guide": "please complete the consent guide",
+            "please-complete-the-consent-guide": "You have not yet answered all questions. Please answer all questions to complete the questionnaire.",
             "submission-successful": "Submission Successful",
             "message-sent": "Message Sent"
         }
@@ -92,7 +92,7 @@
         "welcome-msg": "We at Company Name want you to understand how we process your personal data.",
         "welcome-msg2": "In this dashboard, you can view what personal data we process and for which purposes. The dashboard allows you to limit our processing of your personal data by configuring your consent. You can:",
         "welcome-msg3": "The menu in the bottom left gives you a quick overview of the most recent consent-related interactions between you and us.",
-        "welcome-msg4": "If you are new to the privacy dashboard, we recommend you to try out the consent helper.",
+        "welcome-msg4": "If you are new to the privacy dashboard, we recommend you to try out the Consent Assistant.",
         "purpose": {
             "0": {
                 "name": "revoke and give consent,"
@@ -104,7 +104,7 @@
                 "name": "deactivate and activate purposes."
             }
         },
-        "help": "Help",
+        "help": "Consent Assistant",
         "items": {
             "0": {
                 "title": "Consent",
@@ -133,7 +133,7 @@
         },
         "consent": {
             "consent-menu": "Consent Menu",
-            "title": "Consent Guide",
+            "title": "Consent",
             "location": "Your location data",
             "purpose": "Purposes",
             "text": "Location data is data that tells us where you have been at what time. We collect location data via GPS if you give permission in the Company Name mobile application. We use your location data to customize our advertising, to plan our marketing geographically, and to prevent fraud via geographic identity verification.",
@@ -152,7 +152,7 @@
     },
     "consent": {
         "consent-menu": "Consent Menu",
-        "title": "Consent Guide",
+        "title": "Consent Assistant",
         "location": "Your location data",
         "purposes": "Purposes",
         "text": "Location data is data that tells us where you have been at what time. We collect location data via GPS if you give permission in the Company Name mobile application. We use your location data to customize our advertising, to plan our marketing geographically, and to prevent fraud via geographic identity verification.",
@@ -168,7 +168,7 @@
         "sensitivityText": "You can configure how sensitive this data is to you. We treat very sensitive data differently and with extensive care",
         "sensitivityHeader": "How sensitive is this data to you?",
         "warnings": "Warnings",
-        "warningMsg": "you have given consent to the data controller to use your {dataCategory} data for the purpose of {purpose}. but your choice in ConsentHelper was {helperChoices}",
+        "warningMsg": "You have given consent to the data controller to use your {dataCategory} data for the purpose of {purpose}. but your choice in Consent Assistant was {helperChoices}.",
         "issues": "issues",
         "tab": {
             "labels": {

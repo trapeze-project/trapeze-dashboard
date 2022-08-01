@@ -21,7 +21,7 @@
             "consent": "Consenso informato",
             "data": "Dati",
             "purposes": "Scopi",
-            "help": "Aiuto",
+            "help": "Assistente al Consenso",
             "faq": "FAQ"
         }
     },
@@ -35,7 +35,7 @@
     },
     "btn": {
         "labels": {
-            "consent-guide": "Guida al consenso",
+            "consent-guide": "Assistente al Consenso",
             "i-can-not-find-an-answer": "Non riesco a trovare una risposta",
             "undo-last-change": "Annulla le modifiche",
             "submit-changes": "Invia le modifiche",
@@ -54,7 +54,7 @@
     },
     "snackbar": {
         "msg": {
-            "please-complete-the-consent-guide": "Si prega di compilare la guida al consenso",
+            "please-complete-the-consent-guide": "Non ha ancora risposto a tutte le domande. La preghiamo di rispondere a tutte le domande per completare il questionario.",
             "submission-successful": "Invio dei dati completato"
         }
     },
@@ -132,7 +132,7 @@
         },
         "consent": {
             "consent-menu": "Menu del Consenso",
-            "title": "Guida al consenso",
+            "title": "Consenso",
             "location": "I vostri dati sulla posizione",
             "purpose": "Scopi",
             "text": "I dati sulla posizione sono dati che ci dicono dove siete stati in ogni momento. Raccogliamo dati sulla posizione attraverso il GPS se date il vostro consenso all'app del telefono \"Nome Azienda\". Utilizziamo i vostri dati sulla posizione per raffinare le pubblicit\u00e0.",
@@ -151,7 +151,7 @@
     },
     "consent": {
         "consent-menu": "Menu del Consenso",
-        "title": "Guida al consenso",
+        "title": "Assistente al Consenso",
         "location": "I vostri dati sulla posizione",
         "purposes": "Scopi",
         "text": "I dati sulla posizione sono dati che ci dicono dove siete stati in quale momento. Raccogliamo i dati sulla posizione tramite GPS se l'utente fornisce l'autorizzazione nell'applicazione mobile Company Name. Utilizziamo i dati sulla posizione dell'utente per personalizzare la nostra pubblicit\u00e0, per pianificare il nostro marketing a livello geografico e per prevenire le frodi attraverso la verifica dell'identit\u00e0 geografica.",
@@ -167,8 +167,8 @@
         "sensitivityText": "Potete configurare il grado di sensibilit\u00e0 di questi dati. I dati molto sensibili vengono trattati in modo diverso e con grande attenzione.",
         "sensitivityHeader": "Quanto sono sensibili questi dati per voi?",
         "warnings": "Avvertenze",
-        "warningMsg": "L'utente ha dato il consenso al titolare del trattamento per l'utilizzo dei suoi dati {dataCategory} per lo scopo di {purpose} ma la sua scelta in ConsentHelper \u00e8 stata {helperChoices}",
-        "issues": "Problemi",
+        "warningMsg": "L'utente ha dato il consenso al titolare del trattamento per l'utilizzo dei suoi dati {dataCategory} per lo scopo di {purpose}, ma la sua scelta nell'Assistente al Consenso \u00e8 stata {helperChoices}.",
+        "issues": "problemi",
         "tab": {
             "labels": {
                 "consent": "Consenso",
