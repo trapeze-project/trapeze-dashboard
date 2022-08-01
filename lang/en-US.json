@@ -49,7 +49,9 @@
             "fix":"Fix",
             "fix-all":"Fix All",
             "ignore":"Ignore",
-            "ignore-all":"Ignore All"
+            "ignore-all":"Ignore All",
+            "view":"View",
+            "visit-website":"visit Webiste"
 
         }
     },
