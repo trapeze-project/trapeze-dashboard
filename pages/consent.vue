@@ -28,25 +28,28 @@
           <PTabTable tab-name="consent" />
         </v-tab-item>
 
-        <v-tab-item value="data">
-          <PTabTable ref="data" tab-name="data" />
+        <v-tab-item value="data" :eager="true">
+          <PTabTable ref="data" tab-name="data" :userChoices="invertUserChoices(userChoices)" :warnings="invertWarnings(warnings)" />
         </v-tab-item>
 
-        <v-tab-item value="purpose">
-          <PTabTable ref="purpose" tab-name="purpose" />
+        <v-tab-item value="purpose" :eager="true">
+          <PTabTable ref="purpose" tab-name="purpose" :userChoices="userChoices" :warnings="warnings" />
         </v-tab-item>
       </v-tabs-items>
     </v-card>
     <PReceiptBtns
       v-if="tab !== 'consent' "
       class="mt-4"
-      :disableUndoLastChangeBtn="disableUndoLastChangeBtn"
-      @undoLastChange="$refs[tab].loadPreviousState()"
-      @submitChanges="$refs['consentNotification'].showNotification($t('snackbar.msg.submission-successful'), 'green')" />
+      :disableUndoLastChangeBtn="disableUndoLastChangeBtnForData && disableUndoLastChangeBtnForPurpose "
+      @undoLastChange="undoLastChange"
+      @submitChanges="submitChanges" />
+      <!-- :disableUndoLastChangeBtn="(disableUndoLastChangeBtnForData && tab=='data') || (disableUndoLastChangeBtnForPurpose && tab=='purpose') " -->
+
   </div>
 </template>
 
 <script>
+import examplePolicy from '../static/data/example.policy.json'
 export default {
   data () {
     return {
@@ -64,20 +67,66 @@ export default {
           label: this.$t('consent.tab.labels.purpose')
         }
       ],
-      disableUndoLastChangeBtn: true
+      disableUndoLastChangeBtnForData: true,
+      disableUndoLastChangeBtnForPurpose: true,
+      userChoices:"",
+      purposeMap:"",
+      invertedUserChoices : "",
+      consentHelperUserChoices:"",
+      warnings:""
     }
+  },
+  created(){
+    this.calculatePurposeMap()
+    this.getUserChoices();
+    this.invertedUserChoices = this.invertUserChoices(this.userChoices)
+
+
+    if(this.$route.params.consentHelperUserChoices){
+      this.consentHelperUserChoices = JSON.parse(JSON.stringify(this.$route.params.consentHelperUserChoices));
+      console.log("got parameters")
+      this.calculateWarnings()
+    }
+    
   },
   mounted() {
     this.$watch(
-      "$refs."+this.tab+".states",
+      "$refs.data.states",
       (new_value, old_value) => {
-        if(this.$refs[this.tab]){
-          this.disableUndoLastChangeBtn = this.$refs[this.tab].states.length === 0
-        }else{
-          this.disableUndoLastChangeBtn =  false;
-        }
+          this.disableUndoLastChangeBtnForData = this.$refs['data'].states.length === 0
       }
     );
+    this.$watch(
+      "$refs.purpose.states",
+      (new_value, old_value) => {
+        this.disableUndoLastChangeBtnForPurpose = this.$refs['purpose'].states.length === 0
+      }
+    );
+    this.$watch(
+      "$refs.purpose.modifiedUserChoices",{
+      handler: (new_value, old_value) => {
+          this.userChoices=JSON.parse(JSON.stringify(new_value))
+      } , deep:true }
+    );
+    this.$watch(
+      "$refs.data.modifiedUserChoices",{
+      handler: (new_value, old_value) => {
+          this.userChoices=this.invertUserChoices(JSON.parse(JSON.stringify(new_value)))
+      } , deep:true }
+    );
+    this.$watch(
+      "$refs.purpose.modifiedWarnings",{
+      handler: (new_value, old_value) => {
+          this.warnings=JSON.parse(JSON.stringify(new_value))
+      } , deep:true }
+    );
+    this.$watch(
+      "$refs.data.modifiedWarnings",{
+      handler: (new_value, old_value) => {
+          this.warnings=this.invertWarnings(JSON.parse(JSON.stringify(new_value)))
+      } , deep:true }
+    );
+
   },
   computed: {
     tab: {
@@ -87,6 +136,94 @@ export default {
       get () {
         return this.$route.query.tab
       }
+    }
+  },
+  methods:{
+    submitChanges(){
+      this.$refs['consentNotification'].showNotification(this.$t('snackbar.msg.submission-successful'), 'green')
+      this.$refs['data'].states = []
+      this.$refs['purpose'].states = []
+    },
+    undoLastChange(){
+      if(this.disableUndoLastChangeBtnForData && this.tab==='data' && !this.disableUndoLastChangeBtnForPurpose){
+        this.$router.replace({ query: { ...this.$route.query, tab:'purpose' } })
+      }else if(this.disableUndoLastChangeBtnForPurpose && this.tab==='purpose' && !this.disableUndoLastChangeBtnForData){
+        this.$router.replace({ query: { ...this.$route.query, tab:'data' } })
+      }
+      setTimeout(()=>{
+        this.$refs[this.tab].loadPreviousState()
+      },900)
+      
+      
+    },
+
+    calculatePurposeMap () {
+      this.purposeMap = examplePolicy.reduce((total, currentValue) => {
+        const purpose = currentValue['dpv:Purpose']['@class'].replace(':', '.').replace(/ /g, '-').toLowerCase()
+        currentValue['dpv:PersonalDataCategory'].forEach((item, index) => {
+          const personalDataCategory = item['@class'].replace(':', '.').replace(/ /g, '-').toLowerCase()
+          if (!(purpose in total)) {
+            total[purpose] = []
+          }
+          total[purpose].push(personalDataCategory)
+        })
+        return total
+      }, {})
+    },
+    getUserChoices(){
+      this.userChoices = JSON.parse(JSON.stringify(Object.keys(this.purposeMap).reduce((total, currentValue) => {
+        total[currentValue] = this.purposeMap[currentValue].reduce((total, currentValue) => {
+          total[currentValue] = true
+          return total
+        }, {})
+        return total
+      }, {})))
+    },
+    invertUserChoices(userChoices){
+      return Object.keys(userChoices).reduce((total, a) => {
+        let b = userChoices[a];
+        Object.keys(b).forEach(element => {
+          if(!total.hasOwnProperty(element)){
+            total[element]={};
+          }
+          total[element][a] = userChoices[a][element];
+        });
+        return total;
+      }, {});
+    },
+    calculateWarnings () {
+      this.warnings = {}
+      for (const purpose of Object.keys(this.userChoices)) {
+        for (const dataCategory of Object.keys(this.userChoices[purpose])) {
+          if (this.userChoices[purpose][dataCategory]) {
+            if (['consent-helper.no-opinion', 'consent-helper.not-comfortable'].includes(this.consentHelperUserChoices[purpose][dataCategory])) {
+              if (!this.warnings[purpose]) {
+                this.warnings[purpose] = {}
+              }
+              this.warnings[purpose][dataCategory] = {
+                givenConsentValue: this.userChoices[purpose][dataCategory],
+                consentHelperChoice: this.consentHelperUserChoices[purpose][dataCategory]
+              }
+            }
+          }
+        }
+      }
+    },
+    invertWarnings(warnings){
+      return Object.keys(warnings).reduce((total, a) => {
+        let b = warnings[a];
+        Object.keys(b).forEach(element => {
+          if(!total.hasOwnProperty(element)){
+            total[element]={};
+          }
+          if(!total[element].hasOwnProperty(a)){
+            total[element][a]={};
+          }
+          total[element][a]["givenConsentValue"] = warnings[a][element]["givenConsentValue"];
+          total[element][a]["consentHelperChoice"] = warnings[a][element]["consentHelperChoice"];
+        });
+        return total;
+      }, {});
     }
   }
 }

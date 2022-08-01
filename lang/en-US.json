@@ -209,7 +209,8 @@
                 "header":{
                     "values":{
                         "data":"Data",
-                        "purposes":"Purposes"
+                        "purposes":"Purposes",
+                        "issue":"Issue"
                     }
                 },
                 "footer":{
