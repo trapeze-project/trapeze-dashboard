@@ -110,7 +110,7 @@
                 "title": "Einwilligungen",
                 "filename": "/img/consent.png",
                 "link": "/consent?tab=consent",
-                "content": "Überprüfen Sie, wann Sie uns welche Einwilligung gegeben haben."
+                "content": "Sehen Sie sich an, welcher Datenverarbeitung Sie zugestimmt haben."
             },
             "1": {
                 "title": "Datenkategorien",

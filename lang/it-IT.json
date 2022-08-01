@@ -110,7 +110,7 @@
                 "title": "Consenso",
                 "filename": "/img/consent.png",
                 "link": "/consent?tab=consent",
-                "content": "Visualizzare quando e quale consenso ci avete dato."
+                "content": "Visualizzare il trattamento dei dati a cui si è acconsentito."
             },
             "1": {
                 "title": "Dati",

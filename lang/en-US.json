@@ -111,7 +111,7 @@
                 "title": "Consent",
                 "filename": "/img/consent.png",
                 "link": "/consent?tab=consent",
-                "content": "View when and what consent you gave us."
+                "content": "View what data processing you consented to."
             },
             "1": {
                 "title": "Data",
