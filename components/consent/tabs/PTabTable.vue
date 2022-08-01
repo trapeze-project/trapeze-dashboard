@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="choose-table">
     <v-data-table
       :headers="headers"
       :items="category"
@@ -307,3 +307,4 @@ export default {
   }
 }
 </script>
+
