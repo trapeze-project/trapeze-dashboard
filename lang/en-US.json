@@ -12,8 +12,8 @@
         "unrelatedDataText": "It is very unusual that fingerprints are used for advertising purposes.",
         "bioDataText": "Fingerprints are particularly sensitive, since they facilitate identity theft. It is recommended to only provide consent for fingerprint data where absolutely necessary."
     },
-    "layout":{
-        "privacy-dashboard":"privacy dashboard"
+    "layout": {
+        "privacy-dashboard": "privacy dashboard"
     },
     "nav": {
         "labels": {
@@ -46,11 +46,10 @@
             "back": "Back",
             "next": "Next",
             "view-issues": "View issues",
-            "fix":"Fix",
-            "fix-all":"Fix All",
-            "ignore":"Ignore",
-            "ignore-all":"Ignore All"
-
+            "fix": "Fix",
+            "fix-all": "Fix All",
+            "ignore": "Ignore",
+            "ignore-all": "Ignore All"
         }
     },
     "snackbar": {
@@ -171,69 +170,66 @@
         "warnings": "Warnings",
         "warningMsg": "you have given consent to the data controller to use your {dataCategory} data for the purpose of {purpose}. but your choice in ConsentHelper was {helperChoices}",
         "issues": "issues",
-        "tab":{
-            "labels":{
-                "consent":"Consent",
-                "data-category":"Data Category",
-                "purpose" : "Purpose"
+        "tab": {
+            "labels": {
+                "consent": "Consent",
+                "data-category": "Data Category",
+                "purpose": "Purpose"
             }
         },
-        "consent":{
-            "ptable":{
-                "header":{
-                    "values":{
-                        "date":"Date",
-                        "event":"Event",
-                        "policy":"Policy"
+        "consent": {
+            "ptable": {
+                "header": {
+                    "values": {
+                        "date": "Date",
+                        "event": "Event",
+                        "policy": "Policy"
                     }
                 },
-                "events":{
-                    "values":{
-                        "consent-request-policy-update":"Consent Request - Policy Update",
-                        "consent-revocation":"Consent Revocation",
-                        "consent-giving":"Consent Giving",
-                        "consent-request-account-creation":"Consent Request - Account Creation"
+                "events": {
+                    "values": {
+                        "consent-request-policy-update": "Consent Request - Policy Update",
+                        "consent-revocation": "Consent Revocation",
+                        "consent-giving": "Consent Giving",
+                        "consent-request-account-creation": "Consent Request - Account Creation"
                     }
                 },
-                "policy":{
-                    "active":"active",
-                    "inactive":"inactive"
+                "policy": {
+                    "active": "active",
+                    "inactive": "inactive"
                 },
-                "footer":{
-                    "rows-per-page":"Rows per page"
+                "footer": {
+                    "rows-per-page": "Rows per page"
                 }
             }
         },
-        "data":{
-            "ptable":{
-                "header":{
-                    "values":{
-                        "data":"Data",
-                        "purposes":"Purposes"
+        "data": {
+            "ptable": {
+                "header": {
+                    "values": {
+                        "data": "Data",
+                        "purposes": "Purposes"
                     }
                 },
-                "footer":{
-                    "rows-per-page":"Rows per page"
+                "footer": {
+                    "rows-per-page": "Rows per page"
                 }
-                
             }
         },
-        "purpose":{
-            "ptable":{
-                "header":{
-                    "values":{
-                        "purpose":"Purpose",
-                        "data":"Data",
-                        "issue":"Issue"
+        "purpose": {
+            "ptable": {
+                "header": {
+                    "values": {
+                        "purpose": "Purpose",
+                        "data": "Data",
+                        "issue": "Issue"
                     }
                 },
-                "footer":{
-                    "rows-per-page":"Rows per page"
+                "footer": {
+                    "rows-per-page": "Rows per page"
                 }
             }
         }
-
-
     },
     "consent-helper": {
         "purpose": "Purpose",

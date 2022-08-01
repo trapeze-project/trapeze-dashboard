@@ -12,8 +12,8 @@
         "unrelatedDataText": "Es ist sehr ungew\u00f6hnlich, dass Fingerabdr\u00fccke zu Werbezwecken verwendet werden.",
         "bioDataText": "Fingerabdr\u00fccke sind besonders sensibel, da sie es erm\u00f6glichen Ihre Identit\u00e4t zu stehlen. Es wird empfohlen, die Zustimmung zur Nutzung von Fingerabdr\u00fccken nur dann zu erteilen, wenn dies unbedingt erforderlich ist."
     },
-    "layout":{
-        "privacy-dashboard":"Datenschutz-Dashboard"
+    "layout": {
+        "privacy-dashboard": "Datenschutz-Dashboard"
     },
     "nav": {
         "labels": {
@@ -45,16 +45,16 @@
             "cancel": "Abbrechen",
             "back": "Zur\u00fcck",
             "next": "Weiter",
-            "view-issues": "Fragebogen Abschließen",
-            "fix":"beheben",
-            "fix-all":"alle beheben",
-            "ignore":"ignorieren",
-            "ignore-all":"alle ignorieren"
+            "view-issues": "Fragebogen Abschlie\u00dfen",
+            "fix": "beheben",
+            "fix-all": "alle beheben",
+            "ignore": "ignorieren",
+            "ignore-all": "alle ignorieren"
         }
     },
     "snackbar": {
         "msg": {
-            "please-complete-the-consent-guide": "Sie haben noch nicht alle Fragen beantwortet. Sie können den Fragebogen erst abschließen, wenn Sie alle Fragen beantwortet haben.",
+            "please-complete-the-consent-guide": "Sie haben noch nicht alle Fragen beantwortet. Sie k\u00f6nnen den Fragebogen erst abschlie\u00dfen, wenn Sie alle Fragen beantwortet haben.",
             "submission-successful": "Speichern erfolgreich",
             "message-sent": "Nachricht gesendet"
         }
@@ -128,7 +128,7 @@
                 "title": "TRAPEZE",
                 "filename": "/img/favicon.png",
                 "link": "http://trapeze-project.eu",
-                "content": "Erfahren Sie mehr \u00fcber das TRAPEZE-Projekt der Europäischen Union."
+                "content": "Erfahren Sie mehr \u00fcber das TRAPEZE-Projekt der Europ\u00e4ischen Union."
             }
         },
         "consent": {
@@ -170,63 +170,63 @@
         "warnings": "Warnungen",
         "warningMsg": "Sie haben dem f\u00fcr die Datenverarbeitung Verantwortlichen Ihre Einwilligung zur Verwendung Ihrer Daten in der Datenkategorie \"{dataCategory}\" f\u00fcr den Zweck \"{purpose}\" gegeben. Im Einwilligungsassistenten haben Sie jedoch angegeben, dass Sie damit \"{helperChoices}\" sind.",
         "issues": "Konflikte",
-        "tab":{
-            "labels":{
-                "consent":"Einwilligungen",
-                "data-category":"Datenkategorien",
-                "purpose" : "Zwecke"
+        "tab": {
+            "labels": {
+                "consent": "Einwilligungen",
+                "data-category": "Datenkategorien",
+                "purpose": "Zwecke"
             }
         },
-        "consent":{
-            "ptable":{
-                "header":{
-                    "values":{
-                        "date":"Datum",
-                        "event":"Einlass",
-                        "policy":"Politik"
+        "consent": {
+            "ptable": {
+                "header": {
+                    "values": {
+                        "date": "Datum",
+                        "event": "Einlass",
+                        "policy": "Politik"
                     }
                 },
-                "events":{
-                    "values":{
-                        "consent-request-policy-update":"Einwilligungsanfrage - Richtlinienaktualisierung",
-                        "consent-revocation":"Widerruf der Einwilligung",
-                        "consent-giving":"Einwilligungserteilung",
-                        "consent-request-account-creation":"Einwilligungsanfrage - Kontoerstellung"
+                "events": {
+                    "values": {
+                        "consent-request-policy-update": "Einwilligungsanfrage - Richtlinienaktualisierung",
+                        "consent-revocation": "Widerruf der Einwilligung",
+                        "consent-giving": "Einwilligungserteilung",
+                        "consent-request-account-creation": "Einwilligungsanfrage - Kontoerstellung"
                     }
                 },
-                "policy":{
-                    "active":"aktiv",
-                    "inactive":"inaktiv"
+                "policy": {
+                    "active": "aktiv",
+                    "inactive": "inaktiv"
                 },
-                "footer":{
-                    "rows-per-page":"Zeilen pro Seite"
+                "footer": {
+                    "rows-per-page": "Zeilen pro Seite"
                 }
             }
         },
-        "data":{
-            "ptable":{
-                "header":{
-                    "values":{
-                        "data":"Daten",
-                        "purposes":"Zwecke"
+        "data": {
+            "ptable": {
+                "header": {
+                    "values": {
+                        "data": "Daten",
+                        "purposes": "Zwecke"
                     }
                 },
-                "footer":{
-                    "rows-per-page":"Zeilen pro Seite"
+                "footer": {
+                    "rows-per-page": "Zeilen pro Seite"
                 }
             }
         },
-        "purpose":{
-            "ptable":{
-                "header":{
-                    "values":{
-                        "purpose":"Zweck",
-                        "data":"Daten",
-                        "issue":"Konflikte"
+        "purpose": {
+            "ptable": {
+                "header": {
+                    "values": {
+                        "purpose": "Zweck",
+                        "data": "Daten",
+                        "issue": "Konflikte"
                     }
                 },
-                "footer":{
-                    "rows-per-page":"Zeilen pro Seite"
+                "footer": {
+                    "rows-per-page": "Zeilen pro Seite"
                 }
             }
         }
@@ -239,8 +239,8 @@
     },
     "location": "Standortdaten sind Daten, die uns zeigen, wo Sie sich zu welcher Zeit aufgehalten haben. Wir erfassen Standortdaten \u00fcber GPS, wenn Sie uns dazu die Erlaubnis in der mobilen Anwendung von Company Name gegeben haben. Wir verwenden Ihre Standortdaten, um unsere Werbung anzupassen, unser Marketing geografisch zu planen und um Betrug durch geografische Identit\u00e4tspr\u00fcfung zu verhindern.",
     "name": "Wir erfassen Ihren Namen, um Sie richtig ansprechen zu k\u00f6nnen. Ihren Namen entnehmen wir Ihrem Nutzerprofil.",
-    "fingerprint": "Fingerabdrücke werden verwendet, um Ihre Anmeldedaten zu überprüfen und Identitätsdiebstahl zu verhindern.",
-    "marketing": "Marketing ist für uns essentiell, da wir in sehr unterschiedlichen Märkten aktiv sind. Wir erkennen dabei regionale Vorlieben und können so unsere Produkte für Sie als Kunden anpassen.",
+    "fingerprint": "Fingerabdr\u00fccke werden verwendet, um Ihre Anmeldedaten zu \u00fcberpr\u00fcfen und Identit\u00e4tsdiebstahl zu verhindern.",
+    "marketing": "Marketing ist f\u00fcr uns essentiell, da wir in sehr unterschiedlichen M\u00e4rkten aktiv sind. Wir erkennen dabei regionale Vorlieben und k\u00f6nnen so unsere Produkte f\u00fcr Sie als Kunden anpassen.",
     "advertising": "Werbung ist ein integraler Bestandteil unseres Gesch\u00e4ftsmodells, das garantiert, dass wir Ihnen weiterhin unsere Restaurantempfehlungen kostenfrei zur Verf\u00fcgung stellen k\u00f6nnen.",
-    "identity-verification": "Identit\u00e4tspr\u00fcfung ist ein Sicherheitsprozess bei welchem wir sicherstellen, dass Sie eine echten Person sind und nicht etwa ein Bot. Außerdem dient uns die Identiätsprüfung dazu Betrug, wie zum Beispiel durch Identitäsdiebstahl oder Datendiebstahl, vorzubeugen. Desweiteren stellen wir sicher, dass Sie älter als 16 Jahre alt sind."
+    "identity-verification": "Identit\u00e4tspr\u00fcfung ist ein Sicherheitsprozess bei welchem wir sicherstellen, dass Sie eine echten Person sind und nicht etwa ein Bot. Au\u00dferdem dient uns die Identi\u00e4tspr\u00fcfung dazu Betrug, wie zum Beispiel durch Identit\u00e4sdiebstahl oder Datendiebstahl, vorzubeugen. Desweiteren stellen wir sicher, dass Sie \u00e4lter als 16 Jahre alt sind."
 }
