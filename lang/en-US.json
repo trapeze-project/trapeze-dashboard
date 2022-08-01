@@ -243,7 +243,7 @@
     },
     "location": "Location data is data that tells us where you have been at what time. We collect location data via GPS if you give permission in the Company Name mobile application. We use your location data to customize our advertising, to plan our marketing geographically, and to prevent fraud via geographic identity verification.",
     "name": "We collect your name to properly address you. We store your name from your profile.",
-    "fingerprint": "Biometric data such as fingerprint is used to verify your credentials and prevent identity theft.",
+    "fingerprint": "Fingerprints are used to verify your credentials and prevent identity theft.",
     "marketing": "Marketing is essential for us, as we are active in very different markets. We recognize regional preferences and can thus adapt our products for you as a customer.",
     "advertising": "Advertising is an integral part of our business model, which guarantees that we can continue to provide you with our restaurant recommandations.",
     "identity-verification": "Identity verification is a security process where we ensure that you are a real person and not a bot. We also use identity verification to prevent fraud, such as identity theft or data theft. Furthermore, we make sure that you are older than 16 years old."
