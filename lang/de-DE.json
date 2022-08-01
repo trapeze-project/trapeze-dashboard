@@ -169,7 +169,7 @@
         "sensitivityHeader": "Wie sensibel sind diese Daten f\u00fcr Sie?",
         "warnings": "Warnungen",
         "warningMsg": "Sie haben dem f\u00fcr die Datenverarbeitung Verantwortlichen Ihre Einwilligung zur Verwendung Ihrer Daten in der Datenkategorie \"{dataCategory}\" f\u00fcr den Zweck \"{purpose}\" gegeben. Im Einwilligungsassistenten haben Sie jedoch angegeben, dass Sie damit \"{helperChoices}\" sind.",
-        "issues": "Probleme",
+        "issues": "Konflikte",
         "tab":{
             "labels":{
                 "consent":"Einwilligungen",
@@ -222,7 +222,7 @@
                     "values":{
                         "purpose":"Zweck",
                         "data":"Daten",
-                        "issue":"Probleme"
+                        "issue":"Konflikte"
                     }
                 },
                 "footer":{
@@ -241,6 +241,6 @@
     "name": "Wir erfassen Ihren Namen, um Sie richtig ansprechen zu k\u00f6nnen. Ihren Namen entnehmen wir Ihrem Nutzerprofil.",
     "fingerprint": "Fingerabdrücke werden verwendet, um Ihre Anmeldedaten zu überprüfen und Identitätsdiebstahl zu verhindern.",
     "marketing": "Marketing ist für uns essentiell, da wir in sehr unterschiedlichen Märkten aktiv sind. Wir erkennen dabei regionale Vorlieben und können so unsere Produkte für Sie als Kunden anpassen.",
-    "advertising": "Werbung ist ein integraler Bestandteil unseres Gesch\u00e4ftsmodells, das garantiert, dass wir Ihnen weiterhin unsere Restaurantempfehlungen zur Verf\u00fcgung stellen k\u00f6nnen.",
+    "advertising": "Werbung ist ein integraler Bestandteil unseres Gesch\u00e4ftsmodells, das garantiert, dass wir Ihnen weiterhin unsere Restaurantempfehlungen kostenfrei zur Verf\u00fcgung stellen k\u00f6nnen.",
     "identity-verification": "Identit\u00e4tspr\u00fcfung ist ein Sicherheitsprozess bei welchem wir sicherstellen, dass Sie eine echten Person sind und nicht etwa ein Bot. Außerdem dient uns die Identiätsprüfung dazu Betrug, wie zum Beispiel durch Identitäsdiebstahl oder Datendiebstahl, vorzubeugen. Desweiteren stellen wir sicher, dass Sie älter als 16 Jahre alt sind."
 }
