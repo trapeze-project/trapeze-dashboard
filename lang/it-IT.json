@@ -170,6 +170,8 @@
         "sensitivityHeader": "Quanto sono sensibili questi dati per voi?",
         "warnings": "Avvertenze",
         "warningMsg": "L'utente ha dato il consenso al titolare del trattamento per l'utilizzo dei suoi dati {dataCategory} per lo scopo di {purpose}, ma la sua scelta nell'Assistente al Consenso \u00e8 stata {helperChoices}.",
+        "warning-msg-not-comfortable":"Hai concesso al titolare del trattamento l'autorizzazione a utilizzare i tuoi dati {dataCategory} per scopi {purpose}. tuttavia, la tua selezione dell'Assistente per il consenso è stata scomoda.",
+        "warning-msg-no-opinion":"Hai concesso al titolare del trattamento l'autorizzazione a utilizzare i tuoi dati {dataCategory} per scopi {scopo}. Tuttavia, hai fatto una scelta imparziale con Consent Assistant.",
         "issues": "problemi",
         "tab": {
             "labels": {

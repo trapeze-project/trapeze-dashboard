@@ -171,6 +171,8 @@
         "sensitivityHeader": "Wie sensibel sind diese Daten f\u00fcr Sie?",
         "warnings": "Warnungen",
         "warningMsg": "Sie haben dem f\u00fcr die Datenverarbeitung Verantwortlichen Ihre Einwilligung zur Verwendung Ihrer Daten in der Datenkategorie \"{dataCategory}\" f\u00fcr den Zweck \"{purpose}\" gegeben. Im Einwilligungsassistenten haben Sie jedoch angegeben, dass Sie damit \"{helperChoices}\" sind.",
+        "warning-msg-not-comfortable":"Sie haben dem Datenverantwortlichen die Erlaubnis erteilt, Ihre {dataCategory}-Daten für {purpose}-Zwecke zu verwenden. Ihre Auswahl des Zustimmungsassistenten war jedoch unbequem.",
+        "warning-msg-no-opinion":"Sie haben dem Datenverantwortlichen die Erlaubnis erteilt, Ihre {dataCategory}-Daten für {purpose}-Zwecke zu verwenden. Mit Consent Assistant haben Sie jedoch eine unvoreingenommene Wahl getroffen.",
         "issues": "Konflikte",
         "tab": {
             "labels": {

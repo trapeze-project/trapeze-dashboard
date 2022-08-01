@@ -24,8 +24,9 @@
     <PWarnings
       v-if="view.showPDetails && this.warnings.toString() && this.modifiedWarnings[this.view.selected.untranslated]&& Object.keys(this.modifiedWarnings[this.view.selected.untranslated]).length"
       id="PWarnings"
+      :tabName="tabName"
       :selected-warnings="modifiedWarnings[this.view.selected.untranslated]"
-      :purpose="this.view.selected.untranslated"
+      :parent="this.view.selected.untranslated"
       @ignoreWarning="ignoreWarning"
       @changeUserChoice="changeUserChoice"
       @saveState="saveState"

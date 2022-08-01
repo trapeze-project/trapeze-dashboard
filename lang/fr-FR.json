@@ -171,6 +171,8 @@
         "sensitivityHeader": "Dans quelle mesure ces donn\u00e9es sont-elles sensibles pour vous ?",
         "warnings": "Avertissements",
         "warningMsg": "Vous avez donn\u00e9 votre consentement au responsable du traitement pour qu'il utilise vos donn\u00e9es de {cat\u00e9gorie de donn\u00e9es} dans le but de {fonction}. mais votre choix dans l'Assistant de Consentement \u00e9tait {helperChoices}.",
+        "warning-msg-not-comfortable":"Vous avez autorisé le responsable du traitement à utiliser vos données {dataCategory} à des fins {purpose}. cependant, votre sélection de l'assistant de consentement était inconfortable.",
+        "warning-msg-no-opinion":"Vous avez autorisé le responsable du traitement à utiliser vos données {dataCategory} à des fins {purpose}. Cependant, vous avez fait un choix impartial avec Consent Assistant.",
         "issues": "probl\u00e8mes",
         "data-category": "Cat\u00e9gorie de donn\u00e9es",
         "tab": {
