@@ -1,5 +1,5 @@
 <template>
-  <v-card shaped>
+  <v-card shaped class="d-flex flex-column">
     <v-img max-height="300px" :src="filename" />
 
     <v-card-title>
@@ -9,7 +9,7 @@
     <v-card-text>
       {{ content }}
     </v-card-text>
-
+    <v-spacer></v-spacer>
     <v-card-actions>
       <v-spacer />
       <v-btn v-bind="btnProps">
