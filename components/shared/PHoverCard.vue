@@ -19,14 +19,7 @@
         max-width="344"
         outlined
       >
-        <v-avatar
-          v-if="image"
-          class="ma-3 float-right"
-          size="100"
-          tile
-        >
-          <v-img :src="image"></v-img>
-        </v-avatar>
+        <v-img :src="image" height="150"></v-img>
         <v-card-text >
           <p>
             {{this.definition}}
