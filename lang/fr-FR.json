@@ -12,21 +12,21 @@
         "unrelatedDataText": "Il est tr\u00e8s inhabituel que les empreintes digitales soient utilis\u00e9es \u00e0 des fins publicitaires.",
         "bioDataText": "Les empreintes digitales sont particuli\ufffdrement sensibles, car elles facilitent le vol d'identit\u00e9. Il est recommand\u00e9 de ne donner son consentement pour les donn\u00e9es dactyloscopiques que lorsque cela est absolument n\u00e9cessaire."
     },
-    "layout":{
-        "privacy-dashboard":"tableau de bord de confidentialité"
+    "layout": {
+        "privacy-dashboard": "tableau de bord de confidentialit\u00e9"
     },
     "nav": {
         "labels": {
-            "home": "Domicile",
+            "home": "Acceuil",
             "consent": "Consentement",
             "data": "Donn\u00e9es",
-            "purposes": "Finalités",
-            "help": "Aide",
+            "purposes": "Finalit\u00e9s",
+            "help": "Assistant de Consentement",
             "faq": "FAQ"
         }
     },
     "dpv": {
-        "location": "Emplacement",
+        "location": "Localisation",
         "name": "Nom",
         "fingerprint": "Empreinte digitale",
         "identity-verification": "V\u00e9rification de l'identit\u00e9",
@@ -35,35 +35,35 @@
     },
     "btn": {
         "labels": {
-            "consent-guide": "Guide du consentement",
+            "consent-guide": "Assistant de Consentement",
             "i-can-not-find-an-answer": "Je ne trouve pas de r\u00e9ponse",
-            "undo-last-change": "Annuler la dernière modification",
-            "submit-changes": "Soumettre des modifications",
+            "undo-last-change": "Annuler la derni\u00e8re modification",
+            "submit-changes": "Soumettre les modifications",
             "see-changes": "Voir les modifications",
             "view-changes": "Afficher les modifications",
             "send-message": "Envoyer un message",
             "cancel": "Annuler",
             "back": "Pr\u00e9c\u00e9dent",
-            "next": "Prochain",
+            "next": "Suivant",
             "view-issues": "Afficher les probl\u00e8mes",
-            "fix":"réparer",
-            "fix-all":"réparer tout",
-            "ignore":"ignorer",
-            "ignore-all":"ignorer tout"
+            "fix": "R\u00e9parer",
+            "fix-all": "R\u00e9parer tout",
+            "ignore": "Ignorer",
+            "ignore-all": "Ignorer tout"
         }
     },
     "snackbar": {
         "msg": {
-            "please-complete-the-consent-guide": "veuillez remplir le guide de consentement",
+            "please-complete-the-consent-guide": "Vous n'avez pas encore r\u00e9pondu \u00e0 toutes les questions. Veuillez r\u00e9pondre \u00e0 toutes les questions pour compl\u00e9ter le questionnaire.",
             "submission-successful": "Soumission r\u00e9ussie",
-            "message-sent": "message envoyé"
+            "message-sent": "message envoy\u00e9"
         }
     },
     "placeholder": {
         "search-for-a-question-or-an-answer": "Rechercher une question ou une r\u00e9ponse"
     },
     "updates": {
-        "1": "Mise \u00e0 jour de la politique",
+        "1": "Mise \u00e0 jour de la politique de confidentialit\u00e9",
         "2": "R\u00e9vocation du consentement",
         "3": "Demande de consentement"
     },
@@ -82,17 +82,17 @@
         "add2": "123456, Nom de l'entreprise Ville, Italie",
         "website": "https://nom.de.l'entreprise.com",
         "email": "name@nom.de.l'entreprise.com",
-        "contact": "Contacter",
+        "contact": "Nous Contacter",
         "position": "D\u00e9l\u00e9gu\u00e9 \u00e0 la protection des donn\u00e9es (DPD)",
         "pos-name": "Nom du d\u00e9l\u00e9gu\u00e9 \u00e0 la protection des donn\u00e9es"
     },
     "home": {
-        "title": "Bienvenue dans votre tableau de bord de confidentialit\u00e9 personnel!",
-        "explore-btn": "Vue",
+        "title": "Bienvenue dans votre tableau de bord de confidentialit\u00e9 personnel !",
+        "explore-btn": "Voir",
         "welcome-msg": "Chez Company Name, nous voulons que vous compreniez comment nous traitons vos donn\u00e9es personnelles.",
-        "welcome-msg2": "Dans ce tableau de bord, vous pouvez voir quelles donn\u00e9es personnelles nous traitons et \u00e0 quelles fins. Le tableau de bord vous permet de limiter notre traitement de vos donn\u00e9es personnelles en configurant votre consentement. Vous pouvez",
+        "welcome-msg2": "Dans ce tableau de bord, vous pouvez voir quelles donn\u00e9es personnelles nous traitons et \u00e0 quelles fins. Le tableau de bord vous permet de limiter notre traitement de vos donn\u00e9es personnelles en configurant votre consentement. Vous pouvez:",
         "welcome-msg3": "Le menu en bas \u00e0 gauche vous donne un aper\u00e7u rapide des interactions les plus r\u00e9centes li\u00e9es au consentement entre vous et nous.",
-        "welcome-msg4": "Si vous d\u00e9butez dans le tableau de bord de confidentialit\u00e9, nous vous recommandons d'essayer l'assistant de consentement.",
+        "welcome-msg4": "Si vous d\u00e9butez dans le tableau de bord de confidentialit\u00e9, nous vous recommandons d'essayer l'Assistant de Consentement.",
         "purpose": {
             "0": {
                 "name": "r\u00e9voquer et donner son consentement,"
@@ -101,7 +101,7 @@
                 "name": "d\u00e9sactiver et activer les cat\u00e9gories de donn\u00e9es,"
             },
             "2": {
-                "name": "d\u00e9sactiver et activer les finalités."
+                "name": "d\u00e9sactiver et activer les finalit\u00e9s."
             }
         },
         "help": "Aide",
@@ -110,7 +110,7 @@
                 "title": "Consentement",
                 "filename": "/img/consent.png",
                 "link": "/consent?tab=consent",
-                "content": "Voyez quand et quel consentement vous nous avez donn\u00e9."
+                "content": "Voir \u00e0 quel traitement des donn\u00e9es vous avez consenti."
             },
             "1": {
                 "title": "Donn\u00e9es",
@@ -128,16 +128,16 @@
                 "title": "TRAPEZE",
                 "filename": "/img/favicon.png",
                 "link": "http://trapeze-project.eu",
-                "content": "En savoir plus sur TRAPEZE."
+                "content": "En savoir plus sur le projet TRAPEZE de l'Union européenne."
             }
         },
         "consent": {
             "consent-menu": "Menu Consentement",
-            "title": "Guide du consentement",
+            "title": "Consentement",
             "location": "Vos donn\u00e9es de localisation",
             "purpose": "Fins",
             "text": "Les donn\u00e9es de localisation sont des donn\u00e9es qui nous indiquent o\u00f9 vous avez \u00e9t\u00e9 \u00e0 quelle heure. Nous collectons des donn\u00e9es de localisation via GPS si vous en donnez l'autorisation dans l'application mobile Nom de l'entreprise. Nous utilisons vos donn\u00e9es de localisation pour personnaliser notre publicit\u00e9, pour planifier notre marketing g\u00e9ographiquement et pour pr\ufffdvenir la fraude via la v\u00e9rification de l'identit\u00e9 g\u00e9ographique.",
-            "text_ad": "La publicit\u00e9 fait partie int\u00e9grante de notre mod\u00e8le d'affaires, ce qui garantit que nous pouvons continuer \u00e0 vous fournir nos recommandations de restaurants. Nous utilisons les cat\u00e9gories de donn\u00e9es ci-dessous pour personnaliser la publicit\u00e9. Dites-nous ci-dessous quelles cat\u00e9gories de donn\u00e9es nous pouvons utiliser pour personnaliser notre publicit\u00e9.",
+            "text_ad": "La publicit\u00e9 fait partie int\u00e9grante de notre mod\u00e8le \u00e9conomique, ce qui garantit que nous pouvons continuer \u00e0 vous fournir gratuitement nos recommandations de restaurants. Nous utilisons les cat\u00e9gories de donn\u00e9es ci-dessous pour personnaliser la publicit\u00e9. Dites-nous ci-dessous quelles cat\u00e9gories de donn\u00e9es nous pouvons utiliser pour personnaliser notre publicit\u00e9.",
             "ad": "Publicit\u00e9",
             "marketing": "Marketing",
             "id": "V\u00e9rification de l'identit\u00e9",
@@ -152,9 +152,9 @@
     },
     "consent": {
         "consent-menu": "Menu Consentement",
-        "title": "Guide du consentement",
+        "title": "Assistant de Consentement",
         "location": "Vos donn\u00e9es de localisation",
-        "purposes": "Finalités",
+        "purposes": "Finalit\u00e9s",
         "text": "Les donn\u00e9es de localisation sont des donn\u00e9es qui nous indiquent o\u00f9 vous avez \u00e9t\u00e9 \u00e0 quel moment. Nous collectons les donn\u00e9es de localisation par GPS si vous nous en donnez l'autorisation dans l'application mobile Nom de l'entreprise. Nous utilisons vos donn\u00e9es de localisation pour personnaliser notre publicit\u00e9, pour planifier notre marketing g\u00e9ographiquement et pour pr\u00e9venir la fraude via la v\u00e9rification g\u00e9ographique de l'identit\u00e9.",
         "text_ad": "La publicit\u00e9 fait partie int\u00e9grante de notre mod\u00e8le \u00e9conomique, qui garantit que nous pouvons continuer \u00e0 vous fournir nos recommandations de restaurants. Nous utilisons les cat\u00e9gories de donn\u00e9es ci-dessous pour personnaliser la publicit\u00e9. Dites-nous ci-dessous quelles cat\u00e9gories de donn\u00e9es nous pouvons utiliser pour personnaliser notre publicit\u00e9.",
         "ad": "Publicit\u00e9",
@@ -164,43 +164,43 @@
         "fingerprint": "Empreinte digitale",
         "bank": "Compte bancaire",
         "credit": "Num\u00e9ro de la carte de cr\u00e9dit",
-        "sensitivity": "Sensibilit\u00e9:",
-        "sensitivityText": "Vous pouvez configurer le degr\u00e9 de sensibilit\u00e9 de ces donn\u00e9es pour vous. Nous traitons les donn\u00e9es tr\u00e8s sensibles diff\u00e9remment et avec une attention particuli\u00e8re.",
+        "sensitivity": "Sensibilit\u00e9 :",
+        "sensitivityText": "Vous pouvez configurer le degr\u00e9 de sensibilit\u00e9 de ces donn\u00e9es. Nous traitons les donn\u00e9es tr\u00e8s sensibles diff\u00e9remment et avec une attention particuli\u00e8re.",
         "sensitivityHeader": "Dans quelle mesure ces donn\u00e9es sont-elles sensibles pour vous ?",
         "warnings": "Avertissements",
-        "warningMsg": "vous avez donn\u00e9 votre consentement au responsable du traitement pour qu'il utilise vos donn\u00e9es de {dataCategory} dans le but de {purpose}, mais votre choix dans ConsentHelper \u00e9tait {helperChoices}.",
-        "issues": "questions",
-        "data-category":"Catégorie de données",
-        "tab":{
-            "labels":{
-                "consent":"Consentement",
-                "data-category":"Catégorie de données",
-                "purpose" : "Finalité"
+        "warningMsg": "Vous avez donn\u00e9 votre consentement au responsable du traitement pour qu'il utilise vos donn\u00e9es de {cat\u00e9gorie de donn\u00e9es} dans le but de {fonction}. mais votre choix dans l'Assistant de Consentement \u00e9tait {helperChoices}.",
+        "issues": "probl\u00e8mes",
+        "data-category": "Cat\u00e9gorie de donn\u00e9es",
+        "tab": {
+            "labels": {
+                "consent": "Consentement",
+                "data-category": "Cat\u00e9gorie de donn\u00e9es",
+                "purpose": "Finalit\u00e9"
             }
         },
-        "consent":{
-            "ptable":{
-                "header":{
-                    "values":{
-                        "date":"Date",
-                        "event":"Événement",
-                        "policy":"Politique"
+        "consent": {
+            "ptable": {
+                "header": {
+                    "values": {
+                        "date": "Date",
+                        "event": "\u00c9v\u00e9nement",
+                        "policy": "Politique de confidentialit\u00e9"
                     }
                 },
-                "events":{
-                    "values":{
-                        "consent-request-policy-update":"Demande de consentement - Mise à jour de la politique",
-                        "consent-revocation":"Révocation du consentement",
-                        "consent-giving":"Donner son consentement",
-                        "consent-request-account-creation":"Demande de consentement - Création de compte"
+                "events": {
+                    "values": {
+                        "consent-request-policy-update": "Demande de consentement - Mise \u00e0 jour de la politique de confidentialit\u00e9",
+                        "consent-revocation": "R\u00e9vocation du consentement",
+                        "consent-giving": "Donner son consentement",
+                        "consent-request-account-creation": "Demande de consentement - Cr\u00e9ation de compte"
                     }
                 },
-                "policy":{
-                    "active":"active",
-                    "inactive":"inactive"
+                "policy": {
+                    "active": "active",
+                    "inactive": "inactive"
                 },
-                "footer":{
-                    "rows-per-page":"Lignes par page"
+                "footer": {
+                    "rows-per-page": "Lignes par page"
                 }
             }
         },
@@ -209,32 +209,32 @@
                 "header":{
                     "values":{
                         "data":"Les Données",
-                        "purposes":"Finalités",
-                        "issue":"Publier"
+                        "purposes":"Scopi",
+                        "issue":"Problemi"
                     }
                 },
-                "footer":{
-                    "rows-per-page":"Lignes par page"
+                "footer": {
+                    "rows-per-page": "Lignes par page"
                 }
             }
         },
-        "purpose":{
-            "ptable":{
-                "header":{
-                    "values":{
-                        "purpose":"Finalité",
-                        "data":"Les Données",
-                        "issue":"Publier"
+        "purpose": {
+            "ptable": {
+                "header": {
+                    "values": {
+                        "purpose": "Finalit\u00e9",
+                        "data": "Donn\u00e9es",
+                        "issue": "Probl\u00e8me"
                     }
                 },
-                "footer":{
-                    "rows-per-page":"Lignes par page"
+                "footer": {
+                    "rows-per-page": "Lignes par page"
                 }
             }
         }
     },
     "consent-helper": {
-        "purpose": "Finalité",
+        "purpose": "Finalit\u00e9",
         "comfortable": "Confortable",
         "no-opinion": "Sans opinion",
         "not-comfortable": "Pas confortable"
@@ -246,8 +246,8 @@
     },
     "location": "Les donn\u00e9es de localisation sont des donn\u00e9es qui nous indiquent o\u00f9 vous avez \u00e9t\u00e9 \u00e0 quel moment. Nous collectons les donn\u00e9es de localisation par GPS si vous nous en donnez l'autorisation dans l'application mobile Nom de l'entreprise. Nous utilisons vos donn\u00e9es de localisation pour personnaliser notre publicit\u00e9, pour planifier notre marketing g\u00e9ographiquement et pour pr\u00e9venir la fraude via la v\u00e9rification g\u00e9ographique de l'identit\u00e9.",
     "name": "Nous recueillons votre nom pour vous adresser correctement. Nous enregistrons votre nom \u00e0 partir de votre profil.",
-    "fingerprint": "Les donn\u00e9es biom\u00e9triques, telles que l'empreinte digitale, sont utilis\u00e9es pour v\u00e9rifier vos informations d'identification et emp\u00eacher l'usurpation d'identit\u00e9.",
-    "marketing": "Le marketing est essentiel pour nous, car nous sommes actifs sur des marchés très différents. Nous reconnaissons ainsi les préférences régionales et pouvons adapter nos produits pour vous en tant que client.",
+    "fingerprint": "Les empreintes digitales sont utilis\u00e9es pour v\u00e9rifier vos informations d'identification et pr\u00e9venir le vol d'identit\u00e9.",
+    "marketing": "Le marketing est essentiel pour nous, car nous sommes actifs sur des march\u00e9s tr\u00e8s diff\u00e9rents. Nous reconnaissons ainsi les pr\u00e9f\u00e9rences r\u00e9gionales et pouvons adapter nos produits pour vous en tant que client.",
     "advertising": "La publicit\u00e9 fait partie int\u00e9grante de notre mod\u00e8le \u00e9conomique, ce qui garantit que nous pouvons continuer \u00e0 vous fournir nos recommandations de restaurants.",
-    "identity-verification": "La vérification de l'identité est un processus de sécurité par lequel nous nous assurons que vous êtes une personne réelle et non un robot. En outre, la vérification de l'identité nous permet d'éviter les fraudes telles que l'usurpation d'identité ou le vol de données. En outre, nous nous assurons que vous avez plus de 16 ans."
+    "identity-verification": "La v\u00e9rification de l'identit\u00e9 est un processus de s\u00e9curit\u00e9 par lequel nous nous assurons que vous \u00eates une personne r\u00e9elle et non un robot. En outre, la v\u00e9rification de l'identit\u00e9 nous permet d'\u00e9viter les fraudes telles que le vol d'identit\u00e9 ou le vol de donn\u00e9es. En outre, nous nous assurons que vous avez plus de 16 ans."
 }
