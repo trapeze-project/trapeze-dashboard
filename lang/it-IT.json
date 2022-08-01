@@ -1,15 +1,15 @@
 {
     "general": {
-        "cancel": "Annullamento",
-        "revoke": "Revocare tutti",
+        "cancel": "Annulla",
+        "revoke": "Cancella tutto",
         "category": "Categorie di dati",
         "location": "Dati sulla posizione",
         "advertising": "Pubblicit\u00e0",
         "warning": "Avvertenze",
         "access": "Accesso ai dati",
-        "unrelatedData": "Categoria di dati non correlati",
+        "unrelatedData": "Categorie di dati non correlati",
         "bioData": "Dati biometrici",
-        "unrelatedDataText": "\u00c8 molto insolito che le impronte digitali vengano utilizzate per scopi pubblicitari.",
+        "unrelatedDataText": "E' molto insolito che le impronte digitali vengano utilizzate per scopi pubblicitari.",
         "bioDataText": "Le impronte digitali sono particolarmente sensibili, in quanto facilitano il furto di identit\u00e0. Si raccomanda di fornire il consenso per i dati relativi alle impronte digitali solo se assolutamente necessario."
     },
     "layout": {
@@ -17,8 +17,8 @@
     },
     "nav": {
         "labels": {
-            "home": "Casa",
-            "consent": "Consenso",
+            "home": "Homepage",
+            "consent": "Consenso informato",
             "data": "Dati",
             "purposes": "Scopi",
             "help": "Aiuto",
@@ -26,7 +26,7 @@
         }
     },
     "dpv": {
-        "location": "Location",
+        "location": "Posizione",
         "name": "Nome",
         "fingerprint": "Impronta digitale",
         "identity-verification": "Verifica dell'identit\u00e0",
@@ -37,33 +37,32 @@
         "labels": {
             "consent-guide": "Guida al consenso",
             "i-can-not-find-an-answer": "Non riesco a trovare una risposta",
-            "undo-last-change": "Annulla ultima modifica",
+            "undo-last-change": "Annulla le modifiche",
             "submit-changes": "Invia le modifiche",
-            "see-changes": "Vedere le modifiche",
+            "see-changes": "Guarda le modifiche",
             "view-changes": "Visualizza le modifiche",
             "send-message": "Invia il messaggio",
-            "cancel": "Annullamento",
-            "back": "Back",
-            "next": "Indietro",
+            "cancel": "Annulla",
+            "back": "Indietro",
+            "next": "Avanti",
             "view-issues": "Visualizza i problemi",
-            "fix": "correggere",
-            "fix-all": "correggere tutto",
-            "ignore": "ignora",
-            "ignore-all": "ignora tutto"
+            "fix": "Correggere",
+            "fix-all": "Correggere tutto",
+            "ignore": "Ignora",
+            "ignore-all": "Ignora tutto"
         }
     },
     "snackbar": {
         "msg": {
-            "please-complete-the-consent-guide": "compilare la guida al consenso",
-            "submission-successful": "Presentazione riuscita",
-            "message-sent": "messaggio inviato"
+            "please-complete-the-consent-guide": "Si prega di compilare la guida al consenso",
+            "submission-successful": "Invio dei dati completato"
         }
     },
     "placeholder": {
-        "search-for-a-question-or-an-answer": "Cercare una domanda o una risposta"
+        "search-for-a-question-or-an-answer": "Cerca una domanda o una risposta"
     },
     "updates": {
-        "1": "Aggiornamento sulla politica",
+        "1": "Aggiornamento della politica sulla privacy",
         "2": "Revoca del consenso",
         "3": "Richiesta di consenso"
     },
@@ -74,12 +73,12 @@
     "qna": {
         "links-and-sources": "Link e fonti",
         "header": "Domande frequenti",
-        "introduction": "Per saperne di pi\u00f9 sul cruscotto della privacy di TRAPEZE e sui concetti che ne stanno alla base, non dimenticate di comunicarci se non riuscite a trovare le informazioni che vi interessano."
+        "introduction": "Scoprite di pi\u00f9 sul dashboard sulla privacy di TRAPEZE e sui concetti che ne stanno alla base. Fateci sapere se non trovate informazioni a cui sei interessati/e."
     },
     "company": {
         "name": "Nome della societ\u00e0",
-        "add1": "Nome dell'azienda Via",
-        "add2": "123456, Nome dell'azienda Citt\u00e0, Italia",
+        "add1": "Indirizzo della societ\u00e0",
+        "add2": "123456",
         "website": "https://societa.nome.com",
         "email": "nome@societa.nome.com",
         "contact": "Contatto",
@@ -87,18 +86,18 @@
         "pos-name": "Nome del responsabile della protezione dei dati"
     },
     "home": {
-        "title": "Benvenuti nel vostro cruscotto personale per la privacy!",
-        "explore-btn": "Vista",
-        "welcome-msg": "Noi di Nome Azienda desideriamo che l'utente comprenda come trattiamo i suoi dati personali.",
-        "welcome-msg2": "In questo cruscotto \u00e8 possibile visualizzare quali dati personali trattiamo e per quali finalit\u00e0. Il cruscotto vi consente di limitare il trattamento dei vostri dati personali configurando il vostro consenso. \u00c8 possibile:",
+        "title": "Benvenuti sul vostro dashboard personale sulla privacy!",
+        "explore-btn": "Visualizza",
+        "welcome-msg": "Noi di \"Nome Azienda\" desideriamo che l'utente comprenda come trattiamo i suoi dati personali.",
+        "welcome-msg2": "In questo dashboard \u00e8 possibile visualizzare quali dati personali trattiamo e per quali finalit\u00e0. Il cruscotto vi consente di limitare il trattamento dei vostri dati personali configurando il vostro consenso. \u00c8 possibile:",
         "welcome-msg3": "Il menu in basso a sinistra offre una rapida panoramica delle pi\u00f9 recenti interazioni relative al consenso tra l'utente e noi.",
-        "welcome-msg4": "Il menu in basso a sinistra offre una rapida panoramica delle pi\u00f9 recenti interazioni relative al consenso tra l'utente e noi.",
+        "welcome-msg4": "Se siete nuovi/e al dashboard sulla privacy:",
         "purpose": {
             "0": {
-                "name": "revocare e dare il consenso,"
+                "name": "annullare e dare consenso,"
             },
             "1": {
-                "name": "disattivare e attivare le categorie di dati,"
+                "name": "disattivare e attivare categorie di dati,"
             },
             "2": {
                 "name": "disattivare e attivare gli scopi."
@@ -116,27 +115,27 @@
                 "title": "Dati",
                 "filename": "/img/data.png",
                 "link": "/consent?tab=data",
-                "content": "Ci dica quali categorie di dati possiamo trattare."
+                "content": "Diteci quali categorie di dati possiamo trattare."
             },
             "2": {
                 "title": "Scopi",
                 "filename": "/img/purpose.png",
                 "link": "/consent?tab=purpose",
-                "content": "Ci dica a quali scopi possiamo rivolgerci."
+                "content": "Diteci a quali scopi possiamo rivolgerci."
             },
             "3": {
                 "title": "TRAPEZE",
                 "filename": "/img/favicon.png",
                 "link": "http://trapeze-project.eu",
-                "content": "Per saperne di pi\u00f9 su TRAPEZE."
+                "content": "Scopri di pi\u00f9 su TRAPEZE."
             }
         },
         "consent": {
-            "consent-menu": "Menu Consenso",
+            "consent-menu": "Menu del Consenso",
             "title": "Guida al consenso",
             "location": "I vostri dati sulla posizione",
             "purpose": "Scopi",
-            "text": "I dati sulla posizione sono dati che ci dicono dove siete stati in quale momento. Raccogliamo i dati sulla posizione tramite GPS se l'utente fornisce l'autorizzazione nell'applicazione mobile Company Name. Utilizziamo i dati sulla posizione dell'utente per personalizzare la nostra pubblicit\u00e0, per pianificare il nostro marketing a livello geografico e per prevenire le frodi attraverso la verifica dell'identit\u00e0 geografica.",
+            "text": "I dati sulla posizione sono dati che ci dicono dove siete stati in ogni momento. Raccogliamo dati sulla posizione attraverso il GPS se date il vostro consenso all'app del telefono \"Nome Azienda\". Utilizziamo i vostri dati sulla posizione per raffinare le pubblicit\u00e0.",
             "text_ad": "La pubblicit\u00e0 \u00e8 parte integrante del nostro modello di business, che ci permette di continuare a fornirvi gratuitamente le nostre raccomandazioni sui ristoranti. Utilizziamo le seguenti categorie di dati per personalizzare la pubblicit\u00e0. Indicate qui di seguito quali categorie di dati possiamo utilizzare per personalizzare la nostra pubblicit\u00e0.",
             "ad": "Pubblicit\u00e0",
             "marketing": "Marketing",
@@ -146,12 +145,12 @@
             "bank": "Conto corrente bancario",
             "credit": "Numero di carta di credito",
             "sensitivity": "Sensibilit\u00e0:",
-            "sensitivityText": "Potete configurare il grado di sensibilit\u00e0 di questi dati. I dati molto sensibili vengono trattati in modo diverso e con grande attenzione.",
+            "sensitivityText": "Potete configurare il grado di sensibilit\u00e0\u00a0 di questi dati. I dati molto sensibili vengono trattati in modo diverso e con grande attenzione.",
             "sensitivityHeader": "Quanto sono sensibili questi dati per voi?"
         }
     },
     "consent": {
-        "consent-menu": "Menu Consenso",
+        "consent-menu": "Menu del Consenso",
         "title": "Guida al consenso",
         "location": "I vostri dati sulla posizione",
         "purposes": "Scopi",
@@ -168,8 +167,8 @@
         "sensitivityText": "Potete configurare il grado di sensibilit\u00e0 di questi dati. I dati molto sensibili vengono trattati in modo diverso e con grande attenzione.",
         "sensitivityHeader": "Quanto sono sensibili questi dati per voi?",
         "warnings": "Avvertenze",
-        "warningMsg": "l'utente ha dato il consenso al titolare del trattamento per l'utilizzo dei suoi dati {dataCategory} per la finalit\u00e0 di {purpose}. ma la sua scelta in ConsentHelper \u00e8 stata {helperChoices}",
-        "issues": "questioni",
+        "warningMsg": "L'utente ha dato il consenso al titolare del trattamento per l'utilizzo dei suoi dati {dataCategory} per lo scopo di {purpose} ma la sua scelta in ConsentHelper \u00e8 stata {helperChoices}",
+        "issues": "Problemi",
         "tab": {
             "labels": {
                 "consent": "Consenso",
@@ -183,7 +182,7 @@
                     "values": {
                         "date": "Data",
                         "event": "Evento",
-                        "policy": "Politica"
+                        "policy": "Politica sulla privacy"
                     }
                 },
                 "events": {
@@ -195,8 +194,8 @@
                     }
                 },
                 "policy": {
-                    "active": "attiva",
-                    "inactive": "non attivo"
+                    "active": "Attivo",
+                    "inactive": "Non attivo"
                 },
                 "footer": {
                     "rows-per-page": "Righe per pagina"
@@ -208,7 +207,7 @@
                 "header": {
                     "values": {
                         "data": "Dati",
-                        "purposes": "Scopi"
+                        "purposes": "Finalit\u00e0"
                     }
                 },
                 "footer": {
@@ -222,7 +221,7 @@
                     "values": {
                         "purpose": "Finalit\u00e0",
                         "data": "Dati",
-                        "issue": "Questioni"
+                        "issue": "Problema"
                     }
                 },
                 "footer": {
@@ -233,14 +232,14 @@
     },
     "consent-helper": {
         "purpose": "Finalit\u00e0",
-        "comfortable": "Confortevole",
+        "comfortable": "A mio agio",
         "no-opinion": "Nessuna opinione",
-        "not-comfortable": "Non confortevole"
+        "not-comfortable": "A disagio"
     },
-    "location": "I dati sulla posizione sono dati che ci dicono dove siete stati in quale momento. Raccogliamo i dati sulla posizione tramite GPS se l'utente fornisce l'autorizzazione nell'applicazione mobile Company Name. Utilizziamo i dati sulla posizione dell'utente per personalizzare la nostra pubblicit\u00e0, per pianificare il nostro marketing a livello geografico e per prevenire le frodi attraverso la verifica dell'identit\u00e0 geografica.",
+    "location": "I dati sulla posizione sono dati che ci dicono dove siete stati in ogni momento. Raccogliamo dati sulla posizione attraverso il GPS se date il vostro consenso all'app del telefono \"Nome Azienda\". Utilizziamo i vostri dati sulla posizione per raffinare le pubblicit\u00e0.",
     "name": "Raccogliamo il vostro nome per indirizzarvi correttamente. Memorizziamo il vostro nome dal vostro profilo.",
-    "fingerprint": "Les empreintes digitales sont utilis\u00e9es pour v\u00e9rifier vos informations d'identification et pr\u00e9venir l'usurpation d'identit\u00e9.",
+    "fingerprint": "Le impronte digitali vengono utilizzate per verificare le credenziali e prevenire il furto di identit\u00e0.",
     "marketing": "Il marketing \u00e8 essenziale per noi perch\u00e9 operiamo in mercati molto diversi. Riconosciamo le preferenze regionali e possiamo quindi adattare i nostri prodotti ai vostri clienti.",
     "advertising": "La pubblicit\u00e0 \u00e8 parte integrante del nostro modello di business, che ci garantisce di continuare a fornirvi le nostre raccomandazioni sui ristoranti.",
-    "identity-verification": "La verifica dell'identit\u00e0 \u00e8 un processo di sicurezza che garantisce che l'utente sia una persona reale e non un bot. Utilizziamo inoltre la verifica dell'identit\u00e0 per prevenire frodi, come il furto di identit\u00e0 o il furto di dati. Inoltre, ci assicuriamo che abbiate pi\u00f9 di 16 anni."
+    "identity-verification": "La verifica dell'identit\u00e0 \u00e8 un processo di sicurezza nel quale ci assicuriamo che voi siate delle persone reali e non dei bot. Utilizziamo la verifica dell'identit\u00e0 anche per prevenire un furto d'identit\u00e0."
 }
