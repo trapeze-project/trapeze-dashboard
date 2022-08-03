@@ -174,6 +174,7 @@
         "warning-msg-not-comfortable":"Vous avez autorisé le responsable du traitement à utiliser vos données {dataCategory} à des fins {purpose}. cependant, votre sélection de l'assistant de consentement était inconfortable.",
         "warning-msg-no-opinion":"Vous avez autorisé le responsable du traitement à utiliser vos données {dataCategory} à des fins {purpose}. Cependant, vous avez fait un choix impartial avec Consent Assistant.",
         "issues": "probl\u00e8mes",
+        "issue": "probl\u00e8m",
         "data-category": "Cat\u00e9gorie de donn\u00e9es",
         "tab": {
             "labels": {

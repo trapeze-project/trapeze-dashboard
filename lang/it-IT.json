@@ -173,6 +173,7 @@
         "warning-msg-not-comfortable":"Hai concesso al titolare del trattamento l'autorizzazione a utilizzare i tuoi dati {dataCategory} per scopi {purpose}. tuttavia, la tua selezione dell'Assistente per il consenso è stata scomoda.",
         "warning-msg-no-opinion":"Hai concesso al titolare del trattamento l'autorizzazione a utilizzare i tuoi dati {dataCategory} per scopi {scopo}. Tuttavia, hai fatto una scelta imparziale con Consent Assistant.",
         "issues": "problemi",
+        "issue": "problem",
         "tab": {
             "labels": {
                 "consent": "Consenso",

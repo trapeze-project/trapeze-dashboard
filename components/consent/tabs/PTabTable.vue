@@ -130,6 +130,9 @@ export default {
           if (this.warnings.toString() && this.modifiedWarnings[purpose]) {
             const issuesCounter = Object.keys(this.modifiedWarnings?.[purpose])?.length
             obj.issue = issuesCounter + ' ' + this.$t('consent.issues')
+            if (issuesCounter === 1) {
+              obj.issue = issuesCounter + ' ' + this.$t('consent.issue')
+            }
           } else {
             obj.issue = '0 ' + this.$t('consent.issues')
           }
