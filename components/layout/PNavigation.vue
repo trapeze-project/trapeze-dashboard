@@ -7,19 +7,42 @@
             <v-subheader>
               {{ $t("sidebar-title.navigation") }}
             </v-subheader>
-
-            <v-list-item-group>
-              <v-list-item
-                v-for="(link, index) in links"
-                :key="index"
-                :to="localePath(link.to)"
+            <div
+              v-for="link in links"
+              :key="link.label"
+            >
+              <v-list-group
+                v-if="link.subLinks"
                 exact
               >
-                <v-list-item-title>
-                  {{ $t(link.label) }}
-                </v-list-item-title>
+                <template v-slot:activator>
+                  <v-list-item-title>
+                    <v-list-item-content>
+                      {{ $t(link.label) }}
+                    </v-list-item-content>
+                  </v-list-item-title>
+                </template>
+                <v-list-item
+                  v-for="sub in link.subLinks"
+                  :key="sub.label"
+                  class="pl-12"
+                  :to="localePath(localePath(sub.to))"
+                >
+                  <v-list-item-content>
+                    <v-list-item-title>
+                      {{ $t(sub.label) }}
+                    </v-list-item-title>
+                  </v-list-item-content>
+                </v-list-item>
+              </v-list-group>
+              <v-list-item v-else :to="localePath(link.to)">
+                <v-list-item-content>
+                  <v-list-item-title>
+                    {{ $t(link.label) }}
+                  </v-list-item-title>
+                </v-list-item-content>
               </v-list-item>
-            </v-list-item-group>
+            </div>
           </v-list>
         </v-card>
       </v-col>
@@ -40,9 +63,15 @@ export default {
     return {
       links: [
         { to: '/', label: 'nav.labels.home' },
-        { to: '/consent?tab=consent', label: 'nav.labels.consent' },
-        { to: '/consent?tab=data', label: 'nav.labels.data' },
-        { to: '/consent?tab=purpose', label: 'nav.labels.purposes' },
+        {
+          to: '/consent?tab=consent',
+          label: 'nav.labels.consent',
+          subLinks: [
+            { to: '/consent?tab=consent', label: 'nav.labels.consent' },
+            { to: '/consent?tab=data', label: 'nav.labels.data' },
+            { to: '/consent?tab=purpose', label: 'nav.labels.purposes' }
+          ]
+        },
         { to: '/help', label: 'nav.labels.help' },
         { to: '/faq', label: 'nav.labels.faq' }
       ]
