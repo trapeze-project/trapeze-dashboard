@@ -13,7 +13,6 @@
             >
               <v-list-group
                 v-if="link.subLinks"
-                exact
               >
                 <template v-slot:activator>
                   <v-list-item-title>
@@ -27,6 +26,7 @@
                   :key="sub.label"
                   class="pl-12"
                   :to="localePath(localePath(sub.to))"
+                  exact
                 >
                   <v-list-item-content>
                     <v-list-item-title>
@@ -35,7 +35,7 @@
                   </v-list-item-content>
                 </v-list-item>
               </v-list-group>
-              <v-list-item v-else :to="localePath(link.to)">
+              <v-list-item v-else :to="localePath(link.to)" exact>
                 <v-list-item-content>
                   <v-list-item-title>
                     {{ $t(link.label) }}
