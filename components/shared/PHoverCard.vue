@@ -2,13 +2,16 @@
   <div class="">
     <v-menu
       open-on-hover
-      offset-y
+      offset-x
       :close-on-content-click="false"
+      nudge-right="18"
     >
       <template v-slot:activator="{ on, attrs }">
         <span
           v-bind="attrs"
           v-on="on"
+          style="color:blue; text-decoration:underline"
+          class="phovercardtxt"
         >
           {{term}}
         </span>
@@ -16,7 +19,7 @@
       
       <v-card
         class="mx-auto"
-        max-width="344"
+        max-width="400"
         outlined
       >
         <v-img :src="image" height="150"></v-img>
@@ -60,6 +63,8 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped>
+.phovercardtxt {
+    cursor: help;
+}
 </style>
