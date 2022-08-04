@@ -14,7 +14,7 @@
 export default {
   props: {
     disableUndoLastChangeBtn: {
-      type: Boolean,
+      type: Boolean
     }
   },
   methods: {
