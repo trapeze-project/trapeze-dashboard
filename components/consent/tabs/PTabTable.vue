@@ -115,7 +115,11 @@ export default {
           obj.recipient = 'Company A'
           if (this.warnings.toString() && this.modifiedWarnings[dataCategory]) {
             const issuesCounter = Object.keys(this.modifiedWarnings?.[dataCategory])?.length
-            obj.issue = issuesCounter + ' ' + this.$t('consent.issues')
+            if (issuesCounter === 1) {
+              obj.issue = issuesCounter + ' ' + this.$t('consent.issue')
+            }else{
+              obj.issue = issuesCounter + ' ' + this.$t('consent.issues')
+            }
           } else {
             obj.issue = '0 ' + this.$t('consent.issues')
           }
@@ -129,9 +133,10 @@ export default {
           obj.data = this.imports.purposeMap[purpose].map((item) => { return this.$t(item) }).join(', ')
           if (this.warnings.toString() && this.modifiedWarnings[purpose]) {
             const issuesCounter = Object.keys(this.modifiedWarnings?.[purpose])?.length
-            obj.issue = issuesCounter + ' ' + this.$t('consent.issues')
             if (issuesCounter === 1) {
               obj.issue = issuesCounter + ' ' + this.$t('consent.issue')
+            }else{
+              obj.issue = issuesCounter + ' ' + this.$t('consent.issues')
             }
           } else {
             obj.issue = '0 ' + this.$t('consent.issues')
