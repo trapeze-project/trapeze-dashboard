@@ -1,6 +1,7 @@
 <template>
   <div>
     <PNotification ref="consentNotification" />
+    <PAlertLeaveDialog ref="alertDialog"/>
     <v-card>
       <v-card-title>
         <v-row>
@@ -73,7 +74,29 @@ export default {
       purposeMap:"",
       invertedUserChoices : "",
       consentHelperUserChoices:"",
-      warnings:""
+      warnings:{}
+    }
+  },
+  beforeRouteLeave(to, from, next) {
+    if (!this.disableUndoLastChangeBtnForData || !this.disableUndoLastChangeBtnForPurpose || JSON.stringify(this.warnings) !== JSON.stringify({})) {
+      let alertBody = ""
+      if(!this.disableUndoLastChangeBtnForData || !this.disableUndoLastChangeBtnForPurpose){
+        alertBody += "please Submit your changes <br/>"
+      }
+      if(JSON.stringify(this.warnings) !== JSON.stringify({})){
+        alertBody += "leaving this page will lose your consent helper choices"
+      }
+      this.$refs['alertDialog'].showAlert(alertBody);
+      let myInterval = setInterval(()=>{
+        if(this.$refs['alertDialog'].leaveAnyWay === true){
+          clearInterval(myInterval);
+          next();
+        }else if(this.$refs['alertDialog'].leaveAnyWay === false){
+          clearInterval(myInterval);
+        }
+      }, 50);
+    }else{
+      next();
     }
   },
   created(){
@@ -84,7 +107,6 @@ export default {
 
     if(this.$route.params.consentHelperUserChoices){
       this.consentHelperUserChoices = JSON.parse(JSON.stringify(this.$route.params.consentHelperUserChoices));
-      console.log("got parameters")
       this.calculateWarnings()
     }
     
