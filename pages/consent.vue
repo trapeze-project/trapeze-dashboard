@@ -81,10 +81,10 @@ export default {
     if (!this.disableUndoLastChangeBtnForData || !this.disableUndoLastChangeBtnForPurpose || JSON.stringify(this.warnings) !== JSON.stringify({})) {
       let alertBody = ""
       if(!this.disableUndoLastChangeBtnForData || !this.disableUndoLastChangeBtnForPurpose){
-        alertBody += "please Submit your changes <br/>"
+        alertBody += this.$t("PAlertLeaveDialog.lose-changes-warning") + " <br/>"
       }
       if(JSON.stringify(this.warnings) !== JSON.stringify({})){
-        alertBody += "leaving this page will lose your consent helper choices"
+        alertBody += this.$t("PAlertLeaveDialog.lose-consent-helper-choices")
       }
       this.$refs['alertDialog'].showAlert(alertBody);
       let myInterval = setInterval(()=>{

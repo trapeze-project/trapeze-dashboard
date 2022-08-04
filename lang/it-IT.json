@@ -51,7 +51,8 @@
             "ignore": "Ignora",
             "ignore-all": "Ignora tutto",
             "view": "Visualizza",
-            "visit-website": "Visita il sito web"
+            "visit-website": "Visita il sito web",
+            "leave-anyway":"vattene comunque"
         }
     },
     "snackbar": {
@@ -150,6 +151,11 @@
             "sensitivityText": "Potete configurare il grado di sensibilit\u00e0\u00a0 di questi dati. I dati molto sensibili vengono trattati in modo diverso e con grande attenzione.",
             "sensitivityHeader": "Quanto sono sensibili questi dati per voi?"
         }
+    },
+    "PAlertLeaveDialog":{
+        "dialog-title":"Sei sicuro di voler lasciare questa pagina?",
+        "lose-changes-warning":"Devi inviare le tue scelte.",
+        "lose-consent-helper-choices":"Se esci da questa pagina, le tue scelte per l'assistente per il consenso andranno perse."
     },
     "consent": {
         "consent-menu": "Menu del Consenso",

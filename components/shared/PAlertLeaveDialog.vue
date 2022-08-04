@@ -7,7 +7,7 @@
     >
       <v-card>
         <v-card-title class="text-h5">
-          Are you sure you want to leave the page?
+          {{this.$t("PAlertLeaveDialog.dialog-title")}}
         </v-card-title>
         <v-card-text v-html="this.alertBody"></v-card-text>
         <v-card-actions>
@@ -17,14 +17,14 @@
             text
             @click="()=>{leaveAnyWay = false; dialog=false; }"
           >
-            Cancel
+            {{this.$t("btn.labels.cancel")}}
           </v-btn>
           <v-btn
             color="green darken-1"
             text
             @click="()=>{leaveAnyWay = true; dialog=false; }"
           >
-            Leave anyway
+            {{this.$t("btn.labels.leave-anyway")}}
           </v-btn>
         </v-card-actions>
       </v-card>
