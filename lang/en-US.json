@@ -51,7 +51,8 @@
             "ignore": "Ignore",
             "ignore-all": "Ignore All",
             "view": "View",
-            "visit-website": "Visit Website"
+            "visit-website": "Visit Website",
+            "leave-anyway":"leave anyway"
         }
     },
     "snackbar": {
@@ -151,6 +152,11 @@
             "sensitivityText": "You can configure how sensitive this data is to you. We treat very sensitive data differently and with extensive care",
             "sensitivityHeader": "How sensitive is this data to you?"
         }
+    },
+    "PAlertLeaveDialog":{
+        "dialog-title":"Are you sure you want to leave this page?",
+        "lose-changes-warning":"You need to submit your choices.",
+        "lose-consent-helper-choices":"Your consent helper choices will be lost if you leave this page."
     },
     "consent": {
         "consent-menu": "Consent Menu",
