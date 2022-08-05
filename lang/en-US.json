@@ -12,8 +12,8 @@
         "unrelatedDataText": "It is very unusual that fingerprints are used for advertising purposes.",
         "bioDataText": "Fingerprints are particularly sensitive, since they facilitate identity theft. It is recommended to only provide consent for fingerprint data where absolutely necessary."
     },
-    "layout":{
-        "privacy-dashboard":"privacy dashboard"
+    "layout": {
+        "privacy-dashboard": "privacy dashboard"
     },
     "nav": {
         "labels": {
@@ -35,7 +35,7 @@
     },
     "btn": {
         "labels": {
-            "consent-guide": "Consent Guide",
+            "consent-guide": "Consent Assistant",
             "i-can-not-find-an-answer": "I can't find an answer",
             "undo-last-change": "Undo last change",
             "submit-changes": "Submit Changes",
@@ -46,16 +46,18 @@
             "back": "Back",
             "next": "Next",
             "view-issues": "View issues",
-            "fix":"Fix",
-            "fix-all":"Fix All",
-            "ignore":"Ignore",
-            "ignore-all":"Ignore All"
-
+            "fix": "Fix",
+            "fix-all": "Fix All",
+            "ignore": "Ignore",
+            "ignore-all": "Ignore All",
+            "view": "View",
+            "visit-website": "Visit Website",
+            "leave-anyway":"leave anyway"
         }
     },
     "snackbar": {
         "msg": {
-            "please-complete-the-consent-guide": "please complete the consent guide",
+            "please-complete-the-consent-guide": "You have not yet answered all questions. Please answer all questions to complete the questionnaire.",
             "submission-successful": "Submission Successful",
             "message-sent": "Message Sent"
         }
@@ -88,12 +90,12 @@
         "pos-name": "Data Protection Officer Name"
     },
     "home": {
-        "title": "Welcome to your personal privacy dashboard! ",
+        "title": "Welcome to your personal privacy dashboard!",
         "explore-btn": "View",
         "welcome-msg": "We at Company Name want you to understand how we process your personal data.",
-        "welcome-msg2": "In this dashboard, you can view what personal data we process and for which purposes. The dashboard allows you to limit our processing of your personal data by configuring your consent. You can",
+        "welcome-msg2": "In this dashboard, you can view what personal data we process and for which purposes. The dashboard allows you to limit our processing of your personal data by configuring your consent. You can:",
         "welcome-msg3": "The menu in the bottom left gives you a quick overview of the most recent consent-related interactions between you and us.",
-        "welcome-msg4": "If you are new to the privacy dashboard, we recommend you to try out the consent helper.",
+        "welcome-msg4": "If you are new to the privacy dashboard, we recommend you to try out the Consent Assistant.",
         "purpose": {
             "0": {
                 "name": "revoke and give consent,"
@@ -105,13 +107,13 @@
                 "name": "deactivate and activate purposes."
             }
         },
-        "help": "Help",
+        "help": "Consent Assistant",
         "items": {
             "0": {
                 "title": "Consent",
                 "filename": "/img/consent.png",
                 "link": "/consent?tab=consent",
-                "content": "View when and what consent you gave us."
+                "content": "View what data processing you consented to."
             },
             "1": {
                 "title": "Data",
@@ -129,12 +131,12 @@
                 "title": "TRAPEZE",
                 "filename": "/img/favicon.png",
                 "link": "http://trapeze-project.eu",
-                "content": "Learn more about TRAPEZE."
+                "content": "Learn more about the TRAPEZE project of the European Union."
             }
         },
         "consent": {
             "consent-menu": "Consent Menu",
-            "title": "Consent Guide",
+            "title": "Consent",
             "location": "Your location data",
             "purpose": "Purposes",
             "text": "Location data is data that tells us where you have been at what time. We collect location data via GPS if you give permission in the Company Name mobile application. We use your location data to customize our advertising, to plan our marketing geographically, and to prevent fraud via geographic identity verification.",
@@ -146,18 +148,23 @@
             "fingerprint": "Fingerprint",
             "bank": "Bank Account",
             "credit": "Credit Card Number",
-            "sensitivity": "Sensitivity: ",
+            "sensitivity": "Sensitivity:",
             "sensitivityText": "You can configure how sensitive this data is to you. We treat very sensitive data differently and with extensive care",
             "sensitivityHeader": "How sensitive is this data to you?"
         }
     },
+    "PAlertLeaveDialog":{
+        "dialog-title":"Are you sure you want to leave this page?",
+        "lose-changes-warning":"You need to submit your choices.",
+        "lose-consent-helper-choices":"Your consent helper choices will be lost if you leave this page."
+    },
     "consent": {
         "consent-menu": "Consent Menu",
-        "title": "Consent Guide",
+        "title": "Consent Assistant",
         "location": "Your location data",
         "purposes": "Purposes",
         "text": "Location data is data that tells us where you have been at what time. We collect location data via GPS if you give permission in the Company Name mobile application. We use your location data to customize our advertising, to plan our marketing geographically, and to prevent fraud via geographic identity verification.",
-        "text_ad": "Advertising is an integral part of our business model, which guarantees that we can continue to provide you with our restaurant recommandations. We use the below data categories to customize advertising. Tell us below which data categories we may use to customize our advertising.",
+        "text_ad": "Advertising is an integral part of our business model, which guarantees that we can continue to provide you with our restaurant recommandations free of charge. We use the below data categories to customize advertising. Tell us below which data categories we may use to customize our advertising.",
         "ad": "Advertisement",
         "marketing": "Marketing",
         "id": "Identity Verification",
@@ -165,75 +172,75 @@
         "fingerprint": "Fingerprint",
         "bank": "Bank Account",
         "credit": "Credit Card Number",
-        "sensitivity": "Sensitivity: ",
+        "sensitivity": "Sensitivity:",
         "sensitivityText": "You can configure how sensitive this data is to you. We treat very sensitive data differently and with extensive care",
         "sensitivityHeader": "How sensitive is this data to you?",
         "warnings": "Warnings",
-        "warningMsg": "you have given consent to the data controller to use your {dataCategory} data for the purpose of {purpose}. but your choice in ConsentHelper was {helperChoices}",
+        "warning-msg-not-comfortable":"You have granted permission for the data controller to use your {dataCategory} data for {purpose} purposes. however, your selection of the Consent Assistant was uncomfortable.",
+        "warning-msg-no-opinion":"You have granted permission for the data controller to use your {dataCategory} data for {purpose} purposes. However, you made an unbiased choice with Consent Assistant.",
         "issues": "issues",
-        "tab":{
-            "labels":{
-                "consent":"Consent",
-                "data-category":"Data Category",
-                "purpose" : "Purpose"
+        "issue": "issue",
+        "tab": {
+            "labels": {
+                "consent": "Consent",
+                "data-category": "Data Category",
+                "purpose": "Purpose"
             }
         },
-        "consent":{
-            "ptable":{
-                "header":{
-                    "values":{
-                        "date":"Date",
-                        "event":"Event",
-                        "policy":"Policy"
+        "consent": {
+            "ptable": {
+                "header": {
+                    "values": {
+                        "date": "Date",
+                        "event": "Event",
+                        "policy": "Policy"
                     }
                 },
-                "events":{
-                    "values":{
-                        "consent-request-policy-update":"Consent Request - Policy Update",
-                        "consent-revocation":"Consent Revocation",
-                        "consent-giving":"Consent Giving",
-                        "consent-request-account-creation":"Consent Request - Account Creation"
+                "events": {
+                    "values": {
+                        "consent-request-policy-update": "Consent Request - Policy Update",
+                        "consent-revocation": "Consent Revocation",
+                        "consent-giving": "Consent Giving",
+                        "consent-request-account-creation": "Consent Request - Account Creation"
                     }
                 },
-                "policy":{
-                    "active":"active",
-                    "inactive":"inactive"
+                "policy": {
+                    "active": "active",
+                    "inactive": "inactive"
                 },
-                "footer":{
-                    "rows-per-page":"Rows per page"
+                "footer": {
+                    "rows-per-page": "Rows per page"
                 }
             }
         },
-        "data":{
-            "ptable":{
-                "header":{
-                    "values":{
-                        "data":"Data",
-                        "purposes":"Purposes"
+        "data": {
+            "ptable": {
+                "header": {
+                    "values": {
+                        "data": "Data",
+                        "purposes": "Purposes",
+                        "issue": "Issue"
                     }
                 },
-                "footer":{
-                    "rows-per-page":"Rows per page"
+                "footer": {
+                    "rows-per-page": "Rows per page"
                 }
-                
             }
         },
-        "purpose":{
-            "ptable":{
-                "header":{
-                    "values":{
-                        "purpose":"Purpose",
-                        "data":"Data",
-                        "issue":"Issue"
+        "purpose": {
+            "ptable": {
+                "header": {
+                    "values": {
+                        "purpose": "Purpose",
+                        "data": "Data",
+                        "issue": "Issue"
                     }
                 },
-                "footer":{
-                    "rows-per-page":"Rows per page"
+                "footer": {
+                    "rows-per-page": "Rows per page"
                 }
             }
         }
-
-
     },
     "consent-helper": {
         "purpose": "Purpose",
@@ -241,14 +248,14 @@
         "no-opinion": "No opinion",
         "not-comfortable": "Not comfortable"
     },
-    "contact":{
-        "new-message-to":"New Message to",
-        "recipient":"Recipient",
-        "message":"Message"
+    "contact": {
+        "new-message-to": "New Message to",
+        "recipient": "Recipient",
+        "message": "Message"
     },
     "location": "Location data is data that tells us where you have been at what time. We collect location data via GPS if you give permission in the Company Name mobile application. We use your location data to customize our advertising, to plan our marketing geographically, and to prevent fraud via geographic identity verification.",
     "name": "We collect your name to properly address you. We store your name from your profile.",
-    "fingerprint": "Biometric data such as fingerprint is used to verify your credentials and prevent identity theft.",
+    "fingerprint": "Fingerprints are used to verify your credentials and prevent identity theft.",
     "marketing": "Marketing is essential for us, as we are active in very different markets. We recognize regional preferences and can thus adapt our products for you as a customer.",
     "advertising": "Advertising is an integral part of our business model, which guarantees that we can continue to provide you with our restaurant recommandations.",
     "identity-verification": "Identity verification is a security process where we ensure that you are a real person and not a bot. We also use identity verification to prevent fraud, such as identity theft or data theft. Furthermore, we make sure that you are older than 16 years old."

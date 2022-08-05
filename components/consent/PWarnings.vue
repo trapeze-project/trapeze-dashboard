@@ -2,8 +2,9 @@
   <div>
     <b class="ml-3">{{ $t('consent.warnings') }}</b>
     <transition-group tag="ul" name="warningsList" appear>
-      <li v-for="dataCategory in Object.keys(selectedWarnings)" :key="dataCategory">
+      <li v-for="child in Object.keys(selectedWarnings)" :key="child">
         <v-alert
+          id="issues"
           shaped
           dense
           dark
@@ -11,13 +12,24 @@
           type="warning"
           class="mx-1"
         >
-          <p>{{ $t('consent.warningMsg',{dataCategory:$t(dataCategory) , purpose: $t(purpose) , helperChoices:$t(selectedWarnings[dataCategory]["consentHelperChoice"])}) }}</p>
+          <p v-if="tabName == 'purpose' && selectedWarnings[child]['consentHelperChoice'] == 'consent-helper.no-opinion'">
+            {{ $t('consent.warning-msg-no-opinion',{dataCategory:$t(child) , purpose: $t(parent) }) }}
+          </p>
+          <p v-else-if="tabName == 'purpose' && selectedWarnings[child]['consentHelperChoice'] == 'consent-helper.not-comfortable'">
+            {{ $t('consent.warning-msg-not-comfortable',{dataCategory:$t(child) , purpose: $t(parent) }) }}
+          </p>
+          <p v-if="tabName == 'data' && selectedWarnings[child]['consentHelperChoice'] == 'consent-helper.no-opinion'">
+            {{ $t('consent.warning-msg-no-opinion',{dataCategory:$t(parent) , purpose: $t(child) }) }}
+          </p>
+          <p v-else-if="tabName == 'data' && selectedWarnings[child]['consentHelperChoice'] == 'consent-helper.not-comfortable'">
+            {{ $t('consent.warning-msg-not-comfortable',{dataCategory:$t(parent) , purpose: $t(child) }) }}
+          </p>
           <v-spacer />
           <div class="mb-1 float-right">
-            <v-btn @click="fixWarnig(dataCategory)">
+            <v-btn @click="fixWarnig(child)">
               {{ $t('btn.labels.fix') }}
             </v-btn>
-            <v-btn @click="closeWarnig(dataCategory)">
+            <v-btn @click="closeWarnig(child)">
               {{ $t('btn.labels.ignore') }}
             </v-btn>
           </div>
@@ -40,27 +52,28 @@
 export default {
   props: {
     selectedWarnings: Object,
-    purpose: String
+    parent: String,
+    tabName: String
   },
   methods: {
-    closeWarnig (dataCategory) {
+    closeWarnig (child) {
       this.$emit('saveState')
-      this.$emit('ignoreWarning', this.purpose, dataCategory)
+      this.$emit('ignoreWarning', this.parent, child)
     },
     closeAllWarnings () {
       this.$emit('saveState')
-      for (const dataCategory of Object.keys(this.selectedWarnings)) {
-        this.$emit('ignoreWarning', this.purpose, dataCategory)
+      for (const child of Object.keys(this.selectedWarnings)) {
+        this.$emit('ignoreWarning', this.parent, child)
       }
     },
-    fixWarnig (dataCategory) {
+    fixWarnig (child) {
       this.$emit('saveState')
-      this.$emit('changeUserChoice', this.purpose, dataCategory, false)
+      this.$emit('changeUserChoice', this.parent, child, false)
     },
     fixAllWarnigs () {
       this.$emit('saveState')
-      for (const dataCategory of Object.keys(this.selectedWarnings)) {
-        this.$emit('changeUserChoice', this.purpose, dataCategory, false)
+      for (const child of Object.keys(this.selectedWarnings)) {
+        this.$emit('changeUserChoice', this.parent, child, false)
       }
     }
   }

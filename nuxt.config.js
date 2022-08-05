@@ -17,7 +17,9 @@ export default {
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
-  css: ['~/assets/css/main'],
+  css: ['~/assets/css/main',
+    '~/assets/css/variables.scss'
+  ],
   serverMiddleware: [
   ],
 
@@ -126,6 +128,7 @@ export default {
   },
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
+    extractCSS: true
   },
   watch: ['design'],
   server: {

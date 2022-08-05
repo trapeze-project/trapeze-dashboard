@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="choose-table">
     <v-data-table
       :headers="headers"
       :items="category"
@@ -9,26 +9,29 @@
       :footer-props="{'items-per-page-text': $t('consent.'+tabName+'.ptable.footer.rows-per-page')}"
       @click:row="select"
     >
-      <template v-if="tabName === 'purpose' " v-slot:item.issue="{ item }">
+      <template v-if="['data','purpose'].includes(tabName) " v-slot:item.issue="{ item }">
         <v-chip
           label
           :color="item.issue === '0 '+$t('consent.issues') ? 'transparent' : 'orange'"
         >
-          {{ item.issue }}
+          <div id="issues">
+            {{ item.issue }}
+          </div>
         </v-chip>
       </template>
     </v-data-table>
 
     <PWarnings
-      v-if="view.showPDetails && this.$route.params.consentHelperUserChoices && this.warnings[this.view.selected.untranslated]&& Object.keys(this.warnings[this.view.selected.untranslated]).length"
+      v-if="view.showPDetails && this.warnings.toString() && this.modifiedWarnings[this.view.selected.untranslated]&& Object.keys(this.modifiedWarnings[this.view.selected.untranslated]).length"
       id="PWarnings"
-      :selected-warnings="warnings[this.view.selected.untranslated]"
-      :purpose="this.view.selected.untranslated"
+      :tab-name="tabName"
+      :selected-warnings="modifiedWarnings[this.view.selected.untranslated]"
+      :parent="this.view.selected.untranslated"
       @ignoreWarning="ignoreWarning"
       @changeUserChoice="changeUserChoice"
       @saveState="saveState"
     />
-<!-- :key="this.view.selected.untranslated" -->
+    <!-- :key="this.view.selected.untranslated" -->
     <PDetails
       v-if="view.showPDetails"
       id="PDetails"
@@ -61,6 +64,13 @@ export default {
         // The value must match one of these strings
         return ['consent', 'data', 'purpose'].includes(value)
       }
+    },
+    userChoices: {
+      type: Object,
+      required: false
+    },
+    warnings: {
+      required: false
     }
   },
   data () {
@@ -77,9 +87,9 @@ export default {
       },
       headers: '',
       pDetailsSubItemsMap: '',
-      userChoices: '',
+      modifiedUserChoices: '',
       consentHelperUserChoices: '',
-      warnings: '',
+      modifiedWarnings: '',
       states: []
     }
   },
@@ -103,7 +113,16 @@ export default {
           obj.data = this.$t(dataCategory)
           obj.purposes = this.imports.categoryMap[dataCategory].map((item) => { return this.$t(item) }).join(', ')
           obj.recipient = 'Company A'
-          obj.issue = '0 ' + this.$t('consent.issues')
+          if (this.warnings.toString() && this.modifiedWarnings[dataCategory]) {
+            const issuesCounter = Object.keys(this.modifiedWarnings?.[dataCategory])?.length
+            if (issuesCounter === 1) {
+              obj.issue = issuesCounter + ' ' + this.$t('consent.issue')
+            }else{
+              obj.issue = issuesCounter + ' ' + this.$t('consent.issues')
+            }
+          } else {
+            obj.issue = '0 ' + this.$t('consent.issues')
+          }
           result.push(obj)
         }
       } else if (this.tabName === 'purpose') {
@@ -112,9 +131,13 @@ export default {
           obj.untranslated = purpose
           obj.purpose = this.$t(purpose)
           obj.data = this.imports.purposeMap[purpose].map((item) => { return this.$t(item) }).join(', ')
-          if (this.$route.params.consentHelperUserChoices && this.warnings[purpose]) {
-            const issuesCounter = Object.keys(this.warnings?.[purpose])?.length
-            obj.issue = issuesCounter + ' ' + this.$t('consent.issues')
+          if (this.warnings.toString() && this.modifiedWarnings[purpose]) {
+            const issuesCounter = Object.keys(this.modifiedWarnings?.[purpose])?.length
+            if (issuesCounter === 1) {
+              obj.issue = issuesCounter + ' ' + this.$t('consent.issue')
+            }else{
+              obj.issue = issuesCounter + ' ' + this.$t('consent.issues')
+            }
           } else {
             obj.issue = '0 ' + this.$t('consent.issues')
           }
@@ -125,8 +148,26 @@ export default {
     },
     calculateBottonsValues () {
       if (this.view.selected !== '') {
-        return JSON.parse(JSON.stringify(this.userChoices[this.view.selected.untranslated]))
+        return JSON.parse(JSON.stringify(this.modifiedUserChoices[this.view.selected.untranslated]))
       }
+    }
+  },
+  watch: {
+    userChoices: {
+      handler (new_value, old_value) {
+        if (JSON.stringify(new_value) !== JSON.stringify(old_value)) {
+          this.modifiedUserChoices = new_value
+        }
+      },
+      deep: true
+    },
+    warnings: {
+      handler (new_value, old_value) {
+        if (JSON.stringify(new_value) !== JSON.stringify(old_value)) {
+          this.modifiedWarnings = new_value
+        }
+      },
+      deep: true
     }
   },
   created () {
@@ -134,7 +175,7 @@ export default {
       this.headers = this.calculatePTableHeaders(['date', 'event', 'policy'])
     }
     if (this.tabName === 'data') {
-      this.headers = this.calculatePTableHeaders(['data', 'purposes'])
+      this.headers = this.calculatePTableHeaders(['data', 'purposes', 'issue'])
       this.calculateCategoryMap()
       this.calculatePurposeMap()
       this.pDetailsSubItemsMap = this.imports.categoryMap
@@ -147,25 +188,15 @@ export default {
     }
 
     if (this.tabName === 'purpose') {
-      this.userChoices = JSON.parse(JSON.stringify(Object.keys(this.imports.purposeMap).reduce((total, currentValue) => {
-        total[currentValue] = this.imports.purposeMap[currentValue].reduce((total, currentValue) => {
-          total[currentValue] = true
-          return total
-        }, {})
-        return total
-      }, {})))
+      this.modifiedUserChoices = JSON.parse(JSON.stringify(this.userChoices))
       if (this.$route.params.consentHelperUserChoices) {
-        this.consentHelperUserChoices = JSON.parse(JSON.stringify(this.$route.params.consentHelperUserChoices))
-        this.warnings = this.calculateWarrnings()
+        this.modifiedWarnings = this.warnings
       }
     } else if (this.tabName === 'data') {
-      this.userChoices = JSON.parse(JSON.stringify(Object.keys(this.imports.categoryMap).reduce((total, currentValue) => {
-        total[currentValue] = this.imports.categoryMap[currentValue].reduce((total, currentValue) => {
-          total[currentValue] = true
-          return total
-        }, {})
-        return total
-      }, {})))
+      this.modifiedUserChoices = JSON.parse(JSON.stringify(this.userChoices))
+      if (this.$route.params.consentHelperUserChoices) {
+        this.modifiedWarnings = this.warnings
+      }
     }
   },
   methods: {
@@ -217,40 +248,21 @@ export default {
         return total
       }, {})
     },
-    calculateWarrnings () {
-      const result = {}
-      for (const purpose of Object.keys(this.userChoices)) {
-        for (const dataCategory of Object.keys(this.userChoices[purpose])) {
-          if (this.userChoices[purpose][dataCategory]) {
-            if (['consent-helper.no-opinion', 'consent-helper.not-comfortable'].includes(this.consentHelperUserChoices[purpose][dataCategory])) {
-              if (!result[purpose]) {
-                result[purpose] = {}
-              }
-              result[purpose][dataCategory] = {
-                givenConsentValue: this.userChoices[purpose][dataCategory],
-                consentHelperChoice: this.consentHelperUserChoices[purpose][dataCategory]
-              }
-            }
-          }
-        }
-      }
-      return result
-    },
     ignoreWarning (parent, child) {
-      delete (this.warnings[parent])[child]
-      const yo = JSON.parse(JSON.stringify(this.warnings))
-      this.warnings = JSON.parse(JSON.stringify(yo))
+      delete (this.modifiedWarnings[parent])[child]
+      const yo = JSON.parse(JSON.stringify(this.modifiedWarnings))
+      this.modifiedWarnings = JSON.parse(JSON.stringify(yo))
     },
     changeUserChoice (parent, child, newConsentValue) {
-      this.userChoices[parent][child] = newConsentValue
+      this.modifiedUserChoices[parent][child] = newConsentValue
       this.fixWarningIfExist(parent, child, newConsentValue)
       console.log()
     },
     fixWarningIfExist (parent, child, newConsentValue) {
-      if (this.$route.params.consentHelperUserChoices) {
-        if (['consent-helper.not-comfortable', 'consent-helper.no-opinion'].includes(this.consentHelperUserChoices[parent][child])) {
+      if (this.warnings.toString()) {
+        if (['consent-helper.not-comfortable', 'consent-helper.no-opinion'].includes(this.modifiedWarnings?.[parent]?.[child]?.consentHelperChoice)) {
           if (newConsentValue === false) {
-            if (this.warnings[parent][child]) {
+            if (this.modifiedWarnings[parent][child]) {
               this.ignoreWarning(parent, child)
             }
           }
@@ -265,7 +277,7 @@ export default {
         document.getElementById('PDetails').scrollIntoView({ behavior: 'smooth' })
       }
       if (this.tabName === 'purpose') {
-        if (this.view.showPDetails && this.$route.params.consentHelperUserChoices && this.warnings[this.view.selected.untranslated] && Object.keys(this.warnings[this.view.selected.untranslated]).length) {
+        if (this.view.showPDetails && this.$route.params.consentHelperUserChoices && this.modifiedWarnings[this.view.selected.untranslated] && Object.keys(this.modifiedWarnings[this.view.selected.untranslated]).length) {
           document.getElementById('PWarnings').scrollIntoView({ behavior: 'smooth' })
         } else {
           document.getElementById('PDetails').scrollIntoView({ behavior: 'smooth' })
@@ -274,8 +286,8 @@ export default {
     },
     revokeAll () {
       this.saveState()
-      Object.keys(this.userChoices).forEach((parent) => {
-        Object.keys(this.userChoices[parent]).forEach((child) => {
+      Object.keys(this.modifiedUserChoices).forEach((parent) => {
+        Object.keys(this.modifiedUserChoices[parent]).forEach((child) => {
           this.changeUserChoice(parent, child, false)
         })
       })
@@ -285,8 +297,8 @@ export default {
       state.view = {}
       state.view.selected = JSON.parse(JSON.stringify(this.view.selected))
       state.view.showPDetails = JSON.parse(JSON.stringify(this.view.showPDetails))
-      state.userChoices = JSON.parse(JSON.stringify(this.userChoices))
-      state.warnings = JSON.parse(JSON.stringify(this.warnings))
+      state.modifiedUserChoices = JSON.parse(JSON.stringify(this.modifiedUserChoices))
+      state.modifiedWarnings = JSON.parse(JSON.stringify(this.modifiedWarnings))
       this.states.push(state)
     },
     loadPreviousState () {
@@ -295,8 +307,8 @@ export default {
         this.view.showPDetails = JSON.parse(JSON.stringify(state.view.showPDetails))
         this.view.selected = JSON.parse(JSON.stringify(state.view.selected))
         setTimeout(() => { // to let the see the switcher switching
-          this.userChoices = JSON.parse(JSON.stringify(state.userChoices))
-          this.warnings = JSON.parse(JSON.stringify(state.warnings))
+          this.modifiedUserChoices = JSON.parse(JSON.stringify(state.modifiedUserChoices))
+          this.modifiedWarnings = JSON.parse(JSON.stringify(state.modifiedWarnings))
         }, 500)
       }
     }
