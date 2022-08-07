@@ -87,7 +87,7 @@ export default {
         alertBody += this.$t('PAlertLeaveDialog.lose-consent-helper-choices')
       }
       this.$refs.alertDialog.showAlert(alertBody)
-      const myInterval = setInterval(() => {
+      const myInterval = setInterval(()=>{
         if (this.$refs.alertDialog.leaveAnyWay === true) {
           clearInterval(myInterval)
           next()
@@ -110,6 +110,8 @@ export default {
     }
   },
   created () {
+    window.addEventListener('beforeunload', this.beforeWindowUnload);
+
     this.calculatePurposeMap()
     this.getUserChoices()
     this.invertedUserChoices = this.invertUserChoices(this.userChoices)
@@ -118,6 +120,9 @@ export default {
       this.consentHelperUserChoices = JSON.parse(JSON.stringify(this.$route.params.consentHelperUserChoices))
       this.calculateWarnings()
     }
+  },
+  beforeDestroy(){
+    window.removeEventListener('beforeunload', this.beforeWindowUnload)
   },
   mounted () {
     this.$watch(
@@ -166,6 +171,13 @@ export default {
     )
   },
   methods: {
+    beforeWindowUnload(event){
+      if(!this.disableUndoLastChangeBtnForData || !this.disableUndoLastChangeBtnForPurpose || JSON.stringify(this.warnings) !== JSON.stringify({})){
+        event.preventDefault();
+        event.returnValue = "";
+      }
+    },
+
     submitChanges () {
       this.$refs.consentNotification.showNotification(this.$t('snackbar.msg.submission-successful'), 'green')
       this.$refs.data.states = []
