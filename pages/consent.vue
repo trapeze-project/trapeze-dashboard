@@ -88,8 +88,6 @@ export default {
     }
   },
   created () {
-    window.addEventListener('beforeunload', this.beforeWindowUnload);
-
     this.calculatePurposeMap()
     this.getUserChoices()
     this.invertedUserChoices = this.invertUserChoices(this.userChoices)
@@ -101,6 +99,7 @@ export default {
   },
 
   mounted () {
+    window.addEventListener('beforeunload', this.beforeWindowUnload);
     this.$watch(
       '$refs.data.states',
       (new_value, old_value) => {
