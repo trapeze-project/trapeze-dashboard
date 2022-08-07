@@ -77,28 +77,6 @@ export default {
       warnings: {}
     }
   },
-  beforeRouteLeave (to, from, next) {
-    if (!this.disableUndoLastChangeBtnForData || !this.disableUndoLastChangeBtnForPurpose || JSON.stringify(this.warnings) !== JSON.stringify({})) {
-      let alertBody = ''
-      if (!this.disableUndoLastChangeBtnForData || !this.disableUndoLastChangeBtnForPurpose) {
-        alertBody += this.$t('PAlertLeaveDialog.lose-changes-warning') + ' <br/>'
-      }
-      if (JSON.stringify(this.warnings) !== JSON.stringify({})) {
-        alertBody += this.$t('PAlertLeaveDialog.lose-consent-helper-choices')
-      }
-      this.$refs.alertDialog.showAlert(alertBody)
-      const myInterval = setInterval(() => {
-        if (this.$refs.alertDialog.leaveAnyWay === true) {
-          clearInterval(myInterval)
-          next()
-        } else if (this.$refs.alertDialog.leaveAnyWay === false) {
-          clearInterval(myInterval)
-        }
-      }, 50)
-    } else {
-      next()
-    }
-  },
   computed: {
     tab: {
       set (tab) {
@@ -119,7 +97,9 @@ export default {
       this.calculateWarnings()
     }
   },
+
   mounted () {
+    window.addEventListener('beforeunload', this.beforeWindowUnload);
     this.$watch(
       '$refs.data.states',
       (new_value, old_value) => {
@@ -166,6 +146,13 @@ export default {
     )
   },
   methods: {
+    beforeWindowUnload(event){
+      if(!this.disableUndoLastChangeBtnForData || !this.disableUndoLastChangeBtnForPurpose || JSON.stringify(this.warnings) !== JSON.stringify({})){
+        event.preventDefault();
+        event.returnValue = "";
+      }
+    },
+
     submitChanges () {
       this.$refs.consentNotification.showNotification(this.$t('snackbar.msg.submission-successful'), 'green')
       this.$refs.data.states = []
@@ -250,7 +237,32 @@ export default {
         return total
       }, {})
     }
-  }
+  },
+  beforeRouteLeave (to, from, next) {
+    if (!this.disableUndoLastChangeBtnForData || !this.disableUndoLastChangeBtnForPurpose || JSON.stringify(this.warnings) !== JSON.stringify({})) {
+      let alertBody = ''
+      if (!this.disableUndoLastChangeBtnForData || !this.disableUndoLastChangeBtnForPurpose) {
+        alertBody += this.$t('PAlertLeaveDialog.lose-changes-warning') + ' <br/>'
+      }
+      if (JSON.stringify(this.warnings) !== JSON.stringify({})) {
+        alertBody += this.$t('PAlertLeaveDialog.lose-consent-helper-choices')
+      }
+      this.$refs.alertDialog.showAlert(alertBody)
+      const myInterval = setInterval(()=>{
+        if (this.$refs.alertDialog.leaveAnyWay === true) {
+          clearInterval(myInterval)
+          next()
+        } else if (this.$refs.alertDialog.leaveAnyWay === false) {
+          clearInterval(myInterval)
+        }
+      }, 50)
+    } else {
+      next()
+    }
+  },
+  beforeDestroy(){
+    window.removeEventListener('beforeunload', this.beforeWindowUnload)
+  },
 }
 </script>
 
