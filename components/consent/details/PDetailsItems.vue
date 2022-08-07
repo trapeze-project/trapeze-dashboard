@@ -21,7 +21,7 @@
                 <v-col style="min-width: 100px">
                   <p align="left" class="mt-4">{{ $t(item.name) }}</p>
                 </v-col>
-                <v-col style="margin-left: 150px">
+                <v-col style="margin-left: 120px">
                   <v-switch v-model="localSwitchValues[item.name]" @change="changeUserChoice(item.name)" />
                 </v-col>
               </v-row>
