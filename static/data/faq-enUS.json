@@ -33,7 +33,7 @@
         }
       },
       "qna4":{
-        "question": "What is the TRAPEZE Privacy Dashboard?",
+        "question": "What is the TRAPEZE privacy dashboard?",
         "answer": "",
         "references": {
         }
@@ -50,7 +50,7 @@
     "qnas": {
       "qna1":{
         "question": "What is consent?",
-        "answer": "According to the GDPR (Art. 4 (11)), consent is a clear affirmative action towards a data controller (us) to process your personal data. Note that data controllers (we) do not always have to collect consent from you to process your personal data. For example, a delivery service needs to process your address to comply with their delivery order. They do not need to collect consent.",
+        "answer": "According to the GDPR (Art. 4 (11)), consent is a clear affirmative action towards a data controller (us) to process your personal data. Note that data controllers (we) always have to collect consent from you to process your personal data. For example, a delivery service needs to process your address to comply with their delivery order. They do not need to collect consent.",
         "references": {
         "ref1":"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32016R0679"
         }
