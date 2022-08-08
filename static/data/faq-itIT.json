@@ -1,45 +1,46 @@
 {
-    "TRAPEZE":{
+    "TRAPEZE": {
         "qnas": {
-          "qna1":{
-            "question": "What can I do on the TRAPEZE privacy dashboard?",
-            "answer": "The TRAPEZE privacy dashboard is a piece of software that data controllers like us (${we}) can use to make clear to you how and for what we process your personal data. \n \n On the TRAPEZE privacy dashboard, you can see our active privacy policy and when we collected consent from you. Specifically, you can see how we process your data and what for. You can limit our processing of your data by revoking consent, or broaden the scope of our processing giving us consent to improve the service we provide to you.\n \n You have further questions about us processing your data? Please do not hesitate to contact us through the Contact Button in the banner on the right-hand side. ",
-            "references": { }
-           },
-           "qna2":{
-            "question": "Who is responsible for the information on this dashboard?",
-            "answer": "If you see our (${we}) company information in the banner on the right-hand side, the information shown in the TRAPEZE privacy dashboard is povided by us. In later versions of the dashboard, you will be able to change between distinct data controllers like us to whom you gave consent.",
-            "references": { }
-           },
-          "qna5":{
-            "question": "Why do you (${we}) use the TRAPEZE privacy dashboard?",
-            "answer": "We (${we}) use the TRAPEZE privacy dashboard to allow you to better understand what we do with your data. Through the TRAPEZE privacy dashboard, we can learn whether you generally like that we process your data or, perhaps, only for specific purposes. \n \n We aim to align our current processing of your data to how you actually like your data to be processed.",
-            "references": {
+            "qna1": {
+                "question": "Cosa posso fare nel TRAPEZE dashboard sulla privacy?",
+                "answer": "Il TRAPEZE dashboard sulla privacy è un software che i responsabili del trattamento dei dati come noi (${we}) possono utilizzare per chiarire all'utente come e per cosa trattiamo i suoi dati personali. \n \n Nel TRAPEZE dashboard sulla privacy possibile vedere la nostra politica sulla privacy attiva e quando abbiamo raccolto il consenso dell'utente. In particolare, è possibile vedere come trattiamo i vostri dati e per quali scopi. Potete limitare il trattamento dei vostri dati revocando il consenso, oppure ampliare l'ambito del nostro trattamento dandoci il consenso per migliorare il servizio che vi forniamo.\n \n Avete altre domande sul trattamento dei vostri dati? Non esiti a contattarci tramite il pulsante di contatto nel banner a destra.",
+                "references": {                }
+            },
+            "qna2": {
+                "question": "Chi è responsabile delle informazioni contenute in questo dashboard?",
+                "answer": "Se nel banner a destra si vedono le informazioni sulla nostra azienda (${we}), le informazioni mostrate nel TRAPEZE dashboard sulla privacy sono fornite da noi. Nelle versioni successive del cruscotto, sarà possibile cambiare tra i diversi responsabili del trattamento dei dati, come noi, a cui si è dato il consenso.",
+                "references": {
+                }
+            },
+            "qna3": {
+                "question": "Perché voi (${we}) utilizzate il TRAPEZE dashboard sulla privacy?",
+                "answer": "Noi (${we}) utilizziamo il TRAPEZE dashboard sulla privacy per consentirvi di capire meglio cosa facciamo con i vostri dati. Attraverso il TRAPEZE dashboard sulla privacy, possiamo capire se in generale vi piace che trattiamo i vostri dati o, magari, solo per scopi specifici. \n \n Il nostro obiettivo è quello di allineare l'attuale trattamento dei suoi dati a come lei desidera effettivamente che vengano trattati.",
+                "references": {
+                }
+            },
+            "qna4": {
+                "question": "Chi ha sviluppato il TRAPEZE dashboard sulla privacy?",
+                "answer": "TRAPEZE è un progetto di ricerca finanziato dall'Unione Europea. TRAPEZE è l'acronimo di \"TRAnsparency, Privacy and security for European citiZEns\". \n \n TRAPEZE fa parte del programma di finanziamento Horizon2020 dell'Unione Europea. Il progetto triennale è stato condotto tra settembre 2020 e agosto 2023. Il consorzio del progetto TRAPEZE è composto dai seguenti 13 partner: (1.) TenForce BVBA, (2.)GEIE ERCIM, (3.)Technische Universität Berlin, (4.) VLAAMSE GEWEST, (5.) Deutsche Telekom AG, (6.) CaixaBank SA, (7.) Consorzio Interuniversitario Nazionale Per L'Informatica, (8.) Unabhängiges Landeszentrum für Datenschutz, (9.) Kaspersky Lab Italia SRL, (10.) Institut Mihajlo Pupin, (11.) IPSOS NV, (12.) Athens Technology Center Anonymi Biomichaniki Emporiki Kai Techniki Etaireia Efarmogon Ypsilis Technologias, (13.) E-Seniors: Initiation des Séniors Aux NTIC Association.",
+                "references": { 
+                    "ref1": "http://trapeze-project.eu/",
+                    "ref2": "https://ec.europa.eu/info/research-and-innovation/funding/funding-opportunities/funding-programmes-and-open-calls/horizon-2020_en",
+                    "ref3": "https://www.tenforce.com/",
+                    "ref4": "https://www.ercim.eu/",
+                    "ref5": "https://www.tu.berlin/",
+                    "ref6": "https://www.vlaanderen.be/",
+                    "ref7": "https://www.telekom.de/",
+                    "ref8": "https://www.caixabank.com/",
+                    "ref9": "https://www.consorzio-cini.it/",
+                    "ref10": "https://www.datenschutzzentrum.de/",
+                    "ref11": "https://www.kaspersky.it/",
+                    "ref12": "https://www.pupin.rs/",
+                    "ref13": "https://www.ipsos.com/",
+                    "ref14": "https://www.atc.gr/",
+                    "ref15": "https://www.eseniors.eu/"
+                }
             }
-          }
-        },
-        "qna3":{
-          "question": "Who has developed the TRAPEZE privacy dashboard?",
-          "answer": "TRAPEZE is a research project funded by the European Union. TRAPEZE is an acronym for \"TRAnsparency, Privacy and security for European citiZEns\". \n \n TRAPEZE is part of the European Union's Horizon2020 funding programme. The 3-year project was conducted between September 2020 and August 2023. The TRAPEZE project consortium consists of the following 13 partners: (1.) TenForce BVBA, (2.)GEIE ERCIM, (3.)Technische Universität Berlin, (4.) VLAAMSE GEWEST, (5.) Deutsche Telekom AG, (6.) CaixaBank SA, (7.) Consorzio Interuniversitario Nazionale Per L'Informatica, (8.) Unabhängiges Landeszentrum für Datenschutz, (9.) Kaspersky Lab Italia SRL, (10.) Institut Mihajlo Pupin, (11.) IPSOS NV, (12.) Athens Technology Center Anonymi Biomichaniki Emporiki Kai Techniki Etaireia Efarmogon Ypsilis Technologias, (13.) E-Seniors: Initiation des Séniors Aux NTIC Association.",
-          "references": {
-            "ref1" :"http://trapeze-project.eu/",
-            "ref2" :"https://ec.europa.eu/info/research-and-innovation/funding/funding-opportunities/funding-programmes-and-open-calls/horizon-2020_en",
-            "ref3":"https://www.tenforce.com/",
-            "ref4":"https://www.ercim.eu/",
-            "ref5":"https://www.tu.berlin/",
-            "ref6":"https://www.vlaanderen.be/",
-            "ref7":"https://www.telekom.de/",
-            "ref8":"https://www.caixabank.com/",
-            "ref9":"https://www.consorzio-cini.it/",
-            "ref10":"https://www.datenschutzzentrum.de/",
-            "ref11":"https://www.kaspersky.it/",
-            "ref12":"https://www.pupin.rs/",
-            "ref13":"https://www.ipsos.com/",
-            "ref14":"https://www.atc.gr/",
-            "ref15":"https://www.eseniors.eu/"
-          }
         }
-      },
+    },   
     "Consenso": {
         "qnas": {
             "qna1": {
