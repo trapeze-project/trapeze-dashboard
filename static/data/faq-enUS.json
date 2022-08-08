@@ -7,8 +7,8 @@
             "references": {                }
         },
         "qna2": {
-            "question": "Who is responsible for the information on this dashboard?",
-            "answer": "If you see our (${we}) company information in the banner on the right-hand side, the information shown in the TRAPEZE privacy dashboard is povided by us. In later versions of the dashboard, you will be able to change between distinct data controllers like us to whom you gave consent.",
+            "question": "Who is responsible for the information on the TRAPEZE privacy dashboard?",
+            "answer": "If you see our (${we}) company information in the banner on the right-hand side, the information shown in the TRAPEZE privacy dashboard is povided by us. In later versions of the dashboard, you will be able to change between distinct data controllers like us.",
             "references": {
             }
         },

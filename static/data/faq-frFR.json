@@ -8,8 +8,8 @@
                 "references": {                }
             },
             "qna2": {
-                "question": "Qui est responsable des informations contenues dans ce tableau de bord?",
-                "answer": "Si vous voyez les informations sur notre société (${we}) dans la bannière de droite, les informations affichées dans le TRAPEZE tableau de bord de confidentialité sont fournies par nous. Dans les versions ultérieures du tableau de bord, vous pourrez changer entre les différents responsables de données, comme nous, auxquels vous avez donné votre consentement.",
+                "question": "Qui est responsable des informations contenues le TRAPEZE tableau de bord de confidentialité?",
+                "answer": "Si vous voyez les informations sur notre société (${we}) dans la bannière de droite, les informations affichées dans le TRAPEZE tableau de bord de confidentialité sont fournies par nous. Dans les versions ultérieures du tableau de bord, vous pourrez changer entre les différents responsables de données, comme nous.",
                 "references": {
                 }
             },

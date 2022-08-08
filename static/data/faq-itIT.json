@@ -7,8 +7,8 @@
                 "references": {                }
             },
             "qna2": {
-                "question": "Chi è responsabile delle informazioni contenute in questo dashboard?",
-                "answer": "Se nel banner a destra si vedono le informazioni sulla nostra azienda (${we}), le informazioni mostrate nel TRAPEZE dashboard sulla privacy sono fornite da noi. Nelle versioni successive del cruscotto, sarà possibile cambiare tra i diversi responsabili del trattamento dei dati, come noi, a cui si è dato il consenso.",
+                "question": "Chi è responsabile delle informazioni contenute nel TRAPEZE dashboard sulla privacy?",
+                "answer": "Se nel banner a destra si vedono le informazioni sulla nostra azienda (${we}), le informazioni mostrate nel TRAPEZE dashboard sulla privacy sono fornite da noi. Nelle versioni successive del cruscotto, sarà possibile cambiare tra i diversi responsabili del trattamento dei dati, come noi.",
                 "references": {
                 }
             },
