@@ -40,7 +40,7 @@
         }
       },
       "qna3":{
-        "question": "Who hosts the TRAPEZE privacy dashboard?",
+        "question": "Who is responsible for the information on this dashboard?",
         "answer": "The TRAPEZE privacy dashboard is hosted by us, the data controller shown in the banner on the right-hand side.",
         "references": { }
        },

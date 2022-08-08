@@ -40,7 +40,7 @@
                 }
             },
             "qna3": {
-                "question": "Wer hostet das TRAPEZE-Datenschutz-Dashboard?",
+                "question": "Who is responsible for the information on this dashboard?",
                 "answer": "Das TRAPEZE-Datenschutz-Dashboard wird von uns gehostet, dem Datenverantwortlichen, der im Banner auf der rechten Seite angezeigt wird.",
                 "references": { }
             },
