@@ -9,13 +9,14 @@
       <template v-slot:activator="{ on, attrs }">
         {{term}}
         <v-icon
-          small
+          size="14"
           v-bind="attrs"
           v-on="on"
           color="green darken-2"
-          class="phovercardinfoicon"
+          class="phovercardinfoicon ml-1 outlined "
+          
         >
-          mdi-information-outline
+          mdi-information-variant
         </v-icon>
       </template>
       
@@ -64,5 +65,11 @@ export default {
 <style scoped>
 .phovercardinfoicon {
    cursor: pointer;
+}
+.v-icon.outlined {
+  border: 1px solid currentColor;
+  border-radius:50%;
+  height: 18px;
+  width: 18px;
 }
 </style>
