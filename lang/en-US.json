@@ -6,7 +6,7 @@
         "location": "Location Data",
         "advertising": "Advertising",
         "warning": "Warning",
-        "access": "Access data",
+        "access": "Request Data Access",
         "unrelatedData": "Unrelated Data Category",
         "bioData": "Biometric Data",
         "unrelatedDataText": "It is very unusual that fingerprints are used for advertising purposes.",
