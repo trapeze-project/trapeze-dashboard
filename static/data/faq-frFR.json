@@ -7,6 +7,11 @@
                 "references": {
                 }
               },
+            "qna4": {
+                "question": "Que puis-je faire sur le tableau de bord de la vie priv\u00e9e de TRAPEZE ?",
+                "answer": "Sur le tableau de bord de la confidentialit\u00e9 de TRAPEZE, vous pouvez voir notre politique de confidentialit\u00e9 active et quand nous avons recueilli votre consentement. Plus pr\u00e9cis\u00e9ment, vous pouvez voir comment nous traitons vos donn\u00e9es et dans quel but. Vous pouvez nous contacter si vous avez des questions sur le traitement de vos donn\u00e9es. Vous pouvez \u00e9galement r\u00e9voquer votre consentement de mani\u00e8re pratique ou donner plus de consentement pour am\u00e9liorer notre service si vous le souhaitez.",
+                "references": { }
+            },
             "qna1": {
                 "question": "Qu'est-ce que le TRAPEZE ?",
                 "answer": "TRAPEZE est un projet de recherche financ\u00e9 par l'Union europ\u00e9enne. TRAPEZE est l'acronyme de \"TRAnsparency, Privacy and security for European citiZEns\". TRAPEZE fait partie du programme de financement Horizon2020 de l'Union europ\u00e9enne. Le projet, d'une dur\u00e9e de 3 ans, a \u00e9t\u00e9 men\u00e9 entre septembre 2020 et ao\u00fbt 2023.",
@@ -39,11 +44,7 @@
                 "answer": "Le tableau de bord de confidentialit\u00e9 de TRAPEZE est h\u00e9berg\u00e9 par nous, le responsable du traitement des donn\u00e9es indiqu\u00e9 dans la banni\u00e8re \u00e0 droite.",
                 "references": { }
             },
-            "qna4": {
-                "question": "Que puis-je faire sur le tableau de bord de la vie priv\u00e9e de TRAPEZE ?",
-                "answer": "Sur le tableau de bord de la confidentialit\u00e9 de TRAPEZE, vous pouvez voir notre politique de confidentialit\u00e9 active et quand nous avons recueilli votre consentement. Plus pr\u00e9cis\u00e9ment, vous pouvez voir comment nous traitons vos donn\u00e9es et dans quel but. Vous pouvez nous contacter si vous avez des questions sur le traitement de vos donn\u00e9es. Vous pouvez \u00e9galement r\u00e9voquer votre consentement de mani\u00e8re pratique ou donner plus de consentement pour am\u00e9liorer notre service si vous le souhaitez.",
-                "references": { }
-            },
+
             "qna5": {
                 "question": "Pourquoi utilisez-vous le tableau de bord de confidentialit\u00e9 de TRAPEZE ?",
                 "answer": "Le tableau de bord de confidentialit\u00e9 TRAPEZE est un logiciel que les responsables du traitement des donn\u00e9es comme nous peuvent utiliser pour vous expliquer clairement comment et pour quoi nous traitons vos donn\u00e9es personnelles. Nous utilisons le tableau de bord de confidentialit\u00e9 TRAPEZE et le personnalisons. C'est plus facile pour tout le monde lorsque tous les responsables du traitement des donn\u00e9es (nous) et les personnes concern\u00e9es (vous) s'accordent sur la mani\u00e8re de communiquer le consentement et le traitement de vos donn\u00e9es.",

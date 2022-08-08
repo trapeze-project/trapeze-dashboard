@@ -7,6 +7,11 @@
                 "references": {
                 }
               },
+            "qna4": {
+                "question": "Cosa posso fare nel cruscotto della privacy di TRAPEZE?",
+                "answer": "Nel cruscotto sulla privacy di TRAPEZE \u00e8 possibile vedere la nostra politica sulla privacy attiva e quando abbiamo raccolto il consenso dell'utente. In particolare, \u00e8 possibile vedere come trattiamo i vostri dati e per quali scopi. Potete contattarci se avete domande sul trattamento dei vostri dati. Se lo desidera, pu\u00f2 anche revocare il consenso o darne un altro per migliorare il nostro servizio.",
+                "references": { }
+            },
             "qna1": {
                 "question": "Che cos'\u00e8 il TRAPEZE?",
                 "answer": "TRAPEZE \u00e8 un progetto di ricerca finanziato dall'Unione Europea. TRAPEZE \u00e8 l'acronimo di \"TRAnsparency, Privacy and security for European citiZEns\". TRAPEZE fa parte del programma di finanziamento Horizon2020 dell'Unione Europea. Il progetto, della durata di 3 anni, \u00e8 stato condotto tra settembre 2020 e agosto 2023.",
@@ -37,11 +42,6 @@
             "qna3": {
                 "question": "Chi ospita il cruscotto della privacy di TRAPEZE?",
                 "answer": "Il cruscotto della privacy di TRAPEZE \u00e8 ospitato da noi, il responsabile del trattamento dei dati indicato nel banner a destra.",
-                "references": { }
-            },
-            "qna4": {
-                "question": "Cosa posso fare nel cruscotto della privacy di TRAPEZE?",
-                "answer": "Nel cruscotto sulla privacy di TRAPEZE \u00e8 possibile vedere la nostra politica sulla privacy attiva e quando abbiamo raccolto il consenso dell'utente. In particolare, \u00e8 possibile vedere come trattiamo i vostri dati e per quali scopi. Potete contattarci se avete domande sul trattamento dei vostri dati. Se lo desidera, pu\u00f2 anche revocare il consenso o darne un altro per migliorare il nostro servizio.",
                 "references": { }
             },
             "qna5": {

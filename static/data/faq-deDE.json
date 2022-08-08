@@ -7,6 +7,11 @@
                 "references": {
                 }
               },
+            "qna4": {
+                "question": "Was kann ich auf dem TRAPEZE-Datenschutz-Dashboard machen?",
+                "answer": "Auf dem TRAPEZE-Datenschutz-Dashboard k\u00f6nnen Sie unsere aktive Datenschutzerklärung einsehen und sehen, wann wir Ihre Einwilligung eingeholt haben. Insbesondere k\u00f6nnen Sie sehen, wie und wof\u00fcr wir Ihre Daten verarbeiten. Sie k\u00f6nnen sich an uns wenden, wenn Sie Fragen zur Verarbeitung Ihrer Daten durch uns haben. Sie k\u00f6nnen auch bequem Ihre Einwilligung widerrufen oder weitere Einwilligungen erteilen, um unseren Service zu verbessern, wenn Sie m\u00f6chten.",
+                "references": { }
+            },
             "qna1": {
                 "question": "Was ist TRAPEZE?",
                 "answer": "TRAPEZE ist ein von der Europ\u00e4ischen Union finanziertes Forschungsprojekt. TRAPEZE ist ein Akronym f\u00fcr \"TRAnsparency, Privacy and security for European citiZEns\". TRAPEZE ist Teil des F\u00f6rderprogramms Horizon2020 der Europ\u00e4ischen Union. Das dreij\u00e4hrige Projekt wurde zwischen September 2020 und August 2023 durchgef\u00fchrt.",
@@ -37,11 +42,6 @@
             "qna3": {
                 "question": "Wer hostet das TRAPEZE-Datenschutz-Dashboard?",
                 "answer": "Das TRAPEZE-Datenschutz-Dashboard wird von uns gehostet, dem Datenverantwortlichen, der im Banner auf der rechten Seite angezeigt wird.",
-                "references": { }
-            },
-            "qna4": {
-                "question": "Was kann ich auf dem TRAPEZE-Datenschutz-Dashboard machen?",
-                "answer": "Auf dem TRAPEZE-Datenschutz-Dashboard k\u00f6nnen Sie unsere aktive Datenschutzerklärung einsehen und sehen, wann wir Ihre Einwilligung eingeholt haben. Insbesondere k\u00f6nnen Sie sehen, wie und wof\u00fcr wir Ihre Daten verarbeiten. Sie k\u00f6nnen sich an uns wenden, wenn Sie Fragen zur Verarbeitung Ihrer Daten durch uns haben. Sie k\u00f6nnen auch bequem Ihre Einwilligung widerrufen oder weitere Einwilligungen erteilen, um unseren Service zu verbessern, wenn Sie m\u00f6chten.",
                 "references": { }
             },
             "qna5": {

@@ -7,6 +7,11 @@
         "references": {
         }
       },
+      "qna4":{
+        "question": "What can I do on the TRAPEZE privacy dashboard?",
+        "answer": "On the TRAPEZE privacy dashboard, you can see our active privacy policy and when we collected consent from you. Specifically, you can see how we process your data and what for. You can contact us if you have questions about us processing your data. You can also conveniently revoke consent or give more consent to improve our service if you like.",
+        "references": { }
+       },
       "qna1":{
         "question": "What is TRAPEZE?",
         "answer": "TRAPEZE is a research project funded by the European Union. TRAPEZE is an acronym for \"TRAnsparency, Privacy and security for European citiZEns\". TRAPEZE is part of the European Union's Horizon2020 funding programme. The 3-year project was conducted between September 2020 and August 2023.",
@@ -37,11 +42,6 @@
       "qna3":{
         "question": "Who hosts the TRAPEZE privacy dashboard?",
         "answer": "The TRAPEZE privacy dashboard is hosted by us, the data controller shown in the banner on the right-hand side.",
-        "references": { }
-       },
-      "qna4":{
-        "question": "What can I do on the TRAPEZE privacy dashboard?",
-        "answer": "On the TRAPEZE privacy dashboard, you can see our active privacy policy and when we collected consent from you. Specifically, you can see how we process your data and what for. You can contact us if you have questions about us processing your data. You can also conveniently revoke consent or give more consent to improve our service if you like.",
         "references": { }
        },
       "qna5":{
