@@ -56,7 +56,7 @@
                   $expand
                 </v-icon>
               </template>
-              <span class="header">{{ category }}</span>
+              <span class="header" style="white-space:pre-line">{{ category }}</span>
             </v-expansion-panel-header>
             <v-expansion-panel-content>
               <v-expansion-panels flat>
@@ -70,13 +70,13 @@
                         $expand
                       </v-icon>
                     </template>
-                    <span class="header">{{
+                    <span class="header" style="white-space:pre-line">{{
                       faq[category]['qnas'][qna].question
                     }}</span>
                   </v-expansion-panel-header>
 
                   <v-expansion-panel-content>
-                    <p>
+                    <p style="white-space:pre-line">
                       {{ faq[category]['qnas'][qna].answer }}
                     </p>
                     <div
