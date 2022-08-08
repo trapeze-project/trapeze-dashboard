@@ -1,6 +1,12 @@
 {
     "TRAPEZE": {
         "qnas": {
+            "qna0":{
+                "question": "What is the TRAPEZE Privacy Dashboard?",
+                "answer": "",
+                "references": {
+                }
+              },
             "qna1": {
                 "question": "Che cos'\u00e8 il TRAPEZE?",
                 "answer": "TRAPEZE \u00e8 un progetto di ricerca finanziato dall'Unione Europea. TRAPEZE \u00e8 l'acronimo di \"TRAnsparency, Privacy and security for European citiZEns\". TRAPEZE fa parte del programma di finanziamento Horizon2020 dell'Unione Europea. Il progetto, della durata di 3 anni, \u00e8 stato condotto tra settembre 2020 e agosto 2023.",
@@ -42,8 +48,6 @@
                 "question": "Perch\u00e9 si utilizza il cruscotto della privacy di TRAPEZE?",
                 "answer": "Il cruscotto per la privacy di TRAPEZE \u00e8 un software che i responsabili del trattamento dei dati come noi possono utilizzare per chiarire come e per cosa trattiamo i vostri dati personali. Noi utilizziamo il cruscotto per la privacy di TRAPEZE e lo personalizziamo. \u00c8 pi\u00f9 facile per tutti quando tutti i responsabili del trattamento dei dati (noi) e gli interessati (voi) concordano su come comunicare il consenso e il trattamento dei vostri dati.",
                 "references": {
-                    "ref1": "http://trapeze-project.eu/",
-                    "ref2": "https://ec.europa.eu/info/research-and-innovation/funding/funding-opportunities/funding-programmes-and-open-calls/horizon-2020_en"
                 }
             }
         }

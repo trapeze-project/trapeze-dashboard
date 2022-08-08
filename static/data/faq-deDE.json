@@ -1,6 +1,12 @@
 {
     "TRAPEZE": {
         "qnas": {
+            "qna0":{
+                "question": "What is the TRAPEZE Privacy Dashboard?",
+                "answer": "",
+                "references": {
+                }
+              },
             "qna1": {
                 "question": "Was ist TRAPEZE?",
                 "answer": "TRAPEZE ist ein von der Europ\u00e4ischen Union finanziertes Forschungsprojekt. TRAPEZE ist ein Akronym f\u00fcr \"TRAnsparency, Privacy and security for European citiZEns\". TRAPEZE ist Teil des F\u00f6rderprogramms Horizon2020 der Europ\u00e4ischen Union. Das dreij\u00e4hrige Projekt wurde zwischen September 2020 und August 2023 durchgef\u00fchrt.",
@@ -42,8 +48,6 @@
                 "question": "Warum verwenden Sie das TRAPEZE Datenschutz-Dashboard?",
                 "answer": "Das TRAPEZE-Datenschutz-Dashboard ist eine Software, die Datenverantwortliche wie wir nutzen k\u00f6nnen, um Ihnen zu verdeutlichen, wie und wof\u00fcr wir Ihre personenbezogenen Daten verarbeiten. Wir nutzen eine an uns zugeschnittene Version des TRAPEZE-Datenschutz-Dashbaord. Es ist f\u00fcr alle Beteiligten einfacher, wenn sich die f\u00fcr die Datenverantwortlichen (wir) und die betroffenen Personen (Sie) dar\u00fcber einig sind, wie die Einwilligung und die Verarbeitung Ihrer Daten kommuniziert werden sollen.",
                 "references": {
-                    "ref1": "http://trapeze-project.eu/",
-                    "ref2": "https://ec.europa.eu/info/research-and-innovation/funding/funding-opportunities/funding-programmes-and-open-calls/horizon-2020_en"
                 }
             }
         }
