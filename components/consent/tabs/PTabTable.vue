@@ -24,14 +24,14 @@
     <PWarnings
       v-if="view.showPDetails && this.warnings.toString() && this.modifiedWarnings[this.view.selected.untranslated]&& Object.keys(this.modifiedWarnings[this.view.selected.untranslated]).length"
       id="PWarnings"
-      :tabName="tabName"
+      :tab-name="tabName"
       :selected-warnings="modifiedWarnings[this.view.selected.untranslated]"
       :parent="this.view.selected.untranslated"
       @ignoreWarning="ignoreWarning"
       @changeUserChoice="changeUserChoice"
       @saveState="saveState"
     />
-<!-- :key="this.view.selected.untranslated" -->
+    <!-- :key="this.view.selected.untranslated" -->
     <PDetails
       v-if="view.showPDetails"
       id="PDetails"
@@ -67,10 +67,10 @@ export default {
     },
     userChoices: {
       type: Object,
-      required: false,
+      required: false
     },
     warnings: {
-      required: false,
+      required: false
     }
   },
   data () {
@@ -91,24 +91,6 @@ export default {
       consentHelperUserChoices: '',
       modifiedWarnings: '',
       states: []
-    }
-  },
-  watch:{
-    userChoices:{
-      handler: function(new_value, old_value){
-        if(JSON.stringify(new_value) !== JSON.stringify(old_value)){
-          this.modifiedUserChoices = new_value;
-        }
-      },
-      deep:true
-    },
-    warnings:{
-      handler: function(new_value, old_value){
-        if(JSON.stringify(new_value) !== JSON.stringify(old_value)){
-          this.modifiedWarnings = new_value;
-        }
-      },
-      deep:true
     }
   },
   computed: {
@@ -133,10 +115,13 @@ export default {
           obj.recipient = 'Company A'
           if (this.warnings.toString() && this.modifiedWarnings[dataCategory]) {
             const issuesCounter = Object.keys(this.modifiedWarnings?.[dataCategory])?.length
-            obj.issue = issuesCounter + ' ' + this.$t('consent.issues')
+            if (issuesCounter === 1) {
+              obj.issue = issuesCounter + ' ' + this.$t('consent.issue')
+            }else{
+              obj.issue = issuesCounter + ' ' + this.$t('consent.issues')
+            }
           } else {
             obj.issue = '0 ' + this.$t('consent.issues')
-            
           }
           result.push(obj)
         }
@@ -148,7 +133,11 @@ export default {
           obj.data = this.imports.purposeMap[purpose].map((item) => { return this.$t(item) }).join(', ')
           if (this.warnings.toString() && this.modifiedWarnings[purpose]) {
             const issuesCounter = Object.keys(this.modifiedWarnings?.[purpose])?.length
-            obj.issue = issuesCounter + ' ' + this.$t('consent.issues')
+            if (issuesCounter === 1) {
+              obj.issue = issuesCounter + ' ' + this.$t('consent.issue')
+            }else{
+              obj.issue = issuesCounter + ' ' + this.$t('consent.issues')
+            }
           } else {
             obj.issue = '0 ' + this.$t('consent.issues')
           }
@@ -161,6 +150,24 @@ export default {
       if (this.view.selected !== '') {
         return JSON.parse(JSON.stringify(this.modifiedUserChoices[this.view.selected.untranslated]))
       }
+    }
+  },
+  watch: {
+    userChoices: {
+      handler (new_value, old_value) {
+        if (JSON.stringify(new_value) !== JSON.stringify(old_value)) {
+          this.modifiedUserChoices = new_value
+        }
+      },
+      deep: true
+    },
+    warnings: {
+      handler (new_value, old_value) {
+        if (JSON.stringify(new_value) !== JSON.stringify(old_value)) {
+          this.modifiedWarnings = new_value
+        }
+      },
+      deep: true
     }
   },
   created () {
@@ -183,12 +190,12 @@ export default {
     if (this.tabName === 'purpose') {
       this.modifiedUserChoices = JSON.parse(JSON.stringify(this.userChoices))
       if (this.$route.params.consentHelperUserChoices) {
-        this.modifiedWarnings = this.warnings;
+        this.modifiedWarnings = this.warnings
       }
     } else if (this.tabName === 'data') {
       this.modifiedUserChoices = JSON.parse(JSON.stringify(this.userChoices))
       if (this.$route.params.consentHelperUserChoices) {
-        this.modifiedWarnings = this.warnings;
+        this.modifiedWarnings = this.warnings
       }
     }
   },
@@ -253,7 +260,7 @@ export default {
     },
     fixWarningIfExist (parent, child, newConsentValue) {
       if (this.warnings.toString()) {
-        if (['consent-helper.not-comfortable', 'consent-helper.no-opinion'].includes(this.modifiedWarnings?.[parent]?.[child]?.["consentHelperChoice"])) {
+        if (['consent-helper.not-comfortable', 'consent-helper.no-opinion'].includes(this.modifiedWarnings?.[parent]?.[child]?.consentHelperChoice)) {
           if (newConsentValue === false) {
             if (this.modifiedWarnings[parent][child]) {
               this.ignoreWarning(parent, child)
@@ -308,4 +315,3 @@ export default {
   }
 }
 </script>
-

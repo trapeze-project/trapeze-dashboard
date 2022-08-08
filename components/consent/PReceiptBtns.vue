@@ -4,7 +4,7 @@
       {{ $t("btn.labels.undo-last-change") }}
     </v-btn>
     <!-- <v-btn class="mx-3">{{$t("btn.labels.see-changes")}}</v-btn> -->
-    <v-btn class="black--text" color="primary" @click="submitChanges">
+    <v-btn class="black--text" :disabled="disableUndoLastChangeBtn" color="primary" @click="submitChanges">
       {{ $t("btn.labels.submit-changes") }}
     </v-btn>
   </div>
@@ -14,8 +14,8 @@
 export default {
   props: {
     disableUndoLastChangeBtn: {
-      type: Boolean,
-    }
+      type: Boolean
+    },
   },
   methods: {
     undoLastChange () {

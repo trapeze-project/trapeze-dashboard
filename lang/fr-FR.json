@@ -51,7 +51,8 @@
             "ignore": "Ignorer",
             "ignore-all": "Ignorer tout",
             "view": "Voir",
-            "visit-website": "Visitez le site web"
+            "visit-website": "Visitez le site web",
+            "leave-anyway":"partir quand même"
         }
     },
     "snackbar": {
@@ -152,6 +153,11 @@
             "sensitivityHeader": "Quel est le degr\u00e9 de sensibilit\u00e9 de ces donn\u00e9es pour vous ?"
         }
     },
+    "PAlertLeaveDialog":{
+        "dialog-title":"Voulez-vous vraiment quitter cette page ?",
+        "lose-changes-warning":"Vous devez soumettre vos choix.",
+        "lose-consent-helper-choices":"Vos choix d'assistant de consentement seront perdus si vous quittez cette page."
+    },
     "consent": {
         "consent-menu": "Menu Consentement",
         "title": "Assistant de Consentement",
@@ -174,6 +180,7 @@
         "warning-msg-not-comfortable":"Vous avez autorisé le responsable du traitement à utiliser vos données {dataCategory} à des fins {purpose}. cependant, votre sélection de l'assistant de consentement était inconfortable.",
         "warning-msg-no-opinion":"Vous avez autorisé le responsable du traitement à utiliser vos données {dataCategory} à des fins {purpose}. Cependant, vous avez fait un choix impartial avec Consent Assistant.",
         "issues": "probl\u00e8mes",
+        "issue": "probl\u00e8m",
         "data-category": "Cat\u00e9gorie de donn\u00e9es",
         "tab": {
             "labels": {
@@ -214,7 +221,7 @@
                     "values": {
                         "data": "Les Donn\u00e9es",
                         "purposes": "Scopi",
-                        "issue": "Problemi"
+                        "issue": "Probl\u00e8me"
                     }
                 },
                 "footer": {

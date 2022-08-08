@@ -51,7 +51,8 @@
             "ignore": "Ignora",
             "ignore-all": "Ignora tutto",
             "view": "Visualizza",
-            "visit-website": "Visita il sito web"
+            "visit-website": "Visita il sito web",
+            "leave-anyway":"vattene comunque"
         }
     },
     "snackbar": {
@@ -151,6 +152,11 @@
             "sensitivityHeader": "Quanto sono sensibili questi dati per voi?"
         }
     },
+    "PAlertLeaveDialog":{
+        "dialog-title":"Sei sicuro di voler lasciare questa pagina?",
+        "lose-changes-warning":"Devi inviare le tue scelte.",
+        "lose-consent-helper-choices":"Se esci da questa pagina, le tue scelte per l'assistente per il consenso andranno perse."
+    },
     "consent": {
         "consent-menu": "Menu del Consenso",
         "title": "Assistente al Consenso",
@@ -173,6 +179,7 @@
         "warning-msg-not-comfortable":"Hai concesso al titolare del trattamento l'autorizzazione a utilizzare i tuoi dati {dataCategory} per scopi {purpose}. tuttavia, la tua selezione dell'Assistente per il consenso è stata scomoda.",
         "warning-msg-no-opinion":"Hai concesso al titolare del trattamento l'autorizzazione a utilizzare i tuoi dati {dataCategory} per scopi {scopo}. Tuttavia, hai fatto una scelta imparziale con Consent Assistant.",
         "issues": "problemi",
+        "issue": "problem",
         "tab": {
             "labels": {
                 "consent": "Consenso",

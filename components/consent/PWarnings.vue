@@ -45,8 +45,6 @@
       </v-btn>
     </div>
     <br>
-    <div>{{this.parent}}</div>
-    <div>{{this.selectedWarnings}}</div>
   </div>
 </template>
 
@@ -55,7 +53,7 @@ export default {
   props: {
     selectedWarnings: Object,
     parent: String,
-    tabName:String
+    tabName: String
   },
   methods: {
     closeWarnig (child) {

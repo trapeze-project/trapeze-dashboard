@@ -51,7 +51,8 @@
             "ignore": "Ignore",
             "ignore-all": "Ignore All",
             "view": "View",
-            "visit-website": "Visit Website"
+            "visit-website": "Visit Website",
+            "leave-anyway":"leave anyway"
         }
     },
     "snackbar": {
@@ -152,6 +153,11 @@
             "sensitivityHeader": "How sensitive is this data to you?"
         }
     },
+    "PAlertLeaveDialog":{
+        "dialog-title":"Are you sure you want to leave this page?",
+        "lose-changes-warning":"You need to submit your choices.",
+        "lose-consent-helper-choices":"Your consent helper choices will be lost if you leave this page."
+    },
     "consent": {
         "consent-menu": "Consent Menu",
         "title": "Consent Assistant",
@@ -173,6 +179,7 @@
         "warning-msg-not-comfortable":"You have granted permission for the data controller to use your {dataCategory} data for {purpose} purposes. however, your selection of the Consent Assistant was uncomfortable.",
         "warning-msg-no-opinion":"You have granted permission for the data controller to use your {dataCategory} data for {purpose} purposes. However, you made an unbiased choice with Consent Assistant.",
         "issues": "issues",
+        "issue": "issue",
         "tab": {
             "labels": {
                 "consent": "Consent",

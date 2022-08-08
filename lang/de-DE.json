@@ -51,7 +51,8 @@
             "ignore": "Ignorieren",
             "ignore-all": "Alle ignorieren",
             "view": "Ansehen",
-            "visit-website": "Webseite besuchen"
+            "visit-website": "Webseite besuchen",
+            "leave-anyway":"sowieso verlassen"
         }
     },
     "snackbar": {
@@ -152,6 +153,11 @@
             "sensitivityHeader": "Wie sensibel sind diese Daten f\u00fcr Sie?"
         }
     },
+    "PAlertLeaveDialog":{
+        "dialog-title":"Möchten Sie diese Seite wirklich verlassen?",
+        "lose-changes-warning":"Sie müssen Ihre Auswahl einreichen.",
+        "lose-consent-helper-choices":"Ihre Auswahlmöglichkeiten für die Einwilligungshilfe gehen verloren, wenn Sie diese Seite verlassen."
+    },
     "consent": {
         "consent-menu": "\u00dcbersicht",
         "title": "Einwilligungsassistent",
@@ -174,6 +180,7 @@
         "warning-msg-not-comfortable":"Sie haben dem Datenverantwortlichen die Erlaubnis erteilt, Ihre {dataCategory}-Daten für {purpose}-Zwecke zu verwenden. Ihre Auswahl des Zustimmungsassistenten war jedoch unbequem.",
         "warning-msg-no-opinion":"Sie haben dem Datenverantwortlichen die Erlaubnis erteilt, Ihre {dataCategory}-Daten für {purpose}-Zwecke zu verwenden. Mit Consent Assistant haben Sie jedoch eine unvoreingenommene Wahl getroffen.",
         "issues": "Konflikte",
+        "issue": "Konflikt",
         "tab": {
             "labels": {
                 "consent": "Einwilligungen",
@@ -212,7 +219,8 @@
                 "header": {
                     "values": {
                         "data": "Daten",
-                        "purposes": "Zwecke"
+                        "purposes": "Zwecke",
+                        "issue": "Konflikte"
                     }
                 },
                 "footer": {
