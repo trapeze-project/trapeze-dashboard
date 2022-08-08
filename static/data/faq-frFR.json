@@ -1,50 +1,52 @@
 {
-    "TRAPEZE":{
+   
+    "TRAPEZE": {
         "qnas": {
-          "qna1":{
-            "question": "What can I do on the TRAPEZE privacy dashboard?",
-            "answer": "The TRAPEZE privacy dashboard is a piece of software that data controllers like us (${we}) can use to make clear to you how and for what we process your personal data. \n \n On the TRAPEZE privacy dashboard, you can see our active privacy policy and when we collected consent from you. Specifically, you can see how we process your data and what for. You can limit our processing of your data by revoking consent, or broaden the scope of our processing giving us consent to improve the service we provide to you.\n \n You have further questions about us processing your data? Please do not hesitate to contact us through the Contact Button in the banner on the right-hand side. ",
-            "references": { }
-           },
-           "qna2":{
-            "question": "Who is responsible for the information on this dashboard?",
-            "answer": "If you see our (${we}) company information in the banner on the right-hand side, the information shown in the TRAPEZE privacy dashboard is povided by us. In later versions of the dashboard, you will be able to change between distinct data controllers like us to whom you gave consent.",
-            "references": { }
-           },
-          "qna5":{
-            "question": "Why do you (${we}) use the TRAPEZE privacy dashboard?",
-            "answer": "We (${we}) use the TRAPEZE privacy dashboard to allow you to better understand what we do with your data. Through the TRAPEZE privacy dashboard, we can learn whether you generally like that we process your data or, perhaps, only for specific purposes. \n \n We aim to align our current processing of your data to how you actually like your data to be processed.",
-            "references": {
+            "qna1": {
+                "question": "Que puis-je faire sur le TRAPEZE tableau de bord de confidentialité?",
+                "answer": "Le TRAPEZE tableau de bord de confidentialité est un logiciel que les responsables du traitement des données comme nous (${we}) peuvent utiliser pour vous expliquer clairement comment et pour quoi nous traitons vos données personnelles. \n \n Sur le TRAPEZE tableau de bord de confidentialité, vous pouvez voir notre politique de confidentialité active et le moment où nous avons recueilli votre consentement. Plus précisément, vous pouvez voir comment nous traitons vos données et dans quel but. Vous pouvez limiter notre traitement de vos données en révoquant votre consentement, ou élargir la portée de notre traitement en nous donnant votre consentement pour améliorer le service que nous vous fournissons.\n \n Vous avez d'autres questions sur le traitement de vos données par nos soins ? N'hésitez pas à nous contacter par le biais du bouton Contact dans la bannière à droite.",
+                "references": {                }
+            },
+            "qna2": {
+                "question": "Qui est responsable des informations contenues dans ce tableau de bord?",
+                "answer": "Si vous voyez les informations sur notre société (${we}) dans la bannière de droite, les informations affichées dans le TRAPEZE tableau de bord de confidentialité sont fournies par nous. Dans les versions ultérieures du tableau de bord, vous pourrez changer entre les différents responsables de données, comme nous, auxquels vous avez donné votre consentement.",
+                "references": {
+                }
+            },
+            "qna3": {
+                "question": "Pourquoi utilisez-vous (${we}) le TRAPEZE tableau de bord de confidentialité?",
+                "answer": "Nous (${we}) utilisons le TRAPEZE tableau de bord de confidentialité pour vous permettre de mieux comprendre ce que nous faisons de vos données. Grâce au tableau de bord de confidentialité TRAPEZE, nous pouvons savoir si vous aimez généralement que nous traitions vos données ou, peut-être, seulement à des fins spécifiques. \n \n Notre objectif est d'aligner le traitement actuel de vos données sur la manière dont vous souhaitez qu'elles soient traitées.",
+                "references": {
+                }
+            },
+            "qna4": {
+                "question": "Qui a développé le TRAPEZE tableau de bord de confidentialité?",
+                "answer": "TRAPEZE est un projet de recherche financé par l'Union européenne. TRAPEZE est un acronyme pour \"TRAnsparency, Privacy and security for European citiZEns\". \n \n TRAPEZE s'inscrit dans le cadre du programme de financement Horizon2020 de l'Union européenne. Le projet, d'une durée de 3 ans, a été mené entre septembre 2020 et août 2023. Le consortium du projet TRAPEZE est composé des 13 partenaires suivants : (1.) TenForce BVBA, (2.)GEIE ERCIM, (3.)Technische Universität Berlin, (4.) VLAAMSE GEWEST, (5.) Deutsche Telekom AG, (6.) CaixaBank SA, (7.) Consorzio Interuniversitario Nazionale Per L'Informatica, (8.) Unabhängiges Landeszentrum für Datenschutz, (9.) Kaspersky Lab Italia SRL, (10.) Institut Mihajlo Pupin, (11.) IPSOS NV, (12.) Athens Technology Center Anonymi Biomichaniki Emporiki Kai Techniki Etaireia Efarmogon Ypsilis Technologias, (13.) E-Seniors: Initiation des Séniors Aux NTIC Association.",
+                "references": { 
+                    "ref1": "http://trapeze-project.eu/",
+                    "ref2": "https://ec.europa.eu/info/research-and-innovation/funding/funding-opportunities/funding-programmes-and-open-calls/horizon-2020_en",
+                    "ref3": "https://www.tenforce.com/",
+                    "ref4": "https://www.ercim.eu/",
+                    "ref5": "https://www.tu.berlin/",
+                    "ref6": "https://www.vlaanderen.be/",
+                    "ref7": "https://www.telekom.de/",
+                    "ref8": "https://www.caixabank.com/",
+                    "ref9": "https://www.consorzio-cini.it/",
+                    "ref10": "https://www.datenschutzzentrum.de/",
+                    "ref11": "https://www.kaspersky.it/",
+                    "ref12": "https://www.pupin.rs/",
+                    "ref13": "https://www.ipsos.com/",
+                    "ref14": "https://www.atc.gr/",
+                    "ref15": "https://www.eseniors.eu/"
+                }
             }
-          }
-        },
-        "qna3":{
-          "question": "Who has developed the TRAPEZE privacy dashboard?",
-          "answer": "TRAPEZE is a research project funded by the European Union. TRAPEZE is an acronym for \"TRAnsparency, Privacy and security for European citiZEns\". \n \n TRAPEZE is part of the European Union's Horizon2020 funding programme. The 3-year project was conducted between September 2020 and August 2023. The TRAPEZE project consortium consists of the following 13 partners: (1.) TenForce BVBA, (2.)GEIE ERCIM, (3.)Technische Universität Berlin, (4.) VLAAMSE GEWEST, (5.) Deutsche Telekom AG, (6.) CaixaBank SA, (7.) Consorzio Interuniversitario Nazionale Per L'Informatica, (8.) Unabhängiges Landeszentrum für Datenschutz, (9.) Kaspersky Lab Italia SRL, (10.) Institut Mihajlo Pupin, (11.) IPSOS NV, (12.) Athens Technology Center Anonymi Biomichaniki Emporiki Kai Techniki Etaireia Efarmogon Ypsilis Technologias, (13.) E-Seniors: Initiation des Séniors Aux NTIC Association.",
-          "references": {
-            "ref1" :"http://trapeze-project.eu/",
-            "ref2" :"https://ec.europa.eu/info/research-and-innovation/funding/funding-opportunities/funding-programmes-and-open-calls/horizon-2020_en",
-            "ref3":"https://www.tenforce.com/",
-            "ref4":"https://www.ercim.eu/",
-            "ref5":"https://www.tu.berlin/",
-            "ref6":"https://www.vlaanderen.be/",
-            "ref7":"https://www.telekom.de/",
-            "ref8":"https://www.caixabank.com/",
-            "ref9":"https://www.consorzio-cini.it/",
-            "ref10":"https://www.datenschutzzentrum.de/",
-            "ref11":"https://www.kaspersky.it/",
-            "ref12":"https://www.pupin.rs/",
-            "ref13":"https://www.ipsos.com/",
-            "ref14":"https://www.atc.gr/",
-            "ref15":"https://www.eseniors.eu/"
-          }
         }
-      },
+    },
     "Consentement": {
         "qnas": {
             "qna1": {
                 "question": "Qu'est-ce que le consentement ?",
-                "answer": "Selon le RGPD (Art. 4 (11)), le consentement est une action affirmative claire envers un contr\u00f4leur de donn\u00e9es (nous) pour traiter vos donn\u00e9es personnelles. Notez que les responsables du traitement des donn\u00e9es (nous) ne doivent pas toujours recueillir votre consentement pour traiter vos donn\u00e9es personnelles. Par exemple, un service de livraison doit traiter votre adresse pour se conformer \u00e0 son ordre de livraison. Il n'a pas besoin de recueillir votre consentement.",
+                "answer": "Selon le RGPD (Art. 4 (11)), le consentement est une action affirmative claire envers un responsable de donn\u00e9es (nous) pour traiter vos donn\u00e9es personnelles. Notez que les responsables du traitement des donn\u00e9es (nous) ne doivent pas toujours recueillir votre consentement pour traiter vos donn\u00e9es personnelles. Par exemple, un service de livraison doit traiter votre adresse pour se conformer \u00e0 son ordre de livraison. Il n'a pas besoin de recueillir votre consentement.",
                 "references": {
                     "ref1": "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX%3A32016R0679"
                 }
@@ -122,7 +124,7 @@
         "qnas": {
             "qna1": {
                 "question": "Consentement",
-                "answer": "Selon le RGPD (Art. 4 (11)), le consentement est l'affirmation claire d'une personne concern\u00e9e (votre) envers un contr\u00f4leur de donn\u00e9es (nous) pour traiter vos donn\u00e9es personnelles. Notez que les responsables du traitement des donn\u00e9es (nous) ne doivent pas toujours recueillir le consentement des personnes concern\u00e9es (vous) pour traiter les donn\u00e9es personnelles. Par exemple, un service de livraison doit traiter l'adresse d'une personne concern\u00e9e (vous) afin de respecter un ordre de livraison. Dans ce cas, les responsables du traitement des donn\u00e9es (nous) n'ont pas besoin de recueillir le consentement.",
+                "answer": "Selon le RGPD (Art. 4 (11)), le consentement est l'affirmation claire d'une personne concern\u00e9e (votre) envers un responsable de donn\u00e9es (nous) pour traiter vos donn\u00e9es personnelles. Notez que les responsables du traitement des donn\u00e9es (nous) ne doivent pas toujours recueillir le consentement des personnes concern\u00e9es (vous) pour traiter les donn\u00e9es personnelles. Par exemple, un service de livraison doit traiter l'adresse d'une personne concern\u00e9e (vous) afin de respecter un ordre de livraison. Dans ce cas, les responsables du traitement des donn\u00e9es (nous) n'ont pas besoin de recueillir le consentement.",
                 "references": {
                     "ref1": "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX%3A32016R0679"
                 }
@@ -136,14 +138,14 @@
             },
             "qna3": {
                 "question": "Responsable du Traitement",
-                "answer": "Selon le RGPD (Art. 4 (7)), les responsables du traitement des donn\u00e9es (nous) doivent indiquer clairement aux personnes concern\u00e9es (vous) comment et \u00e0 quelles fins ils traitent les donn\u00e9es personnelles. Les responsables du traitement des donn\u00e9es sont souvent uniquement appel\u00e9s \"contr\u00f4leurs\".",
+                "answer": "Selon le RGPD (Art. 4 (7)), les responsables du traitement des donn\u00e9es (nous) doivent indiquer clairement aux personnes concern\u00e9es (vous) comment et \u00e0 quelles fins ils traitent les donn\u00e9es personnelles. Les responsables du traitement des donn\u00e9es sont souvent uniquement appel\u00e9s \"responsables\".",
                 "references": {
                     "ref1": "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX%3A32016R0679"
                 }
             },
             "qna4": {
                 "question": "Sous-traitant",
-                "answer": "Selon le RGPD (Art. 4 (8)), les processeurs de donn\u00e9es traitent vos donn\u00e9es personnelles. Les processeurs de donn\u00e9es et les contr\u00f4leurs de donn\u00e9es (nous) peuvent \u00eatre une seule et m\u00eame personne, mais pas n\u00e9cessairement. Si ce n'est pas le cas, les contr\u00f4leurs de donn\u00e9es (nous) ne disent g\u00e9n\u00e9ralement ni la finalit\u00e9 du traitement ni quelles donn\u00e9es personnelles doivent \u00eatre trait\u00e9es par le sous-traitant de donn\u00e9es. Les sous-traitants de donn\u00e9es sont souvent uniquement appel\u00e9s \"sous-traitants\".",
+                "answer": "Selon le RGPD (Art. 4 (8)), les processeurs de donn\u00e9es traitent vos donn\u00e9es personnelles. Les processeurs de donn\u00e9es et les responsables de donn\u00e9es (nous) peuvent \u00eatre une seule et m\u00eame personne, mais pas n\u00e9cessairement. Si ce n'est pas le cas, les responsables de donn\u00e9es (nous) ne disent g\u00e9n\u00e9ralement ni la finalit\u00e9 du traitement ni quelles donn\u00e9es personnelles doivent \u00eatre trait\u00e9es par le sous-traitant de donn\u00e9es. Les sous-traitants de donn\u00e9es sont souvent uniquement appel\u00e9s \"sous-traitants\".",
                 "references": {
                     "ref1": "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX%3A32016R0679"
                 }
@@ -157,7 +159,7 @@
             },
             "qna6": {
                 "question": "Destinataire",
-                "answer": "Selon le RGPD (Art. 4 (9)), toute personne \u00e0 laquelle les donn\u00e9es personnelles d'un sujet (votre) sont divulgu\u00e9es est un destinataire de donn\u00e9es. Les destinataires de donn\u00e9es sont g\u00e9n\u00e9ralement des contr\u00f4leurs de donn\u00e9es et des processeurs de donn\u00e9es. Les destinataires de donn\u00e9es sont souvent uniquement appel\u00e9s \"destinataires\".",
+                "answer": "Selon le RGPD (Art. 4 (9)), toute personne \u00e0 laquelle les donn\u00e9es personnelles d'un sujet (votre) sont divulgu\u00e9es est un destinataire de donn\u00e9es. Les destinataires de donn\u00e9es sont g\u00e9n\u00e9ralement des responsables de donn\u00e9es et des processeurs de donn\u00e9es. Les destinataires de donn\u00e9es sont souvent uniquement appel\u00e9s \"destinataires\".",
                 "references": {
                     "ref1": "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX%3A32016R0679"
                 }
@@ -213,7 +215,7 @@
             },
             "qna14": {
                 "question": "Tiers",
-                "answer": "Selon le RGPD (Art. 4 (10)), les tiers sont directement autoris\u00e9s par les contr\u00f4leurs de donn\u00e9es (nous) et/ou les processeurs de donn\u00e9es \u00e0 traiter les donn\u00e9es personnelles.",
+                "answer": "Selon le RGPD (Art. 4 (10)), les tiers sont directement autoris\u00e9s par les responsables de donn\u00e9es (nous) et/ou les processeurs de donn\u00e9es \u00e0 traiter les donn\u00e9es personnelles.",
                 "references": {
                     "ref1": "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX%3A32016R0679"
                 }
