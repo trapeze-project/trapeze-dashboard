@@ -1,0 +1,15 @@
+{
+    "company-information": {
+        "name": "Company Name",
+        "add1": "Company Name Street",
+        "add2": "123456, Company Name City, Italy",
+        "website": "https://company.name.com",
+        "email": "name@company.name.com",
+        "contact": "Contact",
+        "position": "Data Protection Officer (DPO)",
+        "pos-name": "Data Protection Officer Name"
+    },
+    "faqParamsToInterpolate":{
+        "we":"CompanyTrapeze"
+    }
+}
