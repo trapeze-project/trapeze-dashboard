@@ -56,7 +56,7 @@
                   $expand
                 </v-icon>
               </template>
-              <span class="header" style="white-space:pre-line">{{ category }}</span>
+              <span class="header" style="white-space:pre-line">{{ category.interpolate(faqParams) }}</span>
             </v-expansion-panel-header>
             <v-expansion-panel-content>
               <v-expansion-panels flat>
@@ -71,13 +71,13 @@
                       </v-icon>
                     </template>
                     <span class="header" style="white-space:pre-line">{{
-                      faq[category]['qnas'][qna].question
+                      faq[category]['qnas'][qna].question.interpolate(faqParams)
                     }}</span>
                   </v-expansion-panel-header>
 
                   <v-expansion-panel-content>
                     <p style="white-space:pre-line">
-                      {{ faq[category]['qnas'][qna].answer }}
+                      {{ faq[category]['qnas'][qna].answer.interpolate(faqParams) }}
                     </p>
                     <div
                       v-if="Object.values(faq[category]['qnas'][qna].references).length"
@@ -114,7 +114,8 @@ export default {
       faq: '',
       userQuestion: '',
       matchedQNA: '',
-      searching: false
+      searching: false,
+      faqParams:{we:"CompanyTrapeze"}
 
     }
   },
@@ -126,6 +127,12 @@ export default {
     }
   },
   created () {
+    String.prototype.interpolate = function(params) {
+      const names = Object.keys(params);
+      const values = Object.values(params);
+      return new Function(...names, `return \`${this}\`;`)(...values);
+    }
+
     if (this.$i18n.locale === 'en') {
       this.faq = faqEnUS
     } else if (this.$i18n.locale === 'de') {
