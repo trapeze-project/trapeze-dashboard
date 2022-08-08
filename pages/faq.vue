@@ -28,9 +28,9 @@
         </v-row>
 
         <v-card v-if="searching">
-          <v-card-title>{{ this.matchedQNA.question }}</v-card-title>
+          <v-card-title>{{ this.matchedQNA.question.interpolate(faqParams) }}</v-card-title>
           <v-card-text>
-            <div>{{ this.matchedQNA.answer }}</div>
+            <div>{{ this.matchedQNA.answer.interpolate(faqParams) }}</div>
           </v-card-text>
           <v-card-actions>
             <div v-if="Object.values(matchedQNA.references).length">
@@ -56,7 +56,7 @@
                   $expand
                 </v-icon>
               </template>
-              <span class="header">{{ category }}</span>
+              <span class="header" style="white-space:pre-line">{{ category.interpolate(faqParams) }}</span>
             </v-expansion-panel-header>
             <v-expansion-panel-content>
               <v-expansion-panels flat>
@@ -70,14 +70,14 @@
                         $expand
                       </v-icon>
                     </template>
-                    <span class="header">{{
-                      faq[category]['qnas'][qna].question
+                    <span class="header" style="white-space:pre-line">{{
+                      faq[category]['qnas'][qna].question.interpolate(faqParams)
                     }}</span>
                   </v-expansion-panel-header>
 
                   <v-expansion-panel-content>
-                    <p>
-                      {{ faq[category]['qnas'][qna].answer }}
+                    <p style="white-space:pre-line">
+                      {{ faq[category]['qnas'][qna].answer.interpolate(faqParams) }}
                     </p>
                     <div
                       v-if="Object.values(faq[category]['qnas'][qna].references).length"
@@ -106,6 +106,7 @@ import faqEnUS from '../static/data/faq-enUS.json'
 import faqDeDE from '../static/data/faq-deDE.json'
 import faqItIT from '../static/data/faq-itIT.json'
 import faqFrFR from '../static/data/faq-frFR.json'
+import controller from '../static/data/controller.json'
 
 export default {
   name: 'Faq',
@@ -114,7 +115,8 @@ export default {
       faq: '',
       userQuestion: '',
       matchedQNA: '',
-      searching: false
+      searching: false,
+      faqParams:{}
 
     }
   },
@@ -126,6 +128,14 @@ export default {
     }
   },
   created () {
+    this.faqParams = controller.faqParamsToInterpolate;
+
+    String.prototype.interpolate = function(params) {
+      const names = Object.keys(params);
+      const values = Object.values(params);
+      return new Function(...names, `return \`${this}\`;`)(...values);
+    }
+
     if (this.$i18n.locale === 'en') {
       this.faq = faqEnUS
     } else if (this.$i18n.locale === 'de') {

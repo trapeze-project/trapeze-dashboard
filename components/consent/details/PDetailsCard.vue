@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-card class="mr-4">
+    <v-card class="mr-4 mx-2">
       <v-card-title>
         {{ $t(categoryName) }}
       </v-card-title>

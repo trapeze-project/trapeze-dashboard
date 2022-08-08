@@ -57,6 +57,7 @@ export default {
       if (this.href.startsWith('http')) {
         this.btnLabel = this.$t('btn.labels.visit-website');
         this.btnProps.href = this.href;
+        this.btnProps.target="_blank"
       } else {
         this.btnLabel = this.$t('btn.labels.view');
         this.btnProps.to = this.localePath(this.href);

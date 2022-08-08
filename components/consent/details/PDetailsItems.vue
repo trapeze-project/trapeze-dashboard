@@ -18,10 +18,10 @@
           >
             <template #item.name="{ item }">
               <v-row align="center" justify="center">
-                <v-col class="fill-height" cols="9">
-                  {{ $t(item.name) }}
+                <v-col style="min-width: 100px">
+                  <p align="left" class="mt-4">{{ $t(item.name) }}</p>
                 </v-col>
-                <v-col cols="3">
+                <v-col style="margin-left: 120px">
                   <v-switch v-model="localSwitchValues[item.name]" @change="changeUserChoice(item.name)" />
                 </v-col>
               </v-row>

@@ -2,11 +2,11 @@
   <v-dialog
     v-model="dialog"
     persistent
-    max-width="350"
+    max-width="320"
   >
-    <v-card class="alertCard">
-      <v-card-title class="text-h5 " style="word-break:break-word">
-        <p class="">{{ this.$t("PAlertLeaveDialog.dialog-title") }}</p>
+    <v-card>
+      <v-card-title class="text-h5" style="word-break:break-word">
+        {{ this.$t("PAlertLeaveDialog.dialog-title") }}
       </v-card-title>
       <v-card-text v-html="this.alertBody" />
       <v-card-actions>
@@ -28,7 +28,6 @@
       </v-card-actions>
     </v-card>
   </v-dialog>
-
 </template>
 
 <script>
