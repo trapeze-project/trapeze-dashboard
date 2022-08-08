@@ -1,15 +1,14 @@
 {
     "TRAPEZE": {
         "qnas": {
-            "qna0":{
-                "question": "What is the TRAPEZE Privacy Dashboard?",
-                "answer": "",
-                "references": {
-                }
-              },
             "qna4": {
                 "question": "Was kann ich auf dem TRAPEZE-Datenschutz-Dashboard machen?",
                 "answer": "Auf dem TRAPEZE-Datenschutz-Dashboard k\u00f6nnen Sie unsere aktive Datenschutzerklärung einsehen und sehen, wann wir Ihre Einwilligung eingeholt haben. Insbesondere k\u00f6nnen Sie sehen, wie und wof\u00fcr wir Ihre Daten verarbeiten. Sie k\u00f6nnen sich an uns wenden, wenn Sie Fragen zur Verarbeitung Ihrer Daten durch uns haben. Sie k\u00f6nnen auch bequem Ihre Einwilligung widerrufen oder weitere Einwilligungen erteilen, um unseren Service zu verbessern, wenn Sie m\u00f6chten.",
+                "references": { }
+            },
+            "qna3": {
+                "question": "Who is responsible for the information on this dashboard?",
+                "answer": "Das TRAPEZE-Datenschutz-Dashboard wird von uns gehostet, dem Datenverantwortlichen, der im Banner auf der rechten Seite angezeigt wird.",
                 "references": { }
             },
             "qna1":{
@@ -33,11 +32,12 @@
                   "ref15":"https://www.eseniors.eu/"
                 }
               },
-            "qna3": {
-                "question": "Who is responsible for the information on this dashboard?",
-                "answer": "Das TRAPEZE-Datenschutz-Dashboard wird von uns gehostet, dem Datenverantwortlichen, der im Banner auf der rechten Seite angezeigt wird.",
-                "references": { }
-            },
+            "qna0":{
+                "question": "What is the TRAPEZE Privacy Dashboard?",
+                "answer": "",
+                "references": {
+                }
+              },
             "qna5": {
                 "question": "Warum verwenden Sie das TRAPEZE Datenschutz-Dashboard?",
                 "answer": "Das TRAPEZE-Datenschutz-Dashboard ist eine Software, die Datenverantwortliche wie wir nutzen k\u00f6nnen, um Ihnen zu verdeutlichen, wie und wof\u00fcr wir Ihre personenbezogenen Daten verarbeiten. Wir nutzen eine an uns zugeschnittene Version des TRAPEZE-Datenschutz-Dashbaord. Es ist f\u00fcr alle Beteiligten einfacher, wenn sich die f\u00fcr die Datenverantwortlichen (wir) und die betroffenen Personen (Sie) dar\u00fcber einig sind, wie die Einwilligung und die Verarbeitung Ihrer Daten kommuniziert werden sollen.",

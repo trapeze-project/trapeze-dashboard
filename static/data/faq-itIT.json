@@ -1,15 +1,14 @@
 {
     "TRAPEZE": {
         "qnas": {
-            "qna0":{
-                "question": "What is the TRAPEZE Privacy Dashboard?",
-                "answer": "",
-                "references": {
-                }
-              },
             "qna4": {
                 "question": "Cosa posso fare nel cruscotto della privacy di TRAPEZE?",
                 "answer": "Nel cruscotto sulla privacy di TRAPEZE \u00e8 possibile vedere la nostra politica sulla privacy attiva e quando abbiamo raccolto il consenso dell'utente. In particolare, \u00e8 possibile vedere come trattiamo i vostri dati e per quali scopi. Potete contattarci se avete domande sul trattamento dei vostri dati. Se lo desidera, pu\u00f2 anche revocare il consenso o darne un altro per migliorare il nostro servizio.",
+                "references": { }
+            },
+            "qna3": {
+                "question": "Who is responsible for the information on this dashboard?",
+                "answer": "Il cruscotto della privacy di TRAPEZE \u00e8 ospitato da noi, il responsabile del trattamento dei dati indicato nel banner a destra.",
                 "references": { }
             },
             "qna1":{
@@ -33,11 +32,12 @@
                   "ref15":"https://www.eseniors.eu/"
                 }
               },
-            "qna3": {
-                "question": "Who is responsible for the information on this dashboard?",
-                "answer": "Il cruscotto della privacy di TRAPEZE \u00e8 ospitato da noi, il responsabile del trattamento dei dati indicato nel banner a destra.",
-                "references": { }
-            },
+            "qna0":{
+                "question": "What is the TRAPEZE Privacy Dashboard?",
+                "answer": "",
+                "references": {
+                }
+              },
             "qna5": {
                 "question": "Perch\u00e9 si utilizza il cruscotto della privacy di TRAPEZE?",
                 "answer": "Il cruscotto per la privacy di TRAPEZE \u00e8 un software che i responsabili del trattamento dei dati come noi possono utilizzare per chiarire come e per cosa trattiamo i vostri dati personali. Noi utilizziamo il cruscotto per la privacy di TRAPEZE e lo personalizziamo. \u00c8 pi\u00f9 facile per tutti quando tutti i responsabili del trattamento dei dati (noi) e gli interessati (voi) concordano su come comunicare il consenso e il trattamento dei vostri dati.",
