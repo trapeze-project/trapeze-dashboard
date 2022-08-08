@@ -91,11 +91,11 @@
     "home": {
         "title": "Benvenuti sul vostro dashboard personale sulla privacy!",
         "explore-btn": "Visualizza",
-        "welcome-msg": "Noi di \"Nome Azienda\" desideriamo che l'utente comprenda come trattiamo i suoi dati personali.",
-        "welcome-msg2": "In questo dashboard \u00e8 possibile visualizzare quali dati personali trattiamo e per quali finalit\u00e0. Il cruscotto vi consente di limitare il trattamento dei vostri dati personali configurando il vostro consenso. \u00c8 possibile:",
-        "welcome-msg3": "Il menu in basso a sinistra offre una rapida panoramica delle pi\u00f9 recenti interazioni relative al consenso tra l'utente e noi.",
-        "welcome-msg4": "Se siete nuovi/e al dashboard sulla privacy:",
-        "purpose": {
+        "welcome-msg": "We at <WE-DUMMY> want you to understand how we process your personal data.",
+        "welcome-msg2": "In this dashboard, you can view what personal data we <WE-DUMMY> process and for which purposes. The dashboard allows you to limit our processing of your personal data by configuring your consent. You can:",
+        "welcome-msg3": "The menu in the bottom left gives you a quick overview of the most recent consent-related interactions between you and us <US-DUMMY>.",
+        "welcome-msg4": "If you are new to the privacy dashboard, we recommend you to try out the Consent Assistant.",
+         "purpose": {
             "0": {
                 "name": "annullare e dare consenso,"
             },

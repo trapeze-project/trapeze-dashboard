@@ -92,9 +92,9 @@
     "home": {
         "title": "Welcome to your personal privacy dashboard!",
         "explore-btn": "View",
-        "welcome-msg": "We at Company Name want you to understand how we process your personal data.",
-        "welcome-msg2": "In this dashboard, you can view what personal data we process and for which purposes. The dashboard allows you to limit our processing of your personal data by configuring your consent. You can:",
-        "welcome-msg3": "The menu in the bottom left gives you a quick overview of the most recent consent-related interactions between you and us.",
+        "welcome-msg": "We at <WE-DUMMY> want you to understand how we process your personal data.",
+        "welcome-msg2": "In this dashboard, you can view what personal data we <WE-DUMMY> process and for which purposes. The dashboard allows you to limit our processing of your personal data by configuring your consent. You can:",
+        "welcome-msg3": "The menu in the bottom left gives you a quick overview of the most recent consent-related interactions between you and us <US-DUMMY>.",
         "welcome-msg4": "If you are new to the privacy dashboard, we recommend you to try out the Consent Assistant.",
         "purpose": {
             "0": {

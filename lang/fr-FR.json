@@ -92,11 +92,11 @@
     "home": {
         "title": "Bienvenue dans votre tableau de bord de confidentialit\u00e9 personnel !",
         "explore-btn": "Voir",
-        "welcome-msg": "Chez Company Name, nous voulons que vous compreniez comment nous traitons vos donn\u00e9es personnelles.",
-        "welcome-msg2": "Dans ce tableau de bord, vous pouvez voir quelles donn\u00e9es personnelles nous traitons et \u00e0 quelles fins. Le tableau de bord vous permet de limiter notre traitement de vos donn\u00e9es personnelles en configurant votre consentement. Vous pouvez:",
-        "welcome-msg3": "Le menu en bas \u00e0 gauche vous donne un aper\u00e7u rapide des interactions les plus r\u00e9centes li\u00e9es au consentement entre vous et nous.",
-        "welcome-msg4": "Si vous d\u00e9butez dans le tableau de bord de confidentialit\u00e9, nous vous recommandons d'essayer l'Assistant de Consentement.",
-        "purpose": {
+        "welcome-msg": "We at <WE-DUMMY> want you to understand how we process your personal data.",
+        "welcome-msg2": "In this dashboard, you can view what personal data we <WE-DUMMY> process and for which purposes. The dashboard allows you to limit our processing of your personal data by configuring your consent. You can:",
+        "welcome-msg3": "The menu in the bottom left gives you a quick overview of the most recent consent-related interactions between you and us <US-DUMMY>.",
+        "welcome-msg4": "If you are new to the privacy dashboard, we recommend you to try out the Consent Assistant.",
+         "purpose": {
             "0": {
                 "name": "r\u00e9voquer et donner son consentement,"
             },

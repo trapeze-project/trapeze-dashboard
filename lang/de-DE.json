@@ -92,10 +92,10 @@
     "home": {
         "title": "Willkommen auf Ihrem pers\u00f6nlichen Datenschutz-Dashboard!",
         "explore-btn": "Ansehen",
-        "welcome-msg": "Wir bei Firmenname m\u00f6chten, dass Sie verstehen, wie wir Ihre personenbezogenen Daten verarbeiten.",
-        "welcome-msg2": "In diesem Dashboard k\u00f6nnen Sie einsehen, welche Ihrer personenbezogenen Daten wir verarbeiten und zu welchen Zwecken. Schr\u00e4nken Sie die Verarbeitung Ihrer personenbezogenen Daten ein, indem Sie Ihre Einwilligungen konfigurieren. Sie k\u00f6nnen:",
-        "welcome-msg3": "Das Men\u00fc unten links gibt Ihnen einen schnellen \u00dcberblick \u00fcber die letzten einwilligungsbezogenen Interaktionen zwischen Ihnen und uns.",
-        "welcome-msg4": "Wenn Sie mit dem TRAPEZE-Datenschutz-Dashboard noch nicht vertraut sind, empfehlen wir Ihnen, mit dem Einwilligungsassistenten zu beginnen.",
+        "welcome-msg": "We at <WE-DUMMY> want you to understand how we process your personal data.",
+        "welcome-msg2": "In this dashboard, you can view what personal data we <WE-DUMMY> process and for which purposes. The dashboard allows you to limit our processing of your personal data by configuring your consent. You can:",
+        "welcome-msg3": "The menu in the bottom left gives you a quick overview of the most recent consent-related interactions between you and us <US-DUMMY>.",
+        "welcome-msg4": "If you are new to the privacy dashboard, we recommend you to try out the Consent Assistant.",
         "purpose": {
             "0": {
                 "name": "Einwilligungen widerrufen oder erteilen,"
