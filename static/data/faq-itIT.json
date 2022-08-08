@@ -12,33 +12,27 @@
                 "answer": "Nel cruscotto sulla privacy di TRAPEZE \u00e8 possibile vedere la nostra politica sulla privacy attiva e quando abbiamo raccolto il consenso dell'utente. In particolare, \u00e8 possibile vedere come trattiamo i vostri dati e per quali scopi. Potete contattarci se avete domande sul trattamento dei vostri dati. Se lo desidera, pu\u00f2 anche revocare il consenso o darne un altro per migliorare il nostro servizio.",
                 "references": { }
             },
-            "qna1": {
-                "question": "Che cos'\u00e8 il TRAPEZE?",
-                "answer": "TRAPEZE \u00e8 un progetto di ricerca finanziato dall'Unione Europea. TRAPEZE \u00e8 l'acronimo di \"TRAnsparency, Privacy and security for European citiZEns\". TRAPEZE fa parte del programma di finanziamento Horizon2020 dell'Unione Europea. Il progetto, della durata di 3 anni, \u00e8 stato condotto tra settembre 2020 e agosto 2023.",
+            "qna1":{
+                "question": "Who has developed the TRAPEZE privacy dashboard?",
+                "answer": "TRAPEZE is a research project funded by the European Union. TRAPEZE is an acronym for \"TRAnsparency, Privacy and security for European citiZEns\". TRAPEZE is part of the European Union's Horizon2020 funding programme. The 3-year project was conducted between September 2020 and August 2023. The TRAPEZE project consortium consists of the following 13 partners: (1.) TenForce BVBA, (2.)GEIE ERCIM, (3.)Technische Universität Berlin, (4.) VLAAMSE GEWEST, (5.) Deutsche Telekom AG, (6.) CaixaBank SA, (7.) Consorzio Interuniversitario Nazionale Per L'Informatica, (8.) Unabhängiges Landeszentrum für Datenschutz, (9.) Kaspersky Lab Italia SRL, (10.) Institut Mihajlo Pupin, (11.) IPSOS NV, (12.) Athens Technology Center Anonymi Biomichaniki Emporiki Kai Techniki Etaireia Efarmogon Ypsilis Technologias, (13.) E-Seniors: Initiation des Séniors Aux NTIC Association",
                 "references": {
-                    "ref1": "http://trapeze-project.eu/",
-                    "ref2": "https://ec.europa.eu/info/research-and-innovation/funding/funding-opportunities/funding-programmes-and-open-calls/horizon-2020_en"
+                  "ref1" :"http://trapeze-project.eu/",
+                  "ref2" :"https://ec.europa.eu/info/research-and-innovation/funding/funding-opportunities/funding-programmes-and-open-calls/horizon-2020_en",
+                  "ref3":"https://www.tenforce.com/",
+                  "ref4":"https://www.ercim.eu/",
+                  "ref5":"https://www.tu.berlin/",
+                  "ref6":"https://www.vlaanderen.be/",
+                  "ref7":"https://www.telekom.de/",
+                  "ref8":"https://www.caixabank.com/",
+                  "ref9":"https://www.consorzio-cini.it/",
+                  "ref10":"https://www.datenschutzzentrum.de/",
+                  "ref11":"https://www.kaspersky.it/",
+                  "ref12":"https://www.pupin.rs/",
+                  "ref13":"https://www.ipsos.com/",
+                  "ref14":"https://www.atc.gr/",
+                  "ref15":"https://www.eseniors.eu/"
                 }
-            },
-            "qna2": {
-                "question": "Quali istituzioni fanno parte del consorzio del progetto TRAPEZE?",
-                "answer": "Il consorzio del progetto TRAPEZE \u00e8 composto dai seguenti 13 partner: (1.) TenForce BVBA, (2.)GEIE ERCIM, (3.)Technische Universit\u00e4t Berlin, (4.) VLAAMSE GEWEST, (5.) Deutsche Telekom AG, (6.) CaixaBank SA, (7.) Consorzio Interuniversitario Nazionale Per L'Informatica, (8.) Unabh\u00e4ngiges Landeszentrum f\u00fcr Datenschutz, (9.) Kaspersky Lab Italia SRL, (10.) Institut Mihajlo Pupin, (11.) IPSOS NV, (12.) Athens Technology Center Anonymi Biomichaniki Emporiki Kai Techniki Etaireia Efarmogon Ypsilis Technologias, (13.) E-Seniors: Initiation des S\u00e9niors Aux NTIC Association",
-                "references": {
-                    "ref1": "https://www.tenforce.com/",
-                    "ref2": "https://www.ercim.eu/",
-                    "ref3": "https://www.tu.berlin/",
-                    "ref4": "https://www.vlaanderen.be/",
-                    "ref5": "https://www.telekom.de/",
-                    "ref6": "https://www.caixabank.com/",
-                    "ref7": "https://www.consorzio-cini.it/",
-                    "ref8": "https://www.datenschutzzentrum.de/",
-                    "ref9": "https://www.kaspersky.it/",
-                    "ref10": "https://www.pupin.rs/",
-                    "ref11": "https://www.ipsos.com/",
-                    "ref12": "https://www.atc.gr/",
-                    "ref13": "https://www.eseniors.eu/"
-                }
-            },
+              },
             "qna3": {
                 "question": "Who is responsible for the information on this dashboard?",
                 "answer": "Il cruscotto della privacy di TRAPEZE \u00e8 ospitato da noi, il responsabile del trattamento dei dati indicato nel banner a destra.",
