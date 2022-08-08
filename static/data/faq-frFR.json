@@ -1,17 +1,17 @@
 {
     "TRAPEZE": {
         "qnas": {
-            "qna4": {
+            "qna1": {
                 "question": "Que puis-je faire sur le tableau de bord de la vie priv\u00e9e de TRAPEZE ?",
                 "answer": "Sur le tableau de bord de la confidentialit\u00e9 de TRAPEZE, vous pouvez voir notre politique de confidentialit\u00e9 active et quand nous avons recueilli votre consentement. Plus pr\u00e9cis\u00e9ment, vous pouvez voir comment nous traitons vos donn\u00e9es et dans quel but. Vous pouvez nous contacter si vous avez des questions sur le traitement de vos donn\u00e9es. Vous pouvez \u00e9galement r\u00e9voquer votre consentement de mani\u00e8re pratique ou donner plus de consentement pour am\u00e9liorer notre service si vous le souhaitez.",
                 "references": { }
             },
-            "qna3": {
+            "qna2": {
                 "question": "Who is responsible for the information on this dashboard?",
                 "answer": "Le tableau de bord de confidentialit\u00e9 de TRAPEZE est h\u00e9berg\u00e9 par nous, le responsable du traitement des donn\u00e9es indiqu\u00e9 dans la banni\u00e8re \u00e0 droite.",
                 "references": { }
             },
-            "qna1":{
+            "qna3":{
                 "question": "Who has developed the TRAPEZE privacy dashboard?",
                 "answer": "TRAPEZE is a research project funded by the European Union. TRAPEZE is an acronym for \"TRAnsparency, Privacy and security for European citiZEns\". TRAPEZE is part of the European Union's Horizon2020 funding programme. The 3-year project was conducted between September 2020 and August 2023. The TRAPEZE project consortium consists of the following 13 partners: (1.) TenForce BVBA, (2.)GEIE ERCIM, (3.)Technische Universität Berlin, (4.) VLAAMSE GEWEST, (5.) Deutsche Telekom AG, (6.) CaixaBank SA, (7.) Consorzio Interuniversitario Nazionale Per L'Informatica, (8.) Unabhängiges Landeszentrum für Datenschutz, (9.) Kaspersky Lab Italia SRL, (10.) Institut Mihajlo Pupin, (11.) IPSOS NV, (12.) Athens Technology Center Anonymi Biomichaniki Emporiki Kai Techniki Etaireia Efarmogon Ypsilis Technologias, (13.) E-Seniors: Initiation des Séniors Aux NTIC Association",
                 "references": {
@@ -32,7 +32,7 @@
                   "ref15":"https://www.eseniors.eu/"
                 }
               },
-            "qna0":{
+            "qna4":{
                 "question": "What is the TRAPEZE Privacy Dashboard?",
                 "answer": "",
                 "references": {
