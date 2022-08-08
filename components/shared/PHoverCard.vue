@@ -7,27 +7,25 @@
       nudge-right="18"
     >
       <template v-slot:activator="{ on, attrs }">
-        <span
+        {{term}}
+        <v-icon
+          small
           v-bind="attrs"
           v-on="on"
-          style="color:blue; text-decoration:underline"
-          class="phovercardtxt"
+          color="green darken-2"
+          class="phovercardinfoicon"
         >
-          {{term}}
-        </span>
+          mdi-information-outline
+        </v-icon>
       </template>
       
       <v-card
-        class="mx-auto"
         max-width="400"
         outlined
       >
-        <v-img :src="image" height="150"></v-img>
-        <v-card-text >
-          <p>
-            {{this.definition}}
-          </p>
-
+        <v-img v-if="image" :src="image" height="400"></v-img>
+        <v-card-text>
+          <span style="white-space:pre-line">{{this.definition}}</span>
         </v-card-text>
 
       </v-card>
@@ -64,7 +62,7 @@ export default {
 </script>
 
 <style scoped>
-.phovercardtxt {
-    cursor: help;
+.phovercardinfoicon {
+   cursor: pointer;
 }
 </style>

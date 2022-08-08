@@ -13,7 +13,7 @@
           <template v-slot:item="{ item }">
             <tr @click="checkUserChoiceCompleted">
               <td >
-                <PHoverCard :term="$t(item.name)" :definition="$t(item.name.split('.')[1])" image="https://upload.wikimedia.org/wikipedia/commons/c/c0/1_times_square_night_2013.jpg"/>
+                <PHoverCard :term="$t(item.name)" :definition="$t(item.name.split('.')[1])" />
               </td>
               <td v-for="radio in radioList" :key="radio.key">
                 <v-radio-group v-model="preferences[item.name]">
