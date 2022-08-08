@@ -77,7 +77,7 @@
     "qna": {
         "links-and-sources": "Links and Sources",
         "header": "Frequently Asked Questions",
-        "introduction": "Find out more about the TRAPEZE privacy dashboard and its underlying concepts. Do not forget to let us know if you cannot find information you are interested in."
+        "introduction": "Find out more about the TRAPEZE privacy dashboard and its underlying concepts. Do not forget to let us <US-DUMMY> know if you cannot find information you are interested in."
     },
     "company": {
         "name": "Company Name",
