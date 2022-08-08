@@ -113,19 +113,19 @@
                 "title": "Consentement",
                 "filename": "/img/consent.png",
                 "link": "/consent?tab=consent",
-                "content": "Voir \u00e0 quel traitement des donn\u00e9es vous avez consenti."
+                "content": "View the consent you gave us (COMPANY DUMMY)."
             },
             "1": {
                 "title": "Donn\u00e9es",
                 "filename": "/img/data.png",
                 "link": "/consent?tab=data",
-                "content": "Dites-nous quelles cat\u00e9gories de donn\u00e9es nous pouvons traiter."
+                "content": "Tell us which of your data we may use."
             },
             "2": {
                 "title": "Fins",
                 "filename": "/img/purpose.png",
                 "link": "/consent?tab=purpose",
-                "content": "Dites-nous \u00e0 quelles fins nous pouvons r\u00e9pondre."
+                "content": "Tell us which of your data we may use."
             },
             "3": {
                 "title": "TRAPEZE",

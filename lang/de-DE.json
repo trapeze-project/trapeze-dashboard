@@ -113,19 +113,19 @@
                 "title": "Einwilligungen",
                 "filename": "/img/consent.png",
                 "link": "/consent?tab=consent",
-                "content": "Sehen Sie sich an, welcher Datenverarbeitung Sie zugestimmt haben."
+                "content": "View the consent you gave us (COMPANY DUMMY)."
             },
             "1": {
                 "title": "Datenkategorien",
                 "filename": "/img/data.png",
                 "link": "/consent?tab=data",
-                "content": "Teilen Sie uns mit, welche Datenkategorien wir verarbeiten d\u00fcrfen."
+                "content": "Tell us which of your data we may use."
             },
             "2": {
                 "title": "Zwecke",
                 "filename": "/img/purpose.png",
                 "link": "/consent?tab=purpose",
-                "content": "Teilen Sie uns mit, zu welchen Zwecken wir Ihre Daten verarbeiten d\u00fcrfen."
+                "content": "Tell us which of your data we may use."
             },
             "3": {
                 "title": "TRAPEZE",
