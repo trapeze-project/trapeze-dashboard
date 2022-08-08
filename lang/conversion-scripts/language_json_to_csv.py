@@ -66,6 +66,8 @@ def write_json_dict_to_csv(json_dict, f, trailing_key="", key_separator = "|", k
         # value found!
         else:
             value = json_dict[key]
+            # escape newline symbols
+            value = value.replace("\n", "\\n")
             key = new_trailing_key
             # write line to file
             f.write(key+key_value_separator+str(value)+"\n")

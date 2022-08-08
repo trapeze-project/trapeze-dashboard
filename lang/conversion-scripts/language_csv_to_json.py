@@ -81,6 +81,8 @@ def main():
                 for line in f:
                     # drop newlines
                     line = line.replace("\n","")
+                    # revert escaped newlines
+                    line = line.replace("\\n","\n")
                     # extract nested_dict_entry from line in the .csv file
                     nested_dict_entry = line_to_nested_dict_entry(line)
                     # add nested_dict_entry to json_dict
