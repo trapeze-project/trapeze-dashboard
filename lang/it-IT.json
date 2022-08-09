@@ -19,6 +19,7 @@
         "labels": {
             "home": "Homepage",
             "consent": "Consenso informato",
+            "consent-menu": "Menu di consenso",
             "data": "Dati",
             "purposes": "Scopi",
             "help": "Assistente al Consenso",

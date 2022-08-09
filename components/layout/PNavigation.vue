@@ -13,13 +13,14 @@
             >
               <v-list-group
                 v-if="link.subLinks"
+                color="lightgrey"
               >
                 <template v-slot:activator>
-                  <v-list-item-title>
-                    <v-list-item-content>
+                  <v-list-item-content>
+                    <v-list-item-title>
                       {{ $t(link.label) }}
-                    </v-list-item-content>
-                  </v-list-item-title>
+                    </v-list-item-title>
+                  </v-list-item-content>
                 </template>
                 <v-list-item
                   v-for="sub in link.subLinks"
@@ -65,7 +66,7 @@ export default {
         { to: '/', label: 'nav.labels.home' },
         {
           to: '/consent?tab=consent',
-          label: 'nav.labels.consent',
+          label: 'nav.labels.consent-menu',
           subLinks: [
             { to: '/consent?tab=consent', label: 'nav.labels.consent' },
             { to: '/consent?tab=data', label: 'nav.labels.data' },
@@ -79,3 +80,10 @@ export default {
   }
 }
 </script>
+
+<style>
+.v-list-group .v-list-group__header .v-list-item__icon.v-list-group__header__append-icon {
+  min-width: inherit;
+  justify-content: flex-start;
+}
+</style>
