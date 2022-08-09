@@ -19,6 +19,7 @@
         "labels": {
             "home": "Acceuil",
             "consent": "Consentement",
+            "consent-menu": "Menu de consentement",
             "data": "Donn\u00e9es",
             "purposes": "Finalit\u00e9s",
             "help": "Assistant de Consentement",

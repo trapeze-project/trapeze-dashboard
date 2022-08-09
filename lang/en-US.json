@@ -19,6 +19,7 @@
         "labels": {
             "home": "Home",
             "consent": "Consent",
+            "consent-menu": "Consent Menu",
             "data": "Data",
             "purposes": "Purposes",
             "help": "Help",
