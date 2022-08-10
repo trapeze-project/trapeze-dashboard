@@ -92,10 +92,10 @@
     "home": {
         "title": "Benvenuti sul vostro dashboard personale sulla privacy!",
         "explore-btn": "Visualizza",
-        "welcome-msg": "We at <WE-DUMMY> want you to understand how we process your personal data.",
-        "welcome-msg2": "In this dashboard, you can view what personal data we <WE-DUMMY> process and for which purposes. The dashboard allows you to limit our processing of your personal data by configuring your consent. You can:",
-        "welcome-msg3": "The menu in the bottom left gives you a quick overview of the most recent consent-related interactions between you and us <US-DUMMY>.",
-        "welcome-msg4": "If you are new to the privacy dashboard, we recommend you to try out the Consent Assistant.",
+        "welcome-msg": "Noi di <WE-DUMMY> vogliamo che tu capisca come trattiamo i tuoi dati personali.",
+        "welcome-msg2": "In questo dashboard è possibile visualizzare quali dati personali vengono trattati da <WE-DUMMY> e per quali scopi. Il dashboard vi consente di limitare il trattamento dei vostri dati personali configurando il vostro consenso. È possibile:",
+        "welcome-msg3": "Il menu in basso a sinistra offre una rapida panoramica delle interazioni più recenti relative al consenso tra l'utente e noi <US-DUMMY>.",
+        "welcome-msg4": "Se siete nuovi al dashboard sulla privacy, vi consigliamo di provare l'Assistente al Consenso.",
          "purpose": {
             "0": {
                 "name": "annullare e dare consenso,"
@@ -113,19 +113,19 @@
                 "title": "Consenso",
                 "filename": "/img/consent.png",
                 "link": "/consent?tab=consent",
-                "content": "View the consent you gave us <US-DUMMY>."
+                "content": "Visualizza il consenso che ci hai dato <US-DUMMY>."
             },
             "1": {
                 "title": "Dati",
                 "filename": "/img/data.png",
                 "link": "/consent?tab=data",
-                "content": "Tell us which of your data we <WE-DUMMY> may use."
+                "content": "Ci dica quali dei suoi dati noi <WE-DUMMY> possiamo utilizzare."
             },
             "2": {
                 "title": "Scopi",
                 "filename": "/img/purpose.png",
                 "link": "/consent?tab=purpose",
-                "content": "Tell us which of your data we <WE-DUMMY> may use."
+                "content": "Ci dica per cosa noi <WE-DUMMY> possiamo utilizzare i suoi dati."
             },
             "3": {
                 "title": "TRAPEZE",
@@ -185,7 +185,7 @@
             "labels": {
                 "consent": "Consenso",
                 "data-category": "Categoria di dati",
-                "purpose": "Finalit\u00e0"
+                "purpose": "Scopo"
             }
         },
         "consent": {
@@ -232,7 +232,7 @@
             "ptable": {
                 "header": {
                     "values": {
-                        "purpose": "Finalit\u00e0",
+                        "purpose": "Scopo",
                         "data": "Dati",
                         "issue": "Problema"
                     }
@@ -244,7 +244,7 @@
         }
     },
     "consent-helper": {
-        "purpose": "Finalit\u00e0",
+        "purpose": "Scopo",
         "comfortable": "A mio agio",
         "no-opinion": "Nessuna opinione",
         "not-comfortable": "A disagio"
