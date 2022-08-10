@@ -45,7 +45,7 @@
         "qnas": {
             "qna1": {
                 "question": "Che cos'\u00e8 il consenso?",
-                "answer": "Secondo il RGPD (art. 4 (11)), il consenso \u00e8 una chiara azione affermativa nei confronti di un responsabile del trattamento dei dati (noi) per trattare i vostri dati personali. Si noti che i responsabili del trattamento (noi) non devono sempre raccogliere il consenso dell'utente per trattare i suoi dati personali. Ad esempio, un servizio di consegna deve elaborare l'indirizzo dell'utente per rispettare l'ordine di consegna. Non \u00e8 necessario raccogliere il consenso.",
+                "answer": "Secondo il articolo 4, punto 11 RGPD, il consenso \u00e8 una chiara azione affermativa nei confronti di un responsabile del trattamento dei dati (noi) per trattare i vostri dati personali. Si noti che i responsabili del trattamento (noi) non devono sempre raccogliere il consenso dell'utente per trattare i suoi dati personali. Ad esempio, un servizio di consegna deve elaborare l'indirizzo dell'utente per rispettare l'ordine di consegna. Non \u00e8 necessario raccogliere il consenso.",
                 "references": {
                     "ref1": "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX%3A32016R0679"
                 }
@@ -59,7 +59,7 @@
             },
             "qna3": {
                 "question": "Posso revocare il mio consenso?",
-                "answer": "Secondo il RGPD (Art. 7 3.), \u00e8 possibile revocare il consenso in qualsiasi momento. La revoca del consenso non richiede un modulo specifico. \u00c8 possibile, ad esempio, revocare il consenso scrivendo una lettera o un'e-mail, oppure chiamandoci.",
+                "answer": "Secondo il articolo 7, paragrafo 3 RGPD, \u00e8 possibile revocare il consenso in qualsiasi momento. La revoca del consenso non richiede un modulo specifico. \u00c8 possibile, ad esempio, revocare il consenso scrivendo una lettera o un'e-mail, oppure chiamandoci.",
                 "references": {
                     "ref1": "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX%3A32016R0679"
                 }
@@ -76,7 +76,7 @@
             },
             "qna6": {
                 "question": "Cosa posso fare se ho dimenticato il mio consenso?",
-                "answer": "Secondo il RGPD (Art. 7 1.), i responsabili del trattamento dei dati (noi) devono dimostrare di aver raccolto il consenso dell'utente.",
+                "answer": "Secondo il articolo 7, paragrafo 1 RGPD, i responsabili del trattamento dei dati (noi) devono dimostrare di aver raccolto il consenso dell'utente.",
                 "references": {
                     "ref1": "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX%3A32016R0679"
                 }
@@ -92,7 +92,7 @@
         "qnas": {
             "qna1": {
                 "question": "Cosa sono i dati personali?",
-                "answer": "Secondo il RGPD (art. 4 (1)), tutti i dati che vi sono attribuibili sono dati personali.",
+                "answer": "Secondo il articolo 4, punto 1 RGPD, tutti i dati che vi sono attribuibili sono dati personali.",
                 "references": {
                     "ref1": "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX%3A32016R0679"
                 }
@@ -103,7 +103,7 @@
         "qnas": {
             "qna1": {
                 "question": "Che cos'\u00e8 una finalità?",
-                "answer": "Secondo il RGPD (art. 5, paragrafo 1, lettera b)), i responsabili del trattamento dei dati devono indicare chiaramente per quale finalità raccolgono i vostri dati personali. Ad esempio, \u00e8 illegale raccogliere i vostri dati personali per la finalità specifico di raccomandazioni lavorative personalizzate e successivamente utilizzarli per scopi di marketing.",
+                "answer": "Secondo il articolo 5, paragrafo 1, lettera b) RGPD, i responsabili del trattamento dei dati devono indicare chiaramente per quale finalità raccolgono i vostri dati personali. Ad esempio, \u00e8 illegale raccogliere i vostri dati personali per la finalità specifico di raccomandazioni lavorative personalizzate e successivamente utilizzarli per scopi di marketing.",
                 "references": {
                     "ref1": "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX%3A32016R0679"
                 }
@@ -113,8 +113,8 @@
     "Assistente al Consenso": {
         "qnas": {
             "qna1": {
-                "question": "Che cos'\u00e8 la Guida al consenso?",
-                "answer": "La Guida al consenso \u00e8 uno strumento che consente di evitare la lettura di lunghe informative sulla privacy. Vi guider\u00e0 attraverso una serie di domande che ci permetteranno di capire le vostre preferenze di consenso. Sulla base di queste preferenze di consenso, suggeriamo configurazioni di consenso e vi indichiamo potenziali problemi con il consenso attualmente fornito. Ad esempio, l'utente potrebbe non essere disposto a condividere la propria posizione per scopi di marketing, ma per ricevere consigli sui ristoranti. ",
+                "question": "Che cos'\u00e8 il Assistente al Consenso?",
+                "answer": "Il Assistente al consenso \u00e8 uno strumento che consente di evitare la lettura di lunghe informative sulla privacy. Vi guider\u00e0 attraverso una serie di domande che ci permetteranno di capire le vostre preferenze di consenso. Sulla base di queste preferenze di consenso, suggeriamo configurazioni di consenso e vi indichiamo potenziali problemi con il consenso attualmente fornito. Ad esempio, l'utente potrebbe non essere disposto a condividere la propria posizione per scopi di marketing, ma per ricevere consigli sui ristoranti. ",
                 "references": {  }
             }
         }
@@ -123,28 +123,28 @@
         "qnas": {
             "qna1": {
                 "question": "Consenso",
-                "answer": "Secondo il RGPD (art. 4 (11)), il consenso \u00e8 una chiara affermazione dell'interessato (voi) nei confronti di un responsabile del trattamento dei dati (noi) per il trattamento dei vostri dati personali. Si noti che i responsabili del trattamento (noi) non devono sempre raccogliere il consenso degli interessati (voi) per il trattamento dei dati personali. Ad esempio, un servizio di consegna ha bisogno di elaborare l'indirizzo dell'interessato (l'utente) per soddisfare un ordine di consegna. In questo caso, i responsabili del trattamento (noi) non hanno bisogno di raccogliere il consenso.",
+                "answer": "Secondo il articolo 4, punto 11 RGPD, il consenso \u00e8 una chiara affermazione dell'interessato (voi) nei confronti di un responsabile del trattamento dei dati (noi) per il trattamento dei vostri dati personali. Si noti che i responsabili del trattamento (noi) non devono sempre raccogliere il consenso degli interessati (voi) per il trattamento dei dati personali. Ad esempio, un servizio di consegna ha bisogno di elaborare l'indirizzo dell'interessato (l'utente) per soddisfare un ordine di consegna. In questo caso, i responsabili del trattamento (noi) non hanno bisogno di raccogliere il consenso.",
                 "references": {
                     "ref1": "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX%3A32016R0679"
                 }
             },
             "qna2": {
                 "question": "Elaborazione transfrontaliera",
-                "answer": "Secondo il RGPD (art. 4 (23)), per trattamento transfrontaliero si intende un trattamento (a) effettuato in pi\u00f9 Stati membri dell'UE, oppure (b) effettuato in un unico Stato membro dell'UE ma su dati personali di soggetti (voi) di pi\u00f9 Stati membri.",
+                "answer": "Secondo il articolog 4, punto 23 RGPD, per trattamento transfrontaliero si intende un trattamento (a) effettuato in pi\u00f9 Stati membri dell'UE, oppure (b) effettuato in un unico Stato membro dell'UE ma su dati personali di soggetti (voi) di pi\u00f9 Stati membri.",
                 "references": {
                     "ref1": "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX%3A32016R0679"
                 }
             },
             "qna3": {
                 "question": "Titolare del trattamento dei dati",
-                "answer": "Secondo il RGPD (art. 4 (7)), i responsabili del trattamento dei dati (noi) devono chiarire agli interessati (voi) come e per quali finalit\u00e0 trattano i dati personali. I responsabili del trattamento dei dati sono spesso chiamati solo \"responsabili del trattamento\". ",
+                "answer": "Secondo il articolo 4, punto 7 RGPD, i responsabili del trattamento dei dati (noi) devono chiarire agli interessati (voi) come e per quali finalit\u00e0 trattano i dati personali. I responsabili del trattamento dei dati sono spesso chiamati solo \"responsabili del trattamento\". ",
                 "references": {
                     "ref1": "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX%3A32016R0679"
                 }
             },
             "qna4": {
                 "question": "Responsabile del trattamento",
-                "answer": "Secondo il RGPD (art. 4, paragrafo 8), i responsabili del trattamento dei dati trattano i vostri dati personali. Gli incaricati del trattamento e i responsabili del trattamento (noi) possono essere la stessa cosa, ma non necessariamente. In caso contrario, i responsabili del trattamento (noi) di solito non indicano n\u00e9 la finalità del trattamento n\u00e9 quali dati personali devono essere trattati dall'incaricato del trattamento. I responsabili del trattamento sono spesso chiamati solo \"incaricati del trattamento\". ",
+                "answer": "Secondo il articolo 4, punto 8 RGPD, i responsabili del trattamento dei dati trattano i vostri dati personali. Gli incaricati del trattamento e i responsabili del trattamento (noi) possono essere la stessa cosa, ma non necessariamente. In caso contrario, i responsabili del trattamento (noi) di solito non indicano n\u00e9 la finalità del trattamento n\u00e9 quali dati personali devono essere trattati dall'incaricato del trattamento. I responsabili del trattamento sono spesso chiamati solo \"incaricati del trattamento\". ",
                 "references": {
                     "ref1": "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX%3A32016R0679"
                 }
@@ -158,7 +158,7 @@
             },
             "qna6": {
                 "question": "Destinatario",
-                "answer": "Secondo il RGPD (art. 4, paragrafo 9), chiunque riceva i dati personali di un soggetto (l'utente) \u00e8 un destinatario dei dati. I destinatari dei dati sono tipicamente i responsabili del trattamento e gli incaricati del trattamento. I destinatari dei dati sono spesso chiamati solo \"destinatari\". ",
+                "answer": "Secondo il articolo 4, punto 9 RGPD, chiunque riceva i dati personali di un soggetto (l'utente) \u00e8 un destinatario dei dati. I destinatari dei dati sono tipicamente i responsabili del trattamento e gli incaricati del trattamento. I destinatari dei dati sono spesso chiamati solo \"destinatari\". ",
                 "references": {
                     "ref1": "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX%3A32016R0679"
                 }
@@ -172,49 +172,49 @@
             },
             "qna8": {
                 "question": "RGPD",
-                "answer": "Il Regolamento generale sulla protezione dei dati \u00e8 la legislazione sulla protezione dei dati attiva nell'Unione europea. \u00c8 stato approvato nel maggio 2016 ed \u00e8 entrato in vigore nel maggio 2018.",
+                "answer": "Il Regolamento Generale sulla Protezione dei Dati (RGPD) \u00e8 la legislazione sulla protezione dei dati attiva nell'Unione europea. \u00c8 stato approvato nel maggio 2016 ed \u00e8 entrato in vigore nel maggio 2018.",
                 "references": {
                     "ref1": "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX%3A32016R0679"
                 }
             },
             "qna9": {
                 "question": "Dati personali",
-                "answer": "Secondo il RGPD (art. 4 (1)), qualsiasi dato riconducibile a una persona interessata (voi) \u00e8 un dato personale.",
+                "answer": "Secondo il articolo 4, punto 11 RGPD, qualsiasi dato riconducibile a una persona interessata (voi) \u00e8 un dato personale.",
                 "references": {
                     "ref1": "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX%3A32016R0679"
                 }
             },
             "qna10": {
                 "question": "Trattamento",
-                "answer": "Secondo il RGPD (art. 4 (2)), \u00e8 regolamentato solo il trattamento dei dati personali. L'art. 6, in particolare, stabilisce che il trattamento dei dati personali \u00e8 lecito se gli interessati (voi) hanno dato il loro consenso o se il trattamento \u00e8 necessario per adempiere a un contratto. Un servizio di consegna non ha bisogno di raccogliere il consenso per elaborare l'indirizzo dell'interessato (l'utente) ai fini della consegna se la consegna \u00e8 parte di un contratto di acquisto. Il trattamento comporta anche la raccolta e l'archiviazione dei dati personali. ",
+                "answer": "Secondo il articolo 4, punto 2 RGPD, \u00e8 regolamentato solo il trattamento dei dati personali. L'art. 6, in particolare, stabilisce che il trattamento dei dati personali \u00e8 lecito se gli interessati (voi) hanno dato il loro consenso o se il trattamento \u00e8 necessario per adempiere a un contratto. Un servizio di consegna non ha bisogno di raccogliere il consenso per elaborare l'indirizzo dell'interessato (l'utente) ai fini della consegna se la consegna \u00e8 parte di un contratto di acquisto. Il trattamento comporta anche la raccolta e l'archiviazione dei dati personali. ",
                 "references": {
                     "ref1": "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX%3A32016R0679"
                 }
             },
             "qna11": {
                 "question": "Profilazione",
-                "answer": "Secondo il RGPD (art. 4, par. 4), la profilazione \u00e8 qualsiasi forma di trattamento automatizzato di dati personali al fine di dedurre informazioni specifiche su un interessato (voi). La profilazione \u00e8 comunemente utilizzata per stimare la probabilit\u00e0 che un interessato (voi) acquisti un determinato prodotto o non riesca a rimborsare un credito.",
+                "answer": "Secondo il articolo 4, punto 4 RGPD, la profilazione \u00e8 qualsiasi forma di trattamento automatizzato di dati personali al fine di dedurre informazioni specifiche su un interessato (voi). La profilazione \u00e8 comunemente utilizzata per stimare la probabilit\u00e0 che un interessato (voi) acquisti un determinato prodotto o non riesca a rimborsare un credito.",
                 "references": {
                     "ref1": "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX%3A32016R0679"
                 }
             },
             "qna12": {
                 "question": "Pseudonimizzazione",
-                "answer": "Secondo il RGPD (articolo 4, paragrafo 5), la pseudonimizzazione dei dati personali significa che i dati personali possono essere attribuiti a una persona interessata (voi) solo con l'aiuto di dati aggiuntivi. L'utilizzo di nomi o numeri artificiali al posto del nome reale dell'interessato \u00e8 una semplice tecnica di pseudonimizzazione. ",
+                "answer": "Secondo il articolo 4, punto 5 RGPD, la pseudonimizzazione dei dati personali significa che i dati personali possono essere attribuiti a una persona interessata (voi) solo con l'aiuto di dati aggiuntivi. L'utilizzo di nomi o numeri artificiali al posto del nome reale dell'interessato \u00e8 una semplice tecnica di pseudonimizzazione. ",
                 "references": {
                     "ref1": "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX%3A32016R0679"
                 }
             },
             "qna13": {
                 "question": "Finalità",
-                "answer": "Secondo il RGPD (art. 5, comma 1, lettera b)), i responsabili del trattamento dei dati (noi) devono indicare chiaramente per quale finalità raccolgono i dati personali. Ad esempio, \u00e8 illegale raccogliere dati personali alla finalità di fornire raccomandazioni lavorative personalizzate e successivamente utilizzarli a fini di marketing.",
+                "answer": "Secondo il articolo 5, paragrafo 5, lettera b) RGPD, i responsabili del trattamento dei dati (noi) devono indicare chiaramente per quale finalità raccolgono i dati personali. Ad esempio, \u00e8 illegale raccogliere dati personali alla finalità di fornire raccomandazioni lavorative personalizzate e successivamente utilizzarli a fini di marketing.",
                 "references": {
                     "ref1": "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX%3A32016R0679"
                 }
             },
             "qna14": {
                 "question": "Terzo",
-                "answer": "Secondo il RGPD (art. 4, comma 10), le terze parti sono autorizzate direttamente dai titolari del trattamento (noi) e/o dai responsabili del trattamento a trattare i dati personali.",
+                "answer": "Secondo il articolo 4, punto 10 RGPD, le terze parti sono autorizzate direttamente dai titolari del trattamento (noi) e/o dai responsabili del trattamento a trattare i dati personali.",
                 "references": {
                     "ref1": "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX%3A32016R0679"
                 }
