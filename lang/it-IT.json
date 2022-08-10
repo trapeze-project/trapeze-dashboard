@@ -18,8 +18,8 @@
     "nav": {
         "labels": {
             "home": "Homepage",
-            "consent": "Consenso informato",
-            "consent-menu": "Menu di consenso",
+            "consent": "Consenso",
+            "consent-menu": "Menu di Consenso",
             "data": "Dati",
             "purposes": "Scopi",
             "help": "Assistente al Consenso",
