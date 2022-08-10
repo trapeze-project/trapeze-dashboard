@@ -186,7 +186,7 @@
             },
             "qna10": {
                 "question": "Trattamento",
-                "answer": "Secondo il articolo 4, punto 2 RGPD, \u00e8 regolamentato solo il trattamento dei dati personali. L'art. 6, in particolare, stabilisce che il trattamento dei dati personali \u00e8 lecito se gli interessati (voi) hanno dato il loro consenso o se il trattamento \u00e8 necessario per adempiere a un contratto. Un servizio di consegna non ha bisogno di raccogliere il consenso per elaborare l'indirizzo dell'interessato (l'utente) ai fini della consegna se la consegna \u00e8 parte di un contratto di acquisto. Il trattamento comporta anche la raccolta e l'archiviazione dei dati personali. ",
+                "answer": "Secondo il articolo 4, punto 2 RGPD, \u00e8 regolamentato solo il trattamento dei dati personali. All'articolo 6, in particolare, stabilisce che il trattamento dei dati personali \u00e8 lecito se gli interessati (voi) hanno dato il loro consenso o se il trattamento \u00e8 necessario per adempiere a un contratto. Un servizio di consegna non ha bisogno di raccogliere il consenso per elaborare l'indirizzo dell'interessato (l'utente) ai fini della consegna se la consegna \u00e8 parte di un contratto di acquisto. Il trattamento comporta anche la raccolta e l'archiviazione dei dati personali. ",
                 "references": {
                     "ref1": "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX%3A32016R0679"
                 }
