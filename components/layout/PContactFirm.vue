@@ -1,5 +1,6 @@
 <template>
   <div>
+    <PNotification ref="notification" />
     <v-dialog v-model="dialog" width="500">
       <template v-slot:activator="{ on, attrs }">
         <v-btn class="black--text" v-bind="attrs" color="primary" v-on="on">
@@ -9,7 +10,7 @@
 
       <v-card>
         <v-card-title>
-          New Message to {{ companyName }}
+          {{$t("contact.new-message-to")}} {{ companyName }}
           <v-spacer />
           <v-btn small fab depressed color="white" @click="dialog = false">
             <v-icon color="grey">
@@ -20,11 +21,11 @@
         <v-divider />
         <v-card-text>
           <p class="mt-4 mb-1 black--text">
-            Recipient:
+            {{$t("contact.recipient")}}:
           </p>
-          <v-text-field v-model="recipient" persistent-hint outlined dence />
+          <v-text-field v-model="this.email.match(/@.+(?=[.])/)[0]" persistent-hint outlined dence disabled />
           <p class="mt-1 mb-1 black--text">
-            Message:
+            {{$t("contact.message")}}:
           </p>
           <v-textarea
             v-model="message"
@@ -48,7 +49,7 @@
           <v-btn
             class="black--text"
             color="primary"
-            @click="dialog = false"
+            @click="sendMessage"
           >
             {{ $t("btn.labels.send-message") }}
           </v-btn>
@@ -78,8 +79,15 @@ export default {
   data () {
     return {
       dialog: false,
-      recipient: this.email.match(/@.+(?=[.])/)[0],
       message: ''
+    }
+  },
+  methods: {
+    sendMessage(){
+      this.dialog = false;
+      const text = this.$t('snackbar.msg.message-sent')
+      console.log(text)
+      this.$refs.notification.showNotification(text, 'green')
     }
   }
 }

@@ -1,12 +1,12 @@
 <template>
   <div>
-    <v-card class="mr-4">
+    <v-card class="mr-4 mx-2">
       <v-card-title>
         {{ $t(categoryName) }}
       </v-card-title>
       <v-divider />
       <v-card-text>
-        {{ $t(categoryName.toLowerCase()) }}
+        {{ $t(categoryName.replace('dpv.','')) }}
       </v-card-text>
     </v-card>
   </div>
@@ -25,4 +25,5 @@ export default {
 </script>
 
 <style scoped>
+
 </style>

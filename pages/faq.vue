@@ -15,40 +15,39 @@
         <v-row align="center" justify="center">
           <v-col class="fill-height">
             <v-text-field
+              v-model="userQuestion"
               :placeholder="$t('placeholder.search-for-a-question-or-an-answer')"
               outlined
               dense
               clearable
               append-icon="mdi-magnify"
-              v-model="userQuestion"
               @click:append="search"
-              v-on:keyup.enter="search"
-            >
-            </v-text-field>
+              @keyup.enter="search"
+            />
           </v-col>
         </v-row>
-        
+
         <v-card v-if="searching">
-          <v-card-title>{{this.matchedQNA.question}}</v-card-title>
+          <v-card-title>{{ this.matchedQNA.question.interpolate(faqParams) }}</v-card-title>
           <v-card-text>
-            <div>{{this.matchedQNA.answer}}</div>
+            <div>{{ this.matchedQNA.answer.interpolate(faqParams) }}</div>
           </v-card-text>
           <v-card-actions>
-            <ol>
-                <div class="text--primary" v-show="matchedQNA.references.length"> {{$t("qna.links-and-sources")}}: </div>
-                <li v-for="link in matchedQNA.references" :key="link">
+            <div v-if="Object.values(matchedQNA.references).length">
+              <ol>
+                <span v-show="Object.values(matchedQNA.references).length" class="text--primary"> {{ $t("qna.links-and-sources") }}: </span>
+                <li v-for="link in Object.values(matchedQNA.references)" :key="link">
                   <a :href="link" class="black--text">{{ link }}</a>
                 </li>
-            </ol>
+              </ol>
+            </div>
           </v-card-actions>
         </v-card>
 
-
-
-        <v-expansion-panels accordion v-if="!searching">
+        <v-expansion-panels v-if="!searching" accordion>
           <v-expansion-panel
-            v-for="category in faq"
-            :key="category.title"
+            v-for="category in Object.keys(this.faq)"
+            :key="category"
             class="mb-1"
           >
             <v-expansion-panel-header>
@@ -57,13 +56,13 @@
                   $expand
                 </v-icon>
               </template>
-              <span class="header">{{ category.title }}</span>
+              <span class="header" style="white-space:pre-line">{{ category.interpolate(faqParams) }}</span>
             </v-expansion-panel-header>
             <v-expansion-panel-content>
               <v-expansion-panels flat>
                 <v-expansion-panel
-                  v-for="inquiry in category.qna"
-                  :key="inquiry.question"
+                  v-for="qna in Object.keys(faq[category]['qnas'])"
+                  :key="faq[category]['qnas'][qna].question"
                 >
                   <v-expansion-panel-header>
                     <template v-slot:actions>
@@ -71,22 +70,22 @@
                         $expand
                       </v-icon>
                     </template>
-                    <span class="header">{{
-                      inquiry.question
+                    <span class="header" style="white-space:pre-line">{{
+                      faq[category]['qnas'][qna].question.interpolate(faqParams)
                     }}</span>
                   </v-expansion-panel-header>
 
                   <v-expansion-panel-content>
-                    <p>
-                      {{ inquiry.answer }}
+                    <p style="white-space:pre-line">
+                      {{ faq[category]['qnas'][qna].answer.interpolate(faqParams) }}
                     </p>
                     <div
-                      v-if="inquiry.references.length"
+                      v-if="Object.values(faq[category]['qnas'][qna].references).length"
                       class="mt-4 black--text"
                     >
-                      <span class="font-weight-bold" v-show="inquiry.references.length"> {{$t("qna.links-and-sources")}}: </span>
+                      <span class="font-weight-bold"> {{ $t("qna.links-and-sources") }}: </span>
                       <ol>
-                        <li v-for="link in inquiry.references" :key="link">
+                        <li v-for="link in Object.values(faq[category]['qnas'][qna].references)" :key="link">
                           <a :href="link" class="black--text">{{ link }}</a>
                         </li>
                       </ol>
@@ -103,61 +102,74 @@
 </template>
 
 <script>
-import faq from "../static/data/faq.json";
+import faqEnUS from '../static/data/faq-enUS.json'
+import faqDeDE from '../static/data/faq-deDE.json'
+import faqItIT from '../static/data/faq-itIT.json'
+import faqFrFR from '../static/data/faq-frFR.json'
+import controller from '../static/data/controller.json'
 
 export default {
   name: 'Faq',
   data () {
     return {
-      faq: "",
-      userQuestion:"",
-      matchedQNA:"",
-      searching:false
+      faq: '',
+      userQuestion: '',
+      matchedQNA: '',
+      searching: false,
+      faqParams:{}
 
-    };
-  },
-  created(){
-    if(this.$i18n.locale === 'en'){
-      this.faq  =faq
-    }else if(this.$i18n.locale === 'de'){
-      this.faq  =faq
-    }else if(this.$i18n.locale === 'it'){
-      this.faq  =faq
-    }else if(this.$i18n.locale === 'fr'){
-      this.faq  =faq
     }
   },
   watch: {
-    userQuestion(newuserQuestion, olduserQuestion) {
+    userQuestion (newuserQuestion, olduserQuestion) {
       if (!newuserQuestion) {
-        this.searching = false;
+        this.searching = false
       }
     }
   },
-  methods:{
-    search(){
-      let keywords = this.userQuestion.replace(/[&\/\\#,+()$~%.'":*?<>{}]/g, '').split(" ");
-      let modfaq = []
-      for (const category of this.faq){
-        for(const qna of category["qna"]){
-          let matchedKeywords = 0;
-          for(const keyword of keywords){
-            if(qna["question"].toLowerCase().includes(keyword.toLowerCase()) || qna["answer"].toLowerCase().includes(keyword.toLowerCase())){
-              matchedKeywords++;
+  created () {
+    this.faqParams = controller.faqParamsToInterpolate;
+
+    String.prototype.interpolate = function(params) {
+      const names = Object.keys(params);
+      const values = Object.values(params);
+      return new Function(...names, `return \`${this}\`;`)(...values);
+    }
+
+    if (this.$i18n.locale === 'en') {
+      this.faq = faqEnUS
+    } else if (this.$i18n.locale === 'de') {
+      this.faq = faqDeDE
+    } else if (this.$i18n.locale === 'it') {
+      this.faq = faqItIT
+    } else if (this.$i18n.locale === 'fr') {
+      this.faq = faqFrFR
+    }
+  },
+  methods: {
+    search () {
+      const keywords = this.userQuestion.replace(/[&/\\#,+()$~%.'":*?<>{}]/g, '').split(' ')
+      const modfaq = []
+      for (const category of Object.keys(this.faq)) {
+        for (const qna of Object.values(this.faq[category].qnas)) {
+          let matchedKeywords = 0
+          for (const keyword of keywords) {
+            if (qna.question.toLowerCase().includes(keyword.toLowerCase()) || qna.answer.toLowerCase().includes(keyword.toLowerCase())) {
+              matchedKeywords++
             }
           }
-          [qna ,matchedKeywords]
-          modfaq.push([qna ,matchedKeywords])
+          [qna, matchedKeywords]
+          modfaq.push([qna, matchedKeywords])
         }
       }
-      modfaq.sort(function(a, b) {
-          return b[1] - a[1];
-      });
+      modfaq.sort(function (a, b) {
+        return b[1] - a[1]
+      })
       this.matchedQNA = modfaq[0][0]
-      this.searching = true;
+      this.searching = true
     }
   }
-};
+}
 </script>
 
 <style scoped>

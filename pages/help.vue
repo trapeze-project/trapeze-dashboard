@@ -32,7 +32,7 @@
             >
               <div>
                 <div>
-                  {{ $t(type) }}
+                  {{ $t(type.replace('dpv.','')) }}
                 </div>
 
                 <v-divider class="my-3" />
@@ -92,49 +92,48 @@ export default {
       imports: {
         dataCategoryMap: ''
       },
-      consentHelperUserChoices:{},
+      consentHelperUserChoices: {},
       page: 1,
-      dataCategoryCompletedChoosement :[]
-    };
+      dataCategoryCompletedChoosement: []
+    }
   },
   created () {
     this.calculateDataCategoryMap()
   },
   methods: {
-    collectUserChoices(userChoices){
-      //this.consentHelperUserChoices[Object.keys(this.imports.dataCategoryMap)[this.page-1]] = userChoices;
-      let userChoicesPurposes = Object.keys(userChoices);
-      let dataCategory = Object.keys(this.imports.dataCategoryMap)[this.page-1]
+    collectUserChoices (userChoices) {
+      // this.consentHelperUserChoices[Object.keys(this.imports.dataCategoryMap)[this.page-1]] = userChoices;
+      const userChoicesPurposes = Object.keys(userChoices)
+      const dataCategory = Object.keys(this.imports.dataCategoryMap)[this.page - 1]
       // mark the data category as compeleted
-      if(!this.dataCategoryCompletedChoosement.includes(dataCategory)){
+      if (!this.dataCategoryCompletedChoosement.includes(dataCategory)) {
         this.dataCategoryCompletedChoosement.push(dataCategory)
       }
 
       // saving user choices in consentHelperUserChoices
-      for(let i = 0;i<userChoicesPurposes.length; i++){
-        if( this.consentHelperUserChoices[userChoicesPurposes[i]] == null){
-          this.consentHelperUserChoices[userChoicesPurposes[i]] = new Object();
+      for (let i = 0; i < userChoicesPurposes.length; i++) {
+        if (this.consentHelperUserChoices[userChoicesPurposes[i]] == null) {
+          this.consentHelperUserChoices[userChoicesPurposes[i]] = {}
         }
         this.consentHelperUserChoices[userChoicesPurposes[i]][dataCategory] = userChoices[userChoicesPurposes[i]]
-        
       }
     },
-    loadConsentPage(){
-      if(this.dataCategoryCompletedChoosement.length !== Object.keys(this.imports.dataCategoryMap).length){
-        let text = this.$t("snackbar.msg.please-complete-the-consent-guide")
-        this.$refs["helpNotification"].showNotification(text , "orange");
-      }else{
+    loadConsentPage () {
+      if (this.dataCategoryCompletedChoosement.length !== Object.keys(this.imports.dataCategoryMap).length) {
+        const text = this.$t('snackbar.msg.please-complete-the-consent-guide')
+        this.$refs.helpNotification.showNotification(text, 'orange')
+      } else {
         const consentPageRoute = this.$router.options.routes.find(route => route.path === this.localePath('/consent'))
-        this.$router.push({name: consentPageRoute.name ,query:{ tab: 'purpose' },params: {consentHelperUserChoices: this.consentHelperUserChoices}})
+        this.$router.push({ name: consentPageRoute.name, query: { tab: 'purpose' }, params: { consentHelperUserChoices: this.consentHelperUserChoices } })
       }
     },
-    calculateDataCategoryMap(){
-      this.imports.dataCategoryMap = examplePolicy.reduce((total, currentValue)=>{
-        let purpose = currentValue["dpv:Purpose"]["@class"].replace(':','.').replace(/ /g,'-').toLowerCase();
-        currentValue["dpv:PersonalDataCategory"].forEach((item, index)=>{
-          let personalDataCategory = item["@class"].replace(':','.').replace(/ /g,'-').toLowerCase();
-          if(!(personalDataCategory in total)){
-            total[personalDataCategory] =[]
+    calculateDataCategoryMap () {
+      this.imports.dataCategoryMap = examplePolicy.reduce((total, currentValue) => {
+        const purpose = currentValue['dpv:Purpose']['@class'].replace(':', '.').replace(/ /g, '-').toLowerCase()
+        currentValue['dpv:PersonalDataCategory'].forEach((item, index) => {
+          const personalDataCategory = item['@class'].replace(':', '.').replace(/ /g, '-').toLowerCase()
+          if (!(personalDataCategory in total)) {
+            total[personalDataCategory] = []
           }
           total[personalDataCategory].push(purpose)
         })

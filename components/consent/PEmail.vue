@@ -1,7 +1,7 @@
 <template>
-  <v-card flat>
+  <v-card v-if="event === 'consent-request-policy-update'" flat>
     <v-card-title>
-      <span>{{ event }}</span>
+      <span>{{ $t("consent.consent.ptable.events.values."+event) }}</span>
     </v-card-title>
 
     <v-card-subtitle>
@@ -36,8 +36,11 @@ export default {
   },
   data () {
     return {
-      emailText: email.text
+      emailText: ''
     }
+  },
+  created () {
+    this.emailText = email[this.$i18n.locale]
   }
 }
 </script>

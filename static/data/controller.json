@@ -1,0 +1,13 @@
+{
+    "company-information": {
+        "name": "CloverIT",
+        "add1": "Via del Campo Verde",
+        "add2": "123456, Viale dei fiori, Italy",
+        "website": "https://clover-it.com",
+        "email": "info@clover-it.com",
+        "pos-name": "Andrea Bouquet"
+    },
+    "faqParamsToInterpolate":{
+        "we":"CloverIT"
+    }
+}

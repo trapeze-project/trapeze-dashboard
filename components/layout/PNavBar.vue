@@ -6,7 +6,7 @@
     >
       <Logo />
       <b class="ml-3">
-        {{ $config.logo.slogan.toUpperCase() }}
+        {{$t('layout.privacy-dashboard').toUpperCase()}}
       </b>
       <div class="ml-auto">
         <div>

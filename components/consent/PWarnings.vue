@@ -1,57 +1,47 @@
 <template>
-  <div >
-    <b class="ml-3">{{$t('consent.warnings')}}</b>
-    
-    <v-alert
-      v-for="dataCategory in Object.keys(selectedWarnings)"
-      :key="dataCategory"
-      v-model="warningSwitches[dataCategory]"
-      shaped
-      dense
-      dark
-      prominent
-      type="warning"
-      v-for="dataCategory in Object.keys(selectedWarnings)"
-      :key="dataCategory"
-      class="mx-1"
-    >
-      <v-row align="center">
-        <v-col class="grow">
-          <p> you have {{ selectedWarnings[dataCategory]["givenConsentValue"]? "" : "not" }} given consent to the data controller to use your {{$t(dataCategory)}} data for the purpose of {{$t(purpose)}}. but your choice in ConsentHelper was {{$t(selectedWarnings[dataCategory]["consentHelperChoice"])}} </p>
-        </v-col>
-        <v-spacer />
-        <v-col
-          class=""
-          cols="6"
-          sm="2"
-          md="2"
-          lg="1"
-          align="right"
+  <div>
+    <b class="ml-3">{{ $t('consent.warnings') }}</b>
+    <transition-group tag="ul" name="warningsList" appear>
+      <li v-for="child in Object.keys(selectedWarnings)" :key="child">
+        <v-alert
+          id="issues"
+          shaped
+          dense
+          dark
+          prominent
+          type="warning"
+          class="mx-1"
         >
-          <v-btn @click="fixWarnig(dataCategory)">
-            fix
-          </v-btn>
-        </v-col>
-        <v-col
-          class=""
-          cols="6"
-          sm="2"
-          md="2"
-          lg="1"
-          align="right"
-        >
-          <v-btn @click="closeWarnig(dataCategory)">
-            ignore
-          </v-btn>
-        </v-col>
-      </v-row>
-    </v-alert>
+          <p v-if="tabName == 'purpose' && selectedWarnings[child]['consentHelperChoice'] == 'consent-helper.no-opinion'">
+            {{ $t('consent.warning-msg-no-opinion',{dataCategory:$t(child) , purpose: $t(parent) }) }}
+          </p>
+          <p v-else-if="tabName == 'purpose' && selectedWarnings[child]['consentHelperChoice'] == 'consent-helper.not-comfortable'">
+            {{ $t('consent.warning-msg-not-comfortable',{dataCategory:$t(child) , purpose: $t(parent) }) }}
+          </p>
+          <p v-if="tabName == 'data' && selectedWarnings[child]['consentHelperChoice'] == 'consent-helper.no-opinion'">
+            {{ $t('consent.warning-msg-no-opinion',{dataCategory:$t(parent) , purpose: $t(child) }) }}
+          </p>
+          <p v-else-if="tabName == 'data' && selectedWarnings[child]['consentHelperChoice'] == 'consent-helper.not-comfortable'">
+            {{ $t('consent.warning-msg-not-comfortable',{dataCategory:$t(parent) , purpose: $t(child) }) }}
+          </p>
+          <v-spacer />
+          <div class="mb-1 float-right">
+            <v-btn @click="fixWarnig(child)">
+              {{ $t('btn.labels.fix') }}
+            </v-btn>
+            <v-btn @click="closeWarnig(child)">
+              {{ $t('btn.labels.ignore') }}
+            </v-btn>
+          </div>
+        </v-alert>
+      </li>
+    </transition-group>
     <div class="float-right">
       <v-btn class="white--text " color="red" @click="fixAllWarnigs">
-        Fix All
+        {{ $t('btn.labels.fix-all') }}
       </v-btn>
       <v-btn class="black--text " color="primary" @click="closeAllWarnings">
-        Ignore All
+        {{ $t('btn.labels.ignore-all') }}
       </v-btn>
     </div>
     <br>
@@ -62,33 +52,60 @@
 export default {
   props: {
     selectedWarnings: Object,
-    purpose: String
+    parent: String,
+    tabName: String
   },
   methods: {
-    closeWarnig(dataCategory){
-      this.$emit('saveState');
-      this.$emit('ignoreWarning',this.purpose,dataCategory)
+    closeWarnig (child) {
+      this.$emit('saveState')
+      this.$emit('ignoreWarning', this.parent, child)
     },
-    closeAllWarnings(){
-      this.$emit('saveState');
-      for(const dataCategory of Object.keys(this.selectedWarnings)){
-        this.$emit('ignoreWarning',this.purpose,dataCategory)
+    closeAllWarnings () {
+      this.$emit('saveState')
+      for (const child of Object.keys(this.selectedWarnings)) {
+        this.$emit('ignoreWarning', this.parent, child)
       }
     },
-    fixWarnig(dataCategory){
-      this.$emit('saveState');
-      this.$emit('changeUserChoice',this.purpose,dataCategory ,false);
+    fixWarnig (child) {
+      this.$emit('saveState')
+      this.$emit('changeUserChoice', this.parent, child, false)
     },
-    fixAllWarnigs(){
-      this.$emit('saveState');
-      for(const dataCategory of Object.keys(this.selectedWarnings)){
-        this.$emit('changeUserChoice',this.purpose,dataCategory ,false);
+    fixAllWarnigs () {
+      this.$emit('saveState')
+      for (const child of Object.keys(this.selectedWarnings)) {
+        this.$emit('changeUserChoice', this.parent, child, false)
       }
     }
   }
 }
 </script>
 
-<style>
+<style scoped>
+ul{
+  position: relative;
+  list-style-type: none;
+}
+ul li:first-child{
+  margin-top: 4px;
+}
+
+.warningsList-enter , .warningsList-leave-to{
+  opacity: 0;
+  transform: scale(0.6);
+}
+.warningsList-enter-to{
+  opacity: 1;
+  transform: scale(1);
+}
+.warningsList-enter-active{
+  transition: all 0.5s ease;
+}
+.warningsList-leave-active{
+  transition: all 0.5s ease;
+  position: absolute;
+}
+.warningsList-move{
+  transition: all 0.4s ease;
+}
 
 </style>
