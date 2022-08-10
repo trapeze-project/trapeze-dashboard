@@ -19,6 +19,7 @@
         "labels": {
             "home": "Start",
             "consent": "Einwilligungen",
+            "consent-menu": "Einwilligungenmenü",
             "data": "Datenkategorien",
             "purposes": "Zwecke",
             "help": "Einwilligungsassistent",

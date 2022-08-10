@@ -12,8 +12,8 @@
         >
           <template v-slot:item="{ item }">
             <tr @click="checkUserChoiceCompleted">
-              <td>
-                {{ $t(item.name) }}
+              <td >
+                <PHoverCard :term="$t(item.name)" :definition="$t(item.name.split('.')[1])" />
               </td>
               <td v-for="radio in radioList" :key="radio.key">
                 <v-radio-group v-model="preferences[item.name]">
