@@ -46,7 +46,7 @@
         "qnas": {
             "qna1": {
                 "question": "Qu'est-ce que le consentement ?",
-                "answer": "Selon le RGPD (Art. 4 (11)), le consentement est une action affirmative claire envers un responsable de donn\u00e9es (nous) pour traiter vos donn\u00e9es personnelles. Notez que les responsables du traitement des donn\u00e9es (nous) ne doivent pas toujours recueillir votre consentement pour traiter vos donn\u00e9es personnelles. Par exemple, un service de livraison doit traiter votre adresse pour se conformer \u00e0 son ordre de livraison. Il n'a pas besoin de recueillir votre consentement.",
+                "answer": "Selon l'article 4, point 11 RGPD, le consentement est une action affirmative claire envers un responsable de donn\u00e9es (nous) pour traiter vos donn\u00e9es personnelles. Notez que les responsables du traitement des donn\u00e9es (nous) ne doivent pas toujours recueillir votre consentement pour traiter vos donn\u00e9es personnelles. Par exemple, un service de livraison doit traiter votre adresse pour se conformer \u00e0 son ordre de livraison. Il n'a pas besoin de recueillir votre consentement.",
                 "references": {
                     "ref1": "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX%3A32016R0679"
                 }
@@ -60,7 +60,7 @@
             },
             "qna3": {
                 "question": "Puis-je r\u00e9voquer mon consentement ?",
-                "answer": "Selon le RGPD (Art. 7 3.), vous pouvez r\u00e9voquer votre consentement \u00e0 tout moment. La r\u00e9vocation du consentement ne n\u00e9cessite pas de formulaire sp\u00e9cifique. Vous pouvez par exemple r\u00e9voquer le consentement en \u00e9crivant une lettre ou un courriel, ou en nous appelant.",
+                "answer": "Selon l'article 7, troisième paragraphe RGPD, vous pouvez r\u00e9voquer votre consentement \u00e0 tout moment. La r\u00e9vocation du consentement ne n\u00e9cessite pas de formulaire sp\u00e9cifique. Vous pouvez par exemple r\u00e9voquer le consentement en \u00e9crivant une lettre ou un courriel, ou en nous appelant.",
                 "references": {
                     "ref1": "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX%3A32016R0679"
                 }
@@ -77,7 +77,7 @@
             },
             "qna6": {
                 "question": "Que puis-je faire si j'ai oubli\u00e9 ce \u00e0 quoi j'ai consenti ?",
-                "answer": "Selon le GDPR (art. 7 1.), les responsables du traitement des donn\u00e9es (nous) doivent d\u00e9montrer qu'ils ont recueilli votre consentement.",
+                "answer": "Selon l'article 7, premier paragraphe RGPD, les responsables du traitement des donn\u00e9es (nous) doivent d\u00e9montrer qu'ils ont recueilli votre consentement.",
                 "references": {
                     "ref1": "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX%3A32016R0679"
                 }
@@ -93,7 +93,7 @@
         "qnas": {
             "qna1": {
                 "question": "Qu'est-ce qu'une donn\u00e9e personnelle ?",
-                "answer": "Selon le RGPD (Art. 4 (1)), toute donn\u00e9e qui vous est attribuable est une donn\u00e9e personnelle.",
+                "answer": "Selon l'article 4, point 4 RGPD, toute donn\u00e9e qui vous est attribuable est une donn\u00e9e personnelle.",
                 "references": {
                     "ref1": "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX%3A32016R0679"
                 }
@@ -104,7 +104,7 @@
         "qnas": {
             "qna1": {
                 "question": "Qu'est-ce qu'une finalité?",
-                "answer": "Selon le RGPD (article 5, paragraphe 1, point b)), les responsables du traitement doivent vous indiquer clairement \u00e0 quelles fins ils collectent vos donn\u00e9es personnelles. Il est par exemple ill\u00e9gal de collecter vos donn\u00e9es personnelles dans le but pr\u00e9cis de recommandations d'emploi personnalis\u00e9es et de les utiliser ensuite \u00e0 des fins de marketing.",
+                "answer": "Selon l'article 5, premier paragraphe RGPD, point b)), les responsables du traitement doivent vous indiquer clairement \u00e0 quelles fins ils collectent vos donn\u00e9es personnelles. Il est par exemple ill\u00e9gal de collecter vos donn\u00e9es personnelles dans le but pr\u00e9cis de recommandations d'emploi personnalis\u00e9es et de les utiliser ensuite \u00e0 des fins de marketing.",
                 "references": {
                     "ref1": "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX%3A32016R0679"
                 }
@@ -124,28 +124,28 @@
         "qnas": {
             "qna1": {
                 "question": "Consentement",
-                "answer": "Selon le RGPD (Art. 4 (11)), le consentement est l'affirmation claire d'une personne concern\u00e9e (votre) envers un responsable de donn\u00e9es (nous) pour traiter vos donn\u00e9es personnelles. Notez que les responsables du traitement des donn\u00e9es (nous) ne doivent pas toujours recueillir le consentement des personnes concern\u00e9es (vous) pour traiter les donn\u00e9es personnelles. Par exemple, un service de livraison doit traiter l'adresse d'une personne concern\u00e9e (vous) afin de respecter un ordre de livraison. Dans ce cas, les responsables du traitement des donn\u00e9es (nous) n'ont pas besoin de recueillir le consentement.",
+                "answer": "Selon l'article 4, point 11 RGPD, le consentement est l'affirmation claire d'une personne concern\u00e9e (votre) envers un responsable de donn\u00e9es (nous) pour traiter vos donn\u00e9es personnelles. Notez que les responsables du traitement des donn\u00e9es (nous) ne doivent pas toujours recueillir le consentement des personnes concern\u00e9es (vous) pour traiter les donn\u00e9es personnelles. Par exemple, un service de livraison doit traiter l'adresse d'une personne concern\u00e9e (vous) afin de respecter un ordre de livraison. Dans ce cas, les responsables du traitement des donn\u00e9es (nous) n'ont pas besoin de recueillir le consentement.",
                 "references": {
                     "ref1": "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX%3A32016R0679"
                 }
             },
             "qna2": {
                 "question": "Traitement transfrontalier",
-                "answer": "Selon le RGPD (Art. 4 (23)), le traitement transfrontalier signifie soit que le traitement est (a) effectu\u00e9 dans plusieurs \u00c9tats membres de l'UE, soit (b) effectu\u00e9 dans un seul \u00c9tat membre de l'UE mais sur des donn\u00e9es personnelles de personnes concern\u00e9es (vous) de plusieurs \u00c9tats membres.",
+                "answer": "Selon l'article 4, point 23 RGPD, le traitement transfrontalier signifie soit que le traitement est (a) effectu\u00e9 dans plusieurs \u00c9tats membres de l'UE, soit (b) effectu\u00e9 dans un seul \u00c9tat membre de l'UE mais sur des donn\u00e9es personnelles de personnes concern\u00e9es (vous) de plusieurs \u00c9tats membres.",
                 "references": {
                     "ref1": "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX%3A32016R0679"
                 }
             },
             "qna3": {
                 "question": "Responsable du Traitement",
-                "answer": "Selon le RGPD (Art. 4 (7)), les responsables du traitement des donn\u00e9es (nous) doivent indiquer clairement aux personnes concern\u00e9es (vous) comment et \u00e0 quelles fins ils traitent les donn\u00e9es personnelles. Les responsables du traitement des donn\u00e9es sont souvent uniquement appel\u00e9s \"responsables\".",
+                "answer": "Selon l'article 4, point 7 RGPD, les responsables du traitement des donn\u00e9es (nous) doivent indiquer clairement aux personnes concern\u00e9es (vous) comment et \u00e0 quelles fins ils traitent les donn\u00e9es personnelles. Les responsables du traitement des donn\u00e9es sont souvent uniquement appel\u00e9s \"responsables\".",
                 "references": {
                     "ref1": "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX%3A32016R0679"
                 }
             },
             "qna4": {
                 "question": "Sous-traitant",
-                "answer": "Selon le RGPD (Art. 4 (8)), les processeurs de donn\u00e9es traitent vos donn\u00e9es personnelles. Les processeurs de donn\u00e9es et les responsables de donn\u00e9es (nous) peuvent \u00eatre une seule et m\u00eame personne, mais pas n\u00e9cessairement. Si ce n'est pas le cas, les responsables de donn\u00e9es (nous) ne disent g\u00e9n\u00e9ralement ni la finalit\u00e9 du traitement ni quelles donn\u00e9es personnelles doivent \u00eatre trait\u00e9es par le sous-traitant de donn\u00e9es. Les sous-traitants de donn\u00e9es sont souvent uniquement appel\u00e9s \"sous-traitants\".",
+                "answer": "Selon l'article 4, point 8 RGPD, les processeurs de donn\u00e9es traitent vos donn\u00e9es personnelles. Les processeurs de donn\u00e9es et les responsables de donn\u00e9es (nous) peuvent \u00eatre une seule et m\u00eame personne, mais pas n\u00e9cessairement. Si ce n'est pas le cas, les responsables de donn\u00e9es (nous) ne disent g\u00e9n\u00e9ralement ni la finalit\u00e9 du traitement ni quelles donn\u00e9es personnelles doivent \u00eatre trait\u00e9es par le sous-traitant de donn\u00e9es. Les sous-traitants de donn\u00e9es sont souvent uniquement appel\u00e9s \"sous-traitants\".",
                 "references": {
                     "ref1": "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX%3A32016R0679"
                 }
@@ -159,7 +159,7 @@
             },
             "qna6": {
                 "question": "Destinataire",
-                "answer": "Selon le RGPD (Art. 4 (9)), toute personne \u00e0 laquelle les donn\u00e9es personnelles d'un sujet (votre) sont divulgu\u00e9es est un destinataire de donn\u00e9es. Les destinataires de donn\u00e9es sont g\u00e9n\u00e9ralement des responsables de donn\u00e9es et des processeurs de donn\u00e9es. Les destinataires de donn\u00e9es sont souvent uniquement appel\u00e9s \"destinataires\".",
+                "answer": "Selon l'article 4, point 9 RGPD, toute personne \u00e0 laquelle les donn\u00e9es personnelles d'un sujet (votre) sont divulgu\u00e9es est un destinataire de donn\u00e9es. Les destinataires de donn\u00e9es sont g\u00e9n\u00e9ralement des responsables de donn\u00e9es et des processeurs de donn\u00e9es. Les destinataires de donn\u00e9es sont souvent uniquement appel\u00e9s \"destinataires\".",
                 "references": {
                     "ref1": "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX%3A32016R0679"
                 }
@@ -173,49 +173,49 @@
             },
             "qna8": {
                 "question": "RGPD",
-                "answer": "Le r\u00e8glement g\u00e9n\u00e9ral sur la protection des donn\u00e9es est la l\u00e9gislation sur la protection des donn\u00e9es active dans l'Union europ\u00e9enne. Il a \u00e9t\u00e9 adopt\u00e9 en mai 2016 et est entr\u00e9 en vigueur en mai 2018.",
+                "answer": "Le R\u00e8glement G\u00e9n\u00e9ral sur la Protection des Donn\u00e9es (RGPD) est la l\u00e9gislation sur la protection des donn\u00e9es active dans l'Union europ\u00e9enne. Il a \u00e9t\u00e9 adopt\u00e9 en mai 2016 et est entr\u00e9 en vigueur en mai 2018.",
                 "references": {
                     "ref1": "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX%3A32016R0679"
                 }
             },
             "qna9": {
                 "question": "Donn\u00e9es personnelles",
-                "answer": "Selon le GDPR (Art. 4 (1)), toute donn\u00e9e attribuable \u00e0 une personne concern\u00e9e (vous) est une donn\u00e9e personnelle.",
+                "answer": "Selon l'article 4, point 1 RGPD, toute donn\u00e9e attribuable \u00e0 une personne concern\u00e9e (vous) est une donn\u00e9e personnelle.",
                 "references": {
                     "ref1": "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX%3A32016R0679"
                 }
             },
             "qna10": {
                 "question": "Traitement",
-                "answer": "Selon le RGPD (Art. 4 (2)), seul le traitement des donn\u00e9es personnelles est r\u00e9glement\u00e9. L'art. 6 d\u00e9finit notamment que le traitement des donn\u00e9es \u00e0 caract\u00e8re personnel est licite si les personnes concern\u00e9es (vous) ont donn\u00e9 leur consentement ou si le traitement est n\u00e9cessaire au respect d'un contrat. Un service de livraison n'a pas besoin de recueillir le consentement pour traiter l'adresse d'une personne concern\u00e9e (vous) \u00e0 des fins de livraison si la livraison fait partie d'un contrat d'achat. Le traitement implique \u00e9galement la collecte et le stockage de donn\u00e9es \u00e0 caract\u00e8re personnel.",
+                "answer": "Selon l'article 4, point 2 RGPD, seul le traitement des donn\u00e9es personnelles est r\u00e9glement\u00e9. L'art. 6 d\u00e9finit notamment que le traitement des donn\u00e9es \u00e0 caract\u00e8re personnel est licite si les personnes concern\u00e9es (vous) ont donn\u00e9 leur consentement ou si le traitement est n\u00e9cessaire au respect d'un contrat. Un service de livraison n'a pas besoin de recueillir le consentement pour traiter l'adresse d'une personne concern\u00e9e (vous) \u00e0 des fins de livraison si la livraison fait partie d'un contrat d'achat. Le traitement implique \u00e9galement la collecte et le stockage de donn\u00e9es \u00e0 caract\u00e8re personnel.",
                 "references": {
                     "ref1": "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX%3A32016R0679"
                 }
             },
             "qna11": {
                 "question": "Profilage",
-                "answer": "Selon le RGPD (Art. 4 (4)), le profilage est toute forme de traitement automatis\u00e9 sur des donn\u00e9es personnelles afin de d\u00e9duire des informations sp\u00e9cifiques sur une personne concern\u00e9e (vous). Le profilage est couramment utilis\u00e9 pour estimer la probabilit\u00e9 qu'une personne concern\u00e9e (vous) ach\u00e8te un certain produit ou ne puisse pas rembourser un cr\u00e9dit.",
+                "answer": "Selon l'article 4, point 4 RGPD, le profilage est toute forme de traitement automatis\u00e9 sur des donn\u00e9es personnelles afin de d\u00e9duire des informations sp\u00e9cifiques sur une personne concern\u00e9e (vous). Le profilage est couramment utilis\u00e9 pour estimer la probabilit\u00e9 qu'une personne concern\u00e9e (vous) ach\u00e8te un certain produit ou ne puisse pas rembourser un cr\u00e9dit.",
                 "references": {
                     "ref1": "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX%3A32016R0679"
                 }
             },
             "qna12": {
                 "question": "Pseudonymisation",
-                "answer": "Selon le RGPD (Art. 4 (5)), la pseudonymisation des donn\u00e9es personnelles signifie que les donn\u00e9es personnelles ne peuvent \u00eatre attribu\u00e9es \u00e0 une personne concern\u00e9e (vous) qu'\u00e0 l'aide de donn\u00e9es additionnelles. L'utilisation de noms ou de num\u00e9ros artificiels \u00e0 la place du nom r\u00e9el d'une personne concern\u00e9e (vous) est une technique de pseudonymisation simple.",
+                "answer": "Selon l'article 4, point 5 RGPD, la pseudonymisation des donn\u00e9es personnelles signifie que les donn\u00e9es personnelles ne peuvent \u00eatre attribu\u00e9es \u00e0 une personne concern\u00e9e (vous) qu'\u00e0 l'aide de donn\u00e9es additionnelles. L'utilisation de noms ou de num\u00e9ros artificiels \u00e0 la place du nom r\u00e9el d'une personne concern\u00e9e (vous) est une technique de pseudonymisation simple.",
                 "references": {
                     "ref1": "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX%3A32016R0679"
                 }
             },
             "qna13": {
                 "question": "Finalité",
-                "answer": "Selon le RGPD (article 5, paragraphe 1, point b)), les responsables du traitement des donn\u00e9es (nous) doivent vous indiquer clairement dans quel but ils collectent des donn\u00e9es \u00e0 caract\u00e8re personnel. Il est par exemple ill\u00e9gal de collecter des donn\u00e9es \u00e0 caract\u00e8re personnel \u00e0 des fins de recommandations d'emploi personnalis\u00e9es et de les utiliser ult\u00e9rieurement \u00e0 des fins de marketing.",
+                "answer": "Selon l'article 5, premier paragraphe, point b) RGPD, les responsables du traitement des donn\u00e9es (nous) doivent vous indiquer clairement dans quel but ils collectent des donn\u00e9es \u00e0 caract\u00e8re personnel. Il est par exemple ill\u00e9gal de collecter des donn\u00e9es \u00e0 caract\u00e8re personnel \u00e0 des fins de recommandations d'emploi personnalis\u00e9es et de les utiliser ult\u00e9rieurement \u00e0 des fins de marketing.",
                 "references": {
                     "ref1": "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX%3A32016R0679"
                 }
             },
             "qna14": {
                 "question": "Tiers",
-                "answer": "Selon le RGPD (Art. 4 (10)), les tiers sont directement autoris\u00e9s par les responsables de donn\u00e9es (nous) et/ou les processeurs de donn\u00e9es \u00e0 traiter les donn\u00e9es personnelles.",
+                "answer": "Selon l'article 4, point 10 RGPD, les tiers sont directement autoris\u00e9s par les responsables de donn\u00e9es (nous) et/ou les processeurs de donn\u00e9es \u00e0 traiter les donn\u00e9es personnelles.",
                 "references": {
                     "ref1": "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX%3A32016R0679"
                 }
