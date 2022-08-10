@@ -15,7 +15,7 @@
             },
             "qna3": {
                 "question": "Pourquoi utilisez-vous (${we}) le TRAPEZE tableau de bord de confidentialité?",
-                "answer": "Nous (${we}) utilisons le TRAPEZE tableau de bord de confidentialité pour vous permettre de mieux comprendre ce que nous faisons de vos données. Grâce au tableau de bord de confidentialité TRAPEZE, nous pouvons savoir si vous aimez généralement que nous traitions vos données ou, peut-être, seulement à des fins spécifiques. \n \n Notre objectif est d'aligner le traitement actuel de vos données sur la manière dont vous souhaitez qu'elles soient traitées.",
+                "answer": "Nous (${we}) utilisons le TRAPEZE tableau de bord de confidentialité pour vous permettre de mieux comprendre ce que nous faisons de vos données. Grâce au TRAPEZE tableau de bord de confidentialité, nous pouvons savoir si vous aimez généralement que nous traitions vos données ou, peut-être, seulement à des fins spécifiques. \n \n Notre objectif est d'aligner le traitement actuel de vos données sur la manière dont vous souhaitez qu'elles soient traitées.",
                 "references": {
                 }
             },
