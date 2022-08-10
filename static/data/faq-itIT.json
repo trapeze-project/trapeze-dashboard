@@ -99,7 +99,7 @@
             }
         }
     },
-    "Finalità": {
+    "Finalità (Scopo)": {
         "qnas": {
             "qna1": {
                 "question": "Che cos'\u00e8 una finalità?",
@@ -206,8 +206,8 @@
                 }
             },
             "qna13": {
-                "question": "Finalità",
-                "answer": "Secondo il articolo 5, paragrafo 5, lettera b) RGPD, i responsabili del trattamento dei dati (noi) devono indicare chiaramente per quale finalità raccolgono i dati personali. Ad esempio, \u00e8 illegale raccogliere dati personali alla finalità di fornire raccomandazioni lavorative personalizzate e successivamente utilizzarli a fini di marketing.",
+                "question": "Finalità (Scopo)",
+                "answer": "Secondo il articolo 5, paragrafo 5, lettera b) RGPD, i responsabili del trattamento dei dati (noi) devono indicare chiaramente per quale finalità (scopo) raccolgono i dati personali. Ad esempio, \u00e8 illegale raccogliere dati personali alla finalità (scopo) di fornire raccomandazioni lavorative personalizzate e successivamente utilizzarli a fini di marketing.",
                 "references": {
                     "ref1": "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX%3A32016R0679"
                 }
