@@ -93,10 +93,10 @@
     "home": {
         "title": "Willkommen auf Ihrem pers\u00f6nlichen Datenschutz-Dashboard!",
         "explore-btn": "Ansehen",
-        "welcome-msg": "We at <WE-DUMMY> want you to understand how we process your personal data.",
-        "welcome-msg2": "In this dashboard, you can view what personal data we <WE-DUMMY> process and for which purposes. The dashboard allows you to limit our processing of your personal data by configuring your consent. You can:",
-        "welcome-msg3": "The menu in the bottom left gives you a quick overview of the most recent consent-related interactions between you and us <US-DUMMY>.",
-        "welcome-msg4": "If you are new to the privacy dashboard, we recommend you to try out the Consent Assistant.",
+        "welcome-msg": "Wir von <WE-DUMMY> möchten, dass Sie verstehen, wie wir Ihre persönlichen Daten verarbeiten.",
+        "welcome-msg2": "In diesem Dashboard können Sie sehen, welche personenbezogenen Daten wir <WE-DUMMY> verarbeiten und zu welchen Zwecken. Das Dashboard ermöglicht es Ihnen, unsere Verarbeitung Ihrer personenbezogenen Daten einzuschränken, indem Sie Ihre Einwilligung konfigurieren. Sie können:",
+        "welcome-msg3": "Das Menü unten links gibt Ihnen einen schnellen Überblick über die letzten einwilligungsbezogenen Interaktionen zwischen Ihnen und uns <US-DUMMY>.",
+        "welcome-msg4": "Wenn Sie noch nicht mit dem Datenschutz-Dashboard vertraut sind, empfehlen wir Ihnen, den Einwilligungssassistenten auszuprobieren.",
         "purpose": {
             "0": {
                 "name": "Einwilligungen widerrufen oder erteilen,"
@@ -114,19 +114,19 @@
                 "title": "Einwilligungen",
                 "filename": "/img/consent.png",
                 "link": "/consent?tab=consent",
-                "content": "View the consent you gave us <US-DUMMY>."
+                "content": "Sehen Sie sich die Zustimmung an, die Sie uns gegeben haben <US-DUMMY>."
             },
             "1": {
                 "title": "Datenkategorien",
                 "filename": "/img/data.png",
                 "link": "/consent?tab=data",
-                "content": "Tell us which of your data we <WE-DUMMY> may use."
+                "content": "Sagen Sie uns, welche Ihrer Daten wir <WE-DUMMY> verwenden dürfen."
             },
             "2": {
                 "title": "Zwecke",
                 "filename": "/img/purpose.png",
                 "link": "/consent?tab=purpose",
-                "content": "Tell us which of your data we <WE-DUMMY> may use."
+                "content": "Sagen Sie uns <US-DUMMY>, wofür wir Ihre Daten verwenden dürfen. "
             },
             "3": {
                 "title": "TRAPEZE",
