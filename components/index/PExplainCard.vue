@@ -7,7 +7,7 @@
     </v-card-title>
 
     <v-card-text>
-      {{ content }}
+      {{ content.interpolate(paramsForInterpolation)}}
     </v-card-text>
     <v-spacer></v-spacer>
     <v-card-actions>
@@ -21,6 +21,7 @@
 </template>
 
 <script>
+import controller from '../../static/data/controller.json'
 export default {
   props: {
     title: {
@@ -45,10 +46,18 @@ export default {
   data () {
     return {
       btnLabel: '',
-      btnProps: ''
+      btnProps: '',
+      paramsForInterpolation:{}
     }
   },
   created () {
+    this.paramsForInterpolation = controller.paramsForInterpolation;
+    String.prototype.interpolate = function(params) {
+      const names = Object.keys(params);
+      const values = Object.values(params);
+      return new Function(...names, `return \`${this}\`;`)(...values);
+    }
+
     this.calculateButtonProperties()
   },
   methods: {

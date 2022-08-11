@@ -84,8 +84,7 @@
         "title": "Benvenuti sul vostro dashboard personale sulla privacy!",
         "explore-btn": "Visualizza",
         "welcome-msg1": "Noi di <WE-DUMMY> vogliamo che tu capisca come trattiamo i tuoi dati personali.\n\nIn questo dashboard è possibile visualizzare quali dati personali vengono trattati da <WE-DUMMY> e per quali scopi. Il dashboard vi consente di limitare il trattamento dei vostri dati personali configurando il vostro consenso. È possibile:",
-        "welcome-msg3": "Il menu in basso a sinistra offre una rapida panoramica delle interazioni più recenti relative al consenso tra l'utente e noi <US-DUMMY>.",
-        "welcome-msg4": "Se siete nuovi al dashboard sulla privacy, vi consigliamo di provare l'Assistente al Consenso.",
+        "welcome-msg2": "Il menu in basso a sinistra offre una rapida panoramica delle interazioni più recenti relative al consenso tra l'utente e noi <US-DUMMY>.\nSe siete nuovi al dashboard sulla privacy, vi consigliamo di provare l'Assistente al Consenso.",
          "purpose": {
             "0": {
                 "name": "annullare e dare consenso,"

@@ -6,7 +6,7 @@
       <v-card-text>
         <v-row>
           <v-col>
-            <p> {{ $t("qna.introduction") }} </p>
+            <p> {{ $t("qna.introduction").interpolate(paramsForInterpolation) }} </p>
           </v-col>
         </v-row>
 

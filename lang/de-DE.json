@@ -85,8 +85,7 @@
         "title": "Willkommen auf Ihrem pers\u00f6nlichen Datenschutz-Dashboard!",
         "explore-btn": "Ansehen",
         "welcome-msg1": "Wir von <WE-DUMMY> möchten, dass Sie verstehen, wie wir Ihre persönlichen Daten verarbeiten.\n\nIn diesem Dashboard können Sie sehen, welche personenbezogenen Daten wir <WE-DUMMY> verarbeiten und zu welchen Zwecken. Das Dashboard ermöglicht es Ihnen, unsere Verarbeitung Ihrer personenbezogenen Daten einzuschränken, indem Sie Ihre Einwilligung konfigurieren. Sie können:",
-        "welcome-msg3": "Das Menü unten links gibt Ihnen einen schnellen Überblick über die letzten einwilligungsbezogenen Interaktionen zwischen Ihnen und uns <US-DUMMY>.",
-        "welcome-msg4": "Wenn Sie noch nicht mit dem Datenschutz-Dashboard vertraut sind, empfehlen wir Ihnen, den Einwilligungssassistenten auszuprobieren.",
+        "welcome-msg2": "Das Menü unten links gibt Ihnen einen schnellen Überblick über die letzten einwilligungsbezogenen Interaktionen zwischen Ihnen und uns <US-DUMMY>.\nWenn Sie noch nicht mit dem Datenschutz-Dashboard vertraut sind, empfehlen wir Ihnen, den Einwilligungssassistenten auszuprobieren.",
         "purpose": {
             "0": {
                 "name": "Einwilligungen widerrufen oder erteilen,"

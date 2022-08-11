@@ -85,8 +85,7 @@
         "title": "Bienvenue dans votre tableau de bord de confidentialit\u00e9 personnel !",
         "explore-btn": "Voir",
         "welcome-msg1": "Chez <WE-DUMMY>, nous voulons que vous compreniez comment nous traitons vos données personnelles.\n\nDans ce tableau de bord, vous pouvez voir quelles données personnelles nous <WE-DUMMY> traitons et à quelles fins. Le tableau de bord vous permet de limiter notre traitement de vos données personnelles en configurant votre consentement. Vous pouvez :",
-        "welcome-msg3": "Le menu en bas à gauche vous donne un aperçu rapide des interactions les plus récentes liées au consentement entre vous et nous <US-DUMMY>.",
-        "welcome-msg4": "Si vous ne connaissez pas encore le tableau de bord de la vie privée, nous vous recommandons d'essayer l'Assistant de Consentement.",
+        "welcome-msg2": "Le menu en bas à gauche vous donne un aperçu rapide des interactions les plus récentes liées au consentement entre vous et nous <US-DUMMY>.\nSi vous ne connaissez pas encore le tableau de bord de la vie privée, nous vous recommandons d'essayer l'Assistant de Consentement.",
          "purpose": {
             "0": {
                 "name": "r\u00e9voquer et donner son consentement,"

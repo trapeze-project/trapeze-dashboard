@@ -14,7 +14,7 @@
       <v-divider class="my-3" />
 
       <p>
-        {{ $t("home.welcome-msg4") }}
+        {{ $t("home.welcome-msg2").interpolate(paramsForInterpolation) }}
       </p>
 
       <v-btn
