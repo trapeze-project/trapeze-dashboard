@@ -53,7 +53,8 @@
             "ignore-all": "Ignora tutto",
             "view": "Visualizza",
             "visit-website": "Visita il sito web",
-            "leave-anyway":"vattene comunque"
+            "leave-anyway":"vattene comunque",
+            "contact": "Contatto"
         }
     },
     "snackbar": {
@@ -79,21 +80,10 @@
         "header": "Domande Frequenti (FAQ)",
         "introduction": "Scoprite di pi\u00f9 sul dashboard sulla privacy di TRAPEZE e sui concetti che ne stanno alla base. Fateci sapere <US-DUMMY> se non trovate informazioni a cui sei interessati/e."
     },
-    "company": {
-        "name": "Nome della societ\u00e0",
-        "add1": "Indirizzo della societ\u00e0",
-        "add2": "123456",
-        "website": "https://societa.nome.com",
-        "email": "nome@societa.nome.com",
-        "contact": "Contatto",
-        "position": "Responsabile della protezione dei dati (DPO)",
-        "pos-name": "Nome del responsabile della protezione dei dati"
-    },
     "home": {
         "title": "Benvenuti sul vostro dashboard personale sulla privacy!",
         "explore-btn": "Visualizza",
-        "welcome-msg": "Noi di <WE-DUMMY> vogliamo che tu capisca come trattiamo i tuoi dati personali.",
-        "welcome-msg2": "In questo dashboard è possibile visualizzare quali dati personali vengono trattati da <WE-DUMMY> e per quali scopi. Il dashboard vi consente di limitare il trattamento dei vostri dati personali configurando il vostro consenso. È possibile:",
+        "welcome-msg1": "Noi di <WE-DUMMY> vogliamo che tu capisca come trattiamo i tuoi dati personali.\n\nIn questo dashboard è possibile visualizzare quali dati personali vengono trattati da <WE-DUMMY> e per quali scopi. Il dashboard vi consente di limitare il trattamento dei vostri dati personali configurando il vostro consenso. È possibile:",
         "welcome-msg3": "Il menu in basso a sinistra offre una rapida panoramica delle interazioni più recenti relative al consenso tra l'utente e noi <US-DUMMY>.",
         "welcome-msg4": "Se siete nuovi al dashboard sulla privacy, vi consigliamo di provare l'Assistente al Consenso.",
          "purpose": {

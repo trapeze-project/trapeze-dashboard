@@ -53,7 +53,8 @@
             "ignore-all": "Ignore All",
             "view": "View",
             "visit-website": "Visit Website",
-            "leave-anyway":"leave anyway"
+            "leave-anyway":"leave anyway",
+            "contact":"Contact"
         }
     },
     "snackbar": {
@@ -80,21 +81,10 @@
         "header": "Frequently Asked Questions (FAQ)",
         "introduction": "Find out more about the TRAPEZE privacy dashboard and its underlying concepts. Do not forget to let us <US-DUMMY> know if you cannot find information you are interested in."
     },
-    "company": {
-        "name": "Company Name",
-        "add1": "Company Name Street",
-        "add2": "123456, Company Name City, Italy",
-        "website": "https://company.name.com",
-        "email": "name@company.name.com",
-        "contact": "Contact",
-        "position": "Data Protection Officer (DPO)",
-        "pos-name": "Data Protection Officer Name"
-    },
     "home": {
         "title": "Welcome to your personal privacy dashboard!",
         "explore-btn": "View",
-        "welcome-msg": "We at ${we} <WE-DUMMY> want you to understand how we process your personal data.",
-        "welcome-msg2": "In this dashboard, you can view what personal data we <WE-DUMMY> process and for which purposes. The dashboard allows you to limit our processing of your personal data by configuring your consent. You can:",
+        "welcome-msg1": "We at ${we} <WE-DUMMY> want you to understand how we process your personal data.\n\nIn this dashboard, you can view what personal data we <WE-DUMMY> process and for which purposes. The dashboard allows you to limit our processing of your personal data by configuring your consent. You can:",
         "welcome-msg3": "The menu in the bottom left gives you a quick overview of the most recent consent-related interactions between you and us <US-DUMMY>.",
         "welcome-msg4": "If you are new to the privacy dashboard, we recommend you to try out the Consent Assistant.",
         "purpose": {

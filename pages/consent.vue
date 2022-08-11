@@ -242,9 +242,10 @@ export default {
     if (!this.disableUndoLastChangeBtnForData || !this.disableUndoLastChangeBtnForPurpose || JSON.stringify(this.warnings) !== JSON.stringify({})) {
       let alertBody = ''
       if (!this.disableUndoLastChangeBtnForData || !this.disableUndoLastChangeBtnForPurpose) {
-        alertBody += this.$t('PAlertLeaveDialog.lose-changes-warning') + ' <br/>'
+        alertBody += this.$t('PAlertLeaveDialog.lose-changes-warning')
       }
       if (JSON.stringify(this.warnings) !== JSON.stringify({})) {
+         alertBody += '\n'
         alertBody += this.$t('PAlertLeaveDialog.lose-consent-helper-choices')
       }
       this.$refs.alertDialog.showAlert(alertBody)

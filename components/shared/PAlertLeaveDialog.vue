@@ -8,7 +8,7 @@
       <v-card-title class="text-h5" style="word-break:break-word">
         {{ this.$t("PAlertLeaveDialog.dialog-title") }}
       </v-card-title>
-      <v-card-text v-html="this.alertBody" />
+      <v-card-text style="white-space:pre-line">{{this.alertBody}}</v-card-text>
       <v-card-actions>
         <v-spacer />
         <v-btn

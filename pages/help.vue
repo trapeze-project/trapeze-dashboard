@@ -31,9 +31,7 @@
               :step="index + 1"
             >
               <div>
-                <div>
-                  {{ $t(type.replace('dpv.','')) }}
-                </div>
+                <div style="white-space:pre-line">{{ $t(type.replace('dpv.','')) }}</div>
 
                 <v-divider class="my-3" />
 

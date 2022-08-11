@@ -53,7 +53,8 @@
             "ignore-all": "Alle ignorieren",
             "view": "Ansehen",
             "visit-website": "Webseite besuchen",
-            "leave-anyway":"sowieso verlassen"
+            "leave-anyway":"trotzdem verlassen",
+            "contact": "Kontakt"
         }
     },
     "snackbar": {
@@ -80,21 +81,10 @@
         "header": "H\u00e4ufig gestellte Fragen (FAQ)",
         "introduction": "Erfahren Sie mehr \u00fcber das TRAPEZE-Datenschutz-Dashboard und dessen zugrunde liegenden Konzepte. Geben Sie uns <US-DUMMY> gerne Bescheid, falls Sie Ihre gew\u00fcnschten Informationen nicht finden k\u00f6nnen."
     },
-    "company": {
-        "name": "Firmenname",
-        "add1": "Firmenname Stra\u00dfe",
-        "add2": "123456, Firmenname Stadt, Italien",
-        "website": "https://firma.name.com",
-        "email": "name@firma.name.com",
-        "contact": "Kontakt",
-        "position": "Datenschutzbeauftragter (DSB)",
-        "pos-name": "Name des Datenschutzbeauftragten"
-    },
     "home": {
         "title": "Willkommen auf Ihrem pers\u00f6nlichen Datenschutz-Dashboard!",
         "explore-btn": "Ansehen",
-        "welcome-msg": "Wir von <WE-DUMMY> möchten, dass Sie verstehen, wie wir Ihre persönlichen Daten verarbeiten.",
-        "welcome-msg2": "In diesem Dashboard können Sie sehen, welche personenbezogenen Daten wir <WE-DUMMY> verarbeiten und zu welchen Zwecken. Das Dashboard ermöglicht es Ihnen, unsere Verarbeitung Ihrer personenbezogenen Daten einzuschränken, indem Sie Ihre Einwilligung konfigurieren. Sie können:",
+        "welcome-msg1": "Wir von <WE-DUMMY> möchten, dass Sie verstehen, wie wir Ihre persönlichen Daten verarbeiten.\n\nIn diesem Dashboard können Sie sehen, welche personenbezogenen Daten wir <WE-DUMMY> verarbeiten und zu welchen Zwecken. Das Dashboard ermöglicht es Ihnen, unsere Verarbeitung Ihrer personenbezogenen Daten einzuschränken, indem Sie Ihre Einwilligung konfigurieren. Sie können:",
         "welcome-msg3": "Das Menü unten links gibt Ihnen einen schnellen Überblick über die letzten einwilligungsbezogenen Interaktionen zwischen Ihnen und uns <US-DUMMY>.",
         "welcome-msg4": "Wenn Sie noch nicht mit dem Datenschutz-Dashboard vertraut sind, empfehlen wir Ihnen, den Einwilligungssassistenten auszuprobieren.",
         "purpose": {

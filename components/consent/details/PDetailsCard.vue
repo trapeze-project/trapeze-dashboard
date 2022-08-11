@@ -5,9 +5,7 @@
         {{ $t(categoryName) }}
       </v-card-title>
       <v-divider />
-      <v-card-text>
-        {{ $t(categoryName.replace('dpv.','')) }}
-      </v-card-text>
+      <v-card-text style="white-space:pre-line">{{ $t(categoryName.replace('dpv.','')) }}</v-card-text>
     </v-card>
   </div>
 </template>

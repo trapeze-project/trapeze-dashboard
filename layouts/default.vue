@@ -19,7 +19,7 @@
             </v-col>
             <v-col>
               <v-btn text class="float-right mr-n5" @click.stop="drawerController = !drawerController">
-                {{ $t('company.name') }} <v-img src="/img/company.png" max-width="50" max-height="50" />
+                <span>{{ this.companyName }}</span> <v-img src="/img/company.png" max-width="50" max-height="50" />
               </v-btn>
               <v-navigation-drawer
                 v-model="drawerController"
@@ -49,13 +49,18 @@
 </template>
 
 <script>
+import controller from '../static/data/controller.json' 
 export default {
   data () {
     return {
       drawer: null,
       drawerController: null,
-      group: null
+      group: null,
+      companyName:""
     }
+  },
+  created(){
+    this.companyName = controller.companyInformation.name;
   }
 }
 </script>

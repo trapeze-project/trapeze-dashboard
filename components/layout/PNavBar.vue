@@ -20,8 +20,9 @@
                 elevation="0"
                 v-bind="attrs"
                 v-on="on"
+                style=""
               >
-                {{ $i18n.locale }}
+                {{ $i18n.locale.toUpperCase() }}
               </v-btn>
             </template>
             <v-list>

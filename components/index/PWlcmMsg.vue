@@ -4,8 +4,7 @@
       {{ $t("home.title") }}
     </v-card-title>
     <v-card-text>
-      <p>{{ $t("home.welcome-msg") }}</p>
-      <p>{{ $t("home.welcome-msg2") }}</p>
+      <p style="white-space:pre-line">{{ $t("home.welcome-msg1").interpolate(paramsForInterpolation)}}</p>
       <ul>
         <li v-for="(item, idx) in Object.values($t('home.purpose'))" :key="idx">
           {{ item.name }}
@@ -29,3 +28,19 @@
     </v-card-text>
   </v-card>
 </template>
+
+<script>
+import controller from '../../static/data/controller.json'
+export default{
+  created(){
+    this.paramsForInterpolation = controller.paramsForInterpolation;
+    String.prototype.interpolate = function(params) {
+      const names = Object.keys(params);
+      const values = Object.values(params);
+      return new Function(...names, `return \`${this}\`;`)(...values);
+    }
+
+  }
+}
+</script>
+
