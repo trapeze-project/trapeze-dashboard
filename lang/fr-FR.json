@@ -209,8 +209,8 @@
             "ptable": {
                 "header": {
                     "values": {
-                        "data": "Les Donn\u00e9es",
-                        "purposes": "Scopi",
+                        "data": "Catégorie de donn\u00e9es",
+                        "purposes": "Fins",
                         "issue": "Probl\u00e8me"
                     }
                 },
@@ -223,8 +223,8 @@
             "ptable": {
                 "header": {
                     "values": {
-                        "purpose": "Finalit\u00e9",
-                        "data": "Donn\u00e9es",
+                        "purpose": "Fin",
+                        "data": "Catégories de donn\u00e9es",
                         "issue": "Probl\u00e8me"
                     }
                 },

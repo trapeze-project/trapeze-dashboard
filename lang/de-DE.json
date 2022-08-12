@@ -183,7 +183,7 @@
                 "header": {
                     "values": {
                         "date": "Datum",
-                        "event": "Einlass",
+                        "event": "Ereignis",
                         "policy": "Politik"
                     }
                 },
@@ -208,7 +208,7 @@
             "ptable": {
                 "header": {
                     "values": {
-                        "data": "Daten",
+                        "data": "Datenkategorie",
                         "purposes": "Zwecke",
                         "issue": "Konflikte"
                     }
@@ -223,7 +223,7 @@
                 "header": {
                     "values": {
                         "purpose": "Zweck",
-                        "data": "Daten",
+                        "data": "Datenkategorien",
                         "issue": "Konflikte"
                     }
                 },

@@ -207,7 +207,7 @@
             "ptable": {
                 "header": {
                     "values": {
-                        "data": "Data",
+                        "data": "Data Category",
                         "purposes": "Purposes",
                         "issue": "Issue"
                     }
@@ -222,7 +222,7 @@
                 "header": {
                     "values": {
                         "purpose": "Purpose",
-                        "data": "Data",
+                        "data": "Data Categories",
                         "issue": "Issue"
                     }
                 },
