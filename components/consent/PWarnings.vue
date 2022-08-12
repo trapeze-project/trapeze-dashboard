@@ -13,16 +13,16 @@
           class="mx-1"
         >
           <p v-if="tabName == 'purpose' && selectedWarnings[child]['consentHelperChoice'] == 'consent-helper.no-opinion'">
-            {{ $t('consent.warning-msg-no-opinion',{dataCategory:$t(child) , purpose: $t(parent) }) }}
+            {{ $t('consent.warning-msg-no-opinion',{dataCategory:$t(child) , purpose: $t(parent),we:paramsForInterpolation.we }).interpolate(paramsForInterpolation) }}
           </p>
           <p v-else-if="tabName == 'purpose' && selectedWarnings[child]['consentHelperChoice'] == 'consent-helper.not-comfortable'">
-            {{ $t('consent.warning-msg-not-comfortable',{dataCategory:$t(child) , purpose: $t(parent) }) }}
+            {{ $t('consent.warning-msg-not-comfortable',{dataCategory:$t(child) , purpose: $t(parent) ,we:paramsForInterpolation.we}).interpolate(paramsForInterpolation) }}
           </p>
           <p v-if="tabName == 'data' && selectedWarnings[child]['consentHelperChoice'] == 'consent-helper.no-opinion'">
-            {{ $t('consent.warning-msg-no-opinion',{dataCategory:$t(parent) , purpose: $t(child) }) }}
+            {{ $t('consent.warning-msg-no-opinion',{dataCategory:$t(parent) , purpose: $t(child),we:paramsForInterpolation.we }).interpolate(paramsForInterpolation) }}
           </p>
           <p v-else-if="tabName == 'data' && selectedWarnings[child]['consentHelperChoice'] == 'consent-helper.not-comfortable'">
-            {{ $t('consent.warning-msg-not-comfortable',{dataCategory:$t(parent) , purpose: $t(child) }) }}
+            {{ $t('consent.warning-msg-not-comfortable',{dataCategory:$t(parent) , purpose: $t(child),we:paramsForInterpolation.we }).interpolate(paramsForInterpolation) }}
           </p>
           <v-spacer />
           <div class="mb-1 float-right">
@@ -49,11 +49,20 @@
 </template>
 
 <script>
+import controller from '../../static/data/controller.json'
 export default {
   props: {
     selectedWarnings: Object,
     parent: String,
-    tabName: String
+    tabName: String,
+  },
+  data(){
+    return{
+      paramsForInterpolation:{}
+    }
+  },
+  created () {
+    this.paramsForInterpolation = controller.paramsForInterpolation;
   },
   methods: {
     closeWarnig (child) {

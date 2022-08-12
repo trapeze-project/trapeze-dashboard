@@ -168,8 +168,8 @@
         "sensitivityText": "You can configure how sensitive this data is to you. We treat very sensitive data differently and with extensive care",
         "sensitivityHeader": "How sensitive is this data to you?",
         "warnings": "Warnings",
-        "warning-msg-not-comfortable":"In the Consent Assistant, you have indicated that you are uncomfortable that we (${we}) use your {dataCategory} data for {purpose} purposes. However, the consent you gave us indicates that you are comfortable. Please review your consent.",
-        "warning-msg-no-opinion":"In the Consent Assistant, you have indicated that you do not have an opinion on our (${we}) processing of your {dataCategory} data for {purpose} purposes. However, the consent you gave us indicates that you are comfortable. Please review your consent.",
+        "warning-msg-not-comfortable":"In the Consent Assistant, you have indicated that you are uncomfortable that we {we} use your {dataCategory} data for {purpose} purposes. However, the consent you gave us indicates that you are comfortable. Please review your consent.",
+        "warning-msg-no-opinion":"In the Consent Assistant, you have indicated that you do not have an opinion on our {we} processing of your {dataCategory} data for {purpose} purposes. However, the consent you gave us indicates that you are comfortable. Please review your consent.",
         "issues": "issues",
         "issue": "issue",
         "tab": {
