@@ -2,13 +2,14 @@
   <v-card outlined color="transparent">
     <v-img src="/img/company.png" />
     <v-card-text>
-      {{ this.companyInformation.name }}<br>
+      <b>{{ this.companyInformation.name }}</b><br>
       {{ this.companyInformation.add1 }}<br>
       {{ this.companyInformation.add2 }}<br>
       {{ this.companyInformation.website }}<br>
       <br>
+      
       {{$t("general.dpo")}} ({{$t("general.dpo-abbrev")}})<br>
-      {{ this.companyInformation.posName }}<br>
+      <b>{{ this.companyInformation.posName }}</b><br>
       {{ this.companyInformation.email }}<br>
       <PContactFirm
         class="mt-3"
