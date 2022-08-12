@@ -167,9 +167,8 @@
         "sensitivityText": "Potete configurare il grado di sensibilit\u00e0 di questi dati. I dati molto sensibili vengono trattati in modo diverso e con grande attenzione.",
         "sensitivityHeader": "Quanto sono sensibili questi dati per voi?",
         "warnings": "Avvertenze",
-        "warningMsg": "L'utente ha dato il consenso al titolare del trattamento per l'utilizzo dei suoi dati {dataCategory} per lo scopo di {purpose}, ma la sua scelta nell'Assistente al Consenso \u00e8 stata {helperChoices}.",
-        "warning-msg-not-comfortable":"Hai concesso al titolare del trattamento l'autorizzazione a utilizzare i tuoi dati {dataCategory} per scopi {purpose}. tuttavia, la tua selezione dell'Assistente per il consenso è stata scomoda.",
-        "warning-msg-no-opinion":"Hai concesso al titolare del trattamento l'autorizzazione a utilizzare i tuoi dati {dataCategory} per scopi {scopo}. Tuttavia, hai fatto una scelta imparziale con Consent Assistant.",
+        "warning-msg-not-comfortable":"Nell'Assistente al Consenso, l'utente ha indicato che non si sente a proprio agio se noi (${we}) utilizziamo i suoi dati {dataCategory} per scopo {purpose}. Tuttavia, il consenso che ci avete dato indica che siete a vostro agio. La preghiamo di rivedere il suo consenso.",
+        "warning-msg-no-opinion":"Nell'Assistente al Consenso, avete indicato di non avere un'opinione sul trattamento da parte nostra (${we}) dei vostri dati {dataCategory} per scopo {purpose}. Tuttavia, il consenso che ci avete dato indica che siete a vostro agio. La preghiamo di rivedere il suo consenso.",
         "issues": "problemi",
         "issue": "problem",
         "tab": {

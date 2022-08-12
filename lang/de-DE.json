@@ -167,10 +167,9 @@
         "sensitivity": "Sensibilit\u00e4t:",
         "sensitivityText": "Sie k\u00f6nnen einstellen, wie sensibel diese Daten f\u00fcr Sie sind. Wir behandeln sehr sensible Daten anders und mit gro\u00dfer Sorgfalt",
         "sensitivityHeader": "Wie sensibel sind diese Daten f\u00fcr Sie?",
-        "warnings": "Warnungen",
-        "warningMsg": "Sie haben dem f\u00fcr die Datenverarbeitung Verantwortlichen Ihre Einwilligung zur Verwendung Ihrer Daten in der Datenkategorie \"{dataCategory}\" f\u00fcr den Zweck \"{purpose}\" gegeben. Im Einwilligungsassistenten haben Sie jedoch angegeben, dass Sie damit \"{helperChoices}\" sind.",
-        "warning-msg-not-comfortable":"Sie haben dem Datenverantwortlichen die Erlaubnis erteilt, Ihre {dataCategory}-Daten für {purpose}-Zwecke zu verwenden. Ihre Auswahl des Zustimmungsassistenten war jedoch unbequem.",
-        "warning-msg-no-opinion":"Sie haben dem Datenverantwortlichen die Erlaubnis erteilt, Ihre {dataCategory}-Daten für {purpose}-Zwecke zu verwenden. Mit Consent Assistant haben Sie jedoch eine unvoreingenommene Wahl getroffen.",
+        "warnings": "Konflikte",
+        "warning-msg-not-comfortable":"Im Einwilligungsassistenten haben Sie angegeben, dass Sie nicht damit einverstanden sind, dass wir (${we}) Ihre {dataCategory}-Daten für {purpose}-Zwecke verwenden. Aus der Einwilligung, die Sie uns gegeben haben, schließen wir jedoch, dass Sie damit doch einverstanden sind. Bitte überprüfen Sie Ihre Einwilligung.",
+        "warning-msg-no-opinion":"Im Einwilligungsassistenten haben Sie angegeben, dass Sie unentschlossen zu unserer (${we}) Verarbeitung Ihrer {dataCategory}-Daten für {purpose}-Zwecke haben. Aus der Einwilligung, die Sie uns gegeben haben, schließen wir jedoch, dass Sie damit einverstanden sind. Bitte überprüfen Sie Ihre Einwilligung.",
         "issues": "Konflikte",
         "issue": "Konflikt",
         "tab": {
