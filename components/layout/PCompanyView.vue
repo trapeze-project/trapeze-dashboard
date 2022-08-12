@@ -8,8 +8,8 @@
       {{ this.companyInformation.website }}<br>
       <br>
       {{ this.companyInformation.position }}<br>
-      {{ this.companyInformation.email }}<br>
       {{ this.companyInformation.posName }}<br>
+      {{ this.companyInformation.email }}<br>
       <PContactFirm
         class="mt-3"
         :company-name="companyInformation.name"

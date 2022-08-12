@@ -78,13 +78,13 @@
     "qna": {
         "links-and-sources": "Link e fonti",
         "header": "Domande Frequenti (FAQ)",
-        "introduction": "Scoprite di pi\u00f9 sul dashboard sulla privacy di TRAPEZE e sui concetti che ne stanno alla base. Fateci sapere <US-DUMMY> se non trovate informazioni a cui sei interessati/e."
+        "introduction": "Scoprite di pi\u00f9 sul dashboard sulla privacy di TRAPEZE e sui concetti che ne stanno alla base. Fateci sapere (${we}) se non trovate informazioni a cui sei interessati/e."
     },
     "home": {
         "title": "Benvenuti sul vostro dashboard personale sulla privacy!",
         "explore-btn": "Visualizza",
-        "welcome-msg1": "Noi di <WE-DUMMY> vogliamo che tu capisca come trattiamo i tuoi dati personali.\n\nIn questo dashboard è possibile visualizzare quali dati personali vengono trattati da <WE-DUMMY> e per quali scopi. Il dashboard vi consente di limitare il trattamento dei vostri dati personali configurando il vostro consenso. È possibile:",
-        "welcome-msg2": "Il menu in basso a sinistra offre una rapida panoramica delle interazioni più recenti relative al consenso tra l'utente e noi <US-DUMMY>.\nSe siete nuovi al dashboard sulla privacy, vi consigliamo di provare l'Assistente al Consenso.",
+        "welcome-msg1": "Noi di (${we}) vogliamo che tu capisca come trattiamo i tuoi dati personali.\n\nIn questo dashboard è possibile visualizzare quali dati personali vengono trattati da (${we}) e per quali scopi. Il dashboard vi consente di limitare il trattamento dei vostri dati personali configurando il vostro consenso. È possibile:",
+        "welcome-msg2": "Il menu in basso a sinistra offre una rapida panoramica delle interazioni più recenti relative al consenso tra l'utente e noi (${we}).\nSe siete nuovi al dashboard sulla privacy, vi consigliamo di provare l'Assistente al Consenso.",
          "purpose": {
             "0": {
                 "name": "annullare e dare consenso,"
@@ -102,19 +102,19 @@
                 "title": "Consenso",
                 "filename": "/img/consent.png",
                 "link": "/consent?tab=consent",
-                "content": "Visualizza il consenso che ci hai dato <US-DUMMY>."
+                "content": "Visualizza il consenso che ci (${we}) hai dato."
             },
             "1": {
                 "title": "Dati",
                 "filename": "/img/data.png",
                 "link": "/consent?tab=data",
-                "content": "Ci dica quali dei suoi dati noi <WE-DUMMY> possiamo utilizzare."
+                "content": "Ci dica quali dei suoi dati noi (${we}) possiamo utilizzare."
             },
             "2": {
                 "title": "Scopi",
                 "filename": "/img/purpose.png",
                 "link": "/consent?tab=purpose",
-                "content": "Ci dica per cosa noi <WE-DUMMY> possiamo utilizzare i suoi dati."
+                "content": "Ci dica per cosa noi (${we}) possiamo utilizzare i suoi dati."
             },
             "3": {
                 "title": "TRAPEZE",

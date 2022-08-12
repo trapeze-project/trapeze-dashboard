@@ -79,13 +79,13 @@
     "qna": {
         "links-and-sources": "Links and Sources",
         "header": "Frequently Asked Questions (FAQ)",
-        "introduction": "Find out more about the TRAPEZE privacy dashboard and its underlying concepts. Do not forget to let us *${we}*<US-DUMMY> know if you cannot find information you are interested in."
+        "introduction": "Find out more about the TRAPEZE privacy dashboard and its underlying concepts. Do not forget to let us (${we}) know if you cannot find information you are interested in."
     },
     "home": {
         "title": "Welcome to your personal privacy dashboard!",
         "explore-btn": "View",
-        "welcome-msg1": "We at ${we} <WE-DUMMY> want you to understand how we process your personal data.\n\nIn this dashboard, you can view what personal data we *${we}*<WE-DUMMY> process and for which purposes. The dashboard allows you to limit our processing of your personal data by configuring your consent. You can:",
-        "welcome-msg2": "The menu in the bottom left gives you a quick overview of the most recent consent-related interactions between you and us *${we}*<US-DUMMY>.\nIf you are new to the privacy dashboard, we recommend you to try out the Consent Assistant.",
+        "welcome-msg1": "We at ${we} want you to understand how we process your personal data.\n\nIn this dashboard, you can view what personal data we (${we}) process and for which purposes. The dashboard allows you to limit our processing of your personal data by configuring your consent. You can:",
+        "welcome-msg2": "The menu in the bottom left gives you a quick overview of the most recent consent-related interactions between you and us (${we}).\nIf you are new to the privacy dashboard, we recommend you to try out the Consent Assistant.",
         "purpose": {
             "0": {
                 "name": "revoke and give consent,"
@@ -103,19 +103,19 @@
                 "title": "Consent",
                 "filename": "/img/consent.png",
                 "link": "/consent?tab=consent",
-                "content": "View the consent you gave us *${we}*<US-DUMMY>."
+                "content": "View the consent you gave us (${we})."
             },
             "1": {
                 "title": "Data",
                 "filename": "/img/data.png",
                 "link": "/consent?tab=data",
-                "content": "Tell us which of your data we *${we}*<WE-DUMMY> may use."
+                "content": "Tell us (${we}) which of your data we may use."
             },
             "2": {
                 "title": "Purposes",
                 "filename": "/img/purpose.png",
                 "link": "/consent?tab=purpose",
-                "content": "Tell us *${we}*<US-DUMMY> what we may use your data for."
+                "content": "Tell us (${we}) what we may use your data for."
             },
             "3": {
                 "title": "TRAPEZE",

@@ -79,13 +79,13 @@
     "qna": {
         "links-and-sources": "Links und Quellen",
         "header": "H\u00e4ufig gestellte Fragen (FAQ)",
-        "introduction": "Erfahren Sie mehr \u00fcber das TRAPEZE-Datenschutz-Dashboard und dessen zugrunde liegenden Konzepte. Geben Sie uns <US-DUMMY> gerne Bescheid, falls Sie Ihre gew\u00fcnschten Informationen nicht finden k\u00f6nnen."
+        "introduction": "Erfahren Sie mehr \u00fcber das TRAPEZE-Datenschutz-Dashboard und dessen zugrunde liegenden Konzepte. Geben Sie uns (${we}) gerne Bescheid, falls Sie Ihre gew\u00fcnschten Informationen nicht finden k\u00f6nnen."
     },
     "home": {
         "title": "Willkommen auf Ihrem pers\u00f6nlichen Datenschutz-Dashboard!",
         "explore-btn": "Ansehen",
-        "welcome-msg1": "Wir von <WE-DUMMY> möchten, dass Sie verstehen, wie wir Ihre persönlichen Daten verarbeiten.\n\nIn diesem Dashboard können Sie sehen, welche personenbezogenen Daten wir <WE-DUMMY> verarbeiten und zu welchen Zwecken. Das Dashboard ermöglicht es Ihnen, unsere Verarbeitung Ihrer personenbezogenen Daten einzuschränken, indem Sie Ihre Einwilligung konfigurieren. Sie können:",
-        "welcome-msg2": "Das Menü unten links gibt Ihnen einen schnellen Überblick über die letzten einwilligungsbezogenen Interaktionen zwischen Ihnen und uns <US-DUMMY>.\nWenn Sie noch nicht mit dem Datenschutz-Dashboard vertraut sind, empfehlen wir Ihnen, den Einwilligungssassistenten auszuprobieren.",
+        "welcome-msg1": "Wir von (${we}) möchten, dass Sie verstehen, wie wir Ihre persönlichen Daten verarbeiten.\n\nIn diesem Dashboard können Sie sehen, welche personenbezogenen Daten wir (${we}) verarbeiten und zu welchen Zwecken. Das Dashboard ermöglicht es Ihnen, unsere Verarbeitung Ihrer personenbezogenen Daten einzuschränken, indem Sie Ihre Einwilligung konfigurieren. Sie können:",
+        "welcome-msg2": "Das Menü unten links gibt Ihnen einen schnellen Überblick über die letzten einwilligungsbezogenen Interaktionen zwischen Ihnen und uns (${we}).\nWenn Sie noch nicht mit dem Datenschutz-Dashboard vertraut sind, empfehlen wir Ihnen, den Einwilligungssassistenten auszuprobieren.",
         "purpose": {
             "0": {
                 "name": "Einwilligungen widerrufen oder erteilen,"
@@ -103,19 +103,19 @@
                 "title": "Einwilligungen",
                 "filename": "/img/consent.png",
                 "link": "/consent?tab=consent",
-                "content": "Sehen Sie sich die Zustimmung an, die Sie uns gegeben haben <US-DUMMY>."
+                "content": "Sehen Sie sich die Zustimmung an, die Sie uns (${we}) gegeben haben."
             },
             "1": {
                 "title": "Datenkategorien",
                 "filename": "/img/data.png",
                 "link": "/consent?tab=data",
-                "content": "Sagen Sie uns, welche Ihrer Daten wir <WE-DUMMY> verwenden dürfen."
+                "content": "Sagen Sie uns (${we}), welche Ihrer Daten wir verwenden dürfen."
             },
             "2": {
                 "title": "Zwecke",
                 "filename": "/img/purpose.png",
                 "link": "/consent?tab=purpose",
-                "content": "Sagen Sie uns <US-DUMMY>, wofür wir Ihre Daten verwenden dürfen. "
+                "content": "Sagen Sie uns (${we}), wofür wir Ihre Daten verwenden dürfen. "
             },
             "3": {
                 "title": "TRAPEZE",
