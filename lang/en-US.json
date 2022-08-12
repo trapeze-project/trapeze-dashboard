@@ -9,6 +9,8 @@
         "access": "Request Data Access",
         "unrelatedData": "Unrelated Data Category",
         "bioData": "Biometric Data",
+        "dpo": "Data Protection Officer",
+        "dpo-abbrev": "DPO",
         "unrelatedDataText": "It is very unusual that fingerprints are used for advertising purposes.",
         "bioDataText": "Fingerprints are particularly sensitive, since they facilitate identity theft. It is recommended to only provide consent for fingerprint data where absolutely necessary."
     },

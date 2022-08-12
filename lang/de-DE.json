@@ -9,6 +9,8 @@
         "access": "Dateneinsicht Anfordern",
         "unrelatedData": "Nicht verwandte Datenkategorie",
         "bioData": "Biometrische Daten",
+        "dpo": "Datenschutzbeauftragter",
+        "dpo-abbrev": "DSB",
         "unrelatedDataText": "Es ist sehr ungew\u00f6hnlich, dass Fingerabdr\u00fccke zu Werbezwecken verwendet werden.",
         "bioDataText": "Fingerabdr\u00fccke sind besonders sensibel, da sie es erm\u00f6glichen Ihre Identit\u00e4t zu stehlen. Es wird empfohlen, die Zustimmung zur Nutzung von Fingerabdr\u00fccken nur dann zu erteilen, wenn dies unbedingt erforderlich ist."
     },

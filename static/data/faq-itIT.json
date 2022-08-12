@@ -151,7 +151,7 @@
             },
             "qna5": {
                 "question": "Responsabile della protezione dei dati",
-                "answer": "Il responsabile della protezione dei dati (DPO) di un titolare del trattamento (noi) \u00e8 responsabile della conformit\u00e0 al GDPR. I DPO sono anche responsabili della comunicazione dell'attuazione della protezione dei dati nei confronti degli interessati (voi).",
+                "answer": "Il responsabile della protezione dei dati (DPD) di un titolare del trattamento (noi) \u00e8 responsabile della conformit\u00e0 al GDPR. I DPO sono anche responsabili della comunicazione dell'attuazione della protezione dei dati nei confronti degli interessati (voi).",
                 "references": {
                     "ref1": "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX%3A32016R0679"
                 }

@@ -9,6 +9,8 @@
         "access": "Richiesta di Accesso ai Dati",
         "unrelatedData": "Categorie di dati non correlati",
         "bioData": "Dati biometrici",
+        "dpo": "Responsabile della protezione dei dati",
+        "dpo-abbrev": "DPD",
         "unrelatedDataText": "E' molto insolito che le impronte digitali vengano utilizzate per scopi pubblicitari.",
         "bioDataText": "Le impronte digitali sono particolarmente sensibili, in quanto facilitano il furto di identit\u00e0. Si raccomanda di fornire il consenso per i dati relativi alle impronte digitali solo se assolutamente necessario."
     },

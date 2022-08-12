@@ -7,7 +7,7 @@
       {{ this.companyInformation.add2 }}<br>
       {{ this.companyInformation.website }}<br>
       <br>
-      {{ this.companyInformation.position }}<br>
+      {{$t("general.dpo")}} ({{$t("general.dpo-abbrev")}})<br>
       {{ this.companyInformation.posName }}<br>
       {{ this.companyInformation.email }}<br>
       <PContactFirm
