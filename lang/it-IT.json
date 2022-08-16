@@ -183,7 +183,7 @@
                 "header": {
                     "values": {
                         "date": "Data",
-                        "event": "Evento",
+                        "event": "Oggetto",
                         "policy": "Politica sulla privacy"
                     }
                 },

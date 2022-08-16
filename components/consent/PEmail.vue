@@ -12,10 +12,11 @@
 
     <v-card-text>
       <p v-html="emailText" />
-
+      <!--
       <v-btn class="black--text" color="primary">
         {{ $t("btn.labels.view-changes") }}
       </v-btn>
+      -->
     </v-card-text>
   </v-card>
 </template>

@@ -1,22 +1,22 @@
 [
   {
-    "date": "5 Aug 2022 14:00 CEST",
+    "date": "07/12/2021",
     "event": "consent-request-policy-update",
-    "policy": "clover-it-pol.v2.pdf (inactive)"
+    "policy": "clover-it-pol.v4.pdf (inactive)"
   },
   {
-    "date": "1 Aug 2022 16:38 CEST",
-    "event": "consent-revocation",
-    "policy": "clover-it-pol.v1.pdf (active)"
+    "date": "13/03/2020",
+    "event": "consent-request-policy-update",
+    "policy": "clover-it-pol.v3.pdf (active)"
   },
   {
-    "date": "3 Jan 2022 14:05 CEST",
-    "event": "consent-giving",
-    "policy": "clover-it-pol.v1.pdf (active)"
+    "date": "25/05/2018",
+    "event": "consent-request-policy-update",
+    "policy": "clover-it-pol.v2.pdf (active)"
   },
   {
-    "date": "3 Jan 2022 14:00 CEST",
-    "event": "consent-request-account-creation",
+    "date": "15/06/2017",
+    "event": "consent-request-policy-update",
     "policy": "clover-it-pol.v1.pdf (active)"
   }
 ]

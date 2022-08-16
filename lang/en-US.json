@@ -184,7 +184,7 @@
                 "header": {
                     "values": {
                         "date": "Date",
-                        "event": "Event",
+                        "event": "Subject",
                         "policy": "Policy"
                     }
                 },
