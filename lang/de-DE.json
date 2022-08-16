@@ -102,23 +102,23 @@
         "help": "Einwilligungsassistent",
         "items": {
             "0": {
-                "title": "Einwilligungen",
-                "filename": "/img/consent.png",
-                "link": "/consent?tab=consent",
-                "content": "Sehen Sie sich die Zustimmung an, die Sie uns (${we}) gegeben haben."
-            },
-            "1": {
                 "title": "Datenkategorien",
                 "filename": "/img/data.png",
                 "link": "/consent?tab=data",
                 "content": "Sagen Sie uns (${we}), welche Ihrer Daten wir verwenden dürfen."
             },
-            "2": {
+            "1": {
                 "title": "Zwecke",
                 "filename": "/img/purpose.png",
                 "link": "/consent?tab=purpose",
                 "content": "Sagen Sie uns (${we}), wofür wir Ihre Daten verwenden dürfen. "
             },
+            "2": {
+              "title": "Einwilligungen",
+              "filename": "/img/consent.png",
+              "link": "/consent?tab=consent",
+              "content": "Sehen Sie sich die Zustimmung an, die Sie uns (${we}) gegeben haben."
+            },            
             "3": {
                 "title": "TRAPEZE",
                 "filename": "/img/favicon.png",

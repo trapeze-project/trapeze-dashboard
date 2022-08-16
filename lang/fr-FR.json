@@ -102,23 +102,23 @@
         "help": "Aide",
         "items": {
             "0": {
-                "title": "Consentement",
-                "filename": "/img/consent.png",
-                "link": "/consent?tab=consent",
-                "content": "Consultez le consentement que vous nous avez donné (${we})."
-            },
-            "1": {
                 "title": "Donn\u00e9es",
                 "filename": "/img/data.png",
                 "link": "/consent?tab=data",
                 "content": "Dites-nous (${we}) lesquelles de vos données nous pouvons utiliser."
             },
-            "2": {
+            "1": {
                 "title": "Fins",
                 "filename": "/img/purpose.png",
                 "link": "/consent?tab=purpose",
                 "content": "Dites-nous (${we}) à quoi nous pouvons utiliser vos données."
             },
+            "2": {
+              "title": "Consentement",
+              "filename": "/img/consent.png",
+              "link": "/consent?tab=consent",
+              "content": "Consultez le consentement que vous nous avez donné (${we})."
+            },            
             "3": {
                 "title": "TRAPEZE",
                 "filename": "/img/favicon.png",

@@ -102,23 +102,23 @@
         "help": "Consent Assistant",
         "items": {
             "0": {
-                "title": "Consent",
-                "filename": "/img/consent.png",
-                "link": "/consent?tab=consent",
-                "content": "View the consent you gave us (${we})."
-            },
-            "1": {
                 "title": "Data",
                 "filename": "/img/data.png",
                 "link": "/consent?tab=data",
                 "content": "Tell us (${we}) which of your data we may use."
             },
-            "2": {
+            "1": {
                 "title": "Purposes",
                 "filename": "/img/purpose.png",
                 "link": "/consent?tab=purpose",
                 "content": "Tell us (${we}) what we may use your data for."
             },
+            "2": {
+              "title": "Consent",
+              "filename": "/img/consent.png",
+              "link": "/consent?tab=consent",
+              "content": "View the consent you gave us (${we})."
+            },            
             "3": {
                 "title": "TRAPEZE",
                 "filename": "/img/favicon.png",
