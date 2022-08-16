@@ -18,10 +18,10 @@
           >
             <template #item.name="{ item }">
               <v-row align="center" justify="center">
-                <v-col style="min-width: 100px">
-                  <p align="left" class="mt-4">{{ $t(item.name) }}</p>
+                <v-col class="fill-height" cols="9">
+                  {{ $t(item.name) }}
                 </v-col>
-                <v-col style="margin-left: 120px">
+                <v-col cols="3">
                   <v-switch v-model="localSwitchValues[item.name]" @change="changeUserChoice(item.name)" />
                 </v-col>
               </v-row>
@@ -91,8 +91,9 @@ export default {
 }
 </script>
 
-<style scoped>
-tr.v-data-table__selected {
-  background: #000000 !important;
+<style>
+.v-application .v-data-table__mobile-row__cell {
+  text-align: left;
+  width: 100%;
 }
 </style>
