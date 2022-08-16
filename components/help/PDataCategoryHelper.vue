@@ -31,11 +31,6 @@
         </v-data-table>
       </v-col>
     </v-row>
-    <v-row v-if="view.show">
-      <v-col>
-        <PConsentHelperDataCard :category-name="view.selected" />
-      </v-col>
-    </v-row>
   </div>
 </template>
 
