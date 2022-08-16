@@ -20,7 +20,7 @@
     "nav": {
         "labels": {
             "home": "Home",
-            "consent": "Consent",
+            "consent": "Privcay Policy",
             "consent-menu": "Consent Menu",
             "data": "Data",
             "purposes": "Purposes",
@@ -174,7 +174,7 @@
         "issue": "issue",
         "tab": {
             "labels": {
-                "consent": "Consent",
+                "consent": "Privcay Policy",
                 "data-category": "Data Category",
                 "purpose": "Purpose"
             }

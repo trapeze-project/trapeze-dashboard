@@ -68,9 +68,9 @@ export default {
           to: '/consent?tab=consent',
           label: 'nav.labels.consent-menu',
           subLinks: [
-            { to: '/consent?tab=consent', label: 'nav.labels.consent' },
             { to: '/consent?tab=data', label: 'nav.labels.data' },
-            { to: '/consent?tab=purpose', label: 'nav.labels.purposes' }
+            { to: '/consent?tab=purpose', label: 'nav.labels.purposes' },
+            { to: '/consent?tab=consent', label: 'nav.labels.consent' },
           ]
         },
         { to: '/help', label: 'nav.labels.help' },

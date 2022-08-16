@@ -25,16 +25,16 @@
       </v-tabs>
 
       <v-tabs-items v-model="tab">
-        <v-tab-item value="consent">
-          <PTabTable tab-name="consent" />
-        </v-tab-item>
-
         <v-tab-item value="data" :eager="true">
           <PTabTable ref="data" tab-name="data" :user-choices="invertUserChoices(userChoices)" :warnings="invertWarnings(warnings)" />
         </v-tab-item>
 
         <v-tab-item value="purpose" :eager="true">
           <PTabTable ref="purpose" tab-name="purpose" :user-choices="userChoices" :warnings="warnings" />
+        </v-tab-item>
+
+        <v-tab-item value="consent">
+          <PTabTable tab-name="consent" />
         </v-tab-item>
       </v-tabs-items>
     </v-card>
@@ -56,17 +56,17 @@ export default {
     return {
       tabs: [
         {
-          name: 'consent',
-          label: this.$t('consent.tab.labels.consent')
-        },
-        {
           name: 'data',
           label: this.$t('consent.tab.labels.data-category')
         },
         {
           name: 'purpose',
           label: this.$t('consent.tab.labels.purpose')
-        }
+        },
+        {
+          name: 'consent',
+          label: this.$t('consent.tab.labels.consent')
+        },
       ],
       disableUndoLastChangeBtnForData: true,
       disableUndoLastChangeBtnForPurpose: true,

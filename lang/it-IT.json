@@ -20,7 +20,7 @@
     "nav": {
         "labels": {
             "home": "Homepage",
-            "consent": "Consenso",
+            "consent": "Informativa sulla privacy",
             "consent-menu": "Menu di Consenso",
             "data": "Dati",
             "purposes": "Scopi",
@@ -173,7 +173,7 @@
         "issue": "problem",
         "tab": {
             "labels": {
-                "consent": "Consenso",
+                "consent": "Informativa sulla privacy",
                 "data-category": "Categoria di dati",
                 "purpose": "Scopo"
             }

@@ -20,7 +20,7 @@
     "nav": {
         "labels": {
             "home": "Acceuil",
-            "consent": "Consentement",
+            "consent": "Politique de confidentialité",
             "consent-menu": "Menu de Consentement",
             "data": "Donn\u00e9es",
             "purposes": "Finalit\u00e9s",
@@ -175,7 +175,7 @@
         "data-category": "Cat\u00e9gorie de donn\u00e9es",
         "tab": {
             "labels": {
-                "consent": "Consentement",
+                "consent": "Politique de confidentialité",
                 "data-category": "Cat\u00e9gorie de donn\u00e9es",
                 "purpose": "Finalit\u00e9"
             }

@@ -20,7 +20,7 @@
     "nav": {
         "labels": {
             "home": "Start",
-            "consent": "Einwilligungen",
+            "consent": "Datenschutzrichtlinie",
             "consent-menu": "Einwilligungenmenü",
             "data": "Datenkategorien",
             "purposes": "Zwecke",
@@ -174,7 +174,7 @@
         "issue": "Konflikt",
         "tab": {
             "labels": {
-                "consent": "Einwilligungen",
+                "consent": "Datenschutzrichtlinie",
                 "data-category": "Datenkategorien",
                 "purpose": "Zwecke"
             }
