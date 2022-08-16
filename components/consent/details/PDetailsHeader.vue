@@ -4,10 +4,11 @@
       {{ $t(category) }}
 
       <v-spacer />
-
+      <!--
       <v-btn class="black--text" color="primary">
         {{ $t("general.access") }}
       </v-btn>
+      -->
     </v-card-title>
     <v-divider />
 
