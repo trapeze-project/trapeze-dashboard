@@ -1,7 +1,7 @@
 <template>
   <div>
     <b class="ml-3">{{ $t('consent.warnings') }}</b>
-    <transition-group tag="ul" name="warningsList" appear>
+    <transition-group tag="ul" name="warningsList" appear class="pl-0">
       <li v-for="child in Object.keys(selectedWarnings)" :key="child">
         <v-alert
           id="issues"

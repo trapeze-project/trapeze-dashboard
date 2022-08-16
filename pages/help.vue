@@ -29,6 +29,7 @@
               v-for="(type, index) in Object.keys(imports.dataCategoryMap)"
               :key="index"
               :step="index + 1"
+              class="pa-0"
             >
               <div>
                 <div style="white-space:pre-line">{{ $t(type.replace('dpv.','')) }}</div>

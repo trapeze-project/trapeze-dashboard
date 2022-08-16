@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div id="consent-assistant">
     <v-row>
-      <v-col>
+      <v-col class="pa-0">
         <v-data-table
           :headers="headers"
           :items="categoriesTransformed"
@@ -9,24 +9,45 @@
           single-select
           item-key="name"
           @click:row="select"
+          hide-default-header
+          mobile-breakpoint="1"
         >
-          <template v-slot:item="{ item }">
-            <tr @click="checkUserChoiceCompleted">
-              <td >
-                <PHoverCard :term="$t(item.name)" :definition="$t(item.name.split('.')[1])" />
-              </td>
-              <td v-for="radio in radioList" :key="radio.key">
-                <v-radio-group v-model="preferences[item.name]">
-                  <v-radio
-                    style="max-width: 20px"
-                    class="justify-left"
-                    :name="item.name"
-                    :value="radio.value"
-                    :color="radio.color"
-                  />
-                </v-radio-group>
-              </td>
-            </tr>
+          <template v-slot:header="{ props }">
+            <thead>
+              <tr>
+                <th
+                  v-for="h, index in props.headers"
+                  :key="index"
+                >
+                  {{ h.text }}
+                </th>
+              </tr>
+            </thead>
+          </template>
+
+          <template v-slot:body="{ items }">
+            <tbody>
+              <tr 
+                v-for="item, index in items"
+                :key="index"
+                @click="checkUserChoiceCompleted"
+              >
+                <td >
+                  <PHoverCard :term="$t(item.name)" :definition="$t(item.name.split('.')[1])" />
+                </td>
+                <td v-for="radio in radioList" :key="radio.key">
+                  <v-radio-group v-model="preferences[item.name]">
+                    <v-radio
+                      style=""
+                      class=""
+                      :name="item.name"
+                      :value="radio.value"
+                      :color="radio.color"
+                    />
+                  </v-radio-group>
+                </td>
+              </tr>              
+            </tbody>
           </template>
         </v-data-table>
       </v-col>
@@ -66,7 +87,7 @@ export default {
         {
           key: 'consent-helper.no-opinion',
           value: 1,
-          color: 'red'
+          color: 'black'
         },
         {
           key: 'consent-helper.not-comfortable',
@@ -136,3 +157,11 @@ export default {
   }
 }
 </script>
+
+<style>
+#consent-assistant .v-data-table > .v-data-table__wrapper > table {
+  width: 100%;
+  border-spacing: 0;
+  table-layout: fixed;
+}
+</style>
