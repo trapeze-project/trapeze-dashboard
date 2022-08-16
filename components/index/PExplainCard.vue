@@ -1,6 +1,6 @@
 <template>
   <v-card shaped class="d-flex flex-column">
-    <v-img max-height="300px" :src="filename" />
+    <img :src="filename" style="width: 100%;" />
 
     <v-card-title>
       {{ title }}

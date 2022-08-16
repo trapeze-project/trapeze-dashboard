@@ -10,7 +10,8 @@
       <v-col
         v-for="(item, idx) in Object.values($t('home.items'))"
         :key="idx"
-        sm="12"
+        cols="6"
+        sm="3"
         md="3"
         lg="3"
       >
