@@ -43,7 +43,7 @@
                   {{ $t("consent-helper.purpose") }}
                 </p>
 
-                <PDataCategoryHelper class="mt-3" :categories="imports.dataCategoryMap[Object.keys(imports.dataCategoryMap)[page-1]]" @userChoinces="collectUserChoices" />
+                <PDataCategoryHelper class="mt-3" :categories="imports.dataCategoryMap[Object.keys(imports.dataCategoryMap)[page-1]]" @userChoices="collectUserChoices" />
               </div>
 
               <div class="text-center mt-5 mb-1">

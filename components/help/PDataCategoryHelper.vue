@@ -125,7 +125,7 @@ export default {
         Object.keys(choices).forEach((key) => {
           choices[key] = choices[key]
         })
-        this.$emit('userChoinces', choices)
+        this.$emit('userChoices', choices)
       }
     }
   }
