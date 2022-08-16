@@ -19,7 +19,7 @@
           {{ this.$t("btn.labels.cancel") }}
         </v-btn>
         <v-btn
-          color="green darken-1"
+          color="error"
           text
           @click="()=>{leaveAnyWay = true; dialog=false; }"
         >

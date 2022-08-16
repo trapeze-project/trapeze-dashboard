@@ -52,11 +52,6 @@
         </v-data-table>
       </v-col>
     </v-row>
-    <v-row v-if="view.show">
-      <v-col>
-        <PConsentHelperDataCard :category-name="view.selected" />
-      </v-col>
-    </v-row>
   </div>
 </template>
 
@@ -151,7 +146,7 @@ export default {
         Object.keys(choices).forEach((key) => {
           choices[key] = choices[key]
         })
-        this.$emit('userChoinces', choices)
+        this.$emit('userChoices', choices)
       }
     }
   }
