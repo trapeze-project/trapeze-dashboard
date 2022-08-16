@@ -34,12 +34,6 @@ import controller from '../../static/data/controller.json'
 export default{
   created(){
     this.paramsForInterpolation = controller.paramsForInterpolation;
-    String.prototype.interpolate = function(params) {
-      const names = Object.keys(params);
-      const values = Object.values(params);
-      return new Function(...names, `return \`${this}\`;`)(...values);
-    }
-
   }
 }
 </script>

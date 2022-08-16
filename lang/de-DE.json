@@ -168,8 +168,8 @@
         "sensitivityText": "Sie k\u00f6nnen einstellen, wie sensibel diese Daten f\u00fcr Sie sind. Wir behandeln sehr sensible Daten anders und mit gro\u00dfer Sorgfalt",
         "sensitivityHeader": "Wie sensibel sind diese Daten f\u00fcr Sie?",
         "warnings": "Konflikte",
-        "warning-msg-not-comfortable":"Im Einwilligungsassistenten haben Sie angegeben, dass Sie nicht damit einverstanden sind, dass wir (${we}) Ihre {dataCategory}-Daten für {purpose}-Zwecke verwenden. Aus der Einwilligung, die Sie uns gegeben haben, schließen wir jedoch, dass Sie damit doch einverstanden sind. Bitte überprüfen Sie Ihre Einwilligung.",
-        "warning-msg-no-opinion":"Im Einwilligungsassistenten haben Sie angegeben, dass Sie unentschlossen zu unserer (${we}) Verarbeitung Ihrer {dataCategory}-Daten für {purpose}-Zwecke haben. Aus der Einwilligung, die Sie uns gegeben haben, schließen wir jedoch, dass Sie damit einverstanden sind. Bitte überprüfen Sie Ihre Einwilligung.",
+        "warning-msg-not-comfortable":"Im Einwilligungsassistenten haben Sie angegeben, dass Sie nicht damit einverstanden sind, dass wir (${we}) Ihre ${dataCategory}-Daten für ${purpose}-Zwecke verwenden. Aus der Einwilligung, die Sie uns gegeben haben, schließen wir jedoch, dass Sie damit doch einverstanden sind. Bitte überprüfen Sie Ihre Einwilligung.",
+        "warning-msg-no-opinion":"Im Einwilligungsassistenten haben Sie angegeben, dass Sie unentschlossen zu unserer (${we}) Verarbeitung Ihrer ${dataCategory}-Daten für ${purpose}-Zwecke haben. Aus der Einwilligung, die Sie uns gegeben haben, schließen wir jedoch, dass Sie damit einverstanden sind. Bitte überprüfen Sie Ihre Einwilligung.",
         "issues": "Konflikte",
         "issue": "Konflikt",
         "tab": {

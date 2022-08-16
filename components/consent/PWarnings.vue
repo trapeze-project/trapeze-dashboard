@@ -13,16 +13,16 @@
           class="mx-1"
         >
           <p v-if="tabName == 'purpose' && selectedWarnings[child]['consentHelperChoice'] == 'consent-helper.no-opinion'">
-            {{ $t('consent.warning-msg-no-opinion',{dataCategory:$t(child) , purpose: $t(parent),we:paramsForInterpolation.we }) }}
+            {{ $t('consent.warning-msg-no-opinion').interpolate(params($t(child), $t(parent))) }}
           </p>
           <p v-else-if="tabName == 'purpose' && selectedWarnings[child]['consentHelperChoice'] == 'consent-helper.not-comfortable'">
-            {{ $t('consent.warning-msg-not-comfortable',{dataCategory:$t(child) , purpose: $t(parent) ,we:paramsForInterpolation.we}) }}
+            {{ $t('consent.warning-msg-not-comfortable').interpolate(params($t(child), $t(parent))) }}
           </p>
           <p v-if="tabName == 'data' && selectedWarnings[child]['consentHelperChoice'] == 'consent-helper.no-opinion'">
-            {{ $t('consent.warning-msg-no-opinion',{dataCategory:$t(parent) , purpose: $t(child),we:paramsForInterpolation.we }) }}
+            {{ $t('consent.warning-msg-no-opinion').interpolate(params($t(parent), $t(child))) }}
           </p>
           <p v-else-if="tabName == 'data' && selectedWarnings[child]['consentHelperChoice'] == 'consent-helper.not-comfortable'">
-            {{ $t('consent.warning-msg-not-comfortable',{dataCategory:$t(parent) , purpose: $t(child),we:paramsForInterpolation.we }) }}
+            {{ $t('consent.warning-msg-not-comfortable').interpolate(params($t(parent), $t(child))) }}
           </p>
           <v-spacer />
           <div class="mb-1 float-right">
@@ -63,8 +63,16 @@ export default {
   },
   created () {
     this.paramsForInterpolation = controller.paramsForInterpolation;
+    console.log(this.paramsForInterpolation)
   },
   methods: {
+    params(dataCategory, purpose) {
+      return {
+        dataCategory: dataCategory, 
+        purpose: purpose,
+        we: this.paramsForInterpolation.we 
+      };
+    },
     closeWarnig (child) {
       this.$emit('saveState')
       this.$emit('ignoreWarning', this.parent, child)
