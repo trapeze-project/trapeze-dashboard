@@ -20,7 +20,7 @@
     "nav": {
         "labels": {
             "home": "Home",
-            "consent": "Privcay Policy",
+            "consent": "Privacy Policy",
             "consent-menu": "Consent Menu",
             "data": "Data",
             "purposes": "Purposes",
@@ -118,7 +118,7 @@
               "filename": "/img/consent.png",
               "link": "/consent?tab=consent",
               "content": "View the consent you gave us (${we})."
-            },            
+            },
             "3": {
                 "title": "TRAPEZE",
                 "filename": "/img/favicon.png",
@@ -174,7 +174,7 @@
         "issue": "issue",
         "tab": {
             "labels": {
-                "consent": "Privcay Policy",
+                "consent": "Privacy Policy",
                 "data-category": "Data Category",
                 "purpose": "Purpose"
             }
