@@ -7,8 +7,8 @@
       {{ this.companyInformation.add2 }}<br>
       {{ this.companyInformation.website }}<br>
       <br>
-      
-      {{$t("general.dpo")}} ({{$t("general.dpo-abbrev")}})<br>
+
+      {{ $t("general.dpo") }} ({{ $t("general.dpo-abbrev") }})<br>
       <b>{{ this.companyInformation.posName }}</b><br>
       {{ this.companyInformation.email }}<br>
       <PContactFirm
@@ -31,7 +31,7 @@ export default {
     }
   },
   created () {
-    this.companyInformation = controller.companyInformation;
+    this.companyInformation = controller.companyInformation
   }
 }
 </script>

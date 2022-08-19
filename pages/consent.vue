@@ -66,7 +66,7 @@ export default {
         {
           name: 'consent',
           label: this.$t('consent.tab.labels.consent')
-        },
+        }
       ],
       disableUndoLastChangeBtnForData: true,
       disableUndoLastChangeBtnForPurpose: true,
@@ -99,7 +99,7 @@ export default {
   },
 
   mounted () {
-    window.addEventListener('beforeunload', this.beforeWindowUnload);
+    window.addEventListener('beforeunload', this.beforeWindowUnload)
     this.$watch(
       '$refs.data.states',
       (new_value, old_value) => {
@@ -145,11 +145,14 @@ export default {
       }
     )
   },
+  beforeDestroy () {
+    window.removeEventListener('beforeunload', this.beforeWindowUnload)
+  },
   methods: {
-    beforeWindowUnload(event){
-      if(!this.disableUndoLastChangeBtnForData || !this.disableUndoLastChangeBtnForPurpose || JSON.stringify(this.warnings) !== JSON.stringify({})){
-        event.preventDefault();
-        event.returnValue = "";
+    beforeWindowUnload (event) {
+      if (!this.disableUndoLastChangeBtnForData || !this.disableUndoLastChangeBtnForPurpose || JSON.stringify(this.warnings) !== JSON.stringify({})) {
+        event.preventDefault()
+        event.returnValue = ''
       }
     },
 
@@ -245,11 +248,11 @@ export default {
         alertBody += this.$t('PAlertLeaveDialog.lose-changes-warning')
       }
       if (JSON.stringify(this.warnings) !== JSON.stringify({})) {
-         alertBody += '\n'
+        alertBody += '\n'
         alertBody += this.$t('PAlertLeaveDialog.lose-consent-helper-choices')
       }
       this.$refs.alertDialog.showAlert(alertBody)
-      const myInterval = setInterval(()=>{
+      const myInterval = setInterval(() => {
         if (this.$refs.alertDialog.leaveAnyWay === true) {
           clearInterval(myInterval)
           next()
@@ -260,10 +263,7 @@ export default {
     } else {
       next()
     }
-  },
-  beforeDestroy(){
-    window.removeEventListener('beforeunload', this.beforeWindowUnload)
-  },
+  }
 }
 </script>
 

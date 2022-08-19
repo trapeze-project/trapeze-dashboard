@@ -19,6 +19,9 @@
           </div>
         </v-chip>
       </template>
+      <template v-if="['consent'].includes(tabName) " v-slot:item.policy="{ item }">
+        <a :href="'static/data/'+ item.policy.split(' ')[0]">{{ item.policy }}</a>
+      </template>
     </v-data-table>
 
     <PWarnings
@@ -117,7 +120,7 @@ export default {
             const issuesCounter = Object.keys(this.modifiedWarnings?.[dataCategory])?.length
             if (issuesCounter === 1) {
               obj.issue = issuesCounter + ' ' + this.$t('consent.issue')
-            }else{
+            } else {
               obj.issue = issuesCounter + ' ' + this.$t('consent.issues')
             }
           } else {
@@ -135,7 +138,7 @@ export default {
             const issuesCounter = Object.keys(this.modifiedWarnings?.[purpose])?.length
             if (issuesCounter === 1) {
               obj.issue = issuesCounter + ' ' + this.$t('consent.issue')
-            }else{
+            } else {
               obj.issue = issuesCounter + ' ' + this.$t('consent.issues')
             }
           } else {
@@ -315,3 +318,9 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+a {
+  color: inherit;
+}
+</style>

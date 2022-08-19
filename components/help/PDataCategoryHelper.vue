@@ -8,9 +8,9 @@
           hide-default-footer
           single-select
           item-key="name"
-          @click:row="select"
           hide-default-header
           mobile-breakpoint="1"
+          @click:row="select"
         >
           <template v-slot:header="{ props }">
             <thead>
@@ -27,12 +27,12 @@
 
           <template v-slot:body="{ items }">
             <tbody>
-              <tr 
+              <tr
                 v-for="item, index in items"
                 :key="index"
                 @click="checkUserChoiceCompleted"
               >
-                <td >
+                <td>
                   <PHoverCard :term="$t(item.name)" :definition="$t(item.name.split('.')[1])" />
                 </td>
                 <td v-for="radio in radioList" :key="radio.key">
@@ -46,7 +46,7 @@
                     />
                   </v-radio-group>
                 </td>
-              </tr>              
+              </tr>
             </tbody>
           </template>
         </v-data-table>

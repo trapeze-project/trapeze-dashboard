@@ -7,28 +7,26 @@
       nudge-right="18"
     >
       <template v-slot:activator="{ on, attrs }">
-        {{term}}
+        {{ term }}
         <v-icon
           size="14"
           v-bind="attrs"
-          v-on="on"
           color="green darken-2"
           class="phovercardinfoicon ml-1 outlined "
-          
+          v-on="on"
         >
           mdi-information-variant
         </v-icon>
       </template>
-      
+
       <v-card
         max-width="400"
         outlined
       >
-        <v-img v-if="image" :src="image" height="400"></v-img>
+        <v-img v-if="image" :src="image" height="400" />
         <v-card-text>
-          <span style="white-space:pre-line">{{this.definition}}</span>
+          <span style="white-space:pre-line">{{ this.definition }}</span>
         </v-card-text>
-
       </v-card>
     </v-menu>
   </div>

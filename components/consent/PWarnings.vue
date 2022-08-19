@@ -54,24 +54,24 @@ export default {
   props: {
     selectedWarnings: Object,
     parent: String,
-    tabName: String,
+    tabName: String
   },
-  data(){
-    return{
-      paramsForInterpolation:{}
+  data () {
+    return {
+      paramsForInterpolation: {}
     }
   },
   created () {
-    this.paramsForInterpolation = controller.paramsForInterpolation;
+    this.paramsForInterpolation = controller.paramsForInterpolation
     console.log(this.paramsForInterpolation)
   },
   methods: {
-    params(dataCategory, purpose) {
+    params (dataCategory, purpose) {
       return {
-        dataCategory: dataCategory, 
-        purpose: purpose,
-        we: this.paramsForInterpolation.we 
-      };
+        dataCategory,
+        purpose,
+        we: this.paramsForInterpolation.we
+      }
     },
     closeWarnig (child) {
       this.$emit('saveState')

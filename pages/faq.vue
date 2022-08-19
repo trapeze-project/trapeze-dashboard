@@ -28,8 +28,12 @@
         </v-row>
 
         <v-card v-if="searching">
-          <v-card-title style="white-space:pre-line">{{ this.matchedQNA.question.interpolate(paramsForInterpolation) }}</v-card-title>
-          <v-card-text style="white-space:pre-line"><div>{{ this.matchedQNA.answer.interpolate(paramsForInterpolation) }}</div></v-card-text>
+          <v-card-title style="white-space:pre-line">
+            {{ this.matchedQNA.question.interpolate(paramsForInterpolation) }}
+          </v-card-title>
+          <v-card-text style="white-space:pre-line">
+            <div>{{ this.matchedQNA.answer.interpolate(paramsForInterpolation) }}</div>
+          </v-card-text>
           <v-card-actions>
             <div v-if="Object.values(matchedQNA.references).length">
               <ol>
@@ -68,11 +72,13 @@
                         $expand
                       </v-icon>
                     </template>
-                    <span class="header" style="white-space:pre-line">{{faq[category]['qnas'][qna].question.interpolate(paramsForInterpolation)}}</span>
+                    <span class="header" style="white-space:pre-line">{{ faq[category]['qnas'][qna].question.interpolate(paramsForInterpolation) }}</span>
                   </v-expansion-panel-header>
 
                   <v-expansion-panel-content>
-                    <p style="white-space:pre-line">{{ faq[category]['qnas'][qna].answer.interpolate(paramsForInterpolation) }}</p>
+                    <p style="white-space:pre-line">
+                      {{ faq[category]['qnas'][qna].answer.interpolate(paramsForInterpolation) }}
+                    </p>
                     <div
                       v-if="Object.values(faq[category]['qnas'][qna].references).length"
                       class="mt-4 black--text"
@@ -110,7 +116,7 @@ export default {
       userQuestion: '',
       matchedQNA: '',
       searching: false,
-      paramsForInterpolation:{}
+      paramsForInterpolation: {}
 
     }
   },
@@ -122,12 +128,12 @@ export default {
     }
   },
   created () {
-    this.paramsForInterpolation = controller.paramsForInterpolation;
+    this.paramsForInterpolation = controller.paramsForInterpolation
 
-    String.prototype.interpolate = function(params) {
-      const names = Object.keys(params);
-      const values = Object.values(params);
-      return new Function(...names, `return \`${this}\`;`)(...values);
+    String.prototype.interpolate = function (params) {
+      const names = Object.keys(params)
+      const values = Object.values(params)
+      return new Function(...names, `return \`${this}\`;`)(...values)
     }
 
     if (this.$i18n.locale === 'en') {
