@@ -111,11 +111,11 @@
             }
         }
     },
-    "Assistant du Consentement": {
+    "Assistant de Consentement": {
         "qnas": {
             "qna1": {
-                "question": "Qu'est-ce que l'Assistant du Consentement ?",
-                "answer": "L'Assistant du Consentement est un outil qui vous permet d'\u00e9viter de lire de longues politiques de confidentialit\u00e9. Il vous guidera \u00e0 travers un certain nombre de questions qui nous permettront de comprendre vos pr\u00e9f\u00e9rences en mati\u00e8re de consentement. Sur la base de ces pr\u00e9f\u00e9rences, nous sugg\u00e9rons des configurations de consentement et vous indiquons les probl\u00e8mes potentiels li\u00e9s \u00e0 votre consentement actuel. Il se peut, par exemple, que vous ne souhaitiez pas partager votre localisation \u00e0 des fins de marketing, mais pour des recommandations de restaurants.",
+                "question": "Qu'est-ce que l'Assistant de Consentement ?",
+                "answer": "L'Assistant de Consentement est un outil qui vous permet d'\u00e9viter de lire de longues politiques de confidentialit\u00e9. Il vous guidera \u00e0 travers un certain nombre de questions qui nous permettront de comprendre vos pr\u00e9f\u00e9rences en mati\u00e8re de consentement. Sur la base de ces pr\u00e9f\u00e9rences, nous sugg\u00e9rons des configurations de consentement et vous indiquons les probl\u00e8mes potentiels li\u00e9s \u00e0 votre consentement actuel. Il se peut, par exemple, que vous ne souhaitiez pas partager votre localisation \u00e0 des fins de marketing, mais pour des recommandations de restaurants.",
                 "references": { }
             }
         }
