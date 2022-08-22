@@ -20,7 +20,7 @@
         </v-chip>
       </template>
       <template v-if="['consent'].includes(tabName) " v-slot:item.policy="{ item }">
-        <a :href="'static/data/'+ item.policy.split(' ')[0]">{{ item.policy }}</a>
+        <a :href="'static/data/'+ item.policy.split(' ')[0]" target="_blank">{{ item.policy }}</a>
       </template>
     </v-data-table>
 
