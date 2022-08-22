@@ -100,10 +100,10 @@
             }
         }
     },
-    "Finalités": {
+    "Finalités (Fins)": {
         "qnas": {
             "qna1": {
-                "question": "Qu'est-ce qu'une finalité?",
+                "question": "Qu'est-ce qu'un fin?",
                 "answer": "Selon l'article 5, premier paragraphe RGPD, point b)), les responsables du traitement doivent vous indiquer clairement \u00e0 quelles fins ils collectent vos donn\u00e9es personnelles. Il est par exemple ill\u00e9gal de collecter vos donn\u00e9es personnelles dans le but pr\u00e9cis de recommandations d'emploi personnalis\u00e9es et de les utiliser ensuite \u00e0 des fins de marketing.",
                 "references": {
                     "ref1": "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX%3A32016R0679"
@@ -207,7 +207,7 @@
                 }
             },
             "qna13": {
-                "question": "Finalité",
+                "question": "Finalité (Fin)",
                 "answer": "Selon l'article 5, premier paragraphe, point b) RGPD, les responsables du traitement des donn\u00e9es (nous) doivent vous indiquer clairement dans quel but ils collectent des donn\u00e9es \u00e0 caract\u00e8re personnel. Il est par exemple ill\u00e9gal de collecter des donn\u00e9es \u00e0 caract\u00e8re personnel \u00e0 des fins de recommandations d'emploi personnalis\u00e9es et de les utiliser ult\u00e9rieurement \u00e0 des fins de marketing.",
                 "references": {
                     "ref1": "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX%3A32016R0679"

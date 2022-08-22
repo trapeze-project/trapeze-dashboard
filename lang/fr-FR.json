@@ -23,7 +23,7 @@
             "consent": "Politique de confidentialité",
             "consent-menu": "Menu de Consentement",
             "data": "Donn\u00e9es",
-            "purposes": "Finalit\u00e9s",
+            "purposes": "Fins",
             "help": "Assistant de Consentement",
             "faq": "FAQ"
         }
@@ -96,7 +96,7 @@
                 "name": "d\u00e9sactiver et activer les cat\u00e9gories de donn\u00e9es,"
             },
             "2": {
-                "name": "d\u00e9sactiver et activer les finalit\u00e9s."
+                "name": "d\u00e9sactiver et activer les fins."
             }
         },
         "help": "Aide",
@@ -154,7 +154,7 @@
         "consent-menu": "Menu Consentement",
         "title": "Assistant de Consentement",
         "location": "Vos donn\u00e9es de localisation",
-        "purposes": "Finalit\u00e9s",
+        "purposes": "Fins",
         "text": "Les donn\u00e9es de localisation sont des donn\u00e9es qui nous indiquent o\u00f9 vous avez \u00e9t\u00e9 \u00e0 quel moment. Nous collectons les donn\u00e9es de localisation par GPS si vous nous en donnez l'autorisation dans l'application mobile Nom de l'entreprise. Nous utilisons vos donn\u00e9es de localisation pour personnaliser notre publicit\u00e9, pour planifier notre marketing g\u00e9ographiquement et pour pr\u00e9venir la fraude via la v\u00e9rification g\u00e9ographique de l'identit\u00e9.",
         "text_ad": "La publicit\u00e9 fait partie int\u00e9grante de notre mod\u00e8le \u00e9conomique, qui garantit que nous pouvons continuer \u00e0 vous fournir nos recommandations de restaurants. Nous utilisons les cat\u00e9gories de donn\u00e9es ci-dessous pour personnaliser la publicit\u00e9. Dites-nous ci-dessous quelles cat\u00e9gories de donn\u00e9es nous pouvons utiliser pour personnaliser notre publicit\u00e9.",
         "ad": "Publicit\u00e9",
@@ -177,7 +177,7 @@
             "labels": {
                 "consent": "Politique de confidentialité",
                 "data-category": "Cat\u00e9gorie de donn\u00e9es",
-                "purpose": "Finalit\u00e9"
+                "purpose": "Fin"
             }
         },
         "consent": {
@@ -236,7 +236,7 @@
         }
     },
     "consent-helper": {
-        "purpose": "Finalit\u00e9",
+        "purpose": "Fins",
         "comfortable": "Confortable",
         "no-opinion": "Sans opinion",
         "not-comfortable": "Pas confortable"
