@@ -8,8 +8,8 @@
       {{ this.companyInformation.website }}<br>
       <br>
 
-      {{ $t("general.dpo") }} ({{ $t("general.dpo-abbrev") }})<br>
-      <b>{{ this.companyInformation.posName }}</b><br>
+      <b>{{ $t("general.dpo") }} ({{ $t("general.dpo-abbrev") }})</b><br>
+      {{ this.companyInformation.posName }}<br>
       {{ this.companyInformation.email }}<br>
       <PContactFirm
         class="mt-3"

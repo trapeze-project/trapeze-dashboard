@@ -1,0 +1,154 @@
+general|cancel;Annulla
+general|revoke;Cancella tutto
+general|category;Categorie di dati
+general|location;Dati sulla posizione
+general|advertising;Pubblicità
+general|warning;Avvertenze
+general|access;Richiesta di Accesso ai Dati
+general|unrelatedData;Categorie di dati non correlati
+general|bioData;Dati biometrici
+general|unrelatedDataText;E' molto insolito che le impronte digitali vengano utilizzate per scopi pubblicitari.
+general|bioDataText;Le impronte digitali sono particolarmente sensibili, in quanto facilitano il furto di identità. Si raccomanda di fornire il consenso per i dati relativi alle impronte digitali solo se assolutamente necessario.
+layout|privacy-dashboard;dashboard sulla privacy
+nav|labels|home;Homepage
+nav|labels|consent;Consenso
+nav|labels|consent-menu;Menu di Consenso
+nav|labels|data;Dati
+nav|labels|purposes;Scopi
+nav|labels|help;Assistente al Consenso
+nav|labels|faq;FAQ
+dpv|location;Posizione
+dpv|name;Nome
+dpv|fingerprint;Impronta digitale
+dpv|identity-verification;Verifica dell'identità
+dpv|marketing;Marketing
+dpv|advertising;Pubblicità
+btn|labels|consent-guide;Assistente al Consenso
+btn|labels|i-can-not-find-an-answer;Non riesco a trovare una risposta
+btn|labels|undo-last-change;Annulla le modifiche
+btn|labels|submit-changes;Invia le modifiche
+btn|labels|see-changes;Guarda le modifiche
+btn|labels|view-changes;Visualizza le modifiche
+btn|labels|send-message;Invia il messaggio
+btn|labels|cancel;Annulla
+btn|labels|back;Indietro
+btn|labels|next;Avanti
+btn|labels|view-issues;Visualizza i problemi
+btn|labels|fix;Correggere
+btn|labels|fix-all;Correggere tutto
+btn|labels|ignore;Ignora
+btn|labels|ignore-all;Ignora tutto
+btn|labels|view;Visualizza
+btn|labels|visit-website;Visita il sito web
+btn|labels|leave-anyway;vattene comunque
+btn|labels|contact;Contatto
+snackbar|msg|please-complete-the-consent-guide;Non ha ancora risposto a tutte le domande. La preghiamo di rispondere a tutte le domande per completare il questionario.
+snackbar|msg|submission-successful;Invio dei dati completato
+placeholder|search-for-a-question-or-an-answer;Cerca una domanda o una risposta
+updates|1;Aggiornamento della politica sulla privacy
+updates|2;Revoca del consenso
+updates|3;Richiesta di consenso
+sidebar-title|navigation;Navigazione
+sidebar-title|update;Aggiornamenti
+qna|links-and-sources;Link e fonti
+qna|header;Domande Frequenti (FAQ)
+qna|introduction;Scoprite di più sul dashboard sulla privacy di TRAPEZE e sui concetti che ne stanno alla base. Fateci sapere (${we}) se non trovate informazioni a cui sei interessati/e.
+home|title;Benvenuti sul vostro dashboard personale sulla privacy!
+home|explore-btn;Visualizza
+home|welcome-msg1;Noi di (${we}) vogliamo che tu capisca come trattiamo i tuoi dati personali.\n\nIn questo dashboard è possibile visualizzare quali dati personali vengono trattati da (${we}) e per quali scopi. Il dashboard vi consente di limitare il trattamento dei vostri dati personali configurando il vostro consenso. È possibile:
+home|welcome-msg2;Il menu in basso a sinistra offre una rapida panoramica delle interazioni più recenti relative al consenso tra l'utente e noi (${we}).\nSe siete nuovi al dashboard sulla privacy, vi consigliamo di provare l'Assistente al Consenso.
+home|purpose|0|name;annullare e dare consenso,
+home|purpose|1|name;disattivare e attivare categorie di dati,
+home|purpose|2|name;disattivare e attivare gli scopi.
+home|help;Aiuto
+home|items|0|title;Consenso
+home|items|0|filename;/img/consent.png
+home|items|0|link;/consent?tab=consent
+home|items|0|content;Visualizza il consenso che ci (${we}) hai dato.
+home|items|1|title;Dati
+home|items|1|filename;/img/data.png
+home|items|1|link;/consent?tab=data
+home|items|1|content;Ci dica quali dei suoi dati noi (${we}) possiamo utilizzare.
+home|items|2|title;Scopi
+home|items|2|filename;/img/purpose.png
+home|items|2|link;/consent?tab=purpose
+home|items|2|content;Ci dica per cosa noi (${we}) possiamo utilizzare i suoi dati.
+home|items|3|title;TRAPEZE
+home|items|3|filename;/img/favicon.png
+home|items|3|link;http://trapeze-project.eu
+home|items|3|content;Per saperne di più sul progetto TRAPEZE dell'Unione Europea.
+home|consent|consent-menu;Menu del Consenso
+home|consent|title;Consenso
+home|consent|location;I vostri dati sulla posizione
+home|consent|purpose;Scopi
+home|consent|text;I dati sulla posizione sono dati che ci dicono dove siete stati in ogni momento. Raccogliamo dati sulla posizione attraverso il GPS se date il vostro consenso all'app del telefono "Nome Azienda". Utilizziamo i vostri dati sulla posizione per raffinare le pubblicità.
+home|consent|text_ad;La pubblicità è parte integrante del nostro modello di business, che ci permette di continuare a fornirvi gratuitamente le nostre raccomandazioni sui ristoranti. Utilizziamo le seguenti categorie di dati per personalizzare la pubblicità. Indicate qui di seguito quali categorie di dati possiamo utilizzare per personalizzare la nostra pubblicità.
+home|consent|ad;Pubblicità
+home|consent|marketing;Marketing
+home|consent|id;Verifica dell'identità
+home|consent|name;Nome
+home|consent|fingerprint;Impronta digitale
+home|consent|bank;Conto corrente bancario
+home|consent|credit;Numero di carta di credito
+home|consent|sensitivity;Sensibilità:
+home|consent|sensitivityText;Potete configurare il grado di sensibilità  di questi dati. I dati molto sensibili vengono trattati in modo diverso e con grande attenzione.
+home|consent|sensitivityHeader;Quanto sono sensibili questi dati per voi?
+PAlertLeaveDialog|dialog-title;Sei sicuro di voler lasciare questa pagina?
+PAlertLeaveDialog|lose-changes-warning;Devi inviare le tue scelte.
+PAlertLeaveDialog|lose-consent-helper-choices;Se esci da questa pagina, le tue scelte per l'assistente per il consenso andranno perse.
+consent|consent-menu;Menu del Consenso
+consent|title;Assistente al Consenso
+consent|location;I vostri dati sulla posizione
+consent|purposes;Scopi
+consent|text;I dati sulla posizione sono dati che ci dicono dove siete stati in quale momento. Raccogliamo i dati sulla posizione tramite GPS se l'utente fornisce l'autorizzazione nell'applicazione mobile Company Name. Utilizziamo i dati sulla posizione dell'utente per personalizzare la nostra pubblicità, per pianificare il nostro marketing a livello geografico e per prevenire le frodi attraverso la verifica dell'identità geografica.
+consent|text_ad;La pubblicità è parte integrante del nostro modello di business, che ci permette di continuare a fornirvi le nostre raccomandazioni sui ristoranti. Utilizziamo le seguenti categorie di dati per personalizzare la pubblicità. Indicate qui di seguito quali categorie di dati possiamo utilizzare per personalizzare la nostra pubblicità.
+consent|ad;Pubblicità
+consent|marketing;Marketing
+consent|id;Verifica dell'identità
+consent|name;Nome
+consent|fingerprint;Impronta digitale
+consent|bank;Conto corrente bancario
+consent|credit;Numero di carta di credito
+consent|sensitivity;Sensibilità:
+consent|sensitivityText;Potete configurare il grado di sensibilità di questi dati. I dati molto sensibili vengono trattati in modo diverso e con grande attenzione.
+consent|sensitivityHeader;Quanto sono sensibili questi dati per voi?
+consent|warnings;Avvertenze
+consent|warningMsg;L'utente ha dato il consenso al titolare del trattamento per l'utilizzo dei suoi dati {dataCategory} per lo scopo di {purpose}, ma la sua scelta nell'Assistente al Consenso è stata {helperChoices}.
+consent|warning-msg-not-comfortable;Hai concesso al titolare del trattamento l'autorizzazione a utilizzare i tuoi dati {dataCategory} per scopi {purpose}. tuttavia, la tua selezione dell'Assistente per il consenso è stata scomoda.
+consent|warning-msg-no-opinion;Hai concesso al titolare del trattamento l'autorizzazione a utilizzare i tuoi dati {dataCategory} per scopi {scopo}. Tuttavia, hai fatto una scelta imparziale con Consent Assistant.
+consent|issues;problemi
+consent|issue;problem
+consent|tab|labels|consent;Consenso
+consent|tab|labels|data-category;Categoria di dati
+consent|tab|labels|purpose;Scopo
+consent|consent|ptable|header|values|date;Data
+consent|consent|ptable|header|values|event;Evento
+consent|consent|ptable|header|values|policy;Politica sulla privacy
+consent|consent|ptable|events|values|consent-request-policy-update;Richiesta di consenso - Aggiornamento delle norme
+consent|consent|ptable|events|values|consent-revocation;Revoca del consenso
+consent|consent|ptable|events|values|consent-giving;Dare il consenso
+consent|consent|ptable|events|values|consent-request-account-creation;Richiesta di consenso - Creazione account
+consent|consent|ptable|policy|active;Attivo
+consent|consent|ptable|policy|inactive;Non attivo
+consent|consent|ptable|footer|rows-per-page;Righe per pagina
+consent|data|ptable|header|values|data;Categoria di dati
+consent|data|ptable|header|values|purposes;Scopi
+consent|data|ptable|header|values|issue;Problema
+consent|data|ptable|footer|rows-per-page;Righe per pagina
+consent|purpose|ptable|header|values|purpose;Scopo
+consent|purpose|ptable|header|values|data;Categorie di dati
+consent|purpose|ptable|header|values|issue;Problema
+consent|purpose|ptable|footer|rows-per-page;Righe per pagina
+consent-helper|purpose;Scopo
+consent-helper|comfortable;A mio agio
+consent-helper|no-opinion;Nessuna opinione
+consent-helper|not-comfortable;A disagio
+contact|new-message-to;Nuovo messaggio a
+contact|recipient;Destinataria
+contact|message;Messaggio
+location;I dati sulla posizione sono dati che ci dicono dove siete stati in ogni momento. Raccogliamo dati sulla posizione attraverso il GPS se date il vostro consenso all'app del telefono "Nome Azienda". Utilizziamo i vostri dati sulla posizione per raffinare le pubblicità.
+name;Raccogliamo il vostro nome per indirizzarvi correttamente. Memorizziamo il vostro nome dal vostro profilo.
+fingerprint;Le impronte digitali vengono utilizzate per verificare le credenziali e prevenire il furto di identità.
+marketing;Il marketing è essenziale per noi perché operiamo in mercati molto diversi. Riconosciamo le preferenze regionali e possiamo quindi adattare i nostri prodotti ai vostri clienti.
+advertising;La pubblicità è parte integrante del nostro modello di business, che ci garantisce di continuare a fornirvi le nostre raccomandazioni sui ristoranti.
+identity-verification;La verifica dell'identità è un processo di sicurezza nel quale ci assicuriamo che voi siate delle persone reali e non dei bot. Utilizziamo la verifica dell'identità anche per prevenire un furto d'identità.

@@ -1,0 +1,156 @@
+general|cancel;Annuler
+general|revoke;Révoquer tout
+general|category;Catégories de données
+general|location;Données de localisation
+general|advertising;Publicités
+general|warning;Avertissement
+general|access;Demander l'Accès aux Données
+general|unrelatedData;Catégorie de données non liées
+general|bioData;Données biométriques
+general|unrelatedDataText;Il est très inhabituel que les empreintes digitales soient utilisées à des fins publicitaires.
+general|bioDataText;Les empreintes digitales sont particuli�rement sensibles, car elles facilitent le vol d'identité. Il est recommandé de ne donner son consentement pour les données dactyloscopiques que lorsque cela est absolument nécessaire.
+layout|privacy-dashboard;tableau de bord de confidentialité
+nav|labels|home;Acceuil
+nav|labels|consent;Consentement
+nav|labels|consent-menu;Menu de Consentement
+nav|labels|data;Données
+nav|labels|purposes;Finalités
+nav|labels|help;Assistant de Consentement
+nav|labels|faq;FAQ
+dpv|location;Localisation
+dpv|name;Nom
+dpv|fingerprint;Empreinte digitale
+dpv|identity-verification;Vérification de l'identité
+dpv|marketing;Marketing
+dpv|advertising;Publicités
+btn|labels|consent-guide;Assistant de Consentement
+btn|labels|i-can-not-find-an-answer;Je ne trouve pas de réponse
+btn|labels|undo-last-change;Annuler la dernière modification
+btn|labels|submit-changes;Soumettre les modifications
+btn|labels|see-changes;Voir les modifications
+btn|labels|view-changes;Afficher les modifications
+btn|labels|send-message;Envoyer un message
+btn|labels|cancel;Annuler
+btn|labels|back;Précédent
+btn|labels|next;Suivant
+btn|labels|view-issues;Afficher les problèmes
+btn|labels|fix;Réparer
+btn|labels|fix-all;Réparer tout
+btn|labels|ignore;Ignorer
+btn|labels|ignore-all;Ignorer tout
+btn|labels|view;Voir
+btn|labels|visit-website;Visitez le site web
+btn|labels|leave-anyway;partir quand même
+btn|labels|contact;Nous Contacter
+snackbar|msg|please-complete-the-consent-guide;Vous n'avez pas encore répondu à toutes les questions. Veuillez répondre à toutes les questions pour compléter le questionnaire.
+snackbar|msg|submission-successful;Soumission réussie
+snackbar|msg|message-sent;message envoyé
+placeholder|search-for-a-question-or-an-answer;Rechercher une question ou une réponse
+updates|1;Mise à jour de la politique de confidentialité
+updates|2;Révocation du consentement
+updates|3;Demande de consentement
+sidebar-title|navigation;Navigation
+sidebar-title|update;Mises à jour
+qna|links-and-sources;Liens et sources
+qna|header;Foire aux Questions (FAQ)
+qna|introduction;En savoir plus sur le tableau de bord de confidentialité TRAPEZE et ses concepts sous-jacents. N'oubliez pas de nous (${we}) faire savoir si vous ne trouvez pas d'informations qui vous intéressent.
+home|title;Bienvenue dans votre tableau de bord de confidentialité personnel !
+home|explore-btn;Voir
+home|welcome-msg1;Chez ${we}, nous voulons que vous compreniez comment nous traitons vos données personnelles.\n\nDans ce tableau de bord, vous pouvez voir quelles données personnelles nous (${we}) traitons et à quelles fins. Le tableau de bord vous permet de limiter notre traitement de vos données personnelles en configurant votre consentement. Vous pouvez :
+home|welcome-msg2;Le menu en bas à gauche vous donne un aperçu rapide des interactions les plus récentes liées au consentement entre vous et nous (${we}).\nSi vous ne connaissez pas encore le tableau de bord de la vie privée, nous vous recommandons d'essayer l'Assistant de Consentement.
+home|purpose|0|name;révoquer et donner son consentement,
+home|purpose|1|name;désactiver et activer les catégories de données,
+home|purpose|2|name;désactiver et activer les finalités.
+home|help;Aide
+home|items|0|title;Consentement
+home|items|0|filename;/img/consent.png
+home|items|0|link;/consent?tab=consent
+home|items|0|content;Consultez le consentement que vous nous avez donné (${we}).
+home|items|1|title;Données
+home|items|1|filename;/img/data.png
+home|items|1|link;/consent?tab=data
+home|items|1|content;Dites-nous (${we}) lesquelles de vos données nous pouvons utiliser.
+home|items|2|title;Fins
+home|items|2|filename;/img/purpose.png
+home|items|2|link;/consent?tab=purpose
+home|items|2|content;Dites-nous (${we}) à quoi nous pouvons utiliser vos données.
+home|items|3|title;TRAPEZE
+home|items|3|filename;/img/favicon.png
+home|items|3|link;http://trapeze-project.eu
+home|items|3|content;En savoir plus sur le projet TRAPEZE de l'Union européenne.
+home|consent|consent-menu;Menu Consentement
+home|consent|title;Consentement
+home|consent|location;Vos données de localisation
+home|consent|purpose;Fins
+home|consent|text;Les données de localisation sont des données qui nous indiquent où vous avez été à quelle heure. Nous collectons des données de localisation via GPS si vous en donnez l'autorisation dans l'application mobile Nom de l'entreprise. Nous utilisons vos données de localisation pour personnaliser notre publicité, pour planifier notre marketing géographiquement et pour pr�venir la fraude via la vérification de l'identité géographique.
+home|consent|text_ad;La publicité fait partie intégrante de notre modèle économique, ce qui garantit que nous pouvons continuer à vous fournir gratuitement nos recommandations de restaurants. Nous utilisons les catégories de données ci-dessous pour personnaliser la publicité. Dites-nous ci-dessous quelles catégories de données nous pouvons utiliser pour personnaliser notre publicité.
+home|consent|ad;Publicité
+home|consent|marketing;Marketing
+home|consent|id;Vérification de l'identité
+home|consent|name;Nom
+home|consent|fingerprint;Empreinte digitale
+home|consent|bank;Compte en banque
+home|consent|credit;Numéro de carte de crédit
+home|consent|sensitivity;Sensibilité:
+home|consent|sensitivityText;Vous pouvez configurer la sensibilité de ces données pour vous. Nous traitons les données très sensibles différemment et avec le plus grand soin
+home|consent|sensitivityHeader;Quel est le degré de sensibilité de ces données pour vous ?
+PAlertLeaveDialog|dialog-title;Voulez-vous vraiment quitter cette page ?
+PAlertLeaveDialog|lose-changes-warning;Vous devez soumettre vos choix.
+PAlertLeaveDialog|lose-consent-helper-choices;Vos choix d'assistant de consentement seront perdus si vous quittez cette page.
+consent|consent-menu;Menu Consentement
+consent|title;Assistant de Consentement
+consent|location;Vos données de localisation
+consent|purposes;Finalités
+consent|text;Les données de localisation sont des données qui nous indiquent où vous avez été à quel moment. Nous collectons les données de localisation par GPS si vous nous en donnez l'autorisation dans l'application mobile Nom de l'entreprise. Nous utilisons vos données de localisation pour personnaliser notre publicité, pour planifier notre marketing géographiquement et pour prévenir la fraude via la vérification géographique de l'identité.
+consent|text_ad;La publicité fait partie intégrante de notre modèle économique, qui garantit que nous pouvons continuer à vous fournir nos recommandations de restaurants. Nous utilisons les catégories de données ci-dessous pour personnaliser la publicité. Dites-nous ci-dessous quelles catégories de données nous pouvons utiliser pour personnaliser notre publicité.
+consent|ad;Publicité
+consent|marketing;Marketing
+consent|id;Vérification de l'identité
+consent|name;Nom
+consent|fingerprint;Empreinte digitale
+consent|bank;Compte bancaire
+consent|credit;Numéro de la carte de crédit
+consent|sensitivity;Sensibilité :
+consent|sensitivityText;Vous pouvez configurer le degré de sensibilité de ces données. Nous traitons les données très sensibles différemment et avec une attention particulière.
+consent|sensitivityHeader;Dans quelle mesure ces données sont-elles sensibles pour vous ?
+consent|warnings;Avertissements
+consent|warningMsg;Vous avez donné votre consentement au responsable du traitement pour qu'il utilise vos données de {catégorie de données} dans le but de {fonction}. mais votre choix dans l'Assistant de Consentement était {helperChoices}.
+consent|warning-msg-not-comfortable;Vous avez autorisé le responsable du traitement à utiliser vos données {dataCategory} à des fins {purpose}. cependant, votre sélection de l'assistant de consentement était inconfortable.
+consent|warning-msg-no-opinion;Vous avez autorisé le responsable du traitement à utiliser vos données {dataCategory} à des fins {purpose}. Cependant, vous avez fait un choix impartial avec Consent Assistant.
+consent|issues;problèmes
+consent|issue;problèm
+consent|data-category;Catégorie de données
+consent|tab|labels|consent;Consentement
+consent|tab|labels|data-category;Catégorie de données
+consent|tab|labels|purpose;Finalité
+consent|consent|ptable|header|values|date;Date
+consent|consent|ptable|header|values|event;Événement
+consent|consent|ptable|header|values|policy;Politique de confidentialité
+consent|consent|ptable|events|values|consent-request-policy-update;Demande de consentement - Mise à jour de la politique de confidentialité
+consent|consent|ptable|events|values|consent-revocation;Révocation du consentement
+consent|consent|ptable|events|values|consent-giving;Donner son consentement
+consent|consent|ptable|events|values|consent-request-account-creation;Demande de consentement - Création de compte
+consent|consent|ptable|policy|active;active
+consent|consent|ptable|policy|inactive;inactive
+consent|consent|ptable|footer|rows-per-page;Lignes par page
+consent|data|ptable|header|values|data;Catégorie de données
+consent|data|ptable|header|values|purposes;Fins
+consent|data|ptable|header|values|issue;Problème
+consent|data|ptable|footer|rows-per-page;Lignes par page
+consent|purpose|ptable|header|values|purpose;Fin
+consent|purpose|ptable|header|values|data;Catégories de données
+consent|purpose|ptable|header|values|issue;Problème
+consent|purpose|ptable|footer|rows-per-page;Lignes par page
+consent-helper|purpose;Finalité
+consent-helper|comfortable;Confortable
+consent-helper|no-opinion;Sans opinion
+consent-helper|not-comfortable;Pas confortable
+contact|new-message-to;Nouveau message à
+contact|recipient;Destinataire
+contact|message;Message
+location;Les données de localisation sont des données qui nous indiquent où vous avez été à quel moment. Nous collectons les données de localisation par GPS si vous nous en donnez l'autorisation dans l'application mobile Nom de l'entreprise. Nous utilisons vos données de localisation pour personnaliser notre publicité, pour planifier notre marketing géographiquement et pour prévenir la fraude via la vérification géographique de l'identité.
+name;Nous recueillons votre nom pour vous adresser correctement. Nous enregistrons votre nom à partir de votre profil.
+fingerprint;Les empreintes digitales sont utilisées pour vérifier vos informations d'identification et prévenir le vol d'identité.
+marketing;Le marketing est essentiel pour nous, car nous sommes actifs sur des marchés très différents. Nous reconnaissons ainsi les préférences régionales et pouvons adapter nos produits pour vous en tant que client.
+advertising;La publicité fait partie intégrante de notre modèle économique, ce qui garantit que nous pouvons continuer à vous fournir nos recommandations de restaurants.
+identity-verification;La vérification de l'identité est un processus de sécurité par lequel nous nous assurons que vous êtes une personne réelle et non un robot. En outre, la vérification de l'identité nous permet d'éviter les fraudes telles que le vol d'identité ou le vol de données. En outre, nous nous assurons que vous avez plus de 16 ans.

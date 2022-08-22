@@ -21,7 +21,7 @@
         "labels": {
             "home": "Start",
             "consent": "Datenschutzrichtlinie",
-            "consent-menu": "Einwilligungenmenü",
+            "consent-menu": "Einwilligungsmenü",
             "data": "Datenkategorien",
             "purposes": "Zwecke",
             "help": "Einwilligungsassistent",
@@ -117,7 +117,7 @@
               "title": "Einwilligungen",
               "filename": "/img/consent.png",
               "link": "/consent?tab=consent",
-              "content": "Sehen Sie sich die Zustimmung an, die Sie uns (${we}) gegeben haben."
+              "content": "Sehen Sie sich die Einwilligungen an, die Sie uns (${we}) erteilt haben."
             },            
             "3": {
                 "title": "TRAPEZE",
@@ -127,7 +127,7 @@
             }
         },
         "consent": {
-            "consent-menu": "\u00dcbersicht",
+            "consent-menu": "Einwilligungsmenü",
             "title": "Einwilligungen",
             "location": "Ihre Standortdaten",
             "purpose": "Zwecke",
@@ -151,7 +151,7 @@
         "lose-consent-helper-choices":"Ihre Auswahlmöglichkeiten für die Einwilligungshilfe gehen verloren, wenn Sie diese Seite verlassen."
     },
     "consent": {
-        "consent-menu": "\u00dcbersicht",
+        "consent-menu": "Einwilligungsmenü",
         "title": "Einwilligungsassistent",
         "location": "Ihre Standortdaten",
         "purposes": "Zwecke",
