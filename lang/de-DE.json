@@ -117,7 +117,7 @@
               "title": "Einwilligungen",
               "filename": "/img/consent.png",
               "link": "/consent?tab=consent",
-              "content": "Sehen Sie sich die Zustimmung an, die Sie uns (${we}) gegeben haben."
+              "content": "Sehen Sie sich die Einwilligungen an, die Sie uns (${we}) erteilt haben."
             },            
             "3": {
                 "title": "TRAPEZE",
