@@ -8,7 +8,7 @@
       single-select
       mobile-breakpoint="0"
       :footer-props="{'items-per-page-text': $t('consent.'+tabName+'.ptable.footer.rows-per-page')}"
-      @click:row="null"
+      @click:row="select"
     >
       <template v-if="['data','purpose'].includes(tabName) " v-slot:item.issue="{ item }">
         <v-chip
@@ -73,6 +73,10 @@ export default {
       type: Object,
       required: false
     },
+    consentHelperUserChoices: {
+      type: Object,
+      required: false
+    },
     warnings: {
       required: false
     }
@@ -92,7 +96,6 @@ export default {
       headers: '',
       pDetailsSubItemsMap: '',
       modifiedUserChoices: '',
-      consentHelperUserChoices: '',
       modifiedWarnings: '',
       states: []
     }
@@ -193,12 +196,12 @@ export default {
 
     if (this.tabName === 'purpose') {
       this.modifiedUserChoices = JSON.parse(JSON.stringify(this.userChoices))
-      if (this.$route.params.consentHelperUserChoices) {
+      if (this.consentHelperUserChoices) {
         this.modifiedWarnings = this.warnings
       }
     } else if (this.tabName === 'data') {
       this.modifiedUserChoices = JSON.parse(JSON.stringify(this.userChoices))
-      if (this.$route.params.consentHelperUserChoices) {
+      if (this.consentHelperUserChoices) {
         this.modifiedWarnings = this.warnings
       }
     }
@@ -260,7 +263,6 @@ export default {
     changeUserChoice (parent, child, newConsentValue) {
       this.modifiedUserChoices[parent][child] = newConsentValue
       this.fixWarningIfExist(parent, child, newConsentValue)
-      console.log()
     },
     fixWarningIfExist (parent, child, newConsentValue) {
       if (this.warnings.toString()) {
@@ -281,7 +283,7 @@ export default {
         document.getElementById('PDetails').scrollIntoView({ behavior: 'smooth' })
       }
       if (this.tabName === 'purpose') {
-        if (this.view.showPDetails && this.$route.params.consentHelperUserChoices && this.modifiedWarnings[this.view.selected.untranslated] && Object.keys(this.modifiedWarnings[this.view.selected.untranslated]).length) {
+        if (this.view.showPDetails && this.consentHelperUserChoices && this.modifiedWarnings[this.view.selected.untranslated] && Object.keys(this.modifiedWarnings[this.view.selected.untranslated]).length) {
           document.getElementById('PWarnings').scrollIntoView({ behavior: 'smooth' })
         } else {
           document.getElementById('PDetails').scrollIntoView({ behavior: 'smooth' })

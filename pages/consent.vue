@@ -30,7 +30,13 @@
         </v-tab-item>
 
         <v-tab-item value="purpose" :eager="true">
-          <PTabTable ref="purpose" tab-name="purpose" :user-choices="userChoices" :warnings="warnings" />
+          <PTabTable 
+            ref="purpose" 
+            tab-name="purpose" 
+            :user-choices="userChoices"
+            :consent-helper-user-choices="consentHelperUserChoices"
+            :warnings="warnings" 
+          />
         </v-tab-item>
 
         <v-tab-item value="consent">
@@ -92,8 +98,17 @@ export default {
     this.getUserChoices()
     this.invertedUserChoices = this.invertUserChoices(this.userChoices)
 
+    /*
     if (this.$route.params.consentHelperUserChoices) {
       this.consentHelperUserChoices = JSON.parse(JSON.stringify(this.$route.params.consentHelperUserChoices))
+      console.log(JSON.stringify(this.$route.params.consentHelperUserChoices));
+      this.calculateWarnings()
+    }
+    */
+
+    let stored = window.localStorage.getItem("consent");
+    if (stored) {
+      this.consentHelperUserChoices = JSON.parse(stored);
       this.calculateWarnings()
     }
   },

@@ -44,7 +44,11 @@
                   {{ $t("consent-helper.purpose") }}
                 </p>
 
-                <PDataCategoryHelper class="mt-3" :categories="imports.dataCategoryMap[Object.keys(imports.dataCategoryMap)[page-1]]" @userChoices="collectUserChoices" />
+                <PDataCategoryHelper 
+                  class="mt-3" 
+                  :categories="imports.dataCategoryMap[Object.keys(imports.dataCategoryMap)[page-1]]" 
+                  @userChoices="collectUserChoices" 
+                />
               </div>
 
               <div class="text-center mt-5 mb-1">
@@ -91,7 +95,7 @@ export default {
       imports: {
         dataCategoryMap: ''
       },
-      consentHelperUserChoices: {},
+      consentHelperUserChoices: {}, // TODO: persist
       page: 1,
       dataCategoryCompletedChoosement: []
     }
@@ -123,7 +127,8 @@ export default {
         this.$refs.helpNotification.showNotification(text, 'orange')
       } else {
         const consentPageRoute = this.$router.options.routes.find(route => route.path === this.localePath('/consent'))
-        this.$router.push({ name: consentPageRoute.name, query: { tab: 'purpose' }, params: { consentHelperUserChoices: this.consentHelperUserChoices } })
+        window.localStorage.setItem("consent", JSON.stringify(this.consentHelperUserChoices));
+        this.$router.push({ name: consentPageRoute.name, query: { tab: 'purpose' }/*, params: { consentHelperUserChoices: this.consentHelperUserChoices }*/ })
       }
     },
     calculateDataCategoryMap () {
