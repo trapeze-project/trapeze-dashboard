@@ -1,5 +1,6 @@
 <template>
   <div class="choose-table">
+    <!-- NOTE: @click:row is temporarily null, i.e. no selection -->
     <v-data-table
       :headers="headers"
       :items="category"
@@ -7,7 +8,7 @@
       single-select
       mobile-breakpoint="0"
       :footer-props="{'items-per-page-text': $t('consent.'+tabName+'.ptable.footer.rows-per-page')}"
-      @click:row="select"
+      @click:row="null"
     >
       <template v-if="['data','purpose'].includes(tabName) " v-slot:item.issue="{ item }">
         <v-chip
@@ -20,7 +21,7 @@
         </v-chip>
       </template>
       <template v-if="['consent'].includes(tabName) " v-slot:item.policy="{ item }">
-        <a :href="'static/data/'+ item.policy.split(' ')[0]" target="_blank">{{ item.policy }}</a>
+        <a :href="'/data/'+ item.policy.split(' ')[0]" target="_blank">{{ item.policy }}</a>
       </template>
     </v-data-table>
 
