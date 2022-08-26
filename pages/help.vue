@@ -6,6 +6,8 @@
         {{ $t("consent.title") }}
       </v-card-title>
 
+      <v-card-text>{{ $t("help.desc") }}</v-card-text>
+
       <v-card-text>
         <v-stepper v-model="page" flat>
           <v-stepper-header class="elevation-0">
@@ -37,7 +39,8 @@
                 <v-divider class="my-3" />
 
                 <div class="my-3">
-                  {{ $t(type.toLowerCase()) }}
+                  {{ $t(type.toLowerCase()) }}:
+                  {{ $t("help.comfort") }}
                 </div>
 
                 <p class="font-weight-bold">

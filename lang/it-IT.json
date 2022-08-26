@@ -247,5 +247,9 @@
     "fingerprint": "Le impronte digitali vengono utilizzate per verificare le credenziali e prevenire il furto di identit\u00e0.",
     "marketing": "Il marketing \u00e8 essenziale per noi perch\u00e9 operiamo in mercati molto diversi. Riconosciamo le preferenze regionali e possiamo quindi adattare i nostri prodotti ai vostri clienti.",
     "advertising": "La pubblicit\u00e0 \u00e8 parte integrante del nostro modello di business, che ci garantisce di continuare a fornirvi le nostre raccomandazioni sui ristoranti.",
-    "identity-verification": "La verifica dell'identit\u00e0 \u00e8 un processo di sicurezza nel quale ci assicuriamo che voi siate delle persone reali e non dei bot. Utilizziamo la verifica dell'identit\u00e0 anche per prevenire un furto d'identit\u00e0."
+    "identity-verification": "La verifica dell'identit\u00e0 \u00e8 un processo di sicurezza nel quale ci assicuriamo che voi siate delle persone reali e non dei bot. Utilizziamo la verifica dell'identit\u00e0 anche per prevenire un furto d'identit\u00e0.",
+    "help": {
+      "desc": "Con questo breve sondaggio vogliamo assicurarci di raccogliere e utilizzare i vostri dati solo nel modo in cui vi sentite a vostro agio. Compilando questo questionario, potete dirci come volete che trattiamo i vostri dati. Le vostre risposte vengono confrontate con la vostra attuale decisione di consenso. In seguito, vi verranno fornite indicazioni su come modificare il vostro consenso in modo che corrisponda alle vostre preferenze.",
+      "comfort": "Quanto è soddisfatto del fatto che utilizziamo questo tipo di dati per i seguenti scopi?"
+    }
 }

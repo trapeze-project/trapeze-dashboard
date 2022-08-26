@@ -248,5 +248,9 @@
     "fingerprint": "Fingerabdr\u00fccke werden verwendet, um Ihre Anmeldedaten zu \u00fcberpr\u00fcfen und Identit\u00e4tsdiebstahl zu verhindern.",
     "marketing": "Marketing ist f\u00fcr uns essentiell, da wir in sehr unterschiedlichen M\u00e4rkten aktiv sind. Wir erkennen dabei regionale Vorlieben und k\u00f6nnen so unsere Produkte f\u00fcr Sie als Kunden anpassen.",
     "advertising": "Werbung ist ein integraler Bestandteil unseres Gesch\u00e4ftsmodells, das garantiert, dass wir Ihnen weiterhin unsere Restaurantempfehlungen kostenfrei zur Verf\u00fcgung stellen k\u00f6nnen.",
-    "identity-verification": "Identit\u00e4tspr\u00fcfung ist ein Sicherheitsprozess bei welchem wir sicherstellen, dass Sie eine echten Person sind und nicht etwa ein Bot. Au\u00dferdem dient uns die Identi\u00e4tspr\u00fcfung dazu Betrug, wie zum Beispiel durch Identit\u00e4sdiebstahl oder Datendiebstahl, vorzubeugen. Desweiteren stellen wir sicher, dass Sie \u00e4lter als 16 Jahre alt sind."
+    "identity-verification": "Identit\u00e4tspr\u00fcfung ist ein Sicherheitsprozess bei welchem wir sicherstellen, dass Sie eine echten Person sind und nicht etwa ein Bot. Au\u00dferdem dient uns die Identi\u00e4tspr\u00fcfung dazu Betrug, wie zum Beispiel durch Identit\u00e4sdiebstahl oder Datendiebstahl, vorzubeugen. Desweiteren stellen wir sicher, dass Sie \u00e4lter als 16 Jahre alt sind.",
+    "help": {
+      "desc": "Mit dieser kurzen Umfrage möchten wir sicherstellen, dass wir Ihre Daten nur in einer Weise erheben und verwenden, mit der Sie einverstanden sind. Indem Sie diesen Fragebogen ausfüllen, können Sie uns mitteilen, wie wir mit Ihren Daten umgehen sollen. Ihre Antworten werden mit Ihrer aktuellen Einverständniserklärung abgeglichen. Anschließend erhalten Sie eine Anleitung, wie Sie Ihre Einwilligung so anpassen können, dass sie Ihren Präferenzen entspricht.",
+      "comfort": "Wie zufrieden sind Sie damit, dass wir diese Art von Daten für die folgenden Zwecke verwenden?"
+    }
 }

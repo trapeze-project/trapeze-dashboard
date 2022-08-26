@@ -248,5 +248,9 @@
     "fingerprint": "Fingerprints are used to verify your credentials and prevent identity theft.",
     "marketing": "Marketing is essential for us, as we are active in very different markets. We recognize regional preferences and can thus adapt our products for you as a customer.",
     "advertising": "Advertising is an integral part of our business model, which guarantees that we can continue to provide you with our restaurant recommendations.",
-    "identity-verification": "Identity verification is a security process where we ensure that you are a real person and not a bot. We also use identity verification to prevent fraud, such as identity theft or data theft. Furthermore, we make sure that you are older than 16 years old."
+    "identity-verification": "Identity verification is a security process where we ensure that you are a real person and not a bot. We also use identity verification to prevent fraud, such as identity theft or data theft. Furthermore, we make sure that you are older than 16 years old.",
+    "help": {
+      "desc": "By offering this short survey, we want to ensure that we only collect and use your data in a way you are comfortable with. By completing this questionnaire, you can tell us how you like us to treat your data. Your answers are matched against your current consent decision. Afterward, you're provided with guidance on how to adjust your consent so that it fits with your preferences.",
+      "comfort": "How comfortable are you that we use this type of data for the following purposes?"
+    }
 }

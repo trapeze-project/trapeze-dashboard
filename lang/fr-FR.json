@@ -249,5 +249,9 @@
     "fingerprint": "Les empreintes digitales sont utilis\u00e9es pour v\u00e9rifier vos informations d'identification et pr\u00e9venir le vol d'identit\u00e9.",
     "marketing": "Le marketing est essentiel pour nous, car nous sommes actifs sur des march\u00e9s tr\u00e8s diff\u00e9rents. Nous reconnaissons ainsi les pr\u00e9f\u00e9rences r\u00e9gionales et pouvons adapter nos produits pour vous en tant que client.",
     "advertising": "La publicit\u00e9 fait partie int\u00e9grante de notre mod\u00e8le \u00e9conomique, ce qui garantit que nous pouvons continuer \u00e0 vous fournir nos recommandations de restaurants.",
-    "identity-verification": "La v\u00e9rification de l'identit\u00e9 est un processus de s\u00e9curit\u00e9 par lequel nous nous assurons que vous \u00eates une personne r\u00e9elle et non un robot. En outre, la v\u00e9rification de l'identit\u00e9 nous permet d'\u00e9viter les fraudes telles que le vol d'identit\u00e9 ou le vol de donn\u00e9es. En outre, nous nous assurons que vous avez plus de 16 ans."
+    "identity-verification": "La v\u00e9rification de l'identit\u00e9 est un processus de s\u00e9curit\u00e9 par lequel nous nous assurons que vous \u00eates une personne r\u00e9elle et non un robot. En outre, la v\u00e9rification de l'identit\u00e9 nous permet d'\u00e9viter les fraudes telles que le vol d'identit\u00e9 ou le vol de donn\u00e9es. En outre, nous nous assurons que vous avez plus de 16 ans.",
+    "help": {
+      "desc": "En vous proposant cette courte enquête, nous voulons nous assurer que nous ne collectons et n'utilisons vos données que d'une manière qui vous convient. En remplissant ce questionnaire, vous pouvez nous dire comment vous souhaitez que nous traitions vos données. Vos réponses sont comparées à votre décision de consentement actuelle. Ensuite, vous recevrez des conseils sur la manière d'adapter votre consentement afin qu'il corresponde à vos préférences.",
+      "comfort": "Dans quelle mesure êtes-vous à l'aise avec le fait que nous utilisions ce type de données aux fins suivantes ?"
+    }
 }
