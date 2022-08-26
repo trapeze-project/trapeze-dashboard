@@ -86,17 +86,14 @@
     "home": {
         "title": "Bienvenue dans votre tableau de bord de confidentialit\u00e9 personnel !",
         "explore-btn": "Voir",
-        "welcome-msg1": "Chez ${we}, nous voulons que vous compreniez comment nous traitons vos données personnelles.\n\nDans ce tableau de bord, vous pouvez voir quelles données personnelles nous (${we}) traitons et à quelles fins. Le tableau de bord vous permet de limiter notre traitement de vos données personnelles en configurant votre consentement. Vous pouvez :",
-        "welcome-msg2": "Le menu en bas à gauche vous donne un aperçu rapide des interactions les plus récentes liées au consentement entre vous et nous (${we}).\nSi vous ne connaissez pas encore le tableau de bord de la vie privée, nous vous recommandons d'essayer l'Assistant de Consentement.",
+        "welcome-msg1": "Chez ${we}, nous voulons que vous compreniez comment nous traitons vos données personnelles. C'est pourquoi nous utilisons le tableau de bord de confidentialité TRAPEZE, qui nous aide à vous accorder vos droits en tant que personne concernée. Vous pouvez en savoir plus sur TRAPEZE dans notre section FAQ ou en visitant le site web de TRAPEZE. \n \n Dans ce tableau de bord, vous pouvez voir quelles données personnelles nous (${we}) traitons et à quelles fins. Lorsque vous vous êtes inscrit à notre service, vous avez consenti à notre politique de confidentialité. Ce tableau de bord vous permet de configurer votre consentement à un niveau plus fin. \n \n Vous pouvez donner ou révoquer votre consentement en fonction des éléments suivants:",
+        "welcome-msg2": "Nous vous recommandons d'utiliser l'Assistant de Consentement pour exprimer vos préférences et les faire correspondre à vos décisions de consentement.",
          "purpose": {
             "0": {
-                "name": "r\u00e9voquer et donner son consentement,"
+                "name": "Les types de données que nous traitons, comme la localisation, le nom ou les informations biométriques."
             },
             "1": {
-                "name": "d\u00e9sactiver et activer les cat\u00e9gories de donn\u00e9es,"
-            },
-            "2": {
-                "name": "d\u00e9sactiver et activer les fins."
+                "name": "Les objectifs pour lesquels nous traitons les données, comme la publicité, le marketing ou la vérification d'identité."
             }
         },
         "help": "Aide",

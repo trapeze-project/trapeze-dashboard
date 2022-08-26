@@ -86,17 +86,14 @@
     "home": {
         "title": "Welcome to your personal privacy dashboard!",
         "explore-btn": "View",
-        "welcome-msg1": "We at ${we} want you to understand how we process your personal data.\n\nIn this dashboard, you can view what personal data we (${we}) process and for which purposes. The dashboard allows you to limit our processing of your personal data by configuring your consent. You can:",
-        "welcome-msg2": "The menu in the bottom left gives you a quick overview of the most recent consent-related interactions between you and us (${we}).\nIf you are new to the privacy dashboard, we recommend you to try out the Consent Assistant.",
+        "welcome-msg1": "We at ${we} want you to understand how we process your personal data. Therefore, we use the TRAPEZE Privacy Dashboard, which helps us to grant you your rights as a data subject. You can learn more about TRAPEZE in our FAQ section or by visiting the TRAPEZE website. \n \n In this dashboard, you can view what personal data we (${we}) process and for which purposes. When you registered for our service, you consented to our privacy policy. This dashboard allows you to configure your consent on a fine-grained level. \n \n You can give or revoke your consent based on the following:",
+        "welcome-msg2": "We recommend using the 'Consent Assistant' to express your preferences and match them against your consent decisions.",
         "purpose": {
             "0": {
-                "name": "revoke and give consent,"
+                "name": "Types of data we process like location, name, or biometric information."
             },
             "1": {
-                "name": "deactivate and activate data categories,"
-            },
-            "2": {
-                "name": "deactivate and activate purposes."
+                "name": "Purposes for which we process data like advertising, marketing, or identity verification."
             }
         },
         "help": "Consent Assistant",

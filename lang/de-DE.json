@@ -86,17 +86,14 @@
     "home": {
         "title": "Willkommen auf Ihrem pers\u00f6nlichen Datenschutz-Dashboard!",
         "explore-btn": "Ansehen",
-        "welcome-msg1": "Wir von (${we}) möchten, dass Sie verstehen, wie wir Ihre persönlichen Daten verarbeiten.\n\nIn diesem Dashboard können Sie sehen, welche personenbezogenen Daten wir (${we}) verarbeiten und zu welchen Zwecken. Das Dashboard ermöglicht es Ihnen, unsere Verarbeitung Ihrer personenbezogenen Daten einzuschränken, indem Sie Ihre Einwilligung konfigurieren. Sie können:",
-        "welcome-msg2": "Das Menü unten links gibt Ihnen einen schnellen Überblick über die letzten einwilligungsbezogenen Interaktionen zwischen Ihnen und uns (${we}).\nWenn Sie noch nicht mit dem Datenschutz-Dashboard vertraut sind, empfehlen wir Ihnen, den Einwilligungssassistenten auszuprobieren.",
+        "welcome-msg1": "Wir bei ${we} möchten, dass Sie verstehen, wie wir Ihre persönlichen Daten verarbeiten. Daher verwenden wir das TRAPEZE Privacy Dashboard, das uns hilft, Ihnen Ihre Rechte als betroffene Person zu gewähren. Sie können mehr über TRAPEZE in unserem FAQ-Bereich oder auf der TRAPEZE-Website erfahren. \n \n In diesem Dashboard können Sie sehen, welche personenbezogenen Daten wir (${we}) verarbeiten und zu welchen Zwecken. Als Sie sich für unseren Dienst registriert haben, haben Sie unserer Datenschutzrichtlinie zugestimmt. Mit diesem Dashboard können Sie Ihre Zustimmung auf einer fein abgestuften Ebene konfigurieren. \n \n Sie können Ihre Einwilligung auf der Grundlage der folgenden Punkte erteilen oder widerrufen:",
+        "welcome-msg2": "Wir empfehlen die Verwendung des 'Einwilligungsassistenten', um Ihre Präferenzen auszudrücken und sie mit Ihren Zustimmungsentscheidungen abzugleichen.",
         "purpose": {
             "0": {
-                "name": "Einwilligungen widerrufen oder erteilen,"
+                "name": "Arten von Daten, die wir verarbeiten, wie Standort, Name oder biometrische Informationen."
             },
             "1": {
-                "name": "Datenkategorien deaktivieren oder aktivieren,"
-            },
-            "2": {
-                "name": "Zwecke deaktivieren oder aktivieren."
+                "name": "Zwecke, für die wir Daten verarbeiten, wie Werbung, Marketing oder Identitätsprüfung."
             }
         },
         "help": "Einwilligungsassistent",
