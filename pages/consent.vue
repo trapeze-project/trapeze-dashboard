@@ -16,6 +16,8 @@
         </v-row>
       </v-card-title>
 
+      <v-card-text>{{ $t("consent.desc") }}</v-card-text>
+
       <v-tabs v-model="tab" background-color="primary">
         <v-tabs-slider color="black" />
 

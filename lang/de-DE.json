@@ -148,6 +148,7 @@
         "lose-consent-helper-choices":"Sie haben noch nicht auf alle Warnungen reagiert."
     },
     "consent": {
+        "desc": "Konfigurieren Sie, welche Datenkategorien wir für welche Zwecke verwenden dürfen (Registerkarte 'Datenkategorien'). Oder für welche Zwecke wir welche Daten verwenden dürfen (Registerkarte 'Zwecke'). Auf der Registerkarte 'Datenschutzrichtlinie' können Sie alle Versionen unserer Datenschutzrichtlinie einsehen.",      
         "consent-menu": "Einwilligungsmenü",
         "title": "Einwilligungsassistent",
         "location": "Ihre Standortdaten",

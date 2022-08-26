@@ -85,7 +85,7 @@
     "home": {
         "title": "Benvenuti sul vostro dashboard personale sulla privacy!",
         "explore-btn": "Visualizza",
-        "welcome-msg1": "Noi di ${we} desideriamo che lei comprenda come trattiamo i suoi dati personali. Per questo motivo, utilizziamo il TRAPEZE Privacy Dashboard, che ci aiuta a garantirvi i vostri diritti in qualità di soggetti interessati. Per ulteriori informazioni su TRAPEZE, consultare la nostra sezione FAQ o visitare il sito web di TRAPEZE. \n \n In questo cruscotto è possibile vedere quali dati personali vengono elaborati da noi (${noi}) e per quali scopi. Quando ci si è registrati al servizio, si è acconsentito alla nostra politica sulla privacy. Questo cruscotto consente di configurare il consenso a livello di dettaglio. \n \n È possibile dare o revocare il consenso in base a quanto segue:",
+        "welcome-msg1": "Noi di ${we} desideriamo che lei comprenda come trattiamo i suoi dati personali. Per questo motivo, utilizziamo il TRAPEZE Privacy Dashboard, che ci aiuta a garantirvi i vostri diritti in qualità di soggetti interessati. Per ulteriori informazioni su TRAPEZE, consultare la nostra sezione FAQ o visitare il sito web di TRAPEZE. \n \n In questo cruscotto è possibile vedere quali dati personali vengono elaborati da noi (${we}) e per quali scopi. Quando ci si è registrati al servizio, si è acconsentito alla nostra politica sulla privacy. Questo cruscotto consente di configurare il consenso a livello di dettaglio. \n \n È possibile dare o revocare il consenso in base a quanto segue:",
         "welcome-msg2": "Si consiglia di utilizzare l'Assistente per il consenso per esprimere le proprie preferenze e confrontarle con le decisioni di consenso.",
          "purpose": {
             "0": {
@@ -147,6 +147,7 @@
         "lose-consent-helper-choices":"Non avete ancora risposto a tutti gli avvertimenti."
     },
     "consent": {
+        "desc": "Configurare le categorie di dati che possiamo usare per quali scopi (scheda 'Categoria di dati'). Oppure per quali scopi siamo autorizzati a utilizzare i dati (scheda 'Scopo'). La scheda 'Informativa sulla privacy' consente di esaminare tutte le versioni della nostra informativa sulla privacy.",
         "consent-menu": "Menu del Consenso",
         "title": "Assistente al Consenso",
         "location": "I vostri dati sulla posizione",

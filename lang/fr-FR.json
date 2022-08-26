@@ -148,6 +148,7 @@
         "lose-consent-helper-choices":"Vous n'avez pas encore répondu à tous les avertissements."
     },
     "consent": {
+        "desc": "Configurez les catégories de données que nous sommes autorisés à utiliser à quelles fins (onglet 'Catégorie de données'). Ou pour quelles finalités nous sommes autorisés à utiliser quelles données (onglet 'Fin'). L'onglet 'Politique de confidentialité' vous permet de consulter toutes les versions de notre politique de confidentialité.",
         "consent-menu": "Menu Consentement",
         "title": "Assistant de Consentement",
         "location": "Vos donn\u00e9es de localisation",
