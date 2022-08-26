@@ -79,7 +79,7 @@ export default {
       userChoices: '',
       purposeMap: '',
       invertedUserChoices: '',
-      consentHelperUserChoices: '',
+      consentHelperUserChoices: {},
       warnings: {}
     }
   },
@@ -131,6 +131,7 @@ export default {
       '$refs.purpose.modifiedUserChoices', {
         handler: (new_value, old_value) => {
           this.userChoices = JSON.parse(JSON.stringify(new_value))
+          window.localStorage.setItem("choices", JSON.stringify(this.userChoices));
         },
         deep: true
       }
@@ -139,6 +140,7 @@ export default {
       '$refs.data.modifiedUserChoices', {
         handler: (new_value, old_value) => {
           this.userChoices = this.invertUserChoices(JSON.parse(JSON.stringify(new_value)))
+          window.localStorage.setItem("choices", JSON.stringify(this.userChoices));
         },
         deep: true
       }
@@ -201,13 +203,18 @@ export default {
       }, {})
     },
     getUserChoices () {
-      this.userChoices = JSON.parse(JSON.stringify(Object.keys(this.purposeMap).reduce((total, currentValue) => {
-        total[currentValue] = this.purposeMap[currentValue].reduce((total, currentValue) => {
-          total[currentValue] = true
+      let stored = window.localStorage.getItem("choices");
+      if (stored) {
+        this.userChoices = JSON.parse(stored);
+      } else {
+        this.userChoices = JSON.parse(JSON.stringify(Object.keys(this.purposeMap).reduce((total, currentValue) => {
+          total[currentValue] = this.purposeMap[currentValue].reduce((total, currentValue) => {
+            total[currentValue] = true
+            return total
+          }, {})
           return total
-        }, {})
-        return total
-      }, {})))
+        }, {})))
+      }
     },
     invertUserChoices (userChoices) {
       return Object.keys(userChoices).reduce((total, a) => {

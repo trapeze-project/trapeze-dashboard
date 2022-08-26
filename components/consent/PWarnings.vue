@@ -63,7 +63,6 @@ export default {
   },
   created () {
     this.paramsForInterpolation = controller.paramsForInterpolation
-    console.log(this.paramsForInterpolation)
   },
   methods: {
     params (dataCategory, purpose) {
