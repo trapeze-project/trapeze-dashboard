@@ -46,7 +46,8 @@
 
                 <PDataCategoryHelper 
                   class="mt-3" 
-                  :categories="imports.dataCategoryMap[Object.keys(imports.dataCategoryMap)[page-1]]" 
+                  :type="type"
+                  :categoryMap="imports.dataCategoryMap"
                   @userChoices="collectUserChoices" 
                 />
               </div>
@@ -95,19 +96,24 @@ export default {
       imports: {
         dataCategoryMap: ''
       },
-      consentHelperUserChoices: {}, // TODO: persist
+      consentHelperUserChoices: {},
       page: 1,
       dataCategoryCompletedChoosement: []
     }
   },
   created () {
-    this.calculateDataCategoryMap()
+    this.calculateDataCategoryMap();
+    /*
+    let stored = window.localStorage.getItem("consent");
+    if (stored) {
+      this.consentHelperUserChoices = JSON.parse(stored);
+    }
+    */
   },
   methods: {
-    collectUserChoices (userChoices) {
+    collectUserChoices (userChoices, dataCategory) {
       // this.consentHelperUserChoices[Object.keys(this.imports.dataCategoryMap)[this.page-1]] = userChoices;
       const userChoicesPurposes = Object.keys(userChoices)
-      const dataCategory = Object.keys(this.imports.dataCategoryMap)[this.page - 1]
       // mark the data category as compeleted
       if (!this.dataCategoryCompletedChoosement.includes(dataCategory)) {
         this.dataCategoryCompletedChoosement.push(dataCategory)

@@ -147,7 +147,7 @@
     "PAlertLeaveDialog":{
         "dialog-title":"Sei sicuro di voler lasciare questa pagina?",
         "lose-changes-warning":"Devi inviare le tue scelte.",
-        "lose-consent-helper-choices":"Se esci da questa pagina, le tue scelte per l'assistente per il consenso andranno perse."
+        "lose-consent-helper-choices":"Non avete ancora risposto a tutti gli avvertimenti."
     },
     "consent": {
         "consent-menu": "Menu del Consenso",

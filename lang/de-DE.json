@@ -148,7 +148,7 @@
     "PAlertLeaveDialog":{
         "dialog-title":"Möchten Sie diese Seite wirklich verlassen?",
         "lose-changes-warning":"Sie müssen Ihre Auswahl einreichen.",
-        "lose-consent-helper-choices":"Ihre Auswahlmöglichkeiten für die Einwilligungshilfe gehen verloren, wenn Sie diese Seite verlassen."
+        "lose-consent-helper-choices":"Sie haben noch nicht auf alle Warnungen reagiert."
     },
     "consent": {
         "consent-menu": "Einwilligungsmenü",

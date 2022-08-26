@@ -10,7 +10,6 @@
           item-key="name"
           hide-default-header
           mobile-breakpoint="1"
-          @click:row="select"
         >
           <template v-slot:header="{ props }">
             <thead>
@@ -30,7 +29,6 @@
               <tr
                 v-for="item, index in items"
                 :key="index"
-                @click="checkUserChoiceCompleted"
               >
                 <td>
                   <PHoverCard :term="$t(item.name)" :definition="$t(item.name.split('.')[1])" />
@@ -38,8 +36,6 @@
                 <td v-for="radio in radioList" :key="radio.key">
                   <v-radio-group v-model="preferences[item.name]">
                     <v-radio
-                      style=""
-                      class=""
                       :name="item.name"
                       :value="radio.value"
                       :color="radio.color"
@@ -58,11 +54,18 @@
 <script>
 export default {
   props: {
-    categories: {
-      type: Array,
+    type: {
+      type: String,
       required: true,
       default () {
-        return []
+        return ""
+      }
+    },    
+    categoryMap: {
+      type: Object,
+      required: true,
+      default () {
+        return {}
       }
     }
   },
@@ -118,27 +121,41 @@ export default {
       ]
     }
   },
+  watch: {
+    preferences: {
+      deep: true,
+      handler: function(n, o) {
+        this.checkUserChoiceCompleted();
+      }
+    }
+  },
   computed: {
+    categories() {
+      return this.categoryMap[this.type];
+    },
     categoriesTransformed () {
       return this.categories.map(item => ({ name: item }))
     }
   },
   created () {
-    const obj1 = {}
-    for (const purpose of this.categories) {
-      obj1[purpose] = null
+    let stored = window.localStorage.getItem(this.type);
+    if (stored) {
+      this.preferences = JSON.parse(stored);
+      this.checkUserChoiceCompleted();
+    } else {
+      const obj1 = {}
+      for (const purpose of this.categories) {
+        obj1[purpose] = null
+      }
+      this.preferences = JSON.parse(JSON.stringify(obj1))
     }
-    this.preferences = JSON.parse(JSON.stringify(obj1))
   },
   methods: {
-    select (item, row) {
-      row.select(true)
-      this.view.selected = item.name
-      this.view.show = true
-      this.checkUserChoiceCompleted()
-    },
     checkUserChoiceCompleted () {
       if (Object.values(this.preferences).filter(x => x !== null).length === this.categories.length) {
+        let stored = JSON.parse(window.localStorage.getItem(this.type)) || {};
+        window.localStorage.setItem(this.type, JSON.stringify(Object.assign(stored, this.preferences)));
+        
         const choices = {}
         for (const purpose of this.categories) {
           choices[purpose] = this.radioList[Number(this.preferences[purpose])].key
@@ -146,7 +163,8 @@ export default {
         Object.keys(choices).forEach((key) => {
           choices[key] = choices[key]
         })
-        this.$emit('userChoices', choices)
+        
+        this.$emit('userChoices', choices, this.type)
       }
     }
   }

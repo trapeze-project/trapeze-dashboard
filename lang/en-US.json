@@ -148,7 +148,7 @@
     "PAlertLeaveDialog":{
         "dialog-title":"Are you sure you want to leave this page?",
         "lose-changes-warning":"You need to submit your choices.",
-        "lose-consent-helper-choices":"Your consent helper choices will be lost if you leave this page."
+        "lose-consent-helper-choices":"You haven't addressed all warnings yet."
     },
     "consent": {
         "consent-menu": "Consent Menu",
