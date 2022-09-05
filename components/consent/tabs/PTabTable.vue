@@ -45,6 +45,7 @@
       :subitems="pDetailsSubItemsMap[view.selected.untranslated]"
       :show-sensitivity="false"
       :switches-values="this.calculateBottonsValues"
+      :tab-name="tabName"
       @changeUserChoice="changeUserChoice"
       @saveState="saveState"
     />

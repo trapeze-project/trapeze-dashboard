@@ -1,7 +1,7 @@
 <template>
   <div>
     <p class="font-weight-black ml-4">
-      {{ $t("general.category") }}
+      {{ $t(heading) }}
     </p>
     <p />
     <v-row>
@@ -57,6 +57,10 @@ export default {
     purpose: {
       type: String,
       required: true
+    },
+    tabName: {
+      type: String,
+      required: true
     }
   },
   data () {
@@ -73,6 +77,11 @@ export default {
     }
   },
   computed: {
+    heading() {
+      return (this.tabName === "data")
+        ? "consent.purposes"
+        : "general.category";
+    },
     categoriesTransformed () {
       return this.categories.map(item => ({ name: item }))
     }
