@@ -12,11 +12,13 @@
     </v-card-title>
     <v-divider />
 
-    <v-card-text style="white-space:pre-line">{{ $t(category.replace('dpv.','')) }}</v-card-text>
+    <v-card-text style="white-space:pre-line">{{ $t(category.replace('dpv.','')).interpolate(paramsForInterpolation) }}</v-card-text>
+
   </v-card>
 </template>
 
 <script>
+import controller from '../../../static/data/controller.json'
 export default {
   props: {
     category: {
@@ -26,7 +28,21 @@ export default {
         return []
       }
     }
-  }
+  },
+  data () {
+    return {
+      paramsForInterpolation: {}
+    }
+  },
+  created () {
+    this.paramsForInterpolation = controller.paramsForInterpolation
+
+    String.prototype.interpolate = function (params) {
+      const names = Object.keys(params)
+      const values = Object.values(params)
+      return new Function(...names, `return \`${this}\`;`)(...values)
+    }
+  },
 }
 </script>
 
