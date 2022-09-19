@@ -55,7 +55,7 @@
             "ignore-all": "Ignorer tout",
             "view": "Voir",
             "visit-website": "Visitez le site web",
-            "leave-anyway":"partir quand même",
+            "leave-anyway":"Partir quand même",
             "contact": "Nous Contacter"
         }
     },
@@ -128,7 +128,7 @@
             "title": "Consentement",
             "location": "Vos donn\u00e9es de localisation",
             "purpose": "Fins",
-            "text": "Les donn\u00e9es de localisation sont des donn\u00e9es qui nous indiquent o\u00f9 vous avez \u00e9t\u00e9 \u00e0 quelle heure. Nous collectons des donn\u00e9es de localisation via GPS si vous en donnez l'autorisation dans l'application mobile Nom de l'entreprise. Nous utilisons vos donn\u00e9es de localisation pour personnaliser notre publicit\u00e9, pour planifier notre marketing g\u00e9ographiquement et pour pr\ufffdvenir la fraude via la v\u00e9rification de l'identit\u00e9 g\u00e9ographique.",
+            "text": "Les données de localisation sont des données qui nous indiquent où vous avez été à quel moment. Nous collectons les données de localisation par GPS si vous nous en donnez l'autorisation dans notre application mobile ${we}. Nous utilisons vos données de localisation pour personnaliser nos publicités, pour planifier notre marketing de manière géographique et pour prévenir la fraude via la vérification géographique de l'identité.",
             "text_ad": "La publicit\u00e9 fait partie int\u00e9grante de notre mod\u00e8le \u00e9conomique, ce qui garantit que nous pouvons continuer \u00e0 vous fournir gratuitement nos recommandations de restaurants. Nous utilisons les cat\u00e9gories de donn\u00e9es ci-dessous pour personnaliser la publicit\u00e9. Dites-nous ci-dessous quelles cat\u00e9gories de donn\u00e9es nous pouvons utiliser pour personnaliser notre publicit\u00e9.",
             "ad": "Publicit\u00e9",
             "marketing": "Marketing",
@@ -153,7 +153,7 @@
         "title": "Assistant de Consentement",
         "location": "Vos donn\u00e9es de localisation",
         "purposes": "Fins",
-        "text": "Les donn\u00e9es de localisation sont des donn\u00e9es qui nous indiquent o\u00f9 vous avez \u00e9t\u00e9 \u00e0 quel moment. Nous collectons les donn\u00e9es de localisation par GPS si vous nous en donnez l'autorisation dans l'application mobile Nom de l'entreprise. Nous utilisons vos donn\u00e9es de localisation pour personnaliser notre publicit\u00e9, pour planifier notre marketing g\u00e9ographiquement et pour pr\u00e9venir la fraude via la v\u00e9rification g\u00e9ographique de l'identit\u00e9.",
+        "text": "Les données de localisation sont des données qui nous indiquent où vous avez été à quel moment. Nous collectons les données de localisation par GPS si vous nous en donnez l'autorisation dans notre application mobile ${we}. Nous utilisons vos données de localisation pour personnaliser nos publicités, pour planifier notre marketing de manière géographique et pour prévenir la fraude via la vérification géographique de l'identité.",
         "text_ad": "La publicit\u00e9 fait partie int\u00e9grante de notre mod\u00e8le \u00e9conomique, qui garantit que nous pouvons continuer \u00e0 vous fournir nos recommandations de restaurants. Nous utilisons les cat\u00e9gories de donn\u00e9es ci-dessous pour personnaliser la publicit\u00e9. Dites-nous ci-dessous quelles cat\u00e9gories de donn\u00e9es nous pouvons utiliser pour personnaliser notre publicit\u00e9.",
         "ad": "Publicit\u00e9",
         "marketing": "Marketing",
@@ -244,7 +244,7 @@
         "recipient": "Destinataire",
         "message": "Message"
     },
-    "location": "Les donn\u00e9es de localisation sont des donn\u00e9es qui nous indiquent o\u00f9 vous avez \u00e9t\u00e9 \u00e0 quel moment. Nous collectons les donn\u00e9es de localisation par GPS si vous nous en donnez l'autorisation dans l'application mobile Nom de l'entreprise. Nous utilisons vos donn\u00e9es de localisation pour personnaliser notre publicit\u00e9, pour planifier notre marketing g\u00e9ographiquement et pour pr\u00e9venir la fraude via la v\u00e9rification g\u00e9ographique de l'identit\u00e9.",
+    "location": "Les données de localisation sont des données qui nous indiquent où vous avez été à quel moment. Nous collectons les données de localisation par GPS si vous nous en donnez l'autorisation dans notre application mobile ${we}. Nous utilisons vos données de localisation pour personnaliser nos publicités, pour planifier notre marketing de manière géographique et pour prévenir la fraude via la vérification géographique de l'identité.",
     "name": "Nous recueillons votre nom pour vous adresser correctement. Nous enregistrons votre nom \u00e0 partir de votre profil.",
     "fingerprint": "Les empreintes digitales sont utilis\u00e9es pour v\u00e9rifier vos informations d'identification et pr\u00e9venir le vol d'identit\u00e9.",
     "marketing": "Le marketing est essentiel pour nous, car nous sommes actifs sur des march\u00e9s tr\u00e8s diff\u00e9rents. Nous reconnaissons ainsi les pr\u00e9f\u00e9rences r\u00e9gionales et pouvons adapter nos produits pour vous en tant que client.",

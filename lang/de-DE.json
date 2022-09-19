@@ -55,7 +55,7 @@
             "ignore-all": "Alle ignorieren",
             "view": "Ansehen",
             "visit-website": "Webseite besuchen",
-            "leave-anyway":"trotzdem verlassen",
+            "leave-anyway":"Trotzdem verlassen",
             "contact": "Kontakt"
         }
     },
@@ -128,7 +128,7 @@
             "title": "Einwilligungen",
             "location": "Ihre Standortdaten",
             "purpose": "Zwecke",
-            "text": "Standortdaten sind Daten, die uns sagen, wo Sie zu welcher Zeit waren. Wir erfassen Standortdaten \u00fcber GPS, wenn Sie in unserer app die Erlaubnis dazu erteilen. Wir verwenden Ihre Standortdaten, um unsere Werbung anzupassen, unser Marketing geografisch zu planen und Betrug durch geografische Identit\u00e4tspr\u00fcfung zu vermeiden.",
+            "text": "Standortdaten sind Daten, die uns sagen, wo Sie zu welcher Zeit waren. Wir erfassen Standortdaten \u00fcber GPS, wenn Sie uns in unserer mobilen ${we} App die Erlaubnis dazu erteilen. Wir verwenden Ihre Standortdaten, um unsere Werbung anzupassen, unser Marketing geografisch zu planen und Betrug durch geografische Identit\u00e4tspr\u00fcfung zu vermeiden.",
             "text_ad": "Werbung ist ein integraler Bestandteil unseres Gesch\u00e4ftsmodells, der garantiert, dass wir Ihnen weiterhin lokale Restaurants empfehlen k\u00f6nnen. Wir verwenden die folgenden Datenkategorien, um Werbung anzupassen. Teilen Sie uns unten mit, welche Datenkategorien wir verwenden d\u00fcrfen, um unsere Werbung anzupassen.",
             "ad": "Werbung",
             "marketing": "Marketing",
@@ -153,7 +153,7 @@
         "title": "Einwilligungsassistent",
         "location": "Ihre Standortdaten",
         "purposes": "Zwecke",
-        "text": "Standortdaten sind Daten, die uns sagen, wo Sie sich zu welcher Zeit aufgehalten haben. Wir erfassen Standortdaten \u00fcber GPS, wenn Sie dies in der mobilen Anwendung von Company Name zulassen. Wir verwenden Ihre Standortdaten, um unsere Werbung anzupassen, unser Marketing geografisch zu planen und um Betrug durch geografische Identit\u00e4tspr\u00fcfung zu verhindern.",
+        "text": "Standortdaten sind Daten, die uns sagen, wo Sie sich zu welcher Zeit aufgehalten haben. Wir erfassen Standortdaten \u00fcber GPS, wenn Sie uns dazu in unserer mobilen ${we} App die Erlaubnis erteilen. Wir verwenden Ihre Standortdaten, um unsere Werbung anzupassen, unser Marketing geografisch zu planen und um Betrug durch geografische Identit\u00e4tspr\u00fcfung zu verhindern.",
         "text_ad": "Werbung ist ein integraler Bestandteil unseres Gesch\u00e4ftsmodells, der sicherstellt, dass wir Ihnen weiterhin unsere Restaurantempfehlungen zur Verf\u00fcgung stellen k\u00f6nnen. Wir verwenden die unten aufgef\u00fchrten Datenkategorien, um die Werbung zu personalisieren. Teilen Sie uns im Folgenden mit, welche Datenkategorien wir verwenden d\u00fcrfen, um unsere Werbung zu individualisieren.",
         "ad": "Werbung",
         "marketing": "Marketing",
@@ -243,7 +243,7 @@
         "recipient": "Empf\u00e4nger",
         "message": "Nachricht"
     },
-    "location": "Standortdaten sind Daten, die uns zeigen, wo Sie sich zu welcher Zeit aufgehalten haben. Wir erfassen Standortdaten \u00fcber GPS, wenn Sie uns dazu die Erlaubnis in der mobilen Anwendung von Company Name gegeben haben. Wir verwenden Ihre Standortdaten, um unsere Werbung anzupassen, unser Marketing geografisch zu planen und um Betrug durch geografische Identit\u00e4tspr\u00fcfung zu verhindern.",
+    "location": "Standortdaten sind Daten, die uns zeigen, wo Sie sich zu welcher Zeit aufgehalten haben. Wir erfassen Standortdaten \u00fcber GPS, wenn Sie uns dazu die Erlaubnis in unserer mobilen ${we} App erteilt haben. Wir verwenden Ihre Standortdaten, um unsere Werbung anzupassen, unser Marketing geografisch zu planen und um Betrug durch geografische Identit\u00e4tspr\u00fcfung zu verhindern.",
     "name": "Wir erfassen Ihren Namen, um Sie richtig ansprechen zu k\u00f6nnen. Ihren Namen entnehmen wir Ihrem Nutzerprofil.",
     "fingerprint": "Fingerabdr\u00fccke werden verwendet, um Ihre Anmeldedaten zu \u00fcberpr\u00fcfen und Identit\u00e4tsdiebstahl zu verhindern.",
     "marketing": "Marketing ist f\u00fcr uns essentiell, da wir in sehr unterschiedlichen M\u00e4rkten aktiv sind. Wir erkennen dabei regionale Vorlieben und k\u00f6nnen so unsere Produkte f\u00fcr Sie als Kunden anpassen.",

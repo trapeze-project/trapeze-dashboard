@@ -55,7 +55,7 @@
             "ignore-all": "Ignora tutto",
             "view": "Visualizza",
             "visit-website": "Visita il sito web",
-            "leave-anyway":"vattene comunque",
+            "leave-anyway":"Vattene comunque",
             "contact": "Contatto"
         }
     },
@@ -127,7 +127,7 @@
             "title": "Consenso",
             "location": "I vostri dati sulla posizione",
             "purpose": "Scopi",
-            "text": "I dati sulla posizione sono dati che ci dicono dove siete stati in ogni momento. Raccogliamo dati sulla posizione attraverso il GPS se date il vostro consenso all'app del telefono \"Nome Azienda\". Utilizziamo i vostri dati sulla posizione per raffinare le pubblicit\u00e0.",
+            "text": "I dati sulla posizione sono dati che ci dicono dove siete stati in quale momento. Raccogliamo i dati di localizzazione tramite GPS se l'utente fornisce l'autorizzazione nella nostra applicazione mobile ${we}. Utilizziamo i dati sulla posizione dell'utente per personalizzare la nostra pubblicità, per pianificare il nostro marketing a livello geografico e per prevenire le frodi attraverso la verifica dell'identità geografica.",
             "text_ad": "La pubblicit\u00e0 \u00e8 parte integrante del nostro modello di business, che ci permette di continuare a fornirvi gratuitamente le nostre raccomandazioni sui ristoranti. Utilizziamo le seguenti categorie di dati per personalizzare la pubblicit\u00e0. Indicate qui di seguito quali categorie di dati possiamo utilizzare per personalizzare la nostra pubblicit\u00e0.",
             "ad": "Pubblicit\u00e0",
             "marketing": "Marketing",
@@ -152,7 +152,7 @@
         "title": "Assistente al Consenso",
         "location": "I vostri dati sulla posizione",
         "purposes": "Scopi",
-        "text": "I dati sulla posizione sono dati che ci dicono dove siete stati in quale momento. Raccogliamo i dati sulla posizione tramite GPS se l'utente fornisce l'autorizzazione nell'applicazione mobile Company Name. Utilizziamo i dati sulla posizione dell'utente per personalizzare la nostra pubblicit\u00e0, per pianificare il nostro marketing a livello geografico e per prevenire le frodi attraverso la verifica dell'identit\u00e0 geografica.",
+        "text": "I dati sulla posizione sono dati che ci dicono dove siete stati in quale momento. Raccogliamo i dati di localizzazione tramite GPS se l'utente fornisce l'autorizzazione nella nostra applicazione mobile ${we}. Utilizziamo i dati sulla posizione dell'utente per personalizzare la nostra pubblicità, per pianificare il nostro marketing a livello geografico e per prevenire le frodi attraverso la verifica dell'identità geografica.",
         "text_ad": "La pubblicit\u00e0 \u00e8 parte integrante del nostro modello di business, che ci permette di continuare a fornirvi le nostre raccomandazioni sui ristoranti. Utilizziamo le seguenti categorie di dati per personalizzare la pubblicit\u00e0. Indicate qui di seguito quali categorie di dati possiamo utilizzare per personalizzare la nostra pubblicit\u00e0.",
         "ad": "Pubblicit\u00e0",
         "marketing": "Marketing",
@@ -242,7 +242,7 @@
         "recipient": "Destinataria",
         "message": "Messaggio"
     },
-    "location": "I dati sulla posizione sono dati che ci dicono dove siete stati in ogni momento. Raccogliamo dati sulla posizione attraverso il GPS se date il vostro consenso all'app del telefono \"Nome Azienda\". Utilizziamo i vostri dati sulla posizione per raffinare le pubblicit\u00e0.",
+    "location": "I dati sulla posizione sono dati che ci dicono dove siete stati in quale momento. Raccogliamo i dati di localizzazione tramite GPS se l'utente fornisce l'autorizzazione nella nostra applicazione mobile ${we}. Utilizziamo i dati sulla posizione dell'utente per personalizzare la nostra pubblicità, per pianificare il nostro marketing a livello geografico e per prevenire le frodi attraverso la verifica dell'identità geografica.",
     "name": "Raccogliamo il vostro nome per indirizzarvi correttamente. Memorizziamo il vostro nome dal vostro profilo.",
     "fingerprint": "Le impronte digitali vengono utilizzate per verificare le credenziali e prevenire il furto di identit\u00e0.",
     "marketing": "Il marketing \u00e8 essenziale per noi perch\u00e9 operiamo in mercati molto diversi. Riconosciamo le preferenze regionali e possiamo quindi adattare i nostri prodotti ai vostri clienti.",
