@@ -26,7 +26,7 @@
     </v-data-table>
 
     <PWarnings
-      v-if="view.showPDetails && this.warnings.toString() && this.modifiedWarnings[this.view.selected.untranslated]&& Object.keys(this.modifiedWarnings[this.view.selected.untranslated]).length"
+      v-if="view.showPDetails  && this.modifiedWarnings[this.view.selected.untranslated]&& Object.keys(this.modifiedWarnings[this.view.selected.untranslated]).length"
       id="PWarnings"
       :tab-name="tabName"
       :selected-warnings="modifiedWarnings[this.view.selected.untranslated]"
@@ -52,6 +52,7 @@
     <div v-if="view.showPEmail" id="PEmail" class="mt-4">
       <PEmail :date="view.selected.date" :event="view.selected.untranslatedEvent" />
     </div>
+
   </div>
 </template>
 
@@ -79,6 +80,7 @@ export default {
       required: false
     },
     warnings: {
+      type:Object,
       required: false
     }
   },
@@ -121,7 +123,7 @@ export default {
           obj.data = this.$t(dataCategory)
           obj.purposes = this.imports.categoryMap[dataCategory].map((item) => { return this.$t(item) }).join(', ')
           obj.recipient = 'Company A'
-          if (this.warnings.toString() && this.modifiedWarnings[dataCategory]) {
+          if ( this.modifiedWarnings[dataCategory]) {
             const issuesCounter = Object.keys(this.modifiedWarnings?.[dataCategory])?.length
             if (issuesCounter === 1) {
               obj.issue = issuesCounter + ' ' + this.$t('consent.issue')
@@ -139,7 +141,7 @@ export default {
           obj.untranslated = purpose
           obj.purpose = this.$t(purpose)
           obj.data = this.imports.purposeMap[purpose].map((item) => { return this.$t(item) }).join(', ')
-          if (this.warnings.toString() && this.modifiedWarnings[purpose]) {
+          if (this.modifiedWarnings[purpose]) {
             const issuesCounter = Object.keys(this.modifiedWarnings?.[purpose])?.length
             if (issuesCounter === 1) {
               obj.issue = issuesCounter + ' ' + this.$t('consent.issue')
@@ -164,7 +166,7 @@ export default {
     userChoices: {
       handler (new_value, old_value) {
         if (JSON.stringify(new_value) !== JSON.stringify(old_value)) {
-          this.modifiedUserChoices = new_value
+          this.modifiedUserChoices = JSON.parse(JSON.stringify(new_value))
         }
       },
       deep: true
@@ -172,7 +174,7 @@ export default {
     warnings: {
       handler (new_value, old_value) {
         if (JSON.stringify(new_value) !== JSON.stringify(old_value)) {
-          this.modifiedWarnings = new_value
+          this.modifiedWarnings = JSON.parse(JSON.stringify(new_value))
         }
       },
       deep: true
@@ -195,15 +197,10 @@ export default {
       this.pDetailsSubItemsMap = this.imports.purposeMap
     }
 
-    if (this.tabName === 'purpose') {
+    if (['purpose','data'].includes(this.tabName)) {
       this.modifiedUserChoices = JSON.parse(JSON.stringify(this.userChoices))
       if (this.consentHelperUserChoices) {
-        this.modifiedWarnings = this.warnings
-      }
-    } else if (this.tabName === 'data') {
-      this.modifiedUserChoices = JSON.parse(JSON.stringify(this.userChoices))
-      if (this.consentHelperUserChoices) {
-        this.modifiedWarnings = this.warnings
+        this.modifiedWarnings = JSON.parse(JSON.stringify(this.warnings))
       }
     }
   },
@@ -258,12 +255,17 @@ export default {
     },
     ignoreWarning (parent, child) {
       delete (this.modifiedWarnings[parent])[child]
+      if(Object.keys(this.modifiedWarnings[parent]).length===0){
+        delete this.modifiedWarnings[parent]
+      }
       const yo = JSON.parse(JSON.stringify(this.modifiedWarnings))
       this.modifiedWarnings = JSON.parse(JSON.stringify(yo))
     },
     changeUserChoice (parent, child, newConsentValue) {
       this.modifiedUserChoices[parent][child] = newConsentValue
       this.fixWarningIfExist(parent, child, newConsentValue)
+      console.log("tab:"+JSON.stringify(this.modifiedWarnings))
+
     },
     fixWarningIfExist (parent, child, newConsentValue) {
       if (this.warnings.toString()) {
@@ -279,11 +281,7 @@ export default {
     scrollpage () {
       if (this.tabName === 'consent') {
         document.getElementById('PEmail').scrollIntoView({ behavior: 'smooth' })
-      }
-      if (this.tabName === 'data') {
-        document.getElementById('PDetails').scrollIntoView({ behavior: 'smooth' })
-      }
-      if (this.tabName === 'purpose') {
+      }else if (['purpose','data'].includes(this.tabName)) {
         if (this.view.showPDetails && this.consentHelperUserChoices && this.modifiedWarnings[this.view.selected.untranslated] && Object.keys(this.modifiedWarnings[this.view.selected.untranslated]).length) {
           document.getElementById('PWarnings').scrollIntoView({ behavior: 'smooth' })
         } else {

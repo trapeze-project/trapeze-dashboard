@@ -28,7 +28,13 @@
 
       <v-tabs-items v-model="tab">
         <v-tab-item value="data" :eager="true">
-          <PTabTable ref="data" tab-name="data" :user-choices="invertUserChoices(userChoices)" :warnings="invertWarnings(warnings)" />
+          <PTabTable
+           ref="data"
+           tab-name="data"
+           :user-choices="invertUserChoices(userChoices)"
+           :consent-helper-user-choices="consentHelperUserChoices"
+           :warnings="invertWarnings(warnings)"
+          />
         </v-tab-item>
 
         <v-tab-item value="purpose" :eager="true">
@@ -78,9 +84,8 @@ export default {
       ],
       disableUndoLastChangeBtnForData: true,
       disableUndoLastChangeBtnForPurpose: true,
-      userChoices: '',
-      purposeMap: '',
-      invertedUserChoices: '',
+      userChoices: {},
+      purposeMap: {},
       consentHelperUserChoices: {},
       warnings: {}
     }
@@ -98,7 +103,6 @@ export default {
   created () {
     this.calculatePurposeMap()
     this.getUserChoices()
-    this.invertedUserChoices = this.invertUserChoices(this.userChoices)
 
     /*
     if (this.$route.params.consentHelperUserChoices) {
@@ -107,16 +111,19 @@ export default {
       this.calculateWarnings()
     }
     */
-
-    let stored = window.localStorage.getItem("consent");
-    if (stored) {
-      this.consentHelperUserChoices = JSON.parse(stored);
-      this.calculateWarnings()
+    if(process.browser){
+      let stored = window.localStorage.getItem("consent");
+      if (stored) {
+        this.consentHelperUserChoices = JSON.parse(stored);
+        this.calculateWarnings()
+      }
     }
   },
 
   mounted () {
     window.addEventListener('beforeunload', this.beforeWindowUnload)
+
+
     this.$watch(
       '$refs.data.states',
       (new_value, old_value) => {
@@ -133,7 +140,6 @@ export default {
       '$refs.purpose.modifiedUserChoices', {
         handler: (new_value, old_value) => {
           this.userChoices = JSON.parse(JSON.stringify(new_value))
-          window.localStorage.setItem("choices", JSON.stringify(this.userChoices));
         },
         deep: true
       }
@@ -142,28 +148,29 @@ export default {
       '$refs.data.modifiedUserChoices', {
         handler: (new_value, old_value) => {
           this.userChoices = this.invertUserChoices(JSON.parse(JSON.stringify(new_value)))
-          window.localStorage.setItem("choices", JSON.stringify(this.userChoices));
         },
         deep: true
       }
-    )
-    this.$watch(
-      '$refs.purpose.modifiedWarnings', {
-        handler: (new_value, old_value) => {
-          this.warnings = JSON.parse(JSON.stringify(new_value))
-        },
-        deep: true
-      }
-    )
+    )    
     this.$watch(
       '$refs.data.modifiedWarnings', {
         handler: (new_value, old_value) => {
           this.warnings = this.invertWarnings(JSON.parse(JSON.stringify(new_value)))
         },
-        deep: true
       }
-    )
+    );
+    this.$watch(
+      '$refs.purpose.modifiedWarnings', {
+        handler: (new_value, old_value) => {
+          this.warnings = JSON.parse(JSON.stringify(new_value))
+        },
+      }
+    );
+
+
   },
+  
+
   beforeDestroy () {
     window.removeEventListener('beforeunload', this.beforeWindowUnload)
   },
@@ -176,9 +183,12 @@ export default {
     },
 
     submitChanges () {
-      this.$refs.consentNotification.showNotification(this.$t('snackbar.msg.submission-successful'), 'green')
       this.$refs.data.states = []
       this.$refs.purpose.states = []
+      window.localStorage.setItem("choices", JSON.stringify(this.userChoices));
+      this.$refs.consentNotification.showNotification(this.$t('snackbar.msg.submission-successful'), 'green')
+
+
     },
     undoLastChange () {
       if (this.disableUndoLastChangeBtnForData && this.tab === 'data' && !this.disableUndoLastChangeBtnForPurpose) {
@@ -205,17 +215,19 @@ export default {
       }, {})
     },
     getUserChoices () {
-      let stored = window.localStorage.getItem("choices");
-      if (stored) {
-        this.userChoices = JSON.parse(stored);
-      } else {
-        this.userChoices = JSON.parse(JSON.stringify(Object.keys(this.purposeMap).reduce((total, currentValue) => {
-          total[currentValue] = this.purposeMap[currentValue].reduce((total, currentValue) => {
-            total[currentValue] = true
+      if(process.browser){
+        let stored = window.localStorage.getItem("choices");
+        if (stored) {
+          this.userChoices = JSON.parse(stored);
+        } else {
+          this.userChoices = JSON.parse(JSON.stringify(Object.keys(this.purposeMap).reduce((total, currentValue) => {
+            total[currentValue] = this.purposeMap[currentValue].reduce((total, currentValue) => {
+              total[currentValue] = true
+              return total
+            }, {})
             return total
-          }, {})
-          return total
-        }, {})))
+          }, {})))
+        }
       }
     },
     invertUserChoices (userChoices) {
