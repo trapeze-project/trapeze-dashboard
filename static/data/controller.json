@@ -1,0 +1,14 @@
+{
+    "companyInformation": {
+        "name": "CloverIT",
+        "add1": "Via del Campo Verde",
+        "add2": "123456, Viale dei fiori, Italy",
+        "website": "https://clover-it.com",
+        "email": "info@clover-it.com",
+        "position": "Data Protection Officer (DPO)",
+        "posName": "Andrea Bouquet"
+    },
+    "paramsForInterpolation":{
+        "we":"CloverIT"
+    }
+}

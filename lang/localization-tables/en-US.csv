@@ -1,0 +1,154 @@
+general|cancel;Cancel
+general|revoke;Revoke all
+general|category;Data Categories
+general|location;Location Data
+general|advertising;Advertising
+general|warning;Warning
+general|access;Request Data Access
+general|unrelatedData;Unrelated Data Category
+general|bioData;Biometric Data
+general|unrelatedDataText;It is very unusual that fingerprints are used for advertising purposes.
+general|bioDataText;Fingerprints are particularly sensitive, since they facilitate identity theft. It is recommended to only provide consent for fingerprint data where absolutely necessary.
+layout|privacy-dashboard;privacy dashboard
+nav|labels|home;Home
+nav|labels|consent;Consent
+nav|labels|consent-menu;Consent Menu
+nav|labels|data;Data
+nav|labels|purposes;Purposes
+nav|labels|help;Consent Assistant
+nav|labels|faq;FAQ
+dpv|location;Location
+dpv|name;Name
+dpv|fingerprint;Fingerprint
+dpv|identity-verification;Identity Verification
+dpv|marketing;Marketing
+dpv|advertising;Advertising
+btn|labels|consent-guide;Consent Assistant
+btn|labels|i-can-not-find-an-answer;I can't find an answer
+btn|labels|undo-last-change;Undo last change
+btn|labels|submit-changes;Submit Changes
+btn|labels|see-changes;See Changes
+btn|labels|view-changes;View Changes
+btn|labels|send-message;Send message
+btn|labels|cancel;Cancel
+btn|labels|back;Back
+btn|labels|next;Next
+btn|labels|view-issues;View issues
+btn|labels|fix;Fix
+btn|labels|fix-all;Fix All
+btn|labels|ignore;Ignore
+btn|labels|ignore-all;Ignore All
+btn|labels|view;View
+btn|labels|visit-website;Visit Website
+btn|labels|leave-anyway;leave anyway
+btn|labels|contact;Contact
+snackbar|msg|please-complete-the-consent-guide;You have not yet answered all questions. Please answer all questions to complete the questionnaire.
+snackbar|msg|submission-successful;Submission Successful
+snackbar|msg|message-sent;Message Sent
+placeholder|search-for-a-question-or-an-answer;Search for a question or an answer
+updates|1;Policy Update
+updates|2;Consent Revocation
+updates|3;Consent Request
+sidebar-title|navigation;Navigation
+sidebar-title|update;Updates
+qna|links-and-sources;Links and Sources
+qna|header;Frequently Asked Questions (FAQ)
+qna|introduction;Find out more about the TRAPEZE privacy dashboard and its underlying concepts. Do not forget to let us (${we}) know if you cannot find information you are interested in.
+home|title;Welcome to your personal privacy dashboard!
+home|explore-btn;View
+home|welcome-msg1;We at ${we} want you to understand how we process your personal data.\n\nIn this dashboard, you can view what personal data we (${we}) process and for which purposes. The dashboard allows you to limit our processing of your personal data by configuring your consent. You can:
+home|welcome-msg2;The menu in the bottom left gives you a quick overview of the most recent consent-related interactions between you and us (${we}).\nIf you are new to the privacy dashboard, we recommend you to try out the Consent Assistant.
+home|purpose|0|name;revoke and give consent,
+home|purpose|1|name;deactivate and activate data categories,
+home|purpose|2|name;deactivate and activate purposes.
+home|help;Consent Assistant
+home|items|0|title;Consent
+home|items|0|filename;/img/consent.png
+home|items|0|link;/consent?tab=consent
+home|items|0|content;View the consent you gave us (${we}).
+home|items|1|title;Data
+home|items|1|filename;/img/data.png
+home|items|1|link;/consent?tab=data
+home|items|1|content;Tell us (${we}) which of your data we may use.
+home|items|2|title;Purposes
+home|items|2|filename;/img/purpose.png
+home|items|2|link;/consent?tab=purpose
+home|items|2|content;Tell us (${we}) what we may use your data for.
+home|items|3|title;TRAPEZE
+home|items|3|filename;/img/favicon.png
+home|items|3|link;http://trapeze-project.eu
+home|items|3|content;Learn more about the TRAPEZE project of the European Union.
+home|consent|consent-menu;Consent Menu
+home|consent|title;Consent
+home|consent|location;Your location data
+home|consent|purpose;Purposes
+home|consent|text;Location data is data that tells us where you have been at what time. We collect location data via GPS if you give permission in the Company Name mobile application. We use your location data to customize our advertising, to plan our marketing geographically, and to prevent fraud via geographic identity verification.
+home|consent|text_ad;Advertising is an integral part of our business model, which guarantees that we can continue to provide you with our restaurant recommendations. We use the below data categories to customize advertising. Tell us below which data categories we may use to customize our advertising.
+home|consent|ad;Advertisement
+home|consent|marketing;Marketing
+home|consent|id;Identity Verification
+home|consent|name;Name
+home|consent|fingerprint;Fingerprint
+home|consent|bank;Bank Account
+home|consent|credit;Credit Card Number
+home|consent|sensitivity;Sensitivity:
+home|consent|sensitivityText;You can configure how sensitive this data is to you. We treat very sensitive data differently and with extensive care
+home|consent|sensitivityHeader;How sensitive is this data to you?
+PAlertLeaveDialog|dialog-title;Are you sure you want to leave this page?
+PAlertLeaveDialog|lose-changes-warning;You need to submit your choices.
+PAlertLeaveDialog|lose-consent-helper-choices;Your consent helper choices will be lost if you leave this page.
+consent|consent-menu;Consent Menu
+consent|title;Consent Assistant
+consent|location;Your location data
+consent|purposes;Purposes
+consent|text;Location data is data that tells us where you have been at what time. We collect location data via GPS if you give permission in the Company Name mobile application. We use your location data to customize our advertising, to plan our marketing geographically, and to prevent fraud via geographic identity verification.
+consent|text_ad;Advertising is an integral part of our business model, which guarantees that we can continue to provide you with our restaurant recommendations free of charge. We use the below data categories to customize advertising. Tell us below which data categories we may use to customize our advertising.
+consent|ad;Advertisement
+consent|marketing;Marketing
+consent|id;Identity Verification
+consent|name;Name
+consent|fingerprint;Fingerprint
+consent|bank;Bank Account
+consent|credit;Credit Card Number
+consent|sensitivity;Sensitivity:
+consent|sensitivityText;You can configure how sensitive this data is to you. We treat very sensitive data differently and with extensive care
+consent|sensitivityHeader;How sensitive is this data to you?
+consent|warnings;Warnings
+consent|warning-msg-not-comfortable;You have granted permission for the data controller to use your {dataCategory} data for {purpose} purposes. however, your selection of the Consent Assistant was uncomfortable.
+consent|warning-msg-no-opinion;You have granted permission for the data controller to use your {dataCategory} data for {purpose} purposes. However, you made an unbiased choice with Consent Assistant.
+consent|issues;issues
+consent|issue;issue
+consent|tab|labels|consent;Consent
+consent|tab|labels|data-category;Data Category
+consent|tab|labels|purpose;Purpose
+consent|consent|ptable|header|values|date;Date
+consent|consent|ptable|header|values|event;Event
+consent|consent|ptable|header|values|policy;Policy
+consent|consent|ptable|events|values|consent-request-policy-update;Consent Request - Policy Update
+consent|consent|ptable|events|values|consent-revocation;Consent Revocation
+consent|consent|ptable|events|values|consent-giving;Consent Giving
+consent|consent|ptable|events|values|consent-request-account-creation;Consent Request - Account Creation
+consent|consent|ptable|policy|active;active
+consent|consent|ptable|policy|inactive;inactive
+consent|consent|ptable|footer|rows-per-page;Rows per page
+consent|data|ptable|header|values|data;Data Category
+consent|data|ptable|header|values|purposes;Purposes
+consent|data|ptable|header|values|issue;Issue
+consent|data|ptable|footer|rows-per-page;Rows per page
+consent|purpose|ptable|header|values|purpose;Purpose
+consent|purpose|ptable|header|values|data;Data Categories
+consent|purpose|ptable|header|values|issue;Issue
+consent|purpose|ptable|footer|rows-per-page;Rows per page
+consent-helper|purpose;Purpose
+consent-helper|comfortable;Comfortable
+consent-helper|no-opinion;No opinion
+consent-helper|not-comfortable;Not comfortable
+contact|new-message-to;New Message to
+contact|recipient;Recipient
+contact|message;Message
+location;Location data is data that tells us where you have been at what time. We collect location data via GPS if you give permission in the Company Name mobile application. We use your location data to customize our advertising, to plan our marketing geographically, and to prevent fraud via geographic identity verification.
+name;We collect your name to properly address you. We store your name from your profile.
+fingerprint;Fingerprints are used to verify your credentials and prevent identity theft.
+marketing;Marketing is essential for us, as we are active in very different markets. We recognize regional preferences and can thus adapt our products for you as a customer.
+advertising;Advertising is an integral part of our business model, which guarantees that we can continue to provide you with our restaurant recommendations.
+identity-verification;Identity verification is a security process where we ensure that you are a real person and not a bot. We also use identity verification to prevent fraud, such as identity theft or data theft. Furthermore, we make sure that you are older than 16 years old.

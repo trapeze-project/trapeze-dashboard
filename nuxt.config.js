@@ -1,55 +1,53 @@
 /* eslint-disable eqeqeq */
 // eslint-disable-next-line nuxt/no-cjs-in-config
-const Design = require('./design/design.config.json')
+const Design = require('./design.config.json')
 export default {
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
-    titleTemplate: '%s - Finder | Privacy Dashboard by TRAPEZE',
-    title: 'Finder | Privacy Dashboard by TRAPEZE',
+    titleTemplate: 'Privacy Dashboard : TRAPEZE',
+    title: 'Privacy Dashboard : TRAPEZE',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: './favicon.ico' },
-      {
-        rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap",
-      },
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }
     ]
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
-  css: [],
+  css: ['~/assets/css/main',
+    '~/assets/css/variables.scss'
+  ],
   serverMiddleware: [
-    '~/api/index.js'
   ],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
-    '~/plugins/materialicons.js',
-    '~/plugins/company-view.js',
-    '~/plugins/link-preview.client.js'
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
-  components: true,
+  components: [
+    {
+      path: '~/components', // will get any components nested in let's say /components/test too
+      pathPrefix: false
+    }
+  ],
 
   // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
   buildModules: [
     // https://go.nuxtjs.dev/eslint
-    '@nuxtjs/eslint-module',
+    // '@nuxtjs/eslint-module',
     // https://go.nuxtjs.dev/vuetify
-    '@nuxtjs/vuetify',
+    '@nuxtjs/vuetify'
   ],
 
   modules: [
     '@nuxtjs/axios',
     '@nuxtjs/proxy',
     '@nuxtjs/auth-next',
-    'nuxt-leaflet',
-    ['nuxt-i18n',
+    ['@nuxtjs/i18n',
       {
         lazy: true,
         langDir: 'lang/',
@@ -117,7 +115,7 @@ export default {
     baseURL: process.env.BASE_URL
   },
   vuetify: {
-    customVariables: ['~/assets/variables.scss'],
+    // customVariables: ['~/assets'],
     theme: {
       themes: {
         light: Design.theme.light
@@ -130,13 +128,11 @@ export default {
   },
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
+    extractCSS: true
   },
   watch: ['design'],
   server: {
     host: process.env.HOST,
     port: process.env.PORT
-  },
-  router: {
-    base: process.env.ROUTER_BASE || "/"
   }
 }

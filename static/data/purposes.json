@@ -1,0 +1,27 @@
+[
+  {
+    "purpose": "Service Optimization",
+    "data": "None",
+    "issue": "0 issues"
+  },
+  {
+    "purpose": "Advertising",
+    "data": "Name, Fingerprint, Bank account, Credit Card Number",
+    "issue": "2 issues"
+  },
+  {
+    "purpose": "Marketing",
+    "data": "Bank Account, Credit Card Number",
+    "issue": "2 issues"
+  },
+  {
+    "purpose": "Identity Verification",
+    "data": "Name",
+    "issue": "1 issue"
+  },
+  {
+    "purpose": "Authentication",
+    "data": "Name, Fingerprint",
+    "issue": "0 issues"
+  }
+]

@@ -1,0 +1,15 @@
+html,body, #issues {
+  font-size: 100%;
+  @media only screen and (max-width: 600px) {
+    font-size: 94%;
+  }
+  @media only screen and (min-width: 601px) and (max-width: 960px) {
+    font-size: 96%;
+  }
+}
+div.choose-table tr {
+  cursor: pointer;
+}
+.v-btn {
+  text-transform:none !important;
+}

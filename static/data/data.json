@@ -1,0 +1,22 @@
+[
+  {
+    "data": "Location",
+    "purpose": "None"
+  },
+  {
+    "data": "Bank Account",
+    "purpose": "Advertising, Marketing"
+  },
+  {
+    "data": "Credit Card Number",
+    "purpose": "Advertising, Marketing, Identity Verification"
+  },
+  {
+    "data": "Fingerprint",
+    "purpose": "Advertising"
+  },
+  {
+    "data": "Name",
+    "purpose": "Advertising, Marketing, Identity Verification, and 5 more"
+  }
+]

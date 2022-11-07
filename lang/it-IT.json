@@ -1,169 +1,255 @@
 {
-  "general": {
-    "cancel": "Annulla"
-  },
-  "links": {
-    "home": "Home",
-    "profile": "Profilo",
-    "about": "Scopri di più",
-    "data": "Dati",
-    "log": "Registro delle attività",
-    "permissions": "Autorizzazioni"
-  },
-  "home": {
-    "title": "Home",
-    "explore-btn": "Esplorare",
-    "items": {
-      "0": {
-        "title": "Dati che ci hai fornito",
-        "filename": "./derived-data.svg",
-        "link": "/profile",
-        "content": "Controlla i dati forniti nel corso della registrazione al servizio."
-      },
-      "1": {
-        "title": "Dati raccolti",
-        "filename": "./service-data.svg",
-        "link": "/data",
-        "content": "Scopri di più sui dati raccolti e analizzati mentre usi il nostro servizio."
-      },
-      "2": {
-        "title": "Termini concordati",
-        "filename": "./permissions.svg",
-        "link": "/permissions",
-        "content": "Termini, condizioni e politiche sulla privacy concordate diligentemente."
-      }
+    "general": {
+        "cancel": "Annulla",
+        "revoke": "Cancella tutto",
+        "category": "Categorie di dati",
+        "location": "Dati sulla posizione",
+        "advertising": "Pubblicit\u00e0",
+        "warning": "Problemi",
+        "access": "Richiesta di Accesso ai Dati",
+        "unrelatedData": "Categorie di dati non correlati",
+        "bioData": "Dati biometrici",
+        "dpo": "Responsabile della protezione dei dati",
+        "dpo-abbrev": "DPD",
+        "unrelatedDataText": "E' molto insolito che le impronte digitali vengano utilizzate per scopi pubblicitari.",
+        "bioDataText": "Le impronte digitali sono particolarmente sensibili, in quanto facilitano il furto di identit\u00e0. Si raccomanda di fornire il consenso per i dati relativi alle impronte digitali solo se assolutamente necessario."
+    },
+    "layout": {
+        "privacy-dashboard": "dashboard sulla privacy"
+    },
+    "nav": {
+        "labels": {
+            "home": "Homepage",
+            "consent": "Informativa sulla privacy",
+            "consent-menu": "Menu di Consenso",
+            "data": "Dati",
+            "purposes": "Scopi",
+            "help": "Assistente al Consenso",
+            "faq": "FAQ"
+        }
+    },
+    "dpv": {
+        "location": "Posizione",
+        "name": "Nome",
+        "fingerprint": "Impronta digitale",
+        "identity-verification": "Verifica dell'identit\u00e0",
+        "marketing": "Marketing",
+        "advertising": "Pubblicit\u00e0"
+    },
+    "btn": {
+        "labels": {
+            "consent-guide": "Assistente al Consenso",
+            "i-can-not-find-an-answer": "Non riesco a trovare una risposta",
+            "undo-last-change": "Annulla le modifiche",
+            "submit-changes": "Invia le modifiche",
+            "see-changes": "Guarda le modifiche",
+            "view-changes": "Visualizza le modifiche",
+            "send-message": "Invia il messaggio",
+            "cancel": "Annulla",
+            "back": "Indietro",
+            "next": "Avanti",
+            "view-issues": "Visualizza i problemi",
+            "fix": "Correggere",
+            "fix-all": "Correggere tutto",
+            "ignore": "Ignora",
+            "ignore-all": "Ignora tutto",
+            "view": "Visualizza",
+            "visit-website": "Visita il sito web",
+            "leave-anyway":"Vattene comunque",
+            "contact": "Contatto"
+        }
+    },
+    "snackbar": {
+        "msg": {
+            "please-complete-the-consent-guide": "Non ha ancora risposto a tutte le domande. La preghiamo di rispondere a tutte le domande per completare il questionario.",
+            "submission-successful": "Invio dei dati completato"
+        }
+    },
+    "placeholder": {
+        "search-for-a-question-or-an-answer": "Cerca una domanda o una risposta"
+    },
+    "updates": {
+        "1": "Aggiornamento della politica sulla privacy",
+        "2": "Revoca del consenso",
+        "3": "Richiesta di consenso"
+    },
+    "sidebar-title": {
+        "navigation": "Navigazione",
+        "update": "Aggiornamenti"
+    },
+    "qna": {
+        "links-and-sources": "Link e fonti",
+        "header": "Domande Frequenti (FAQ)",
+        "introduction": "Scoprite di pi\u00f9 sul dashboard sulla privacy di TRAPEZE e sui concetti che ne stanno alla base. Fateci sapere (${we}) se non trovate informazioni a cui sei interessati/e."
+    },
+    "home": {
+        "title": "Benvenuti sul vostro dashboard personale sulla privacy!",
+        "explore-btn": "Visualizza",
+        "welcome-msg1": "Noi di ${we} desideriamo che lei comprenda come trattiamo i suoi dati personali. Per questo motivo, utilizziamo il TRAPEZE Privacy Dashboard, che ci aiuta a garantirvi i vostri diritti in qualità di soggetti interessati. Per ulteriori informazioni su TRAPEZE, consultare la nostra sezione FAQ o visitare il sito web di TRAPEZE. \n \n In questo cruscotto è possibile vedere quali dati personali vengono elaborati da noi (${we}) e per quali scopi. Quando ci si è registrati al servizio, si è acconsentito alla nostra politica sulla privacy. Questo cruscotto consente di configurare il consenso a livello di dettaglio. \n \n È possibile dare o revocare il consenso in base a quanto segue:",
+        "welcome-msg2": "Si consiglia di utilizzare l'Assistente per il consenso per esprimere le proprie preferenze e confrontarle con le decisioni di consenso.",
+         "purpose": {
+            "0": {
+                "name": "Tipi di dati che trattiamo, come l'ubicazione, il nome o le informazioni biometriche."
+            },
+            "1": {
+                "name": "Finalità per le quali trattiamo i dati, come la pubblicità, il marketing o la verifica dell'identità."
+            }
+        },
+        "help": "Aiuto",
+        "items": {
+            "0": {
+                "title": "Dati",
+                "filename": "/img/data.png",
+                "link": "/consent?tab=data",
+                "content": "Ci dica quali dei suoi dati noi (${we}) possiamo utilizzare."
+            },
+            "1": {
+                "title": "Scopi",
+                "filename": "/img/purpose.png",
+                "link": "/consent?tab=purpose",
+                "content": "Ci dica per cosa noi (${we}) possiamo utilizzare i suoi dati."
+            },
+            "2": {
+              "title": "Consenso",
+              "filename": "/img/consent.png",
+              "link": "/consent?tab=consent",
+              "content": "Visualizza il consenso che ci (${we}) hai dato."
+            },            
+            "3": {
+                "title": "TRAPEZE",
+                "filename": "/img/favicon.png",
+                "link": "http://trapeze-project.eu",
+                "content": "Per saperne di pi\u00f9 sul progetto TRAPEZE dell'Unione Europea."
+            }
+        },
+        "consent": {
+            "consent-menu": "Menu del Consenso",
+            "title": "Consenso",
+            "location": "I vostri dati sulla posizione",
+            "purpose": "Scopi",
+            "text": "I dati sulla posizione sono dati che ci dicono dove siete stati in quale momento. Raccogliamo i dati di localizzazione tramite GPS se l'utente fornisce l'autorizzazione nella nostra applicazione mobile ${we}. Utilizziamo i dati sulla posizione dell'utente per personalizzare la nostra pubblicità, per pianificare il nostro marketing a livello geografico e per prevenire le frodi attraverso la verifica dell'identità geografica.",
+            "text_ad": "La pubblicit\u00e0 \u00e8 parte integrante del nostro modello di business, che ci permette di continuare a fornirvi gratuitamente le nostre raccomandazioni sui ristoranti. Utilizziamo le seguenti categorie di dati per personalizzare la pubblicit\u00e0. Indicate qui di seguito quali categorie di dati possiamo utilizzare per personalizzare la nostra pubblicit\u00e0.",
+            "ad": "Pubblicit\u00e0",
+            "marketing": "Marketing",
+            "id": "Verifica dell'identit\u00e0",
+            "name": "Nome",
+            "fingerprint": "Impronta digitale",
+            "bank": "Conto corrente bancario",
+            "credit": "Numero di carta di credito",
+            "sensitivity": "Sensibilit\u00e0:",
+            "sensitivityText": "Potete configurare il grado di sensibilit\u00e0\u00a0 di questi dati. I dati molto sensibili vengono trattati in modo diverso e con grande attenzione.",
+            "sensitivityHeader": "Quanto sono sensibili questi dati per voi?"
+        }
+    },
+    "PAlertLeaveDialog":{
+        "dialog-title":"Sei sicuro di voler lasciare questa pagina?",
+        "lose-changes-warning":"Devi inviare le tue scelte.",
+        "lose-consent-helper-choices":"Non avete ancora risposto a tutti gli avvertimenti."
+    },
+    "consent": {
+        "desc": "Configurare le categorie di dati che possiamo usare per quali scopi (scheda 'Categoria di dati'). Oppure per quali scopi siamo autorizzati a utilizzare i dati (scheda 'Scopo'). La scheda 'Informativa sulla privacy' consente di esaminare tutte le versioni della nostra informativa sulla privacy.",
+        "consent-menu": "Menu del Consenso",
+        "title": "Assistente al Consenso",
+        "location": "I vostri dati sulla posizione",
+        "purposes": "Scopi",
+        "text": "I dati sulla posizione sono dati che ci dicono dove siete stati in quale momento. Raccogliamo i dati di localizzazione tramite GPS se l'utente fornisce l'autorizzazione nella nostra applicazione mobile ${we}. Utilizziamo i dati sulla posizione dell'utente per personalizzare la nostra pubblicità, per pianificare il nostro marketing a livello geografico e per prevenire le frodi attraverso la verifica dell'identità geografica.",
+        "text_ad": "La pubblicit\u00e0 \u00e8 parte integrante del nostro modello di business, che ci permette di continuare a fornirvi le nostre raccomandazioni sui ristoranti. Utilizziamo le seguenti categorie di dati per personalizzare la pubblicit\u00e0. Indicate qui di seguito quali categorie di dati possiamo utilizzare per personalizzare la nostra pubblicit\u00e0.",
+        "ad": "Pubblicit\u00e0",
+        "marketing": "Marketing",
+        "id": "Verifica dell'identit\u00e0",
+        "name": "Nome",
+        "fingerprint": "Impronta digitale",
+        "bank": "Conto corrente bancario",
+        "credit": "Numero di carta di credito",
+        "sensitivity": "Sensibilit\u00e0:",
+        "sensitivityText": "Potete configurare il grado di sensibilit\u00e0 di questi dati. I dati molto sensibili vengono trattati in modo diverso e con grande attenzione.",
+        "sensitivityHeader": "Quanto sono sensibili questi dati per voi?",
+        "warnings": "Avvertenze",
+        "warning-msg-not-comfortable":"Nell'Assistente al Consenso, l'utente ha indicato che non si sente a proprio agio se noi (${we}) utilizziamo i suoi dati ${dataCategory} per scopo ${purpose}. Tuttavia, il consenso che ci avete dato indica che siete a vostro agio. La preghiamo di rivedere il suo consenso.",
+        "warning-msg-no-opinion":"Nell'Assistente al Consenso, avete indicato di non avere un'opinione sul trattamento da parte nostra (${we}) dei vostri dati ${dataCategory} per scopo ${purpose}. Tuttavia, il consenso che ci avete dato indica che siete a vostro agio. La preghiamo di rivedere il suo consenso.",
+        "issues": "problemi",
+        "issue": "problem",
+        "tab": {
+            "labels": {
+                "consent": "Informativa sulla privacy",
+                "data-category": "Categoria di dati",
+                "purpose": "Scopo"
+            }
+        },
+        "consent": {
+            "ptable": {
+                "header": {
+                    "values": {
+                        "date": "Data",
+                        "event": "Oggetto",
+                        "policy": "Politica sulla privacy"
+                    }
+                },
+                "events": {
+                    "values": {
+                        "consent-request-policy-update": "Richiesta di consenso - Aggiornamento delle norme",
+                        "consent-revocation": "Revoca del consenso",
+                        "consent-giving": "Dare il consenso",
+                        "consent-request-account-creation": "Richiesta di consenso - Creazione account"
+                    }
+                },
+                "policy": {
+                    "active": "Attivo",
+                    "inactive": "Non attivo"
+                },
+                "footer": {
+                    "rows-per-page": "Righe per pagina"
+                }
+            }
+        },
+        "data": {
+            "ptable": {
+                "header": {
+                    "values": {
+                        "data": "Categoria di dati",
+                        "purposes": "Scopi",
+                        "issue": "Problema"
+                    }
+                },
+                "footer": {
+                    "rows-per-page": "Righe per pagina"
+                }
+            }
+        },
+        "purpose": {
+            "ptable": {
+                "header": {
+                    "values": {
+                        "purpose": "Scopo",
+                        "data": "Categorie di dati",
+                        "issue": "Problema"
+                    }
+                },
+                "footer": {
+                    "rows-per-page": "Righe per pagina"
+                }
+            }
+        }
+    },
+    "consent-helper": {
+        "purpose": "Scopo",
+        "comfortable": "A mio agio",
+        "no-opinion": "Nessuna opinione",
+        "not-comfortable": "A disagio"
+    },
+    "contact": {
+        "new-message-to": "Nuovo messaggio a",
+        "recipient": "Destinataria",
+        "message": "Messaggio"
+    },
+    "location": "I dati sulla posizione sono dati che ci dicono dove siete stati in quale momento. Raccogliamo i dati di localizzazione tramite GPS se l'utente fornisce l'autorizzazione nella nostra applicazione mobile ${we}. Utilizziamo i dati sulla posizione dell'utente per personalizzare la nostra pubblicità, per pianificare il nostro marketing a livello geografico e per prevenire le frodi attraverso la verifica dell'identità geografica.",
+    "name": "Raccogliamo il vostro nome per indirizzarvi correttamente. Memorizziamo il vostro nome dal vostro profilo.",
+    "fingerprint": "Le impronte digitali vengono utilizzate per verificare le credenziali e prevenire il furto di identit\u00e0.",
+    "marketing": "Il marketing \u00e8 essenziale per noi perch\u00e9 operiamo in mercati molto diversi. Riconosciamo le preferenze regionali e possiamo quindi adattare i nostri prodotti ai vostri clienti.",
+    "advertising": "La pubblicit\u00e0 \u00e8 parte integrante del nostro modello di business, che ci garantisce di continuare a fornirvi le nostre raccomandazioni sui ristoranti.",
+    "identity-verification": "La verifica dell'identit\u00e0 \u00e8 un processo di sicurezza nel quale ci assicuriamo che voi siate delle persone reali e non dei bot. Utilizziamo la verifica dell'identit\u00e0 anche per prevenire un furto d'identit\u00e0.",
+    "help": {
+      "desc": "Con questo breve sondaggio vogliamo assicurarci di raccogliere e utilizzare i vostri dati solo nel modo in cui vi sentite a vostro agio. Compilando questo questionario, potete dirci come volete che trattiamo i vostri dati. Le vostre risposte vengono confrontate con la vostra attuale decisione di consenso. In seguito, vi verranno fornite indicazioni su come modificare il vostro consenso in modo che corrisponda alle vostre preferenze.",
+      "comfort": "Quanto è soddisfatto del fatto che utilizziamo questo tipo di dati per i seguenti scopi?"
     }
-  },
-  "profile": {
-    "title": "Credenziali dell'account",
-    "subtitle": "Il tuo indirizzo email e la password",
-    "username": "INDIRIZZO E-MAIL",
-    "password": "PASSWORD"
-  },
-  "about": {
-    "provider": "Elaboratore dei dati",
-    "controller": "Titolare del trattamento"
-  },
-  "data": {
-    "location": {
-      "title": "Le informazioni sulla tua geolocalizzazione",
-      "subtitle": "Numero di geolocalizzazioni raccolte"
-    },
-    "browsing": {
-      "title": "La tua cronologia di navigazione",
-      "subtitle": "Numero di siti Web visitati raccolti"
-    },
-    "delete-dialog": {
-      "title": "Elimina dati",
-      "text": "I tuoi dati verranno cancellati. Il titolare del trattamento verrà informato della tua richiesta e ti risponderà a breve.",
-      "btn": "Elimina"
-    }
-  },
-  "permissions": {
-    "headings": {
-      "share": "Cosa condividi",
-      "get": "Cosa ottieni"
-    },
-    "slider": {
-      "low": "Basso",
-      "medium": "Medio",
-      "high": "Alto"
-    },
-    "email-address": {
-      "label": "Indirizzo e-mail",
-      "get": "Richiesto per l'accesso al Finder e per inviarti notifiche sui luoghi nelle vicinanze.",
-      "share": "Il tuo indirizzo email verificato."
-    },
-    "profile": {
-      "label": "Profilo",
-      "get": "Recupera delle raccomandazioni personalizzate che si adattano a te.",
-      "share": "Costruiamo un profilo in base a come usi il Finder, ciò che ha suscitato il tuo interesse e quali luoghi hai visitato."
-    },
-    "current-location": {
-      "label": "Geolocalizzazione attuale",
-      "get": "La tua geolocalizzazione attuale viene utilizzata per identificare luoghi nelle vicinanze.",
-      "share": "La tua geolocalizzazione attuale è ottenuta tramite GPS, WiFi, o in base al ripetitore o antenna a cui il tuo telefono è collegato."
-    },
-    "location-history": {
-      "label": "Cronologia delle tue geolocalizzazioni",
-      "get": "Recupera delle raccomandazioni personalizzate che si adattano a te.",
-      "share": "La cronologia delle tue geolocalizzazioni è utilizzata per arricchire il tuo profilo di interessi con dati aggiuntivi."
-    },
-    "browsing-history": {
-      "label": "Cronologia di navigazione",
-      "get": "Recupera raccomandazioni personalizzate che si adattano a te.",
-      "share": "La tua cronologia di navigazione viene utilizzata per arricchire il tuo profilo di interesse con dati aggiuntivi."
-    },
-    "advanced-button": "Avanzate"
-  },
-  "login": {
-    "username": "E-mail",
-    "password": "Password",
-    "login": "login",
-    "loginTitle": "Accedi al dashboard del Finder."
-  },
-  "short": {
-    "year": "numeric",
-    "month": "short",
-    "day": "numeric"
-  },
-  "long": {
-    "year": "numeric",
-    "month": "short",
-    "day": "numeric",
-    "weekday": "short",
-    "hour": "numeric",
-    "minute": "numeric"
-  },
-  "tour": {
-    "buttons": {
-      "skip": "Salta tour",
-      "prev": "Indietro",
-      "next": "Avanti",
-      "finish": "Finire"
-    },
-    "index": {
-      "step-0-title": "Benvenuti sul dashboard del Finder relativo alla privacy",
-      "step-0": "Puoi sempre tornare a questa pagina facendo clic sul pulsante <strong> Home </strong>!",
-      "step-1-title": "Profilo",
-      "step-1": "Controlla i dati che ci hai fornito al momento della registrazione per il <strong> Finder </strong>.",
-      "step-2-title": "Chi siamo",
-      "step-2": "Scopri di più sul <strong> Finder GmbH </strong> e sulle aziende coinvolte nel fornire il Finder.",
-      "step-3-title": "Dati che raccogliamo",
-      "step-3": "Esplora i dati che abbiamo raccolto quando hai usato il browser.",
-      "step-4-title": "Autorizzazioni",
-      "step-4": "Scopri cos’hai concordato accettando i termini e le condizioni del servizio.",
-      "step-5-title": "Lingue",
-      "step-5": "È possibile modificare la lingua del dashboard."
-    },
-    "profile": {
-      "step-0": "I tuoi dati sono raggruppati in varie categorie.",
-      "step-1": "Fai clic sulla piccola freccia per dare un'occhiata più da vicino ad una determinata categoria."
-    },
-    "about": {
-      "step-0": "Un titolare del trattamento è un'azienda che elabora i tuoi dati personali.In questo caso noi siamo: Finder GmbH. Ci possono essere più titolari del trattamento.",
-      "step-1": "Un elaboratore dei dati è un'azienda che elabora i tuoi dati personali per conto del / i titolare/i del trattamento.",
-      "step-2": "Fai clic sulla piccola freccia per dare un'occhiata più da vicino ad una certa azienda."
-    },
-    "data": {
-      "step-0": "I tuoi dati sono raggruppati in più categorie.",
-      "step-1": "Puoi ispezionare ogni categoria individualmente.",
-      "step-2": "Fai clic sulla piccola freccia per dare un'occhiata più da vicino su una determinata categoria.",
-      "step-3": "Per eliminare alcuni dati, basta fare clic sull'icona Cestino accanto ai dati. Il titolare del trattamento verrà notificato della tua intenzione di eliminare i dati in modo permanente."
-    },
-    "permission": {
-      "step-0": "Dai un’occhiata ai dati personali che hai concordato che noi utilizzassimo per il <strong> Finder </strong>.",
-      "step-1": "Guarda quanto stai condividendo con noi.",
-      "step-2": "Ulteriori informazioni sul tipo di dati personali che condividi con noi ...",
-      "step-3": "... e ciò che ottieni in cambio."
-    }
-  },
-  "table-headers": {
-    "date": "Data",
-    "location": "Geolocalizzazione",
-    "action": "Azione",
-    "url": "URL",
-    "user-agent": "Agente utente",
-    "ip": "Indirizzo IP"
-  }
 }

@@ -1,0 +1,137 @@
+[{
+  "@context": {
+    "schema": "http://schema.org/",
+    "dpv": "http://www.w3.org/ns/dpv#",
+    "spl": "http://www.specialprivacy.eu/langs/usage-policy#",
+    "svdu": "http://www.specialprivacy.eu/vocabs/duration#",
+    "svl":	"http://www.specialprivacy.eu/vocabs/locations#"
+  },
+  "@id": "org:sub:policy:01",
+  "title": "Policy 01",
+  "description": "...",
+  "dpv:PersonalDataCategory": [
+    { "@class": "dpv:Location" },
+    { "@class": "dpv:Name" }
+  ],
+  "dpv:Purpose": { 
+    "@class": "dpv:Advertising" 
+  },
+  "dpv:Processing": [ 
+    { "@class": "dpv:Analyse" }, 
+    { "@class": "dpv:Alter" }, 
+    { "@class": "dpv:Collect" }
+  ],
+  "dpv:TechnicalOrganisationalMeasure": {
+    "dpv:TechnicalMeasure": {
+      "dpv:StorageRestriction": {
+        "dpv:hasDurationInDays": 
+          { "@intervall": [30, 90] },
+        "dpv:StorageLocation": 
+          { "@class": "svl:ControllerServers" }
+      }
+    }
+  },
+  "dpv:Recipient": { 
+    "@instance": {
+      "@type": "schema:Organization",
+      "legalName": "Google Inc.",
+      "namex": "Google",
+      "description": "...",
+      "adddress": "...",
+      "vatID": "...",
+      "identifier": "https://google.com",
+      "url": "https://google.com"
+    }
+  }
+},{
+  "@context": {
+    "schema": "http://schema.org/",
+    "dpv": "http://www.w3.org/ns/dpv#",
+    "spl": "http://www.specialprivacy.eu/langs/usage-policy#",
+    "svdu": "http://www.specialprivacy.eu/vocabs/duration#",
+    "svl":	"http://www.specialprivacy.eu/vocabs/locations#"
+  },
+  "@id": "org:sub:policy:01",
+  "title": "Policy 01",
+  "description": "...",
+  "dpv:PersonalDataCategory": [
+    { "@class": "dpv:Location" },
+    { "@class": "dpv:Name" }
+  ],
+  "dpv:Purpose": { 
+    "@class": "dpv:Marketing" 
+  },
+  "dpv:Processing": [ 
+    { "@class": "dpv:Analyse" }, 
+    { "@class": "dpv:Alter" }, 
+    { "@class": "dpv:Collect" }
+  ],
+  "dpv:TechnicalOrganisationalMeasure": {
+    "dpv:TechnicalMeasure": {
+      "dpv:StorageRestriction": {
+        "dpv:hasDurationInDays": 
+          { "@intervall": [30, 90] },
+        "dpv:StorageLocation": 
+          { "@class": "svl:ControllerServers" }
+      }
+    }
+  },
+  "dpv:Recipient": { 
+    "@instance": {
+      "@type": "schema:Organization",
+      "legalName": "Google Inc.",
+      "namex": "Google",
+      "description": "...",
+      "adddress": "...",
+      "vatID": "...",
+      "identifier": "https://google.com",
+      "url": "https://google.com"
+    }
+  }
+},{
+  "@context": {
+    "schema": "http://schema.org/",
+    "dpv": "http://www.w3.org/ns/dpv#",
+    "spl": "http://www.specialprivacy.eu/langs/usage-policy#",
+    "svdu": "http://www.specialprivacy.eu/vocabs/duration#",
+    "svl":	"http://www.specialprivacy.eu/vocabs/locations#"
+  },
+  "@id": "org:sub:policy:01",
+  "title": "Policy 01",
+  "description": "...",
+  "dpv:PersonalDataCategory": [
+    { "@class": "dpv:Fingerprint" },
+    { "@class": "dpv:Location" },
+    { "@class": "dpv:Name" }
+  ],
+  "dpv:Purpose": { 
+    "@class": "dpv:Identity Verification" 
+  },
+  "dpv:Processing": [ 
+    { "@class": "dpv:Analyse" }, 
+    { "@class": "dpv:Alter" }, 
+    { "@class": "dpv:Collect" }
+  ],
+  "dpv:TechnicalOrganisationalMeasure": {
+    "dpv:TechnicalMeasure": {
+      "dpv:StorageRestriction": {
+        "dpv:hasDurationInDays": 
+          { "@intervall": [30, 90] },
+        "dpv:StorageLocation": 
+          { "@class": "svl:ControllerServers" }
+      }
+    }
+  },
+  "dpv:Recipient": { 
+    "@instance": {
+      "@type": "schema:Organization",
+      "legalName": "Google Inc.",
+      "namex": "Google",
+      "description": "...",
+      "adddress": "...",
+      "vatID": "...",
+      "identifier": "https://google.com",
+      "url": "https://google.com"
+    }
+  }
+}]

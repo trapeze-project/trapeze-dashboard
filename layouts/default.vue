@@ -1,121 +1,71 @@
-/* eslint-disable */
 <template>
-  <v-app>
-    <v-navigation-drawer
-      v-model="drawer"
-      clipped
-      app
-      mobile-breakpoint="0"
-      :mini-variant="$vuetify.breakpoint.mobile"
-      color="accent"
-    >
-      <v-list nav dense>
-        <v-list-item-group v-model="group" color="primary">
-          <v-list-item v-for="(link, index) in links" :key="index" :index-v-step="index" :to="localePath(link.to)" exact>
-            <v-list-item-icon>
-              <v-icon>
-                {{ link.icon }}
+  <div>
+    <v-app>
+      <PNavBar />
+      <v-main class="mt-1">
+        <v-container fluid>
+          <v-row v-if="$vuetify.breakpoint.smAndDown">
+            <v-col class="float-left">
+              <v-icon size="30" @click.stop="drawer = !drawer">
+                mdi-view-sequential
               </v-icon>
-            </v-list-item-icon>
-            <v-list-item-title>{{ $t('links.'+link.label) }}</v-list-item-title>
-          </v-list-item>
-        </v-list-item-group>
-      </v-list>
-    </v-navigation-drawer>
-
-    <v-app-bar clipped-left app color="coporate">
-      <v-app-bar-nav-icon color="secondary" @click.stop="drawer = !drawer" />
-      <v-spacer />
-      <div class="d-flex justify-space-between align-center flex-row" style="width: 100%">
-        <Logo />
-        <div class="d-flex flex-row align-center justify-center">
-          <div>
-            <b class="secondary--text d-none d-sm-inline d-md-inline d-lg-inline" style="margin-right: 10px;"> {{ $config.logo.slogan.toUpperCase() }} </b>
-            <v-menu offset-y>
-              <template v-slot:activator="{ on, attrs }">
-                <v-btn
-                  index-v-step="5"
-                  dark
-                  outlined
-                  elevation="0"
-                  v-bind="attrs"
-                  v-on="on"
-                >
-                  {{ $i18n.locale }}
-                </v-btn>
-              </template>
-              <v-list>
-                <v-list-item
-                  v-for="(locale) in availableLocales"
-                  :key="locale.code"
-                >
-                  <nuxt-link style="text-decoration: none;" :to="switchLocalePath(locale.code)">
-                    {{ locale.name }}
-                  </nuxt-link>
-                </v-list-item>
-              </v-list>
-            </v-menu>
-          </div>
-          <!--
-          <v-btn color="secondary" class="ml-2" outlined @click="logout">
-            Logout
-          </v-btn>
-          -->
-        </div>
-      </div>
-      <v-spacer />
-    </v-app-bar>
-    <v-main class="main">
-      <v-container fluid>
-        <nuxt />
-      </v-container>
-    </v-main>
-    <v-footer>
-      <PFooter />
-    </v-footer>
-  </v-app>
+              <v-navigation-drawer
+                v-model="drawer"
+                absolute
+                temporary
+              >
+                <PNavigation />
+              </v-navigation-drawer>
+            </v-col>
+            <v-col>
+              <v-btn text class="float-right mr-n5" @click.stop="drawerController = !drawerController">
+                <span>{{ this.companyName }}</span> <v-img src="/img/company.png" max-width="50" max-height="50" />
+              </v-btn>
+              <v-navigation-drawer
+                v-model="drawerController"
+                absolute
+                temporary
+                right
+              >
+                <PCompanyView />
+              </v-navigation-drawer>
+            </v-col>
+          </v-row>
+          <v-row>
+            <v-col class="hidden-sm-and-down" md="2" lg="2">
+              <PNavigation />
+            </v-col>
+            <v-col sm="12" md="8" lg="8">
+              <nuxt />
+            </v-col>
+            <v-col class="hidden-sm-and-down" md="2" lg="2">
+              <PCompanyView />
+            </v-col>
+          </v-row>
+        </v-container>
+      </v-main>
+    </v-app>
+  </div>
 </template>
 
 <script>
+import controller from '../static/data/controller.json' 
 export default {
-  data: () => ({
-    drawer: true,
-    links: [
-      { to: '/', label: 'home', icon: 'home' },
-      { to: '/profile', label: 'profile', icon: 'account_circle' },
-      { to: '/about', label: 'about', icon: 'business' },
-      { to: '/data', label: 'data', icon: 'folder' },
-      // disables activities route in navigation only for user test { to: '/activities', label: 'log', icon: 'toc' },
-      { to: '/permissions', label: 'permissions', icon: 'gavel' }
-    ],
-    group: null
-  }),
-  computed: {
-    cssVars () {
-      return {
-        '--url': 'url(' + this.$config.background.url + ')'
-      }
-    },
-    availableLocales () {
-      return this.$i18n.locales.filter(i => i.code !== this.$i18n.locale)
+  data () {
+    return {
+      drawer: null,
+      drawerController: null,
+      group: null,
+      companyName:""
     }
   },
-  async mounted () {
-    await this.$auth.fetchUser()
-  },
-  methods: {
-    async logout () {
-      await this.$auth.logout()
+  created(){
+    this.companyName = controller.companyInformation.name;
+    String.prototype.interpolate = function(params) {
+      const names = Object.keys(params);
+      const values = Object.values(params);
+      return new Function(...names, `return \`${this}\`;`)(...values);
     }
   }
 }
 </script>
-<style>
-.v-application {
-  font-family: 'Noto Sans JP', sans-serif;
-}
-#app {
-  background: var(--url) no-repeat center center fixed !important;
-  background-size: cover;
-}
-</style>
