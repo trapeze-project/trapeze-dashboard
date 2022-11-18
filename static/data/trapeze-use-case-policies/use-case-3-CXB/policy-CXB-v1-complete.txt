@@ -1,0 +1,202 @@
+﻿{
+  "@description" : "CXB policy - use case 3",
+  
+  "@ontologies" : [
+	 "https://w3id.org/dpv/dpv-owl#",
+	 "http://www.w3id.org/dpv/dpv-owl/dpv-pd#",
+	 "http://www.w3id.org/dpv/dpv-legal#",
+	 "http://www.w3id.org/dpv/dpv-gdpr#",
+	 "https://trapeze-project.eu/demos/pilot3/pilot3-ontology#"
+	 ],
+  
+  "@context" : {
+  	"@base"     : "https://w3id.org/dpv/dpv-owl#",
+  	"dpvo-pd"   : "http://www.w3id.org/dpv/dpv-owl/dpv-pd#",
+  	"dpv-legal" : "http://www.w3id.org/dpv/dpv-legal#",
+  	"dpv-gdpr"  : "http://www.w3id.org/dpv/dpv-gdpr#",
+  	"pilot3"       : "https://trapeze-project.eu/demos/pilot3/pilot3-ontology#"
+  	},
+  	
+  "@policySet" : [
+  
+     {
+     	"@description": "Policy for customer identification",
+     	"hasPurpose"      : "IdentityVerification",
+     	"hasPersonalData" : "dpvo-pd:Identifying",
+     	"hasProcessing"   : [
+     	     "Obtain",
+     	     "Store",
+     	     "Retrieve",
+     	     "Consult",
+     	     "Analyse",
+     	     "Remove"
+     	     ],
+     	"hasStorageCondition" : {
+     	     "hasDuration" : "pilot3:ContractDuration",
+     	     "hasLocation" : "dpv-legal:ES"},
+     	"hasRecipient" : {"@instance" : "pilot3:CXB"},
+     	
+     	"hasLegalBasis" : "dpv-gdpr:A6-1-b",
+     	
+     	"hasRight" : "A13",
+     	"hasRight" : "A15",
+     	"hasRight" : "A16",
+     	"hasRight" : "A17",
+     	"hasRight" : "A18",
+     	"hasRight" : "A19",
+     	"hasRight" : "A20",
+     	"hasRight" : "A22"
+     },
+
+
+
+
+ 
+     {
+     	"@description": "Policy for service personalization",
+     	"hasPurpose"      : [ 
+     	     "ServicePersonalization", 
+     	     "OptimisationForConsumer" 
+     	     ],
+     	"hasPersonalData" : [
+     	     "dpv-pd:Demographic",
+     	     "dpv-pd:Contact",
+     	     "dpv-pd:Financial",
+     	     "dpv-pd:Credit"
+     	     ],
+     	"hasProcessing"   : [
+     	     "Obtain",
+     	     "Store",
+     	     "Retrieve",
+     	     "Consult",
+     	     "Analyse",
+     	     "Remove"
+     	     ],
+     	"hasStorageCondition" : {
+     	     "hasDuration" : "pilot3:ContractDuration",
+     	     "hasLocation" : "dpv-legal:ES"},
+     	"hasRecipient" : {"@instance" : "pilot3:CXB"},
+     	
+     	"hasLegalBasis" : "dpv-gdpr:A6-1-a",
+     	
+     	"hasRight" : "A13",
+     	"hasRight" : "A15",
+     	"hasRight" : "A16",
+     	"hasRight" : "A17",
+     	"hasRight" : "A18",
+     	"hasRight" : "A19",
+     	"hasRight" : "A20",
+     	"hasRight" : "A22"
+     },
+      
+     {
+     	"@description": "Policy for service personalization for the controller",
+     	"hasPurpose"      : [ 
+     	     "OptimisationForController" 
+     	     ],
+     	"hasPersonalData" : [
+     	     "dpv-pd:Demographic",
+     	     "dpv-pd:Contact",
+     	     "dpv-pd:Financial",
+     	     "dpv-pd:Credit"
+     	     ],
+     	"hasProcessing"   : [
+     	     "Obtain",
+     	     "Store",
+     	     "Retrieve",
+     	     "Consult",
+     	     "Analyse",
+     	     "Remove"
+     	     ],
+     	"hasStorageCondition" : {
+     	     "hasDuration" : "pilot3:ContractDuration",
+     	     "hasLocation" : "dpv-legal:ES"},
+     	"hasRecipient" : {"@instance" : "pilot3:CXB"},
+     	
+     	"hasLegalBasis" : "dpv-gdpr:A6-1-a",
+     	
+     	"hasRight" : "A13",
+     	"hasRight" : "A15",
+     	"hasRight" : "A16",
+     	"hasRight" : "A17",
+     	"hasRight" : "A18",
+     	"hasRight" : "A19",
+     	"hasRight" : "A20",
+     	"hasRight" : "A22"
+     },
+
+    {
+     	"@description": "Fraud prevention and detection",
+     	"hasPurpose"      : [ 
+     	     "Fraud Prevention and Detection" 
+     	     ],
+     	"hasPersonalData" : [
+     	     "dpv-pd:Demographic",
+     	     "dpv-pd:Contact",
+                 "dpv-pd:Biometric",
+     "dpv-pd:Identifying",
+     	     "dpv-pd:Financial",
+     	     "dpv-pd:Credit"
+     	     ],
+     	"hasProcessing"   : [
+     	     "Obtain",
+     	     "Store",
+     	     "Retrieve",
+     	     "Consult",
+     	     "Analyse",
+                 "Transfer",
+                 "Share",
+     	     "Remove"
+     	     ],
+     	"hasStorageCondition" : {
+     	     "hasDuration" : "pilot3:ContractDuration",
+     	     "hasLocation" : "dpv-legal:ES"},
+     	"hasRecipient" : {"@instance" : "pilot3:CXB"},
+     	
+     	"hasLegalBasis" : "dpv-gdpr:A6-1-f",
+     	
+     	"hasRight" : "A13",
+     	"hasRight" : "A15",
+     	"hasRight" : "A20",
+     	"hasRight" : "A22"
+     },
+ 
+     {
+     	"@description": "Policy for service provision",
+     	"hasPurpose"      : 
+     	     "RequestedServiceProvision", 
+     	"hasPersonalData" : [
+     	     "dpv-pd:Demographic",
+     	     "dpv-pd:Contact",
+     	     "dpv-pd:Financial",
+     	     "dpv-pd:Credit"
+     	     ],
+     	"hasProcessing"   : [
+     	     "Obtain",
+     	     "Store",
+     	     "Retrieve",
+     	     "Consult",
+     	     "Analyse",
+     	     "Remove"
+     	     ],
+     	"hasStorageCondition" : {
+     	     "hasDuration" : "pilot3:ContractDuration",
+     	     "hasLocation" : "dpv-legal:ES"},
+     	"hasRecipient" : {"@instance" : "pilot3:CXB"},
+     	
+     	"hasLegalBasis" : "dpv-gdpr:A6-1-b",
+     	
+     	"hasRight" : "A13",
+     	"hasRight" : "A15",
+     	"hasRight" : "A16",
+     	"hasRight" : "A17",
+     	"hasRight" : "A18",
+     	"hasRight" : "A19",
+     	"hasRight" : "A20",
+     	"hasRight" : "A22"
+     }
+     
+  ]
+}
+
+
