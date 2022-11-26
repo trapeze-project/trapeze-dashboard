@@ -21,7 +21,7 @@
         class="black--text"
         color="primary"
         depressed
-        :to="localePath('/help')"
+        :to="localePath('/'+organizationName+'/help')"
       >
         {{ $t("btn.labels.consent-guide") }}
       </v-btn>
@@ -32,8 +32,13 @@
 <script>
 import controller from '../../static/data/controller.json'
 export default {
+  data(){
+    return{
+      organizationName : this.$nuxt.$route.path.split('/')[2]
+    }
+  },
   created () {
-    this.paramsForInterpolation = controller.paramsForInterpolation
+    this.paramsForInterpolation = this.$GlobalVariables.dataController.paramsForInterpolation
   }
 }
 </script>

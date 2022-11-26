@@ -73,21 +73,26 @@ export default {
   },
   data () {
     return {
-      links: [
-        { to: '/', label: 'nav.labels.home' },
-        {
-          to: '/consent?tab=consent',
-          label: 'nav.labels.consent-menu',
-          subLinks: [
-            { to: '/consent?tab=data', label: 'nav.labels.data' },
-            { to: '/consent?tab=purpose', label: 'nav.labels.purposes' },
-            { to: '/consent?tab=consent', label: 'nav.labels.consent' }
-          ]
-        },
-        { to: '/help', label: 'nav.labels.help' },
-        { to: '/faq', label: 'nav.labels.faq' }
-      ]
+      organizationName : '',
+      links: []
     }
+  },
+  created(){
+    this.organizationName = this.$nuxt.$route.path.split('/')[2]
+    this.links = [
+      { to: `/${this.organizationName}/`, label: 'nav.labels.home' },
+      {
+        to: `/${this.organizationName}/consent?tab=consent`,
+        label: 'nav.labels.consent-menu',
+        subLinks: [
+          { to: `/${this.organizationName}/consent?tab=data`, label: 'nav.labels.data' },
+          { to: `/${this.organizationName}/consent?tab=purpose`, label: 'nav.labels.purposes' },
+          { to: `/${this.organizationName}/consent?tab=consent`, label: 'nav.labels.consent' }
+        ]
+      },
+      { to: `/${this.organizationName}/help`, label: 'nav.labels.help' },
+      { to: `/${this.organizationName}/faq`, label: 'nav.labels.faq' }
+    ]
   }
 }
 </script>

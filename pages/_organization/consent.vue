@@ -64,7 +64,7 @@
 </template>
 
 <script>
-import examplePolicy from '../static/data/example.policy.json'
+import examplePolicy from '../../static/data/example.policy.json'
 export default {
   data () {
     return {
@@ -107,7 +107,6 @@ export default {
     /*
     if (this.$route.params.consentHelperUserChoices) {
       this.consentHelperUserChoices = JSON.parse(JSON.stringify(this.$route.params.consentHelperUserChoices))
-      console.log(JSON.stringify(this.$route.params.consentHelperUserChoices));
       this.calculateWarnings()
     }
     */

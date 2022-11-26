@@ -264,7 +264,6 @@ export default {
     changeUserChoice (parent, child, newConsentValue) {
       this.modifiedUserChoices[parent][child] = newConsentValue
       this.fixWarningIfExist(parent, child, newConsentValue)
-      console.log("tab:"+JSON.stringify(this.modifiedWarnings))
 
     },
     fixWarningIfExist (parent, child, newConsentValue) {

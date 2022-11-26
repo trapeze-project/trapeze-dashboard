@@ -1,0 +1,15 @@
+{
+    "companyInformation": {
+        "name": "AlexIT",
+        "add1": "Via del Campo Verde",
+        "add2": "123456, Viale dei fiori, Italy",
+        "website": "https://alex-it.com",
+        "email": "info@clover-it.com",
+        "position": "Data Protection Officer (DPO)",
+        "posName": "Nae Bouquet",
+        "companyLogoPath":"../img/alexLogo.png"
+    },
+    "paramsForInterpolation":{
+        "we":"AlexIT"
+    }
+}

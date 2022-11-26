@@ -102,11 +102,11 @@
 </template>
 
 <script>
-import faqEnUS from '../static/data/faq-enUS.json'
-import faqDeDE from '../static/data/faq-deDE.json'
-import faqItIT from '../static/data/faq-itIT.json'
-import faqFrFR from '../static/data/faq-frFR.json'
-import controller from '../static/data/controller.json'
+import faqEnUS from '../../static/data/faq-enUS.json'
+import faqDeDE from '../../static/data/faq-deDE.json'
+import faqItIT from '../../static/data/faq-itIT.json'
+import faqFrFR from '../../static/data/faq-frFR.json'
+import controller from '../../static/data/controller.json'
 
 export default {
   name: 'Faq',
@@ -128,13 +128,9 @@ export default {
     }
   },
   created () {
-    this.paramsForInterpolation = controller.paramsForInterpolation
+    this.paramsForInterpolation =  this.$GlobalVariables.dataController.paramsForInterpolation
 
-    String.prototype.interpolate = function (params) {
-      const names = Object.keys(params)
-      const values = Object.values(params)
-      return new Function(...names, `return \`${this}\`;`)(...values)
-    }
+
 
     if (this.$i18n.locale === 'en') {
       this.faq = faqEnUS

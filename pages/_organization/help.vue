@@ -23,6 +23,7 @@
                 v-if="index < Object.keys(imports.dataCategoryMap).length - 1"
                 :key="`${index}-divider`"
               />
+              
             </template>
           </v-stepper-header>
 
@@ -34,7 +35,7 @@
               class="pa-0"
             >
               <div>
-                <div style="white-space:pre-line">{{ $t(type.replace('dpv.','')) }}</div>
+                <div style="white-space:pre-line">{{ $t(type.replace('dpv.','')).interpolate(paramsForInterpolation) }}</div>
 
                 <v-divider class="my-3" />
 
@@ -91,11 +92,15 @@
 </template>
 
 <script>
-import examplePolicy from '../static/data/example.policy.json'
+import examplePolicy from '../../static/data/example.policy.json'
+import controller from '../../static/data/controller.json'
+
 export default {
   name: 'Helper',
   data () {
     return {
+      paramsForInterpolation: {},
+      organizationName : this.$nuxt.$route.path.split('/')[2],
       imports: {
         dataCategoryMap: ''
       },
@@ -106,6 +111,9 @@ export default {
   },
   created () {
     this.calculateDataCategoryMap();
+    this.paramsForInterpolation = this.$GlobalVariables.dataController.paramsForInterpolation
+
+
     /*
     let stored = window.localStorage.getItem("consent");
     if (stored) {
@@ -135,9 +143,8 @@ export default {
         const text = this.$t('snackbar.msg.please-complete-the-consent-guide')
         this.$refs.helpNotification.showNotification(text, 'orange')
       } else {
-        const consentPageRoute = this.$router.options.routes.find(route => route.path === this.localePath('/consent'))
         window.localStorage.setItem("consent", JSON.stringify(this.consentHelperUserChoices));
-        this.$router.push({ name: consentPageRoute.name, query: { tab: 'purpose' }/*, params: { consentHelperUserChoices: this.consentHelperUserChoices }*/ })
+        this.$router.push({ path:this.localePath(`/${this.organizationName}/consent`), query: { tab: 'purpose' }})
       }
     },
     calculateDataCategoryMap () {

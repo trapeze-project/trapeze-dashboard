@@ -35,13 +35,9 @@ export default {
     }
   },
   created () {
-    this.paramsForInterpolation = controller.paramsForInterpolation
+    this.paramsForInterpolation = this.$GlobalVariables.dataController.paramsForInterpolation
 
-    String.prototype.interpolate = function (params) {
-      const names = Object.keys(params)
-      const values = Object.values(params)
-      return new Function(...names, `return \`${this}\`;`)(...values)
-    }
+
   },
 }
 </script>

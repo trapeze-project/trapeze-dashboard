@@ -1,9 +1,19 @@
+import router from 'vue-router';
+import Vuex from 'vuex'
+
+
+
+
+
 export const state = () => ({
-  counter: 0
+  dataController: 'cpmpany'
 })
 
+// console.log(router)
 export const mutations = {
-  increment (state) {
-    state.counter++
-  }
+  SET_DataController (state, value) {
+    state.dataController = value
+  },
+
 }
+

@@ -1,6 +1,6 @@
 <template>
   <v-card outlined color="transparent">
-    <v-img src="/img/company.png" />
+    <v-img :src="this.companyInformation.companyLogoPath" />
     <v-card-text>
       <b>{{ this.companyInformation.name }}</b><br>
       {{ this.companyInformation.add1 }}<br>
@@ -27,11 +27,12 @@ import controller from '../../static/data/controller.json'
 export default {
   data () {
     return {
-      companyInformation: {}
+      companyInformation: {},
+      companyName : this.$nuxt.$route.path.split('/')[2]
     }
   },
   created () {
-    this.companyInformation = controller.companyInformation
+    this.companyInformation = this.$GlobalVariables.dataController.companyInformation
   }
 }
 </script>

@@ -1,33 +1,32 @@
 <template>
-  <div id="index">
-    <v-row justify="center" align="center">
-      <v-col>
-        <PWlcmMsg />
-      </v-col>
-    </v-row>
-
-    <v-row>
-      <v-col
-        v-for="(item, idx) in Object.values($t('home.items'))"
-        :key="idx"
-        cols="6"
-        sm="3"
-        md="3"
-        lg="3"
-      >
-        <PExplainCard
-          class="fill-height"
-          :title="item.title"
-          :content="item.content"
-          :filename="item.filename"
-          :href="item.link"
-        />
-      </v-col>
-    </v-row>
+  <div>
+    <v-btn @click="loadOrgDashboard('CloverIT')">
+      CloverIT
+    </v-btn>
+    <v-btn @click="loadOrgDashboard('AlexIT')">
+      AlexIT
+    </v-btn>
   </div>
 </template>
 
 <script>
+import AlexITController from '~/static/data/AlexITController.json'
+import CloverITController from '~/static/data/CloverITController.json'
+
+
 export default {
+  layout: 'empty',
+  methods:{
+    loadOrgDashboard(organizationName){
+      if(organizationName === 'CloverIT'){
+        this.$GlobalVariables.dataController = CloverITController
+        this.$router.push({ path:this.localePath(`/${organizationName}`) } )
+      }else if(organizationName === 'AlexIT'){
+        this.$GlobalVariables.dataController = AlexITController
+        this.$router.push({ path:this.localePath(`/${organizationName}`)})
+      }
+
+    }
+  },
 }
 </script>

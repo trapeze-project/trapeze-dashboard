@@ -62,7 +62,7 @@ export default {
     }
   },
   created () {
-    this.paramsForInterpolation = controller.paramsForInterpolation
+    this.paramsForInterpolation = this.$GlobalVariables.dataController.paramsForInterpolation
   },
   methods: {
     params (dataCategory, purpose) {
