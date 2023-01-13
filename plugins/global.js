@@ -1,3 +1,4 @@
+/*
 String.prototype.interpolate = function (params) {
   const names = Object.keys(params)
   const values = Object.values(params)
@@ -20,4 +21,4 @@ export default function ({ route } ,inject) {
   }
 
 }
-
+*/

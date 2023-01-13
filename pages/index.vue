@@ -10,11 +10,12 @@
 </template>
 
 <script>
+/*
 import AlexITController from '~/static/data/AlexITController.json'
 import CloverITController from '~/static/data/CloverITController.json'
 
 export default {
-  layout: 'empty',
+  layout: 'default',
   methods:{
     loadOrgDashboard(organizationName){
       if(organizationName === 'CloverIT'){
@@ -28,4 +29,5 @@ export default {
     }
   },
 }
+*/
 </script>

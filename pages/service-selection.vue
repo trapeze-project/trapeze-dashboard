@@ -26,6 +26,7 @@
 </template>
 
 <script>
+/*
 import AlexITController from "~/static/data/AlexITController.json";
 import CloverITController from "~/static/data/CloverITController.json";
 
@@ -43,4 +44,5 @@ export default {
     },
   },
 };
+*/
 </script>
