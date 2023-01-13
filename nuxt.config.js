@@ -2,6 +2,7 @@
 // eslint-disable-next-line nuxt/no-cjs-in-config
 const Design = require('./design.config.json')
 export default {
+
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
     titleTemplate: 'Privacy Dashboard : TRAPEZE',
@@ -20,6 +21,7 @@ export default {
   css: ['~/assets/css/main',
     '~/assets/css/variables.scss'
   ],
+
   serverMiddleware: [
   ],
 
@@ -82,39 +84,61 @@ export default {
       }
     ]
   ],
+
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
   axios: {
     baseURL: process.env.BASE_URL,
     proxyHeaders: false,
     credentials: false
   },
+  
   auth: {
-    redirect: {
-      login: '/login',
-      logout: '/login',
-      callback: '/login',
-      home: '/'
-    },
     strategies: {
-      cookie: {
-        user: {
-          property: false,
-          autoFetch: true
-        },
+      local: false,
+      keycloak: {
+        scheme: "oauth2",
         endpoints: {
-          login: { url: process.env.AUTH_URL + '/auth/login/', method: 'post', withCredentials: true },
-          logout: { url: process.env.AUTH_URL + '/auth/logout/', method: 'get', withCredentials: true },
-          user: { url: process.env.AUTH_URL + '/users/me/', method: 'get', withCredentials: true }
-        }
-      }
-    }
-  },
+          authorization:
+            "https://trapeze.imp.bg.ac.rs/auth/realms/trapeze/protocol/openid-connect/auth",
+          token:
+            "https://trapeze.imp.bg.ac.rs/auth/realms/trapeze/protocol/openid-connect/token",
+          userInfo:
+            "https://trapeze.imp.bg.ac.rs/auth/realms/trapeze/protocol/openid-connect/userinfo",
+          logout:
+            "https://trapeze.imp.bg.ac.rs/auth/realms/trapeze/protocol/openid-connect/logout" +
+            "?redirect_uri=" + encodeURIComponent("http://localhost:3000/home"),
+        },
+        token: {
+          property: "access_token",
+          type: "Bearer",
+          name: "Authorization",
+          maxAge: 300,
+        },
+        refreshToken: {
+          property: "refresh_token",
+          maxAge: 60 * 60 * 24 * 30,
+        },
+        responseType: "code",
+        grantType: "password",
+        clientId: "trapeze-dashboard",
+        scope: ["openid"],
+        codeChallengeMethod: "S256",
+      },
+    },
+    redirect: {
+      login: "/home",
+      // logout: "/login",
+      home: "/",
+    },
+  },  
+
   publicRuntimeConfig: {
     logo: Design.logo,
     background: Design.background,
     authApiUrl: process.env.AUTH_URL,
     baseURL: process.env.BASE_URL
   },
+
   vuetify: {
     // customVariables: ['~/assets'],
     theme: {
@@ -123,17 +147,22 @@ export default {
       }
     }
   },
+
   loading: {
     color: Design.theme.light.primary,
     height: '3px'
   },
+
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
     extractCSS: true
   },
+
   watch: ['design'],
+
   server: {
     host: process.env.HOST,
     port: process.env.PORT
   }
+  
 }
