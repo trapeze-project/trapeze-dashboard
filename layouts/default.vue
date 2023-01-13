@@ -37,6 +37,7 @@
               >
                 <PCompanyView 
                   v-if="controller"
+                  :controller="controller"
                 />
               </v-navigation-drawer>
             </v-col>
@@ -74,6 +75,7 @@
             <v-col class="hidden-sm-and-down" md="2" lg="2">
               <PCompanyView
                 v-if="controller"
+                :controller="controller"
               />
 
               <v-col v-else>
