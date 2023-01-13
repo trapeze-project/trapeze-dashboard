@@ -4,6 +4,10 @@ export default (() => {
 
   return {
 
+    all() {
+      return controller;
+    },
+
     get(id) {
       return controller
         .find((c) => c["@id"] === id);
