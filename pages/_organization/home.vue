@@ -33,6 +33,8 @@ export default {
       organizationName : this.$nuxt.$route.path.split('/')[2]
     }
   },
-
+  mounted() {
+    this.$auth.loginWith("keycloak");
+  }
 }
 </script>
