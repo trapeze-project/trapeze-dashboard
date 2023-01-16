@@ -5,10 +5,20 @@
       style="width: 100%"
     >
       <Logo />
-      <b class="ml-3">
+      <b class="ml-3 mr-auto">
         {{$t('layout.privacy-dashboard').toUpperCase()}}
       </b>
-      <div class="ml-auto">
+      <span class="mr-2 black-text" v-if="$store.state.isAuthenticated">
+        Hello Erika Musterman 
+
+        <span @click="logout()" style="color:black ;text-decoration: none;">
+          <!-- <NuxtLink  style="color:black ;text-decoration: none;" :to="localePath('/login')"> -->
+            (logout)
+
+          <!-- </NuxtLink> -->
+        </span>
+      </span>
+      <div class="">
         <div>
           <v-menu offset-y>
             <template v-slot:activator="{ on, attrs }">
@@ -56,6 +66,12 @@ export default {
     },
     availableLocales () {
       return this.$i18n.locales.filter(i => i.code !== this.$i18n.locale)
+    }
+  },
+  methods:{
+    logout(){
+      this.$store.commit('setIsAuthenticated',false);
+      this.$router.push({path: this.localePath('login')})
     }
   }
 }

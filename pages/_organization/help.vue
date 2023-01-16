@@ -111,7 +111,7 @@ export default {
   },
   created () {
     this.calculateDataCategoryMap();
-    this.paramsForInterpolation = this.$GlobalVariables.dataController.paramsForInterpolation
+    this.paramsForInterpolation = this.$store.state.dataController.paramsForInterpolation
 
 
     /*

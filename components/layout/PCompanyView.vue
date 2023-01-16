@@ -1,6 +1,6 @@
 <template>
   <v-card outlined color="transparent">
-    <v-img :src="this.companyInformation.companyLogoPath" />
+    <v-img :src="companyInformation.companyLogoPath" alt="pic unavailable"/>
     <v-card-text>
       <b>{{ this.companyInformation.name }}</b><br>
       {{ this.companyInformation.add1 }}<br>
@@ -18,11 +18,13 @@
         :email="companyInformation.email"
       />
     </v-card-text>
+    <div v-show="false">
+      {{this.$store.state.dataController}}
+    </div>
   </v-card>
 </template>
 
 <script>
-import controller from '../../static/data/controller.json'
 
 export default {
   data () {
@@ -32,7 +34,7 @@ export default {
     }
   },
   created () {
-    this.companyInformation = this.$GlobalVariables.dataController.companyInformation
+    this.companyInformation = this.$store.state.dataController.companyInformation
   }
 }
 </script>

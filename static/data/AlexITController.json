@@ -7,7 +7,7 @@
         "email": "info@clover-it.com",
         "position": "Data Protection Officer (DPO)",
         "posName": "Nae Bouquet",
-        "companyLogoPath":"../img/alexLogo.png"
+        "companyLogoPath":"/img/alexLogo.png"
     },
     "paramsForInterpolation":{
         "we":"AlexIT"

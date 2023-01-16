@@ -25,7 +25,8 @@ export default {
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
-    {src:'~/plugins/global.js',srr: false}
+    {src:'~/plugins/global.js',srr: false},
+    {src:'~/store/index.js',srr: false}
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
@@ -93,7 +94,6 @@ export default {
       login: '/login',
       logout: '/login',
       callback: '/login',
-      home: '/'
     },
     strategies: {
       cookie: {

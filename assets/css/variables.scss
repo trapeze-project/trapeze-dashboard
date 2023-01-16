@@ -7,9 +7,13 @@ html,body, #issues {
     font-size: 96%;
   }
 }
-div.choose-table tr {
+div.choose-table tr,.clickable {
   cursor: pointer;
 }
 .v-btn {
   text-transform:none !important;
+}
+
+.preLineText::first-line {
+  line-height: 0;
 }

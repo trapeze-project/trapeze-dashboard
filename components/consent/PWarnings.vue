@@ -62,7 +62,8 @@ export default {
     }
   },
   created () {
-    this.paramsForInterpolation = this.$GlobalVariables.dataController.paramsForInterpolation
+    this.paramsForInterpolation = this.$store.state.dataController.paramsForInterpolation
+    console.log("green"+this.paramsForInterpolation)
   },
   methods: {
     params (dataCategory, purpose) {

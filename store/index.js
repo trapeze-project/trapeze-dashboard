@@ -3,17 +3,19 @@ import Vuex from 'vuex'
 
 
 
-
-
 export const state = () => ({
-  dataController: 'cpmpany'
+  dataController: {},
+  isAuthenticated:false
+  
 })
 
-// console.log(router)
-export const mutations = {
-  SET_DataController (state, value) {
-    state.dataController = value
-  },
 
+export const mutations = {
+  setDataController(state, value) {
+    state.dataController = Object.assign({}, value)
+  },
+  setIsAuthenticated(state, value) {
+    state.isAuthenticated = value
+  }
 }
 

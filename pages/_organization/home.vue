@@ -32,6 +32,7 @@ export default {
     return{
       organizationName : this.$nuxt.$route.path.split('/')[2]
     }
-  }
+  },
+
 }
 </script>

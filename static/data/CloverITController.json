@@ -7,7 +7,7 @@
         "email": "info@clover-it.com",
         "position": "Data Protection Officer (DPO)",
         "posName": "Andrea Bouquet",
-        "companyLogoPath":"../img/cloverLogo.png"
+        "companyLogoPath":"/img/cloverLogo.png"
     },
     "paramsForInterpolation":{
         "we":"CloverIT"

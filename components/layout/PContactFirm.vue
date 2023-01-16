@@ -140,7 +140,6 @@ export default {
     sendMessage(){
       this.dialog = false;
       const text = this.$t('snackbar.msg.message-sent')
-      console.log(text)
       this.$refs.notification.showNotification(text, 'green')
       this.clearAllFields()
     },
