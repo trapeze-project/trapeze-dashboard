@@ -1,40 +1,33 @@
 <template>
   <v-card outlined color="transparent">
-    <v-img :src="companyInformation.companyLogoPath" alt="pic unavailable"/>
+    <v-img :src="controller.logo" />
     <v-card-text>
-      <b>{{ this.companyInformation.name }}</b><br>
-      {{ this.companyInformation.add1 }}<br>
-      {{ this.companyInformation.add2 }}<br>
-      {{ this.companyInformation.website }}<br>
+      <b>{{ controller.name }}</b><br>
+      {{ controller.address.streetAddress }}<br>
+      {{ controller.address.postalCode }}, {{ controller.address.addressLocality }}<br>
+      {{ controller.url }}<br>
       <br>
 
       <b>{{ $t("general.dpo") }} ({{ $t("general.dpo-abbrev") }})</b><br>
-      {{ this.companyInformation.posName }}<br>
-      {{ this.companyInformation.email }}<br>
+      {{ controller.alumni[0].name }}<br>
+      {{ controller.email }}<br>
       <PContactFirm
         class="mt-3"
-        :company-name="companyInformation.name"
+        :company-name="controller.name"
         :btn-name="$t('btn.labels.contact')"
-        :email="companyInformation.email"
+        :email="controller.email"
       />
     </v-card-text>
-    <div v-show="false">
-      {{this.$store.state.dataController}}
-    </div>
   </v-card>
 </template>
 
 <script>
-
 export default {
-  data () {
-    return {
-      companyInformation: {},
-      companyName : this.$nuxt.$route.path.split('/')[2]
+  props: {
+    controller: {
+      type: Object,
+      default: () => {}
     }
   },
-  created () {
-    this.companyInformation = this.$store.state.dataController.companyInformation
-  }
 }
 </script>

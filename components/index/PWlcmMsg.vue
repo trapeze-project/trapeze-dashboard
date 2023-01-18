@@ -4,40 +4,24 @@
       {{ $t("home.title") }}
     </v-card-title>
     <v-card-text>
-      <p style="white-space: pre-line" class="preLineText">
-        {{ $t("home.welcome-msg1").interpolate(paramsForInterpolation) }} <span class="clickable" @click="showMore = !showMore" v-show="!showMore" style="color:blue ;text-decoration: underline;">show more</span>
+      <p style="white-space:pre-line">
+        {{ $t("home.welcome-msg1").interpolate(interpolated) }}
       </p>
-      <v-expand-transition >
-        <div v-show="showMore">
-            <p style="white-space: pre-line" class="preLineText">
-              {{ $t("home.welcome-msg2").interpolate(paramsForInterpolation) }}
-            </p>
-          
-            <ul>
-              <li
-                v-for="(item, idx) in Object.values($t('home.purpose'))"
-                :key="idx"
-              >
-                {{ item.name }}
-              </li>
-            </ul>
+      <ul>
+        <li v-for="(item, idx) in Object.values($t('home.purpose'))" :key="idx">
+          {{ item.name }}
+        </li>
+      </ul>
 
-            <v-divider class="my-3" />
+      <v-divider class="my-3" />
 
-            <p>
-              {{ $t("home.welcome-msg3").interpolate(paramsForInterpolation) }} <span class="clickable" @click="showMore = !showMore" v-show="showMore" style="color:blue ;text-decoration: underline;">show less</span>
-            </p>
+      <p>
+        {{ $t("home.welcome-msg2").interpolate(interpolated) }}
+      </p>
 
-            <v-btn
-              class="black--text"
-              color="primary"
-              depressed
-              :to="localePath('/' + organizationName + '/help')"
-            >
-              {{ $t("btn.labels.consent-guide") }}
-            </v-btn>
-        </div>
-      </v-expand-transition>
+      <v-btn class="black--text" color="primary" depressed :to="localePath('/' + controller['@id'] + '/help')">
+        {{ $t("btn.labels.consent-guide") }}
+      </v-btn>
     </v-card-text>
 
     <!-- <v-card-actions class="mt-2 pt-0">
@@ -53,15 +37,18 @@
 
 <script>
 export default {
+  props: {
+    controller: {
+      type: Object,
+      default: () => { }
+    }
+  },
   data() {
     return {
-      organizationName: this.$nuxt.$route.path.split("/")[2],
-      showMore: false,
-    };
+      interpolated: {
+        we: this.controller.name
+      }
+    }
   },
-  created() {
-    this.paramsForInterpolation =
-      this.$store.state.dataController.paramsForInterpolation;
-  },
-};
+}
 </script>

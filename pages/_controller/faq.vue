@@ -6,7 +6,7 @@
       <v-card-text>
         <v-row>
           <v-col>
-            <p> {{ $t("qna.introduction").interpolate(paramsForInterpolation) }} </p>
+            <p> {{ $t("qna.introduction").interpolate(interpolated) }} </p>
           </v-col>
         </v-row>
 
@@ -29,10 +29,10 @@
 
         <v-card v-if="searching">
           <v-card-title style="white-space:pre-line">
-            {{ this.matchedQNA.question.interpolate(paramsForInterpolation) }}
+            {{ this.matchedQNA.question.interpolate(interpolated) }}
           </v-card-title>
           <v-card-text style="white-space:pre-line">
-            <div>{{ this.matchedQNA.answer.interpolate(paramsForInterpolation) }}</div>
+            <div>{{ this.matchedQNA.answer.interpolate(interpolated) }}</div>
           </v-card-text>
           <v-card-actions>
             <div v-if="Object.values(matchedQNA.references).length">
@@ -58,7 +58,7 @@
                   $expand
                 </v-icon>
               </template>
-              <span class="header" style="white-space:pre-line">{{ category.interpolate(paramsForInterpolation) }}</span>
+              <span class="header" style="white-space:pre-line">{{ category.interpolate(interpolated) }}</span>
             </v-expansion-panel-header>
             <v-expansion-panel-content>
               <v-expansion-panels flat>
@@ -69,15 +69,15 @@
                   <v-expansion-panel-header>
                     <template v-slot:actions>
                       <v-icon class="icon" left>
-                        $expand
+                        $expan@click:append="search"
                       </v-icon>
                     </template>
-                    <span class="header" style="white-space:pre-line">{{ faq[category]['qnas'][qna].question.interpolate(paramsForInterpolation) }}</span>
+                    <span class="header" style="white-space:pre-line">{{ faq[category]['qnas'][qna].question.interpolate(interpolated) }}</span>
                   </v-expansion-panel-header>
 
                   <v-expansion-panel-content>
                     <p style="white-space:pre-line">
-                      {{ faq[category]['qnas'][qna].answer.interpolate(paramsForInterpolation) }}
+                      {{ faq[category]['qnas'][qna].answer.interpolate(interpolated) }}
                     </p>
                     <div
                       v-if="Object.values(faq[category]['qnas'][qna].references).length"
@@ -102,11 +102,11 @@
 </template>
 
 <script>
+import ControllerService from '~/modules/ControllerService';
 import faqEnUS from '../../static/data/faq-enUS.json'
 import faqDeDE from '../../static/data/faq-deDE.json'
 import faqItIT from '../../static/data/faq-itIT.json'
 import faqFrFR from '../../static/data/faq-frFR.json'
-import controller from '../../static/data/controller.json'
 
 export default {
   name: 'Faq',
@@ -116,8 +116,16 @@ export default {
       userQuestion: '',
       matchedQNA: '',
       searching: false,
-      paramsForInterpolation: {}
-
+      controller: ControllerService.get(
+        this.$nuxt.$route.params.controller
+      ),
+    }
+  },
+  computed: {
+    interpolated() {
+      return {
+        we: this.controller.name
+      };
     }
   },
   watch: {
@@ -128,9 +136,7 @@ export default {
     }
   },
   created () {
-    this.paramsForInterpolation =  this.$store.state.dataController.paramsForInterpolation
-
-
+    this.interpolated =  this.$store.state.dataController.interpolated
 
     if (this.$i18n.locale === 'en') {
       this.faq = faqEnUS

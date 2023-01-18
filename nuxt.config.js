@@ -1,6 +1,7 @@
 /* eslint-disable eqeqeq */
 // eslint-disable-next-line nuxt/no-cjs-in-config
 const Design = require('./design.config.json')
+
 export default {
 
   // Global page headers (https://go.nuxtjs.dev/config-head)
