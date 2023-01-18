@@ -1,37 +1,71 @@
 <template>
 
-    <v-card>
-      <v-card-title>
+  <v-card
+    elevation="0"
+  >
+    <v-card-title>
+      <!-- @TODO: enable localization of string -->
+      Select a data controller to manage your consent.
+    </v-card-title>
+
+    <v-divider />
+
+    <v-row 
+      align="center"
+      justify="center"
+      class="mt-1"
+    >
+      <v-col>
         <!-- @TODO: enable localization of string -->
-        Select a data controller to manage your consent.
-      </v-card-title>
+        <v-text-field
+          v-model="keyword"
+          placeholder="Search for a controller ..."
+          outlined
+          dense
+          clearable
+          append-icon="mdi-magnify"
+          @click:append="search"
+          @keyup="search"
+          @keyup.enter="search"
+        />
+      </v-col>
+    </v-row>
 
-      <v-row class="px-3">
-        <v-col
-          cols="6"
-          class="mx-0"
-          v-for="c, index in controller"
-          :key="index"
-          >
-          <v-card>
-            <v-img max-height="125" contain :src="c.logo"></v-img>
-            <v-card-title>{{ c.name }}</v-card-title>
-            <v-card-actions>
-              <v-spacer />
-              <v-btn
-                class="black--text"
-                color="primary" 
-                @click="direct('/', c['@id'])"> 
-                <!-- @TODO: enable localization of string -->
-                Select
-              </v-btn>
-              <v-spacer />
-            </v-card-actions>
-          </v-card>
-        </v-col>        
-      </v-row>
+    <v-row>
+      <v-col cols="6" class="mx-0" v-for="c, index in controller" :key="index">
+        <v-card elevation="0" outlined>
 
-    </v-card>
+          <div class="d-flex flex-no-wrap justify-space-between">
+
+            <v-avatar class="ma-3" size="100" tile>
+              <v-img :src="c.logo"></v-img>
+            </v-avatar>
+
+            <div>
+              <v-card-title>
+                {{ c.name }}
+              </v-card-title>
+
+              <v-card-text>
+                {{ c.address.streetAddress }}<br />
+                {{ c.address.postalCode }},
+                {{ c.address.addressLocality }}<br />
+                {{ c.url }}<br />
+              </v-card-text>
+
+              <v-card-actions>
+                <v-btn class="black--text" color="primary" @click="direct('/', c['@id'])">
+                  <!-- @TODO: enable localization of string -->
+                  Select
+                </v-btn>
+              </v-card-actions>
+
+            </div>
+          </div>
+        </v-card>
+      </v-col>
+    </v-row>
+  </v-card>
 
 </template>
 
@@ -42,15 +76,22 @@ export default {
   layout: "default",
   data() {
     return {
-      controller: []
+      controller: [],
+      keyword: ""
     };
   },
   created() {
-    this.controller = ControllerService.all();
+    this.reset();
   },
   methods: {
     direct(to, controller) {
-      window.location.href = to + "?controller=" + controller;
+      window.location.href = "/" + controller;
+    },
+    reset() {
+      this.controller = ControllerService.all();
+    },
+    search() {
+      this.controller = ControllerService.search(this.keyword);
     },
   },
 };

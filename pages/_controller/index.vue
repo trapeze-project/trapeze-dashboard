@@ -2,7 +2,9 @@
   <div id="index">
     <v-row justify="center" align="center">
       <v-col>
-        <PWlcmMsg />
+        <PWlcmMsg 
+          :controller="controller"
+        />
       </v-col>
     </v-row>
     <v-row>
@@ -16,6 +18,7 @@
       >
         <PExplainCard
           class="fill-height"
+          :controller="controller"
           :title="item.title"
           :content="item.content"
           :filename="item.filename"
@@ -27,14 +30,18 @@
 </template>
 
 <script>
+import ControllerService from "../../modules/ControllerService.js";
+
 export default {
-  data(){
-    return{
-      organizationName : this.$nuxt.$route.path.split('/')[2]
+  data() {
+    return {
+      controller: ControllerService.get(
+        this.$nuxt.$route.params.controller
+      ),
     }
   },
   mounted() {
-    this.$auth.loginWith("keycloak");
+
   }
 }
 </script>

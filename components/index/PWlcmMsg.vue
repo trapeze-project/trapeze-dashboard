@@ -4,7 +4,9 @@
       {{ $t("home.title") }}
     </v-card-title>
     <v-card-text>
-      <p style="white-space:pre-line">{{ $t("home.welcome-msg1").interpolate(paramsForInterpolation) }}</p>
+      <p style="white-space:pre-line">
+        {{ $t("home.welcome-msg1").interpolate(interpolated) }}
+      </p>
       <ul>
         <li v-for="(item, idx) in Object.values($t('home.purpose'))" :key="idx">
           {{ item.name }}
@@ -14,14 +16,14 @@
       <v-divider class="my-3" />
 
       <p>
-        {{ $t("home.welcome-msg2").interpolate(paramsForInterpolation) }}
+        {{ $t("home.welcome-msg2").interpolate(interpolated) }}
       </p>
 
-      <v-btn
-        class="black--text"
-        color="primary"
-        depressed
-        :to="localePath('/'+organizationName+'/help')"
+      <v-btn 
+        class="black--text" 
+        color="primary" 
+        depressed 
+        :to="localePath('/' + controller['@id'] + '/help')"
       >
         {{ $t("btn.labels.consent-guide") }}
       </v-btn>
@@ -30,15 +32,19 @@
 </template>
 
 <script>
-import controller from '../../static/data/controller.json'
 export default {
-  data(){
-    return{
-      organizationName : this.$nuxt.$route.path.split('/')[2]
+  props: {
+    controller: {
+      type: Object,
+      default: () => { }
     }
   },
-  created () {
-    this.paramsForInterpolation = this.$GlobalVariables.dataController.paramsForInterpolation
-  }
+  data() {
+    return {
+      interpolated: {
+        we: this.controller.name
+      }
+    }
+  },
 }
 </script>

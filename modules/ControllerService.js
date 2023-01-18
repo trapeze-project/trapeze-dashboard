@@ -13,6 +13,21 @@ export default (() => {
         .find((c) => c["@id"] === id);
     },
 
+    search(keyword) {
+      if (keyword === "") {
+        return controller;
+      }
+
+      return controller
+        .filter((c) => {
+          return c.name
+            .toLowerCase()
+            .includes(
+              keyword.toLowerCase()
+            );
+        });
+    },
+
   }
 
 })();

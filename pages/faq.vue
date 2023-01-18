@@ -69,7 +69,7 @@
                   <v-expansion-panel-header>
                     <template v-slot:actions>
                       <v-icon class="icon" left>
-                        $expand
+                        $expan@click:append="search"
                       </v-icon>
                     </template>
                     <span class="header" style="white-space:pre-line">{{ faq[category]['qnas'][qna].question.interpolate(paramsForInterpolation) }}</span>
@@ -102,11 +102,10 @@
 </template>
 
 <script>
-import faqEnUS from '../../static/data/faq-enUS.json'
-import faqDeDE from '../../static/data/faq-deDE.json'
-import faqItIT from '../../static/data/faq-itIT.json'
-import faqFrFR from '../../static/data/faq-frFR.json'
-import controller from '../../static/data/controller.json'
+import faqEnUS from '../static/data/faq-enUS.json'
+import faqDeDE from '../static/data/faq-deDE.json'
+import faqItIT from '../static/data/faq-itIT.json'
+import faqFrFR from '../static/data/faq-frFR.json'
 
 export default {
   name: 'Faq',

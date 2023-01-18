@@ -7,13 +7,13 @@
     </v-card-title>
 
     <v-card-text>
-      {{ content.interpolate(paramsForInterpolation) }}
+      {{ content.interpolate(interpolated) }}
     </v-card-text>
     <v-spacer />
     <v-card-actions>
       <v-spacer />
-      <v-btn v-bind="btnProps">
-        {{ this.btnLabel }}
+      <v-btn v-bind="btn.props">
+        {{ this.btn.label }}
       </v-btn>
       <v-spacer />
     </v-card-actions>
@@ -21,18 +21,21 @@
 </template>
 
 <script>
-import controller from '../../static/data/controller.json'
 export default {
   props: {
+    controller: {
+      type: Object,
+      default: () => { }
+    },
     title: {
       type: String,
       required: true,
-      default: 'Title'
+      default: ""
     },
     content: {
       type: String,
       required: true,
-      default: 'Content'
+      default: ""
     },
     filename: {
       type: String,
@@ -45,32 +48,34 @@ export default {
   },
   data () {
     return {
-      btnLabel: '',
-      btnProps: '',
-      paramsForInterpolation: {}
+      btn: {
+        label: "",
+        props: {},
+      },
+      interpolated: {
+        we: this.controller.name
+      }
     }
   },
   created () {
-    this.paramsForInterpolation = this.$GlobalVariables.dataController.paramsForInterpolation
-
-
-    this.calculateButtonProperties()
+    this.link()
   },
   methods: {
-    calculateButtonProperties () {
-      this.btnProps = {}
-      if (this.href.startsWith('http')) {
-        this.btnLabel = this.$t('btn.labels.visit-website')
-        this.btnProps.href = this.href ;
-        this.btnProps.target = '_blank'
+    link() {
+      if (this.href.startsWith("http")) {
+        this.btn.label = this.$t("btn.labels.visit-website")
+        this.btn.props.href = this.href ;
+        this.btn.props.target = "_blank"
       } else {
-        let orgName = '/' +this.$nuxt.$route.path.split('/')[2];
-        this.btnLabel = this.$t('btn.labels.view');
-        this.btnProps.to = this.localePath(orgName + this.href)
+        this.btn.label = this.$t("btn.labels.view");
+        this.btn.props.to = this.localePath(
+          "/" + this.controller["@id"] + this.href
+        )
       }
-      this.btnProps.depressed = true
-      this.btnProps.class = 'black--text'
-      this.btnProps.color = 'primary'
+
+      this.btn.props.depressed = true
+      this.btn.props.class = "black--text"
+      this.btn.props.color = "primary"
     }
   }
 }

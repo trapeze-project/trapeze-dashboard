@@ -110,27 +110,15 @@ export default {
         navigation: null,
         controller: null
       },
+      controller: null,
       showControllerSelection: false,
     };
   },
   created() {
-    /**
-     * @TODO
-     * There is a difference between
-     *  - this.$route.query.hasOwnProperty("controller") === true
-     *  - the client requested a controller with a wrong UUID
-     * and
-     *  - this.$route.query.hasOwnProperty("controller") === false
-     *  - the client did not request a controller and
-     *  - might expect the controller selection page
-     */
-    this.controller = ControllerService.get(this.$route.query.controller);
-
-    /**
-     * @TODO
-     * There might be a better way to get the current route
-     * Treat as a dirty hack for now
-     */
+    this.controller = ControllerService.get(
+      this.$nuxt.$route.params.controller
+    ),
+    
     this.showControllerSelection = !this.$route.path.includes("controller-selection");
   },
   methods: {
