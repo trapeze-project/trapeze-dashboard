@@ -5,7 +5,8 @@ export default (() => {
   return {
 
     all() {
-      return controller;
+      return controller
+        .slice(0, 10);
     },
 
     get(id) {
@@ -15,7 +16,7 @@ export default (() => {
 
     search(keyword) {
       if (keyword === "") {
-        return controller;
+        return this.all();
       }
 
       return controller

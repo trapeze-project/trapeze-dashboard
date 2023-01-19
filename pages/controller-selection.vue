@@ -32,10 +32,20 @@
     </v-row>
 
     <v-row>
-      <v-col cols="6" class="mx-0" v-for="c, index in controller" :key="index">
-        <v-card elevation="0" outlined>
 
-          <div class="d-flex flex-no-wrap justify-space-between">
+      <!-- Show N random controller. -->
+      <v-col 
+        cols="12"
+        sm="6"
+        lg="4"
+        xl="3"
+        class="mx-0" 
+        v-for="c, index in controller" 
+        :key="index"
+      >
+        <v-card class="fill-height" elevation="0" outlined>
+
+          <div class="d-flex flex-no-wrap align-center justify-space-around">
 
             <v-avatar class="ma-3" size="100" tile>
               <v-img :src="c.logo"></v-img>
@@ -64,6 +74,37 @@
           </div>
         </v-card>
       </v-col>
+
+      <!-- An additional tile to hint to the search field. -->
+      <v-col 
+        cols="12"
+        sm="6"
+        lg="4"
+        xl="3"
+        class="mx-0"
+      >
+        <v-card class="fill-height" elevation="0" outlined>
+
+          <div class="d-flex flex-no-wrap align-center justify-space-around">
+
+            <v-avatar class="ma-3" size="100" tile>
+              <v-icon x-large>mdi-magnify</v-icon>
+            </v-avatar>
+
+            <!-- @TODO enable localization of string -->
+            <div>
+              <v-card-title>
+                The controller you're looking for is not in the list?
+              </v-card-title>
+
+              <v-card-text>
+                Use the search field to find more controllers.
+              </v-card-text>
+            </div>
+          </div>
+        </v-card>
+      </v-col>    
+
     </v-row>
   </v-card>
 
