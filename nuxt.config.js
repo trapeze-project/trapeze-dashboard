@@ -3,7 +3,7 @@
 const Design = require('./design.config.json')
 
 export default {
-
+  ssr: false,
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
     titleTemplate: 'Privacy Dashboard : TRAPEZE',

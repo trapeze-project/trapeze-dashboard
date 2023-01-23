@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar app clipped-left absolute color="primary">
+  <v-app-bar app clipped-left color="primary">
     <div
       class="d-flex justify-space-between align-center flex-row"
       style="width: 100%"

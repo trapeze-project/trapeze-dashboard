@@ -3,7 +3,7 @@
     <v-app>
       <PNavBar />
 
-      <v-main class="mt-1">
+      <v-main >
         <v-container fluid>
 
           <!-- Mobile only -->
@@ -67,7 +67,7 @@
             </v-col>
 
             <!-- Content column -->
-            <v-col sm="12" md="8" lg="8">
+            <v-col class="pt-0" sm="12" md="8" lg="8">
               <nuxt />
             </v-col>
 

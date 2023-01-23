@@ -17,3 +17,14 @@ div.choose-table tr,.clickable {
 .preLineText::first-line {
   line-height: 0;
 }
+
+.clickable {
+  cursor: pointer;
+}
+
+.v-btn__content {
+  white-space: normal;
+  width: min-content;
+  height: min-content;
+  flex: auto;
+}
