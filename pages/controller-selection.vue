@@ -126,7 +126,11 @@ export default {
   },
   methods: {
     direct(to, controller) {
-      window.location.href = "/" + controller;
+      // window.location.href = "/" + controller;
+      this.$router.push({
+          name: "controller-home___en",
+          params: { "controller":controller},
+      });
     },
     reset() {
       this.controller = ControllerService.all();

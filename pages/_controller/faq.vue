@@ -69,7 +69,7 @@
                   <v-expansion-panel-header>
                     <template v-slot:actions>
                       <v-icon class="icon" left>
-                        $expan@click:append="search"
+                        $expand
                       </v-icon>
                     </template>
                     <span class="header" style="white-space:pre-line">{{ faq[category]['qnas'][qna].question.interpolate(interpolated) }}</span>
@@ -116,18 +116,10 @@ export default {
       userQuestion: '',
       matchedQNA: '',
       searching: false,
-      controller: ControllerService.get(
-        this.$nuxt.$route.params.controller
-      ),
+      interpolated:{}
     }
   },
-  computed: {
-    interpolated() {
-      return {
-        we: this.controller.name
-      };
-    }
-  },
+
   watch: {
     userQuestion (newuserQuestion, olduserQuestion) {
       if (!newuserQuestion) {
@@ -136,7 +128,9 @@ export default {
     }
   },
   created () {
-    this.interpolated =  this.$store.state.dataController.interpolated
+
+    let controllerInfo = this.$store.state.controllerInfo
+    this.interpolated ={'we':controllerInfo.name}
 
     if (this.$i18n.locale === 'en') {
       this.faq = faqEnUS

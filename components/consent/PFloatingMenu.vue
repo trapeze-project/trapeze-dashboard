@@ -11,13 +11,13 @@
             <div v-show="show">
               <v-container>
                 <v-row>
-                  <v-btn width="180px" height="auto" class="ma-2 pa-2 black--text" color="primary" @click="submitMyConsent">
+                  <v-btn width="180px" height="auto" class="ma-2 pa-2 black--text PFloatingMenuBtn" color="primary" @click="submitMyConsent">
                     Submit my Consent Changes to ControllerName
                   </v-btn>
                 </v-row>
 
                 <v-row>
-                  <v-btn width="180px" height="auto" class="ma-2 pa-2 black--text" color="primary" @click="undoAllChanges">
+                  <v-btn width="180px" height="auto" class="ma-2 pa-2 black--text PFloatingMenuBtn" color="primary" @click="undoAllChanges">
                     Undo all Changes
                   </v-btn>
                 </v-row>

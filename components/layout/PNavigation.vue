@@ -80,7 +80,7 @@ export default {
   created(){
     this.organizationName = this.$nuxt.$route.path.split('/')[2]
     this.links = [
-      { to: `/${this.organizationName}/`, label: 'nav.labels.home' },
+      { to: `/${this.organizationName}/home`, label: 'nav.labels.home' },
       // {
       //   to: `/${this.organizationName}/consent?tab=consent`,
       //   label: 'nav.labels.consent-menu',
@@ -92,7 +92,6 @@ export default {
       // },
       { to: `/${this.organizationName}/consent?tab=data`, label: 'nav.labels.data' },
       { to: `/${this.organizationName}/consent?tab=purpose`, label: 'nav.labels.purposes' },
-      { to: `/${this.organizationName}/help`, label: 'nav.labels.help' },
       { to: `/${this.organizationName}/faq`, label: 'nav.labels.faq' }
     ]
   }

@@ -27,6 +27,7 @@
         />
       </v-tab-item>
     </v-tabs-items>
+    
   </div>
 </template>
 
@@ -48,10 +49,8 @@ export default {
           label: this.$t("consent.tab.labels.consent"),
         },
       ],
-      fetchedUserChoices: {
-        "dpv:advertising": { "dpv:location": true, "dpv:name": false },
-        "dpv:marketing": { "dpv:fingerprint": false },
-      },
+      fetchedUserChoices: {},
+      privacyPolicy:{},
       userChoices: {},
       purposeMap: {},
       showFloatingMenu: false,
@@ -68,7 +67,12 @@ export default {
     },
   },
   created() {
+    
+    this.privacyPolicy = this.$store.state.controllerPrivacyPolicy;
+    this.purposeMap = JSON.parse(JSON.stringify(this.getPurposeMap()));
+    this.fetchedUserChoices = JSON.parse(JSON.stringify(this.fetchUserChoices()))
     this.userChoices = Object.assign({}, this.fetchedUserChoices);
+    console.log(this.$route.params.controller)
   },
 
   mounted() {
@@ -78,12 +82,12 @@ export default {
       handler: (new_value, old_value) => {
         this.userChoices = JSON.parse(JSON.stringify(new_value));
 
-
         if (
-          JSON.stringify(this.userChoices) === JSON.stringify(this.fetchedUserChoices)
+          JSON.stringify(this.userChoices) ===
+          JSON.stringify(this.fetchedUserChoices)
         ) {
           this.showFloatingMenu = false;
-        }else{
+        } else {
           this.showFloatingMenu = true;
         }
       },
@@ -96,10 +100,11 @@ export default {
         );
 
         if (
-          JSON.stringify(this.userChoices) === JSON.stringify(this.fetchedUserChoices)
+          JSON.stringify(this.userChoices) ===
+          JSON.stringify(this.fetchedUserChoices)
         ) {
           this.showFloatingMenu = false;
-        }else{
+        } else {
           this.showFloatingMenu = true;
         }
       },
@@ -112,9 +117,7 @@ export default {
   },
   methods: {
     beforeWindowUnload(event) {
-      if (
-        this.showFloatingMenu
-      ) {
+      if (this.showFloatingMenu) {
         event.preventDefault();
         event.returnValue = "";
       }
@@ -132,47 +135,38 @@ export default {
       this.showFloatingMenu = false;
     },
 
-    calculatePurposeMap() {
-      this.purposeMap = examplePolicy.reduce((total, currentValue) => {
-        const purpose = currentValue["dpv:Purpose"]["@class"]
-          .replace(":", ".")
-          .replace(/ /g, "-")
-          .toLowerCase();
-        currentValue["dpv:PersonalDataCategory"].forEach((item, index) => {
-          const personalDataCategory = item["@class"]
-            .replace(":", ".")
-            .replace(/ /g, "-")
-            .toLowerCase();
-          if (!(purpose in total)) {
-            total[purpose] = [];
+    getPurposeMap() {
+      return this.privacyPolicy["@policySet"].reduce((total, currentValue) => {
+        const purpose = currentValue["dpv:hasPurpose"][0]["@class"]
+        currentValue["dpv:hasPersonalDataCategory"].forEach((item) => {
+          if(item.hasOwnProperty("@class")){
+            const personalDataCategory = item["@class"]
+            if (!(purpose in total)) {
+              total[purpose] = [];
+            }
+            total[purpose].push(personalDataCategory);
           }
-          total[purpose].push(personalDataCategory);
+
         });
         return total;
       }, {});
     },
-    getUserChoices() {
-      if (process.browser) {
-        let stored = window.localStorage.getItem("choices");
-        if (stored) {
-          this.userChoices = JSON.parse(stored);
-        } else {
-          this.userChoices = JSON.parse(
-            JSON.stringify(
-              Object.keys(this.purposeMap).reduce((total, currentValue) => {
-                total[currentValue] = this.purposeMap[currentValue].reduce(
-                  (total, currentValue) => {
-                    total[currentValue] = true;
-                    return total;
-                  },
-                  {}
-                );
+    fetchUserChoices() {
+      // this.fetchedUserChoices =
+      return  JSON.parse(
+        JSON.stringify(
+          Object.keys(this.purposeMap).reduce((total, currentValue) => {
+            total[currentValue] = this.purposeMap[currentValue].reduce(
+              (total, currentValue) => {
+                total[currentValue] = true;
                 return total;
-              }, {})
-            )
-          );
-        }
-      }
+              },
+              {}
+            );
+            return total;
+          }, {})
+        )
+      );
     },
     invertUserChoices(userChoices) {
       return Object.keys(userChoices).reduce((total, a) => {
@@ -186,13 +180,10 @@ export default {
         return total;
       }, {});
     },
-    
   },
   beforeRouteLeave(to, from, next) {
-    if (
-      this.showFloatingMenu
-    ) {
-      let alertBody = this.$t("PAlertLeaveDialog.lose-changes-warning")
+    if (this.showFloatingMenu) {
+      let alertBody = this.$t("PAlertLeaveDialog.lose-changes-warning");
       this.$refs.alertDialog.showAlert(alertBody);
       const myInterval = setInterval(() => {
         if (this.$refs.alertDialog.leaveAnyWay === true) {

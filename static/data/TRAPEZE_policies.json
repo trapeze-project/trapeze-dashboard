@@ -1,0 +1,67 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "dpv": "http://www.w3.org/ns/dpv#",
+    "spl": "http://www.specialprivacy.eu/langs/usage-policy#",
+    "svdu": "http://www.specialprivacy.eu/vocabs/duration#",
+    "svl":	"http://www.specialprivacy.eu/vocabs/locations#"
+  },
+  "@ontologies": [ 
+  ],  
+  "@policySet": [
+    {
+      "@id": "org:sub:policy:01",
+      "title": "Policy 01",
+      "description": "...",
+      "controller": "org:company:telekom",
+      "dataSubject": "8723748293749283",
+      "dpv:hasPersonalDataCategory": [
+        { "@instance": "IBAN1234" },
+        { "@class": "dpv:location" },
+        { "@class": "dpv:name" }
+      ],
+      "dpv:hasPurpose": [
+        { "@class": "dpv:marketing" }
+      ],
+      "dpv:hasProcessing": [ 
+        { "@class": "dpv:Analyse" }, 
+        { "@class": "dpv:Alter" }, 
+        { "@class": "dpv:Collect" }
+      ],
+      "dpv:hasStorage": {
+        "dpv:hasDuration": { "@interval": [30, 90] },
+        "dpv:hasLocation": { "@class": "svl:ControllerServers" }
+      },
+      "dpv:Recipient": { 
+        "@instance": "org:company:google"
+      }      
+    },
+    {
+      "@id": "org:sub:policy:01",
+      "title": "Policy 01",
+      "description": "...",
+      "controller": "org:company:telekom",
+      "dataSubject": "8723748293749283",
+      "dpv:hasPersonalDataCategory": [
+        { "@instance": "IBAN1234" },
+        { "@class": "dpv:location" },
+        { "@class": "dpv:fingerprint" }
+      ],
+      "dpv:hasPurpose": [
+        { "@class": "dpv:advertising" }
+      ],
+      "dpv:hasProcessing": [ 
+        { "@class": "dpv:Analyse" }, 
+        { "@class": "dpv:Alter" }, 
+        { "@class": "dpv:Collect" }
+      ],
+      "dpv:hasStorage": {
+        "dpv:hasDuration": { "@interval": [30, 90] },
+        "dpv:hasLocation": { "@class": "svl:ControllerServers" }
+      },
+      "dpv:Recipient": { 
+        "@instance": "org:company:google"
+      }      
+    }
+  ]
+}

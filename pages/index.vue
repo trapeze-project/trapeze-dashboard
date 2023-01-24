@@ -1,10 +1,17 @@
 <template>
   <div>
+    <h1>lol</h1>
   </div>
 </template>
 
 <script>
+
 export default {
-  layout: 'default',
+  middleware({ params, store, redirect ,app}) {
+    //  }
+    let redirectTo = app.localePath('controller-selection')
+    return redirect(redirectTo)
+  },
+  layout: 'empty',
 }
 </script>

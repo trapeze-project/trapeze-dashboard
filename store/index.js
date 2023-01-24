@@ -4,15 +4,19 @@ import Vuex from 'vuex'
 
 
 export const state = () => ({
-  dataController: {},
+  controllerInfo: {},
+  controllerPrivacyPolicy:{},
   isAuthenticated:false
   
 })
 
 
 export const mutations = {
-  setDataController(state, value) {
-    state.dataController = Object.assign({}, value)
+  setControllerInfo(state, value) {
+    state.controllerInfo = Object.assign({}, value)
+  },
+  setControllerPrivacyPolicy(state, value) {
+    state.controllerPrivacyPolicy = Object.assign({}, value)
   },
   setIsAuthenticated(state, value) {
     state.isAuthenticated = value

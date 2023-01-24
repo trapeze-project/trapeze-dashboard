@@ -8,7 +8,7 @@
     "faxNumber": "(33 1) 42 68 53 01",
     "email": "info@clover-it.com",
     "url": "https://alex-it.com",
-    "logo": "../img/alexLogo.png",
+    "logo": "../img/cloverLogo.png",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": " Viale dei fiori, Italy",
