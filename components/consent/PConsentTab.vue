@@ -41,7 +41,7 @@
           Revoke by {{ this.tabName }}. (Click here to revoke by
           {{ this.tabName }})
         </p>
-        <div v-if="filteredParent">
+        <div v-if="filteredParent ">
           <new-p-details
             :key="$route.fullPath + componentKey.toString()"
             :tabName="tabName"
@@ -52,7 +52,7 @@
           />
         </div>
 
-        <div v-if="!filteredParent">
+        <div v-if="!filteredParent || searchValue===''">
           <div v-for="parent in Object.keys(modifiedUserChoices)" :key="parent">
             <new-p-details
               :key="$route.fullPath + componentKey.toString()"

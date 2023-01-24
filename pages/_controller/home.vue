@@ -35,9 +35,7 @@ import ControllerService from "../../modules/ControllerService.js";
 export default {
   data() {
     return {
-      controller: ControllerService.get(
-        this.$nuxt.$route.params.controller
-      ),
+      controller: this.$store.state.controllerInfo 
     }
   },
   mounted() {
