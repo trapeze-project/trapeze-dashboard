@@ -4,29 +4,58 @@
       <v-switch inset></v-switch>
       <b class="mb-1">Revoke/Withdraw all my consent.</b>
     </div>
-    <v-card >
+    <v-card>
       <v-card-title>{{ this.tabName }}</v-card-title>
       <v-container>
         <v-row>
           <v-col class="fill-height">
             <v-text-field
+              v-model="searchValue"
               style="max-width: 700px"
-              :placeholder="'Search for '+tabName"
+              :placeholder="'Search for ' + tabName"
               outlined
               dense
               clearable
               append-icon="mdi-magnify"
-              @click:append="() => {}"
-              @keyup.enter="() => {}"
+              @click:append="search"
+              @click:clear="filteredParent = null"
+              @keyup.enter="search"
             />
           </v-col>
         </v-row>
-        <p>Revoke by {{this.tabName}}. (Click here to revoke by {{this.tabName}})</p>
+        <div v-if="!filteredParent && searchValue">
+          <v-card outlined class="mb-2">
+            <v-card-title> avaliable Categories are : </v-card-title>
+            <v-card-text>
+              <span
+                v-for="parent in Object.keys(modifiedUserChoices)"
+                :key="parent"
+              >
+                {{ $t(`dpv.labels.${parent}`) }}
+              </span>
+            </v-card-text>
+          </v-card>
+        </div>
 
-        <div>
+        <p>
+          Revoke by {{ this.tabName }}. (Click here to revoke by
+          {{ this.tabName }})
+        </p>
+        <div v-if="filteredParent">
+          <new-p-details
+            :key="$route.fullPath + componentKey.toString()"
+            :tabName="tabName"
+            :parent="filteredParent"
+            :children="Object.keys(modifiedUserChoices[filteredParent])"
+            :subTree="modifiedUserChoices[filteredParent]"
+            @changeUserChoice="changeUserChoice"
+          />
+        </div>
+
+        <div v-if="!filteredParent">
           <div v-for="parent in Object.keys(modifiedUserChoices)" :key="parent">
             <new-p-details
-              :key="$route.fullPath+componentKey.toString()"
+              :key="$route.fullPath + componentKey.toString()"
               :tabName="tabName"
               :parent="parent"
               :children="Object.keys(modifiedUserChoices[parent])"
@@ -37,7 +66,6 @@
         </div>
       </v-container>
     </v-card>
-
   </div>
 </template>
 
@@ -59,7 +87,9 @@ export default {
   },
   data() {
     return {
-			componentKey: 0,
+      searchValue: "",
+      filteredParent: null,
+      componentKey: 0,
       modifiedUserChoices: {},
     };
   },
@@ -80,9 +110,19 @@ export default {
     changeUserChoice(parent, child, newConsentValue) {
       this.modifiedUserChoices[parent][child] = newConsentValue;
     },
-		forceRerender() {
+    forceRerender() {
       this.componentKey += 1;
-    }
+    },
+    search() {
+      Object.keys(this.modifiedUserChoices).forEach((element) => {
+        if (
+          this.$t(`dpv.labels.${element}`).toLowerCase() ===
+          this.searchValue.toLowerCase()
+        ) {
+          this.filteredParent = element;
+        }
+      });
+    },
   },
 };
 </script>
