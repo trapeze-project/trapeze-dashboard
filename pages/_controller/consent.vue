@@ -49,8 +49,8 @@ export default {
         },
       ],
       fetchedUserChoices: {
-        "dpv.advertising": { "dpv.location": true, "dpv.name": false },
-        "dpv.marketing": { "dpv.fingerprint": false },
+        "dpv:advertising": { "dpv:location": true, "dpv:name": false },
+        "dpv:marketing": { "dpv:fingerprint": false },
       },
       userChoices: {},
       purposeMap: {},

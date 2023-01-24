@@ -8,7 +8,7 @@
               <div class="d-inline-flex align-center ml-4">
                 <v-switch inset v-model="parentSwitchValue" @change="changeParentValue"></v-switch>
                 <div>
-                  <b class="mb-1">{{ this.parent }}</b>
+                  <b class="mb-1">{{ this.$t(`dpv.labels.${this.parent}`)  }} </b>
                   <p style="display: inline">
                     (used for {{ this.children.length }} {{this.tabName === 'data'?'purpose':'data'}})
                   </p>
@@ -28,9 +28,9 @@
                     >
                       <v-card-title>
                         <v-switch inset v-model="ChildrenSwitchesValues[child]" @change="changeUserChoice(child)"></v-switch>
-                        <b class="mb-1">{{ child }} </b>
+                        <b class="mb-1">{{ $t(`dpv.labels.${child}`)  }} </b>
                       </v-card-title>
-                      <v-card-text> desc1 </v-card-text>
+                      <v-card-text> {{ $t(`dpv.descriptions.${child}`)  }} </v-card-text>
                     </v-card>
                   </v-container>
                 </v-card>

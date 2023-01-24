@@ -21,7 +21,7 @@
             />
           </v-col>
         </v-row>
-        <p>Revoke by purposes. (Click here to revoke by purpose)</p>
+        <p>Revoke by {{this.tabName}}. (Click here to revoke by {{this.tabName}})</p>
 
         <div>
           <div v-for="parent in Object.keys(modifiedUserChoices)" :key="parent">
