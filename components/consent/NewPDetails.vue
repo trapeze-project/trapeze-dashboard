@@ -118,11 +118,12 @@ export default {
 			}else{
 				this.parentSwitchValue= true
 			}
+      console.log(child)
       this.$emit('changeUserChoice', this.parent, child, this.ChildrenSwitchesValues[child])
     },
-		changeParentValue(){
+		changeParentValue(value){
 			for(const child in this.ChildrenSwitchesValues){
-				this.ChildrenSwitchesValues[child]= this.parentSwitchValue
+				this.ChildrenSwitchesValues[child]= value
 				this.changeUserChoice(child)
 			}
 		}

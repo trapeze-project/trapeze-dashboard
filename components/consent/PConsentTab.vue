@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="d-inline-flex align-center ml-4">
-      <v-switch inset></v-switch>
+      <v-switch v-model="revokeAllValue" @change="revokeAll" inset></v-switch>
       <b class="mb-1">Revoke/Withdraw all my consent.</b>
     </div>
     <v-card>
@@ -41,7 +41,7 @@
           Revoke by {{ this.tabName }}. (Click here to revoke by
           {{ this.tabName }})
         </p>
-        <div v-if="filteredParent ">
+        <div v-if="filteredParent">
           <new-p-details
             :key="$route.fullPath + componentKey.toString()"
             :tabName="tabName"
@@ -52,7 +52,7 @@
           />
         </div>
 
-        <div v-if="!filteredParent || searchValue===''">
+        <div v-if="!filteredParent || searchValue === ''">
           <div v-for="parent in Object.keys(modifiedUserChoices)" :key="parent">
             <new-p-details
               :key="$route.fullPath + componentKey.toString()"
@@ -66,6 +66,7 @@
         </div>
       </v-container>
     </v-card>
+    <div>{{ this.modifiedUserChoices }}</div>
   </div>
 </template>
 
@@ -87,6 +88,7 @@ export default {
   },
   data() {
     return {
+      revokeAllValue: false,
       searchValue: "",
       filteredParent: null,
       componentKey: 0,
@@ -99,6 +101,21 @@ export default {
         if (JSON.stringify(new_value) !== JSON.stringify(old_value)) {
           this.modifiedUserChoices = JSON.parse(JSON.stringify(new_value));
         }
+        // set the value of revokeAll switch
+        let allConcentValues = [];
+        for (const [parent, children] of Object.entries(
+          this.modifiedUserChoices
+        )) {
+          for (const [child, consentValue] of Object.entries(children)) {
+            allConcentValues.push(this.modifiedUserChoices[parent][child]);
+          }
+        }
+        if(allConcentValues.includes(true)){
+          this.revokeAllValue = false
+        }else{
+           this.revokeAllValue = true
+        } 
+
       },
       deep: true,
     },
@@ -122,6 +139,25 @@ export default {
           this.filteredParent = element;
         }
       });
+    },
+    revokeAll(value) {
+      let tempModifiedUserChoices = JSON.parse(JSON.stringify(this.modifiedUserChoices))
+
+      console.log(tempModifiedUserChoices )
+
+      for (const [parent, children] of Object.entries(
+        tempModifiedUserChoices
+      )) {
+        for (const [child, consentValue] of Object.entries(children)) {
+          console.log(`${parent} ${child} `)
+          tempModifiedUserChoices[parent][child]= !value
+
+        }
+      }
+      this.modifiedUserChoices = JSON.parse(
+        JSON.stringify(tempModifiedUserChoices)
+      );
+      this.forceRerender();
     },
   },
 };
