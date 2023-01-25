@@ -114,7 +114,6 @@
 import ControllerService from "../modules/ControllerService.js";
 
 export default {
-  layout: "default",
   data() {
     return {
       controller: [],
@@ -126,7 +125,7 @@ export default {
   },
   methods: {
     direct(to, controller) {
-      window.location.href = "/" + controller+'/home';
+      window.location.href = "/" + controller + '/home';
 
     },
     reset() {

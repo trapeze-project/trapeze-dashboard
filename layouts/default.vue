@@ -35,7 +35,7 @@
                 temporary
                 right
               >
-                <PCompanyView 
+                <PControllerView 
                   v-if="controller"
                   :controller="controller"
                 />
@@ -68,12 +68,14 @@
 
             <!-- Content column -->
             <v-col class="pt-0" sm="12" md="8" lg="8">
-              <nuxt />
+              <nuxt-child
+                :controller="controller"
+              />
             </v-col>
 
             <!-- Controller information column -->
             <v-col class="hidden-sm-and-down" md="2" lg="2">
-              <PCompanyView
+              <PControllerView
                 v-if="controller"
                 :controller="controller"
               />
