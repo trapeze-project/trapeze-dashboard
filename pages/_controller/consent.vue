@@ -32,7 +32,14 @@
 </template>
 
 <script>
+import PolicyService from '~/modules/PolicyService';
+
 export default {
+  props: {
+    controller: {
+      type: Object,
+    }
+  },
   data() {
     return {
       tabs: [
@@ -50,7 +57,6 @@ export default {
         },
       ],
       fetchedUserChoices: {},
-      privacyPolicy:{},
       userChoices: {},
       purposeMap: {},
       showFloatingMenu: false,
@@ -67,9 +73,8 @@ export default {
     },
   },
   created() {
-    
-    this.privacyPolicy = this.$store.state.controllerPrivacyPolicy;
-    this.purposeMap = JSON.parse(JSON.stringify(this.getPurposeMap()));
+    let policy = PolicyService.get(this.controller);
+    this.purposeMap = policy.getPurposeMap();
     this.fetchedUserChoices = JSON.parse(JSON.stringify(this.fetchUserChoices()))
     this.userChoices = Object.assign({}, this.fetchedUserChoices);
     console.log(this.$route.params.controller)
@@ -134,23 +139,7 @@ export default {
       this.$refs["data"].forceRerender();
       this.showFloatingMenu = false;
     },
-
-    getPurposeMap() {
-      return this.privacyPolicy["@policySet"].reduce((total, currentValue) => {
-        const purpose = currentValue["dpv:hasPurpose"][0]["@class"]
-        currentValue["dpv:hasPersonalDataCategory"].forEach((item) => {
-          if(item.hasOwnProperty("@class")){
-            const personalDataCategory = item["@class"]
-            if (!(purpose in total)) {
-              total[purpose] = [];
-            }
-            total[purpose].push(personalDataCategory);
-          }
-
-        });
-        return total;
-      }, {});
-    },
+    
     fetchUserChoices() {
       // this.fetchedUserChoices =
       return  JSON.parse(

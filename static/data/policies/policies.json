@@ -1,4 +1,4 @@
-{
+[{
   "@context": {
     "schema": "http://schema.org/",
     "dpv": "http://www.w3.org/ns/dpv#",
@@ -7,16 +7,14 @@
     "svl":	"http://www.specialprivacy.eu/vocabs/locations#"
   },
   "@ontologies": [ 
-  ],  
+  ],
+  "controller": "c630f98e-a9f2-413a-8c71-8436a6f60002",
   "@policySet": [
     {
-      "@id": "org:sub:policy:01",
+      "@id": "c630f98e-a9f2-413a-8c71-8436a6f70002",
       "title": "Policy 01",
       "description": "...",
-      "controller": "org:company:telekom",
-      "dataSubject": "8723748293749283",
       "dpv:hasPersonalDataCategory": [
-        { "@instance": "IBAN1234" },
         { "@class": "dpv:location" },
         { "@class": "dpv:name" }
       ],
@@ -37,13 +35,10 @@
       }      
     },
     {
-      "@id": "org:sub:policy:01",
-      "title": "Policy 01",
+      "@id": "c630f98e-a9f2-413a-8c71-8436a6f70003",
+      "title": "Policy 02",
       "description": "...",
-      "controller": "org:company:telekom",
-      "dataSubject": "8723748293749283",
       "dpv:hasPersonalDataCategory": [
-        { "@instance": "IBAN1234" },
         { "@class": "dpv:location" },
         { "@class": "dpv:fingerprint" }
       ],
@@ -64,4 +59,4 @@
       }      
     }
   ]
-}
+}]
