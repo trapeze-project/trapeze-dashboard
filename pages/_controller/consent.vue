@@ -167,7 +167,8 @@ export default {
           }, {})
         )
       );
-    },
+     },
+    // http://localhost/444-werwe-131231-132123-123123/home
     invertUserChoices(userChoices) {
       return Object.keys(userChoices).reduce((total, a) => {
         const b = userChoices[a];

@@ -1,0 +1,47 @@
+{
+    "terms":{
+        "Consent":{
+            "definition":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident \n adipisci alias ex repellendus accusamus iste totam, commodi illum beatae ipsam impedit praesentium."
+        },
+        "Cross-border Processing":{
+            "definition":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident \n adipisci alias ex repellendus accusamus iste totam, commodi illum beatae ipsam impedit praesentium."
+        },
+        "Data Controller":{
+            "definition":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident \n adipisci alias ex repellendus accusamus iste totam, commodi illum beatae ipsam impedit praesentium."
+        },
+        "Data Processor":{
+            "definition":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident \n adipisci alias ex repellendus accusamus iste totam, commodi illum beatae ipsam impedit praesentium."
+        },
+        "Data Protection Officer":{
+            "definition":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident \n adipisci alias ex repellendus accusamus iste totam, commodi illum beatae ipsam impedit praesentium."
+        },
+
+        "Data Recipient":{
+            "definition":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident \n adipisci alias ex repellendus accusamus iste totam, commodi illum beatae ipsam impedit praesentium."
+        },
+        "Data Subject":{
+            "definition":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident \n adipisci alias ex repellendus accusamus iste totam, commodi illum beatae ipsam impedit praesentium."
+        },
+        "GDPR":{
+            "definition":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident \n adipisci alias ex repellendus accusamus iste totam, commodi illum beatae ipsam impedit praesentium."
+        },
+        "Personal Data":{
+            "definition":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident \n adipisci alias ex repellendus accusamus iste totam, commodi illum beatae ipsam impedit praesentium."
+        },
+        "Processing":{
+            "definition":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident \n adipisci alias ex repellendus accusamus iste totam, commodi illum beatae ipsam impedit praesentium."
+        },
+        "Profiling":{
+            "definition":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident \n adipisci alias ex repellendus accusamus iste totam, commodi illum beatae ipsam impedit praesentium."
+        },
+        "Pseudonymisation":{
+            "definition":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident \n adipisci alias ex repellendus accusamus iste totam, commodi illum beatae ipsam impedit praesentium."
+        },
+        "Purpose":{
+            "definition":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident \n adipisci alias ex repellendus accusamus iste totam, commodi illum beatae ipsam impedit praesentium."
+        },
+        "Third Party":{
+            "definition":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident \n adipisci alias ex repellendus accusamus iste totam, commodi illum beatae ipsam impedit praesentium."
+        }
+    }
+}

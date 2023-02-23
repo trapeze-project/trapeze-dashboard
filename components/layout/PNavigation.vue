@@ -92,6 +92,7 @@ export default {
       // },
       { to: `/${this.organizationName}/consent?tab=data`, label: 'nav.labels.data' },
       { to: `/${this.organizationName}/consent?tab=purpose`, label: 'nav.labels.purposes' },
+      { to: `/glossary`, label: 'nav.labels.glossary' },
       { to: `/${this.organizationName}/faq`, label: 'nav.labels.faq' }
     ]
   }
