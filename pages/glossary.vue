@@ -26,15 +26,15 @@
           </v-col>
         </v-row>
 
-        <v-card v-if="searching">
-          <v-card-title> {{ this.matchedTerm }}</v-card-title>
+        <v-card v-if=" searching">
+          <v-card-title> {{ this.matchedEntry.term }}</v-card-title>
           <v-card-text>
             <span>{{
-              this.glossary["terms"][this.matchedTerm]["definition"]
+              this.matchedEntry.definition
             }}</span>
             <div
-              v-if="
-                Object.values(glossary['terms'][this.matchedTerm]['references'])
+              v-if=" 
+                Object.values(this.matchedEntry.references)
                   .length
               "
               class="mt-4 black--text"
@@ -45,7 +45,7 @@
               <ol>
                 <li
                   v-for="link in Object.values(
-                    glossary['terms'][this.matchedTerm]['references']
+                    this.matchedEntry.references
                   )"
                   :key="link"
                 >
@@ -55,11 +55,10 @@
             </div>
           </v-card-text>
         </v-card>
-
-        <v-expansion-panels v-if="!searching" accordion>
+        <v-expansion-panels v-if=" !searching" accordion>
           <v-expansion-panel
-            v-for="term in Object.keys(this.glossary.terms)"
-            :key="term"
+            v-for="entry in Object.values(this.glossary.glossaryEntries)"
+            :key="entry.term"
             class="mb-1"
           >
             <v-expansion-panel-header>
@@ -67,16 +66,16 @@
                 <v-icon class="icon" left> $expand </v-icon>
               </template>
               <span class="header" style="white-space: pre-line">{{
-                term
+                entry.term
               }}</span>
             </v-expansion-panel-header>
             <v-expansion-panel-content>
               <span>
-                {{ glossary["terms"][term]["definition"] }}
+                {{ entry.definition }}
               </span>
               <div
                 v-if="
-                  Object.values(glossary['terms'][term]['references']).length
+                  Object.values(entry['references']).length
                 "
                 class="mt-4 black--text"
               >
@@ -86,7 +85,7 @@
                 <ol>
                   <li
                     v-for="link in Object.values(
-                      glossary['terms'][term]['references']
+                      entry['references']
                     )"
                     :key="link"
                   >
@@ -113,7 +112,7 @@ export default {
     return {
       glossary: "",
       searchInput: "",
-      matchedTerm: "",
+      matchedEntry: "",
       searching: false,
     };
   },
@@ -136,10 +135,12 @@ export default {
     },
   },
   methods: {
-    search() {
-      for (const term of Object.keys(this.glossary.terms)) {
-        if (term.toLowerCase() === this.searchInput.toLowerCase()) {
-          this.matchedTerm = term;
+    search() { 
+      for (const entry of Object.values(this.glossary.glossaryEntries)) {
+        if (entry.term.toLowerCase() === this.searchInput.toLowerCase()) {
+          this.matchedEntry = JSON.parse(JSON.stringify(entry));;
+          console.log(entry)
+          console.log(this.matchedEntry)
           this.searching = true;
           break;
         }

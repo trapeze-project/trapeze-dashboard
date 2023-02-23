@@ -1,88 +1,102 @@
 {
-    "terms": {
-      "Consent":{
-        "definition": "According to Article 4, point (11) GDPR, consent is a data subject's (your) clear affirmation towards a data controller (us) to process your personal data. Note that data controllers (we) do not always have to collect consent from data subjects (you) to process personal data. For example, a delivery service needs to process a data subject's (your) address in order to comply with a delivery order. In this case, data controllers (we) do not need to collect consent.",
-        "references": {
-          "ref1":"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32016R0679"
-        }
+  "glossaryEntries": {
+      "entry1": {
+          "term": "Einwilligung",
+          "definition": "Gem\u00e4\u00df Artikel 4, Nummer 11 DSGVO, ist die Einwilligung die eindeutige Zustimmung einer betroffenen Person (Sie) gegen\u00fcber einem f\u00fcr die Datenverarbeitung Verantwortlichen (uns) zur Verarbeitung Ihrer personenbezogenen Daten. Beachten Sie, dass die f\u00fcr die Datenverarbeitung Verantwortlichen (wir) nicht immer die Einwilligung der betroffenen Personen (Sie) zur Verarbeitung personenbezogener Daten einholen m\u00fcssen. Zum Beispiel muss ein Lieferdienst die Adresse einer betroffenen Person (Sie) verarbeiten, um einen Lieferauftrag ausführen zu können. In diesem Fall m\u00fcssen die f\u00fcr die Datenverarbeitung Verantwortlichen (wir) keine Einwilligung einholen.",
+          "references": {
+              "ref1": "https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX%3A32016R0679"
+          }
       },
-      "Cross-border Processing":{
-        "definition": "According to Article 4, point (23) GDPR, cross-border processing either means that processing is (a) performed in multiple EU member states, or (b) performed in a single EU member state yet on personal data on data subjects (you) from multiple member states.",
-        "references": {
-          "ref1":"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32016R0679"
-        }
+      "qna2": {
+          "term": "Grenz\u00fcbergreifende Verarbeitung",
+          "definition": "Gem\u00e4\u00df Artikel 4, Nummer 23 DSGVO, bedeutet grenz\u00fcberschreitende Verarbeitung entweder, dass die Verarbeitung (a) in mehreren EU-Mitgliedsstaaten erfolgt oder (b) in einem einzigen EU-Mitgliedsstaat erfolgt, jedoch mit personenbezogenen Daten von betroffenen Personen (Sie) aus mehreren Mitgliedsstaaten.",
+          "references": {
+              "ref1": "https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX%3A32016R0679"
+          }
       },
-      "Data Controller":{
-        "definition": "According to Article 4, point (7) GDPR, data controllers (we) have to make clear to data subjects (you) how and for which purposes they process personal data. Data controllers are often only called \"controllers\". ",
-        "references": {
-          "ref1":"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32016R0679"
-        }
+      "qna3": {
+          "term": "Datenverantwortlicher",
+          "definition": "Gem\u00e4\u00df Artikel 4, Absatz 7 DSGVO, m\u00fcssen die f\u00fcr die Datenverarbeitung Verantwortlichen (wir) den betroffenen Personen (Ihnen) deutlich machen, wie und f\u00fcr welche Zwecke sie personenbezogene Daten verarbeiten. Die f\u00fcr die Datenverarbeitung Verantwortlichen werden oft nur \"Verantwortliche\" genannt.",
+          "references": {
+              "ref1": "https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX%3A32016R0679"
+          }
       },
-      "Data Processor":{
-        "definition": "According to Article 4, point (8) GDPR, data processors processes your personal data. Data processors and data controllers (we) may be one and the same, yet not necessarily. If not, data controllers (we) usually neither tell the purpose of processing nor what personal data is to be processed by the data processor. Data processors are often only called \"processors\". ",
-        "references": {
-          "ref1":"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32016R0679"
-        }
+      "qna4": {
+          "term": "Auftragsverarbeiter",
+          "definition": "Gem\u00e4\u00df Artikel 4, Nummer 8 DSGVO,  werden Ihre personenbezogenen Daten von Auftragsverarbeitern verarbeitet. Datenverantwortliche (wir) können selbst auch Auftragsverarbeiter sein, m\u00fcssen dies aber nicht. Wenn dies nicht der Fall ist, geben die f\u00fcr die Datenverantwortlichen (wir) in der Regel weder den Zweck der Verarbeitung noch um welche Art von personenbezogenen Daten es sich handelt, die vom Auftragsverarbeiter verarbeitet werden sollen. Datenverarbeiter werden oft nur \"Verarbeiter\" genannt.",
+          "references": {
+              "ref1": "https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX%3A32016R0679"
+          }
       },
-      "Data Protection Officer":{
-        "definition": "The Data Protection Officer (DPO) of a data controller (us) is responsible for compliance with the GDPR. DPOs are also responsible for the communication of the implementation of data protection towards data subjects (you).",
-        "references": {
-          "ref1":"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32016R0679"
-        }
+      "qna5": {
+          "term": "Datenschutzbeauftragter",
+          "definition": "Der Datenschutzbeauftragte (DSB) eines f\u00fcr die Datenverarbeitung Verantwortlichen (wir) ist f\u00fcr die Einhaltung der DSGVO verantwortlich. Die beh\u00f6rdlichen Datenschutzbeauftragten sind auch f\u00fcr die Mitteilung der Umsetzung des Datenschutzes an die betroffenen Personen (Sie) verantwortlich.",
+          "references": {
+              "ref1": "https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX%3A32016R0679"
+          }
       },
-      "Data Recipient":{
-        "definition": "According to Article 4, point (9) GDPR, anyone to whom a subject's (your) personal data is disclosed is a data recipient. Data recipients are typically data controllers and data processors. Data recipients are often only called \"recipients\". ",
-        "references": {
-          "ref1":"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32016R0679"
-        }
+      "qna6": {
+          "term": "Datenempf\u00e4nger",
+          "definition": "Gem\u00e4\u00df Artikel 4, Nummer 9 DSGVO, ist jeder, dem die personenbezogenen Daten einer betroffenen Person (Sie) offengelegt werden, ein Datenempf\u00e4nger. Datenempf\u00e4nger sind in der Regel sowohl Datenverantwortliche als auch Auftragsverarbeiter. Datenempf\u00e4nger werden oft nur als \"Empf\u00e4nger\" bezeichnet.",
+          "references": {
+              "ref1": "https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX%3A32016R0679"
+          }
       },
-      "Data Subject":{
-        "definition": "According to the GDPR, you are a data subject since you are identifiable for instance by your name or your social security number.",
-        "references": {
-          "ref1":"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32016R0679"
-        }
+      "qna7": {
+          "term": "Betroffene Person",
+          "definition": "Gem\u00e4\u00df der DSGVO sind Sie eine betroffene Person, da Sie zum Beispiel durch Ihren Namen oder Ihre Sozialversicherungsnummer identifizierbar sind.",
+          "references": {
+              "ref1": "https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX%3A32016R0679"
+          }
       },
-      "GDPR":{
-        "definition": "The General Data Protection Regulation (GDPR) is the data protection legislation active in the European Union. It has been passed in May 2016 and taken effect in May 2018.",
-        "references": {
-          "ref1":"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32016R0679"
-        }
+      "qna8": {
+          "term": "DSGVO",
+          "definition": "Die Datenschutzgrundverordnung ist die in der Europ\u00e4ischen Union geltende Datenschutzregelung. Sie wurde im Mai 2016 verabschiedet und trat im Mai 2018 in Kraft.",
+          "references": {
+              "ref1": "https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX%3A32016R0679"
+          }
       },
-      "Personal Data":{
-        "definition": "According to Article 4, point (1) GDPR, any data that is attributable to a data subject (you) is personal data.",
-        "references": {
-          "ref1":"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32016R0679"
-        }
+      "qna9": {
+          "term": "Personenbezogene Daten",
+          "definition": "Gem\u00e4\u00df Artikel 4, Nummer 1 DSGVO, sind alle Daten, die einer betroffenen Person (Ihnen) zugeordnet werden k\u00f6nnen, personenbezogene Daten.",
+          "references": {
+              "ref1": "https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX%3A32016R0679"
+          }
       },
-      "Processing":{
-        "definition": "According to Article 4, point (2) GDPR, only processing of personal data is regulated. Art. 6 in particular defines that the processing of personal data is lawful if data subjects (you) have given consent or processing is necessary to comply with a contract. A delivery service need not collect consent to process a data subject's (your) address for the purpose of delivery if delivery is part of a purchase contract. Processing also involves collecting and storing personal data. ",
-        "references": {
-          "ref1":"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32016R0679"
-        }
+      "qna10": {
+          "term": "Verarbeitung",
+          "definition": "Gem\u00e4\u00df Artikel 4, Nummer 2 DSGVO, beschränkt sich die DSGVO ausschließlich auf die Verarbeitung personenbezogener Daten. Artikel 6 legt insbesondere fest, dass die Verarbeitung personenbezogener Daten rechtm\u00e4\u00dfig ist, wenn die betroffenen Personen (Sie) eingewilligt haben oder die Verarbeitung zur Erf\u00fcllung eines Vertrags erforderlich ist. Ein Lieferdienst muss keine Einwilligung einholen, um die Adresse einer betroffenen Person (Sie) zum Zweck der Lieferung zu verarbeiten, wenn die Lieferung Teil eines Kaufvertrags ist. Die Verarbeitung umfasst auch die Erhebung und Speicherung personenbezogener Daten.",
+          "references": {
+              "ref1": "https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX%3A32016R0679"
+          }
       },
-      "Profiling":{
-        "definition": "According Article 4, point (4) GDPR, profiling is any form of automated processing on personal data in order to infer specific information on a data subject (you). Profiling is commonly used to estimate the probability that a data subject (you) buys a certain product or cannot pay back a credit.",
-        "references": {
-          "ref1":"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32016R0679"
-        }
+      "qna11": {
+          "term": "Profiling",
+          "definition": "Gem\u00e4\u00df Artikel 4, Nummer 4 DSGVO, ist Profiling jede Form der automatisierten Verarbeitung personenbezogener Daten mit dem Ziel, spezifische Informationen \u00fcber eine betroffene Person (Sie) zu gewinnen. Profiling wird \u00fcblicherweise verwendet, um die Wahrscheinlichkeit abzusch\u00e4tzen, dass eine betroffene Person (Sie) ein bestimmtes Produkt kauft oder einen Kredit nicht zur\u00fcckzahlen kann.",
+          "references": {
+              "ref1": "https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX%3A32016R0679"
+          }
       },
-      "Pseudonymisation":{
-        "definition": "According to Article 4, point (5) GDPR, pseudonymisation of personal data means that personal data can only be attributed to a data subject (you) with the help of additonal data. Using artifical names or numbers instead of a data subject's (your) real name is a simple pseudonymisation technique. ",
-        "references": {
-          "ref1":"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32016R0679"
-        }
+      "qna12": {
+          "term": "Pseudonymisierung",
+          "definition": "Gem\u00e4\u00df Artikel 4, Nummer 5 DSGVO, bedeutet Pseudonymisierung personenbezogener Daten, dass personenbezogene Daten nur mit Hilfe zus\u00e4tzlicher Daten einer betroffenen Person (Sie) zugeordnet werden k\u00f6nnen. Die Verwendung k\u00fcnstlicher Namen oder Nummern anstelle des echten Namens der betroffenen Person (Sie) ist eine einfache Pseudonymisierungstechnik.",
+          "references": {
+              "ref1": "https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX%3A32016R0679"
+          }
       },
-      "Purpose":{
-        "definition": "According to Article 5, first paragraph, point (b) GDPR, data controllers (we) must make clear to you for what they collect personal data. It is for instance illegal to collect personal data for the purpose of personalized job recommendations and later on use it for the purpose of marketing.",
-        "references": {
-          "ref1":"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32016R0679"
-        }
+      "qna13": {
+          "term": "Zweck",
+          "definition": "Gem\u00e4\u00df Artikel 5, Absatz 1, Buchstabe b DSGVO, m\u00fcssen die f\u00fcr die Datenverarbeitung Verantwortlichen (wir) Ihnen deutlich machen, wozu sie (wir) personenbezogene Daten erheben. Es ist zum Beispiel illegal, personenbezogene Daten f\u00fcr personalisierte Jobempfehlungen zu sammeln und sie sp\u00e4ter f\u00fcr Marketingzwecke zu verwenden.",
+          "references": {
+              "ref1": "https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX%3A32016R0679"
+          }
       },
-      "Third Party":{
-        "definition": "According to Article 4, point (10) GDPR, third parties are directly authorized by data controllers (us) and/or data processors to process personal data.",
-        "references": {
-          "ref1":"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32016R0679"
-        }
+      "qna14": {
+          "term": "Dritte",
+          "definition": "Gem\u00e4\u00df Artikel 4, Nummer 10 DSGVO, werden Dritte direkt von den Datenverantwortlichen (uns) und/oder den Auftragsverarbeitern zur Verarbeitung personenbezogener Daten erm\u00e4chtigt.",
+          "references": {
+              "ref1": "https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX%3A32016R0679"
+          }
       }
-    }
   }
+}
