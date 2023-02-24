@@ -8,52 +8,24 @@
               {{ $t("sidebar-title.navigation") }}
             </v-subheader>
             <div v-for="link in links" :key="link.label">
-              <v-list-group v-if="link.subLinks" color="lightgrey">
-                <template v-slot:activator>
-                  <v-tooltip right>
-                    <template v-slot:activator="{ on }">
-                      <v-list-item-content v-on="on">
-                        <v-list-item-title>
-                          {{ $t(link.label) }}
-                        </v-list-item-title>
-                      </v-list-item-content>
-                    </template>
-                    <span> {{ $t(link.label) }} </span>
-                  </v-tooltip>
-                </template>
-
-                <v-list-item
-                  v-for="sub in link.subLinks"
-                  :key="sub.label"
-                  class="pl-12"
-                  :to="localePath(localePath(sub.to))"
-                  exact
-                >
-                  <v-tooltip right>
-                    <template v-slot:activator="{ on }">
-                      <v-list-item-content v-on="on">
-                        <v-list-item-title>
-                          {{ $t(sub.label) }}
-                        </v-list-item-title>
-                      </v-list-item-content>
-                    </template>
-                    <span> {{ $t(sub.label) }} </span>
-                  </v-tooltip>
-                </v-list-item>
-              </v-list-group>
-
-              <v-list-item v-else :to="localePath(link.to)" exact>
+              
+              <div v-if="link.type === 'divider'">
+                <v-divider></v-divider>
+              </div>
+              <v-list-item v-else :to="localePath(link.to)" exact :disabled='link.isDisabled'>
                 <v-tooltip right>
                   <template v-slot:activator="{ on }">
                     <v-list-item-content v-on="on">
                       <v-list-item-title>
                         {{ $t(link.label) }}
                       </v-list-item-title>
+                      
                     </v-list-item-content>
                   </template>
                   <span> {{ $t(link.label) }} </span>
                 </v-tooltip>
               </v-list-item>
+              
             </div>
           </v-list>
         </v-card>
@@ -79,21 +51,16 @@ export default {
   },
   created(){
     this.organizationName = this.$nuxt.$route.path.split('/')[2]
+    let disableConsentPage = this.organizationName==='controller-selection'
+    let homePagePath = this.organizationName==='controller-selection' ? '/controller-selection': `/${this.organizationName}/home`
+    
     this.links = [
-      { to: `/${this.organizationName}/home`, label: 'nav.labels.home' },
-      // {
-      //   to: `/${this.organizationName}/consent?tab=consent`,
-      //   label: 'nav.labels.consent-menu',
-      //   subLinks: [
-      //     { to: `/${this.organizationName}/consent?tab=data`, label: 'nav.labels.data' },
-      //     { to: `/${this.organizationName}/consent?tab=purpose`, label: 'nav.labels.purposes' },
-      //     { to: `/${this.organizationName}/consent?tab=consent`, label: 'nav.labels.consent' }
-      //   ]
-      // },
-      { to: `/${this.organizationName}/consent?tab=data`, label: 'nav.labels.data' },
-      { to: `/${this.organizationName}/consent?tab=purpose`, label: 'nav.labels.purposes' },
-      { to: `/glossary`, label: 'nav.labels.glossary' },
-      { to: `/${this.organizationName}/faq`, label: 'nav.labels.faq' }
+      { to: homePagePath, label: 'nav.labels.home' ,isDisabled:false},
+      { to: `/${this.organizationName}/consent?tab=data`, label: 'nav.labels.data', isDisabled:disableConsentPage },
+      { to: `/${this.organizationName}/consent?tab=purpose`, label: 'nav.labels.purposes',isDisabled:disableConsentPage },
+      { type: 'divider' },
+      { to: `/glossary`, label: 'nav.labels.glossary' ,isDisabled:false},
+      { to: `/${this.organizationName}/faq`, label: 'nav.labels.faq' ,isDisabled:false}
     ]
   }
 }
