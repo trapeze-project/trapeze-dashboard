@@ -159,6 +159,8 @@
     "lose-consent-helper-choices": "Non avete ancora risposto a tutti gli avvertimenti."
   },
   "consent": {
+    "purposeDescription":"123",
+    "dataDescription":"1233626551",
     "desc": "Configurare le categorie di dati che possiamo usare per quali scopi (scheda 'Categoria di dati'). Oppure per quali scopi siamo autorizzati a utilizzare i dati (scheda 'Scopo'). La scheda 'Informativa sulla privacy' consente di esaminare tutte le versioni della nostra informativa sulla privacy.",
     "consent-menu": "Menu del Consenso",
     "title": "Assistente al Consenso",

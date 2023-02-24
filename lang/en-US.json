@@ -160,6 +160,8 @@
     "lose-consent-helper-choices": "You haven't addressed all warnings yet."
   },
   "consent": {
+    "purposeDescription":"123",
+    "dataDescription":"1233626551",
     "desc": "Configure which data categories we're allowed to use for which purposes ('Data Category' tab). Or for which purposes we're allowed to use which data ('Purpose' tab). The tab 'Privacy Policy' lets you review all versions of our privacy policy.",
     "consent-menu": "Consent Menu",
     "title": "Consent Assistant",

@@ -6,6 +6,7 @@
     </div>
     <v-card>
       <v-card-title>{{ this.tabName }}</v-card-title>
+      <v-card-text>{{this.$t(`consent.${this.tabName}Description`)}}</v-card-text>
       <v-container>
         <v-row>
           <v-col class="fill-height">
