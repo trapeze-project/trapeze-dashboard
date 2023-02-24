@@ -127,6 +127,8 @@ export default {
       //submit to server
       this.fetchedUserChoices = Object.assign({}, this.userChoices);
       this.showFloatingMenu = false;
+      this.$refs.consentNotification.showNotification(this.$t('snackbar.msg.submission-successful'), 'green')
+
     },
     undoAllChanges() {
       this.userChoices = Object.assign({}, this.fetchedUserChoices);

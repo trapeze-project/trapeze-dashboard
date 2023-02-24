@@ -67,7 +67,6 @@
         </div>
       </v-container>
     </v-card>
-    <div>{{ this.modifiedUserChoices }}</div>
   </div>
 </template>
 
