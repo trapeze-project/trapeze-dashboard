@@ -1,9 +1,8 @@
 <template>
   <div>
-    <div class="d-inline-flex align-center ml-4">
-      <v-switch v-model="revokeAllValue" @change="revokeAll" inset></v-switch>
-      <b class="mb-1">Revoke/Withdraw all my consent.</b>
-    </div>
+
+    <v-btn class="my-2 black--text" color="primary" @click="revokeAll">Withdraw all my consent</v-btn>
+
     <v-card>
       <v-card-title>{{ this.tabName }}</v-card-title>
       <v-card-text>{{this.$t(`consent.${this.tabName}Description`)}}</v-card-text>
@@ -140,17 +139,15 @@ export default {
         }
       });
     },
-    revokeAll(value) {
+    revokeAll() {
       let tempModifiedUserChoices = JSON.parse(JSON.stringify(this.modifiedUserChoices))
-
-      console.log(tempModifiedUserChoices )
 
       for (const [parent, children] of Object.entries(
         tempModifiedUserChoices
       )) {
         for (const [child, consentValue] of Object.entries(children)) {
           console.log(`${parent} ${child} `)
-          tempModifiedUserChoices[parent][child]= !value
+          tempModifiedUserChoices[parent][child]= false
 
         }
       }
