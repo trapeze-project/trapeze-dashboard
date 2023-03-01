@@ -7,6 +7,10 @@
       {{ controller.address.postalCode }}, {{ controller.address.addressLocality }}<br>
       {{ controller.url }}<br>
       <br>
+      <div>
+        <a href="privacyPolicy">Privacy Policy (pdf)</a>
+      </div>
+      
 
       <b>{{ $t("general.dpo") }} ({{ $t("general.dpo-abbrev") }})</b><br>
       {{ controller.alumni[0].name }}<br>
@@ -29,5 +33,13 @@ export default {
       default: () => {}
     }
   },
+  data(){
+    return{
+      controllerId:""
+    }
+  },
+  created(){
+
+  }
 }
 </script>
