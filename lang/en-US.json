@@ -123,10 +123,10 @@
         "content": "Tell us (${we}) what we may use your data for."
       },
       "2": {
-        "title": "Consent",
+        "title": "privacyPolicy",
         "filename": "/img/consent.png",
-        "link": "/consent?tab=consent",
-        "content": "View the consent you gave us (${we})."
+        "link": "/privacyPolicy",
+        "content": "View our privacy policy."
       },
       "3": {
         "title": "TRAPEZE",

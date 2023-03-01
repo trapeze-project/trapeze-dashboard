@@ -124,7 +124,7 @@
       "2": {
         "title": "Consenso",
         "filename": "/img/consent.png",
-        "link": "/consent?tab=consent",
+        "link": "/privacyPolicy",
         "content": "Visualizza il consenso che ci (${we}) hai dato."
       },
       "3": {

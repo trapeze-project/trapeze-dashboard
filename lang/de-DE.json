@@ -124,7 +124,7 @@
       "2": {
         "title": "Einwilligungen",
         "filename": "/img/consent.png",
-        "link": "/consent?tab=consent",
+        "link": "/privacyPolicy",
         "content": "Sehen Sie sich die Einwilligungen an, die Sie uns (${we}) erteilt haben."
       },
       "3": {
