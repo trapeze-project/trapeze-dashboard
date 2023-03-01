@@ -2,7 +2,7 @@
   <div id="index">
     <v-row justify="center" align="center">
       <v-col>
-        <PWlcmMsg 
+        <PWlcmMsg
           :controller="controller"
         />
       </v-col>
@@ -30,16 +30,14 @@
 </template>
 
 <script>
-import ControllerService from "../../modules/ControllerService.js";
-
 export default {
-  data() {
-    return {
-      controller: this.$store.state.controllerInfo 
+  props: {
+    controller: {
+      type: Object,
     }
   },
   mounted() {
-
+    console.log(this)
   }
 }
 </script>
