@@ -1,62 +1,200 @@
-[{
-  "@context": {
-    "schema": "http://schema.org/",
-    "dpv": "http://www.w3.org/ns/dpv#",
-    "spl": "http://www.specialprivacy.eu/langs/usage-policy#",
-    "svdu": "http://www.specialprivacy.eu/vocabs/duration#",
-    "svl":	"http://www.specialprivacy.eu/vocabs/locations#"
-  },
-  "@ontologies": [ 
-  ],
-  "controller": "c630f98e-a9f2-413a-8c71-8436a6f60002",
-  "@policySet": [
-    {
-      "@id": "c630f98e-a9f2-413a-8c71-8436a6f70002",
-      "title": "Policy 01",
-      "description": "...",
-      "dpv:hasPersonalDataCategory": [
-        { "@class": "dpv:location" },
-        { "@class": "dpv:name" }
-      ],
-      "dpv:hasPurpose": [
-        { "@class": "dpv:marketing" }
-      ],
-      "dpv:hasProcessing": [ 
-        { "@class": "dpv:Analyse" }, 
-        { "@class": "dpv:Alter" }, 
-        { "@class": "dpv:Collect" }
-      ],
-      "dpv:hasStorage": {
-        "dpv:hasDuration": { "@interval": [30, 90] },
-        "dpv:hasLocation": { "@class": "svl:ControllerServers" }
-      },
-      "dpv:Recipient": { 
-        "@instance": "org:company:google"
-      }      
+[
+  {
+    "@context": {
+      "schema": "http://schema.org/",
+      "dpv": "http://www.w3.org/ns/dpv#",
+      "spl": "http://www.specialprivacy.eu/langs/usage-policy#",
+      "svdu": "http://www.specialprivacy.eu/vocabs/duration#",
+      "svl": "http://www.specialprivacy.eu/vocabs/locations#"
     },
-    {
-      "@id": "c630f98e-a9f2-413a-8c71-8436a6f70003",
-      "title": "Policy 02",
-      "description": "...",
-      "dpv:hasPersonalDataCategory": [
-        { "@class": "dpv:location" },
-        { "@class": "dpv:fingerprint" }
-      ],
-      "dpv:hasPurpose": [
-        { "@class": "dpv:advertising" }
-      ],
-      "dpv:hasProcessing": [ 
-        { "@class": "dpv:Analyse" }, 
-        { "@class": "dpv:Alter" }, 
-        { "@class": "dpv:Collect" }
-      ],
-      "dpv:hasStorage": {
-        "dpv:hasDuration": { "@interval": [30, 90] },
-        "dpv:hasLocation": { "@class": "svl:ControllerServers" }
+    "@ontologies": [],
+    "controller": "c630f98e-a9f2-413a-8c71-8436a6f60001",
+    "@policySet": [
+      {
+        "@id": "c630f98e-a9f2-413a-8c71-8436a6f70002",
+        "title": "Policy 01",
+        "description": "...",
+        "dpv:hasPersonalDataCategory": [
+          {
+            "@class": "dpv:location"
+          },
+          {
+            "@class": "dpv:name"
+          }
+        ],
+        "dpv:hasPurpose": [
+          {
+            "@class": "dpv:marketing"
+          }
+        ],
+        "dpv:hasProcessing": [
+          {
+            "@class": "dpv:Analyse"
+          },
+          {
+            "@class": "dpv:Alter"
+          },
+          {
+            "@class": "dpv:Collect"
+          }
+        ],
+        "dpv:hasStorage": {
+          "dpv:hasDuration": {
+            "@interval": [
+              30,
+              90
+            ]
+          },
+          "dpv:hasLocation": {
+            "@class": "svl:ControllerServers"
+          }
+        },
+        "dpv:Recipient": {
+          "@instance": "org:company:google"
+        }
       },
-      "dpv:Recipient": { 
-        "@instance": "org:company:google"
-      }      
-    }
-  ]
-}]
+      {
+        "@id": "c630f98e-a9f2-413a-8c71-8436a6f70003",
+        "title": "Policy 02",
+        "description": "...",
+        "dpv:hasPersonalDataCategory": [
+          {
+            "@class": "dpv:location"
+          },
+          {
+            "@class": "dpv:fingerprint"
+          }
+        ],
+        "dpv:hasPurpose": [
+          {
+            "@class": "dpv:advertising"
+          }
+        ],
+        "dpv:hasProcessing": [
+          {
+            "@class": "dpv:Analyse"
+          },
+          {
+            "@class": "dpv:Alter"
+          },
+          {
+            "@class": "dpv:Collect"
+          }
+        ],
+        "dpv:hasStorage": {
+          "dpv:hasDuration": {
+            "@interval": [
+              30,
+              90
+            ]
+          },
+          "dpv:hasLocation": {
+            "@class": "svl:ControllerServers"
+          }
+        },
+        "dpv:Recipient": {
+          "@instance": "org:company:google"
+        }
+      }
+    ]
+  },
+  {
+    "@context": {
+      "schema": "http://schema.org/",
+      "dpv": "http://www.w3.org/ns/dpv#",
+      "spl": "http://www.specialprivacy.eu/langs/usage-policy#",
+      "svdu": "http://www.specialprivacy.eu/vocabs/duration#",
+      "svl": "http://www.specialprivacy.eu/vocabs/locations#"
+    },
+    "@ontologies": [],
+    "controller": "c630f98e-a9f2-413a-8c71-8436a6f60002",
+    "@policySet": [
+      {
+        "@id": "c630f98e-a9f2-413a-8c71-8436a6f70002",
+        "title": "Policy 01",
+        "description": "...",
+        "dpv:hasPersonalDataCategory": [
+          {
+            "@class": "dpv:location"
+          },
+          {
+            "@class": "dpv:name"
+          }
+        ],
+        "dpv:hasPurpose": [
+          {
+            "@class": "dpv:marketing"
+          }
+        ],
+        "dpv:hasProcessing": [
+          {
+            "@class": "dpv:Analyse"
+          },
+          {
+            "@class": "dpv:Alter"
+          },
+          {
+            "@class": "dpv:Collect"
+          }
+        ],
+        "dpv:hasStorage": {
+          "dpv:hasDuration": {
+            "@interval": [
+              30,
+              90
+            ]
+          },
+          "dpv:hasLocation": {
+            "@class": "svl:ControllerServers"
+          }
+        },
+        "dpv:Recipient": {
+          "@instance": "org:company:google"
+        }
+      },
+      {
+        "@id": "c630f98e-a9f2-413a-8c71-8436a6f70003",
+        "title": "Policy 02",
+        "description": "...",
+        "dpv:hasPersonalDataCategory": [
+          {
+            "@class": "dpv:location"
+          },
+          {
+            "@class": "dpv:fingerprint"
+          }
+        ],
+        "dpv:hasPurpose": [
+          {
+            "@class": "dpv:advertising"
+          }
+        ],
+        "dpv:hasProcessing": [
+          {
+            "@class": "dpv:Analyse"
+          },
+          {
+            "@class": "dpv:Alter"
+          },
+          {
+            "@class": "dpv:Collect"
+          }
+        ],
+        "dpv:hasStorage": {
+          "dpv:hasDuration": {
+            "@interval": [
+              30,
+              90
+            ]
+          },
+          "dpv:hasLocation": {
+            "@class": "svl:ControllerServers"
+          }
+        },
+        "dpv:Recipient": {
+          "@instance": "org:company:google"
+        }
+      }
+    ]
+  }
+]
