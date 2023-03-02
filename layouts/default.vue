@@ -23,8 +23,9 @@
             <v-col v-if="controller">
               <v-btn
                 text
-                class="float-right mr-n5"
+                class="float-right"
                 @click.stop="drawer.controller = !drawer.controller"
+                elevation="2"
               >
                 <span>{{ controller.name }}</span>
                 <v-img :src="controller.logo" max-width="50" max-height="50" />
