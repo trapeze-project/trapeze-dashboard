@@ -15,6 +15,7 @@
         <v-row align="center" justify="center">
           <v-col class="fill-height">
             <v-text-field
+              class="custom-placeholer-color"
               v-model="userQuestion"
               :placeholder="$t('placeholder.search-for-a-question-or-an-answer')"
               outlined
@@ -23,7 +24,7 @@
               append-icon="mdi-magnify"
               @click:append="search"
               @keyup.enter="search"
-            />
+           />
           </v-col>
         </v-row>
 
@@ -176,4 +177,6 @@ export default {
 .header {
   order: 1;
 }
+
+
 </style>

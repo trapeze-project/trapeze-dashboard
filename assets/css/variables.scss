@@ -28,3 +28,15 @@ div.choose-table tr,.clickable {
   height: min-content;
   flex: auto;
 }
+
+.custom-placeholer-color input::placeholder {
+  color: #555454 !important;
+  opacity: 1;
+}
+
+
+
+.custom-placeholer-color input,
+.custom-label-color input{
+  color: #555454 !important;
+}
