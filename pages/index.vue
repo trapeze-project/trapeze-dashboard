@@ -1,17 +1,18 @@
 <template>
   <div>
-    <h1>lol</h1>
+    <v-row justify="center" align="center">
+      <v-col>
+        Hello
+      </v-col>
+    </v-row>
   </div>
 </template>
 
 <script>
-
 export default {
-  middleware({ params, store, redirect ,app}) {
-    //  }
-    let redirectTo = app.localePath('controller-selection')
-    return redirect(redirectTo)
+  props: {
   },
-  layout: 'empty',
+  mounted() {
+  }
 }
 </script>

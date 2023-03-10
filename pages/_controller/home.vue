@@ -1,5 +1,5 @@
 <template>
-  <div id="index">
+  <div id="index" class="mt-3">
     <v-row justify="center" align="center">
       <v-col>
         <PWlcmMsg
@@ -37,7 +37,6 @@ export default {
     }
   },
   mounted() {
-    console.log(this)
   }
 }
 </script>

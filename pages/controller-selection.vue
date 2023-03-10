@@ -125,8 +125,11 @@ export default {
   },
   methods: {
     direct(to, controller) {
-      window.location.href = "/" + controller + '/home';
-
+      window.location.href = "/"
+        + this.$i18n.locale
+        + "/"
+        + controller 
+        + '/home';
     },
     reset() {
       this.controller = ControllerService.all();

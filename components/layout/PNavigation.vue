@@ -8,24 +8,25 @@
               {{ $t("sidebar-title.navigation") }}
             </v-subheader>
             <div v-for="link in links" :key="link.label">
-              
+
               <div v-if="link.type === 'divider'">
                 <v-divider></v-divider>
               </div>
-              <v-list-item v-else :to="localePath(link.to)" exact :disabled='link.isDisabled'>
+
+              <v-list-item v-else :to="localePath(link.to)" exact :disabled="link.isDisabled">
                 <v-tooltip right>
                   <template v-slot:activator="{ on }">
                     <v-list-item-content v-on="on">
                       <v-list-item-title>
                         {{ $t(link.label) }}
                       </v-list-item-title>
-                      
+
                     </v-list-item-content>
                   </template>
                   <span> {{ $t(link.label) }} </span>
                 </v-tooltip>
               </v-list-item>
-              
+
             </div>
           </v-list>
         </v-card>
@@ -37,39 +38,43 @@
 <script>
 export default {
   props: {
+    controller: {
+      type: Object,
+    },
     group: {
       type: null,
       required: false,
       default: null
     }
   },
-  data () {
+  data() {
     return {
-      organizationName : '',
       links: []
     }
   },
-  created(){
-    this.organizationName = this.$nuxt.$route.path.split('/')[2]
-    let disableConsentPage = this.organizationName==='controller-selection'
-    let homePagePath = this.organizationName==='controller-selection' ? '/controller-selection': `/${this.organizationName}/home`
-    
+  created() {
+    let id = undefined;
+    let home = "/";
+    let disabled = this.controller === undefined;
+    if (this.controller) {
+      id = this.controller["@id"];
+      home = `/${id}/home`;
+    }
+
     this.links = [
-      { to: homePagePath, label: 'nav.labels.home' ,isDisabled:false},
-      { to: `/${this.organizationName}/consent?tab=data`, label: 'nav.labels.data', isDisabled:disableConsentPage },
-      { to: `/${this.organizationName}/consent?tab=purpose`, label: 'nav.labels.purposes',isDisabled:disableConsentPage },
-      { type: 'divider' },
-      { to: `/glossary`, label: 'nav.labels.glossary' ,isDisabled:false},
-      { to: `/${this.organizationName}/faq`, label: 'nav.labels.faq' ,isDisabled:false}
+      { to: home, label: "nav.labels.home" },
+      { to: `/${id}/consent?tab=data`, label: "nav.labels.data", isDisabled: disabled },
+      { to: `/${id}/consent?tab=purpose`, label: "nav.labels.purposes", isDisabled: disabled },
+      { type: "divider" },
+      { to: `/glossary`, label: "nav.labels.glossary" },
+      { to: `/${id}/faq`, label: "nav.labels.faq", isDisabled: disabled }
     ]
   }
 }
 </script>
 
 <style>
-.v-list-group
-  .v-list-group__header
-  .v-list-item__icon.v-list-group__header__append-icon {
+.v-list-group .v-list-group__header .v-list-item__icon.v-list-group__header__append-icon {
   min-width: inherit;
   justify-content: flex-start;
 }

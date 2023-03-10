@@ -48,7 +48,7 @@
                 v-if="showControllerSelection"
                 class="black--text float-right"
                 color="primary"
-                @click="direct('/controller-selection')"
+                @click="direct(`${$i18n.locale}/controller-selection`)"
               >
                 <!--
                   @TODO: enable localization of string 
@@ -64,7 +64,9 @@
 
             <!-- Navigation column -->
             <v-col class="hidden-sm-and-down" md="2" lg="2">
-              <PNavigation />
+              <PNavigation 
+                :controller="controller"
+              />
             </v-col>
 
             <!-- Content column -->
@@ -86,7 +88,7 @@
                   v-if="showControllerSelection"
                   class="black--text float-right"
                   color="primary"
-                  @click="direct('/controller-selection')"
+                  @click="direct(`${$i18n.locale}/controller-selection`)"
                 >
                   <!--
                     @TODO: enable localization of string 
