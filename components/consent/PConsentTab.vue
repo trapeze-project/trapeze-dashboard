@@ -1,67 +1,72 @@
 <template>
   <div>
 
-    <v-btn class="my-2 black--text" color="primary" @click="revokeAll">Withdraw all my consent</v-btn>
+    <!-- Revoke all button -->
+    <v-btn class="my-2 black--text" color="primary" @click="revokeAll">
+      Withdraw all my consent
+    </v-btn>
 
     <v-card>
-      <v-card-title>{{ this.tabName }}</v-card-title>
-      <v-card-text>{{this.$t(`consent.${this.tabName}Description`)}}</v-card-text>
+
+      <!-- Title -->
+      <v-card-title>
+        {{ this.tabName }}
+      </v-card-title>
+
+      <!-- Description -->
+      <v-card-text>
+        {{ this.$t(`consent.${this.tabName}Description`) }}
+      </v-card-text>
+
+      <!-- Content -->
       <v-container>
+
+        <!-- Search field -->
         <v-row>
           <v-col class="fill-height">
-            <v-text-field
-              v-model="searchValue"
-              style="max-width: 700px"
-              :placeholder="'Search for ' + tabName"
-              outlined
-              dense
-              clearable
-              append-icon="mdi-magnify"
-              @click:append="search"
-              @click:clear="filteredParent = null"
-              @keyup.enter="search"
-            />
+            <v-text-field v-model="searchValue" style="max-width: 700px" :placeholder="'Search for ' + tabName" outlined
+              dense clearable append-icon="mdi-magnify" @click:append="search" @click:clear="filteredParent = null"
+              @keyup.enter="search" />
           </v-col>
         </v-row>
+
+        <!-- Search suggestions -->
+        <!--
         <div v-if="!filteredParent && searchValue">
           <v-card outlined class="mb-2">
-            <v-card-title> avaliable Categories are : </v-card-title>
+
+            <v-card-title>
+              avaliable Categories are:
+            </v-card-title>
+
             <v-card-text>
-              <span
-                v-for="parent in Object.keys(modifiedUserChoices)"
-                :key="parent"
-              >
+              <span v-for="parent in Object.keys(modifiedUserChoices)" :key="parent">
                 {{ $t(`dpv.labels.${parent}`) }}
               </span>
             </v-card-text>
+
           </v-card>
         </div>
+        -->
 
-        <p>
-          Revoke by {{ this.tabName }}. (Click here to revoke by
-          {{ this.tabName }})
-        </p>
+        <!-- Search results -->
         <div v-if="filteredParent">
-          <new-p-details
-            :key="$route.fullPath + componentKey.toString()"
-            :tabName="tabName"
-            :parent="filteredParent"
-            :children="Object.keys(modifiedUserChoices[filteredParent])"
-            :subTree="modifiedUserChoices[filteredParent]"
-            @changeUserChoice="changeUserChoice"
-          />
+          <!-- TODO: what if Object.keys(modifiedUserChoices).length > 100 ? -->
+          <PDetails :key="$route.fullPath + componentKey.toString()" :tabName="tabName" :parent="filteredParent"
+            :children="Object.keys(modifiedUserChoices[filteredParent])" :subTree="modifiedUserChoices[filteredParent]"
+            @changeUserChoice="changeUserChoice" />
         </div>
 
+        <!-- Data / Purposes -->
         <div v-if="!filteredParent || searchValue === ''">
+
+          <!-- TODO: what if Object.keys(modifiedUserChoices).length > 100 ? -->
           <div v-for="parent in Object.keys(modifiedUserChoices)" :key="parent">
-            <new-p-details
-              :key="$route.fullPath + componentKey.toString()"
-              :tabName="tabName"
-              :parent="parent"
-              :children="Object.keys(modifiedUserChoices[parent])"
-              :subTree="modifiedUserChoices[parent]"
-              @changeUserChoice="changeUserChoice"
-            />
+
+            <PDetails :key="$route.fullPath + componentKey.toString()" :tabName="tabName" :parent="parent"
+              :children="Object.keys(modifiedUserChoices[parent])" :subTree="modifiedUserChoices[parent]"
+              @changeUserChoice="changeUserChoice" />
+
           </div>
         </div>
       </v-container>
@@ -102,19 +107,17 @@ export default {
         }
         // set the value of revokeAll switch
         let allConcentValues = [];
-        for (const [parent, children] of Object.entries(
-          this.modifiedUserChoices
-        )) {
+        for (const [parent, children] of Object.entries(this.modifiedUserChoices)) {
           for (const [child, consentValue] of Object.entries(children)) {
             allConcentValues.push(this.modifiedUserChoices[parent][child]);
           }
         }
-        if(allConcentValues.includes(true)){
-          this.revokeAllValue = false
-        }else{
-           this.revokeAllValue = true
-        } 
-
+        if (allConcentValues.includes(true)) {
+          this.revokeAllValue = false;
+        }
+        else {
+          this.revokeAllValue = true;
+        }
       },
       deep: true,
     },
@@ -131,32 +134,24 @@ export default {
     },
     search() {
       Object.keys(this.modifiedUserChoices).forEach((element) => {
-        if (
-          this.$t(`dpv.labels.${element}`).toLowerCase() ===
-          this.searchValue.toLowerCase()
-        ) {
+        if (this.$t(`dpv.labels.${element}`).toLowerCase() ===
+          this.searchValue.toLowerCase()) {
           this.filteredParent = element;
         }
       });
     },
     revokeAll() {
-      let tempModifiedUserChoices = JSON.parse(JSON.stringify(this.modifiedUserChoices))
-
-      for (const [parent, children] of Object.entries(
-        tempModifiedUserChoices
-      )) {
+      let tempModifiedUserChoices = JSON.parse(JSON.stringify(this.modifiedUserChoices));
+      for (const [parent, children] of Object.entries(tempModifiedUserChoices)) {
         for (const [child, consentValue] of Object.entries(children)) {
-          console.log(`${parent} ${child} `)
-          tempModifiedUserChoices[parent][child]= false
-
+          console.log(`${parent} ${child} `);
+          tempModifiedUserChoices[parent][child] = false;
         }
       }
-      this.modifiedUserChoices = JSON.parse(
-        JSON.stringify(tempModifiedUserChoices)
-      );
+      this.modifiedUserChoices = JSON.parse(JSON.stringify(tempModifiedUserChoices));
       this.forceRerender();
     },
-  },
+  }
 };
 </script>
 
