@@ -139,8 +139,6 @@ export default {
       for (const entry of Object.values(this.glossary.glossaryEntries)) {
         if (entry.term.toLowerCase() === this.searchInput.toLowerCase()) {
           this.matchedEntry = JSON.parse(JSON.stringify(entry));;
-          console.log(entry)
-          console.log(this.matchedEntry)
           this.searching = true;
           break;
         }

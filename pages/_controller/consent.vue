@@ -77,7 +77,6 @@ export default {
     this.purposeMap = policy.getMap("dpv:hasPurpose","dpv:hasPersonalDataCategory");
     this.fetchedUserChoices = JSON.parse(JSON.stringify(this.fetchUserChoices()))
     this.userChoices = Object.assign({}, this.fetchedUserChoices);
-    console.log(this.$route.params.controller)
   },
 
   mounted() {

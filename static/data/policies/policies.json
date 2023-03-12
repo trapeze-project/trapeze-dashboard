@@ -63,7 +63,106 @@
           },
           {
             "@class": "dpv:fingerprint"
+          },
+          {
+            "@class": "dpv:profile1"
+          },
+          {
+            "@class": "dpv:profile2"
           }
+          ,
+          {
+            "@class": "dpv:profile3"
+          }
+          ,
+          {
+            "@class": "dpv:profile4"
+          }
+          ,
+          {
+            "@class": "dpv:profile5"
+          }
+          ,
+          {
+            "@class": "dpv:profile6"
+          }
+          ,
+          {
+            "@class": "dpv:profile7"
+          }
+          ,
+          {
+            "@class": "dpv:profile8"
+          }
+          ,
+          {
+            "@class": "dpv:profile9"
+          }
+          ,
+          {
+            "@class": "dpv:profile10"
+          }
+          ,
+          {
+            "@class": "dpv:profile11"
+          }
+          ,
+          {
+            "@class": "dpv:profile12"
+          }
+          ,
+          {
+            "@class": "dpv:profile13"
+          }
+          ,
+          {
+            "@class": "dpv:profile14"
+          }
+          ,
+          {
+            "@class": "dpv:profile15"
+          }
+          ,
+          {
+            "@class": "dpv:profile16"
+          }
+          ,
+          {
+            "@class": "dpv:profile17"
+          }
+          ,
+          {
+            "@class": "dpv:profile18"
+          }
+          ,
+          {
+            "@class": "dpv:profile19"
+          }
+          ,
+          {
+            "@class": "dpv:profile20"
+          }
+          ,
+          {
+            "@class": "dpv:profile21"
+          }
+          ,
+          {
+            "@class": "dpv:profile22"
+          }
+          ,
+          {
+            "@class": "dpv:profile23"
+          }
+          ,
+          {
+            "@class": "dpv:profile24"
+          }
+          ,
+          {
+            "@class": "dpv:profile25"
+          }
+
         ],
         "dpv:hasPurpose": [
           {

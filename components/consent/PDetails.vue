@@ -5,52 +5,59 @@
         <v-row>
           <v-col :cols="10" class="pa-0">
             <v-card-title class="pa-0 pl-5">
-              <v-switch inset v-model="parentSwitchValue" @change="changeParentValue"></v-switch>
-              <b class="ml-3">{{ this.$t(`dpv.labels.${this.parent}`)  }}</b>
+              <v-switch
+                inset
+                v-model="parentSwitchValue"
+                @change="changeParentValue"
+              ></v-switch>
+              <b class="ml-3">{{ this.$t(`dpv.labels.${this.parent}`) }}</b>
             </v-card-title>
 
             <v-expand-transition>
-              <div v-show="showDetails">
+              <div v-show="showDetails" class="pa-3">
                 <!-- Data / Purposes -->
-                <v-card
-                  class="ma-3"
-                  v-for="child in children"
-                  :key="child"
-                  outlined
-                  elevation="0"
-                >
-                  <v-card-title>
-                    <v-switch 
-                      inset 
-                      v-model="ChildrenSwitchesValues[child]" 
-                      @change="changeUserChoice(child)"
-                    />
-                    <b>{{ $t(`dpv.labels.${child}`)  }}</b>
-                  </v-card-title>
-                  <v-card-text>
-                    {{ $t(`dpv.descriptions.${child}`) }}
-                  </v-card-text>
-                </v-card>
+                <v-row>
+                  <v-col
+                    cols="12"
+                    sm="6"
+                    lg="4"
+                    xl="3"
+                    v-for="child in children"
+                    :key="child"
+                  >
+                  <v-card
+                    outlined
+                    elevation="0"
+                  >
+                    <v-card-title>
+                      <v-switch
+                        inset
+                        v-model="ChildrenSwitchesValues[child]"
+                        @change="changeUserChoice(child)"
+                      />
+                      <b>{{ $t(`dpv.labels.${child}`) }}</b>
+                    </v-card-title>
+                    <v-card-text>
+                      {{ $t(`dpv.descriptions.${child}`) }}
+                    </v-card-text>
+                  </v-card>                  
+                  </v-col>
+                </v-row>
+                
 
                 <!-- Recipients -->
-                <v-card class="ma-3" outlined elevation="0">
-                  <v-card-title>
-                    Recipients other than cloverIT:
-                  </v-card-title>
+                <v-card class="my-3" outlined elevation="0">
+                  <v-card-title> Recipients other than cloverIT: </v-card-title>
                 </v-card>
 
                 <!-- Storage -->
-                <v-card class="ma-3" outlined elevation="0">
-                  <v-card-title>
-                    Storage Duration
-                  </v-card-title>
+                <v-card class="my-3" outlined elevation="0">
+                  <v-card-title> Storage Duration </v-card-title>
                 </v-card>
 
                 <!-- Sensitivity -->
-                <v-card class="ma-3" outlined elevation="0">
-                  <v-card-title>
-                    Sensitivity
-                  </v-card-title>
+                <v-card class="my-3" outlined elevation="0">
+                  <v-card-title> Sensitivity </v-card-title>
                 </v-card>
               </div>
             </v-expand-transition>
@@ -62,7 +69,7 @@
               align="center"
               class="clickable pa-0"
               :style="{
-                background: (hover) ? '#F3F3F3' : 'white',
+                background: hover ? '#F3F3F3' : 'white',
                 'border-radius': '4px',
               }"
               @click="showDetails = !showDetails"
@@ -70,25 +77,17 @@
               <v-container fill-height fluid>
                 <v-row>
                   <v-col>
-                    
-                    <v-icon v-if="showDetails">
-                      mdi-chevron-up
-                    </v-icon>
+                    <v-icon v-if="showDetails"> mdi-chevron-up </v-icon>
 
-                    <v-icon v-else>
-                      mdi-chevron-down
-                    </v-icon>
-
+                    <v-icon v-else> mdi-chevron-down </v-icon>
                   </v-col>
                 </v-row>
               </v-container>
             </v-col>
           </v-hover>
-
         </v-row>
       </v-container>
     </v-card>
-
   </div>
 </template>
 
@@ -118,36 +117,44 @@ export default {
   },
   data() {
     return {
-			parentSwitchValue:false,
-			ChildrenSwitchesValues:{},
+      parentSwitchValue: false,
+      ChildrenSwitchesValues: {},
       showDetails: false,
       userChoices: {},
-      purposeMap: {
-        "dpv.advertising": ["dpv.location", "dpv.name"],
-        "dpv.marketing": ["dpv.location", "dpv.name"],
-      },
     };
   },
-	created(){
-		this.ChildrenSwitchesValues = Object.assign({}, this.subTree);
-		this.parentSwitchValue = Object.values(this.ChildrenSwitchesValues).includes(true) ? true : false
-	},
-	methods:{
-		changeUserChoice (child) {
-			if(Object.values(this.ChildrenSwitchesValues).every((currentValue)=> currentValue===false)){
-				this.parentSwitchValue= false
-			}else{
-				this.parentSwitchValue= true
-			}
-      console.log(child)
-      this.$emit('changeUserChoice', this.parent, child, this.ChildrenSwitchesValues[child])
+  created() {
+    this.ChildrenSwitchesValues = Object.assign({}, this.subTree);
+    this.parentSwitchValue = Object.values(
+      this.ChildrenSwitchesValues
+    ).includes(true)
+      ? true
+      : false;
+  },
+  methods: {
+    changeUserChoice(child) {
+      if (
+        Object.values(this.ChildrenSwitchesValues).every(
+          (currentValue) => currentValue === false
+        )
+      ) {
+        this.parentSwitchValue = false;
+      } else {
+        this.parentSwitchValue = true;
+      }
+      this.$emit(
+        "changeUserChoice",
+        this.parent,
+        child,
+        this.ChildrenSwitchesValues[child]
+      );
     },
-		changeParentValue(value){
-			for(const child in this.ChildrenSwitchesValues){
-				this.ChildrenSwitchesValues[child]= value
-				this.changeUserChoice(child)
-			}
-		}
-	}
+    changeParentValue(value) {
+      for (const child in this.ChildrenSwitchesValues) {
+        this.ChildrenSwitchesValues[child] = value;
+        this.changeUserChoice(child);
+      }
+    },
+  },
 };
 </script>

@@ -24,7 +24,7 @@
         <!-- Search field -->
         <v-row>
           <v-col class="fill-height">
-            <v-text-field v-model="searchValue" style="max-width: 700px" :placeholder="'Search for ' + tabName" outlined
+            <v-text-field v-model="searchValue" :placeholder="'Search for ' + tabName" outlined
               dense clearable append-icon="mdi-magnify" @click:append="search" @click:clear="filteredParent = null"
               @keyup.enter="search" />
           </v-col>
@@ -61,6 +61,8 @@
         <div v-if="!filteredParent || searchValue === ''">
 
           <!-- TODO: what if Object.keys(modifiedUserChoices).length > 100 ? -->
+          <!-- TODO: hint to search function -->
+          <!-- TODO: fix search function -->
           <div v-for="parent in Object.keys(modifiedUserChoices)" :key="parent">
 
             <PDetails :key="$route.fullPath + componentKey.toString()" :tabName="tabName" :parent="parent"
@@ -144,7 +146,6 @@ export default {
       let tempModifiedUserChoices = JSON.parse(JSON.stringify(this.modifiedUserChoices));
       for (const [parent, children] of Object.entries(tempModifiedUserChoices)) {
         for (const [child, consentValue] of Object.entries(children)) {
-          console.log(`${parent} ${child} `);
           tempModifiedUserChoices[parent][child] = false;
         }
       }
