@@ -6,20 +6,20 @@
       Withdraw all my consent
     </v-btn>
 
-    <v-card>
+    <v-card elevation="0">
 
       <!-- Title -->
-      <v-card-title>
+      <v-card-title class="pa-0 my-3">
         {{ this.tabName }}
       </v-card-title>
 
       <!-- Description -->
-      <v-card-text>
+      <v-card-text class="pa-0 my-3">
         {{ this.$t(`consent.${this.tabName}Description`) }}
       </v-card-text>
 
       <!-- Content -->
-      <v-container>
+      <v-container class="pa-0">
 
         <!-- Search field -->
         <v-row>
@@ -29,25 +29,6 @@
               @keyup.enter="search" />
           </v-col>
         </v-row>
-
-        <!-- Search suggestions -->
-        <!--
-        <div v-if="!filteredParent && searchValue">
-          <v-card outlined class="mb-2">
-
-            <v-card-title>
-              avaliable Categories are:
-            </v-card-title>
-
-            <v-card-text>
-              <span v-for="parent in Object.keys(modifiedUserChoices)" :key="parent">
-                {{ $t(`dpv.labels.${parent}`) }}
-              </span>
-            </v-card-text>
-
-          </v-card>
-        </div>
-        -->
 
         <!-- Search results -->
         <div v-if="filteredParent">

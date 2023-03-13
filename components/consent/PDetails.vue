@@ -3,14 +3,25 @@
     <v-card class="mb-2" outlined elevated="0">
       <v-container>
         <v-row>
-          <v-col :cols="10" class="pa-0">
-            <v-card-title class="pa-0 pl-5">
+          <v-col :cols="12" class="pa-0">
+            <v-card-title 
+              class="pa-0 pl-5 clickable"
+              @click="showDetails = !showDetails"
+            >
               <v-switch
                 inset
                 v-model="parentSwitchValue"
                 @change="changeParentValue"
-              ></v-switch>
-              <b class="ml-3">{{ this.$t(`dpv.labels.${this.parent}`) }}</b>
+              />
+
+              <b class="ml-3 me-auto">
+                {{ this.$t(`dpv.labels.${this.parent}`) }}
+              </b>
+
+              <div class="mr-3">
+                <v-icon v-if="showDetails"> mdi-chevron-up </v-icon>
+                <v-icon v-else> mdi-chevron-down </v-icon>
+              </div>
             </v-card-title>
 
             <v-expand-transition>
@@ -18,6 +29,7 @@
                 <!-- Data / Purposes -->
                 <v-row>
                   <v-col
+                    class="pa-3 pt-0"
                     cols="12"
                     sm="6"
                     lg="4"
@@ -63,28 +75,6 @@
             </v-expand-transition>
           </v-col>
 
-          <v-hover v-slot="{ hover }">
-            <v-col
-              :cols="2"
-              align="center"
-              class="clickable pa-0"
-              :style="{
-                background: hover ? '#F3F3F3' : 'white',
-                'border-radius': '4px',
-              }"
-              @click="showDetails = !showDetails"
-            >
-              <v-container fill-height fluid>
-                <v-row>
-                  <v-col>
-                    <v-icon v-if="showDetails"> mdi-chevron-up </v-icon>
-
-                    <v-icon v-else> mdi-chevron-down </v-icon>
-                  </v-col>
-                </v-row>
-              </v-container>
-            </v-col>
-          </v-hover>
         </v-row>
       </v-container>
     </v-card>

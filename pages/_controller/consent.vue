@@ -11,7 +11,6 @@
     <v-tabs-items v-model="tab">
       <v-tab-item value="data" :eager="true" :transition="false">
         <PConsentTab
-          class="ma-1"
           ref="data"
           tab-name="data"
           :user-choices="invertUserChoices(userChoices)"
@@ -20,7 +19,6 @@
 
       <v-tab-item value="purpose" :eager="true" :transition="false">
         <PConsentTab
-          class="ma-1"
           ref="purpose"
           tab-name="purpose"
           :user-choices="userChoices"
