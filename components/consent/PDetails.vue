@@ -6,7 +6,7 @@
           <v-col :cols="12" class="pa-0">
             <v-card-title 
               class="pa-0 pl-5 clickable"
-              @click="showDetails = !showDetails"
+              @click="showDetails = !showDetails; max = 10"
             >
               <v-switch
                 inset
@@ -27,6 +27,24 @@
             <v-expand-transition>
               <div v-show="showDetails" class="pa-3">
                 <!-- Data / Purposes -->
+                <!-- TODO: search -->
+
+                <v-row>
+                  <v-col class="fill-height pb-0">
+                    <v-text-field 
+                      v-model="searchValue"
+                      :placeholder="'Search for ...'" 
+                      outlined
+                      dense 
+                      clearable 
+                      append-icon="mdi-magnify"
+                      @keyup.enter="max = 10"
+                      @click:append="max = 10"
+                      @click:clear="searchValue = ''; max = 10"
+                    />
+                  </v-col>
+                </v-row>
+
                 <v-row>
                   <v-col
                     class="pa-3 pt-0"
@@ -34,28 +52,37 @@
                     sm="6"
                     lg="4"
                     xl="3"
-                    v-for="child in children"
+                    v-for="child in slicedChildren.slice(0, this.max)"
                     :key="child"
                   >
-                  <v-card
-                    outlined
-                    elevation="0"
-                  >
-                    <v-card-title>
-                      <v-switch
-                        inset
-                        v-model="ChildrenSwitchesValues[child]"
-                        @change="changeUserChoice(child)"
-                      />
-                      <b>{{ $t(`dpv.labels.${child}`) }}</b>
-                    </v-card-title>
-                    <v-card-text>
-                      {{ $t(`dpv.descriptions.${child}`) }}
-                    </v-card-text>
-                  </v-card>                  
+                    <v-card
+                      outlined
+                      elevation="0"
+                    >
+                      <v-card-title>
+                        <v-switch
+                          inset
+                          v-model="ChildrenSwitchesValues[child]"
+                          @change="changeUserChoice(child)"
+                        />
+                        <b>{{ $t(`dpv.labels.${child}`) }}</b>
+                      </v-card-title>
+                      <v-card-text>
+                        {{ $t(`dpv.descriptions.${child}`) }}
+                      </v-card-text>
+                    </v-card>            
                   </v-col>
                 </v-row>
                 
+                <div v-if="max < children.length" class="d-flex justify-center mt-3">
+                  <v-btn
+                    class="my-2 black--text" 
+                    color="primary" 
+                    @click="() => max += max"
+                  >
+                    Load more
+                  </v-btn>
+                </div>
 
                 <!-- Recipients -->
                 <v-card class="my-3" outlined elevation="0">
@@ -89,7 +116,7 @@ export default {
       required: true,
       validator(value) {
         // The value must match one of these strings
-        return [, "data", "purpose"].includes(value);
+        return ["data", "purpose"].includes(value);
       },
     },
     parent: {
@@ -111,7 +138,19 @@ export default {
       ChildrenSwitchesValues: {},
       showDetails: false,
       userChoices: {},
+      searchValue: "",
+      max: 10,
     };
+  },
+  computed: {
+    slicedChildren() {
+      return this
+        .children
+        .filter((e) => {
+          let label = this.$t(`dpv.labels.${e}`).toLowerCase();
+          return label.includes((this.searchValue) ? this.searchValue : '');
+        });        
+    }
   },
   created() {
     this.ChildrenSwitchesValues = Object.assign({}, this.subTree);

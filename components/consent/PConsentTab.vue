@@ -75,7 +75,7 @@ export default {
       required: true,
       validator(value) {
         // The value must match one of these strings
-        return [, "data", "purpose"].includes(value);
+        return ["data", "purpose"].includes(value);
       },
     },
     userChoices: {
@@ -148,5 +148,3 @@ export default {
   }
 };
 </script>
-
-<style></style>
