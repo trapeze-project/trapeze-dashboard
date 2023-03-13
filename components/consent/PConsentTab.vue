@@ -24,32 +24,42 @@
         <!-- Search field -->
         <v-row>
           <v-col class="fill-height">
-            <v-text-field v-model="searchValue" :placeholder="'Search for ' + tabName" outlined
-              dense clearable append-icon="mdi-magnify" @click:append="search" @click:clear="filteredParent = null"
-              @keyup.enter="search" />
+            <v-text-field 
+              v-model="searchValue"
+              :placeholder="'Search for ' + tabName" 
+              outlined
+              dense 
+              clearable 
+              append-icon="mdi-magnify"
+              @keyup.enter="max = 10"
+              @click:append="max = 10"
+              @click:clear="searchValue = ''; max = 10"
+            />
           </v-col>
         </v-row>
 
-        <!-- Search results -->
-        <div v-if="filteredParent">
-          <!-- TODO: what if Object.keys(modifiedUserChoices).length > 100 ? -->
-          <PDetails :key="$route.fullPath + componentKey.toString()" :tabName="tabName" :parent="filteredParent"
-            :children="Object.keys(modifiedUserChoices[filteredParent])" :subTree="modifiedUserChoices[filteredParent]"
-            @changeUserChoice="changeUserChoice" />
-        </div>
-
         <!-- Data / Purposes -->
-        <div v-if="!filteredParent || searchValue === ''">
+        <div>
 
-          <!-- TODO: what if Object.keys(modifiedUserChoices).length > 100 ? -->
-          <!-- TODO: hint to search function -->
-          <!-- TODO: fix search function -->
-          <div v-for="parent in Object.keys(modifiedUserChoices)" :key="parent">
+          <div v-for="parent in parents.slice(0, max)" :key="parent">
+            <PDetails 
+              :key="$route.fullPath + componentKey.toString()" 
+              :tabName="tabName"
+              :parent="parent"
+              :children="Object.keys(modifiedUserChoices[parent])"
+              :subTree="modifiedUserChoices[parent]"
+              @changeUserChoice="changeUserChoice" 
+            />
+          </div>
 
-            <PDetails :key="$route.fullPath + componentKey.toString()" :tabName="tabName" :parent="parent"
-              :children="Object.keys(modifiedUserChoices[parent])" :subTree="modifiedUserChoices[parent]"
-              @changeUserChoice="changeUserChoice" />
-
+          <div v-if="max < parents.length" class="d-flex justify-center">
+            <v-btn
+              class="my-2 black--text" 
+              color="primary" 
+              @click="() => max += max"
+            >
+              Load more
+            </v-btn>
           </div>
         </div>
       </v-container>
@@ -77,9 +87,9 @@ export default {
     return {
       revokeAllValue: false,
       searchValue: "",
-      filteredParent: null,
       componentKey: 0,
       modifiedUserChoices: {},
+      max: 10,
     };
   },
   watch: {
@@ -105,6 +115,16 @@ export default {
       deep: true,
     },
   },
+  computed: {
+    parents() {
+      return Object
+        .keys(this.modifiedUserChoices)
+        .filter((e) => {
+          let label = this.$t(`dpv.labels.${e}`).toLowerCase();
+          return label.includes((this.searchValue) ? this.searchValue : '');
+        });
+    }
+  },
   created() {
     this.modifiedUserChoices = JSON.parse(JSON.stringify(this.userChoices));
   },
@@ -114,14 +134,6 @@ export default {
     },
     forceRerender() {
       this.componentKey += 1;
-    },
-    search() {
-      Object.keys(this.modifiedUserChoices).forEach((element) => {
-        if (this.$t(`dpv.labels.${element}`).toLowerCase() ===
-          this.searchValue.toLowerCase()) {
-          this.filteredParent = element;
-        }
-      });
     },
     revokeAll() {
       let tempModifiedUserChoices = JSON.parse(JSON.stringify(this.modifiedUserChoices));
