@@ -1,10 +1,12 @@
 <template>
   <div>
+    <!--
     <PFloatingMenu
       v-show="showFloatingMenu"
       @undoAllChanges="undoAllChanges"
       @submitMyConsent="submitMyConsent"
     />
+    -->
     <PNotification ref="consentNotification" />
     
     <PAlertLeaveDialog ref="alertDialog" />
@@ -16,6 +18,9 @@
           tab-name="data"
           :heading="$t('nav.labels.data')"
           :user-choices="invertUserChoices(userChoices)"
+          :hasChanged="showFloatingMenu"
+          @undoAllChanges="undoAllChanges"
+          @submitMyConsent="submitMyConsent"
         />
       </v-tab-item>
 
@@ -25,6 +30,9 @@
           tab-name="purpose"
           :heading="$t('nav.labels.purposes')"
           :user-choices="userChoices"
+          :hasChanged="showFloatingMenu"
+          @undoAllChanges="undoAllChanges"
+          @submitMyConsent="submitMyConsent"
         />
       </v-tab-item>
     </v-tabs-items>

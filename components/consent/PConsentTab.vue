@@ -44,6 +44,18 @@
           </v-btn>
         </div>
 
+        <div v-if="hasChanged" class="d-flex justify-end mb-3">
+          <v-btn class="px-2 mx-3 rounded-pill" @click="() => $emit('undoAllChanges')" :disabled="!hasChanged">
+            <v-icon class="mr-1"> mdi-undo </v-icon>
+            Discard changes
+          </v-btn>
+
+          <v-btn class="px-2 rounded-pill black--text" color="primary" @click="() => $emit('submitMyConsent')" :disabled="!hasChanged">
+            <v-icon class="mr-1"> mdi-tray-arrow-up </v-icon>
+            Submit changes
+          </v-btn>
+        </div>
+
         <!-- Data / Purposes -->
         <div>
 
@@ -86,6 +98,10 @@ export default {
     },
     heading: {
       type: String,
+      required: true,
+    },
+    hasChanged: {
+      type: Boolean,
       required: true,
     },
     userChoices: {
