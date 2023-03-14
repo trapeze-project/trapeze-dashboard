@@ -125,12 +125,6 @@
         "content": "Dites-nous (${we}) à quoi nous pouvons utiliser vos données."
       },
       "2": {
-        "title": "Consentement",
-        "filename": "/img/consent.png",
-        "link": "/privacyPolicy",
-        "content": "Consultez le consentement que vous nous avez donné (${we})."
-      },
-      "3": {
         "title": "TRAPEZE",
         "filename": "/img/favicon.png",
         "link": "http://trapeze-project.eu",

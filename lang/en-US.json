@@ -150,12 +150,6 @@
         "content": "Tell us (${we}) what we may use your data for."
       },
       "2": {
-        "title": "privacyPolicy",
-        "filename": "/img/consent.png",
-        "link": "/privacyPolicy",
-        "content": "View our privacy policy."
-      },
-      "3": {
         "title": "TRAPEZE",
         "filename": "/img/favicon.png",
         "link": "http://trapeze-project.eu",
