@@ -3,9 +3,11 @@
     "@context": {
       "schema": "http://schema.org/",
       "dpv": "http://www.w3.org/ns/dpv#",
+      "dpv-pd": "https://w3id.org/dpv/dpv-pd#", 
       "spl": "http://www.specialprivacy.eu/langs/usage-policy#",
       "svdu": "http://www.specialprivacy.eu/vocabs/duration#",
-      "svl": "http://www.specialprivacy.eu/vocabs/locations#"
+      "svl": "http://www.specialprivacy.eu/vocabs/locations#",
+      "cloverit-vocab": "https://alex-it.com/vocabs#"
     },
     "@ontologies": [],
     "controller": "c630f98e-a9f2-413a-8c71-8436a6f60001",
@@ -20,6 +22,15 @@
           },
           {
             "@class": "dpv:name"
+          },
+          {
+            "@class": "dpv:age"
+          },
+          {
+            "@class": "dpv:country"
+          },
+          {
+            "@class": "dpv:preference"
           }
         ],
         "dpv:hasPurpose": [
@@ -95,20 +106,7 @@
         "dpv:Recipient": {
           "@instance": "org:company:google"
         }
-      }
-    ]
-  },
-  {
-    "@context": {
-      "schema": "http://schema.org/",
-      "dpv": "http://www.w3.org/ns/dpv#",
-      "spl": "http://www.specialprivacy.eu/langs/usage-policy#",
-      "svdu": "http://www.specialprivacy.eu/vocabs/duration#",
-      "svl": "http://www.specialprivacy.eu/vocabs/locations#"
-    },
-    "@ontologies": [],
-    "controller": "c630f98e-a9f2-413a-8c71-8436a6f60002",
-    "@policySet": [
+      },
       {
         "@id": "c630f98e-a9f2-413a-8c71-8436a6f70002",
         "title": "Policy 01",
@@ -119,11 +117,26 @@
           },
           {
             "@class": "dpv:name"
+          },
+          {
+            "@class": "dpv:age"
+          },
+          {
+            "@class": "dpv:gender"
+          },
+          {
+            "@class": "dpv:country"
+          },
+          {
+            "@class": "dpv:behavioral"
+          },
+          {
+            "@class": "dpv:preference"
           }
         ],
         "dpv:hasPurpose": [
           {
-            "@class": "dpv:marketing"
+            "@class": "dpv:academicResearch"
           }
         ],
         "dpv:hasProcessing": [
@@ -153,20 +166,35 @@
         }
       },
       {
-        "@id": "c630f98e-a9f2-413a-8c71-8436a6f70003",
-        "title": "Policy 02",
+        "@id": "c630f98e-a9f2-413a-8c71-8436a6f70002",
+        "title": "Policy 01",
         "description": "...",
         "dpv:hasPersonalDataCategory": [
           {
             "@class": "dpv:location"
           },
           {
-            "@class": "dpv:fingerprint"
+            "@class": "dpv:name"
+          },
+          {
+            "@class": "dpv:age"
+          },
+          {
+            "@class": "dpv:gender"
+          },
+          {
+            "@class": "dpv:country"
+          },
+          {
+            "@class": "dpv:behavioral"
+          },
+          {
+            "@class": "dpv:preference"
           }
         ],
         "dpv:hasPurpose": [
           {
-            "@class": "dpv:advertising"
+            "@class": "dpv:commercialResearch"
           }
         ],
         "dpv:hasProcessing": [
@@ -178,6 +206,262 @@
           },
           {
             "@class": "dpv:Collect"
+          }
+        ],
+        "dpv:hasStorage": {
+          "dpv:hasDuration": {
+            "@interval": [
+              30,
+              90
+            ]
+          },
+          "dpv:hasLocation": {
+            "@class": "svl:ControllerServers"
+          }
+        },
+        "dpv:Recipient": {
+          "@instance": "org:company:google"
+        }
+      },
+      {
+        "@id": "c630f98e-a9f2-413a-8c71-8436a6f70002",
+        "title": "Policy 01",
+        "description": "...",
+        "dpv:hasPersonalDataCategory": [
+          {
+            "@class": "dpv:location"
+          },
+          {
+            "@class": "dpv:name"
+          },
+          {
+            "@class": "dpv:age"
+          },
+          {
+            "@class": "dpv:gender"
+          },
+          {
+            "@class": "dpv:country"
+          },
+          {
+            "@class": "dpv:behavioral"
+          },
+          {
+            "@class": "dpv:preference"
+          }
+        ],
+        "dpv:hasPurpose": [
+          {
+            "@class": "dpv:academicResearch"
+          }
+        ],
+        "dpv:hasProcessing": [
+          {
+            "@class": "dpv:Analyse"
+          },
+          {
+            "@class": "dpv:Alter"
+          },
+          {
+            "@class": "dpv:Collect"
+          }
+        ],
+        "dpv:hasStorage": {
+          "dpv:hasDuration": {
+            "@interval": [
+              30,
+              90
+            ]
+          },
+          "dpv:hasLocation": {
+            "@class": "svl:ControllerServers"
+          }
+        },
+        "dpv:Recipient": {
+          "@instance": "org:company:google"
+        }
+      },
+      {
+        "@id": "c630f98e-a9f2-413a-8c71-8436a6f70002",
+        "title": "Policy 01",
+        "description": "...",
+        "dpv:hasPersonalDataCategory": [
+          {
+            "@class": "dpv:location"
+          },
+          {
+            "@class": "dpv:name"
+          },
+          {
+            "@class": "dpv:age"
+          },
+          {
+            "@class": "dpv:country"
+          },
+          {
+            "@class": "dpv:preference"
+          },
+          {
+            "@class": "dpv:behavioral"
+          },
+          {
+            "@class": "dpv:browserHistory"
+          },
+          {
+            "@class": "dpv:browsingBehavior"
+          },
+          {
+            "@class": "dpv:communication"
+          }
+        ],
+        "dpv:hasPurpose": [
+          {
+            "@class": "dpv:customerCare"
+          }
+        ],
+        "dpv:hasProcessing": [
+          {
+            "@class": "dpv:Analyse"
+          },
+          {
+            "@class": "dpv:Alter"
+          },
+          {
+            "@class": "dpv:Collect"
+          }
+        ],
+        "dpv:hasStorage": {
+          "dpv:hasDuration": {
+            "@interval": [
+              30,
+              90
+            ]
+          },
+          "dpv:hasLocation": {
+            "@class": "svl:ControllerServers"
+          }
+        },
+        "dpv:Recipient": {
+          "@instance": "org:company:google"
+        }
+      },
+      {
+        "@id": "c630f98e-a9f2-413a-8c71-8436a6f70002",
+        "title": "Policy 01",
+        "description": "...",
+        "dpv:hasPersonalDataCategory": [
+          {
+            "@class": "dpv:location"
+          },
+          {
+            "@class": "dpv:name"
+          },
+          {
+            "@class": "dpv:age"
+          },
+          {
+            "@class": "dpv:country"
+          },
+          {
+            "@class": "dpv:preference"
+          }
+        ],
+        "dpv:hasPurpose": [
+          {
+            "@class": "dpv:sellDataToThirdParties"
+          }
+        ],
+        "dpv:hasProcessing": [
+          {
+            "@class": "dpv:Analyse"
+          },
+          {
+            "@class": "dpv:Alter"
+          },
+          {
+            "@class": "dpv:Collect"
+          },
+          {
+            "@class": "dpv:age"
+          },
+          {
+            "@class": "dpv:gender"
+          },
+          {
+            "@class": "dpv:country"
+          },
+          {
+            "@class": "dpv:behavioral"
+          },
+          {
+            "@class": "dpv:preference"
+          }
+        ],
+        "dpv:hasStorage": {
+          "dpv:hasDuration": {
+            "@interval": [
+              30,
+              90
+            ]
+          },
+          "dpv:hasLocation": {
+            "@class": "svl:ControllerServers"
+          }
+        },
+        "dpv:Recipient": {
+          "@instance": "org:company:google"
+        }
+      },
+      {
+        "@id": "c630f98e-a9f2-413a-8c71-8436a6f70002",
+        "title": "Policy 01",
+        "description": "...",
+        "dpv:hasPersonalDataCategory": [
+          {
+            "@class": "dpv:location"
+          },
+          {
+            "@class": "dpv:name"
+          },
+          {
+            "@class": "dpv:age"
+          },
+          {
+            "@class": "dpv:country"
+          },
+          {
+            "@class": "dpv:preference"
+          }
+        ],
+        "dpv:hasPurpose": [
+          {
+            "@class": "dpv:sellInsightsToThirdParties"
+          }
+        ],
+        "dpv:hasProcessing": [
+          {
+            "@class": "dpv:Analyse"
+          },
+          {
+            "@class": "dpv:Alter"
+          },
+          {
+            "@class": "dpv:Collect"
+          },
+          {
+            "@class": "dpv:age"
+          },
+          {
+            "@class": "dpv:gender"
+          },
+          {
+            "@class": "dpv:country"
+          },
+          {
+            "@class": "dpv:behavioral"
+          },
+          {
+            "@class": "dpv:preference"
           }
         ],
         "dpv:hasStorage": {
