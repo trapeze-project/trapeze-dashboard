@@ -1,66 +1,76 @@
 <template>
   <div>
     <PNotification ref="notification" />
-    <v-dialog v-model="dialog" width="500" persistent>
+
+    <v-dialog class="rounded-xl" v-model="dialog" scrollable>
       <template v-slot:activator="{ on, attrs }">
         <v-btn class="black--text rounded-pill" v-bind="attrs" color="primary" v-on="on">
           {{ btnName }}
         </v-btn>
       </template>
 
-      <v-card>
+      <v-card class="rounded-xl"  >
         <v-card-title>
-          <h1>Contact Form</h1>
-          <v-spacer />
+          <b class="me-auto">Contact Form</b>
+          
           <v-btn small fab depressed color="white" @click="cancel">
             <v-icon color="grey">
               mdi-window-close
             </v-icon>
           </v-btn>
         </v-card-title>
-        <v-card-text>
-          <b class="mt-4 mb-1 black--text">
-            Data Protection Officer (DPO)
-          </b>
-          <v-text-field v-model="this.email.match(/@.+(?=[.])/)[0]"  outlined dense disabled />
-          <b class="mt-1 mb-1 black--text">Contact Email (Optional)</b>
-          <v-text-field v-model="userEmail" placeholder="Enter email if you wish to be contacted on this matter." outlined dense />
 
-          <div id="message">
-            <b class="mt-1 mb-1 black--text">Message</b>
-            
-            <v-container fluid class="pl-0">
-              <v-row >
-                <v-col  cols='2' >
-                  <p class="mt-1 mb-1 black--text">Subject:</p>
-                </v-col>
-                <v-col  cols='10'>
-                  <v-combobox
-                    disable-lookup
-                    outlined placeholder="Choose Message Subject..."
-                    dense
-                    :items="subjects"
-                    v-model="message.subject"
-                    @input="fillMessageBody"
-                    @keydown="fillMessageBody"
-                  ></v-combobox>
-                </v-col>
-              </v-row>
-            </v-container>
+        <v-divider class="mb-8"/>
 
-            <v-textarea
-              v-model="message.body"
-              auto-grow
-              outlined
-              rows="3"
-              row-height="50"
-              placeholder="<Pre-filled Text-template>"
-            />
-          </div>
+        <v-card-text class="pb-0">
+
+          <v-text-field 
+            class="rounded-pill"
+            label="To:"
+            v-model="this.email.match(/@.+(?=[.])/)[0]" 
+            outlined 
+            dense 
+            disabled 
+          />
+
+          <v-text-field 
+            class="rounded-pill"
+            label="From:"
+            v-model="userEmail"
+            placeholder="Enter email if you wish to be contacted on this matter."
+            outlined 
+            dense 
+          />
+
+          <v-combobox
+            class="rounded-pill"
+            label="Subject:"
+            disable-lookup
+            outlined placeholder="Choose Message Subject..."
+            dense
+            :items="subjects"
+            v-model="message.subject"
+            @input="fillMessageBody"
+            @keydown="fillMessageBody"
+          />
+
+          <v-textarea
+            class="rounded-xl"
+            label="Message:"
+            v-model="message.body"
+            auto-grow
+            outlined
+            rows="3"
+            row-height="50"
+            placeholder="Pre-filled Text-template>"
+          />
+
         </v-card-text>
 
-        <v-card-actions>
-          <v-spacer />
+        <v-divider />
+
+        <v-card-actions class="py-3 d-flex justify-end">
+          
           <v-btn
             class="black-text rounded-pill"
             depressed
@@ -69,6 +79,7 @@
           >
             {{ $t("btn.labels.cancel") }}
           </v-btn>
+
           <v-btn
             class="black--text rounded-pill"
             color="primary"
@@ -76,6 +87,7 @@
           >
             {{ $t("btn.labels.send-message") }}
           </v-btn>
+
         </v-card-actions>
       </v-card>
     </v-dialog>
@@ -167,3 +179,9 @@ export default {
   }
 }
 </script>
+
+<style>
+.v-dialog--active {
+  border-radius: 24px !important;
+}
+</style>

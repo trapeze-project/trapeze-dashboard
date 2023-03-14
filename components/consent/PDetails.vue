@@ -57,6 +57,7 @@
                     :key="child"
                   >
                     <v-card
+                      class="rounded-xl"
                       outlined
                       elevation="0"
                     >
@@ -86,17 +87,17 @@
                 </div>
 
                 <!-- Recipients -->
-                <v-card class="my-3" outlined elevation="0">
+                <v-card class="my-6 rounded-xl" outlined elevation="0">
                   <v-card-title> Recipients other than cloverIT: </v-card-title>
                 </v-card>
 
                 <!-- Storage -->
-                <v-card class="my-3" outlined elevation="0">
+                <v-card class="my-6 rounded-xl" outlined elevation="0">
                   <v-card-title> Storage Duration </v-card-title>
                 </v-card>
 
                 <!-- Sensitivity -->
-                <v-card class="my-3" outlined elevation="0">
+                <v-card class="my-6 rounded-xl" outlined elevation="0">
                   <v-card-title> Sensitivity </v-card-title>
                 </v-card>
               </div>

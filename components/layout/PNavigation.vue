@@ -13,7 +13,21 @@
                 <v-divider></v-divider>
               </div>
 
-              <v-list-item v-else :to="localePath(link.to)" exact :disabled="link.isDisabled">
+              <v-list-item 
+                v-else 
+                :to="
+                  (link.type === 'function')
+                    ? null
+                    : localePath(link.to)
+                "
+                @click="
+                  (link.type === 'function')
+                    ? link.to()
+                    : null;
+                "
+                exact 
+                :disabled="link.isDisabled"
+              >
                 <v-tooltip right>
                   <template v-slot:activator="{ on }">
                     <v-list-item-content v-on="on">
@@ -40,6 +54,9 @@ export default {
   props: {
     controller: {
       type: Object,
+    },
+    mobile: {
+      type: Boolean
     },
     group: {
       type: null,
@@ -68,7 +85,20 @@ export default {
       { type: "divider" },
       { to: `/glossary`, label: "nav.labels.glossary" },
       { to: `/${id}/faq`, label: "nav.labels.faq", isDisabled: disabled }
-    ]
+    ];
+
+    if (this.mobile) {
+      this.links.splice(
+        1, 
+        0,
+        { to: () => this.openControllerDrawer(), label: "nav.labels.controller", type: "function" },
+      );
+    }
+  },
+  methods: {
+    openControllerDrawer() {
+      this.$emit("open-controller-drawer");
+    }
   }
 }
 </script>

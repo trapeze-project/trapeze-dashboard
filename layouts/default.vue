@@ -10,28 +10,31 @@
           <v-row v-if="$vuetify.breakpoint.smAndDown">
 
             <!-- Navigation drawer (mobile) -->
-            <v-col class="float-left">
+            <v-col>
               <v-icon size="30" @click.stop="drawer.navigation = !drawer.navigation">
                 mdi-view-sequential
               </v-icon>
               <v-navigation-drawer v-model="drawer.navigation" absolute temporary>
                 <PNavigation 
                   :controller="controller"
+                  :mobile="true"
+                  @open-controller-drawer="drawer.controller = true"
                 />
               </v-navigation-drawer>
             </v-col>
 
             <!-- Controller information (mobile) -->
-            <v-col v-if="controller">
+            <v-col v-if="controller" class="d-flex justify-end">
               <v-btn
+                class="px-0"
                 text
-                class="float-right"
                 @click.stop="drawer.controller = !drawer.controller"
-                elevation="2"
+                elevation="0"
               >
                 <span>{{ controller.name }}</span>
                 <v-img :src="controller.logo" max-width="50" max-height="50" />
               </v-btn>
+              
               <v-navigation-drawer
                 v-model="drawer.controller"
                 absolute
@@ -68,6 +71,7 @@
             <v-col class="hidden-sm-and-down" md="2" lg="2">
               <PNavigation 
                 :controller="controller"
+                :mobile="false"
               />
             </v-col>
 
