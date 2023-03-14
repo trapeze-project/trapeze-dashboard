@@ -1,5 +1,5 @@
 <template>
-  <v-card>
+  <v-card class="rounded-xl">
     <v-card-title>
       {{ $t("home.title") }}
     </v-card-title>

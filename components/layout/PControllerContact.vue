@@ -3,7 +3,7 @@
     <PNotification ref="notification" />
     <v-dialog v-model="dialog" width="500" persistent>
       <template v-slot:activator="{ on, attrs }">
-        <v-btn class="black--text" v-bind="attrs" color="primary" v-on="on">
+        <v-btn class="black--text rounded-pill" v-bind="attrs" color="primary" v-on="on">
           {{ btnName }}
         </v-btn>
       </template>
@@ -62,7 +62,7 @@
         <v-card-actions>
           <v-spacer />
           <v-btn
-            class="black-text"
+            class="black-text rounded-pill"
             depressed
             color="lightgrey"
             @click="cancel"
@@ -70,7 +70,7 @@
             {{ $t("btn.labels.cancel") }}
           </v-btn>
           <v-btn
-            class="black--text"
+            class="black--text rounded-pill"
             color="primary"
             @click="sendMessage"
           >

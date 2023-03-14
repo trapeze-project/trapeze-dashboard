@@ -6,6 +6,7 @@
       @submitMyConsent="submitMyConsent"
     />
     <PNotification ref="consentNotification" />
+    
     <PAlertLeaveDialog ref="alertDialog" />
 
     <v-tabs-items v-model="tab">

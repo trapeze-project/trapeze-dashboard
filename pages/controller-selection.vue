@@ -3,7 +3,7 @@
   <v-card
     elevation="0"
   >
-    <v-card-title>
+    <v-card-title class="pa-0 pb-1">
       <!-- @TODO: enable localization of string -->
       Select a data controller to manage your consent.
     </v-card-title>

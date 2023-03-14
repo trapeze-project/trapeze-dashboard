@@ -2,16 +2,14 @@
   <div>
 
     <!-- Revoke all button -->
-    <v-btn class="my-2 black--text" color="primary" @click="revokeAll">
-      Withdraw all my consent
-    </v-btn>
-
     <v-card elevation="0">
 
       <!-- Title -->
-      <v-card-title class="pa-0 my-3">
+      <v-card-title class="d-flex pa-0 pb-1">
         {{ this.tabName }}
       </v-card-title>
+
+      <v-divider />
 
       <!-- Description -->
       <v-card-text class="pa-0 my-3">
@@ -25,6 +23,7 @@
         <v-row>
           <v-col class="fill-height">
             <v-text-field 
+              class="rounded-pill"
               v-model="searchValue"
               :placeholder="'Search for ' + tabName" 
               outlined
@@ -37,6 +36,13 @@
             />
           </v-col>
         </v-row>
+
+        <div class="d-flex justify-end mb-3">
+          <v-btn class="px-2 rounded-pill" color="error" @click="revokeAll">
+            <v-icon class="mr-1"> mdi-alert-rhombus </v-icon>
+            Withdraw consent
+          </v-btn>
+        </div>
 
         <!-- Data / Purposes -->
         <div>

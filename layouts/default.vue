@@ -15,7 +15,9 @@
                 mdi-view-sequential
               </v-icon>
               <v-navigation-drawer v-model="drawer.navigation" absolute temporary>
-                <PNavigation />
+                <PNavigation 
+                  :controller="controller"
+                />
               </v-navigation-drawer>
             </v-col>
 
@@ -70,7 +72,7 @@
             </v-col>
 
             <!-- Content column -->
-            <v-col class="pt-0" sm="12" md="8" lg="8">
+            <v-col class="pt-3" sm="12" md="8" lg="8">
               <nuxt-child
                 :controller="controller"
               />

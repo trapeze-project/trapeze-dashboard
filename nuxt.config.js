@@ -6,8 +6,8 @@ export default {
   ssr: false,
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
-    titleTemplate: 'Privacy Dashboard : TRAPEZE',
-    title: 'Privacy Dashboard : TRAPEZE',
+    titleTemplate: 'Privacy Dashboard | TRAPEZE',
+    title: 'Privacy Dashboard | TRAPEZE',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },

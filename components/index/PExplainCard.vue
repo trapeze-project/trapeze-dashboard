@@ -12,7 +12,7 @@
     <v-spacer />
     <v-card-actions>
       <v-spacer />
-      <v-btn v-bind="btn.props">
+      <v-btn v-bind="btn.props" class="rounded-pill">
         {{ this.btn.label }}
       </v-btn>
       <v-spacer />

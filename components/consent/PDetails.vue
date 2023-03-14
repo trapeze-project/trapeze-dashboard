@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <v-card class="mb-2" outlined elevated="0">
+  <div class="px-1">
+    <v-card class="mb-2 rounded-xl" elevation="2">
       <v-container>
         <v-row>
           <v-col :cols="12" class="pa-0">
@@ -14,9 +14,9 @@
                 @change="changeParentValue"
               />
 
-              <b class="ml-3 me-auto">
+              <span class="ml-3 me-auto">
                 {{ this.$t(`dpv.labels.${this.parent}`) }}
-              </b>
+              </span>
 
               <div class="mr-3">
                 <v-icon v-if="showDetails"> mdi-chevron-up </v-icon>
@@ -31,7 +31,8 @@
 
                 <v-row>
                   <v-col class="fill-height pb-0">
-                    <v-text-field 
+                    <v-text-field
+                      class="rounded-pill"
                       v-model="searchValue"
                       :placeholder="'Search for ...'" 
                       outlined
