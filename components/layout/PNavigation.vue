@@ -3,17 +3,19 @@
     <v-row>
       <v-col>
         <v-card outlined color="transparent">
-          <v-list>
+          <v-list dense rounded>
             <v-subheader>
               {{ $t("sidebar-title.navigation") }}
             </v-subheader>
+
             <div v-for="link in links" :key="link.label">
 
               <div v-if="link.type === 'divider'">
-                <v-divider></v-divider>
+                <v-divider class="my-3"/>
               </div>
 
-              <v-list-item 
+              <v-list-item
+                class="rounded-pill"
                 v-else 
                 :to="
                   (link.type === 'function')
@@ -28,17 +30,23 @@
                 exact 
                 :disabled="link.isDisabled"
               >
+
                 <v-tooltip right>
                   <template v-slot:activator="{ on }">
+
+                    <v-list-item-icon class="mr-0">
+                      <v-icon small v-text="link.icon"></v-icon>
+                    </v-list-item-icon>                    
+
                     <v-list-item-content v-on="on">
                       <v-list-item-title>
                         {{ $t(link.label) }}
                       </v-list-item-title>
-
                     </v-list-item-content>
                   </template>
                   <span> {{ $t(link.label) }} </span>
                 </v-tooltip>
+
               </v-list-item>
 
             </div>
@@ -79,19 +87,42 @@ export default {
     }
 
     this.links = [
-      { to: home, label: "nav.labels.home" },
-      { to: `/${id}/consent?tab=data`, label: "nav.labels.data", isDisabled: disabled },
-      { to: `/${id}/consent?tab=purpose`, label: "nav.labels.purposes", isDisabled: disabled },
-      { type: "divider" },
-      { to: `/glossary`, label: "nav.labels.glossary" },
-      { to: `/${id}/faq`, label: "nav.labels.faq", isDisabled: disabled }
+      { 
+        to: home, 
+        label: "nav.labels.home",
+        icon: "mdi-home",
+      }, { 
+        to: `/${id}/consent?tab=data`,
+        label: "nav.labels.data",
+        icon: "mdi-data-matrix",
+        isDisabled: disabled 
+      }, { 
+        to: `/${id}/consent?tab=purpose`, 
+        label: "nav.labels.purposes", 
+        icon: "mdi-file-document",
+        isDisabled: disabled 
+      }, { 
+        type: "divider" 
+      }, { 
+        to: `/glossary`, 
+        label: "nav.labels.glossary",
+        icon: "mdi-book",
+      }, { 
+        to: `/${id}/faq`, 
+        label: "nav.labels.faq", 
+        icon: "mdi-frequently-asked-questions",
+        isDisabled: disabled 
+      }
     ];
 
     if (this.mobile) {
-      this.links.splice(
-        1, 
-        0,
-        { to: () => this.openControllerDrawer(), label: "nav.labels.controller", type: "function" },
+      this.links.splice(1, 0,
+        { 
+          to: () => this.openControllerDrawer(), 
+          label: "nav.labels.controller", 
+          icon: "mdi-domain",
+          type: "function" 
+        },
       );
     }
   },

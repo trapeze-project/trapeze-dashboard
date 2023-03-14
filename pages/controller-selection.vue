@@ -15,9 +15,10 @@
       justify="center"
       class="mt-1"
     >
-      <v-col>
+      <v-col class="pb-0">
         <!-- @TODO: enable localization of string -->
         <v-text-field
+          class="rounded-pill"
           v-model="keyword"
           placeholder="Search for a controller ..."
           outlined
@@ -43,7 +44,7 @@
         v-for="c, index in controller" 
         :key="index"
       >
-        <v-card class="fill-height" elevation="0" outlined>
+        <v-card class="fill-height rounded-xl">
 
           <div class="d-flex flex-no-wrap align-center justify-space-around">
 
@@ -64,7 +65,7 @@
               </v-card-text>
 
               <v-card-actions>
-                <v-btn class="black--text" color="primary" @click="direct('/', c['@id'])">
+                <v-btn class="black--text rounded-pill px-5" color="primary" @click="direct('/', c['@id'])">
                   <!-- @TODO: enable localization of string -->
                   Select
                 </v-btn>
@@ -83,7 +84,7 @@
         xl="3"
         class="mx-0"
       >
-        <v-card class="fill-height" elevation="0" outlined>
+        <v-card class="fill-height rounded-xl">
 
           <div class="d-flex flex-no-wrap align-center justify-space-around">
 

@@ -1,6 +1,12 @@
 <template>
   <v-card outlined color="transparent">
-    <v-img :src="controller.logo" />
+
+    <v-card
+      class="rounded-circle pa-5 ma-3"
+    >
+      <v-img :src="controller.logo" />
+    </v-card>
+    
     <v-card-text>
       <b>{{ controller.name }}</b><br>
       {{ controller.address.streetAddress }}<br>
