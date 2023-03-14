@@ -48,20 +48,6 @@
               </v-navigation-drawer>
             </v-col>
 
-            <v-col v-else>
-              <v-btn
-                v-if="showControllerSelection"
-                class="black--text float-right"
-                color="primary"
-                @click="direct(`${$i18n.locale}/controller-selection`)"
-              >
-                <!--
-                  @TODO: enable localization of string 
-                -->
-                Choose a controller
-              </v-btn>
-            </v-col>
-
           </v-row>
 
           <!-- Desktop only -->
@@ -88,20 +74,6 @@
                 v-if="controller"
                 :controller="controller"
               />
-
-              <v-col v-else>
-                <v-btn
-                  v-if="showControllerSelection"
-                  class="black--text float-right"
-                  color="primary"
-                  @click="direct(`${$i18n.locale}/controller-selection`)"
-                >
-                  <!--
-                    @TODO: enable localization of string 
-                  -->
-                  Choose a controller
-                </v-btn>
-            </v-col>
             </v-col>
           </v-row>
 
@@ -122,15 +94,12 @@ export default {
         controller: null
       },
       controller: null,
-      showControllerSelection: false,
     };
   },
   created() {
     this.controller = ControllerService.get(
       this.$nuxt.$route.params.controller
-    ),
-    
-    this.showControllerSelection = !this.$route.path.includes("controller-selection");
+    );
   },
   methods: {
     direct(to) {
