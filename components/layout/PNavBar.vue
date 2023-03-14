@@ -6,7 +6,7 @@
     >
       <Logo />
       <b class="ml-3 mr-auto">
-        {{$t('layout.privacy-dashboard').toUpperCase()}}
+        | {{$t('layout.privacy-dashboard').toUpperCase()}}
       </b>
       <span class="mr-2 black-text" v-if="$store.state.isAuthenticated">
         Hello Erika Musterman 
@@ -20,9 +20,10 @@
       </span>
       <div class="">
         <div>
-          <v-menu offset-y>
+          <v-menu open-on-hover rounded="lg" offset-y>
             <template v-slot:activator="{ on, attrs }">
               <v-btn
+                class="rounded-pill"
                 index-v-step="5"
                 dark
                 outlined
@@ -30,24 +31,33 @@
                 elevation="0"
                 v-bind="attrs"
                 v-on="on"
-                style=""
               >
                 {{ $i18n.locale.toUpperCase() }}
               </v-btn>
             </template>
-            <v-list>
+            <v-list dense rounded>
+
               <v-list-item
                 v-for="locale in availableLocales"
                 :key="locale.code"
                 color="black"
               >
-                <nuxt-link
-                  style="color: black; text-decoration: none"
-                  :to="switchLocalePath(locale.code)"
-                >
-                  {{ locale.name }}
-                </nuxt-link>
+
+                <v-list-item-icon class="mr-0">
+                  <v-icon small>mdi-translate</v-icon>
+                </v-list-item-icon>
+
+                <v-list-item-content>
+                  <nuxt-link
+                    style="color: black; text-decoration: none"
+                    :to="switchLocalePath(locale.code)"
+                  >
+                    {{ locale.name }}
+                  </nuxt-link>                  
+                </v-list-item-content>
+
               </v-list-item>
+
             </v-list>
           </v-menu>
         </div>

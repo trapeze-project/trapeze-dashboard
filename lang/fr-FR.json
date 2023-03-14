@@ -20,12 +20,14 @@
   "nav": {
     "labels": {
       "home": "Acceuil",
+      "controller": "Responsable",
       "consent": "Politique de confidentialité",
       "consent-menu": "Menu de Consentement",
       "data": "Donn\u00e9es",
       "purposes": "Fins",
       "help": "Assistant de Consentement",
-      "faq": "FAQ"
+      "faq": "FAQ",
+      "glossary":"Glossary"
     }
   },
   "dpv": {
@@ -162,7 +164,7 @@
   "consent": {
     "purposeDescription":"123",
     "dataDescription":"1233626551",
-    "desc": "Configurez les catégories de données que nous sommes autorisés à utiliser à quelles fins (onglet 'Catégorie de données'). Ou pour quelles finalités nous sommes autorisés à utiliser quelles données (onglet 'Fin'). L'onglet 'Politique de confidentialité' vous permet de consulter toutes les versions de notre politique de confidentialité.",
+    "desc": "Configurez les catégories de données que nous sommes autorisés à utiliser à quelles fins. Ou pour quelles finalités nous sommes autorisés à utiliser quelles données.",
     "consent-menu": "Menu Consentement",
     "title": "Assistant de Consentement",
     "location": "Vos donn\u00e9es de localisation",
@@ -176,7 +178,7 @@
     "fingerprint": "Empreinte digitale",
     "bank": "Compte bancaire",
     "credit": "Num\u00e9ro de la carte de cr\u00e9dit",
-    "sensitivity": "Sensibilit\u00e9 :",
+    "sensitivity": "Sensibilit\u00e9",
     "sensitivityText": "Vous pouvez configurer le degr\u00e9 de sensibilit\u00e9 de ces donn\u00e9es. Nous traitons les donn\u00e9es tr\u00e8s sensibles diff\u00e9remment et avec une attention particuli\u00e8re.",
     "sensitivityHeader": "Dans quelle mesure ces donn\u00e9es sont-elles sensibles pour vous ?",
     "warnings": "Problèmes",

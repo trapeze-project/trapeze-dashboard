@@ -68,7 +68,7 @@
           <v-row>
 
             <!-- Navigation column -->
-            <v-col class="hidden-sm-and-down" md="2" lg="2">
+            <v-col class="hidden-sm-and-down px-0" md="2" lg="2">
               <PNavigation 
                 :controller="controller"
                 :mobile="false"
@@ -83,7 +83,7 @@
             </v-col>
 
             <!-- Controller information column -->
-            <v-col class="hidden-sm-and-down" md="2" lg="2">
+            <v-col class="hidden-sm-and-down px-0" md="2" lg="2">
               <PControllerView
                 v-if="controller"
                 :controller="controller"

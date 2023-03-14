@@ -1,5 +1,6 @@
 <template>
   <div>
+    <!--
     <p class="font-weight-black ml-4">
       {{ $t("consent.sensitivity") }}
       <v-tooltip right max-width="25%">
@@ -19,6 +20,7 @@
         </v-card>
       </v-tooltip>
     </p>
+    -->
     <v-slider
       class="px-3"
       color="black"
@@ -40,7 +42,7 @@ export default {
     sensitivity: {
       type: Number,
       required: true,
-      default: 0
+      default: 3
     }
   }
 }

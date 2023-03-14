@@ -20,12 +20,14 @@
   "nav": {
     "labels": {
       "home": "Start",
+      "controller": "Verantwortlicher",
       "consent": "Datenschutzrichtlinie",
       "consent-menu": "Einwilligungsmenü",
       "data": "Datenkategorien",
       "purposes": "Zwecke",
       "help": "Einwilligungsassistent",
-      "faq": "FAQ"
+      "faq": "FAQ",
+      "glossary":"Glossary"
     }
   },
   "dpv": {
@@ -161,7 +163,7 @@
   "consent": {
     "purposeDescription":"123",
     "dataDescription":"1233626551",
-    "desc": "Konfigurieren Sie, welche Datenkategorien wir für welche Zwecke verwenden dürfen (Registerkarte 'Datenkategorien'). Oder für welche Zwecke wir welche Daten verwenden dürfen (Registerkarte 'Zwecke'). Auf der Registerkarte 'Datenschutzrichtlinie' können Sie alle Versionen unserer Datenschutzrichtlinie einsehen.",
+    "desc": "Konfigurieren Sie, welche Datenkategorien wir für welche Zwecke verwenden dürfen. Oder für welche Zwecke wir welche Daten verwenden dürfen.",
     "consent-menu": "Einwilligungsmenü",
     "title": "Einwilligungsassistent",
     "location": "Ihre Standortdaten",
@@ -175,7 +177,7 @@
     "fingerprint": "Fingerabdr\u00fccke",
     "bank": "Kontodaten",
     "credit": "Kreditkartennummer",
-    "sensitivity": "Sensibilit\u00e4t:",
+    "sensitivity": "Sensibilit\u00e4t",
     "sensitivityText": "Sie k\u00f6nnen einstellen, wie sensibel diese Daten f\u00fcr Sie sind. Wir behandeln sehr sensible Daten anders und mit gro\u00dfer Sorgfalt",
     "sensitivityHeader": "Wie sensibel sind diese Daten f\u00fcr Sie?",
     "warnings": "Konflikte",

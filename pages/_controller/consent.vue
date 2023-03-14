@@ -14,6 +14,7 @@
         <PConsentTab
           ref="data"
           tab-name="data"
+          :heading="$t('nav.labels.data')"
           :user-choices="invertUserChoices(userChoices)"
         />
       </v-tab-item>
@@ -22,6 +23,7 @@
         <PConsentTab
           ref="purpose"
           tab-name="purpose"
+          :heading="$t('nav.labels.purposes')"
           :user-choices="userChoices"
         />
       </v-tab-item>
@@ -49,10 +51,6 @@ export default {
         {
           name: "purpose",
           label: this.$t("consent.tab.labels.purpose"),
-        },
-        {
-          name: "consent",
-          label: this.$t("consent.tab.labels.consent"),
         },
       ],
       fetchedUserChoices: {},

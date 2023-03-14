@@ -31,6 +31,17 @@
                 :disabled="link.isDisabled"
               >
 
+                <v-list-item-icon class="mr-0">
+                  <v-icon small v-text="link.icon"></v-icon>
+                </v-list-item-icon>                    
+
+                <v-list-item-content>
+                  <v-list-item-title>
+                    {{ $t(link.label) }}
+                  </v-list-item-title>
+                </v-list-item-content>              
+
+                <!--
                 <v-tooltip right>
                   <template v-slot:activator="{ on }">
 
@@ -46,6 +57,7 @@
                   </template>
                   <span> {{ $t(link.label) }} </span>
                 </v-tooltip>
+                -->
 
               </v-list-item>
 

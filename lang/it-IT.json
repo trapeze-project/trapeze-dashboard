@@ -20,12 +20,14 @@
   "nav": {
     "labels": {
       "home": "Homepage",
+      "controller": "Responsabile",
       "consent": "Informativa sulla privacy",
       "consent-menu": "Menu di Consenso",
       "data": "Dati",
       "purposes": "Scopi",
       "help": "Assistente al Consenso",
-      "faq": "FAQ"
+      "faq": "FAQ",
+      "glossary":"Glossary"
     }
   },
   "dpv": {
@@ -161,7 +163,7 @@
   "consent": {
     "purposeDescription":"123",
     "dataDescription":"1233626551",
-    "desc": "Configurare le categorie di dati che possiamo usare per quali scopi (scheda 'Categoria di dati'). Oppure per quali scopi siamo autorizzati a utilizzare i dati (scheda 'Scopo'). La scheda 'Informativa sulla privacy' consente di esaminare tutte le versioni della nostra informativa sulla privacy.",
+    "desc": "Configurare le categorie di dati che possiamo usare per quali scopi. Oppure per quali scopi siamo autorizzati a utilizzare i dati.",
     "consent-menu": "Menu del Consenso",
     "title": "Assistente al Consenso",
     "location": "I vostri dati sulla posizione",
@@ -175,7 +177,7 @@
     "fingerprint": "Impronta digitale",
     "bank": "Conto corrente bancario",
     "credit": "Numero di carta di credito",
-    "sensitivity": "Sensibilit\u00e0:",
+    "sensitivity": "Sensibilit\u00e0",
     "sensitivityText": "Potete configurare il grado di sensibilit\u00e0 di questi dati. I dati molto sensibili vengono trattati in modo diverso e con grande attenzione.",
     "sensitivityHeader": "Quanto sono sensibili questi dati per voi?",
     "warnings": "Avvertenze",

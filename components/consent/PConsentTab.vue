@@ -6,14 +6,14 @@
 
       <!-- Title -->
       <v-card-title class="d-flex pa-0 pb-1">
-        {{ this.tabName }}
+        {{ this.heading }}
       </v-card-title>
 
       <v-divider />
 
       <!-- Description -->
       <v-card-text class="pa-0 my-3">
-        {{ this.$t(`consent.${this.tabName}Description`) }}
+        {{ this.$t(`consent.desc`) }}
       </v-card-text>
 
       <!-- Content -->
@@ -83,6 +83,10 @@ export default {
         // The value must match one of these strings
         return ["data", "purpose"].includes(value);
       },
+    },
+    heading: {
+      type: String,
+      required: true,
     },
     userChoices: {
       type: Object,

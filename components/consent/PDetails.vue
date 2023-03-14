@@ -57,17 +57,17 @@
                     :key="child"
                   >
                     <v-card
-                      class="rounded-xl"
+                      class="fill-height rounded-xl"
                       outlined
                       elevation="0"
                     >
-                      <v-card-title>
+                      <v-card-title class="py-0">
                         <v-switch
                           inset
                           v-model="ChildrenSwitchesValues[child]"
                           @change="changeUserChoice(child)"
                         />
-                        <b>{{ $t(`dpv.labels.${child}`) }}</b>
+                        <small>{{ $t(`dpv.labels.${child}`) }}</small>
                       </v-card-title>
                       <v-card-text>
                         {{ $t(`dpv.descriptions.${child}`) }}
@@ -85,20 +85,37 @@
                     Load more
                   </v-btn>
                 </div>
-
+                
                 <!-- Recipients -->
+                <!-- Storage -->
+                <!--
                 <v-card class="my-6 rounded-xl" outlined elevation="0">
                   <v-card-title> Recipients other than cloverIT: </v-card-title>
                 </v-card>
 
-                <!-- Storage -->
                 <v-card class="my-6 rounded-xl" outlined elevation="0">
                   <v-card-title> Storage Duration </v-card-title>
                 </v-card>
+                -->
 
                 <!-- Sensitivity -->
-                <v-card class="my-6 rounded-xl" outlined elevation="0">
-                  <v-card-title> Sensitivity </v-card-title>
+                <v-card 
+                  v-if="tabName === 'data'"
+                  class="my-3 rounded-xl"
+                  outlined
+                  elevation="0"
+                >
+                  <v-card-title>
+                    {{ $t("consent.sensitivity") }}
+                  </v-card-title>
+
+                  <v-card-text>
+                    {{ $t("consent.sensitivityText") }}
+                  </v-card-text>
+
+                  <v-card-text>
+                    <PSensitivity />
+                  </v-card-text>
                 </v-card>
               </div>
             </v-expand-transition>
