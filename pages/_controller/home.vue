@@ -12,8 +12,8 @@
         v-for="(item, idx) in Object.values($t('home.items'))"
         :key="idx"
         cols="6"
-        sm="3"
-        md="3"
+        sm="4"
+        md="4"
         lg="3"
       >
         <PExplainCard

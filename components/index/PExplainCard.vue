@@ -1,22 +1,26 @@
 <template>
-  <v-card shaped class="d-flex flex-column">
-    <img :src="filename" style="width: 100%;">
+  <v-card class="d-flex flex-column rounded-xl">
 
-    <v-card-title>
-      {{ title }}
-    </v-card-title>
+    <v-card class="rounded-circle mx-6 my-3">
+      <v-img :src="filename" />
+    </v-card>
 
-    <v-card-text>
+    <v-card-text class="pt-0 pb-1">
       {{ content.interpolate(interpolated) }}
     </v-card-text>
+
     <v-spacer />
+    
     <v-card-actions>
       <v-spacer />
-      <v-btn v-bind="btn.props" class="rounded-pill">
+
+      <v-btn v-bind="btn.props" class="rounded-pill px-5">
         {{ this.btn.label }}
       </v-btn>
+
       <v-spacer />
     </v-card-actions>
+
   </v-card>
 </template>
 
