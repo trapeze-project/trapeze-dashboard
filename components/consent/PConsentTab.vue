@@ -40,7 +40,7 @@
         <div class="d-flex justify-end mb-3">
           <v-btn class="px-2 rounded-pill" color="error" @click="revokeAll">
             <v-icon class="mr-1"> mdi-alert-rhombus </v-icon>
-            Withdraw consent
+            Withdraw all consent
           </v-btn>
         </div>
 
