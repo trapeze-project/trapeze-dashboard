@@ -5,7 +5,7 @@
   >
     <v-card-title class="pa-0 pb-1">
       <!-- @TODO: enable localization of string -->
-      Select a data controller to manage your consent.
+      Select a data controller to manage your consent
     </v-card-title>
 
     <v-divider />
@@ -95,11 +95,11 @@
             <!-- @TODO enable localization of string -->
             <div>
               <v-card-title>
-                The controller you're looking for is not in the list?
+                Controller not found?
               </v-card-title>
 
               <v-card-text>
-                Use the search field to find more controllers.
+                Use the search bar to find a controller.
               </v-card-text>
             </div>
           </div>
