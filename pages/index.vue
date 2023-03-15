@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid class="bg-surface-variant">
+  <v-container>
     <v-row>
       <v-col align="center">
 
