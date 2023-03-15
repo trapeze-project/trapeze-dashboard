@@ -5,14 +5,15 @@
     </v-card-title>
     <v-card-text>
       <p style="white-space: pre-line" class="preLineText">
-        {{ $t("home.welcome-msg1").interpolate(paramsForInterpolation) }} <span class="clickable" @click="showMore = !showMore" v-show="!showMore" style="color:blue ;text-decoration: underline;">show more</span>
+        {{ $t("home.welcome-msg1").interpolate(paramsForInterpolation) }} <span class="clickable" @click="showMore = !showMore" v-show="!showMore" style="color:blue ;text-decoration: underline;">(show details)</span>
       </p>
       <v-expand-transition >
         <div v-show="showMore">
+            <!--
             <p style="white-space: pre-line" class="preLineText">
               {{ $t("home.welcome-msg2").interpolate(paramsForInterpolation) }}
             </p>
-          
+            -->
             <ul>
               <li
                 v-for="(item, idx) in Object.values($t('home.purpose'))"
@@ -21,11 +22,14 @@
                 {{ item.name }}
               </li>
             </ul>
-
-            <v-divider class="my-3" />
-
             <p>
-              {{ $t("home.welcome-msg3").interpolate(paramsForInterpolation) }} <span class="clickable" @click="showMore = !showMore" v-show="showMore" style="color:blue ;text-decoration: underline;">show less</span>
+              <span class="clickable" @click="showMore = !showMore" v-show="showMore" style="color:blue ;text-decoration: underline;">(hide details)</span>
+            </p>
+            <!--
+            INFORMATION ON THE CONSENT ASSISTANT (DROPPED IN V3 OF THE DASHBOARD)
+            <v-divider class="my-3" />
+            <p>
+              {{ $t("home.welcome-msg3").interpolate(paramsForInterpolation) }} 
             </p>
 
             <v-btn
@@ -36,6 +40,7 @@
             >
               {{ $t("btn.labels.consent-guide") }}
             </v-btn>
+            -->
         </div>
       </v-expand-transition>
     </v-card-text>
