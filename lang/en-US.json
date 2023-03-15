@@ -56,9 +56,9 @@
       "dpv:location": "Location data are data that tells us where you have been at what time. We collect location data via GPS if you give permission in our ${we} mobile application. We use your location data to customize our advertising, to plan our marketing geographically, and to prevent fraud via geographic identity verification.",
       "dpv:name": "We collect your name to properly address you. We store your name from your profile.",
       "dpv:fingerprint": "Fingerprints are used to verify your credentials and prevent identity theft.",
-      "dpv:identity-verification": "Identity verification is a security process where we ensure that you are a real person and not a bot. We also use identity verification to prevent fraud, such as identity theft or data theft. Furthermore, we make sure that you are older than 16 years old.",
-      "dpv:advertising": "Advertising is an integral part of our business model, which guarantees that we can continue to provide you with our restaurant recommendations.",
       "dpv:marketing": "Marketing is essential for us, as we are active in very different markets. We recognize regional preferences and can thus adapt our products for you as a customer.",
+      "dpv:advertising": "Advertising is an integral part of our business model, which guarantees that we can continue to provide you with our restaurant recommendations.",
+      "dpv:identity-verification": "Identity verification is a security process where we ensure that you are a real person and not a bot. We also use identity verification to prevent fraud, such as identity theft or data theft. Furthermore, we make sure that you are older than 16 years old.",
       "dpv:age": "Your birth date and your age in years.",
       "dpv:gender": "The gender you have indicated you wish to be associated with. One of 'male', 'female', 'diverse', or 'unknown'.",
       "dpv:country": "The name of the country you access our services from.",
@@ -122,17 +122,17 @@
     "introduction": "Find out more about the TRAPEZE privacy dashboard and its underlying concepts. Do not forget to let us (${we}) know if you cannot find information you are interested in."
   },
   "home": {
-    "title": "Welcome to your personal privacy dashboard!",
+    "title": "Welcome to the TRAPEZE privacy dashboard!",
     "explore-btn": "View",
-    "welcome-msg1": "We at ${we} want you to understand how we process your personal data. Therefore, we use the TRAPEZE Privacy Dashboard, which helps us to grant you your rights as a data subject. You can learn more about TRAPEZE in our FAQ section or by visiting the TRAPEZE website. \n \n In this dashboard, you can view what personal data we (${we}) process and for which purposes. When you registered for our service, you consented to our privacy policy. This dashboard allows you to configure your consent on a fine-grained level.",
+    "welcome-msg1": "Manage your consent and control the processing of your data.\n Click on a card below to get started.",
     "welcome-msg2": "You can give or revoke your consent based on the following:",
     "welcome-msg3": "We recommend using the 'Consent Assistant' to express your preferences and match them against your consent decisions.",
     "purpose": {
       "0": {
-        "name": "Types of data we process like location, name, or biometric information."
+        "name": "Click on the Data Card to see which of your data is processed.\n Withdraw your consent to stop the processing of your data."
       },
       "1": {
-        "name": "Purposes for which we process data like advertising, marketing, or identity verification."
+        "name": "Click on the Purpose Card to see for which purposes your data is processed. \n Withdraw your consent to stop the processing for a specific purpose."
       }
     },
     "help": "Consent Assistant",
@@ -141,13 +141,13 @@
         "title": "Data",
         "filename": "/img/data.png",
         "link": "/consent?tab=data",
-        "content": "Tell us (${we}) which of your data we may use."
+        "content": "See which of your data is processed."
       },
       "1": {
         "title": "Purposes",
         "filename": "/img/purpose.png",
         "link": "/consent?tab=purpose",
-        "content": "Tell us (${we}) what we may use your data for."
+        "content": "See for which purposes your data is processed."
       },
       "2": {
         "title": "TRAPEZE",
@@ -183,7 +183,7 @@
   "consent": {
     "purposeDescription":"123",
     "dataDescription":"1233626551",
-    "desc": "Configure which data categories we're allowed to use for which purposes. Or for which purposes we're allowed to use which data.",
+    "desc": "Move the sliders to the left to withdraw consent and stop the processing of your data. Click on the \"Withdraw all consent\"-button to stop all processing.",
     "consent-menu": "Consent Menu",
     "title": "Consent Assistant",
     "location": "Your location data",
