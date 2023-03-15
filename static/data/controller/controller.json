@@ -4,10 +4,10 @@
     "@type": "Organization",
     "@id": "c630f98e-a9f2-413a-8c71-8436a6f60001",
     "name": "CloverIT",
-    "telephone": "( 33 1) 42 68 53 00",
-    "faxNumber": "(33 1) 42 68 53 01",
+    "telephone": "( 39 ) 42 68 53 00",
+    "faxNumber": "( 39 ) 42 68 53 01",
     "email": "info@clover-it.com",
-    "url": "https://alex-it.com",
+    "url": "https://clover-it.com",
     "logo": "/img/cloverLogo.png",
     "address": {
       "@type": "PostalAddress",
@@ -33,16 +33,16 @@
     "@type": "Organization",
     "@id": "c630f98e-a9f2-413a-8c71-8436a6f60002",
     "name": "AlexIT",
-    "telephone": "( 33 1) 42 68 53 00",
-    "faxNumber": "(33 1) 42 68 53 01",
-    "email": "info@clover-it.com",
+    "telephone": "( 49 ) 30 56 35 33",
+    "faxNumber": "( 49 ) 30 56 35 34",
+    "email": "info@alex-it.com",
     "url": "https://alex-it.com",
     "logo": "/img/alexLogo.png",
     "address": {
       "@type": "PostalAddress",
-      "addressLocality": " Viale dei fiori, Italy",
+      "addressLocality": " Berlin, Germany",
       "postalCode": "123456",
-      "streetAddress": "Via del Campo Verde"
+      "streetAddress": "Kaiseralle"
     },
     "member": [
       {
@@ -52,7 +52,7 @@
     "alumni": [
       {
         "@type": "Person",
-        "name": "Nae Bouquet",
+        "name": "Robert Moch",
         "jobTitle": "Data Protection Officer (DPO)"
       }
     ]
