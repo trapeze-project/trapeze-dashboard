@@ -122,17 +122,17 @@
     "introduction": "Scoprite di pi\u00f9 sul dashboard sulla privacy di TRAPEZE e sui concetti che ne stanno alla base. Fateci sapere (${we}) se non trovate informazioni a cui sei interessati/e."
   },
   "home": {
-    "title": "Benvenuti sul vostro dashboard personale sulla privacy!",
+    "title": "Benvenuti sul dashboard sulla privacy di TRAPEZE!",
     "explore-btn": "Visualizza",
-    "welcome-msg1": "Noi di ${we} desideriamo che lei comprenda come trattiamo i suoi dati personali. Per questo motivo, utilizziamo il TRAPEZE Privacy Dashboard, che ci aiuta a garantirvi i vostri diritti in qualità di soggetti interessati. Per ulteriori informazioni su TRAPEZE, consultare la nostra sezione FAQ o visitare il sito web di TRAPEZE. \n \n In questo cruscotto è possibile vedere quali dati personali vengono elaborati da noi (${we}) e per quali scopi. Quando ci si è registrati al servizio, si è acconsentito alla nostra politica sulla privacy. Questo cruscotto consente di configurare il consenso a livello di dettaglio.",
+    "welcome-msg1": "Gestite il vostro consenso e controllate il trattamento dei vostri dati.\n Cliccate su una carta qui sotto per iniziare.",
     "welcome-msg2": "È possibile dare o revocare il consenso in base a quanto segue:",
     "welcome-msg3": "Si consiglia di utilizzare l'Assistente per il consenso per esprimere le proprie preferenze e confrontarle con le decisioni di consenso.",
     "purpose": {
       "0": {
-        "name": "Tipi di dati che trattiamo, come l'ubicazione, il nome o le informazioni biometriche."
+        "name": "Fare clic sulla scheda 'Dati' per vedere quali dati sono trattati.\n Ritirare il consenso per interrompere il trattamento dei dati."
       },
       "1": {
-        "name": "Finalità per le quali trattiamo i dati, come la pubblicità, il marketing o la verifica dell'identità."
+        "name": "Fare clic sulla scheda 'Scopi' per vedere per quali finalità vengono trattati i dati. \n Ritirare il consenso per interrompere il trattamento per uno scopo specifico."
       }
     },
     "help": "Aiuto",

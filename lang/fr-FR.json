@@ -122,17 +122,17 @@
     "introduction": "En savoir plus sur le tableau de bord de confidentialit\u00e9 TRAPEZE et ses concepts sous-jacents. N'oubliez pas de nous (${we}) faire savoir si vous ne trouvez pas d'informations qui vous int\u00e9ressent."
   },
   "home": {
-    "title": "Bienvenue dans votre tableau de bord de confidentialit\u00e9 personnel !",
+    "title": "Bienvenue sur le tableau de bord de protection des données de TRAPEZE!",
     "explore-btn": "Voir",
-    "welcome-msg1": "Chez ${we}, nous voulons que vous compreniez comment nous traitons vos données personnelles. C'est pourquoi nous utilisons le tableau de bord de confidentialité TRAPEZE, qui nous aide à vous accorder vos droits en tant que personne concernée. Vous pouvez en savoir plus sur TRAPEZE dans notre section FAQ ou en visitant le site web de TRAPEZE. \n \n Dans ce tableau de bord, vous pouvez voir quelles données personnelles nous (${we}) traitons et à quelles fins. Lorsque vous vous êtes inscrit à notre service, vous avez consenti à notre politique de confidentialité. Ce tableau de bord vous permet de configurer votre consentement à un niveau plus fin.",
+    "welcome-msg1": "Gérez votre consentement et contrôlez le traitement de vos données.\n Cliquez sur une carte ci-dessous pour commencer.",
     "welcome-msg2": "Vous pouvez donner ou révoquer votre consentement en fonction des éléments suivants:",
     "welcome-msg3": "Nous vous recommandons d'utiliser l'Assistant de Consentement pour exprimer vos préférences et les faire correspondre à vos décisions de consentement.",
     "purpose": {
       "0": {
-        "name": "Les types de données que nous traitons, comme la localisation, le nom ou les informations biométriques."
+        "name": "Cliquez sur la carte 'Données' pour savoir lesquelles de vos données sont traitées.\n Retirez votre consentement pour mettre fin au traitement de vos données."
       },
       "1": {
-        "name": "Les objectifs pour lesquels nous traitons les données, comme la publicité, le marketing ou la vérification d'identité."
+        "name": "Cliquez sur la carte 'Fins' pour savoir à quelles fins vos données sont traitées. \n Retirez votre consentement pour arrêter le traitement pour une finalité spécifique."
       }
     },
     "help": "Aide",

@@ -122,17 +122,17 @@
     "introduction": "Erfahren Sie mehr \u00fcber das TRAPEZE-Datenschutz-Dashboard und dessen zugrunde liegenden Konzepte. Geben Sie uns (${we}) gerne Bescheid, falls Sie Ihre gew\u00fcnschten Informationen nicht finden k\u00f6nnen."
   },
   "home": {
-    "title": "Willkommen auf Ihrem pers\u00f6nlichen Datenschutz-Dashboard!",
+    "title": "Willkommen auf dem Datenschutz-Dashboard von TRAPEZE!",
     "explore-btn": "Ansehen",
-    "welcome-msg1": "Wir bei ${we} möchten, dass Sie verstehen, wie wir Ihre persönlichen Daten verarbeiten. Daher verwenden wir das TRAPEZE Privacy Dashboard, das uns hilft, Ihnen Ihre Rechte als betroffene Person zu gewähren. Sie können mehr über TRAPEZE in unserem FAQ-Bereich oder auf der TRAPEZE-Website erfahren. \n \n In diesem Dashboard können Sie sehen, welche personenbezogenen Daten wir (${we}) verarbeiten und zu welchen Zwecken. Als Sie sich für unseren Dienst registriert haben, haben Sie unserer Datenschutzrichtlinie zugestimmt. Mit diesem Dashboard können Sie Ihre Zustimmung auf einer fein abgestuften Ebene konfigurieren.",
+    "welcome-msg1": "Verwalten Sie Ihre Einwilligungen und kontrollieren Sie die Verarbeitung Ihrer Daten.\n Klicken Sie unten auf eine Karte, um loszulegen.",
     "welcome-msg2": "Sie können Ihre Einwilligung auf der Grundlage der folgenden Punkte erteilen oder widerrufen:",
     "welcome-msg3": "Wir empfehlen die Verwendung des 'Einwilligungsassistenten', um Ihre Präferenzen auszudrücken und sie mit Ihren Zustimmungsentscheidungen abzugleichen.",
     "purpose": {
       "0": {
-        "name": "Arten von Daten, die wir verarbeiten, wie Standort, Name oder biometrische Informationen."
+        "name": "Klicken Sie auf die 'Daten'-Karte, um zu sehen, welche Ihrer Daten verarbeitet werden.\n Ziehen Sie Ihre Einwilligung zurück, um die Verarbeitung Ihrer Daten zu stoppen."
       },
       "1": {
-        "name": "Zwecke, für die wir Daten verarbeiten, wie Werbung, Marketing oder Identitätsprüfung."
+        "name": "Klicken Sie auf die 'Zweck'-Karte, um zu sehen, für welche Zwecke Ihre Daten verarbeitet werden. \n Ziehen Sie Ihre Einwilligung zurück, um die Verarbeitung für einen bestimmten Zweck zu stoppen."
       }
     },
     "help": "Einwilligungsassistent",
