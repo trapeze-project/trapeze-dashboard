@@ -61,7 +61,7 @@
       "dpv:identity-verification": "Identity verification is a security process where we ensure that you are a real person and not a bot. We also use identity verification to prevent fraud, such as identity theft or data theft. Furthermore, we make sure that you are older than 16 years old.",
       "dpv:age": "Your birth date and your age in years.",
       "dpv:gender": "The gender you have indicated you wish to be associated with. One of 'male', 'female', 'diverse', or 'unknown'.",
-      "dpv:country": "The name of the country you access our services from.",
+      "dpv:country": "The country you access our services from.",
       "dpv:preference": "Preference data comprise all interactions you perform while using our services and that elicit your preferences of usage. This includes for instance your clicks, stay times, and login history.",
       "dpv:behavioral": "Behavioral data are interactions you perform while using our services and that do not elicit your preferences of usage. This includes for instance your clicks, stay times, and login history. ",
       "dpv:browserHistory": "The history of past websites you visited.",

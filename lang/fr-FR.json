@@ -27,7 +27,7 @@
       "purposes": "Fins",
       "help": "Assistant de Consentement",
       "faq": "FAQ",
-      "glossary":"Glossary"
+      "glossary":"Glossaire"
     }
   },
   "dpv": {
@@ -38,19 +38,19 @@
       "dpv:identityVerification": "V\u00e9rification de l'identit\u00e9",
       "dpv:advertising": "Publicit\u00e9s",
       "dpv:marketing": "Marketing",
-      "dpv:age": "Age",
-      "dpv:gender": "Gender",
-      "dpv:country": "Country",
-      "dpv:preference": "Preference",
-      "dpv:behavioral": "Behavioral",
-      "dpv:browserHistory": "Browsing History",
-      "dpv:browsingBehavior": "Browsing Behavior",
-      "dpv:academicResearch": "Academic Research",
+      "dpv:age": "Âge",
+      "dpv:gender": "Sexe",
+      "dpv:country": "Pays",
+      "dpv:preference": "Préférence",
+      "dpv:behavioral": "Comportemental",
+      "dpv:browserHistory": "Historique de la navigation",
+      "dpv:browsingBehavior": "Comportement de navigation",
+      "dpv:academicResearch": "Recherche académique",
       "dpv:communication": "Communication",
-      "dpv:commercialResearch": "Commercial Research",
-      "dpv:customerCare": "Customer Care",
-      "dpv:sellDataToThirdParties": "Sell Data to Third Parties",
-      "dpv:sellInsightsToThirdParties": "Sell Insights to Third Parties"
+      "dpv:commercialResearch": "Recherche commerciale",
+      "dpv:customerCare": "Service clientèle",
+      "dpv:sellDataToThirdParties": "Vente de données à des tiers",
+      "dpv:sellInsightsToThirdParties": "Vente de renseignements à des tiers"
     },
     "descriptions": {
       "dpv:location": "Les données de localisation sont des données qui nous indiquent où vous avez été à quel moment. Nous collectons les données de localisation par GPS si vous nous en donnez l'autorisation dans notre application mobile ${we}. Nous utilisons vos données de localisation pour personnaliser nos publicités, pour planifier notre marketing de manière géographique et pour prévenir la fraude via la vérification géographique de l'identité.",
@@ -59,19 +59,19 @@
       "dpv:marketing": "Le marketing est essentiel pour nous, car nous sommes actifs sur des march\u00e9s tr\u00e8s diff\u00e9rents. Nous reconnaissons ainsi les pr\u00e9f\u00e9rences r\u00e9gionales et pouvons adapter nos produits pour vous en tant que client.",
       "dpv:advertising": "La publicit\u00e9 fait partie int\u00e9grante de notre mod\u00e8le \u00e9conomique, ce qui garantit que nous pouvons continuer \u00e0 vous fournir nos recommandations de restaurants.",
       "dpv:identityVerification": "La v\u00e9rification de l'identit\u00e9 est un processus de s\u00e9curit\u00e9 par lequel nous nous assurons que vous \u00eates une personne r\u00e9elle et non un robot. En outre, la v\u00e9rification de l'identit\u00e9 nous permet d'\u00e9viter les fraudes telles que le vol d'identit\u00e9 ou le vol de donn\u00e9es. En outre, nous nous assurons que vous avez plus de 16 ans.",
-      "dpv:age": "Your birth date and your age in years.",
-      "dpv:gender": "The gender you have indicated you wish to be associated with. One of 'male', 'female', 'diverse', or 'unknown'.",
-      "dpv:country": "The name of the country you access our services from.",
-      "dpv:preference": "Preference data comprise all interactions you perform while using our services and that elicit your preferences of usage. This includes for instance your clicks, stay times, and login history.",
-      "dpv:behavioral": "Behavioral data are interactions you perform while using our services and that do not elicit your preferences of usage. This includes for instance your clicks, stay times, and login history. ",
-      "dpv:browserHistory": "The history of past websites you visited.",
-      "dpv:browsingBehavior": "All interactions that are tracked while you browse websites.",
-      "dpv:academicResearch": "Academic, non-profit, non-commercial research.",
-      "dpv:communication": "Communication data include all communication between you and us. This includes emails, chat messages and conversations with our customer care.",
-      "dpv:commercialResearch": "Purposes associated with conducting research in a commercial setting or with intention to commercialise e.g. in a company or sponsored by a company.",
-      "dpv:customerCare": "Customer Care refers to purposes associated with purposes for providing assistance, resolving issues, ensuring satisfaction, etc. in relation to services provided.",
-      "dpv:sellDataToThirdParties": "Purposes associated with selling or sharing data or information to third parties.",
-      "dpv:sellInsightsToThirdParties": "Purposes associated with selling or sharing insights obtained from analysis of data."
+      "dpv:age": "Votre date de naissance et votre âge en années.",
+      "dpv:gender": "Le sexe auquel vous avez indiqué vouloir être associé. L'un des choix suivants : 'homme', 'femme', 'divers' ou 'inconnu'.",
+      "dpv:country": "Le pays à partir duquel vous accédez à nos services.",
+      "dpv:preference": "Les données relatives aux préférences comprennent toutes les interactions que vous effectuez lors de l'utilisation de nos services et qui révèlent vos préférences d'utilisation. Il s'agit par exemple de vos clics, de vos durées de séjour et de votre historique de connexion.",
+      "dpv:behavioral": "Les données comportementales sont des interactions que vous effectuez lors de l'utilisation de nos services et qui ne font pas appel à vos préférences d'utilisation. Il s'agit par exemple de vos clics, de vos durées de séjour et de votre historique de connexion.",
+      "dpv:browserHistory": "L'historique des sites web que vous avez visités.",
+      "dpv:browsingBehavior": "Toutes les interactions qui sont suivies lorsque vous naviguez sur des sites web.",
+      "dpv:academicResearch": "Recherche universitaire, sans but lucratif et non commerciale.",
+      "dpv:communication": "Les données de communication comprennent toutes les communications entre vous et nous. Cela comprend les courriels, les messages de chat et les conversations avec notre service clientèle.",
+      "dpv:commercialResearch": "Finalités (fins) associées à la réalisation de recherches dans un cadre commercial ou avec l'intention de commercialiser, par exemple au sein d'une entreprise ou parrainées par une entreprise.",
+      "dpv:customerCare": "L'assistance à la clientèle désigne les finalités (fins) associées à la fourniture d'une assistance, à la résolution de problèmes, à l'assurance de la satisfaction, etc. en rapport avec les services fournis.",
+      "dpv:sellDataToThirdParties": "Finalités (fins) associés à la vente ou au partage de données ou d'informations avec des tiers.",
+      "dpv:sellInsightsToThirdParties": "Finalités (fins) associées à la vente ou au partage des connaissances obtenues à partir de l'analyse des données."
       }
   },
   "btn": {
