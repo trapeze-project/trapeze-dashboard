@@ -44,6 +44,7 @@
           </v-btn>
         </div>
 
+        <!-- TODO: hasChanged = false -->
         <div v-if="hasChanged" class="d-flex justify-end mb-3">
           <v-btn class="px-2 mx-3 rounded-pill" @click="() => $emit('undoAllChanges')" :disabled="!hasChanged">
             <v-icon class="mr-1"> mdi-undo </v-icon>

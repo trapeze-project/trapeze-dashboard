@@ -14,6 +14,27 @@
     "unrelatedDataText": "Il est tr\u00e8s inhabituel que les empreintes digitales soient utilis\u00e9es \u00e0 des fins publicitaires.",
     "bioDataText": "Les empreintes digitales sont particuli\ufffdrement sensibles, car elles facilitent le vol d'identit\u00e9. Il est recommand\u00e9 de ne donner son consentement pour les donn\u00e9es dactyloscopiques que lorsque cela est absolument n\u00e9cessaire."
   },
+  "landing": {
+    "general": {
+      "welcome": "Welcome to the",
+      "pd": "Privacy Dashboard"
+    },    
+    "login": {
+      "heading": "Login",
+      "content": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam",
+      "btn": "Login"
+    },
+    "choose-controller": {
+      "heading": "Choose a Controller",
+      "content": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam",
+      "btn": "Controller Selection"
+    },
+    "consent": {
+      "heading": "Manage your Consent",
+      "content": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam",
+      "btn": "View"
+    }        
+  },  
   "layout": {
     "privacy-dashboard": "tableau de bord de confidentialit\u00e9"
   },
@@ -136,24 +157,26 @@
       }
     },
     "help": "Aide",
-    "items": {
-      "0": {
-        "title": "Donn\u00e9es",
-        "filename": "/img/data.png",
-        "link": "/consent?tab=data",
-        "content": "Dites-nous (${we}) lesquelles de vos données nous pouvons utiliser."
+    "explain-card": {
+      "data": {
+        "title": "Data",
+        "content": "See which of your data is processed."
       },
-      "1": {
-        "title": "Fins",
-        "filename": "/img/purpose.png",
-        "link": "/consent?tab=purpose",
-        "content": "Dites-nous (${we}) à quoi nous pouvons utiliser vos données."
+      "purpose": {
+        "title": "Purposes",
+        "content": "See for which purposes your data is processed."
       },
-      "2": {
+      "trapeze": {
         "title": "TRAPEZE",
-        "filename": "/img/favicon.png",
-        "link": "http://trapeze-project.eu",
-        "content": "En savoir plus sur le projet TRAPEZE de l'Union europ\u00e9enne."
+        "content": "Learn more about the TRAPEZE project of the European Union."
+      },
+      "glossary": {
+        "title": "Glossary",
+        "content": "See the Glossary"
+      },
+      "faq": {
+        "title": "FAQ",
+        "content": "See the FAQ"
       }
     },
     "consent": {

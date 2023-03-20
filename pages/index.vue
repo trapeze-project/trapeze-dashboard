@@ -10,11 +10,11 @@
             md="4"
             offset-md="4"
           >
-            <h1 style="text-transform:uppercase">Welcome to the</h1>
+            <h1 style="text-transform:uppercase">{{ $t("landing.general.welcome") }}</h1>
 
             <v-img src="/img/trapeze_logo.png" class="my-5 "/>
 
-            <h2 style="text-transform:uppercase">Privacy Dashboard</h2>
+            <h2 style="text-transform:uppercase">{{ $t("landing.general.pd") }}</h2>
           </v-col>
         </v-row>
 
@@ -31,18 +31,18 @@
             <v-card rounded="xl" elevation="3" class="d-flex flex-column fill-height">
               <v-card-title>
                 <v-icon color="black" size="48" class="mr-3">mdi-account-circle-outline</v-icon>
-                Login
+                {{ $t("landing.login.heading") }}
               </v-card-title>
 
               <v-card-text>
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+                {{ $t("landing.login.content") }}
               </v-card-text>
 
               <v-spacer />
 
               <v-card-actions class="d-flex justify-center pb-3">
                 <v-btn color="primary" class="rounded-pill px-5 black--text" disabled>
-                  Login
+                  {{ $t("landing.login.btn") }}
                 </v-btn>
               </v-card-actions>
             </v-card>
@@ -63,11 +63,11 @@
             >
               <v-card-title>
                 <v-icon color="black" size="48" class="mr-3">mdi-domain</v-icon>
-                Choose a Controller
+                {{ $t("landing.choose-controller.heading") }}
               </v-card-title>
 
               <v-card-text>
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+                {{ $t("landing.choose-controller.content") }}
               </v-card-text>
 
               <v-spacer />
@@ -78,7 +78,7 @@
                   class="rounded-pill px-5 black--text" 
                   :to="`/${$i18n.locale}/controller-selection`"
                 >
-                  Controller Selection
+                  {{ $t("landing.choose-controller.btn") }}
                 </v-btn>
               </v-card-actions>              
             </v-card>
@@ -95,18 +95,18 @@
             <v-card rounded="xl" elevation="3" class="d-flex flex-column fill-height">
               <v-card-title>
                 <v-icon color="black" size="48" class="mr-3">mdi-file-sign</v-icon>
-                Manage your Consent
+                {{ $t("landing.consent.heading") }}
               </v-card-title>
 
               <v-card-text>
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+                {{ $t("landing.consent.content") }}
               </v-card-text>
 
               <v-spacer />
 
               <v-card-actions class="d-flex justify-center pb-3">
                 <v-btn color="primary" class="rounded-pill px-5 black--text" disabled>
-                  View
+                  {{ $t("landing.consent.btn") }}
                 </v-btn>
               </v-card-actions>              
             </v-card>
@@ -117,7 +117,14 @@
     </v-row>
 
     <v-row>
-      <v-col cols="4" offset="4" align="center" class="mt-5">
+      <v-col 
+        cols="10" 
+        offset="1"
+        md="6"
+        offset-md="3" 
+        align="center" 
+        class="mt-3 mb-5"
+      >
         <v-img src="/img/eu_logo.png" width="48" class="mb-5" />
         The TRAPEZE project receives funding from the European Union's Horizon 2020 research and innovation programme under grant agreement No. 883464. Copyright © 2023
       </v-col>

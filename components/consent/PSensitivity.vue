@@ -41,7 +41,7 @@ export default {
   props: {
     sensitivity: {
       type: Number,
-      required: true,
+      required: false,
       default: 3
     }
   }

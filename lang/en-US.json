@@ -14,6 +14,27 @@
     "unrelatedDataText": "It is very unusual that fingerprints are used for advertising purposes.",
     "bioDataText": "Fingerprints are particularly sensitive, since they facilitate identity theft. It is recommended to only provide consent for fingerprint data where absolutely necessary."
   },
+  "landing": {
+    "general": {
+      "welcome": "Welcome to the",
+      "pd": "Privacy Dashboard"
+    },
+    "login": {
+      "heading": "Login",
+      "content": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam",
+      "btn": "Login"
+    },
+    "choose-controller": {
+      "heading": "Choose a Controller",
+      "content": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam",
+      "btn": "Controller Selection"
+    },
+    "consent": {
+      "heading": "Manage your Consent",
+      "content": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam",
+      "btn": "View"
+    }        
+  },
   "layout": {
     "privacy-dashboard": "privacy dashboard"
   },
@@ -136,24 +157,26 @@
       }
     },
     "help": "Consent Assistant",
-    "items": {
-      "0": {
+    "explain-card": {
+      "data": {
         "title": "Data",
-        "filename": "/img/data.png",
-        "link": "/consent?tab=data",
         "content": "See which of your data is processed."
       },
-      "1": {
+      "purpose": {
         "title": "Purposes",
-        "filename": "/img/purpose.png",
-        "link": "/consent?tab=purpose",
         "content": "See for which purposes your data is processed."
       },
-      "2": {
+      "trapeze": {
         "title": "TRAPEZE",
-        "filename": "/img/favicon.png",
-        "link": "http://trapeze-project.eu",
         "content": "Learn more about the TRAPEZE project of the European Union."
+      },
+      "glossary": {
+        "title": "Glossary",
+        "content": "See the Glossary"
+      },
+      "faq": {
+        "title": "FAQ",
+        "content": "See the FAQ"
       }
     },
     "consent": {

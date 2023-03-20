@@ -14,6 +14,27 @@
     "unrelatedDataText": "Es ist sehr ungew\u00f6hnlich, dass Fingerabdr\u00fccke zu Werbezwecken verwendet werden.",
     "bioDataText": "Fingerabdr\u00fccke sind besonders sensibel, da sie es erm\u00f6glichen Ihre Identit\u00e4t zu stehlen. Es wird empfohlen, die Zustimmung zur Nutzung von Fingerabdr\u00fccken nur dann zu erteilen, wenn dies unbedingt erforderlich ist."
   },
+  "landing": {
+    "general": {
+      "welcome": "Welcome to the",
+      "pd": "Privacy Dashboard"
+    },    
+    "login": {
+      "heading": "Login",
+      "content": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam",
+      "btn": "Login"
+    },
+    "choose-controller": {
+      "heading": "Choose a Controller",
+      "content": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam",
+      "btn": "Controller Selection"
+    },
+    "consent": {
+      "heading": "Manage your Consent",
+      "content": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam",
+      "btn": "View"
+    }        
+  },  
   "layout": {
     "privacy-dashboard": "Datenschutz-Dashboard"
   },
@@ -136,24 +157,26 @@
       }
     },
     "help": "Einwilligungsassistent",
-    "items": {
-      "0": {
-        "title": "Datenkategorien",
-        "filename": "/img/data.png",
-        "link": "/consent?tab=data",
-        "content": "Sagen Sie uns (${we}), welche Ihrer Daten wir verwenden dürfen."
+    "explain-card": {
+      "data": {
+        "title": "Data",
+        "content": "See which of your data is processed."
       },
-      "1": {
-        "title": "Zwecke",
-        "filename": "/img/purpose.png",
-        "link": "/consent?tab=purpose",
-        "content": "Sagen Sie uns (${we}), wofür wir Ihre Daten verwenden dürfen. "
+      "purpose": {
+        "title": "Purposes",
+        "content": "See for which purposes your data is processed."
       },
-      "2": {
+      "trapeze": {
         "title": "TRAPEZE",
-        "filename": "/img/favicon.png",
-        "link": "http://trapeze-project.eu",
-        "content": "Erfahren Sie mehr \u00fcber das TRAPEZE-Projekt der Europ\u00e4ischen Union."
+        "content": "Learn more about the TRAPEZE project of the European Union."
+      },
+      "glossary": {
+        "title": "Glossary",
+        "content": "See the Glossary"
+      },
+      "faq": {
+        "title": "FAQ",
+        "content": "See the FAQ"
       }
     },
     "consent": {
