@@ -16,25 +16,25 @@
   },
   "landing": {
     "general": {
-      "welcome": "Welcome to the",
-      "pd": "Privacy Dashboard"
-    },    
+      "welcome": "Willkommen beim",
+      "pd": "DATENSCHUTZ-DASHBOARD"
+    },
     "login": {
-      "heading": "Login",
-      "content": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam",
+      "heading": "EU-Login",
+      "content": "Melden Sie sich mit Ihrem EU-Bürgerkonto an und sehen Sie Ihre Einwilligungen ein.",
       "btn": "Login"
     },
     "choose-controller": {
-      "heading": "Choose a Controller",
-      "content": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam",
-      "btn": "Controller Selection"
+      "heading": "Verantwortlichen Wählen",
+      "content": "Wählen Sie einen für die Verarbeitung Ihrer Daten Verantwortlichen aus und sehen Sie, wie er Ihre Daten verarbeitet.",
+      "btn": "Verantwortlichen-Auswahl"
     },
     "consent": {
-      "heading": "Manage your Consent",
-      "content": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam",
-      "btn": "View"
+      "heading": "Einwilligungen Verwalten",
+      "content": "Widerrufen Sie Ihre Einwilligungen und stoppen Sie die Verarbeitung Ihrer Daten.",
+      "btn": "Einwilligungs-Verwaltung"
     }        
-  },  
+  },
   "layout": {
     "privacy-dashboard": "Datenschutz-Dashboard"
   },

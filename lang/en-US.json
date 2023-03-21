@@ -20,19 +20,19 @@
       "pd": "Privacy Dashboard"
     },
     "login": {
-      "heading": "Login",
-      "content": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam",
+      "heading": "EU-Login",
+      "content": "Login with your EU citizen account and browse through your consent.",
       "btn": "Login"
     },
     "choose-controller": {
-      "heading": "Choose a Controller",
-      "content": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam",
+      "heading": "Select a Controller",
+      "content": "Select a data controller and see how they process your data.",
       "btn": "Controller Selection"
     },
     "consent": {
       "heading": "Manage your Consent",
-      "content": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam",
-      "btn": "View"
+      "content": "Withdraw your consent and stop the processing of your data.",
+      "btn": "Consent Manager"
     }        
   },
   "layout": {
