@@ -1,30 +1,36 @@
 <template>
   <v-dialog
     v-model="dialog"
+    width="auto"
     persistent
-    max-width="320"
   >
     <v-card>
       <v-card-title class="text-h5" style="word-break:break-word">
         {{ this.$t("PAlertLeaveDialog.dialog-title") }}
       </v-card-title>
-      <v-card-text style="white-space:pre-line">{{this.alertBody}}</v-card-text>
+
+      <v-card-text>
+        {{this.alertBody}}
+      </v-card-text>
+
       <v-card-actions>
+
         <v-spacer />
+
         <v-btn
-          color="green darken-1"
-          text
+          class="px-2 mx-3 rounded-pill"
           @click="()=>{leaveAnyWay = false; dialog=false; }"
         >
           {{ this.$t("btn.labels.cancel") }}
         </v-btn>
+
         <v-btn
-          color="error"
-          text
+          class="px-2 rounded-pill black--text" color="primary"
           @click="()=>{leaveAnyWay = true; dialog=false; }"
         >
           {{ this.$t("btn.labels.leave-anyway") }}
         </v-btn>
+
       </v-card-actions>
     </v-card>
   </v-dialog>

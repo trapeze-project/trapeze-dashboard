@@ -37,6 +37,7 @@
           </v-col>
         </v-row>
 
+        <!-- Withdraw all consent button -->
         <div class="d-flex justify-end mb-3">
           <v-btn class="px-2 rounded-pill" color="error" @click="revokeAll">
             <v-icon class="mr-1"> mdi-alert-rhombus </v-icon>
@@ -44,13 +45,14 @@
           </v-btn>
         </div>
 
-        <!-- TODO: hasChanged = false -->
+        <!-- Discard changes button -->
         <div v-if="hasChanged" class="d-flex justify-end mb-3">
           <v-btn class="px-2 mx-3 rounded-pill" @click="() => $emit('undoAllChanges')" :disabled="!hasChanged">
             <v-icon class="mr-1"> mdi-undo </v-icon>
             {{ $t("btn.labels.discard-changes") }}
           </v-btn>
-
+          
+          <!-- Submit changes button -->
           <v-btn class="px-2 rounded-pill black--text" color="primary" @click="() => $emit('submitMyConsent')" :disabled="!hasChanged">
             <v-icon class="mr-1"> mdi-tray-arrow-up </v-icon>
             {{ $t("btn.labels.submit-changes") }}
