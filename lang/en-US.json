@@ -140,7 +140,7 @@
   "qna": {
     "links-and-sources": "Links and Sources",
     "header": "Frequently Asked Questions (FAQ)",
-    "introduction": "Find out more about the TRAPEZE privacy dashboard and its underlying concepts. Do not forget to let us (${we}) know if you cannot find information you are interested in."
+    "introduction": "Find out more about the TRAPEZE privacy dashboard and its underlying concepts."
   },
   "home": {
     "title": "Welcome to the TRAPEZE privacy dashboard!",
