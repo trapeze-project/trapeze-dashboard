@@ -3,7 +3,7 @@
     elevation="0"
   >
     <v-card-title class="pa-0 pb-1">
-      Glossary
+      {{ $t("nav.labels.glossary") }}
     </v-card-title>
 
     <v-divider class="py-1" />
@@ -11,7 +11,7 @@
     <v-card-text class="pa-0">
       <v-row>
         <v-col class="pb-0">
-          <p>Browse through consent-related terms.</p>
+          <p>{{ $t("glossary.desc") }}</p>
         </v-col>
       </v-row>
 
@@ -81,40 +81,33 @@
 </template>
 
 <script>
-import glossaryEnUS from "../static/data/glossary/glossary-enUS.json";
-import glossaryDeDE from "../static/data/glossary/glossary-deDE.json";
-import glossaryFrFR from "../static/data/glossary/glossary-frFR.json";
-import glossaryItIT from "../static/data/glossary/glossary-itIT.json";
+import glossaryEN from "../static/data/glossary/glossary-enUS.json";
+import glossaryDE from "../static/data/glossary/glossary-deDE.json";
+import glossaryFR from "../static/data/glossary/glossary-frFR.json";
+import glossaryIT from "../static/data/glossary/glossary-itIT.json";
 
 export default {
   data() {
     return {
-      glossary: "",
+      glossary: {
+        "en": glossaryEN,
+        "de": glossaryDE,
+        "fr": glossaryFR,
+        "it": glossaryIT
+      },
       searchValue: "",
-      matchedEntry: "",
       searching: false,
     };
   },
   computed: {
     entries() {
       return Object
-        .values(this.glossary.glossaryEntries)
+        .values(this.glossary[this.$i18n.locale].glossaryEntries)
         .filter((e) => {
           return e.term.toLowerCase().includes(this.searchValue.toLowerCase());
         });
     }
   },
-  created() {
-    if (this.$i18n.locale === "en") {
-      this.glossary = glossaryEnUS;
-    } else if (this.$i18n.locale === "de") {
-      this.glossary = glossaryDeDE;
-    } else if (this.$i18n.locale === "it") {
-      this.glossary = glossaryItIT;
-    } else if (this.$i18n.locale === "fr") {
-      this.glossary = glossaryFrFR;
-    }
-  }
 };
 </script>
 

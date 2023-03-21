@@ -304,5 +304,8 @@
   "help": {
     "desc": "En vous proposant cette courte enquête, nous voulons nous assurer que nous ne collectons et n'utilisons vos données que d'une manière qui vous convient. En remplissant ce questionnaire, vous pouvez nous dire comment vous souhaitez que nous traitions vos données. Vos réponses sont comparées à votre décision de consentement actuelle. Ensuite, vous recevrez des conseils sur la manière d'adapter votre consentement afin qu'il corresponde à vos préférences.",
     "comfort": "Dans quelle mesure êtes-vous à l'aise avec le fait que nous utilisions ce type de données aux fins suivantes ?"
+  },
+  "glossary": {
+    "desc": "Browse through consent-related terms."
   }
 }
