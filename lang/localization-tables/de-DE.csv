@@ -7,22 +7,58 @@ general|warning;Warnung
 general|access;Dateneinsicht Anfordern
 general|unrelatedData;Nicht verwandte Datenkategorie
 general|bioData;Biometrische Daten
+general|dpo;Datenschutzbeauftragter
+general|dpo-abbrev;DSB
 general|unrelatedDataText;Es ist sehr ungewöhnlich, dass Fingerabdrücke zu Werbezwecken verwendet werden.
 general|bioDataText;Fingerabdrücke sind besonders sensibel, da sie es ermöglichen Ihre Identität zu stehlen. Es wird empfohlen, die Zustimmung zur Nutzung von Fingerabdrücken nur dann zu erteilen, wenn dies unbedingt erforderlich ist.
 layout|privacy-dashboard;Datenschutz-Dashboard
 nav|labels|home;Start
-nav|labels|consent;Einwilligungen
-nav|labels|consent-menu;Einwilligungenmenü
+nav|labels|controller;Verantwortlicher
+nav|labels|consent;Datenschutzrichtlinie
+nav|labels|consent-menu;Einwilligungsmenü
 nav|labels|data;Datenkategorien
 nav|labels|purposes;Zwecke
 nav|labels|help;Einwilligungsassistent
 nav|labels|faq;FAQ
-dpv|location;Standortdaten
-dpv|name;Name
-dpv|fingerprint;Fingerabdrücke
-dpv|identity-verification;Identitätsprüfung
-dpv|marketing;Marketing
-dpv|advertising;Werbung
+nav|labels|glossary;Glossar
+dpv|labels|dpv:location;Standortdaten
+dpv|labels|dpv:name;Name
+dpv|labels|dpv:fingerprint;Fingerabdrücke
+dpv|labels|dpv:identityVerification;Identitätsprüfung
+dpv|labels|dpv:advertising;Werbung
+dpv|labels|dpv:marketing;Marketing
+dpv|labels|dpv:age;Alter
+dpv|labels|dpv:gender;Geschlecht
+dpv|labels|dpv:country;Land
+dpv|labels|dpv:preference;Präferenzen
+dpv|labels|dpv:behavioral;Verhalten
+dpv|labels|dpv:browserHistory;Browser-Verlauf
+dpv|labels|dpv:browsingBehavior;Browsing-Verhalten
+dpv|labels|dpv:academicResearch;Wissenschaftliche Forschung
+dpv|labels|dpv:communication;Kommunikation
+dpv|labels|dpv:commercialResearch;Kommerzielle Forschung
+dpv|labels|dpv:customerCare;Kundenbetreuung
+dpv|labels|dpv:sellDataToThirdParties;Verkauf an Dritte (Daten)
+dpv|labels|dpv:sellInsightsToThirdParties;Verkauf an Dritte (Einsichten)
+dpv|descriptions|dpv:location;Standortdaten sind Daten, die uns zeigen, wo Sie sich zu welcher Zeit aufgehalten haben. Wir erfassen Standortdaten über GPS, wenn Sie uns dazu die Erlaubnis in unserer mobilen ${we} App erteilt haben. Wir verwenden Ihre Standortdaten, um unsere Werbung anzupassen, unser Marketing geografisch zu planen und um Betrug durch geografische Identitätsprüfung zu verhindern.
+dpv|descriptions|dpv:name;Wir erfassen Ihren Namen, um Sie richtig ansprechen zu können. Ihren Namen entnehmen wir Ihrem Nutzerprofil.
+dpv|descriptions|dpv:fingerprint;Fingerabdrücke werden verwendet, um Ihre Anmeldedaten zu überprüfen und Identitätsdiebstahl zu verhindern.
+dpv|descriptions|dpv:marketing;Marketing ist für uns essentiell, da wir in sehr unterschiedlichen Märkten aktiv sind. Wir erkennen dabei regionale Vorlieben und können so unsere Produkte für Sie als Kunden anpassen.
+dpv|descriptions|dpv:advertising;Werbung ist ein integraler Bestandteil unseres Geschäftsmodells, das garantiert, dass wir Ihnen weiterhin unsere Restaurantempfehlungen kostenfrei zur Verfügung stellen können.
+dpv|descriptions|dpv:identityVerification;Identitätsprüfung ist ein Sicherheitsprozess bei welchem wir sicherstellen, dass Sie eine echten Person sind und nicht etwa ein Bot. Außerdem dient uns die Identiätsprüfung dazu Betrug, wie zum Beispiel durch Identitäsdiebstahl oder Datendiebstahl, vorzubeugen. Desweiteren stellen wir sicher, dass Sie älter als 16 Jahre alt sind.
+dpv|descriptions|dpv:age;Ihr Geburtsdatum und Ihr Alter in Jahren.
+dpv|descriptions|dpv:gender;Das Geschlecht, das Sie angegeben haben und dem Sie zugeordnet werden möchten. Eines von 'männlich', 'weiblich', 'divers' oder 'unbekannt'.
+dpv|descriptions|dpv:country;Das Land, aus dem Sie auf unsere Dienste zugreifen.
+dpv|descriptions|dpv:preference;Präferenzdaten umfassen alle Interaktionen, die Sie während der Nutzung unserer Dienste durchführen und die Ihre Nutzungspräferenzen erkennen lassen. Dazu gehören zum Beispiel Ihre Klicks, Verweildauer und Login-Historie.
+dpv|descriptions|dpv:behavioral;Verhaltensdaten sind Interaktionen, die Sie während der Nutzung unserer Dienste durchführen und die nicht auf Ihre Nutzungspräferenzen schließen lassen. Dazu gehören zum Beispiel Ihre Klicks, Verweildauer und Login-Historie.
+dpv|descriptions|dpv:browserHistory;Der Verlauf der von Ihnen besuchten Websites.
+dpv|descriptions|dpv:browsingBehavior;Alle Interaktionen, die beim Surfen auf Websites aufgezeichnet werden.
+dpv|descriptions|dpv:academicResearch;Wissenschaftliche, nicht gewinnorientierte, nicht kommerzielle Forschung.
+dpv|descriptions|dpv:communication;Kommunikationsdaten umfassen die gesamte Kommunikation zwischen Ihnen und uns. Dazu gehören E-Mails, Chat-Nachrichten und Gespräche mit unserer Kundenbetreuung.
+dpv|descriptions|dpv:commercialResearch;Zwecke im Zusammenhang mit der Durchführung von Forschungsarbeiten in einem kommerziellen Umfeld oder mit der Absicht der Kommerzialisierung, z. B. in einem Unternehmen oder von einem Unternehmen gesponsert.
+dpv|descriptions|dpv:customerCare;Kundenbetreuung bezieht sich auf Zwecke, die mit der Bereitstellung von Hilfe, der Lösung von Problemen, der Sicherstellung der Zufriedenheit usw. in Bezug auf die erbrachten Dienstleistungen verbunden sind.
+dpv|descriptions|dpv:sellDataToThirdParties;Zwecke, die mit dem Verkauf oder der Weitergabe von Daten oder Informationen an Dritte verbunden sind.
+dpv|descriptions|dpv:sellInsightsToThirdParties;Zwecke im Zusammenhang mit dem Verkauf oder der Weitergabe von Erkenntnissen, die aus der Analyse von Daten gewonnen wurden.
 btn|labels|consent-guide;Einwilligungsassistent
 btn|labels|i-can-not-find-an-answer;Ich finde keine Antwort auf meine Frage
 btn|labels|undo-last-change;letzte Änderungen rückgängig machen
@@ -40,7 +76,7 @@ btn|labels|ignore;Ignorieren
 btn|labels|ignore-all;Alle ignorieren
 btn|labels|view;Ansehen
 btn|labels|visit-website;Webseite besuchen
-btn|labels|leave-anyway;trotzdem verlassen
+btn|labels|leave-anyway;Trotzdem verlassen
 btn|labels|contact;Kontakt
 snackbar|msg|please-complete-the-consent-guide;Sie haben noch nicht alle Fragen beantwortet. Sie können den Fragebogen erst abschließen, wenn Sie alle Fragen beantwortet haben.
 snackbar|msg|submission-successful;Speichern erfolgreich
@@ -54,35 +90,31 @@ sidebar-title|update;Aktualisierungen
 qna|links-and-sources;Links und Quellen
 qna|header;Häufig gestellte Fragen (FAQ)
 qna|introduction;Erfahren Sie mehr über das TRAPEZE-Datenschutz-Dashboard und dessen zugrunde liegenden Konzepte. Geben Sie uns (${we}) gerne Bescheid, falls Sie Ihre gewünschten Informationen nicht finden können.
-home|title;Willkommen auf Ihrem persönlichen Datenschutz-Dashboard!
+home|title;Willkommen auf dem Datenschutz-Dashboard von TRAPEZE!
 home|explore-btn;Ansehen
-home|welcome-msg1;Wir von (${we}) möchten, dass Sie verstehen, wie wir Ihre persönlichen Daten verarbeiten.\n\nIn diesem Dashboard können Sie sehen, welche personenbezogenen Daten wir (${we}) verarbeiten und zu welchen Zwecken. Das Dashboard ermöglicht es Ihnen, unsere Verarbeitung Ihrer personenbezogenen Daten einzuschränken, indem Sie Ihre Einwilligung konfigurieren. Sie können:
-home|welcome-msg2;Das Menü unten links gibt Ihnen einen schnellen Überblick über die letzten einwilligungsbezogenen Interaktionen zwischen Ihnen und uns (${we}).\nWenn Sie noch nicht mit dem Datenschutz-Dashboard vertraut sind, empfehlen wir Ihnen, den Einwilligungssassistenten auszuprobieren.
-home|purpose|0|name;Einwilligungen widerrufen oder erteilen,
-home|purpose|1|name;Datenkategorien deaktivieren oder aktivieren,
-home|purpose|2|name;Zwecke deaktivieren oder aktivieren.
+home|welcome-msg1;Verwalten Sie Ihre Einwilligungen und kontrollieren Sie die Verarbeitung Ihrer Daten.\n Klicken Sie unten auf eine Karte, um loszulegen.
+home|welcome-msg2;Sie können Ihre Einwilligung auf der Grundlage der folgenden Punkte erteilen oder widerrufen:
+home|welcome-msg3;Wir empfehlen die Verwendung des 'Einwilligungsassistenten', um Ihre Präferenzen auszudrücken und sie mit Ihren Zustimmungsentscheidungen abzugleichen.
+home|purpose|0|name;Klicken Sie auf die 'Daten'-Karte, um zu sehen, welche Ihrer Daten verarbeitet werden.\n Ziehen Sie Ihre Einwilligung zurück, um die Verarbeitung Ihrer Daten zu stoppen.
+home|purpose|1|name;Klicken Sie auf die 'Zweck'-Karte, um zu sehen, für welche Zwecke Ihre Daten verarbeitet werden. \n Ziehen Sie Ihre Einwilligung zurück, um die Verarbeitung für einen bestimmten Zweck zu stoppen.
 home|help;Einwilligungsassistent
-home|items|0|title;Einwilligungen
-home|items|0|filename;/img/consent.png
-home|items|0|link;/consent?tab=consent
-home|items|0|content;Sehen Sie sich die Zustimmung an, die Sie uns (${we}) gegeben haben.
-home|items|1|title;Datenkategorien
-home|items|1|filename;/img/data.png
-home|items|1|link;/consent?tab=data
-home|items|1|content;Sagen Sie uns (${we}), welche Ihrer Daten wir verwenden dürfen.
-home|items|2|title;Zwecke
-home|items|2|filename;/img/purpose.png
-home|items|2|link;/consent?tab=purpose
-home|items|2|content;Sagen Sie uns (${we}), wofür wir Ihre Daten verwenden dürfen. 
-home|items|3|title;TRAPEZE
-home|items|3|filename;/img/favicon.png
-home|items|3|link;http://trapeze-project.eu
-home|items|3|content;Erfahren Sie mehr über das TRAPEZE-Projekt der Europäischen Union.
-home|consent|consent-menu;Übersicht
+home|items|0|title;Datenkategorien
+home|items|0|filename;/img/data.png
+home|items|0|link;/consent?tab=data
+home|items|0|content;Sagen Sie uns (${we}), welche Ihrer Daten wir verwenden dürfen.
+home|items|1|title;Zwecke
+home|items|1|filename;/img/purpose.png
+home|items|1|link;/consent?tab=purpose
+home|items|1|content;Sagen Sie uns (${we}), wofür wir Ihre Daten verwenden dürfen. 
+home|items|2|title;TRAPEZE
+home|items|2|filename;/img/favicon.png
+home|items|2|link;http://trapeze-project.eu
+home|items|2|content;Erfahren Sie mehr über das TRAPEZE-Projekt der Europäischen Union.
+home|consent|consent-menu;Einwilligungsmenü
 home|consent|title;Einwilligungen
 home|consent|location;Ihre Standortdaten
 home|consent|purpose;Zwecke
-home|consent|text;Standortdaten sind Daten, die uns sagen, wo Sie zu welcher Zeit waren. Wir erfassen Standortdaten über GPS, wenn Sie in unserer app die Erlaubnis dazu erteilen. Wir verwenden Ihre Standortdaten, um unsere Werbung anzupassen, unser Marketing geografisch zu planen und Betrug durch geografische Identitätsprüfung zu vermeiden.
+home|consent|text;Standortdaten sind Daten, die uns sagen, wo Sie zu welcher Zeit waren. Wir erfassen Standortdaten über GPS, wenn Sie uns in unserer mobilen ${we} App die Erlaubnis dazu erteilen. Wir verwenden Ihre Standortdaten, um unsere Werbung anzupassen, unser Marketing geografisch zu planen und Betrug durch geografische Identitätsprüfung zu vermeiden.
 home|consent|text_ad;Werbung ist ein integraler Bestandteil unseres Geschäftsmodells, der garantiert, dass wir Ihnen weiterhin lokale Restaurants empfehlen können. Wir verwenden die folgenden Datenkategorien, um Werbung anzupassen. Teilen Sie uns unten mit, welche Datenkategorien wir verwenden dürfen, um unsere Werbung anzupassen.
 home|consent|ad;Werbung
 home|consent|marketing;Marketing
@@ -96,12 +128,15 @@ home|consent|sensitivityText;Sie können konfigurieren, wie sensibel diese Daten
 home|consent|sensitivityHeader;Wie sensibel sind diese Daten für Sie?
 PAlertLeaveDialog|dialog-title;Möchten Sie diese Seite wirklich verlassen?
 PAlertLeaveDialog|lose-changes-warning;Sie müssen Ihre Auswahl einreichen.
-PAlertLeaveDialog|lose-consent-helper-choices;Ihre Auswahlmöglichkeiten für die Einwilligungshilfe gehen verloren, wenn Sie diese Seite verlassen.
-consent|consent-menu;Übersicht
+PAlertLeaveDialog|lose-consent-helper-choices;Sie haben noch nicht auf alle Warnungen reagiert.
+consent|purposeDescription;123
+consent|dataDescription;1233626551
+consent|desc;Konfigurieren Sie, welche Datenkategorien wir für welche Zwecke verwenden dürfen. Oder für welche Zwecke wir welche Daten verwenden dürfen.
+consent|consent-menu;Einwilligungsmenü
 consent|title;Einwilligungsassistent
 consent|location;Ihre Standortdaten
 consent|purposes;Zwecke
-consent|text;Standortdaten sind Daten, die uns sagen, wo Sie sich zu welcher Zeit aufgehalten haben. Wir erfassen Standortdaten über GPS, wenn Sie dies in der mobilen Anwendung von Company Name zulassen. Wir verwenden Ihre Standortdaten, um unsere Werbung anzupassen, unser Marketing geografisch zu planen und um Betrug durch geografische Identitätsprüfung zu verhindern.
+consent|text;Standortdaten sind Daten, die uns sagen, wo Sie sich zu welcher Zeit aufgehalten haben. Wir erfassen Standortdaten über GPS, wenn Sie uns dazu in unserer mobilen ${we} App die Erlaubnis erteilen. Wir verwenden Ihre Standortdaten, um unsere Werbung anzupassen, unser Marketing geografisch zu planen und um Betrug durch geografische Identitätsprüfung zu verhindern.
 consent|text_ad;Werbung ist ein integraler Bestandteil unseres Geschäftsmodells, der sicherstellt, dass wir Ihnen weiterhin unsere Restaurantempfehlungen zur Verfügung stellen können. Wir verwenden die unten aufgeführten Datenkategorien, um die Werbung zu personalisieren. Teilen Sie uns im Folgenden mit, welche Datenkategorien wir verwenden dürfen, um unsere Werbung zu individualisieren.
 consent|ad;Werbung
 consent|marketing;Marketing
@@ -110,20 +145,19 @@ consent|name;Name
 consent|fingerprint;Fingerabdrücke
 consent|bank;Kontodaten
 consent|credit;Kreditkartennummer
-consent|sensitivity;Sensibilität:
+consent|sensitivity;Sensibilität
 consent|sensitivityText;Sie können einstellen, wie sensibel diese Daten für Sie sind. Wir behandeln sehr sensible Daten anders und mit großer Sorgfalt
 consent|sensitivityHeader;Wie sensibel sind diese Daten für Sie?
-consent|warnings;Warnungen
-consent|warningMsg;Sie haben dem für die Datenverarbeitung Verantwortlichen Ihre Einwilligung zur Verwendung Ihrer Daten in der Datenkategorie "{dataCategory}" für den Zweck "{purpose}" gegeben. Im Einwilligungsassistenten haben Sie jedoch angegeben, dass Sie damit "{helperChoices}" sind.
-consent|warning-msg-not-comfortable;Sie haben dem Datenverantwortlichen die Erlaubnis erteilt, Ihre {dataCategory}-Daten für {purpose}-Zwecke zu verwenden. Ihre Auswahl des Zustimmungsassistenten war jedoch unbequem.
-consent|warning-msg-no-opinion;Sie haben dem Datenverantwortlichen die Erlaubnis erteilt, Ihre {dataCategory}-Daten für {purpose}-Zwecke zu verwenden. Mit Consent Assistant haben Sie jedoch eine unvoreingenommene Wahl getroffen.
+consent|warnings;Konflikte
+consent|warning-msg-not-comfortable;Im Einwilligungsassistenten haben Sie angegeben, dass Sie nicht damit einverstanden sind, dass wir (${we}) Ihre ${dataCategory}-Daten für ${purpose}-Zwecke verwenden. Aus der Einwilligung, die Sie uns gegeben haben, schließen wir jedoch, dass Sie damit doch einverstanden sind. Bitte überprüfen Sie Ihre Einwilligung.
+consent|warning-msg-no-opinion;Im Einwilligungsassistenten haben Sie angegeben, dass Sie unentschlossen zu unserer (${we}) Verarbeitung Ihrer ${dataCategory}-Daten für ${purpose}-Zwecke haben. Aus der Einwilligung, die Sie uns gegeben haben, schließen wir jedoch, dass Sie damit einverstanden sind. Bitte überprüfen Sie Ihre Einwilligung.
 consent|issues;Konflikte
 consent|issue;Konflikt
-consent|tab|labels|consent;Einwilligungen
+consent|tab|labels|consent;Datenschutzrichtlinie
 consent|tab|labels|data-category;Datenkategorien
 consent|tab|labels|purpose;Zwecke
 consent|consent|ptable|header|values|date;Datum
-consent|consent|ptable|header|values|event;Ereignis
+consent|consent|ptable|header|values|event;Betreff
 consent|consent|ptable|header|values|policy;Politik
 consent|consent|ptable|events|values|consent-request-policy-update;Einwilligungsanfrage - Richtlinienaktualisierung
 consent|consent|ptable|events|values|consent-revocation;Widerruf der Einwilligung
@@ -147,9 +181,5 @@ consent-helper|not-comfortable;Nicht Einverstanden
 contact|new-message-to;Neue Nachricht an
 contact|recipient;Empfänger
 contact|message;Nachricht
-location;Standortdaten sind Daten, die uns zeigen, wo Sie sich zu welcher Zeit aufgehalten haben. Wir erfassen Standortdaten über GPS, wenn Sie uns dazu die Erlaubnis in der mobilen Anwendung von Company Name gegeben haben. Wir verwenden Ihre Standortdaten, um unsere Werbung anzupassen, unser Marketing geografisch zu planen und um Betrug durch geografische Identitätsprüfung zu verhindern.
-name;Wir erfassen Ihren Namen, um Sie richtig ansprechen zu können. Ihren Namen entnehmen wir Ihrem Nutzerprofil.
-fingerprint;Fingerabdrücke werden verwendet, um Ihre Anmeldedaten zu überprüfen und Identitätsdiebstahl zu verhindern.
-marketing;Marketing ist für uns essentiell, da wir in sehr unterschiedlichen Märkten aktiv sind. Wir erkennen dabei regionale Vorlieben und können so unsere Produkte für Sie als Kunden anpassen.
-advertising;Werbung ist ein integraler Bestandteil unseres Geschäftsmodells, das garantiert, dass wir Ihnen weiterhin unsere Restaurantempfehlungen kostenfrei zur Verfügung stellen können.
-identity-verification;Identitätsprüfung ist ein Sicherheitsprozess bei welchem wir sicherstellen, dass Sie eine echten Person sind und nicht etwa ein Bot. Außerdem dient uns die Identiätsprüfung dazu Betrug, wie zum Beispiel durch Identitäsdiebstahl oder Datendiebstahl, vorzubeugen. Desweiteren stellen wir sicher, dass Sie älter als 16 Jahre alt sind.
+help|desc;Mit dieser kurzen Umfrage möchten wir sicherstellen, dass wir Ihre Daten nur in einer Weise erheben und verwenden, mit der Sie einverstanden sind. Indem Sie diesen Fragebogen ausfüllen, können Sie uns mitteilen, wie wir mit Ihren Daten umgehen sollen. Ihre Antworten werden mit Ihrer aktuellen Einverständniserklärung abgeglichen. Anschließend erhalten Sie eine Anleitung, wie Sie Ihre Einwilligung so anpassen können, dass sie Ihren Präferenzen entspricht.
+help|comfort;Wie zufrieden sind Sie damit, dass wir diese Art von Daten für die folgenden Zwecke verwenden?
