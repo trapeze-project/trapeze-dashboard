@@ -2,7 +2,7 @@
   "glossaryEntries": {
       "entry1": {
           "term": "Consentement",
-          "definition": "Selon l'article 4, point 11 RGPD, le consentement est l'affirmation claire d'une personne concern\u00e9e (votre) envers un responsable de donn\u00e9es (nous) pour traiter vos donn\u00e9es personnelles. Notez que les responsables du traitement des donn\u00e9es (nous) ne doivent pas toujours recueillir le consentement des personnes concern\u00e9es (vous) pour traiter les donn\u00e9es personnelles. Par exemple, un service de livraison doit traiter l'adresse d'une personne concern\u00e9e (vous) afin de respecter un ordre de livraison. Dans ce cas, les responsables du traitement des donn\u00e9es (nous) n'ont pas besoin de recueillir le consentement.",
+          "definition": "Selon l'article 4, point 11 RGPD, le consentement est l'affirmation claire d'une personne concern\u00e9e (votre) envers un responsable de donn\u00e9es (nous) pour traiter vos donn\u00e9es personnelles. Notez que les responsables du traitement des donn\u00e9es (nous) ne doivent pas toujours retirer le consentement des personnes concern\u00e9es (vous) pour traiter les donn\u00e9es personnelles. Par exemple, un service de livraison doit traiter l'adresse d'une personne concern\u00e9e (vous) afin de respecter un ordre de livraison. Dans ce cas, les responsables du traitement des donn\u00e9es (nous) n'ont pas besoin de retirer le consentement.",
           "references": {
               "ref1": "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX%3A32016R0679"
           }
@@ -65,7 +65,7 @@
       },
       "entry10": {
           "term": "Traitement",
-          "definition": "Selon l'article 4, point 2 RGPD, seul le traitement des donn\u00e9es personnelles est r\u00e9glement\u00e9. L'art. 6 d\u00e9finit notamment que le traitement des donn\u00e9es \u00e0 caract\u00e8re personnel est licite si les personnes concern\u00e9es (vous) ont donn\u00e9 leur consentement ou si le traitement est n\u00e9cessaire au respect d'un contrat. Un service de livraison n'a pas besoin de recueillir le consentement pour traiter l'adresse d'une personne concern\u00e9e (vous) \u00e0 des fins de livraison si la livraison fait partie d'un contrat d'achat. Le traitement implique \u00e9galement la collecte et le stockage de donn\u00e9es \u00e0 caract\u00e8re personnel.",
+          "definition": "Selon l'article 4, point 2 RGPD, seul le traitement des donn\u00e9es personnelles est r\u00e9glement\u00e9. L'art. 6 d\u00e9finit notamment que le traitement des donn\u00e9es personnelles est licite si les personnes concern\u00e9es (vous) ont donn\u00e9 leur consentement ou si le traitement est n\u00e9cessaire au respect d'un contrat. Un service de livraison n'a pas besoin de retirer le consentement pour traiter l'adresse d'une personne concern\u00e9e (vous) \u00e0 des fins de livraison si la livraison fait partie d'un contrat d'achat. Le traitement implique \u00e9galement la collecte et le stockage de donn\u00e9es personnelles.",
           "references": {
               "ref1": "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX%3A32016R0679"
           }
@@ -86,7 +86,7 @@
       },
       "entry13": {
           "term": "Finalité (Fin)",
-          "definition": "Selon l'article 5, premier paragraphe, point b) RGPD, les responsables du traitement des donn\u00e9es (nous) doivent vous indiquer clairement dans quel but ils collectent des donn\u00e9es \u00e0 caract\u00e8re personnel. Il est par exemple ill\u00e9gal de collecter des donn\u00e9es \u00e0 caract\u00e8re personnel \u00e0 des fins de recommandations d'emploi personnalis\u00e9es et de les utiliser ult\u00e9rieurement \u00e0 des fins de marketing.",
+          "definition": "Selon l'article 5, premier paragraphe, point b) RGPD, les responsables du traitement des donn\u00e9es (nous) doivent vous indiquer clairement dans quel but ils collectent des donn\u00e9es personnelles. Il est par exemple ill\u00e9gal de collecter des donn\u00e9es personnelles \u00e0 des fins de recommandations d'emploi personnalis\u00e9es et de les utiliser ult\u00e9rieurement \u00e0 des fins de marketing.",
           "references": {
               "ref1": "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX%3A32016R0679"
           }

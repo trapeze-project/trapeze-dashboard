@@ -3,7 +3,7 @@
         "qnas": {
             "qna1": {
                 "question": "Cosa posso fare nel TRAPEZE dashboard sulla privacy?",
-                "answer": "Il TRAPEZE dashboard sulla privacy è un software che i responsabili del trattamento dei dati come noi (${we}) possono utilizzare per chiarire all'utente come e per cosa trattiamo i suoi dati personali. \n \n Nel TRAPEZE dashboard sulla privacy possibile vedere la nostra politica sulla privacy attiva e quando abbiamo raccolto il consenso dell'utente. In particolare, è possibile vedere come trattiamo i vostri dati e per quali scopi. Potete limitare il trattamento dei vostri dati revocando il consenso, oppure ampliare l'ambito del nostro trattamento dandoci il consenso per migliorare il servizio che vi forniamo.\n \n Avete altre domande sul trattamento dei vostri dati? Non esiti a contattarci tramite il pulsante di contatto nel banner a destra.",
+                "answer": "Il TRAPEZE dashboard sulla privacy è un software che i responsabili del trattamento dei dati come noi (${we}) possono utilizzare per chiarire all'utente come e per cosa trattiamo i suoi dati personali. \n \n Nel TRAPEZE dashboard sulla privacy possibile vedere la nostra politica sulla privacy attiva e quando abbiamo raccolto il consenso dell'utente. In particolare, è possibile vedere come trattiamo i vostri dati e per quali scopi. Potete limitare il trattamento dei vostri dati ritirando il consenso, oppure ampliare l'ambito del nostro trattamento dandoci il consenso per migliorare il servizio che vi forniamo.\n \n Avete altre domande sul trattamento dei vostri dati? Non esiti a contattarci tramite il pulsante di contatto nel banner a destra.",
                 "references": {                }
             },
             "qna2": {
@@ -58,20 +58,20 @@
                 }
             },
             "qna3": {
-                "question": "Posso revocare il mio consenso?",
-                "answer": "Secondo il articolo 7, paragrafo 3 RGPD, \u00e8 possibile revocare il consenso in qualsiasi momento. La revoca del consenso non richiede un modulo specifico. \u00c8 possibile, ad esempio, revocare il consenso scrivendo una lettera o un'e-mail, oppure chiamandoci.",
+                "question": "Posso ritirare il mio consenso?",
+                "answer": "Secondo il articolo 7, paragrafo 3 RGPD, \u00e8 possibile ritirare il consenso in qualsiasi momento. Il ritiro del consenso non richiede un modulo specifico. \u00c8 possibile, ad esempio, ritirare il consenso scrivendo una lettera o un'e-mail, oppure chiamandoci.",
                 "references": {
                     "ref1": "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX%3A32016R0679"
                 }
             },
             "qna4": {
-                "question": "I responsabili del trattamento cancellano i miei dati personali quando revoco il mio consenso?",
-                "answer": "Non appena l'utente revoca il proprio consenso, i responsabili del trattamento dei dati (noi) devono interrompere l'elaborazione e cancellare i dati personali dell'utente per le finalit\u00e0 per cui ha revocato il consenso.",
+                "question": "I responsabili del trattamento cancellano i miei dati personali quando ritiro il mio consenso?",
+                "answer": "Non appena l'utente ritira il proprio consenso, i responsabili del trattamento dei dati (noi) devono interrompere l'elaborazione e cancellare i dati personali dell'utente per le finalit\u00e0 per cui ha ritirato il consenso.",
                 "references": { }
             },
             "qna5": {
-                "question": "Perch\u00e9 dovrei revocare il consenso, quando posso richiedere la cancellazione dei miei dati personali?",
-                "answer": "La revoca del consenso \u00e8 pi\u00f9 rigorosa della richiesta di cancellazione dei dati personali. Le richieste di cancellazione non impediscono la futura raccolta dei vostri dati personali. Quando si revoca il consenso, i responsabili del trattamento (noi) devono cancellare i dati personali oggetto del consenso revocato e (!) non devono raccogliere i dati personali dopo la cancellazione. ",
+                "question": "Perch\u00e9 dovrei ritirare il consenso, quando posso richiedere la cancellazione dei miei dati personali?",
+                "answer": "Il ritiro del consenso \u00e8 pi\u00f9 rigorosa della richiesta di cancellazione dei dati personali. Le richieste di cancellazione non impediscono la futura raccolta dei vostri dati personali. Quando si ritira il consenso, i responsabili del trattamento (noi) devono cancellare i dati personali oggetto del consenso ritirato e (!) non devono raccogliere i dati personali dopo la cancellazione. ",
                 "references": { }
             },
             "qna6": {

@@ -3,7 +3,7 @@
     "qnas": {
         "qna1": {
             "question": "What can I do on the TRAPEZE privacy dashboard?",
-            "answer": "The TRAPEZE privacy dashboard is a piece of software that data controllers like us (${we}) can use to make clear to you how and for what we process your personal data. \n \n On the TRAPEZE privacy dashboard, you can see our active privacy policy and when we collected consent from you. Specifically, you can see how we process your data and what for. You can limit our processing of your data by revoking consent, or broaden the scope of our processing giving us consent to improve the service we provide to you.\n \n You have further questions about us processing your data? Please do not hesitate to contact us through the Contact Button in the banner on the right-hand side. ",
+            "answer": "The TRAPEZE privacy dashboard is a piece of software that data controllers like us (${we}) can use to make clear to you how and for what we process your personal data. \n \n On the TRAPEZE privacy dashboard, you can see our active privacy policy and when we collected consent from you. Specifically, you can see how we process your data and what for. You can limit our processing of your data by withdrawing consent, or broaden the scope of our processing giving us consent to improve the service we provide to you.\n \n You have further questions about us processing your data? Please do not hesitate to contact us through the Contact Button in the banner on the right-hand side. ",
             "references": {                }
         },
         "qna2": {
@@ -56,20 +56,20 @@
         "references": { }
       },
       "qna3":{
-        "question": "Can I revoke my consent?",
-        "answer": "According to Article 7, third paragraph GDPR, you can revoke consent at any time. Revoking consent does not require a specific form. You can for instance revoke consent by writing a letter or an email, or by calling us.",
+        "question": "Can I withdraw my consent?",
+        "answer": "According to Article 7, third paragraph GDPR, you can withdraw consent at any time. Withdrawing consent does not require a specific form. You can for instance withdraw consent by writing a letter or an email, or by calling us.",
         "references": {
           "ref1":"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32016R0679"
           }
       },
       "qna4":{
-        "question": "Do data controllers delete my personal data when I revoke my consent?",
-        "answer": "As soon as you revoke your consent, data controllers (we) must stop processing of and delete your personal data for any purposes you revoked consent for.",
+        "question": "Do data controllers delete my personal data when I withdraw my consent?",
+        "answer": "As soon as you withdraw your consent, data controllers (we) must stop processing of and delete your personal data for any purposes you withdraw consent for.",
         "references": { }
          },
       "qna5":{
-        "question": "Why should I revoke consent, when I can request deletion of my personal data?",
-        "answer": "Revoking consent is more rigorous than requesting the deletion of your personal data. Requests for deletion do not prevent future collection of your personal data. When you revoke consent, data controllers (we) must delete the personal data that are subject to the revoked consent and (!) must not collect personal data after deletion. ",
+        "question": "Why should I withdraw consent, when I can request deletion of my personal data?",
+        "answer": "Withdrawing consent is more rigorous than requesting the deletion of your personal data. Requests for deletion do not prevent future collection of your personal data. When you withdraw consent, data controllers (we) must delete the personal data that are subject to the withdrawn consent and (!) must not collect personal data after deletion. ",
         "references": { }
          },
       "qna6":{
