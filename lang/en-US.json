@@ -115,7 +115,9 @@
       "view": "View",
       "visit-website": "Visit Website",
       "leave-anyway": "Leave Anyway",
-      "contact": "Contact"
+      "contact": "Contact",
+      "withdraw-all-consent": "Withdraw all consent",
+      "discard-changes": "Discard changes"
     }
   },
   "snackbar": {

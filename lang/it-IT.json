@@ -115,7 +115,9 @@
       "view": "Visualizza",
       "visit-website": "Visita il sito web",
       "leave-anyway": "Vattene comunque",
-      "contact": "Contatto"
+      "contact": "Contatto",
+      "withdraw-all-consent": "Withdraw all consent",
+      "discard-changes": "Discard changes"      
     }
   },
   "snackbar": {

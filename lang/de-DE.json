@@ -115,7 +115,9 @@
       "view": "Ansehen",
       "visit-website": "Webseite besuchen",
       "leave-anyway": "Trotzdem verlassen",
-      "contact": "Kontakt"
+      "contact": "Kontakt",
+      "withdraw-all-consent": "Withdraw all consent",
+      "discard-changes": "Discard changes"      
     }
   },
   "snackbar": {

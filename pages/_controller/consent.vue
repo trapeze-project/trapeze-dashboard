@@ -1,12 +1,5 @@
 <template>
   <div>
-    <!--
-    <PFloatingMenu
-      v-show="showFloatingMenu"
-      @undoAllChanges="undoAllChanges"
-      @submitMyConsent="submitMyConsent"
-    />
-    -->
     <PNotification ref="consentNotification" />
     
     <PAlertLeaveDialog ref="alertDialog" />
@@ -21,6 +14,7 @@
           :hasChanged="showFloatingMenu"
           @undoAllChanges="undoAllChanges"
           @submitMyConsent="submitMyConsent"
+          @changeUserChoice="changeUserChoice"
         />
       </v-tab-item>
 
@@ -33,6 +27,7 @@
           :hasChanged="showFloatingMenu"
           @undoAllChanges="undoAllChanges"
           @submitMyConsent="submitMyConsent"
+          @changeUserChoice="changeUserChoice"
         />
       </v-tab-item>
     </v-tabs-items>
@@ -49,6 +44,7 @@ export default {
       type: Object,
     }
   },
+
   data() {
     return {
       tabs: [
@@ -67,6 +63,7 @@ export default {
       showFloatingMenu: false,
     };
   },
+
   computed: {
     tab: {
       set(tab) {
@@ -77,48 +74,16 @@ export default {
       },
     },
   },
+
   created() {
     let policy = PolicyService.get(this.controller);
-    this.purposeMap = policy.getMap("dpv:hasPurpose","dpv:hasPersonalDataCategory");
-    this.fetchedUserChoices = JSON.parse(JSON.stringify(this.fetchUserChoices()))
+    this.purposeMap = policy.getMap("dpv:hasPurpose", "dpv:hasPersonalDataCategory");
+    this.fetchedUserChoices = Object.assign({}, this.fetchUserChoices())
     this.userChoices = Object.assign({}, this.fetchedUserChoices);
   },
 
   mounted() {
     window.addEventListener("beforeunload", this.beforeWindowUnload);
-
-    this.$watch("$refs.purpose.modifiedUserChoices", {
-      handler: (new_value, old_value) => {
-        this.userChoices = JSON.parse(JSON.stringify(new_value));
-
-        if (
-          JSON.stringify(this.userChoices) ===
-          JSON.stringify(this.fetchedUserChoices)
-        ) {
-          this.showFloatingMenu = false;
-        } else {
-          this.showFloatingMenu = true;
-        }
-      },
-      deep: true,
-    });
-    this.$watch("$refs.data.modifiedUserChoices", {
-      handler: (new_value, old_value) => {
-        this.userChoices = this.invertUserChoices(
-          JSON.parse(JSON.stringify(new_value))
-        );
-
-        if (
-          JSON.stringify(this.userChoices) ===
-          JSON.stringify(this.fetchedUserChoices)
-        ) {
-          this.showFloatingMenu = false;
-        } else {
-          this.showFloatingMenu = true;
-        }
-      },
-      deep: true,
-    });
   },
 
   beforeDestroy() {
@@ -132,6 +97,21 @@ export default {
       }
     },
 
+    changeUserChoice(update) {
+      if (update.tab === "data") {
+        this.userChoices = this.invertUserChoices(
+          Object.assign({}, update.userChoices)
+        );
+      } else {
+        this.userChoices = Object.assign({}, update.userChoices);
+      }
+
+      let hasChanged = JSON.stringify(this.userChoices) !== 
+        JSON.stringify(this.fetchedUserChoices);
+
+      this.showFloatingMenu = hasChanged;
+    },
+
     submitMyConsent() {
       //submit to server
       this.fetchedUserChoices = Object.assign({}, this.userChoices);
@@ -139,11 +119,12 @@ export default {
       this.$refs.consentNotification.showNotification(this.$t('snackbar.msg.submission-successful'), 'green')
 
     },
+
     undoAllChanges() {
       this.userChoices = Object.assign({}, this.fetchedUserChoices);
-      this.$refs["purpose"].forceRerender();
-      this.$refs["data"].forceRerender();
       this.showFloatingMenu = false;
+      this.$refs.data.forceRerender();
+      this.$refs.purpose.forceRerender();
     },
     
     fetchUserChoices() {
@@ -163,6 +144,7 @@ export default {
         )
       );
      },
+    
     // http://localhost/444-werwe-131231-132123-123123/home
     invertUserChoices(userChoices) {
       return Object.keys(userChoices).reduce((total, a) => {
