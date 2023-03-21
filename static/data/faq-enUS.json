@@ -105,14 +105,5 @@
         }
       }
     }
-  },
-  "Consent Assistant":{
-    "qnas": {
-      "qna1":{
-        "question": "What is the Consent Assistant?",
-        "answer": "The Consent Assistant is a tool that allows you to avoid having to read through lengthy privacy policies. It will guide you through a number of questions that allow us to understand your consent preferences. On the basis of these consent preferences, we suggest consent configurations and point you toward potential issues with your currently given consent. It might for instance be that you are not willing to share your location for the purpose of marketing, yet for the purpose of restaurant recommendations. ",
-        "references": { }
-      }
-    }
   }
 }

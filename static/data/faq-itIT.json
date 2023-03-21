@@ -109,14 +109,5 @@
                 }
             }
         }
-    },
-    "Assistente al Consenso": {
-        "qnas": {
-            "qna1": {
-                "question": "Che cos'\u00e8 il Assistente al Consenso?",
-                "answer": "Il Assistente al consenso \u00e8 uno strumento che consente di evitare la lettura di lunghe informative sulla privacy. Vi guider\u00e0 attraverso una serie di domande che ci permetteranno di capire le vostre preferenze di consenso. Sulla base di queste preferenze di consenso, suggeriamo configurazioni di consenso e vi indichiamo potenziali problemi con il consenso attualmente fornito. Ad esempio, l'utente potrebbe non essere disposto a condividere la propria posizione per scopi di marketing, ma per ricevere consigli sui ristoranti. ",
-                "references": {  }
-            }
-        }
     }
 }

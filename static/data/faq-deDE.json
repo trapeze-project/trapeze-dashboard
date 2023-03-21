@@ -109,14 +109,5 @@
                 }
             }
         }
-    },
-    "Einwilligungsassistent": {
-        "qnas": {
-            "qna1": {
-                "question": "Was ist der Einwilligungsassistent?",
-                "answer": "Der Einwilligungsassistent ist ein Hilfsmittel, mit dem Sie sich das Durchlesen langatmiger Datenschutzrichtlinien ersparen k\u00f6nnen. Er f\u00fchrt Sie durch eine Reihe von Fragen, die es uns erm\u00f6glichen, Ihre Einwilligungspr\u00e4ferenzen zu verstehen. Auf der Grundlage dieser Einwilligungspr\u00e4ferenzen werden Ihnen Einwilligungskonfigurationen vorgeschlagen. Sie werden desweiteren auf mögliche Konflikte zu bereits erteilten Einwilligungen hingewiesen. Es k\u00f6nnte zum Beispiel sein, dass Sie nicht bereit sind, Ihren Standort f\u00fcr Marketingzwecke, jedoch für Restaurantempfehlungen, freizugeben.",
-                "references": { }
-            }
-        }
     }
 }
