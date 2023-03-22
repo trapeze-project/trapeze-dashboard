@@ -2,98 +2,98 @@
   "glossaryEntries": {
       "entry1": {
           "term": "Einwilligung",
-          "definition": "Gem\u00e4\u00df Artikel 4, Nummer 11 DSGVO, ist die Einwilligung die eindeutige Zustimmung einer betroffenen Person (Sie) gegen\u00fcber einem f\u00fcr die Datenverarbeitung Verantwortlichen (uns) zur Verarbeitung Ihrer personenbezogenen Daten. Beachten Sie, dass die f\u00fcr die Datenverarbeitung Verantwortlichen (wir) nicht immer die Einwilligung der betroffenen Personen (Sie) zur Verarbeitung personenbezogener Daten einholen m\u00fcssen. Zum Beispiel muss ein Lieferdienst die Adresse einer betroffenen Person (Sie) verarbeiten, um einen Lieferauftrag ausführen zu können. In diesem Fall m\u00fcssen die f\u00fcr die Datenverarbeitung Verantwortlichen (wir) keine Einwilligung einholen.",
+          "definition": "Gem\u00e4\u00df Artikel 4, Nummer 11 DSGVO, ist eine Einwilligung Ihre eindeutige Zustimmung zur Verarbeitung Ihrer personenbezogenen Daten durch einen Verantwortlichen. \n \n Beachten Sie, dass die Verantwortlichen nicht immer eine Einwilligung von Ihnen einholen müssen, um Ihre personenbezogenen Daten zu verarbeiten.\n \n Zum Beispiel muss ein Lieferdienst Ihre Adresse verarbeiten, um einen Lieferauftrag zu erfüllen.\n \n In diesem Fall muss der Verantwortliche keine Einwilligung von Ihnen einholen.",
           "references": {
               "ref1": "https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX%3A32016R0679"
           }
       },
       "qna2": {
           "term": "Grenz\u00fcbergreifende Verarbeitung",
-          "definition": "Gem\u00e4\u00df Artikel 4, Nummer 23 DSGVO, bedeutet grenz\u00fcberschreitende Verarbeitung entweder, dass die Verarbeitung (a) in mehreren EU-Mitgliedsstaaten erfolgt oder (b) in einem einzigen EU-Mitgliedsstaat erfolgt, jedoch mit personenbezogenen Daten von betroffenen Personen (Sie) aus mehreren Mitgliedsstaaten.",
+          "definition": "Gem\u00e4\u00df Artikel 4, Nummer 23 DSGVO, bedeutet grenzübergreifende Verarbeitung entweder, dass die Verarbeitung (a) in mehreren EU-Mitgliedstaaten erfolgt oder (b) in einem einzigen EU-Mitgliedstaat erfolgt, jedoch mit personenbezogenen Daten von betroffenen Personen wie Ihnen aus mehreren Mitgliedstaaten.",
           "references": {
               "ref1": "https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX%3A32016R0679"
           }
       },
       "qna3": {
-          "term": "Datenverantwortlicher",
-          "definition": "Gem\u00e4\u00df Artikel 4, Absatz 7 DSGVO, m\u00fcssen die f\u00fcr die Datenverarbeitung Verantwortlichen (wir) den betroffenen Personen (Ihnen) deutlich machen, wie und f\u00fcr welche Zwecke sie personenbezogene Daten verarbeiten. Die f\u00fcr die Datenverarbeitung Verantwortlichen werden oft nur \"Verantwortliche\" genannt.",
+          "term": "Verantwortlicher",
+          "definition": "Gem\u00e4\u00df Artikel 4, Absatz 7 DSGVO, sind Verantwortliche für die Verarbeitung Ihrer personenbezogener Daten verantwortlich.\n \n Sie müssen Ihnen deutlich machen, wie und für welche Zwecke sie Ihre personenbezogenen Daten verarbeiten.",
           "references": {
               "ref1": "https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX%3A32016R0679"
           }
       },
       "qna4": {
           "term": "Auftragsverarbeiter",
-          "definition": "Gem\u00e4\u00df Artikel 4, Nummer 8 DSGVO,  werden Ihre personenbezogenen Daten von Auftragsverarbeitern verarbeitet. Datenverantwortliche (wir) können selbst auch Auftragsverarbeiter sein, m\u00fcssen dies aber nicht. Wenn dies nicht der Fall ist, geben die f\u00fcr die Datenverantwortlichen (wir) in der Regel weder den Zweck der Verarbeitung noch um welche Art von personenbezogenen Daten es sich handelt, die vom Auftragsverarbeiter verarbeitet werden sollen. Datenverarbeiter werden oft nur \"Verarbeiter\" genannt.",
+          "definition": "Gem\u00e4\u00df Artikel 4, Nummer 8 DSGVO, verarbeiten Auftragsverarbeiter Ihre personenbezogenen Daten. \n \n Auftragsverarbeiter können auch Verantwortliche sein. \n \n Ein Auftragsverarbeiter muss jedoch kein Verantwortlicher sein. \n \n Wenn ein Auftragsverarbeiter kein Verantwortlicher ist, wird dem Auftragsverarbeiter in der Regel weder der Zweck der Verarbeitung noch die Art der personenbezogenen Daten mitgeteilt, die er für den Verantwortlichen verarbeitet.",
           "references": {
               "ref1": "https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX%3A32016R0679"
           }
       },
       "qna5": {
-          "term": "Datenschutzbeauftragter",
-          "definition": "Der Datenschutzbeauftragte (DSB) eines f\u00fcr die Datenverarbeitung Verantwortlichen (wir) ist f\u00fcr die Einhaltung der DSGVO verantwortlich. Die beh\u00f6rdlichen Datenschutzbeauftragten sind auch f\u00fcr die Mitteilung der Umsetzung des Datenschutzes an die betroffenen Personen (Sie) verantwortlich.",
+          "term": "Datenschutzbeauftragter (DSB)",
+          "definition": "Jeder Verantwortliche muss einen Datenschutzbeauftragten (DSB) haben.\n \n Die DSB sind dafür verantwortlich, dass ihre Verarbeitung personenbezogener Daten mit der DSGVO in Einklang steht.\n \n Die DSB sind auch dafür verantwortlich, Sie darüber zu informieren, wie sie Ihre personenbezogenen Daten schützen.",
           "references": {
               "ref1": "https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX%3A32016R0679"
           }
       },
       "qna6": {
-          "term": "Datenempf\u00e4nger",
-          "definition": "Gem\u00e4\u00df Artikel 4, Nummer 9 DSGVO, ist jeder, dem die personenbezogenen Daten einer betroffenen Person (Sie) offengelegt werden, ein Datenempf\u00e4nger. Datenempf\u00e4nger sind in der Regel sowohl Datenverantwortliche als auch Auftragsverarbeiter. Datenempf\u00e4nger werden oft nur als \"Empf\u00e4nger\" bezeichnet.",
+          "term": "Empf\u00e4nger",
+          "definition": "Gem\u00e4\u00df Artikel 4, Nummer 9 DSGVO, ist jeder, dem Ihre personenbezogenen Daten offengelegt werden, ein Empfänger.\n \n Empfänger sind oft auch Verantwortliche und/oder Auftragsverarbeiter.",
           "references": {
               "ref1": "https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX%3A32016R0679"
           }
       },
       "qna7": {
           "term": "Betroffene Person",
-          "definition": "Gem\u00e4\u00df der DSGVO sind Sie eine betroffene Person, da Sie zum Beispiel durch Ihren Namen oder Ihre Sozialversicherungsnummer identifizierbar sind.",
+          "definition": "Gem\u00e4\u00df Artikel 4, Nummer 1 DSGVO, sind Sie eine betroffene Person, da Sie zum Beispiel durch Ihren Namen oder Ihre Sozialversicherungsnummer identifizierbar sind.",
           "references": {
               "ref1": "https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX%3A32016R0679"
           }
       },
       "qna8": {
-          "term": "DSGVO",
-          "definition": "Die Datenschutzgrundverordnung ist die in der Europ\u00e4ischen Union geltende Datenschutzregelung. Sie wurde im Mai 2016 verabschiedet und trat im Mai 2018 in Kraft.",
+          "term": "Datenschutz-Grundverordnung (DSGVO)",
+          "definition": "Die Datenschutz-Grundverordnung (DSGVO) ist die in der Europäischen Union geltende Datenschutzgesetzgebung.\n \n Sie wurde im Mai 2016 verabschiedet und ist im Mai 2018 in Kraft getreten.",
           "references": {
               "ref1": "https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX%3A32016R0679"
           }
       },
       "qna9": {
           "term": "Personenbezogene Daten",
-          "definition": "Gem\u00e4\u00df Artikel 4, Nummer 1 DSGVO, sind alle Daten, die einer betroffenen Person (Ihnen) zugeordnet werden k\u00f6nnen, personenbezogene Daten.",
+          "definition": "Gem\u00e4\u00df Artikel 4, Nummer 1 DSGVO, sind alle Daten, die Ihnen zugeordnet werden können, personenbezogene Daten.",
           "references": {
               "ref1": "https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX%3A32016R0679"
           }
       },
       "qna10": {
           "term": "Verarbeitung",
-          "definition": "Gem\u00e4\u00df Artikel 4, Nummer 2 DSGVO, beschränkt sich die DSGVO ausschließlich auf die Verarbeitung personenbezogener Daten. Artikel 6 legt insbesondere fest, dass die Verarbeitung personenbezogener Daten rechtm\u00e4\u00dfig ist, wenn die betroffenen Personen (Sie) eingewilligt haben oder die Verarbeitung zur Erf\u00fcllung eines Vertrags erforderlich ist. Ein Lieferdienst muss keine Einwilligung einholen, um die Adresse einer betroffenen Person (Sie) zum Zweck der Lieferung zu verarbeiten, wenn die Lieferung Teil eines Kaufvertrags ist. Die Verarbeitung umfasst auch die Erhebung und Speicherung personenbezogener Daten.",
+          "definition": "Gem\u00e4\u00df Artikel 4, Nummer 2 DSGVO, ist nur die Verarbeitung personenbezogener Daten geregelt.\n \n Art. 6 legt insbesondere fest, dass die Verarbeitung personenbezogener Daten rechtmäßig ist, wenn Sie Ihre Einwilligung erteilt haben oder die Verarbeitung zur Erfüllung eines Vertrags erforderlich ist.\n \n Zum Beispiel muss ein Lieferdienst Ihre Adresse verarbeiten, um einen Lieferauftrag zu erfüllen.\n \n In diesem Fall müssen die Verantwortlichen nicht Ihre Einwilligung einholen.\n \n Die Verarbeitung umfasst auch die Erhebung und Speicherung personenbezogener Daten.",
           "references": {
               "ref1": "https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX%3A32016R0679"
           }
       },
       "qna11": {
           "term": "Profiling",
-          "definition": "Gem\u00e4\u00df Artikel 4, Nummer 4 DSGVO, ist Profiling jede Form der automatisierten Verarbeitung personenbezogener Daten mit dem Ziel, spezifische Informationen \u00fcber eine betroffene Person (Sie) zu gewinnen. Profiling wird \u00fcblicherweise verwendet, um die Wahrscheinlichkeit abzusch\u00e4tzen, dass eine betroffene Person (Sie) ein bestimmtes Produkt kauft oder einen Kredit nicht zur\u00fcckzahlen kann.",
+          "definition": "Gem\u00e4\u00df Artikel 4, Nummer 4 DSGVO, ist Profiling jede Form der automatisierten Verarbeitung personenbezogener Daten, die dazu dient, spezifische Informationen über Sie zu gewinnen.\n \n Profiling wird häufig verwendet, um die Wahrscheinlichkeit abzuschätzen, dass Sie ein bestimmtes Produkt kaufen oder einen Kredit nicht zurückzahlen können.",
           "references": {
               "ref1": "https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX%3A32016R0679"
           }
       },
       "qna12": {
           "term": "Pseudonymisierung",
-          "definition": "Gem\u00e4\u00df Artikel 4, Nummer 5 DSGVO, bedeutet Pseudonymisierung personenbezogener Daten, dass personenbezogene Daten nur mit Hilfe zus\u00e4tzlicher Daten einer betroffenen Person (Sie) zugeordnet werden k\u00f6nnen. Die Verwendung k\u00fcnstlicher Namen oder Nummern anstelle des echten Namens der betroffenen Person (Sie) ist eine einfache Pseudonymisierungstechnik.",
+          "definition": "Gem\u00e4\u00df Artikel 4, Nummer 5 DSGVO, bedeutet die Pseudonymisierung personenbezogener Daten, dass die personenbezogenen Daten nur mit Hilfe zusätzlicher Daten auf Sie zurückgeführt werden können.\n \n Die Verwendung künstlicher Namen oder Nummern anstelle Ihres echten Namens ist eine einfache Pseudonymisierungstechnik.",
           "references": {
               "ref1": "https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX%3A32016R0679"
           }
       },
       "qna13": {
           "term": "Zweck",
-          "definition": "Gem\u00e4\u00df Artikel 5, Absatz 1, Buchstabe b DSGVO, m\u00fcssen die f\u00fcr die Datenverarbeitung Verantwortlichen (wir) Ihnen deutlich machen, wozu sie (wir) personenbezogene Daten erheben. Es ist zum Beispiel illegal, personenbezogene Daten f\u00fcr personalisierte Jobempfehlungen zu sammeln und sie sp\u00e4ter f\u00fcr Marketingzwecke zu verwenden.",
+          "definition": "Gem\u00e4\u00df Artikel 5, Absatz 1, Buchstabe b DSGVO, müssen die Verantwortlichen Ihnen gegenüber deutlich machen, wozu sie Ihre personenbezogenen Daten erheben und verarbeiten. \n \n Nach ihrer Erhebung dürfen personenbezogene Daten nicht für andere Zwecke verwendet werden. \n \n Nach der DSGVO ist es beispielsweise illegal, personenbezogene Daten für personalisierte Arbeitsempfehlungen zu erheben und sie später für Marketingzwecke zu verwenden.",
           "references": {
               "ref1": "https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX%3A32016R0679"
           }
       },
       "qna14": {
           "term": "Dritte",
-          "definition": "Gem\u00e4\u00df Artikel 4, Nummer 10 DSGVO, werden Dritte direkt von den Datenverantwortlichen (uns) und/oder den Auftragsverarbeitern zur Verarbeitung personenbezogener Daten erm\u00e4chtigt.",
+          "definition": "Gem\u00e4\u00df Artikel 4, Nummer 10 DSGVO, sind Dritte von den Verantwortlichen und/oder den Auftragsverarbeitern direkt mit der Verarbeitung Ihrer personenbezogenen Daten beauftragt.",
           "references": {
               "ref1": "https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX%3A32016R0679"
           }

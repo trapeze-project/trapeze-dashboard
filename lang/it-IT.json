@@ -9,7 +9,7 @@
     "access": "Richiesta di Accesso ai Dati",
     "unrelatedData": "Categorie di dati non correlati",
     "bioData": "Dati biometrici",
-    "dpo": "Responsabile della protezione dei dati",
+    "dpo": "Responsabile della Protezione dei Dati",
     "dpo-abbrev": "DPD",
     "unrelatedDataText": "E' molto insolito che le impronte digitali vengano utilizzate per scopi pubblicitari.",
     "bioDataText": "Le impronte digitali sono particolarmente sensibili, in quanto facilitano il furto di identit\u00e0. Si raccomanda di fornire il consenso per i dati relativi alle impronte digitali solo se assolutamente necessario."
@@ -25,9 +25,9 @@
       "btn": "Login"
     },
     "choose-controller": {
-      "heading": "Selezionare un Responsabile",
-      "content": "Selezionate un responsabile del trattamento dei dati e vedete come tratta i vostri dati.",
-      "btn": "Selezione del Responsabile"
+      "heading": "Selezionare un Titolare",
+      "content": "Selezionate un titolare del trattamento dei dati e vedete come tratta i vostri dati.",
+      "btn": "Selezione del Titolare"
     },
     "consent": {
       "heading": "Gestire il Consenso",
@@ -41,7 +41,7 @@
   "nav": {
     "labels": {
       "home": "Homepage",
-      "controller": "Responsabile",
+      "controller": "Titolare",
       "consent": "Informativa sulla privacy",
       "consent-menu": "Menu di Consenso",
       "data": "Dati",
@@ -116,10 +116,10 @@
       "visit-website": "Visita il sito web",
       "leave-anyway": "Vattene comunque",
       "contact": "Contatto",
-      "withdraw-all-consent": "Withdraw all consent",
-      "discard-changes": "Discard changes",
-      "load-more": "Load more",
-      "select": "Select"
+      "withdraw-all-consent": "Ritirare tutti i consensi",
+      "discard-changes": "Scartare le modifiche",
+      "load-more": "Vedi di più",
+      "select": "Selezionare"
     }
   },
   "snackbar": {
@@ -131,9 +131,9 @@
   },
   "placeholder": {
     "search-for-a-question-or-an-answer": "Cerca una domanda o una risposta",
-    "search-for-data": "Search for a data category",
-    "search-for-purpose": "Search for a purpose",
-    "search-for-controller": "Search for a controller"
+    "search-for-data": "Ricerca di una categoria di dati",
+    "search-for-purpose": "Ricerca di uno scopo",
+    "search-for-controller": "Ricerca di un titolare del trattamento"
   },
   "updates": {
     "1": "Aggiornamento della politica sulla privacy",
@@ -150,7 +150,7 @@
     "introduction": "Scoprite di pi\u00f9 sul dashboard sulla privacy di TRAPEZE e sui concetti che ne stanno alla base."
   },
   "home": {
-    "title": "Benvenuti sul dashboard sulla privacy di TRAPEZE!",
+    "title": "Benvenuti sul Dashboard sulla Privacy di TRAPEZE!",
     "explore-btn": "Visualizza",
     "welcome-msg1": "Gestite il vostro consenso e controllate il trattamento dei vostri dati.\n Cliccate su una carta qui sotto per iniziare.",
     "welcome-msg2": "È possibile dare o revocare il consenso in base a quanto segue:",
@@ -211,16 +211,16 @@
     "lose-consent-helper-choices": "Non avete ancora risposto a tutti gli avvertimenti."
   },
   "controller-selection": {
-    "heading": "Select a data controller to manage your consent",
+    "heading": "Selezionare un titolare del trattamento per gestire il vostro consenso",
     "search-hint": {
-      "heading": "Controller not found?",
-      "desc": "Use the search bar to find a controller."
+      "heading": "Titolare non trovato?",
+      "desc": "Utilizzare il campo di ricerca."
     }
   },
   "consent": {
     "purposeDescription":"123",
     "dataDescription":"1233626551",
-    "desc": "Configurare le categorie di dati che possiamo usare per quali scopi. Oppure per quali scopi siamo autorizzati a utilizzare i dati.",
+    "desc": "Ritirare il consenso spostando i cursori a sinistra o facendo clic su \"Ritirare tutti i consensi\". Non dimenticate di inviare le modifiche.",
     "consent-menu": "Menu del Consenso",
     "title": "Assistente al Consenso",
     "location": "I vostri dati sulla posizione",
