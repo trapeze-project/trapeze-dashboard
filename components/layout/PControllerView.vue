@@ -12,11 +12,8 @@
       {{ controller.address.streetAddress }}<br>
       {{ controller.address.postalCode }}, {{ controller.address.addressLocality }}<br>
       {{ controller.url }}<br>
-      <br>
-      <div>
-        <a href="privacyPolicy">Privacy Policy (pdf)</a>
-      </div>
       
+      <br>
 
       <b>{{ $t("general.dpo") }} ({{ $t("general.dpo-abbrev") }})</b><br>
       {{ controller.alumni[0].name }}<br>

@@ -5,7 +5,7 @@
   >
     <v-card-title class="pa-0 pb-1">
       <!-- @TODO: enable localization of string -->
-      Select a data controller to manage your consent
+      {{ $t("controller-selection.heading") }}
     </v-card-title>
 
     <v-divider />
@@ -20,7 +20,7 @@
         <v-text-field
           class="rounded-pill"
           v-model="keyword"
-          placeholder="Search for a controller ..."
+          :placeholder="$t('placeholder.search-for-controller')"
           outlined
           dense
           clearable
@@ -67,7 +67,7 @@
               <v-card-actions>
                 <v-btn class="black--text rounded-pill px-5" color="primary" @click="direct('/', c['@id'])">
                   <!-- @TODO: enable localization of string -->
-                  Select
+                  {{ $t("btn.labels.select") }}
                 </v-btn>
               </v-card-actions>
 
@@ -95,11 +95,11 @@
             <!-- @TODO enable localization of string -->
             <div>
               <v-card-title>
-                Controller not found?
+                {{ $t("controller-selection.search-hint.heading") }}
               </v-card-title>
 
               <v-card-text>
-                Use the search bar to find a controller.
+                {{ $t("controller-selection.search-hint.desc") }}
               </v-card-text>
             </div>
           </div>

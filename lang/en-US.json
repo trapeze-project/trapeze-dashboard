@@ -117,7 +117,9 @@
       "leave-anyway": "Leave Anyway",
       "contact": "Contact",
       "withdraw-all-consent": "Withdraw all consent",
-      "discard-changes": "Discard changes"
+      "discard-changes": "Discard changes",
+      "load-more": "Load more",
+      "select": "Select"
     }
   },
   "snackbar": {
@@ -128,7 +130,10 @@
     }
   },
   "placeholder": {
-    "search-for-a-question-or-an-answer": "Search for a question or an answer"
+    "search-for-a-question-or-an-answer": "Search for a question or an answer",
+    "search-for-data": "Search for a data category",
+    "search-for-purpose": "Search for a purpose",
+    "search-for-controller": "Search for a controller"
   },
   "updates": {
     "1": "Policy Update",
@@ -204,6 +209,13 @@
     "dialog-title": "Are you sure you want to leave this page?",
     "lose-changes-warning": "You need to submit your choices.",
     "lose-consent-helper-choices": "You haven't addressed all warnings yet."
+  },
+  "controller-selection": {
+    "heading": "Select a data controller to manage your consent",
+    "search-hint": {
+      "heading": "Controller not found?",
+      "desc": "Use the search bar to find a controller."
+    }
   },
   "consent": {
     "purposeDescription":"123",
