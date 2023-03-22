@@ -78,7 +78,7 @@
         <v-card-actions class="py-3 d-flex justify-end">
           
           <v-btn
-            class="black-text rounded-pill"
+            class="black-text rounded-pill px-3"
             depressed
             color="lightgrey"
             @click="cancel"
@@ -87,7 +87,7 @@
           </v-btn>
 
           <v-btn
-            class="black--text rounded-pill"
+            class="black--text rounded-pill px-3"
             color="primary"
             @click="sendMessage"
           >

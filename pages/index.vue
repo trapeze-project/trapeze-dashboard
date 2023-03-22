@@ -12,7 +12,7 @@
           >
             <h1 style="text-transform:uppercase">{{ $t("landing.general.welcome") }}</h1>
 
-            <v-img src="/img/trapeze_logo.png" class="my-5 "/>
+            <v-img src="/img/trapeze-logo.png" class="my-5 "/>
 
             <h2 style="text-transform:uppercase">{{ $t("landing.general.pd") }}</h2>
           </v-col>
@@ -125,7 +125,7 @@
         align="center" 
         class="mt-3 mb-5"
       >
-        <v-img src="/img/eu_logo.png" width="48" class="mb-5" />
+        <v-img src="/img/eu-logo.png" width="48" class="mb-5" />
         The TRAPEZE project receives funding from the European Union's Horizon 2020 research and innovation programme under grant agreement No. 883464. Copyright © 2023
       </v-col>
     </v-row>
