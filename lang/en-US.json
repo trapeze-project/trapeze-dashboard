@@ -115,7 +115,9 @@
       "view": "View",
       "visit-website": "Visit Website",
       "leave-anyway": "Leave Anyway",
-      "contact": "Contact"
+      "contact": "Contact",
+      "withdraw-all-consent": "Withdraw all consent",
+      "discard-changes": "Discard changes"
     }
   },
   "snackbar": {
@@ -304,5 +306,8 @@
   "help": {
     "desc": "By offering this short survey, we want to ensure that we only collect and use your data in a way you are comfortable with. By completing this questionnaire, you can tell us how you like us to treat your data. Your answers are matched against your current consent decision. Afterward, you're provided with guidance on how to adjust your consent so that it fits with your preferences.",
     "comfort": "How comfortable are you that we use this type of data for the following purposes?"
+  },
+  "glossary": {
+    "desc": "Browse through consent-related terms."
   }
 }

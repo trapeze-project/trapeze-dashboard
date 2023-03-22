@@ -2,7 +2,13 @@
   <div>
     <PNotification ref="notification" />
 
-    <v-dialog class="rounded-xl" v-model="dialog" scrollable>
+    <v-dialog 
+      class="rounded-xl" 
+      v-model="dialog" 
+      scrollable 
+      width="auto"
+      :fullscreen="fullscreen"
+    >
       <template v-slot:activator="{ on, attrs }">
         <v-btn class="black--text rounded-pill" v-bind="attrs" color="primary" v-on="on">
           {{ btnName }}
@@ -128,9 +134,14 @@ export default {
       emailTemplate:[]
     }
   },
-  created(){
 
+  computed: {
+    fullscreen() {
+      return this.$vuetify.breakpoint.smAndDown;
+    }
+  },
 
+  created() {
 
     if (this.$i18n.locale === 'en') {
       this.emailTemplate = emailTemplateEnUS

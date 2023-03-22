@@ -37,23 +37,25 @@
           </v-col>
         </v-row>
 
+        <!-- Withdraw all consent button -->
         <div class="d-flex justify-end mb-3">
           <v-btn class="px-2 rounded-pill" color="error" @click="revokeAll">
             <v-icon class="mr-1"> mdi-alert-rhombus </v-icon>
-            Withdraw all consent
+            {{ $t("btn.labels.withdraw-all-consent") }}
           </v-btn>
         </div>
 
-        <!-- TODO: hasChanged = false -->
+        <!-- Discard changes button -->
         <div v-if="hasChanged" class="d-flex justify-end mb-3">
           <v-btn class="px-2 mx-3 rounded-pill" @click="() => $emit('undoAllChanges')" :disabled="!hasChanged">
             <v-icon class="mr-1"> mdi-undo </v-icon>
-            Discard changes
+            {{ $t("btn.labels.discard-changes") }}
           </v-btn>
-
+          
+          <!-- Submit changes button -->
           <v-btn class="px-2 rounded-pill black--text" color="primary" @click="() => $emit('submitMyConsent')" :disabled="!hasChanged">
             <v-icon class="mr-1"> mdi-tray-arrow-up </v-icon>
-            Submit changes
+            {{ $t("btn.labels.submit-changes") }}
           </v-btn>
         </div>
 
@@ -121,18 +123,18 @@ export default {
   },
   watch: {
     userChoices: {
-      handler(new_value, old_value) {
-        if (JSON.stringify(new_value) !== JSON.stringify(old_value)) {
-          this.modifiedUserChoices = JSON.parse(JSON.stringify(new_value));
+      handler(newVal, oldVal) {
+        if (JSON.stringify(newVal) !== JSON.stringify(oldVal)) {
+          this.modifiedUserChoices = Object.assign({}, newVal);
         }
         // set the value of revokeAll switch
-        let allConcentValues = [];
+        let allConsentValues = [];
         for (const [parent, children] of Object.entries(this.modifiedUserChoices)) {
           for (const [child, consentValue] of Object.entries(children)) {
-            allConcentValues.push(this.modifiedUserChoices[parent][child]);
+            allConsentValues.push(this.modifiedUserChoices[parent][child]);
           }
         }
-        if (allConcentValues.includes(true)) {
+        if (allConsentValues.includes(true)) {
           this.revokeAllValue = false;
         }
         else {
@@ -153,25 +155,33 @@ export default {
     }
   },
   created() {
-    this.modifiedUserChoices = JSON.parse(JSON.stringify(this.userChoices));
+    this.modifiedUserChoices = this.userChoices;
   },
   methods: {
     changeUserChoice(parent, child, newConsentValue) {
       this.modifiedUserChoices[parent][child] = newConsentValue;
+      this.update();
     },
     forceRerender() {
       this.componentKey += 1;
     },
     revokeAll() {
-      let tempModifiedUserChoices = JSON.parse(JSON.stringify(this.modifiedUserChoices));
+      let tempModifiedUserChoices = Object.assign({}, this.modifiedUserChoices);
       for (const [parent, children] of Object.entries(tempModifiedUserChoices)) {
         for (const [child, consentValue] of Object.entries(children)) {
           tempModifiedUserChoices[parent][child] = false;
         }
       }
-      this.modifiedUserChoices = JSON.parse(JSON.stringify(tempModifiedUserChoices));
+      this.modifiedUserChoices = Object.assign({}, tempModifiedUserChoices);
+      this.update();
       this.forceRerender();
     },
+    update() {
+      this.$emit("changeUserChoice", {
+        "tab": this.tabName,
+        "userChoices": this.modifiedUserChoices,
+      })
+    }
   }
 };
 </script>

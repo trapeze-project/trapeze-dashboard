@@ -26,8 +26,6 @@
 
             <v-expand-transition>
               <div v-show="showDetails" class="pa-3">
-                <!-- Data / Purposes -->
-                <!-- TODO: search -->
 
                 <v-row>
                   <v-col class="fill-height pb-0">

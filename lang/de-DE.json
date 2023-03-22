@@ -115,7 +115,9 @@
       "view": "Ansehen",
       "visit-website": "Webseite besuchen",
       "leave-anyway": "Trotzdem verlassen",
-      "contact": "Kontakt"
+      "contact": "Kontakt",
+      "withdraw-all-consent": "Withdraw all consent",
+      "discard-changes": "Discard changes"      
     }
   },
   "snackbar": {
@@ -304,5 +306,8 @@
   "help": {
     "desc": "Mit dieser kurzen Umfrage möchten wir sicherstellen, dass wir Ihre Daten nur in einer Weise erheben und verwenden, mit der Sie einverstanden sind. Indem Sie diesen Fragebogen ausfüllen, können Sie uns mitteilen, wie wir mit Ihren Daten umgehen sollen. Ihre Antworten werden mit Ihrer aktuellen Einverständniserklärung abgeglichen. Anschließend erhalten Sie eine Anleitung, wie Sie Ihre Einwilligung so anpassen können, dass sie Ihren Präferenzen entspricht.",
     "comfort": "Wie zufrieden sind Sie damit, dass wir diese Art von Daten für die folgenden Zwecke verwenden?"
+  },
+  "glossary": {
+    "desc": "Browse through consent-related terms."
   }
 }

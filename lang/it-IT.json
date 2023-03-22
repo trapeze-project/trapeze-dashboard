@@ -115,7 +115,9 @@
       "view": "Visualizza",
       "visit-website": "Visita il sito web",
       "leave-anyway": "Vattene comunque",
-      "contact": "Contatto"
+      "contact": "Contatto",
+      "withdraw-all-consent": "Withdraw all consent",
+      "discard-changes": "Discard changes"      
     }
   },
   "snackbar": {
@@ -304,5 +306,8 @@
   "help": {
     "desc": "Con questo breve sondaggio vogliamo assicurarci di raccogliere e utilizzare i vostri dati solo nel modo in cui vi sentite a vostro agio. Compilando questo questionario, potete dirci come volete che trattiamo i vostri dati. Le vostre risposte vengono confrontate con la vostra attuale decisione di consenso. In seguito, vi verranno fornite indicazioni su come modificare il vostro consenso in modo che corrisponda alle vostre preferenze.",
     "comfort": "Quanto è soddisfatto del fatto che utilizziamo questo tipo di dati per i seguenti scopi?"
+  },
+  "glossary": {
+    "desc": "Browse through consent-related terms."
   }
 }
