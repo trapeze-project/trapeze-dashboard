@@ -25,7 +25,7 @@
       "btn": "Login"
     },
     "choose-controller": {
-      "heading": "Verantwortlichen Wählen",
+      "heading": "Verantwortlichen Auswählen",
       "content": "Wählen Sie einen für die Verarbeitung Ihrer Daten Verantwortlichen aus und sehen Sie, wie er Ihre Daten verarbeitet.",
       "btn": "Verantwortlichen-Auswahl"
     },
@@ -100,7 +100,7 @@
       "consent-guide": "Einwilligungsassistent",
       "i-can-not-find-an-answer": "Ich finde keine Antwort auf meine Frage",
       "undo-last-change": "letzte \u00c4nderungen r\u00fcckg\u00e4ngig machen",
-      "submit-changes": "\u00c4nderungen speichern",
+      "submit-changes": "\u00c4nderungen übermitteln",
       "see-changes": "\u00c4nderungen anzeigen",
       "view-changes": "\u00c4nderungen anzeigen",
       "send-message": "Nachricht senden",
@@ -116,10 +116,10 @@
       "visit-website": "Webseite besuchen",
       "leave-anyway": "Trotzdem verlassen",
       "contact": "Kontakt",
-      "withdraw-all-consent": "Withdraw all consent",
-      "discard-changes": "Discard changes",
-      "load-more": "Load more",
-      "select": "Select"
+      "withdraw-all-consent": "Alle Einwilligungen widerrufen",
+      "discard-changes": "Änderungen verwerfen",
+      "load-more": "Mehr Anzeigen",
+      "select": "Auswählen"
     }
   },
   "snackbar": {
@@ -131,9 +131,9 @@
   },
   "placeholder": {
     "search-for-a-question-or-an-answer": "Suche nach einer Frage oder einer Antwort",
-    "search-for-data": "Search for a data category",
-    "search-for-purpose": "Search for a purpose",
-    "search-for-controller": "Search for a controller"
+    "search-for-data": "Nach einer Datenkategorie suchen",
+    "search-for-purpose": "Nach einem Zweck suchen",
+    "search-for-controller": "Nach einem Verantwortlichen suchen"
   },
   "updates": {
     "1": "Aktualisierung der Richtlinie",
@@ -152,15 +152,15 @@
   "home": {
     "title": "Willkommen auf dem Datenschutz-Dashboard von TRAPEZE!",
     "explore-btn": "Ansehen",
-    "welcome-msg1": "Verwalten Sie Ihre Einwilligungen und kontrollieren Sie die Verarbeitung Ihrer Daten.\n Klicken Sie unten auf eine Karte, um loszulegen.",
+    "welcome-msg1": "Verwalten Sie Ihre Einwilligungen und bestimmen Sie selbst wie und wofür Ihre Daten verarbeitet werden.\n Klicken Sie unten auf eine Karte, um loszulegen.",
     "welcome-msg2": "Sie können Ihre Einwilligung auf der Grundlage der folgenden Punkte erteilen oder widerrufen:",
     "welcome-msg3": "Wir empfehlen die Verwendung des 'Einwilligungsassistenten', um Ihre Präferenzen auszudrücken und sie mit Ihren Zustimmungsentscheidungen abzugleichen.",
     "purpose": {
       "0": {
-        "name": "Klicken Sie auf die 'Daten'-Karte, um zu sehen, welche Ihrer Daten verarbeitet werden.\n Ziehen Sie Ihre Einwilligung zurück, um die Verarbeitung Ihrer Daten zu stoppen."
+        "name": "Klicken Sie auf die 'Daten'-Karte, um zu sehen, welche Ihrer Daten verarbeitet werden.\n Widerrufen Sie Ihre Einwilligung, um die Verarbeitung bestimmter Datenkategorien zu stoppen."
       },
       "1": {
-        "name": "Klicken Sie auf die 'Zweck'-Karte, um zu sehen, für welche Zwecke Ihre Daten verarbeitet werden. \n Ziehen Sie Ihre Einwilligung zurück, um die Verarbeitung für einen bestimmten Zweck zu stoppen."
+        "name": "Klicken Sie auf die 'Zweck'-Karte, um zu sehen, für welche Zwecke Ihre Daten verarbeitet werden. \n Widerrufen Sie Ihre Einwilligung, um die Verarbeitung Ihrer Daten zu bestimmten Zwecken zu stoppen."
       }
     },
     "help": "Einwilligungsassistent",
@@ -211,16 +211,16 @@
     "lose-consent-helper-choices": "Sie haben noch nicht auf alle Warnungen reagiert."
   },
   "controller-selection": {
-    "heading": "Select a data controller to manage your consent",
+    "heading": "Wählen Sie einen Verantwortlichen, um Ihre Einwilligungen zu verwalten",
     "search-hint": {
-      "heading": "Controller not found?",
-      "desc": "Use the search bar to find a controller."
+      "heading": "Verantworlichen nicht gefunden?",
+      "desc": "Versuchen Sie es mit dem Suchfeld."
     }
   },
   "consent": {
     "purposeDescription":"123",
     "dataDescription":"1233626551",
-    "desc": "Konfigurieren Sie, welche Datenkategorien wir für welche Zwecke verwenden dürfen. Oder für welche Zwecke wir welche Daten verwenden dürfen.",
+    "desc": "Widerrufen Sie Ihre Einwilligung, indem Sie die Schieberegler nach links bewegen oder auf \"Alle Einwilligungen widerrufen\" klicken. Vergessen Sie nicht Ihre Änderungen zu übermitteln.",
     "consent-menu": "Einwilligungsmenü",
     "title": "Einwilligungsassistent",
     "location": "Ihre Standortdaten",
@@ -238,8 +238,8 @@
     "sensitivityText": "Sie k\u00f6nnen einstellen, wie sensibel diese Daten f\u00fcr Sie sind. Wir behandeln sehr sensible Daten anders und mit gro\u00dfer Sorgfalt",
     "sensitivityHeader": "Wie sensibel sind diese Daten f\u00fcr Sie?",
     "warnings": "Konflikte",
-    "warning-msg-not-comfortable": "Im Einwilligungsassistenten haben Sie angegeben, dass Sie nicht damit einverstanden sind, dass wir (${we}) Ihre ${dataCategory}-Daten für ${purpose}-Zwecke verwenden. Aus der Einwilligung, die Sie uns gegeben haben, schließen wir jedoch, dass Sie damit doch einverstanden sind. Bitte überprüfen Sie Ihre Einwilligung.",
-    "warning-msg-no-opinion": "Im Einwilligungsassistenten haben Sie angegeben, dass Sie unentschlossen zu unserer (${we}) Verarbeitung Ihrer ${dataCategory}-Daten für ${purpose}-Zwecke haben. Aus der Einwilligung, die Sie uns gegeben haben, schließen wir jedoch, dass Sie damit einverstanden sind. Bitte überprüfen Sie Ihre Einwilligung.",
+    "warning-msg-not-comfortable": "Im Einwilligungsassistenten haben Sie angegeben, dass Sie nicht damit einverstanden sind, dass wir (${we}) Ihre ${dataCategory}-Daten für ${purpose}-Zwecke verwenden. Aus der Einwilligung, die Sie uns erteilt haben, schließen wir jedoch, dass Sie damit doch einverstanden sind. Bitte überprüfen Sie Ihre Einwilligung.",
+    "warning-msg-no-opinion": "Im Einwilligungsassistenten haben Sie angegeben, dass Sie unentschlossen zu unserer (${we}) Verarbeitung Ihrer ${dataCategory}-Daten für ${purpose}-Zwecke haben. Aus der Einwilligung, die Sie uns erteilt haben, schließen wir jedoch, dass Sie damit einverstanden sind. Bitte überprüfen Sie Ihre Einwilligung.",
     "issues": "Konflikte",
     "issue": "Konflikt",
     "tab": {

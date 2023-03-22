@@ -116,10 +116,10 @@
       "visit-website": "Visita il sito web",
       "leave-anyway": "Vattene comunque",
       "contact": "Contatto",
-      "withdraw-all-consent": "Withdraw all consent",
-      "discard-changes": "Discard changes",
-      "load-more": "Load more",
-      "select": "Select"
+      "withdraw-all-consent": "Ritirare tutti i consensi",
+      "discard-changes": "Scartare le modifiche",
+      "load-more": "Vedi di più",
+      "select": "Selezionare"
     }
   },
   "snackbar": {
@@ -131,9 +131,9 @@
   },
   "placeholder": {
     "search-for-a-question-or-an-answer": "Cerca una domanda o una risposta",
-    "search-for-data": "Search for a data category",
-    "search-for-purpose": "Search for a purpose",
-    "search-for-controller": "Search for a controller"
+    "search-for-data": "Ricerca di una categoria di dati",
+    "search-for-purpose": "Ricerca di uno scopo",
+    "search-for-controller": "Ricerca di un titolare del trattamento"
   },
   "updates": {
     "1": "Aggiornamento della politica sulla privacy",
@@ -211,16 +211,16 @@
     "lose-consent-helper-choices": "Non avete ancora risposto a tutti gli avvertimenti."
   },
   "controller-selection": {
-    "heading": "Select a data controller to manage your consent",
+    "heading": "Selezionare un titolare del trattamento per gestire il vostro consenso",
     "search-hint": {
-      "heading": "Controller not found?",
-      "desc": "Use the search bar to find a controller."
+      "heading": "Titolare non trovato?",
+      "desc": "Utilizzare il campo di ricerca."
     }
   },
   "consent": {
     "purposeDescription":"123",
     "dataDescription":"1233626551",
-    "desc": "Configurare le categorie di dati che possiamo usare per quali scopi. Oppure per quali scopi siamo autorizzati a utilizzare i dati.",
+    "desc": "Ritirare il consenso spostando i cursori a sinistra o facendo clic su \"Ritirare tutti i consensi\". Non dimenticate di inviare le modifiche.",
     "consent-menu": "Menu del Consenso",
     "title": "Assistente al Consenso",
     "location": "I vostri dati sulla posizione",

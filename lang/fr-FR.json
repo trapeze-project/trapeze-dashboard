@@ -116,10 +116,10 @@
       "visit-website": "Visitez le site web",
       "leave-anyway": "Partir quand même",
       "contact": "Nous Contacter",
-      "withdraw-all-consent": "Withdraw all consent",
-      "discard-changes": "Discard changes",
-      "load-more": "Load more",
-      "select": "Select"
+      "withdraw-all-consent": "Retirer tout le consentement",
+      "discard-changes": "Écarter les modifications",
+      "load-more": "En voir plus",
+      "select": "Sélectionner"
     }
   },
   "snackbar": {
@@ -131,9 +131,9 @@
   },
   "placeholder": {
     "search-for-a-question-or-an-answer": "Rechercher une question ou une r\u00e9ponse",
-    "search-for-data": "Search for a data category",
-    "search-for-purpose": "Search for a purpose",
-    "search-for-controller": "Search for a controller"
+    "search-for-data": "Rechercher une catégorie de données",
+    "search-for-purpose": "Rechercher une fin",
+    "search-for-controller": "Rechercher un responsable du traitement"
   },
   "updates": {
     "1": "Mise \u00e0 jour de la politique de confidentialit\u00e9",
@@ -211,16 +211,16 @@
     "lose-consent-helper-choices": "Vous n'avez pas encore répondu à tous les avertissements."
   },
   "controller-selection": {
-    "heading": "Select a data controller to manage your consent",
+    "heading": "Sélectionnez un responsable du traitement pour gérer votre consentement",
     "search-hint": {
-      "heading": "Controller not found?",
-      "desc": "Use the search bar to find a controller."
+      "heading": "Responsable non trouvé?",
+      "desc": "Utilisez le champ de recherche."
     }
   },
   "consent": {
     "purposeDescription":"123",
     "dataDescription":"1233626551",
-    "desc": "Configurez les catégories de données que nous sommes autorisés à utiliser à quelles fins. Ou pour quelles finalités nous sommes autorisés à utiliser quelles données.",
+    "desc": "Retirez votre consentement en déplaçant les curseurs vers la gauche ou en cliquant sur \"Retirer tout le consentement\". N'oubliez pas de soumettre vos modifications.",
     "consent-menu": "Menu Consentement",
     "title": "Assistant de Consentement",
     "location": "Vos donn\u00e9es de localisation",

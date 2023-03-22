@@ -220,7 +220,7 @@
   "consent": {
     "purposeDescription":"123",
     "dataDescription":"1233626551",
-    "desc": "Move the sliders to the left to withdraw consent and stop the processing of your data. Click on the \"Withdraw all consent\"-button to stop all processing.",
+    "desc": "Withdraw you consent by moving the sliders to the left or clicking on \"Withdraw all consent\". Do not forget to submit your changes.",
     "consent-menu": "Consent Menu",
     "title": "Consent Assistant",
     "location": "Your location data",
