@@ -117,7 +117,9 @@
       "leave-anyway": "Partir quand même",
       "contact": "Nous Contacter",
       "withdraw-all-consent": "Withdraw all consent",
-      "discard-changes": "Discard changes"      
+      "discard-changes": "Discard changes",
+      "load-more": "Load more",
+      "select": "Select"
     }
   },
   "snackbar": {
@@ -128,7 +130,10 @@
     }
   },
   "placeholder": {
-    "search-for-a-question-or-an-answer": "Rechercher une question ou une r\u00e9ponse"
+    "search-for-a-question-or-an-answer": "Rechercher une question ou une r\u00e9ponse",
+    "search-for-data": "Search for a data category",
+    "search-for-purpose": "Search for a purpose",
+    "search-for-controller": "Search for a controller"
   },
   "updates": {
     "1": "Mise \u00e0 jour de la politique de confidentialit\u00e9",
@@ -204,6 +209,13 @@
     "dialog-title": "Voulez-vous vraiment quitter cette page ?",
     "lose-changes-warning": "Vous devez soumettre vos choix.",
     "lose-consent-helper-choices": "Vous n'avez pas encore répondu à tous les avertissements."
+  },
+  "controller-selection": {
+    "heading": "Select a data controller to manage your consent",
+    "search-hint": {
+      "heading": "Controller not found?",
+      "desc": "Use the search bar to find a controller."
+    }
   },
   "consent": {
     "purposeDescription":"123",

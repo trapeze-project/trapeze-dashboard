@@ -32,7 +32,7 @@
                     <v-text-field
                       class="rounded-pill"
                       v-model="searchValue"
-                      :placeholder="'Search for ...'" 
+                      :placeholder="$t('placeholder.search-for-' + sub)"
                       outlined
                       dense 
                       clearable 
@@ -80,7 +80,7 @@
                     color="primary" 
                     @click="() => max += max"
                   >
-                    Load more
+                    {{ $t("btn.labels.load-more") }}
                   </v-btn>
                 </div>
                 
@@ -167,6 +167,11 @@ export default {
           let label = this.$t(`dpv.labels.${e}`).toLowerCase();
           return label.includes((this.searchValue) ? this.searchValue : '');
         });        
+    },
+    sub() {
+      return (this.tabName === "data")
+        ? "purpose"
+        : "data";
     }
   },
   created() {

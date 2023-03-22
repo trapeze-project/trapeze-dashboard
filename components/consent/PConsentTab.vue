@@ -25,7 +25,7 @@
             <v-text-field 
               class="rounded-pill"
               v-model="searchValue"
-              :placeholder="'Search for ' + tabName" 
+              :placeholder="$t('placeholder.search-for-' + tabName)" 
               outlined
               dense 
               clearable 
@@ -79,7 +79,7 @@
               color="primary" 
               @click="() => max += max"
             >
-              Load more
+              {{ $t("btn.labels.load-more") }}
             </v-btn>
           </div>
         </div>
