@@ -2,98 +2,98 @@
   "glossaryEntries": {
       "entry1": {
           "term": "Consentement",
-          "definition": "Selon l'article 4, point 11 RGPD, le consentement est l'affirmation claire d'une personne concern\u00e9e (votre) envers un responsable de donn\u00e9es (nous) pour traiter vos donn\u00e9es personnelles. Notez que les responsables du traitement des donn\u00e9es (nous) ne doivent pas toujours retirer le consentement des personnes concern\u00e9es (vous) pour traiter les donn\u00e9es personnelles. Par exemple, un service de livraison doit traiter l'adresse d'une personne concern\u00e9e (vous) afin de respecter un ordre de livraison. Dans ce cas, les responsables du traitement des donn\u00e9es (nous) n'ont pas besoin de retirer le consentement.",
+          "definition": "Selon l'article 4, point 11 RGPD, le consentement est votre action affirmative claire envers un responsable du traitement pour traiter vos données à caractère personnel.\n\n Notez que les responsables du traitement ne doivent pas toujours recueillir votre consentement pour traiter vos données à caractère personnel.\n\n  Par exemple, un service de livraison doit traiter votre adresse afin de respecter un ordre de livraison.\n\n Dans ce cas, le responsable du traitement n'a pas besoin de recueillir votre consentement.",
           "references": {
               "ref1": "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX%3A32016R0679"
           }
       },
       "entry2": {
           "term": "Traitement transfrontalier",
-          "definition": "Selon l'article 4, point 23 RGPD, le traitement transfrontalier signifie soit que le traitement est (a) effectu\u00e9 dans plusieurs \u00c9tats membres de l'UE, soit (b) effectu\u00e9 dans un seul \u00c9tat membre de l'UE mais sur des donn\u00e9es personnelles de personnes concern\u00e9es (vous) de plusieurs \u00c9tats membres.",
+          "definition": "Selon l'article 4, point 23 RGPD, le traitement transfrontalier signifie que le traitement est (a) effectué dans plusieurs États membres de l'UE, ou (b) effectué dans un seul État membre de l'UE, mais sur des données à caractère personnel concernant des personnes concernées, comme vous, provenant de plusieurs États membres.",
           "references": {
               "ref1": "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX%3A32016R0679"
           }
       },
       "entry3": {
           "term": "Responsable du Traitement",
-          "definition": "Selon l'article 4, point 7 RGPD, les responsables du traitement des donn\u00e9es (nous) doivent indiquer clairement aux personnes concern\u00e9es (vous) comment et \u00e0 quelles fins ils traitent les donn\u00e9es personnelles. Les responsables du traitement des donn\u00e9es sont souvent uniquement appel\u00e9s \"responsables\".",
+          "definition": "Selon l'article 4, point 7 RGPD, les responsables du traitement sont chargés du traitement de vos données à caractère personnel. Ils doivent vous indiquer clairement comment et à quelles fins ils traitent vos données à caractère personnel.",
           "references": {
               "ref1": "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX%3A32016R0679"
           }
       },
       "entry4": {
           "term": "Sous-traitant",
-          "definition": "Selon l'article 4, point 8 RGPD, les processeurs de donn\u00e9es traitent vos donn\u00e9es personnelles. Les processeurs de donn\u00e9es et les responsables de donn\u00e9es (nous) peuvent \u00eatre une seule et m\u00eame personne, mais pas n\u00e9cessairement. Si ce n'est pas le cas, les responsables de donn\u00e9es (nous) ne disent g\u00e9n\u00e9ralement ni la finalit\u00e9 du traitement ni quelles donn\u00e9es personnelles doivent \u00eatre trait\u00e9es par le sous-traitant de donn\u00e9es. Les sous-traitants de donn\u00e9es sont souvent uniquement appel\u00e9s \"sous-traitants\".",
+          "definition": "Selon l'article 4, point 8 RGPD, les sous-traitants traitent vos données à caractère personnel.\n\n  Les sous-traitants peuvent également être des responsables du traitement.\n\n Toutefois, un sous-traitant ne doit pas nécessairement être un responsable du traitement.\n \n Si un sous-traitant n'est pas un responsable du traitement, le sous-traitant n'est généralement pas informé de la fin du traitement ni du type de données à caractère personnel qu'il traite pour le responsable du traitement.",
           "references": {
               "ref1": "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX%3A32016R0679"
           }
       },
       "entry5": {
-          "term": "D\u00e9l\u00e9gu\u00e9 \u00e0 la protection des donn\u00e9es",
-          "definition": "Le d\u00e9l\u00e9gu\u00e9 \u00e0 la protection des donn\u00e9es (DPD) d'un responsable du traitement des donn\u00e9es (nous) est responsable de la conformit\u00e9 au GDPR. Les DPO sont \u00e9galement responsables de la communication de la mise en \u0153uvre de la protection des donn\u00e9es envers les personnes concern\u00e9es (vous).",
+          "term": "D\u00e9l\u00e9gu\u00e9 \u00e0 la Protection des Donn\u00e9es (DPD)",
+          "definition": "Chaque responsable du traitement doit avoir un délégué à la protection des données (DPD).\n \n Les DPD sont responsables de la conformité de leur traitement de données à caractère personnel avec le RGPD.\n \n Les DPD sont également chargés de vous informer sur la manière dont ils protègent vos données à caractère personnel.",
           "references": {
               "ref1": "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX%3A32016R0679"
           }
       },
       "entry6": {
           "term": "Destinataire",
-          "definition": "Selon l'article 4, point 9 RGPD, toute personne \u00e0 laquelle les donn\u00e9es personnelles d'un sujet (votre) sont divulgu\u00e9es est un destinataire de donn\u00e9es. Les destinataires de donn\u00e9es sont g\u00e9n\u00e9ralement des responsables de donn\u00e9es et des processeurs de donn\u00e9es. Les destinataires de donn\u00e9es sont souvent uniquement appel\u00e9s \"destinataires\".",
+          "definition": "Selon l'article 4, point 9 RGPD, toute personne à qui vos données à caractère personnel sont communiquées est un destinataire. Les destinataires sont souvent également des responsables du traitement et/ou des sous-traitants.",
           "references": {
               "ref1": "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX%3A32016R0679"
           }
       },
       "entry7": {
           "term": "Personne concern\u00e9e",
-          "definition": "Selon le RGPD, vous \u00eates une personne concern\u00e9e d\u00e8s lors que vous \u00eates identifiable, par exemple par votre nom ou votre num\u00e9ro de s\u00e9curit\u00e9 sociale.",
+          "definition": "Selon l'article 4, point 1 RGPD, vous êtes une personne concernée puisque vous êtes identifiable, par exemple, par votre nom ou votre numéro de sécurité sociale.",
           "references": {
               "ref1": "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX%3A32016R0679"
           }
       },
       "entry8": {
-          "term": "RGPD",
-          "definition": "Le R\u00e8glement G\u00e9n\u00e9ral sur la Protection des Donn\u00e9es (RGPD) est la l\u00e9gislation sur la protection des donn\u00e9es active dans l'Union europ\u00e9enne. Il a \u00e9t\u00e9 adopt\u00e9 en mai 2016 et est entr\u00e9 en vigueur en mai 2018.",
+          "term": "Règlement Général sur la Protection des Données (RGPD)",
+          "definition": "Le Règlement Général sur la Protection des Données (RGPD) est la législation sur la protection des données en vigueur dans l'Union européenne. Il a été adopté en mai 2016 et est entré en vigueur en mai 2018.",
           "references": {
               "ref1": "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX%3A32016R0679"
           }
       },
       "entry9": {
-          "term": "Donn\u00e9es personnelles",
-          "definition": "Selon l'article 4, point 1 RGPD, toute donn\u00e9e attribuable \u00e0 une personne concern\u00e9e (vous) est une donn\u00e9e personnelle.",
+          "term": "Donn\u00e9es à caractère personnel",
+          "definition": "Selon l'article 4, point 1 RGPD, toute donnée qui vous est attribuable est une donnée à caractère personnel.",
           "references": {
               "ref1": "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX%3A32016R0679"
           }
       },
       "entry10": {
           "term": "Traitement",
-          "definition": "Selon l'article 4, point 2 RGPD, seul le traitement des donn\u00e9es personnelles est r\u00e9glement\u00e9. L'art. 6 d\u00e9finit notamment que le traitement des donn\u00e9es personnelles est licite si les personnes concern\u00e9es (vous) ont donn\u00e9 leur consentement ou si le traitement est n\u00e9cessaire au respect d'un contrat. Un service de livraison n'a pas besoin de retirer le consentement pour traiter l'adresse d'une personne concern\u00e9e (vous) \u00e0 des fins de livraison si la livraison fait partie d'un contrat d'achat. Le traitement implique \u00e9galement la collecte et le stockage de donn\u00e9es personnelles.",
+          "definition": "Selon l'article 4, point 2 RGPD, seul le traitement des données à caractère personnel est réglementé.\n\n L'art. 6 définit en particulier que le traitement des données à caractère personnel est licite si vous avez donné votre consentement ou si le traitement est nécessaire au respect d'un contrat.\n \n Par exemple, un service de livraison doit traiter votre adresse afin de respecter un ordre de livraison.\n \n Dans ce cas, les responsables du traitement n'ont pas besoin de recueillir votre consentement.\n \n Le traitement implique également la collecte et le stockage de données à caractère personnel.",
           "references": {
               "ref1": "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX%3A32016R0679"
           }
       },
       "entry11": {
           "term": "Profilage",
-          "definition": "Selon l'article 4, point 4 RGPD, le profilage est toute forme de traitement automatis\u00e9 sur des donn\u00e9es personnelles afin de d\u00e9duire des informations sp\u00e9cifiques sur une personne concern\u00e9e (vous). Le profilage est couramment utilis\u00e9 pour estimer la probabilit\u00e9 qu'une personne concern\u00e9e (vous) ach\u00e8te un certain produit ou ne puisse pas rembourser un cr\u00e9dit.",
+          "definition": "Selon l'article 4, point 4 RGPD, le profilage est toute forme de traitement automatisé de données à caractère personnel visant à déduire des informations spécifiques vous concernant.\n \n Le profilage est couramment utilisé pour estimer la probabilité que vous achetiez un certain produit ou que vous ne puissiez pas rembourser un crédit.",
           "references": {
               "ref1": "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX%3A32016R0679"
           }
       },
       "entry12": {
           "term": "Pseudonymisation",
-          "definition": "Selon l'article 4, point 5 RGPD, la pseudonymisation des donn\u00e9es personnelles signifie que les donn\u00e9es personnelles ne peuvent \u00eatre attribu\u00e9es \u00e0 une personne concern\u00e9e (vous) qu'\u00e0 l'aide de donn\u00e9es additionnelles. L'utilisation de noms ou de num\u00e9ros artificiels \u00e0 la place du nom r\u00e9el d'une personne concern\u00e9e (vous) est une technique de pseudonymisation simple.",
+          "definition": "Selon l'article 4, point 5 RGPD, la pseudonymisation des données à caractère personnel signifie que les données à caractère personnel ne peuvent vous être attribuées qu'à l'aide de données supplémentaires.\n \n L'utilisation de noms ou de numéros artificiels à la place de votre nom réel est une technique de pseudonymisation simple.",
           "references": {
               "ref1": "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX%3A32016R0679"
           }
       },
       "entry13": {
           "term": "Finalité (Fin)",
-          "definition": "Selon l'article 5, premier paragraphe, point b) RGPD, les responsables du traitement des donn\u00e9es (nous) doivent vous indiquer clairement dans quel but ils collectent des donn\u00e9es personnelles. Il est par exemple ill\u00e9gal de collecter des donn\u00e9es personnelles \u00e0 des fins de recommandations d'emploi personnalis\u00e9es et de les utiliser ult\u00e9rieurement \u00e0 des fins de marketing.",
+          "definition": "Selon l'article 5, premier paragraphe, point b) RGPD, les responsables du traitement doivent vous indiquer clairement à quelles fins ils collectent et traitent vos données à caractère personnel.\n \n Après leur collecte, les données à caractère personnel ne peuvent être utilisées à d'autres fins.\n \n Il est par exemple illégal, en vertu du RGPD, de collecter des données à caractère personnel à des fins de recommandations d'emploi personnalisées et de les utiliser ultérieurement à des fins de marketing.",
           "references": {
               "ref1": "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX%3A32016R0679"
           }
       },
       "entry14": {
           "term": "Tiers",
-          "definition": "Selon l'article 4, point 10 RGPD, les tiers sont directement autoris\u00e9s par les responsables de donn\u00e9es (nous) et/ou les processeurs de donn\u00e9es \u00e0 traiter les donn\u00e9es personnelles.",
+          "definition": "Selon l'article 4, point 10 RGPD, les tiers sont directement autorisés par les responsables du traitement et/ou les sous-traitants à traiter vos données à caractère personnel.",
           "references": {
               "ref1": "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX%3A32016R0679"
           }
