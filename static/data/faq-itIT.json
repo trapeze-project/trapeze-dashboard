@@ -3,12 +3,12 @@
         "qnas": {
             "qna1": {
                 "question": "Cosa posso fare nel dashboard sulla privacy di TRAPEZE?",
-                "answer": "Dopo aver selezionato un responsabile, è possibile sfogliare i dati trattati e per quali scopi. \n \n Potete limitare il trattamento dei vostri dati ritirando il vostro consenso. È possibile ritirare il consenso spostando a sinistra i cursori nel menu 'Dati' o 'Scopi' e inviando le modifiche. \n \n Potete anche ritirare automaticamente tutti i vostri consensi facendo clic sul pulsante 'Revoca di tutti i consensi'. \n \n L'utente può anche ampliare l'ambito del trattamento dei dati forniti con il consenso, spostando i cursori verso destra. \n \n In caso di domande specifiche, è possibile contattare il Responsabile della Protezione dei Dati (RPD) tramite il pulsante 'Contatto' nelle informazioni sul titolare del trattamento. \n \n Su desktop: Vedere il banner sul lato destro.\n\n Su mobile: Cliccare sull'icona del responsabile in alto a destra O sulla scheda del responsabile nel menu in alto a sinistra.",
+                "answer": "Dopo aver selezionato un titolare del trattamento, è possibile sfogliare i dati trattati e per quali scopi. \n \n Potete limitare il trattamento dei vostri dati ritirando il vostro consenso. È possibile ritirare il consenso spostando a sinistra i cursori nel menu 'Dati' o 'Scopi' e inviando le modifiche. \n \n Potete anche ritirare automaticamente tutti i vostri consensi facendo clic sul pulsante 'Revoca di tutti i consensi'. \n \n L'utente può anche ampliare l'ambito del trattamento dei dati forniti con il consenso, spostando i cursori verso destra. \n \n In caso di domande specifiche, è possibile contattare il Responsabile della Protezione dei Dati (RPD) tramite il pulsante 'Contatto' nelle informazioni sul titolare del trattamento. \n \n Su desktop: Vedere il banner sul lato destro.\n\n Su mobile: Cliccare sull'icona del titolare del trattamente in alto a destra O sulla scheda del titolare del trattamento nel menu in alto a sinistra.",
                 "references": {                }
             },
             "qna2": {
                 "question": "Chi è responsabile delle informazioni contenute nel dashboard sulla privacy di TRAPEZE?",
-                "answer": "Le informazioni presentate nel dashboard sulla privacy di TRAPEZE sono fornite dal responsabile selezionato. \n \n Su desktop: Vedere il banner sul lato destro.\n\n Su mobile: Cliccare sull'icona del responsabile in alto a destra O sulla scheda del responsabile nel menu in alto a sinistra.",
+                "answer": "Le informazioni presentate nel dashboard sulla privacy di TRAPEZE sono fornite dal titolare del trattamento selezionato. \n \n Su desktop: Vedere il banner sul lato destro.\n\n Su mobile: Cliccare sull'icona del titolare del trattamento in alto a destra O sulla scheda del titolare del trattamento nel menu in alto a sinistra.",
                 "references": {
                 }
             },
@@ -45,7 +45,7 @@
         "qnas": {
             "qna1": {
                 "question": "Che cos'\u00e8 il consenso?",
-                "answer": "Secondo il articolo 4, punto 11 RGPD, il consenso è una chiara azione affermativa nei confronti di un responsabile dei vostri dati personali. \n \n Si noti che i responsabili non devono sempre raccogliere il consenso dell'utente per trattare i suoi dati personali. \n \n Ad esempio, un servizio di consegna ha bisogno di elaborare il vostro indirizzo per rispettare l'ordine di consegna. Non è necessario raccogliere il consenso.",
+                "answer": "Secondo il articolo 4, punto 11 RGPD, il consenso è una chiara azione affermativa nei confronti di un titolare del trattamento dei vostri dati personali. \n \n Si noti che i responsabili non devono sempre raccogliere il consenso dell'utente per trattare i suoi dati personali. \n \n Ad esempio, un servizio di consegna ha bisogno di elaborare il vostro indirizzo per rispettare l'ordine di consegna. Non è necessario raccogliere il consenso.",
                 "references": {
                     "ref1": "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX%3A32016R0679"
                 }
@@ -59,7 +59,7 @@
             },
             "qna3": {
                 "question": "Posso ritirare il mio consenso?",
-                "answer": "Secondo il articolo 7, paragrafo 3 RGPD, è possibile ritirare il consenso in qualsiasi momento. \n \n Il ritiro del consenso non richiede un modulo specifico. \n \n È possibile, ad esempio, ritirare il consenso scrivendo una lettera o un'e-mail a un responsabile del trattamento o chiamandolo.",
+                "answer": "Secondo il articolo 7, paragrafo 3 RGPD, è possibile ritirare il consenso in qualsiasi momento. \n \n Il ritiro del consenso non richiede un modulo specifico. \n \n È possibile, ad esempio, ritirare il consenso scrivendo una lettera o un'e-mail a un titolare del trattamento o chiamandolo.",
                 "references": {
                     "ref1": "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX%3A32016R0679"
                 }
