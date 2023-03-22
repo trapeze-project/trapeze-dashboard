@@ -2,25 +2,25 @@
     "TRAPEZE": {
         "qnas": {
             "qna1": {
-                "question": "Cosa posso fare nel TRAPEZE dashboard sulla privacy?",
-                "answer": "Il TRAPEZE dashboard sulla privacy è un software che i responsabili del trattamento dei dati come noi (${we}) possono utilizzare per chiarire all'utente come e per cosa trattiamo i suoi dati personali. \n \n Nel TRAPEZE dashboard sulla privacy possibile vedere la nostra politica sulla privacy attiva e quando abbiamo raccolto il consenso dell'utente. In particolare, è possibile vedere come trattiamo i vostri dati e per quali scopi. Potete limitare il trattamento dei vostri dati ritirando il consenso, oppure ampliare l'ambito del nostro trattamento dandoci il consenso per migliorare il servizio che vi forniamo.\n \n Avete altre domande sul trattamento dei vostri dati? Non esiti a contattarci tramite il pulsante di contatto nel banner a destra.",
+                "question": "Cosa posso fare nel dashboard sulla privacy di TRAPEZE?",
+                "answer": "Dopo aver selezionato un responsabile, è possibile sfogliare i dati trattati e per quali scopi. \n \n Potete limitare il trattamento dei vostri dati ritirando il vostro consenso. È possibile ritirare il consenso spostando a sinistra i cursori nel menu 'Dati' o 'Scopi' e inviando le modifiche. \n \n Potete anche ritirare automaticamente tutti i vostri consensi facendo clic sul pulsante 'Revoca di tutti i consensi'. \n \n L'utente può anche ampliare l'ambito del trattamento dei dati forniti con il consenso, spostando i cursori verso destra. \n \n In caso di domande specifiche, è possibile contattare il Responsabile della Protezione dei Dati (RPD) tramite il pulsante 'Contatto' nelle informazioni sul titolare del trattamento. \n \n Su desktop: Vedere il banner sul lato destro.\n\n Su mobile: Cliccare sull'icona del responsabile in alto a destra O sulla scheda del responsabile nel menu in alto a sinistra.",
                 "references": {                }
             },
             "qna2": {
-                "question": "Chi è responsabile delle informazioni contenute nel TRAPEZE dashboard sulla privacy?",
-                "answer": "Se nel banner a destra si vedono le informazioni sulla nostra azienda (${we}), le informazioni mostrate nel TRAPEZE dashboard sulla privacy sono fornite da noi. Nelle versioni successive del cruscotto, sarà possibile cambiare tra i diversi responsabili del trattamento dei dati, come noi.",
+                "question": "Chi è responsabile delle informazioni contenute nel dashboard sulla privacy di TRAPEZE?",
+                "answer": "Le informazioni presentate nel dashboard sulla privacy di TRAPEZE sono fornite dal responsabile selezionato. \n \n Su desktop: Vedere il banner sul lato destro.\n\n Su mobile: Cliccare sull'icona del responsabile in alto a destra O sulla scheda del responsabile nel menu in alto a sinistra.",
                 "references": {
                 }
             },
             "qna3": {
-                "question": "Perché voi (${we}) utilizzate il TRAPEZE dashboard sulla privacy?",
-                "answer": "Noi (${we}) utilizziamo il TRAPEZE dashboard sulla privacy per consentirvi di capire meglio cosa facciamo con i vostri dati. Attraverso il TRAPEZE dashboard sulla privacy, possiamo capire se in generale vi piace che trattiamo i vostri dati o, magari, solo per scopi specifici. \n \n Il nostro obiettivo è quello di allineare l'attuale trattamento dei suoi dati a come lei desidera effettivamente che vengano trattati.",
+                "question": "Perché i responsabili utilizzano il dashboard sulla privacy di TRAPEZE?",
+                "answer": "Il dashboard sulla privacy di TRAPEZE è un software che i responsabili possono utilizzare per chiarire all'utente come e per quali scopi trattano i suoi dati personali. \n \n I responsabili sono obbligati dal Regolamento Generale sulla Protezione dei Dati (RGPD) a rendere trasparente il trattamento dei dati personali.\n \n Il dashboard sulla privacy di TRAPEZE è uno strumento di facile utilizzo che i responsabili possono utilizzare gratuitamente.",
                 "references": {
                 }
             },
             "qna4": {
-                "question": "Chi ha sviluppato il TRAPEZE dashboard sulla privacy?",
-                "answer": "TRAPEZE è un progetto di ricerca finanziato dall'Unione Europea. TRAPEZE è l'acronimo di \"TRAnsparency, Privacy and security for European citiZEns\". \n \n TRAPEZE fa parte del programma di finanziamento Horizon2020 dell'Unione Europea. Il progetto triennale è stato condotto tra settembre 2020 e agosto 2023. Il consorzio del progetto TRAPEZE è composto dai seguenti 13 partner: (1.) TenForce BVBA, (2.)GEIE ERCIM, (3.)Technische Universität Berlin, (4.) VLAAMSE GEWEST, (5.) Deutsche Telekom AG, (6.) CaixaBank SA, (7.) Consorzio Interuniversitario Nazionale Per L'Informatica, (8.) Unabhängiges Landeszentrum für Datenschutz, (9.) Kaspersky Lab Italia SRL, (10.) Institut Mihajlo Pupin, (11.) IPSOS NV, (12.) Athens Technology Center Anonymi Biomichaniki Emporiki Kai Techniki Etaireia Efarmogon Ypsilis Technologias, (13.) E-Seniors: Initiation des Séniors Aux NTIC Association.",
+                "question": "Chi ha sviluppato il dashboard sulla privacy di TRAPEZE?",
+                "answer": "TRAPEZE è un progetto di ricerca finanziato dall'Unione Europea.\n \n TRAPEZE è l'acronimo di \"TRAnsparency, Privacy and security for European citiZEns\". \n \n TRAPEZE fa parte del programma di finanziamento Horizon2020 dell'Unione Europea.\n \n Il progetto triennale è stato condotto tra settembre 2020 e agosto 2023.\n \n Il consorzio del progetto TRAPEZE è composto dai seguenti 13 partner:\n \n (1.) TenForce BVBA,\n (2.) GEIE ERCIM,\n (3.) Technische Universität Berlin,\n (4.) VLAAMSE GEWEST,\n (5.) Deutsche Telekom AG,\n (6.) CaixaBank SA,\n (7.) Consorzio Interuniversitario Nazionale Per L'Informatica,\n (8.) Unabhängiges Landeszentrum für Datenschutz,\n (9.) Kaspersky Lab Italia SRL,\n (10.) Institut Mihajlo Pupin,\n (11.) IPSOS NV,\n (12.) Athens Technology Center Anonymi Biomichaniki Emporiki Kai Techniki Etaireia Efarmogon Ypsilis Technologias,\n (13.) E-Seniors: Initiation des Séniors Aux NTIC Association.",
                 "references": { 
                     "ref1": "http://trapeze-project.eu/",
                     "ref2": "https://ec.europa.eu/info/research-and-innovation/funding/funding-opportunities/funding-programmes-and-open-calls/horizon-2020_en",
@@ -45,45 +45,45 @@
         "qnas": {
             "qna1": {
                 "question": "Che cos'\u00e8 il consenso?",
-                "answer": "Secondo il articolo 4, punto 11 RGPD, il consenso \u00e8 una chiara azione affermativa nei confronti di un responsabile del trattamento dei dati (noi) per trattare i vostri dati personali. Si noti che i responsabili del trattamento (noi) non devono sempre raccogliere il consenso dell'utente per trattare i suoi dati personali. Ad esempio, un servizio di consegna deve elaborare l'indirizzo dell'utente per rispettare l'ordine di consegna. Non \u00e8 necessario raccogliere il consenso.",
+                "answer": "Secondo il articolo 4, punto 11 RGPD, il consenso è una chiara azione affermativa nei confronti di un responsabile dei vostri dati personali. \n \n Si noti che i responsabili non devono sempre raccogliere il consenso dell'utente per trattare i suoi dati personali. \n \n Ad esempio, un servizio di consegna ha bisogno di elaborare il vostro indirizzo per rispettare l'ordine di consegna. Non è necessario raccogliere il consenso.",
                 "references": {
                     "ref1": "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX%3A32016R0679"
                 }
             },
             "qna2": {
                 "question": "I bambini possono dare il consenso?",
-                "answer": "I minori di 16 anni o pi\u00f9 possono dare il loro consenso. Tuttavia, i responsabili del trattamento dei dati (noi) devono compiere uno sforzo ragionevole per verificare che il consenso sia stato dato o autorizzato dal titolare della responsabilit\u00e0 genitoriale sul minore. Gli Stati membri possono abbassare la soglia dei 16 anni, ma non al di sotto dei 13 anni.",
+                "answer": "I minori di 16 anni o più possono dare il consenso. \n \n Tuttavia, i responsabili devono compiere uno sforzo ragionevole per verificare che il consenso sia stato dato o autorizzato dal titolare della responsabilità genitoriale sul minore. \n \n Gli Stati membri dell'UE possono abbassare la soglia dei 16 anni, ma non al di sotto dei 13 anni.",
                 "references": {
                     "ref1": "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX%3A32016R0679"
                 }
             },
             "qna3": {
                 "question": "Posso ritirare il mio consenso?",
-                "answer": "Secondo il articolo 7, paragrafo 3 RGPD, \u00e8 possibile ritirare il consenso in qualsiasi momento. Il ritiro del consenso non richiede un modulo specifico. \u00c8 possibile, ad esempio, ritirare il consenso scrivendo una lettera o un'e-mail, oppure chiamandoci.",
+                "answer": "Secondo il articolo 7, paragrafo 3 RGPD, è possibile ritirare il consenso in qualsiasi momento. \n \n Il ritiro del consenso non richiede un modulo specifico. \n \n È possibile, ad esempio, ritirare il consenso scrivendo una lettera o un'e-mail a un responsabile del trattamento o chiamandolo.",
                 "references": {
                     "ref1": "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX%3A32016R0679"
                 }
             },
             "qna4": {
-                "question": "I responsabili del trattamento cancellano i miei dati personali quando ritiro il mio consenso?",
-                "answer": "Non appena l'utente ritira il proprio consenso, i responsabili del trattamento dei dati (noi) devono interrompere l'elaborazione e cancellare i dati personali dell'utente per le finalit\u00e0 per cui ha ritirato il consenso.",
+                "question": "I responsabili cancellano i miei dati personali quando ritiro il mio consenso?",
+                "answer": "Non appena l'utente ritira il proprio consenso, i responsabili devono interrompere il trattamento dei suoi dati e cancellare i suoi dati personali per gli scopi per cui ha ritirato il consenso.",
                 "references": { }
             },
             "qna5": {
                 "question": "Perch\u00e9 dovrei ritirare il consenso, quando posso richiedere la cancellazione dei miei dati personali?",
-                "answer": "Il ritiro del consenso \u00e8 pi\u00f9 rigorosa della richiesta di cancellazione dei dati personali. Le richieste di cancellazione non impediscono la futura raccolta dei vostri dati personali. Quando si ritira il consenso, i responsabili del trattamento (noi) devono cancellare i dati personali oggetto del consenso ritirato e (!) non devono raccogliere i dati personali dopo la cancellazione. ",
+                "answer": "Il ritiro del consenso è più rigorosa della richiesta di cancellazione dei dati personali.\n \n La richiesta di cancellazione non impedisce la futura raccolta dei dati personali. \n \n Quando l'utente ritira il consenso, i responsabili devono interrompere il trattamento dei suoi dati e cancellare i suoi dati personali per qualsiasi scopo per cui ha ritirato il consenso.",
                 "references": { }
             },
             "qna6": {
                 "question": "Cosa posso fare se ho dimenticato il mio consenso?",
-                "answer": "Secondo il articolo 7, paragrafo 1 RGPD, i responsabili del trattamento dei dati (noi) devono dimostrare di aver raccolto il consenso dell'utente.",
+                "answer": "Secondo il articolo 7, paragrafo 1 RGPD, i responsabili devono dimostrare di aver raccolto il consenso dell'utente e anche i dettagli di tale consenso.",
                 "references": {
                     "ref1": "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX%3A32016R0679"
                 }
             },
             "qna7": {
                 "question": "Il consenso scade?",
-                "answer": "No, il consenso non scade. Tuttavia, i responsabili del trattamento dei dati (noi) devono raccogliere nuovamente il consenso se vogliono trattare i vostri dati personali per nuovi scopi.",
+                "answer": "No, il consenso non scade. \n \n Tuttavia, i responsabili del trattamento devono raccogliere nuovamente il consenso se vogliono trattare i vostri dati personali per nuovi scopi.",
                 "references": { }
             }
         }
@@ -103,7 +103,7 @@
         "qnas": {
             "qna1": {
                 "question": "Che cos'\u00e8 una finalità?",
-                "answer": "Secondo il articolo 5, paragrafo 1, lettera b) RGPD, i responsabili del trattamento dei dati devono indicare chiaramente per quale finalità raccolgono i vostri dati personali. Ad esempio, \u00e8 illegale raccogliere i vostri dati personali per la finalità specifico di raccomandazioni lavorative personalizzate e successivamente utilizzarli per scopi di marketing.",
+                "answer": "Secondo il articolo 5, paragrafo 1, lettera b) RGPD, i responsabili devono chiarire all'utente per quali scopi specifici raccolgono ed elaborano i suoi dati personali. \n \n È ad esempio illegale, ai sensi del RGPD, raccogliere i vostri dati personali per lo scopo specifico di raccomandazioni lavorative personalizzate e successivamente utilizzarli per scopi di marketing.",
                 "references": {
                     "ref1": "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX%3A32016R0679"
                 }

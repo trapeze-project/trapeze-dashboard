@@ -3,24 +3,24 @@
     "qnas": {
         "qna1": {
             "question": "What can I do on the TRAPEZE privacy dashboard?",
-            "answer": "The TRAPEZE privacy dashboard is a piece of software that data controllers like us (${we}) can use to make clear to you how and for what we process your personal data. \n \n On the TRAPEZE privacy dashboard, you can see our active privacy policy and when we collected consent from you. Specifically, you can see how we process your data and what for. You can limit our processing of your data by withdrawing consent, or broaden the scope of our processing giving us consent to improve the service we provide to you.\n \n You have further questions about us processing your data? Please do not hesitate to contact us through the Contact Button in the banner on the right-hand side. ",
+            "answer": "After you select a controller, you can browse through the data they processe on you and for what purposes. \n \n You can limit their processing of your data by withdrawing your consent. You can withdraw consent by moving the sliders in the Data or Purposes menu to the left and then submitting your changes. \n \n You can also automatically withdraw all your consent by clicking on the Withdraw all Consent-Button. \n \n You can also broaden the scope of their processing by giving them consent by moving sliders to the right. \n \n If you have specific questions, you can contact their Data Protection Officer (DPO) through the Contact-Button in the controller information.\n\n On desktop: See the banner on the right-hand side.\n\n On mobile: Click on the controller icon on the upper right OR on the Controller tab in the menu in the upper left.",
             "references": {                }
         },
         "qna2": {
             "question": "Who is responsible for the information on the TRAPEZE privacy dashboard?",
-            "answer": "If you see our (${we}) company information in the banner on the right-hand side, the information shown in the TRAPEZE privacy dashboard is povided by us. In later versions of the dashboard, you will be able to change between distinct data controllers like us.",
+            "answer": "The information presented in the TRAPEZE privacy dashboard is provided by the controller you selected. \n\n  On desktop: See the banner on the right-hand side.\n\n  On mobile: Click on the controller icon on the upper right OR on the Controller tab in the menu in the upper left.",
             "references": {
             }
         },
         "qna3": {
-            "question": "Why do you (${we}) use the TRAPEZE privacy dashboard?",
-            "answer": "We (${we}) use the TRAPEZE privacy dashboard to allow you to better understand what we do with your data. Through the TRAPEZE privacy dashboard, we can learn whether you generally like that we process your data or, perhaps, only for specific purposes. \n \n We aim to align our current processing of your data to how you actually like your data to be processed.",
+            "question": "Why do controllers use the TRAPEZE privacy dashboard?",
+            "answer": "The TRAPEZE privacy dashboard is a piece of software that controllers can use to make clear to you how and for what purposes they process your personal data. \n \n Controllers are obliged by the General Data Protection Regulation (GDPR) to make their processing of personal data transparent.\n \n The TRAPEZE privacy dashboard is an easy-to-use tool that controllers can use for free.",
             "references": {
             }
         },
         "qna4": {
             "question": "Who has developed the TRAPEZE privacy dashboard?",
-            "answer": "TRAPEZE is a research project funded by the European Union. TRAPEZE is an acronym for \"TRAnsparency, Privacy and security for European citiZEns\". \n \n TRAPEZE is part of the European Union's Horizon2020 funding programme. The 3-year project was conducted between September 2020 and August 2023. The TRAPEZE project consortium consists of the following 13 partners: (1.) TenForce BVBA, (2.)GEIE ERCIM, (3.)Technische Universität Berlin, (4.) VLAAMSE GEWEST, (5.) Deutsche Telekom AG, (6.) CaixaBank SA, (7.) Consorzio Interuniversitario Nazionale Per L'Informatica, (8.) Unabhängiges Landeszentrum für Datenschutz, (9.) Kaspersky Lab Italia SRL, (10.) Institut Mihajlo Pupin, (11.) IPSOS NV, (12.) Athens Technology Center Anonymi Biomichaniki Emporiki Kai Techniki Etaireia Efarmogon Ypsilis Technologias, (13.) E-Seniors: Initiation des Séniors Aux NTIC Association.",
+            "answer": "TRAPEZE is a research project funded by the European Union. \n \nTRAPEZE is an acronym for \"TRAnsparency, Privacy and security for European citiZEns\". \n \n TRAPEZE is part of the European Union's Horizon2020 funding programme. \n \n The 3-year project was conducted between September 2020 and August 2023. \n \n The TRAPEZE project consortium consists of the following 13 partners:\n \n  (1.) TenForce BVBA, \n (2.) GEIE ERCIM,\n  (3.) Technische Universität Berlin,\n  (4.) VLAAMSE GEWEST,\n  (5.) Deutsche Telekom AG,\n  (6.) CaixaBank SA,\n  (7.) Consorzio Interuniversitario Nazionale Per L'Informatica,\n  (8.) Unabhängiges Landeszentrum für Datenschutz,\n  (9.) Kaspersky Lab Italia SRL,\n  (10.) Institut Mihajlo Pupin,\n  (11.) IPSOS NV,\n  (12.) Athens Technology Center Anonymi Biomichaniki Emporiki Kai Techniki Etaireia Efarmogon Ypsilis Technologias,\n  (13.) E-Seniors: Initiation des Séniors Aux NTIC Association.",
             "references": { 
                 "ref1": "http://trapeze-project.eu/",
                 "ref2": "https://ec.europa.eu/info/research-and-innovation/funding/funding-opportunities/funding-programmes-and-open-calls/horizon-2020_en",
@@ -45,41 +45,41 @@
     "qnas": {
       "qna1":{
         "question": "What is consent?",
-        "answer": "According to Article 4, point (11) GDPR, consent is a clear affirmative action towards a data controller (us) to process your personal data. Note that data controllers (we) always have to collect consent from you to process your personal data. For example, a delivery service needs to process your address to comply with their delivery order. They do not need to collect consent.",
+        "answer": "According to Article 4, point (11) GDPR, consent is a clear affirmative action towards a controller to process your personal data. \n \n  Note that controllers NOT always have to collect consent from you to process your personal data. \n \n For example, a delivery service needs to process your address to comply with their delivery order. They do not need to collect consent.",
         "references": {
         "ref1":"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32016R0679"
         }
       },
       "qna2":{
         "question": "Can children give consent?",
-        "answer": "16-year-old children and older may give consent. However, data controllers (we) need to make a reasonable effort to verify that this consent is either given or authorised by the holder of parental responsibility over the child. Member states may lower the 16 year threshold, yet not below 13 years.",
+        "answer": "16-year-old children and older may give consent. \n \n However, controllers need to make a reasonable effort to verify that this consent is either given or authorised by the holder of parental responsibility over the child. \n \n  EU member states may lower the 16 year threshold, yet not below 13 years.",
         "references": { }
       },
       "qna3":{
         "question": "Can I withdraw my consent?",
-        "answer": "According to Article 7, third paragraph GDPR, you can withdraw consent at any time. Withdrawing consent does not require a specific form. You can for instance withdraw consent by writing a letter or an email, or by calling us.",
+        "answer": "According to Article 7, third paragraph GDPR, you can withdraw consent at any time. \n \n Withdrawing consent does not require a specific form. \n \n You can for instance withdraw consent by writing a letter or an email to or by calling a controller.",
         "references": {
           "ref1":"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32016R0679"
           }
       },
       "qna4":{
-        "question": "Do data controllers delete my personal data when I withdraw my consent?",
-        "answer": "As soon as you withdraw your consent, data controllers (we) must stop processing of and delete your personal data for any purposes you withdraw consent for.",
+        "question": "Do controllers delete my personal data when I withdraw my consent?",
+        "answer": "As soon as you withdraw your consent, controllers must stop the processing of your data and delete your personal data for any purposes you withdrew consent for.",
         "references": { }
          },
       "qna5":{
         "question": "Why should I withdraw consent, when I can request deletion of my personal data?",
-        "answer": "Withdrawing consent is more rigorous than requesting the deletion of your personal data. Requests for deletion do not prevent future collection of your personal data. When you withdraw consent, data controllers (we) must delete the personal data that are subject to the withdrawn consent and (!) must not collect personal data after deletion. ",
+        "answer": "Withdrawing consent is more rigorous than requesting the deletion of your personal data.\n \n Requests for deletion do not prevent future collection of your personal data. \n \n When you withdraw consent, controllers must stop the processing of your data and delete your personal data for any purposes you withdrew consent for.",
         "references": { }
          },
       "qna6":{
         "question": "What can I do if I forgot what I consented to?",
-        "answer": "According to Article 7, first paragraph GDPR, data controllers (we) need to demonstrate that they collected consent from you.",
+        "answer": "According to Article 7, first paragraph GDPR, controllers need to demonstrate that they collected consent from you and also the details of that consent.",
         "references": { }
           },
       "qna7":{
         "question": "Does consent expire?",
-        "answer": "No, consent does not expire. However, data controllers (we) must collect consent again if they want to process your personal data for new purposes.",
+        "answer": "No, consent does not expire. \n \n However, controllers must collect consent again if they want to process your personal data for new purposes.",
         "references": { }
       }
     }
@@ -99,7 +99,7 @@
     "qnas": {
       "qna1":{
         "question": "What is a purpose?",
-        "answer": "According to Article 5, first paragraph, point (b) GDPR, data controllers must make clear to you for what they collect your personal data. It is for instance illegal to collect your personal data for the specified purpose of personalized job recommendations and afterwards use it for marketing purposes.",
+        "answer": "According to Article 5, first paragraph, point (b) GDPR, controllers must make clear to you for what purposes specifically they collect and process your personal data. \n \n It is for instance illegal, under the GDPR, to collect your personal data for the specified purpose of personalized job recommendations and afterwards use it for marketing purposes.",
         "references": {
           "ref1":"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32016R0679"
         }
