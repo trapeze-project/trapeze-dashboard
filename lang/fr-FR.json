@@ -166,11 +166,11 @@
     "help": "Aide",
     "explain-card": {
       "data": {
-        "title": "Data",
+        "title": "Données",
         "content": "See which of your data is processed."
       },
       "purpose": {
-        "title": "Purposes",
+        "title": "Fins",
         "content": "See for which purposes your data is processed."
       },
       "trapeze": {
@@ -178,7 +178,7 @@
         "content": "Learn more about the TRAPEZE project of the European Union."
       },
       "glossary": {
-        "title": "Glossary",
+        "title": "Glossaire",
         "content": "See the Glossary"
       },
       "faq": {
@@ -320,6 +320,6 @@
     "comfort": "Dans quelle mesure êtes-vous à l'aise avec le fait que nous utilisions ce type de données aux fins suivantes ?"
   },
   "glossary": {
-    "desc": "Browse through consent-related terms."
+    "desc": "Vous trouverez dans le glossaire une collection de termes et de définitions liés au consentement."
   }
 }

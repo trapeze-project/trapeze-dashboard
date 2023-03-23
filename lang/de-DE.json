@@ -166,11 +166,11 @@
     "help": "Einwilligungsassistent",
     "explain-card": {
       "data": {
-        "title": "Data",
+        "title": "Daten",
         "content": "See which of your data is processed."
       },
       "purpose": {
-        "title": "Purposes",
+        "title": "Zwecke",
         "content": "See for which purposes your data is processed."
       },
       "trapeze": {
@@ -178,7 +178,7 @@
         "content": "Learn more about the TRAPEZE project of the European Union."
       },
       "glossary": {
-        "title": "Glossary",
+        "title": "Glossar",
         "content": "See the Glossary"
       },
       "faq": {
@@ -320,6 +320,6 @@
     "comfort": "Wie zufrieden sind Sie damit, dass wir diese Art von Daten für die folgenden Zwecke verwenden?"
   },
   "glossary": {
-    "desc": "Browse through consent-related terms."
+    "desc": "Im Glossar finden Sie eine Sammlung einwilligungsbezogener Begriffe und Definitionen."
   }
 }

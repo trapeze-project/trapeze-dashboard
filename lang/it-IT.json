@@ -130,7 +130,7 @@
     }
   },
   "placeholder": {
-    "search-for-a-question-or-an-answer": "Cerca una domanda o una risposta",
+    "search-for-a-question-or-an-answer": "Ricerca una domanda o una risposta",
     "search-for-data": "Ricerca di una categoria di dati",
     "search-for-purpose": "Ricerca di uno scopo",
     "search-for-controller": "Ricerca di un titolare del trattamento"
@@ -166,11 +166,11 @@
     "help": "Aiuto",
     "explain-card": {
       "data": {
-        "title": "Data",
+        "title": "Dati",
         "content": "See which of your data is processed."
       },
       "purpose": {
-        "title": "Purposes",
+        "title": "Scopi",
         "content": "See for which purposes your data is processed."
       },
       "trapeze": {
@@ -178,7 +178,7 @@
         "content": "Learn more about the TRAPEZE project of the European Union."
       },
       "glossary": {
-        "title": "Glossary",
+        "title": "Glossario",
         "content": "See the Glossary"
       },
       "faq": {
@@ -320,6 +320,6 @@
     "comfort": "Quanto è soddisfatto del fatto che utilizziamo questo tipo di dati per i seguenti scopi?"
   },
   "glossary": {
-    "desc": "Browse through consent-related terms."
+    "desc": "Nel glossario troverete una raccolta di termini e definizioni relativi al consenso."
   }
 }
