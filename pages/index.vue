@@ -1,4 +1,5 @@
 <template>
+  <div class="bg">
   <v-container>
     <v-row>
       <v-col align="center">
@@ -80,10 +81,14 @@
         class="mt-3 mb-5"
       >
         <v-img src="/img/eu-logo.png" width="48" class="mb-5" />
-        <small>The TRAPEZE project receives funding from the European Union's Horizon 2020 research and innovation programme under grant agreement No. 883464. Copyright © 2023</small>
+        <small>
+          The TRAPEZE project receives funding from the European Union's Horizon 2020 research and innovation programme under grant agreement No. 883464. <br />
+          Copyright © 2023
+        </small>
       </v-col>
     </v-row>
   </v-container>
+  </div>
 </template>
 
 <script>
@@ -117,3 +122,13 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.bg { 
+  background-image: url("/img/bg.jpg");
+  background-size: cover;
+  width: 100%;
+  height: 100%; 
+  box-sizing: border-box;
+}
+</style>
