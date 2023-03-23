@@ -19,10 +19,7 @@
         <PExplainCard
           class="fill-height"
           :controller="controller"
-          :title="$t(item.title)"
-          :content="$t(item.content)"
-          :filename="item.filename"
-          :href="item.to"
+          :item="item"
         />
       </v-col>
     </v-row>
@@ -41,42 +38,29 @@ export default {
       items: [
         {
           "title": "home.explain-card.data.title",
-          "filename": "/img/home-icon-data.svg",
-          "link": "/consent?tab=data",
+          "image": "/img/home-icon-data.svg",
           "content": "home.explain-card.data.content",
-          "to": this.localePath(
-            "/" + this.controller["@id"] + "/data"
-          )
+          "to": `/${this.$i18n.locale}/${this.controller["@id"]}/consent?tab=data`
         }, {
           "title": "home.explain-card.purpose.title",
-          "filename": "/img/home-icon-purpose.svg",
-          "link": "/consent?tab=purpose",
+          "image": "/img/home-icon-purpose.svg",
           "content": "home.explain-card.purpose.title",
-          "to": this.localePath(
-            "/" + this.controller["@id"] + "/purpose"
-          )
+          "to": `/${this.$i18n.locale}/${this.controller["@id"]}/consent?tab=purpose`
         }, {
           "title": "home.explain-card.trapeze.title",
-          "filename": "/img/home-icon-trapeze.svg",
-          "link": "http://trapeze-project.eu",
+          "image": "/img/home-icon-trapeze.svg",
           "content": "home.explain-card.trapeze.title",
           "to": "https://trapeze-project.eu/"
         }, {
           "title": "home.explain-card.glossary.title",
-          "filename": "/img/home-icon-glossary.svg",
-          "link": "/glossary",
+          "image": "/img/home-icon-glossary.svg",
           "content": "home.explain-card.glossary.title",
-          "to": this.localePath(
-            "/glossary"
-          )
+          "to": `/${this.$i18n.locale}/glossary`
         }, {
           "title": "home.explain-card.faq.title",
-          "filename": "/img/home-icon-faq.svg",
-          "link": "/faq",
+          "image": "/img/home-icon-faq.svg",
           "content": "home.explain-card.faq.title",
-          "to": this.localePath(
-            "/" + this.controller["@id"] + "/faq"
-          )
+          "to": `/${this.$i18n.locale}/${this.controller["@id"]}/faq`
         }
       ],
     };

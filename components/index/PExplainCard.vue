@@ -2,7 +2,7 @@
   <v-card class="d-flex flex-column rounded-xl">
 
     <v-card class="rounded-circle mx-6 my-3">
-      <v-img :src="filename" />
+      <v-img :src="item.image" />
     </v-card>
 
     <v-spacer />
@@ -10,8 +10,21 @@
     <v-card-actions>
       <v-spacer />
 
-      <v-btn :to="href" class="rounded-pill px-5">
-        {{ this.title }}
+      <v-btn 
+        v-if="item.to.startsWith('http')"
+        :href="item.to"
+        target="_blank"
+        class="rounded-pill px-5"
+      >
+        {{ $t(item.title) }}
+      </v-btn>
+
+      <v-btn
+        v-else 
+        :to="item.to"
+        class="rounded-pill px-5"
+      >
+        {{ $t(item.title) }}
       </v-btn>
 
       <v-spacer />
@@ -25,26 +38,12 @@ export default {
   props: {
     controller: {
       type: Object,
-      default: () => { }
-    },
-    title: {
-      type: String,
-      required: true,
-      default: ""
-    },
-    content: {
-      type: String,
-      required: true,
-      default: ""
-    },
-    filename: {
-      type: String,
       required: true
     },
-    href: {
-      type: String,
+    item: {
+      type: Object,
       required: true
-    }
+    },
   },
   data() {
     return {
