@@ -8,7 +8,7 @@
     "faxNumber": "( 39 ) 42 68 53 01",
     "email": "info@clover-it.com",
     "url": "https://clover-it.com",
-    "logo": "/img/cloverLogo.png",
+    "logo": "/img/mocked-controller/clover.png",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": " Viale dei fiori, Italy",
@@ -37,7 +37,7 @@
     "faxNumber": "( 49 ) 30 56 35 34",
     "email": "info@alex-it.com",
     "url": "https://alex-it.com",
-    "logo": "/img/alexLogo.png",
+    "logo": "/img/mocked-controller/alex.png",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": " Berlin, Germany",

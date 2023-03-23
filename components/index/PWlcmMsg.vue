@@ -1,12 +1,15 @@
 <template>
   <v-card class="rounded-xl">
+
     <v-card-title>
       {{ $t("home.title") }}
     </v-card-title>
+
     <v-card-text>
-      <p style="white-space: pre-line" class="preLineText">
+      <p>
         {{ $t("home.welcome-msg1").interpolate(paramsForInterpolation) }} <span class="clickable" @click="showMore = !showMore" v-show="!showMore" style="color:blue ;text-decoration: underline;">(show details)</span>
       </p>
+
       <v-expand-transition >
         <div v-show="showMore">
             <!--
@@ -44,7 +47,6 @@
         </div>
       </v-expand-transition>
     </v-card-text>
-
 
   </v-card>
 </template>
