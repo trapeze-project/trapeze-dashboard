@@ -1,10 +1,34 @@
 [
 	{
-		"subject":"it-1I just listened to your podcast",
-		"body":"it-1Lorem Ipsum\nis simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+		"subject":"Diritto di richiedere l'accesso ai dati personali",
+		"body":"Richiesta di l'accesso ai dati personali\n\n Sulla base dell'articolo 13, paragrafo 2, punto b) RGPD, chiedo gentilmente di poter accedere ai miei dati personali attraverso l'indirizzo e-mail sopra dichiarato."
 	},
 	{
-		"subject":"it-2I just listened to your podcast",
-		"body":"it-2Lorem Ipsum\nis simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+		"subject":"Diritto di richiedere la rettifica dei dati personali",
+		"body":"Richiesta di la rettifica dei dati personali\n\n Sulla base dell'articolo 13, paragrafo 2, punto b) RGPD, chiedo gentilmente la rettifica dei miei dati. \n \n Dati da rettificare: <dichiarare i dati da rettificare; si possono ad esempio dichiarare categorie di dati, dati specifici come un proprio indirizzo e-mail, o semplicemente dichiarare tutti i propri dati da rettificare> <dichiarare dove ci si è accorti che i propri dati necessitavano di rettifica, ad esempio se venivano visualizzati erroneamente in un'app o su un sito web> \n \n Dati rettificati: <dichiarare come i dati sopra dichiarati possono essere rettificati>."
+	},
+	{
+		"subject":"Diritto di richiedere la cancellazione dei dati personali",
+		"body":"Richiesta di la cancellazione dei dati personali\n\n Sulla base dell'articolo 13, paragrafo 2, punto b) RGPD, chiedo gentilmente la cancellazione dei miei dati. \n \n Dati da cancellare: <dichiarare i dati da cancellare; potete ad esempio dichiarare categorie di dati, dati specifici come un vostro indirizzo e-mail, o semplicemente dichiarare che tutti i vostri dati devono essere cancellati >."
+	},
+	{
+		"subject":"Diritto di richiedere la limitazione del trattamento",
+		"body":"Richiesta di la limitazione del trattamento\n\n Sulla base dell'articolo 13, paragrafo 2, punto b) RGPD, chiedo gentilmente di limitare il trattamento dei miei dati nel modo descritto di seguito.\n \n Restrizione: <descrivere come si desidera limitare il trattamento dei dati>."
+	},
+	{
+		"subject":"Diritto di opporsi al trattamento",
+		"body":"Opposizione al trattamento\n\n Sulla base dell'articolo 13, paragrafo 2, punto b) RGPD, mi oppongo al trattamento dei miei dati per i seguenti motivi.\n \n Motivi dell'opposizione al trattamento: <descrivere i motivi per cui ci si oppone al trattamento dei dati>."
+	},
+	{
+		"subject":"Diritto alla portabilità dei dati",
+		"body":"Richiesta di porting di dati\n\n Sulla base dell'articolo 13, paragrafo 2, punto b) RGPD, vi chiedo gentilmente di trasferire i miei dati personali, come descritto di seguito, ai titolari del trattamento descritti di seguito.\n \n Dati da trasferire: <dichiarare i dati che si desidera siano trasferiti a un altro titolare del trattamento (destinatario); è possibile, ad esempio, dichiarare categorie di dati, dati specifici come un determinato indirizzo e-mail, o semplicemente dichiarare che tutti i dati devono essere rettificati>\n \n Destinatari: <dichiarare i responsabili del trattamento a cui si desidera trasferire i dati personali sopra dichiarati; indicare il nome, l'indirizzo e il contatto del titolorae del trattamento (se disponibile)>."
+	},
+	{
+		"subject":"Diritto di ritirare il consenso in qualsiasi momento",
+		"body":"Ritiro del consenso\n\n Sulla base dell'articolo 13, paragrafo 2, punto c) RGPD, desidero ritirare immediatamente tutti i consensi che vi ho dato in precedenza."
+	},
+	{
+		"subject":"Altro",
+		"body":"Altro\n \n Egregio responsabile della protezione dei dati,\n \n <compilare il messaggio> \n \n Cordiali saluti, \n \n <inserire il proprio nome>."
 	}
 ]

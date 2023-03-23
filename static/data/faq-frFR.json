@@ -46,7 +46,7 @@
         "qnas": {
             "qna1": {
                 "question": "Qu'est-ce que le consentement?",
-                "answer": "Selon l'article 4, point 11 RGPD, le consentement est une action affirmative claire à l'égard d'un responsable du traitement pour traiter vos données à caractère personnel. \n \n Notez que les responsables du traitement ne doivent PAS toujours obtenir votre consentement pour traiter vos données à caractère personnel. \n \n Par exemple, un service de livraison a besoin de connaître votre adresse pour se conformer à son ordre de livraison. Il n'a pas besoin de recueillir votre consentement.",
+                "answer": "Selon l'article 4, point 11) RGPD, le consentement est une action affirmative claire à l'égard d'un responsable du traitement pour traiter vos données à caractère personnel. \n \n Notez que les responsables du traitement ne doivent PAS toujours obtenir votre consentement pour traiter vos données à caractère personnel. \n \n Par exemple, un service de livraison a besoin de connaître votre adresse pour se conformer à son ordre de livraison. Il n'a pas besoin de recueillir votre consentement.",
                 "references": {
                     "ref1": "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX%3A32016R0679"
                 }
@@ -60,7 +60,7 @@
             },
             "qna3": {
                 "question": "Puis-je retirer mon consentement?",
-                "answer": "Selon l'article 7, troisième paragraphe RGPD, vous pouvez retirer votre consentement \u00e0 tout moment.\n \n Le retrait du consentement ne n\u00e9cessite pas de formulaire sp\u00e9cifique.\n \n Vous pouvez par exemple retirer le consentement en \u00e9crivant une lettre ou un courriel, ou en nous appelant.",
+                "answer": "Selon l'article 7, paragraphe 3 RGPD, vous pouvez retirer votre consentement \u00e0 tout moment.\n \n Le retrait du consentement ne n\u00e9cessite pas de formulaire sp\u00e9cifique.\n \n Vous pouvez par exemple retirer le consentement en \u00e9crivant une lettre ou un courriel, ou en nous appelant.",
                 "references": {
                     "ref1": "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX%3A32016R0679"
                 }
@@ -77,7 +77,7 @@
             },
             "qna6": {
                 "question": "Que puis-je faire si j'ai oubli\u00e9 ce \u00e0 quoi j'ai consenti?",
-                "answer": "Selon l'article 7, premier paragraphe RGPD, les responsables du traitement doivent démontrer qu'ils ont recueilli votre consentement et en préciser les détails.",
+                "answer": "Selon l'article 7, paragraphe 1 RGPD, les responsables du traitement doivent démontrer qu'ils ont recueilli votre consentement et en préciser les détails.",
                 "references": {
                     "ref1": "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX%3A32016R0679"
                 }
@@ -93,7 +93,7 @@
         "qnas": {
             "qna1": {
                 "question": "Qu'est-ce qu'une donn\u00e9e à caractère personnelle?",
-                "answer": "Selon l'article 4, point 4 RGPD, toute donn\u00e9e qui vous est attribuable est une donn\u00e9e à caractère personnelle.",
+                "answer": "Selon l'article 4, point 4) RGPD, toute donn\u00e9e qui vous est attribuable est une donn\u00e9e à caractère personnelle.",
                 "references": {
                     "ref1": "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX%3A32016R0679"
                 }
@@ -104,7 +104,7 @@
         "qnas": {
             "qna1": {
                 "question": "Qu'est-ce qu'un fin?",
-                "answer": "Selon l'article 5, premier paragraphe RGPD, point b), Les responsables doivent vous indiquer clairement à quelles fins précises ils collectent et traitent vos données à caractère personnel. \n \n Il est par exemple illégal, en vertu du RGPD, de collecter vos données à caractère personnel dans la fin précise de vous fournir des recommandations d'emploi personnalisées et de les utiliser ensuite à des fins de marketing.",
+                "answer": "Selon l'article 5, paragraphe 1 RGPD, point b), Les responsables doivent vous indiquer clairement à quelles fins précises ils collectent et traitent vos données à caractère personnel. \n \n Il est par exemple illégal, en vertu du RGPD, de collecter vos données à caractère personnel dans la fin précise de vous fournir des recommandations d'emploi personnalisées et de les utiliser ensuite à des fins de marketing.",
                 "references": {
                     "ref1": "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX%3A32016R0679"
                 }

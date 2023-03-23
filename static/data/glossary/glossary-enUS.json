@@ -89,7 +89,7 @@
     },
     "entry13":{
       "term":"Purpose",
-      "definition": "According to Article 5, first paragraph, point (b) GDPR, controllers must make clear to you for what they collect and process your personal data.\n \n After collection, personal data may not be used for any other purposes.\n \n It is for instance illegal, under the GDPR, to collect personal data for the purpose of personalized job recommendations and later on use it for the purpose of marketing.",
+      "definition": "According to Article 5, paragraph 1, point (b) GDPR, controllers must make clear to you for what they collect and process your personal data.\n \n After collection, personal data may not be used for any other purposes.\n \n It is for instance illegal, under the GDPR, to collect personal data for the purpose of personalized job recommendations and later on use it for the purpose of marketing.",
       "references": {
         "ref1":"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32016R0679"
       }

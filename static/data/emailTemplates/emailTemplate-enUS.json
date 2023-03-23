@@ -1,38 +1,34 @@
 [
 	{
-		"subject":" Right to Request Access to personal data",
-		"body":"en1-Lorem Ipsum\nis simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+		"subject":"Right to Request Access to Personal Data",
+		"body":"Request for Access to Personal Data\n\n On the basis of Article 13, paragraph 2, point (b) GDPR, I kindly request access to my personal data through my above declared email address."
 	},
 	{
-		"subject":"Right to Request Rectification of personal data",
-		"body":"en-2Lorem Ipsum\nis simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+		"subject":"Right to Request Rectification of Personal Data",
+		"body":"Request for Rectification of Personal Data\n\n On the basis of Article 13, paragraph 2, point (b) GDPR, I kindly request rectification of my data. \n \n Data to be recitified: <declare the data to be rectified; you can for instance declare data categories, specific data such as a specific email address of yours, or simply declare all your data to be rectified> <declare where you noticed that your data needed rectification, e.g. wrongly displayed in an app, or on a website> \n \n Rectified data: <declare how the above declared data can be rectified>"
 	},
 	{
-		"subject":"Right to Request Erasure of personal data",
-		"body":"en1-Lorem Ipsum\nis simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+		"subject":"Right to Request Erasure of Personal Data",
+		"body":"Request for Erasure of Personal Data\n\n On the basis of Article 13, paragraph 2, point (b) GDPR, I kindly request erasure of my data. \n \n Data to be erased: <declare the data to be erased; you can for instance declare data categories, specific data such as a specific email address of yours, or simply declare all your data to be erased >"
 	},
 	{
-		"subject":"Right to Request Restriction of processing",
-		"body":"en-2Lorem Ipsum\nis simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+		"subject":"Right to Request Restriction of Processing",
+		"body":"Request for Restriction of Processing\n\n On the basis of Article 13, paragraph 2, point (b) GDPR, I kindly request to restrict the processing of my data in the way described as follows.\n \n Restriction: <describe how you wish to have the processing of your data restricted>"
 	},
 	{
-		"subject":"Right to Request Objection to processing",
-		"body":"en1-Lorem Ipsum\nis simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+		"subject":"Right to Object to Processing",
+		"body":"Objection to Processing\n\n On the basis of Article 13, paragraph 2, point (b) GDPR, I object to the processing of my data due to the following reasons.\n \n Reasons for objection to processing: <describe the reasons for which you object to the processing of your data>"
 	},
 	{
-		"subject":" Right to Request Right to Data Portability",
-		"body":"en-2Lorem Ipsum\nis simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+		"subject":"Right to Data Portability",
+		"body":"Data Portability\n\n On the basis of Article 13, paragraph 2, point (b) GDPR, I kindly request you to port my personal data as described in the following to the data controllers described in the following.\n \n Data to be ported: <declare the data you with to have ported to another controller (recipient)you can for instance declare data categories, specific data such as a specific email address of yours, or simply declare all your data to be rectified>\n \n Recipients: <declare the controllers to whom you wish to port your personal data declared above; please indicate the controller's name, address and contact (if available)>"
 	},
 	{
-		"subject":" Right to Request Right to Withdraw Consent at any Time",
-		"body":"en1-Lorem Ipsum\nis simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
-	},
-	{
-		"subject":" Right to Request Right to Lodge a Complaint",
-		"body":"en-2Lorem Ipsum\nis simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+		"subject":"Right to Withdraw Consent at any Time",
+		"body":"Withdrawal of Consent\n\n On the basis of Article 13, paragraph 2, point (c) GDPR, I wish to immediately withdraw all my consent that I have previously given to you."
 	},
 	{
 		"subject":"Other",
-		"body":"en-2Lorem Ipsum\nis simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+		"body":"Other\n \n Dear Data Protection Officer,\n \n <fill in message> \n \n Yours faithfully,\n\n <insert your name>"
 	}
 ]

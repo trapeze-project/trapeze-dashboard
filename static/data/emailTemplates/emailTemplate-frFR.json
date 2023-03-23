@@ -1,10 +1,34 @@
 [
 	{
-		"subject":"fr-1I just listened to your podcast",
-		"body":"fr-1Lorem Ipsum\nis simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+		"subject":"Droit de demander l'accès aux données à caractère personnel",
+		"body":"Demande d''accès aux données à caractère personnel\n\n Sur la base de l'article 13, paragraphe 2, point b) RGPD, je demande l'accès à mes données personnelles par l'intermédiaire de l'adresse électronique déclarée ci-dessus."
 	},
 	{
-		"subject":"fr-2I just listened to your podcast",
-		"body":"fr-2Lorem Ipsum\nis simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+		"subject":"Droit de demander la rectification des données à caractère personnel",
+		"body":"Demande de la rectification des données à caractère personnel\n\n Sur la base de l'article 13, paragraphe 2, point b) RGPD, je demande la rectification de mes données. \n \n Données à rectifier : <déclarez les données à rectifier ; vous pouvez par exemple déclarer des catégories de données, des données spécifiques telles que votre adresse électronique, ou simplement déclarer que toutes vos données doivent être rectifiées> <déclarez où vous avez remarqué que vos données devaient être rectifiées, par exemple si elles étaient mal affichées dans une application ou sur un site web> \n \n Données rectifiées : <déclarez comment les données déclarées ci-dessus peuvent être rectifiées>"
+	},
+	{
+		"subject":"Droit de demander l'effacement des données à caractère personnel",
+		"body":"Demande de l'effacement des données à caractère personnel\n\n Sur la base de l'article 13, paragraphe 2, point b) RGPD, je demande l'effacement de mes données. \n \n Données à effacer : <déclarer les données à effacer ; vous pouvez par exemple déclarer des catégories de données, des données spécifiques telles que votre adresse électronique, ou simplement déclarer que toutes vos données doivent être effacées>."
+	},
+	{
+		"subject":"Droit de demander une limitation du traitement",
+		"body":"Demande d'une limitation du traitement\n\n Sur la base de l'article 13, paragraphe 2, point b) RGPD, je demande la limitation du traitement de mes données de la manière décrite ci-dessous.\n \n Restriction : <décrivez comment vous souhaitez que le traitement de vos données soit limité>"
+	},
+	{
+		"subject":"Droit de s'opposer au traitement",
+		"body":"Opposition au traitement\n\n Sur la base de l'article 13, paragraphe 2, point b) RGPD, je m'oppose au traitement de mes données pour les raisons suivantes : <décrivez les raisons pour lesquelles vous vous opposez au traitement de vos données>."
+	},
+	{
+		"subject":"Droit de la portabilité des données",
+		"body":"Demande de porter les données à caractère personnel\n\n Sur la base de l'article 13, paragraphe 2, point b) RGPD, je vous demande de bien vouloir transférer mes données à caractère personnel, telles qu'elles sont décrites ci-dessous, aux responsables du traitement décrits ci-dessous.\n \n Données à transférer : <Vous pouvez par exemple déclarer des catégories de données, des données spécifiques telles que votre adresse électronique, ou simplement déclarer que toutes vos données doivent être rectifiées> \n \n Destinataires: <déclarez les responsables du traitement auxquels vous souhaitez transférer vos données à caractère personnel déclarées ci-dessus ; veuillez indiquer le nom, l'adresse et le contact du responsable du traitement (s'ils sont disponibles)>"
+	},
+	{
+		"subject":"Droit de retirer son consentement à tout moment",
+		"body":"Retrait du consentement\n\n Sur la base de l'article 13, paragraphe 2, point c) RGPD, je souhaite retirer immédiatement tous les consentements que je vous ai donnés précédemment."
+	},
+	{
+		"subject":"Autre",
+		"body":"Autre\n \n Monsieur/Madame le/la délégué à la protection des données, <remplir le message> \n \n Je vous prie d'agréer, Monsieur le délégué à la protection des données, <insérer votre nom>, l'expression de mes salutations distinguées."
 	}
 ]

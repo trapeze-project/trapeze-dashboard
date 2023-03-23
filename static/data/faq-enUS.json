@@ -57,7 +57,7 @@
       },
       "qna3":{
         "question": "Can I withdraw my consent?",
-        "answer": "According to Article 7, third paragraph GDPR, you can withdraw consent at any time. \n \n Withdrawing consent does not require a specific form. \n \n You can for instance withdraw consent by writing a letter or an email to or by calling a controller.",
+        "answer": "According to Article 7, paragraph 3 GDPR, you can withdraw consent at any time. \n \n Withdrawing consent does not require a specific form. \n \n You can for instance withdraw consent by writing a letter or an email to or by calling a controller.",
         "references": {
           "ref1":"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32016R0679"
           }
@@ -74,7 +74,7 @@
          },
       "qna6":{
         "question": "What can I do if I forgot what I consented to?",
-        "answer": "According to Article 7, first paragraph GDPR, controllers need to demonstrate that they collected consent from you and also the details of that consent.",
+        "answer": "According to Article 7, paragraph 1 GDPR, controllers need to demonstrate that they collected consent from you and also the details of that consent.",
         "references": { }
           },
       "qna7":{
@@ -99,7 +99,7 @@
     "qnas": {
       "qna1":{
         "question": "What is a purpose?",
-        "answer": "According to Article 5, first paragraph, point (b) GDPR, controllers must make clear to you for what purposes specifically they collect and process your personal data. \n \n It is for instance illegal, under the GDPR, to collect your personal data for the specified purpose of personalized job recommendations and afterwards use it for marketing purposes.",
+        "answer": "According to Article 5, paragraph 1, point (b) GDPR, controllers must make clear to you for what purposes specifically they collect and process your personal data. \n \n It is for instance illegal, under the GDPR, to collect your personal data for the specified purpose of personalized job recommendations and afterwards use it for marketing purposes.",
         "references": {
           "ref1":"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32016R0679"
         }

@@ -1,10 +1,34 @@
 [
 	{
-		"subject":"de-1I just listened to your podcast",
-		"body":"de-1Lorem Ipsum\nis simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+		"subject":"Recht auf Auskunft über die betreffenden personenbezogene Daten",
+		"body":"Antrag auf Auskunft über die betreffenden personenbezogene Daten\n\n Auf der Grundlage des Artikels 13, Absatz 2, Buchstabe b) DSGVO, bitte ich um Zugang zu meinen persönlichen Daten über meine oben angegebene E-Mail-Adresse."
 	},
 	{
-		"subject":"de-2I just listened to your podcast",
-		"body":"de-2Lorem Ipsum\nis simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+		"subject":"Recht auf Berichtigung der betreffenden personenbezogenen Daten",
+		"body":"Antrag auf Berichtigung der betreffenden personenbezogenen Daten\n\n Auf der Grundlage des Artikels 13, Absatz 2, Buchstabe b) DSGVO, bitte ich um die Berichtigung meiner Daten. \n \n Zu berichtigende Daten: <Erklären Sie die zu berichtigenden Daten; Sie können z.B. Datenkategorien, bestimmte Daten wie eine bestimmte E-Mail-Adresse von Ihnen oder einfach alle Ihre Daten als zu berichtigen erklären> <Erklären Sie, wo Ihnen aufgefallen ist, dass Ihre Daten berichtigt werden müssen, z.B. weil sie in einer App oder auf einer Website falsch angezeigt werden> \n \n Berichtigte Daten: <Erklären Sie, wie die oben angegebenen Daten berichtigt werden können>"
+	},
+	{
+		"subject":"Recht auf Löschung der betreffenden personenbezogenen Daten",
+		"body":"Antrag auf Löschung der betreffenden personenbezogenen Daten\n\n Auf der Grundlage des Artikels 13, Absatz 2, Buchstabe b) DSGVO, bitte ich um die Löschung meiner Daten. \n \n Zu löschende Daten: <Erklären Sie die zu löschenden Daten; Sie können z.B. Datenkategorien, bestimmte Daten wie eine bestimmte E-Mail-Adresse von Ihnen oder einfach alle Ihre Daten als zu löschen erklären >"
+	},
+	{
+		"subject":"Recht auf Einschränkung der Verarbeitung",
+		"body":"Antrag auf Einschränkung der Verarbeitung\n\n Auf der Grundlage des Artikels 13, Absatz 2, Buchstabe b) DSGVO, bitte ich darum, die Verarbeitung meiner Daten in der nachfolgend beschriebenen Weise einzuschränken.\n \n Einschränkung: <Beschreiben Sie, wie Sie die Verarbeitung Ihrer Daten eingeschränkt haben möchten>"
+	},
+	{
+		"subject":"Widerspruchsrecht gegen die Verarbeitung",
+		"body":"Widerspruch gegen die Verarbeitung\n\n Auf der Grundlage des Artikels 13, Absatz 2, Buchstabe b) DSGVO, widerspreche ich der Verarbeitung meiner Daten aus den folgenden Gründen.\n \n Gründe für den Widerspruch gegen die Verarbeitung: <Beschreiben Sie die Gründe, aus denen Sie der Verarbeitung Ihrer Daten widersprechen>"
+	},
+	{
+		"subject":"Recht auf Datenübertragbarkeit",
+		"body":"Antrag auf Datenübertragung\n\n Auf der Grundlage des Artikels 13, Absatz 2, Buchstabe b) DSGVO, bitte ich Sie, meine im Folgenden beschriebenen personenbezogenen Daten an die im Folgenden beschriebenen für die Datenverarbeitung Verantwortlichen zu portieren.\n \n Zu portierende Daten: <Melden Sie die Daten an, die Sie an einen anderen für die Verarbeitung Verantwortlichen (Empfänger) übertragen lassen möchten.\n Sie können beispielsweise Datenkategorien, bestimmte Daten wie eine bestimmte E-Mail-Adresse von Ihnen oder einfach alle Ihre Daten zur Berichtigung angeben>\n \n Empfänger: <Melden Sie die für die Verarbeitung Verantwortlichen, an die Sie Ihre oben gemeldeten personenbezogenen Daten übermitteln möchten; geben Sie bitte den Namen, die Anschrift und die Kontaktperson des für die Verarbeitung Verantwortlichen an (falls vorhanden)>"
+	},
+	{
+		"subject":"Recht die Einwilligung jederzeit zu widerrufen",
+		"body":"Widerrufung der Einwilligung\n\n Auf der Grundlage des Artikels 13, Absatz 2, Buchstabe c) DSGVO, möchte ich meine Zustimmung, die ich Ihnen zuvor gegeben habe, unverzüglich widerrufen."
+	},
+	{
+		"subject":"Sonstiges Anliegen",
+		"body":"Sonstiges Anliegen\n \n Sehr geehrter Datenschutzbeauftragter,\n \n <Nachricht einfügen> \n \n Mit freundlichen Grüßen,\n\n <Namen einfügen>"
 	}
 ]

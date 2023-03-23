@@ -16,7 +16,7 @@
       },
       "qna3": {
           "term": "Verantwortlicher",
-          "definition": "Gem\u00e4\u00df Artikel 4, Absatz 7 DSGVO, sind Verantwortliche für die Verarbeitung Ihrer personenbezogener Daten verantwortlich.\n \n Sie müssen Ihnen deutlich machen, wie und für welche Zwecke sie Ihre personenbezogenen Daten verarbeiten.",
+          "definition": "Gem\u00e4\u00df Artikel 4, Nummer 7 DSGVO, sind Verantwortliche für die Verarbeitung Ihrer personenbezogener Daten verantwortlich.\n \n Sie müssen Ihnen deutlich machen, wie und für welche Zwecke sie Ihre personenbezogenen Daten verarbeiten.",
           "references": {
               "ref1": "https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX%3A32016R0679"
           }
@@ -86,7 +86,7 @@
       },
       "qna13": {
           "term": "Zweck",
-          "definition": "Gem\u00e4\u00df Artikel 5, Absatz 1, Buchstabe b DSGVO, müssen die Verantwortlichen Ihnen gegenüber deutlich machen, wozu sie Ihre personenbezogenen Daten erheben und verarbeiten. \n \n Nach ihrer Erhebung dürfen personenbezogene Daten nicht für andere Zwecke verwendet werden. \n \n Nach der DSGVO ist es beispielsweise illegal, personenbezogene Daten für personalisierte Arbeitsempfehlungen zu erheben und sie später für Marketingzwecke zu verwenden.",
+          "definition": "Gem\u00e4\u00df Artikel 5, Nummer 1, Buchstabe b DSGVO, müssen die Verantwortlichen Ihnen gegenüber deutlich machen, wozu sie Ihre personenbezogenen Daten erheben und verarbeiten. \n \n Nach ihrer Erhebung dürfen personenbezogene Daten nicht für andere Zwecke verwendet werden. \n \n Nach der DSGVO ist es beispielsweise illegal, personenbezogene Daten für personalisierte Arbeitsempfehlungen zu erheben und sie später für Marketingzwecke zu verwenden.",
           "references": {
               "ref1": "https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX%3A32016R0679"
           }
