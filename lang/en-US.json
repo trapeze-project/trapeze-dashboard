@@ -119,7 +119,9 @@
       "withdraw-all-consent": "Withdraw all consent",
       "discard-changes": "Discard changes",
       "load-more": "Load more",
-      "select": "Select"
+      "select": "Select",
+      "show-details": "Show details",
+      "hide-details": "Hide details"
     }
   },
   "snackbar": {
@@ -133,7 +135,10 @@
     "search-for-a-question-or-an-answer": "Search for a question or an answer",
     "search-for-data": "Search for a data category",
     "search-for-purpose": "Search for a purpose",
-    "search-for-controller": "Search for a controller"
+    "search-for-controller": "Search for a controller",
+    "search-for-glossary": "Search for terms in the glossary",
+    "email-me-back": "Enter your email for a response",
+    "choose-subject": "Choose a subject"
   },
   "updates": {
     "1": "Policy Update",
@@ -311,8 +316,10 @@
     "not-comfortable": "Not comfortable"
   },
   "contact": {
-    "new-message-to": "New Message to",
-    "recipient": "Recipient",
+    "heading": "Contact form",
+    "to": "To",
+    "from": "From",
+    "subject": "Subject",
     "message": "Message"
   },
   "help": {

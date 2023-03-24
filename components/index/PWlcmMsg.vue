@@ -6,17 +6,25 @@
     </v-card-title>
 
     <v-card-text>
-      <p>
-        {{ $t("home.welcome-msg1").interpolate(paramsForInterpolation) }} <span class="clickable" @click="showMore = !showMore" v-show="!showMore" style="color:blue ;text-decoration: underline;">(show details)</span>
+      <p class="mb-0">
+        {{ $t("home.welcome-msg1").interpolate(paramsForInterpolation) }} 
+        <span 
+          class="clickable"
+          @click="showMore = !showMore" 
+          v-show="!showMore"
+        >
+            <v-sheet 
+              class="pa-1 pr-3 d-inline rounded-pill"
+              outlined
+            >
+              <v-icon>mdi-chevron-down</v-icon>
+              {{ $t("btn.labels.show-details") }}
+            </v-sheet>
+          </span>
       </p>
 
       <v-expand-transition >
         <div v-show="showMore">
-            <!--
-            <p style="white-space: pre-line" class="preLineText">
-              {{ $t("home.welcome-msg2").interpolate(paramsForInterpolation) }}
-            </p>
-            -->
             <ul>
               <li
                 v-for="(item, idx) in Object.values($t('home.purpose'))"
@@ -25,25 +33,21 @@
                 {{ item.name }}
               </li>
             </ul>
-            <p>
-              <span class="clickable" @click="showMore = !showMore" v-show="showMore" style="color:blue ;text-decoration: underline;">(hide details)</span>
+            <p class="mt-3 mb-0">
+              <span 
+                class="clickable" 
+                @click="showMore = !showMore" 
+                v-show="showMore" 
+              >
+              <v-sheet 
+                class="pa-1 pr-3 d-inline rounded-pill"
+                outlined
+              >
+                <v-icon>mdi-chevron-up</v-icon>
+                {{ $t("btn.labels.hide-details") }}
+              </v-sheet>
+              </span>
             </p>
-            <!--
-            INFORMATION ON THE CONSENT ASSISTANT (DROPPED IN V3 OF THE DASHBOARD)
-            <v-divider class="my-3" />
-            <p>
-              {{ $t("home.welcome-msg3").interpolate(paramsForInterpolation) }} 
-            </p>
-
-            <v-btn
-              class="black--text"
-              color="primary"
-              depressed
-              :to="localePath('/' + organizationName + '/help')"
-            >
-              {{ $t("btn.labels.consent-guide") }}
-            </v-btn>
-            -->
         </div>
       </v-expand-transition>
     </v-card-text>

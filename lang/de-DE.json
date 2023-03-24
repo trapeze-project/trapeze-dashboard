@@ -119,7 +119,9 @@
       "withdraw-all-consent": "Alle Einwilligungen widerrufen",
       "discard-changes": "Änderungen verwerfen",
       "load-more": "Mehr Anzeigen",
-      "select": "Auswählen"
+      "select": "Auswählen",
+      "show-details": "Show details",
+      "hide-details": "Hide details"
     }
   },
   "snackbar": {
@@ -133,7 +135,10 @@
     "search-for-a-question-or-an-answer": "Suche nach einer Frage oder einer Antwort",
     "search-for-data": "Nach einer Datenkategorie suchen",
     "search-for-purpose": "Nach einem Zweck suchen",
-    "search-for-controller": "Nach einem Verantwortlichen suchen"
+    "search-for-controller": "Nach einem Verantwortlichen suchen",
+    "search-for-glossary": "Search for terms in the glossary",
+    "email-me-back": "Enter your email for a response",
+    "choose-subject": "Choose a subject"
   },
   "updates": {
     "1": "Aktualisierung der Richtlinie",
@@ -311,9 +316,11 @@
     "not-comfortable": "Nicht Einverstanden"
   },
   "contact": {
-    "new-message-to": "Neue Nachricht an",
-    "recipient": "Empf\u00e4nger",
-    "message": "Nachricht"
+    "heading": "Contact form",
+    "to": "To",
+    "from": "From",
+    "subject": "Subject",
+    "message": "Message"
   },
   "help": {
     "desc": "Mit dieser kurzen Umfrage möchten wir sicherstellen, dass wir Ihre Daten nur in einer Weise erheben und verwenden, mit der Sie einverstanden sind. Indem Sie diesen Fragebogen ausfüllen, können Sie uns mitteilen, wie wir mit Ihren Daten umgehen sollen. Ihre Antworten werden mit Ihrer aktuellen Einverständniserklärung abgeglichen. Anschließend erhalten Sie eine Anleitung, wie Sie Ihre Einwilligung so anpassen können, dass sie Ihren Präferenzen entspricht.",

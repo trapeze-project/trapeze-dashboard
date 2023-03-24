@@ -119,7 +119,9 @@
       "withdraw-all-consent": "Retirer tout le consentement",
       "discard-changes": "Écarter les modifications",
       "load-more": "En voir plus",
-      "select": "Sélectionner"
+      "select": "Sélectionner",
+      "show-details": "Show details",
+      "hide-details": "Hide details"
     }
   },
   "snackbar": {
@@ -133,7 +135,10 @@
     "search-for-a-question-or-an-answer": "Rechercher une question ou une r\u00e9ponse",
     "search-for-data": "Rechercher une catégorie de données",
     "search-for-purpose": "Rechercher une fin",
-    "search-for-controller": "Rechercher un responsable du traitement"
+    "search-for-controller": "Rechercher un responsable du traitement",
+    "search-for-glossary": "Search for terms in the glossary",
+    "email-me-back": "Enter your email for a response",
+    "choose-subject": "Choose a subject"
   },
   "updates": {
     "1": "Mise \u00e0 jour de la politique de confidentialit\u00e9",
@@ -311,8 +316,10 @@
     "not-comfortable": "Pas confortable"
   },
   "contact": {
-    "new-message-to": "Nouveau message \u00e0",
-    "recipient": "Destinataire",
+    "heading": "Contact form",
+    "to": "To",
+    "from": "From",
+    "subject": "Subject",
     "message": "Message"
   },
   "help": {

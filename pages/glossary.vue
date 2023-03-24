@@ -20,7 +20,7 @@
           <v-text-field
             class="rounded-pill"
             v-model="searchValue"
-            placeholder="Search for glossary terms Glossary"
+            :placeholder="$t('placeholder.search-for-glossary')"
             outlined
             dense
             clearable

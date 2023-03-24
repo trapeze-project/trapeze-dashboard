@@ -17,7 +17,9 @@
 
       <v-card class="rounded-xl"  >
         <v-card-title>
-          <b class="me-auto">Contact Form</b>
+          <b class="me-auto">
+            {{ $t("contact.heading") }}
+          </b>
           
           <v-btn small fab depressed color="white" @click="cancel">
             <v-icon color="grey">
@@ -32,7 +34,7 @@
 
           <v-text-field 
             class="rounded-pill"
-            label="To:"
+            :label="`${$t('contact.to')}:`"
             v-model="this.email.match(/@.+(?=[.])/)[0]" 
             outlined 
             dense 
@@ -41,18 +43,19 @@
 
           <v-text-field 
             class="rounded-pill"
-            label="From:"
+            :label="`${$t('contact.from')}:`"
             v-model="userEmail"
-            placeholder="Enter email if you wish to be contacted on this matter."
+            :placeholder="$t('placeholder.email-me-back')"
             outlined 
             dense 
           />
 
           <v-combobox
             class="rounded-pill"
-            label="Subject:"
+            :label="`${$t('contact.subject')}:`"
             disable-lookup
-            outlined placeholder="Choose Message Subject..."
+            outlined 
+            :placeholder="$t('placeholder.choose-subject')"
             dense
             :items="subjects"
             v-model="message.subject"
@@ -62,7 +65,7 @@
 
           <v-textarea
             class="rounded-xl"
-            label="Message:"
+            :label="`${$t('contact.message')}:`"
             v-model="message.body"
             auto-grow
             outlined
