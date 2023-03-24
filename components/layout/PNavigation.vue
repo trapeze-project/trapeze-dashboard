@@ -120,10 +120,9 @@ export default {
         label: "nav.labels.glossary",
         icon: "mdi-book",
       }, { 
-        to: `/${id}/faq`, 
+        to: `/faq`, 
         label: "nav.labels.faq", 
-        icon: "mdi-frequently-asked-questions",
-        isDisabled: disabled 
+        icon: "mdi-frequently-asked-questions"
       }
     ];
 

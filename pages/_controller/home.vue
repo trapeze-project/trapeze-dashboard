@@ -60,7 +60,7 @@ export default {
           "title": "home.explain-card.faq.title",
           "image": "/img/home-icon-faq.svg",
           "content": "home.explain-card.faq.title",
-          "to": `/${this.$i18n.locale}/${this.controller["@id"]}/faq`
+          "to": `/${this.$i18n.locale}/faq`
         }
       ],
     };

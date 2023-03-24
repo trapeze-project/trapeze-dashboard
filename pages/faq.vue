@@ -9,7 +9,7 @@
     <v-card-text class="pa-0">
       <v-row>
         <v-col class="pb-0">
-          <p>{{ $t("qna.introduction").interpolate(interpolated) }}</p>
+          <p>{{ $t("qna.introduction") }}</p>
         </v-col>
       </v-row>
 
@@ -41,7 +41,7 @@
               <v-icon class="icon"> $expand </v-icon>
             </template>
             <span class="header" style="white-space: pre-line">{{
-              category.interpolate(interpolated)
+              category
             }}</span>
           </v-expansion-panel-header>
 
@@ -57,18 +57,14 @@
                     <v-icon class="icon" left> $expand </v-icon>
                   </template>
                   <span class="header" style="white-space: pre-line">{{
-                    faq[$i18n.locale][category]["qnas"][qna].question.interpolate(
-                      interpolated
-                    )
+                    faq[$i18n.locale][category]["qnas"][qna].question
                   }}</span>
                 </v-expansion-panel-header>
 
                 <v-expansion-panel-content>
                   <p style="white-space: pre-line">
                     {{
-                      faq[$i18n.locale][category]["qnas"][qna].answer.interpolate(
-                        interpolated
-                      )
+                      faq[$i18n.locale][category]["qnas"][qna].answer
                     }}
                   </p>
                   <div
@@ -105,17 +101,12 @@
 </template>
 
 <script>
-import faqEN from "../../static/data/faq-enUS.json";
-import faqDE from "../../static/data/faq-deDE.json";
-import faqIT from "../../static/data/faq-itIT.json";
-import faqFR from "../../static/data/faq-frFR.json";
+import faqEN from "../static/data/faq-enUS.json";
+import faqDE from "../static/data/faq-deDE.json";
+import faqIT from "../static/data/faq-itIT.json";
+import faqFR from "../static/data/faq-frFR.json";
 
 export default {
-  props: {
-    controller: {
-      type: Object,
-    }
-  },
   data() {
     return {
       faq: {
@@ -133,9 +124,6 @@ export default {
         return e.toLowerCase().includes(this.searchValue.toLowerCase());
       });
     },
-    interpolated() {
-      return { we: this.controller.name }
-    }
   },
 };
 </script>

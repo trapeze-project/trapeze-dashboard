@@ -4,7 +4,7 @@
       <PNavBar />
 
       <v-main >
-        <v-container fluid>
+        <v-container>
 
           <!-- Mobile only -->
           <v-row v-if="$vuetify.breakpoint.smAndDown">
