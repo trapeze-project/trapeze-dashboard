@@ -328,5 +328,9 @@
   },
   "glossary": {
     "desc": "Vous trouverez dans le glossaire une collection de termes et de définitions liés au consentement."
+  },
+  "sensitivity": {
+    "low": "Non sensible",
+    "high": "Très sensible"
   }
 }

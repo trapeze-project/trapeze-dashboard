@@ -328,5 +328,9 @@
   },
   "glossary": {
     "desc": "Im Glossar finden Sie eine Sammlung einwilligungsbezogener Begriffe und Definitionen."
+  },
+  "sensitivity": {
+    "low": "Nicht sensibel",
+    "high": "Sehr sensibel"
   }
 }

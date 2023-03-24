@@ -26,11 +26,11 @@
       color="black"
       track-color="grey"
       min="1"
-      max="5"
+      max="10"
       step="1"
-      ticks="always"
-      tick-size="4"
-      :tick-labels="['Not sensitive', 'a little sensitive', 'neutral', 'sensitive', 'very sensitive']"
+      :ticks="true"
+      tick-size="0"
+      :tick-labels="labels"
       :value="sensitivity"
     />
   </div>
@@ -42,7 +42,15 @@ export default {
     sensitivity: {
       type: Number,
       required: false,
-      default: 3
+      default: 5
+    }
+  },
+  computed: {
+    labels() {
+      let labels = new Array(10).fill('');
+      labels[0] = this.$t("sensitivity.low");
+      labels[9] = this.$t("sensitivity.high");
+      return labels;
     }
   }
 }

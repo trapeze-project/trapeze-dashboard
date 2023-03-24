@@ -328,5 +328,9 @@
   },
   "glossary": {
     "desc": "In the glossary you find a collection of consent-related terms and definitions."
+  },
+  "sensitivity": {
+    "low": "Not sensitive",
+    "high": "Very sensitive"
   }
 }
