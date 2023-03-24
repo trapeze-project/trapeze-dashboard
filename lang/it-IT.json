@@ -120,8 +120,8 @@
       "discard-changes": "Scartare le modifiche",
       "load-more": "Vedi di più",
       "select": "Selezionare",
-      "show-details": "Show details",
-      "hide-details": "Hide details"
+      "show-details": "Mostra i dettagli",
+      "hide-details": "Nascondi dettagli"
     }
   },
   "snackbar": {
@@ -136,9 +136,9 @@
     "search-for-data": "Ricerca di una categoria di dati",
     "search-for-purpose": "Ricerca di uno scopo",
     "search-for-controller": "Ricerca di un titolare del trattamento",
-    "search-for-glossary": "Search for terms in the glossary",
-    "email-me-back": "Enter your email for a response",
-    "choose-subject": "Choose a subject"
+    "search-for-glossary": "Ricerca di termini nel glossario",
+    "email-me-back": "Inserite la vostra e-mail per ricevere una risposta",
+    "choose-subject": "Scegliere un argomento"
   },
   "updates": {
     "1": "Aggiornamento della politica sulla privacy",
@@ -316,11 +316,11 @@
     "not-comfortable": "A disagio"
   },
   "contact": {
-    "heading": "Contact form",
-    "to": "To",
-    "from": "From",
-    "subject": "Subject",
-    "message": "Message"
+    "heading": "Modulo di contatto",
+    "to": "A",
+    "from": "Da",
+    "subject": "Oggetto",
+    "message": "Messaggio"
   },
   "help": {
     "desc": "Con questo breve sondaggio vogliamo assicurarci di raccogliere e utilizzare i vostri dati solo nel modo in cui vi sentite a vostro agio. Compilando questo questionario, potete dirci come volete che trattiamo i vostri dati. Le vostre risposte vengono confrontate con la vostra attuale decisione di consenso. In seguito, vi verranno fornite indicazioni su come modificare il vostro consenso in modo che corrisponda alle vostre preferenze.",

@@ -120,8 +120,8 @@
       "discard-changes": "Änderungen verwerfen",
       "load-more": "Mehr Anzeigen",
       "select": "Auswählen",
-      "show-details": "Show details",
-      "hide-details": "Hide details"
+      "show-details": "Details anzeigen",
+      "hide-details": "Details ausblenden"
     }
   },
   "snackbar": {
@@ -136,9 +136,9 @@
     "search-for-data": "Nach einer Datenkategorie suchen",
     "search-for-purpose": "Nach einem Zweck suchen",
     "search-for-controller": "Nach einem Verantwortlichen suchen",
-    "search-for-glossary": "Search for terms in the glossary",
-    "email-me-back": "Enter your email for a response",
-    "choose-subject": "Choose a subject"
+    "search-for-glossary": "Suche nach Begriffen im Glossar",
+    "email-me-back": "Geben Sie Ihre E-Mail-Adresse ein, um eine Antwort zu erhalten",
+    "choose-subject": "Wählen Sie ein Thema"
   },
   "updates": {
     "1": "Aktualisierung der Richtlinie",
@@ -316,11 +316,11 @@
     "not-comfortable": "Nicht Einverstanden"
   },
   "contact": {
-    "heading": "Contact form",
-    "to": "To",
-    "from": "From",
-    "subject": "Subject",
-    "message": "Message"
+    "heading": "Kontakt-Formular",
+    "to": "An",
+    "from": "Von",
+    "subject": "Betreff",
+    "message": "Nachricht"
   },
   "help": {
     "desc": "Mit dieser kurzen Umfrage möchten wir sicherstellen, dass wir Ihre Daten nur in einer Weise erheben und verwenden, mit der Sie einverstanden sind. Indem Sie diesen Fragebogen ausfüllen, können Sie uns mitteilen, wie wir mit Ihren Daten umgehen sollen. Ihre Antworten werden mit Ihrer aktuellen Einverständniserklärung abgeglichen. Anschließend erhalten Sie eine Anleitung, wie Sie Ihre Einwilligung so anpassen können, dass sie Ihren Präferenzen entspricht.",
