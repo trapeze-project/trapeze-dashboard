@@ -6,48 +6,45 @@
     </v-card-title>
 
     <v-card-text>
-      <p class="mb-0">
-        {{ $t("home.welcome-msg1").interpolate(paramsForInterpolation) }} 
-        <span 
-          class="clickable"
+      {{ $t("home.welcome-msg1")}} 
+
+      <div 
+        class="d-flex justify-end"
+      >
+        <v-sheet 
+          class="pa-1 pr-3 rounded-pill clickable mt-3 mb-0"
+          outlined
           @click="showMore = !showMore" 
-          v-show="!showMore"
+          v-show="!showMore"          
         >
-            <v-sheet 
-              class="pa-1 pr-3 d-inline rounded-pill"
-              outlined
-            >
-              <v-icon>mdi-chevron-down</v-icon>
-              {{ $t("btn.labels.show-details") }}
-            </v-sheet>
-          </span>
-      </p>
+          <v-icon>mdi-chevron-down</v-icon>
+          {{ $t("btn.labels.show-details") }}
+        </v-sheet>
+      </div>
 
       <v-expand-transition >
-        <div v-show="showMore">
+        <div v-show="showMore" class="mt-5">
             <ul>
               <li
-                v-for="(item, idx) in Object.values($t('home.purpose'))"
+                v-for="(item, idx) in items"
                 :key="idx"
               >
                 {{ item.name }}
               </li>
             </ul>
-            <p class="mt-3 mb-0">
-              <span 
-                class="clickable" 
-                @click="showMore = !showMore" 
-                v-show="showMore" 
-              >
+
+            <div class="d-flex justify-end">
               <v-sheet 
-                class="pa-1 pr-3 d-inline rounded-pill"
+                class="pa-1 pr-3 rounded-pill clickable mt-3 mb-0"
                 outlined
+                @click="showMore = !showMore" 
+                v-show="showMore"                 
               >
                 <v-icon>mdi-chevron-up</v-icon>
                 {{ $t("btn.labels.hide-details") }}
               </v-sheet>
-              </span>
-            </p>
+            </div>
+
         </div>
       </v-expand-transition>
     </v-card-text>
@@ -59,13 +56,19 @@
 export default {
   data() {
     return {
-      organizationName: this.$nuxt.$route.path.split("/")[2],
       showMore: false,
     };
   },
-  created() {
-    let controllerInfo = this.$store.state.controllerInfo
-    this.paramsForInterpolation ={'we':controllerInfo.name}
-  },
+  computed: {
+    items() {
+      return Object.values(this.$t("home.purpose"));
+    }
+  }
 };
 </script>
+
+<style>
+li {
+  margin-top: 15px;
+}
+</style>
