@@ -77,6 +77,20 @@
             </v-col>
           </v-row>
 
+          <v-btn
+            color="primary"
+            dark
+            fixed
+            bottom
+            right
+            fab
+            @click="$vuetify.goTo(0, goToOptions)"
+            v-scroll="onScroll"
+            v-show="showGoToTop"
+          >
+            <v-icon color="black">mdi-chevron-up</v-icon>
+          </v-btn>
+
         </v-container>
       </v-main>
     </v-app>
@@ -94,7 +108,20 @@ export default {
         controller: null
       },
       controller: null,
+      // reference for scroll-to-top button
+      // link: https://stackoverflow.com/a/68946595
+      offsetTop: 0,
+      goToOptions: {
+        duration: 500,
+        offset: 0,
+        easing: 'easeInOutCubic',
+      },
     };
+  },
+  computed:{
+    showGoToTop () {
+      return this.offsetTop > 0;
+    },
   },
   created() {
     this.controller = ControllerService.get(
@@ -104,7 +131,10 @@ export default {
   methods: {
     direct(to) {
       window.location.href = to;
-    }
+    },
+    onScroll (event) {
+      this.offsetTop = event.target.scrollingElement.scrollTop;
+    },
   }
 };
 </script>
