@@ -46,14 +46,14 @@
         </div>
 
         <!-- Discard changes button -->
-        <div v-if="hasChanged" class="d-flex justify-end mb-3">
-          <v-btn class="px-2 mx-3 rounded-pill" @click="() => $emit('undoAllChanges')" :disabled="!hasChanged">
+        <div v-if="hasChanged" class="d-flex justify-end mb-3 flex-wrap">
+          <v-btn class="px-2 my-3 mt-0 mx-0 rounded-pill" @click="() => $emit('undoAllChanges')" :disabled="!hasChanged">
             <v-icon class="mr-1"> mdi-undo </v-icon>
             {{ $t("btn.labels.discard-changes") }}
           </v-btn>
           
           <!-- Submit changes button -->
-          <v-btn class="px-2 rounded-pill black--text" color="primary" @click="() => $emit('submitMyConsent')" :disabled="!hasChanged">
+          <v-btn class="px-2 ml-3 rounded-pill black--text" color="primary" @click="() => $emit('submitMyConsent')" :disabled="!hasChanged">
             <v-icon class="mr-1"> mdi-tray-arrow-up </v-icon>
             {{ $t("btn.labels.submit-changes") }}
           </v-btn>
@@ -75,7 +75,7 @@
 
           <div v-if="max < parents.length" class="d-flex justify-center">
             <v-btn
-              class="my-2 black--text" 
+              class="my-2 black--text rounded-pill" 
               color="primary" 
               @click="() => max += max"
             >
