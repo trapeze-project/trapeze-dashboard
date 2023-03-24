@@ -133,7 +133,8 @@ export default {
           to: () => this.openControllerDrawer(), 
           label: "nav.labels.controller", 
           icon: "mdi-domain",
-          type: "function" 
+          type: "function",
+          isDisabled: this.controller === undefined
         },
       );
     }
