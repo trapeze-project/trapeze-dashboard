@@ -103,8 +103,8 @@
     "Finalités (Fins)": {
         "qnas": {
             "qna1": {
-                "question": "Qu'est-ce qu'un fin?",
-                "answer": "Selon l'article 5, paragraphe 1 RGPD, point b), Les responsables doivent vous indiquer clairement à quelles fins précises ils collectent et traitent vos données à caractère personnel. \n \n Il est par exemple illégal, en vertu du RGPD, de collecter vos données à caractère personnel dans la fin précise de vous fournir des recommandations d'emploi personnalisées et de les utiliser ensuite à des fins de marketing.",
+                "question": "Qu'est-ce qu'une finalité (fin)?",
+                "answer": "Selon l'article 5, paragraphe 1 RGPD, point b), les responsables doivent vous indiquer clairement à quelles fins précises ils collectent et traitent vos données à caractère personnel. \n \n Il est par exemple illégal, en vertu du RGPD, de collecter vos données à caractère personnel dans la fin précise de vous fournir des recommandations d'emploi personnalisées et de les utiliser ensuite à des fins de marketing.",
                 "references": {
                     "ref1": "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX%3A32016R0679"
                 }

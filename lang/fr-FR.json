@@ -12,7 +12,7 @@
     "dpo": "D\u00e9l\u00e9gu\u00e9 \u00e0 la protection des donn\u00e9es",
     "dpo-abbrev": "DPD",
     "unrelatedDataText": "Il est tr\u00e8s inhabituel que les empreintes digitales soient utilis\u00e9es \u00e0 des fins publicitaires.",
-    "bioDataText": "Les empreintes digitales sont particuli\ufffdrement sensibles, car elles facilitent le vol d'identit\u00e9. Il est recommand\u00e9 de ne donner son consentement pour les donn\u00e9es dactyloscopiques que lorsque cela est absolument n\u00e9cessaire."
+    "bioDataText": "Les empreintes digitales sont particuli\ufffdrement sensibles, car elles facilitent le vol d'identit\u00e9. Il est recommand\u00e9 de ne donner son consentement pour les donn\u00e9es dactyloscopiques qu'en cas d'absolu nécessité."
   },
   "landing": {
     "general": {
@@ -40,7 +40,7 @@
   },
   "nav": {
     "labels": {
-      "home": "Acceuil",
+      "home": "Accueil",
       "controller": "Responsable",
       "consent": "Politique de confidentialité",
       "consent-menu": "Menu de Consentement",
@@ -90,7 +90,7 @@
       "dpv:academicResearch": "Les finalités (fins) associées à la conduite ou à l'aide à la recherche menée dans un contexte académique, par exemple au sein des universités.",
       "dpv:communication": "Informations communiquées par une personne ou à une personne.",
       "dpv:commercialResearch": "Finalités (fins) associées à la réalisation de recherches dans un cadre commercial ou avec l'intention de commercialiser, par exemple au sein d'une entreprise ou parrainées par une entreprise.",
-      "dpv:customerCare": "L'assistance à la clientèle désigne les finalités (fins) associées à la fourniture d'une assistance, à la résolution de problèmes, à l'assurance de la satisfaction, etc. en rapport avec les services fournis.",
+      "dpv:customerCare": "Le service clientèle désigne les finalités (fins) associées à la fourniture d'une assistance, à la résolution de problèmes, à l'assurance de la satisfaction, etc. en rapport avec les services fournis.",
       "dpv:sellDataToThirdParties": "Finalités (fins) associés à la vente ou au partage de données ou d'informations avec des tiers.",
       "dpv:sellInsightsToThirdParties": "Finalités (fins) associées à la vente ou au partage des connaissances obtenues à partir de l'analyse des données."
       }
@@ -114,8 +114,8 @@
       "ignore-all": "Ignorer tout",
       "view": "Voir",
       "visit-website": "Visitez le site web",
-      "leave-anyway": "Partir quand même",
-      "contact": "Nous Contacter",
+      "leave-anyway": "Quitter quand même",
+      "contact": "Nous contacter",
       "withdraw-all-consent": "Retirer tout le consentement",
       "discard-changes": "Écarter les modifications",
       "load-more": "En voir plus",
@@ -225,7 +225,7 @@
   "consent": {
     "purposeDescription":"123",
     "dataDescription":"1233626551",
-    "desc": "Retirez votre consentement en déplaçant les curseurs vers la gauche ou en cliquant sur \"Retirer tout le consentement\". N'oubliez pas de soumettre vos modifications.",
+    "desc": "Retirez votre consentement en déplaçant les curseurs vers la gauche ou en cliquant sur le bouton \"Retirer tout le consentement\". N'oubliez pas de soumettre vos modifications.",
     "consent-menu": "Menu Consentement",
     "title": "Assistant de Consentement",
     "location": "Vos donn\u00e9es de localisation",
@@ -246,7 +246,7 @@
     "warning-msg-not-comfortable": "Dans l'Assistant de Consentement, vous avez indiqué que vous n'étiez pas confortable avec le fait que nous (${we}) utilisions vos données ${dataCategory} à des fins ${purpose}. Cependant, le consentement que vous nous avez donné indique que vous êtes confortable. Veuillez revoir votre consentement.",
     "warning-msg-no-opinion": "Dans l'Assistant de Consentement, vous avez indiqué que vous n'avez pas d'opinion sur notre (${we}) traitement de vos données ${dataCategory} à des fins ${purpose}. Cependant, le consentement que vous nous avez donné indique que vous êtes à l'aise. Veuillez revoir votre consentement.",
     "issues": "probl\u00e8mes",
-    "issue": "probl\u00e8m",
+    "issue": "probl\u00e8me",
     "tab": {
       "labels": {
         "consent": "Politique de confidentialité",
@@ -272,8 +272,8 @@
           }
         },
         "policy": {
-          "active": "active",
-          "inactive": "inactive"
+          "active": "actif",
+          "inactive": "inactif"
         },
         "footer": {
           "rows-per-page": "Lignes par page"
@@ -310,10 +310,10 @@
     }
   },
   "consent-helper": {
-    "purpose": "Fins",
-    "comfortable": "Confortable",
+    "purpose": "Finalités",
+    "comfortable": "À l'aise",
     "no-opinion": "Sans opinion",
-    "not-comfortable": "Pas confortable"
+    "not-comfortable": "Pas à l'aise"
   },
   "contact": {
     "heading": "Formulaire de contact",

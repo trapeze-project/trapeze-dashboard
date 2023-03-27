@@ -69,9 +69,9 @@
       "dpv:academicResearch": "Ricerca accademica",
       "dpv:communication": "Comunicazione",
       "dpv:commercialResearch": "Ricerca commerciale",
-      "dpv:customerCare": "Assistenza clienti",
+      "dpv:customerCare": "Servizio clienti",
       "dpv:sellDataToThirdParties": "Vendita di dati a terzi",
-      "dpv:sellInsightsToThirdParties": "Vendita di approfondimenti a terzi"
+      "dpv:sellInsightsToThirdParties": "Vendita di informazioni a terzi"
     },
     "descriptions": {
       "dpv:location": "Informazioni sulla posizione.",
@@ -80,7 +80,7 @@
       "dpv:marketing": "Scopi associati alla conduzione del marketing in relazione all'organizzazione o ai prodotti o servizi, ad esempio la promozione, la vendita e la distribuzione.",
       "dpv:advertising": "Finalità (scopi) associate alla conduzione della pubblicità, ossia un processo o un artefatto utilizzato per richiamare l'attenzione su un prodotto, un servizio, ecc. attraverso annunci, avvisi o altre forme di comunicazione.",
       "dpv:identity-verification": "Finalità (scopi) associate alla verifica o all'autorizzazione dell'identità come forma di sicurezza.",
-      "dpv:age": "Information about age.",
+      "dpv:age": "Informazioni sull'età.",
       "dpv:gender": "Informazioni sul genere.",
       "dpv:country": "Informazioni sul paese, ad esempio residenza, viaggi.",
       "dpv:preference": "Informazioni sulle preferenze o sugli interessi.",
@@ -90,9 +90,9 @@
       "dpv:academicResearch": "Finalità (Scopi) associati alla conduzione o all'assistenza di ricerche condotte in un contesto accademico, ad esempio all'interno delle università.",
       "dpv:communication": "Informazioni comunicate da o a un individuo.",
       "dpv:commercialResearch": "Finalità (Scopi) associati alla conduzione di una ricerca in un contesto commerciale o con l'intenzione di commercializzarla, ad esempio in un'azienda o sponsorizzata da un'azienda.",
-      "dpv:customerCare": "Finalità (Scopi) associati alla conduzione di una ricerca in un contesto commerciale o con l'intenzione di commercializzarla, ad esempio in un'azienda o sponsorizzata da un'azienda.",
+      "dpv:customerCare": "Il servizio clienti definisce le finalità (scopi) associati all'assistenza provvista, alla risoluzione di problemi, all'assicurazione della soddisfazione, ecc, in relazione ai servizi provveduti.",
       "dpv:sellDataToThirdParties": "Finalità (Scopo) associate alla vendita o alla condivisione di dati o informazioni a terzi.",
-      "dpv:sellInsightsToThirdParties": "Finalità (Scopo) associate alla vendita o alla condivisione delle intuizioni ottenute dall'analisi dei dati."
+      "dpv:sellInsightsToThirdParties": "Finalità (Scopo) associate alla vendita o alla condivisione di informazioni ottenute dall'analisi dei dati."
     }
   },
   "btn": {
@@ -114,7 +114,7 @@
       "ignore-all": "Ignora tutto",
       "view": "Visualizza",
       "visit-website": "Visita il sito web",
-      "leave-anyway": "Vattene comunque",
+      "leave-anyway": "Esci comunque",
       "contact": "Contatto",
       "withdraw-all-consent": "Ritirare tutti i consensi",
       "discard-changes": "Scartare le modifiche",
@@ -158,17 +158,17 @@
     "title": "Benvenuti sul Dashboard sulla Privacy di TRAPEZE!",
     "explore-btn": "Visualizza",
     "welcome-msg1": "Gestite il vostro consenso e controllate il trattamento dei vostri dati.\n Cliccate su una carta qui sotto per iniziare.",
-    "welcome-msg2": "È possibile dare o revocare il consenso in base a quanto segue:",
-    "welcome-msg3": "Si consiglia di utilizzare l'Assistente per il consenso per esprimere le proprie preferenze e confrontarle con le decisioni di consenso.",
+    "welcome-msg2": "È possibile dare o ritirare il vostro consenso in base a quanto segue:",
+    "welcome-msg3": "Si consiglia di utilizzare l'Assistente per il consenso per esprimere le vostre preferenze e confrontarle con le vostre decisioni sul consenso.",
     "purpose": {
       "0": {
-        "name": "Fare clic sulla scheda 'Dati' per vedere quali dati sono trattati.\n Ritirare il consenso per interrompere il trattamento dei dati."
+        "name": "Fare clic sulla scheda 'Dati' per vedere quali vostri dati sono trattati.\n Ritirare il consenso per interrompere il trattamento dei vostri dati."
       },
       "1": {
-        "name": "Fare clic sulla scheda 'Scopi' per vedere per quali finalità vengono trattati i dati. \n Ritirare il consenso per interrompere il trattamento per uno scopo specifico."
+        "name": "Fare clic sulla scheda 'Scopi' per vedere per quali finalità vengono trattati i vostri dati. \n Ritirare il consenso per interrompere il trattamento per uno scopo specifico."
       }
     },
-    "help": "Aiuto",
+    "help": "Assistente al Consenso",
     "explain-card": {
       "data": {
         "title": "Dati",
@@ -180,7 +180,7 @@
       },
       "trapeze": {
         "title": "TRAPEZE",
-        "content": "Learn more about the TRAPEZE project of the European Union."
+        "content": "Scopri di più sul progetto TRAPEZE dell'Unione Europea"
       },
       "glossary": {
         "title": "Glossario",
@@ -225,7 +225,7 @@
   "consent": {
     "purposeDescription":"123",
     "dataDescription":"1233626551",
-    "desc": "Ritirare il consenso spostando i cursori a sinistra o facendo clic su \"Ritirare tutti i consensi\". Non dimenticate di inviare le modifiche.",
+    "desc": "Ritirare il consenso muovando i cursori verso sinistra o facendo clic sul bottone \"Ritirare tutti i consensi\". Non dimenticate di inviare le modifiche.",
     "consent-menu": "Menu del Consenso",
     "title": "Assistente al Consenso",
     "location": "I vostri dati sulla posizione",
@@ -243,8 +243,8 @@
     "sensitivityText": "Potete configurare il grado di sensibilit\u00e0 di questi dati. I dati molto sensibili vengono trattati in modo diverso e con grande attenzione.",
     "sensitivityHeader": "Quanto sono sensibili questi dati per voi?",
     "warnings": "Avvertenze",
-    "warning-msg-not-comfortable": "Nell'Assistente al Consenso, l'utente ha indicato che non si sente a proprio agio se noi (${we}) utilizziamo i suoi dati ${dataCategory} per scopo ${purpose}. Tuttavia, il consenso che ci avete dato indica che siete a vostro agio. La preghiamo di rivedere il suo consenso.",
-    "warning-msg-no-opinion": "Nell'Assistente al Consenso, avete indicato di non avere un'opinione sul trattamento da parte nostra (${we}) dei vostri dati ${dataCategory} per scopo ${purpose}. Tuttavia, il consenso che ci avete dato indica che siete a vostro agio. La preghiamo di rivedere il suo consenso.",
+    "warning-msg-not-comfortable": "Nell'Assistente al Consenso, avete indicato di non sentirvi a vostro agio se noi (${we}) utilizziamo i vostri${dataCategory} dati per ${purpose}  scopi. Tuttavia, il consenso che ci avete dato indica che siete a vostro agio. Vi preghiamo di rivedere il vostro consenso.",
+    "warning-msg-no-opinion": "Nell'Assistente al Consenso, avete indicato di non avere un'opinione sul trattamento da parte nostra (${we}) dei vostri ${dataCategory} dati per  ${purpose} scopi. Tuttavia, il consenso che ci avete dato indica che siete a vostro agio. Vi preghiamo di rivedere il vostro consenso.",
     "issues": "problemi",
     "issue": "problem",
     "tab": {
@@ -272,8 +272,8 @@
           }
         },
         "policy": {
-          "active": "Attivo",
-          "inactive": "Non attivo"
+          "active": "attivo",
+          "inactive": "non attivo"
         },
         "footer": {
           "rows-per-page": "Righe per pagina"
