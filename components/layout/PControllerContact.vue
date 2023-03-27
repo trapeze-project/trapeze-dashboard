@@ -71,7 +71,7 @@
             outlined
             rows="3"
             row-height="50"
-            placeholder="Pre-filled Text-template>"
+            :placeholder="$t('placeholder.message-body')"
           />
 
         </v-card-text>
