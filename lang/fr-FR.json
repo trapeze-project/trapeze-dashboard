@@ -139,7 +139,7 @@
     "search-for-glossary": "Rechercher un terme ou une définition dans le glossaire",
     "email-me-back": "Saisissez votre adresse électronique pour obtenir une réponse",
     "choose-subject": "Choisir un sujet",
-    "message-body":"fr<Pre-filled Text-template>"
+    "message-body":"<Choisissez un sujet pour afficher un modèle de texte.>"
   },
   "updates": {
     "1": "Mise \u00e0 jour de la politique de confidentialit\u00e9",

@@ -139,7 +139,7 @@
     "search-for-glossary": "Ricerca di termini nel glossario",
     "email-me-back": "Inserite la vostra e-mail per ricevere una risposta",
     "choose-subject": "Scegliere un argomento",
-    "message-body":"it<Pre-filled Text-template>"
+    "message-body":"<Scegliere un argomento per mostrare un modello di testo.>"
   },
   "updates": {
     "1": "Aggiornamento della politica sulla privacy",

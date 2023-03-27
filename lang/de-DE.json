@@ -139,7 +139,7 @@
     "search-for-glossary": "Suche nach Begriffen im Glossar",
     "email-me-back": "Geben Sie Ihre E-Mail-Adresse ein, um eine Antwort zu erhalten",
     "choose-subject": "Wählen Sie ein Thema",
-    "message-body":"de<Pre-filled Text-template>"
+    "message-body":"<Wählen Sie einen Betreff, um eine Textvorlage anzuzeigen.>"
   },
   "updates": {
     "1": "Aktualisierung der Richtlinie",

@@ -139,7 +139,7 @@
     "search-for-glossary": "Search for terms in the glossary",
     "email-me-back": "Enter your email for a response",
     "choose-subject": "Choose a subject",
-    "message-body":"en<Pre-filled Text-template>"
+    "message-body":"<Choose a subject to show a text template.>"
   },
   "updates": {
     "1": "Policy Update",
