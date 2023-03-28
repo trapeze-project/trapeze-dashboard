@@ -104,11 +104,10 @@
 </template>
 
 <script>
-import emailTemplateDeDE from  '../../static/data/emailTemplates/emailTemplate-deDE.json';
-import emailTemplateEnUS from  '../../static/data/emailTemplates/emailTemplate-enUS.json';
-import emailTemplateFrFR from  '../../static/data/emailTemplates/emailTemplate-frFR.json';
-import emailTemplateItIT from  '../../static/data/emailTemplates/emailTemplate-itIT.json';
-
+import emailTemplateEN from  "../../static/data/emailTemplates/emailTemplate-enUS.json";
+import emailTemplateDE from  "../../static/data/emailTemplates/emailTemplate-deDE.json";
+import emailTemplateFR from  "../../static/data/emailTemplates/emailTemplate-frFR.json";
+import emailTemplateIT from  "../../static/data/emailTemplates/emailTemplate-itIT.json";
 
 export default {
   props: {
@@ -129,44 +128,33 @@ export default {
   data () {
     return {
       dialog: false,
-      userEmail:'',
+      userEmail: "",
       message: {
-        subject:'',
-        body:''
+        subject: "",
+        body: ""
       },
-      emailTemplate:[]
+      emailTemplate: {
+        "en": emailTemplateEN,
+        "de": emailTemplateDE,
+        "it": emailTemplateIT,
+        "fr": emailTemplateFR
+      },
     }
   },
 
   computed: {
     fullscreen() {
       return this.$vuetify.breakpoint.smAndDown;
+    },
+    subjects() {
+      return this.emailTemplate[this.$i18n.locale].map((e) => e.subject);
     }
   },
-
-  created() {
-
-    if (this.$i18n.locale === 'en') {
-      this.emailTemplate = emailTemplateEnUS
-    } else if (this.$i18n.locale === 'de') {
-      this.emailTemplate = emailTemplateDeDE
-    } else if (this.$i18n.locale === 'it') {
-      this.emailTemplate = emailTemplateItIT
-    } else if (this.$i18n.locale === 'fr') {
-      this.emailTemplate = emailTemplateFrFR
-    }
-
-    this.subjects = this.emailTemplate.map((message)=>{
-      return message.subject
-    })
-
-  },
-  
   methods: {
     sendMessage(){
       this.dialog = false;
-      const text = this.$t('snackbar.msg.message-sent')
-      this.$refs.notification.showNotification(text, 'green')
+      const text = this.$t("snackbar.msg.message-sent")
+      this.$refs.notification.showNotification(text, "green")
       this.clearAllFields()
     },
     cancel(){
@@ -174,8 +162,8 @@ export default {
       this.clearAllFields()
     },
     fillMessageBody(){
-      if(this.subjects.includes(this.message.subject)){
-        let messageTemplate = this.emailTemplate.find((msgTemplate)=>{
+      if(this.subjects.includes(this.message.subject)) {
+        let messageTemplate = this.emailTemplate[this.$i18n.locale].find((msgTemplate)=>{
           return msgTemplate.subject == this.message.subject
 
         })
@@ -184,11 +172,11 @@ export default {
     },
     clearAllFields(){
       let defaultMessage ={
-          subject:'',
-          body:''
+          subject: "",
+          body: ""
       }
       this.message = Object.assign(this.message, defaultMessage)
-      this.userEmail = ''
+      this.userEmail = ""
     }
   }
 }

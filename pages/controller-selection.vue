@@ -4,7 +4,6 @@
     elevation="0"
   >
     <v-card-title class="pa-0 pb-1">
-      <!-- @TODO: enable localization of string -->
       {{ $t("controller-selection.heading") }}
     </v-card-title>
 
@@ -16,7 +15,6 @@
       class="mt-1"
     >
       <v-col class="pb-0">
-        <!-- @TODO: enable localization of string -->
         <v-text-field
           class="rounded-pill"
           v-model="keyword"
@@ -44,35 +42,37 @@
         v-for="c, index in controller" 
         :key="index"
       >
-        <v-card class="fill-height rounded-xl">
+        <v-card class="d-flex flex-column fill-height rounded-xl">
 
-          <div class="d-flex flex-no-wrap align-center justify-space-around">
+          <div class="d-flex flex-no-wrap justify-space-around">
 
             <v-avatar class="ma-3" size="100" tile>
               <v-img :src="c.logo"></v-img>
             </v-avatar>
 
             <div>
-              <v-card-title>
+              <v-card-title class="pl-0">
                 {{ c.name }}
               </v-card-title>
 
-              <v-card-text>
+              <v-card-text class="pl-0">
                 {{ c.address.streetAddress }}<br />
                 {{ c.address.postalCode }},
                 {{ c.address.addressLocality }}<br />
                 {{ c.url }}<br />
               </v-card-text>
 
-              <v-card-actions>
-                <v-btn class="black--text rounded-pill px-5" color="primary" @click="direct('/', c['@id'])">
-                  <!-- @TODO: enable localization of string -->
-                  {{ $t("btn.labels.select") }}
-                </v-btn>
-              </v-card-actions>
-
             </div>
           </div>
+
+          <v-spacer />
+
+          <v-card-actions>
+            <v-btn class="black--text rounded-pill px-5 mx-auto" color="primary" @click="direct('/', c['@id'])">
+              {{ $t("btn.labels.select") }}
+            </v-btn>
+          </v-card-actions>
+
         </v-card>
       </v-col>
 
@@ -92,13 +92,12 @@
               <v-icon x-large>mdi-magnify</v-icon>
             </v-avatar>
 
-            <!-- @TODO enable localization of string -->
             <div>
-              <v-card-title>
+              <v-card-title class="pl-0">
                 {{ $t("controller-selection.search-hint.heading") }}
               </v-card-title>
 
-              <v-card-text>
+              <v-card-text class="pl-0">
                 {{ $t("controller-selection.search-hint.desc") }}
               </v-card-text>
             </div>

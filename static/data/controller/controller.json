@@ -27,34 +27,5 @@
         "jobTitle": "Data Protection Officer (DPO)"
       }
     ]
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "@id": "c630f98e-a9f2-413a-8c71-8436a6f60002",
-    "name": "AlexIT",
-    "telephone": "( 49 ) 30 56 35 33",
-    "faxNumber": "( 49 ) 30 56 35 34",
-    "email": "info@alex-it.com",
-    "url": "https://alex-it.com",
-    "logo": "/img/mocked-controller/alex.png",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": " Berlin, Germany",
-      "postalCode": "123456",
-      "streetAddress": "Kaiseralle"
-    },
-    "member": [
-      {
-        "@type": "Organization"
-      }
-    ],
-    "alumni": [
-      {
-        "@type": "Person",
-        "name": "Robert Moch",
-        "jobTitle": "Data Protection Officer (DPO)"
-      }
-    ]
   }
 ]
