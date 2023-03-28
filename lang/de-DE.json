@@ -226,7 +226,7 @@
   "consent": {
     "purposeDescription":"123",
     "dataDescription":"1233626551",
-    "desc": "Widerrufen Sie Ihre Einwilligung, indem Sie die Schieberegler nach links bewegen oder auf \"Alle Einwilligungen widerrufen\" klicken. Vergessen Sie nicht Ihre Änderungen zu übermitteln.",
+    "desc": "Widerrufen Sie Ihre Einwilligung, indem Sie die Schieberegler nach links schieben oder auf \"Alle Einwilligungen widerrufen\" klicken. Vergessen Sie nicht Ihre Änderungen zu übermitteln.",
     "consent-menu": "Einwilligungsmenü",
     "title": "Einwilligungsassistent",
     "location": "Ihre Standortdaten",
