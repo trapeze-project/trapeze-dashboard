@@ -120,8 +120,8 @@
       "discard-changes": "Écarter les modifications",
       "load-more": "En voir plus",
       "select": "Sélectionner",
-      "show-details": "Afficher les détails",
-      "hide-details": "Cacher les détails"
+      "show-details": "Plus",
+      "hide-details": "Moins"
     }
   },
   "snackbar": {
@@ -138,8 +138,8 @@
     "search-for-controller": "Rechercher un responsable du traitement",
     "search-for-glossary": "Rechercher un terme ou une définition dans le glossaire",
     "email-me-back": "Saisissez votre adresse électronique pour obtenir une réponse",
-    "choose-subject": "Choisir un sujet",
-    "message-body":"<Choisissez un sujet pour afficher un modèle de texte.>"
+    "choose-subject": "Choisir un objet",
+    "message-body":"<Choisissez un objet pour afficher un modèle de texte.>"
   },
   "updates": {
     "1": "Mise \u00e0 jour de la politique de confidentialit\u00e9",
@@ -318,9 +318,9 @@
   },
   "contact": {
     "heading": "Formulaire de contact",
-    "to": "À l'adresse",
+    "to": "À",
     "from": "De",
-    "subject": "Sujet",
+    "subject": "Objet",
     "message": "Message"
   },
   "help": {

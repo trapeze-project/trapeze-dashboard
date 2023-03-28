@@ -132,14 +132,14 @@
     }
   },
   "placeholder": {
-    "search-for-a-question-or-an-answer": "Suche nach einer Frage oder einer Antwort",
+    "search-for-a-question-or-an-answer": "Nach einer Frage oder einer Antwort suchen",
     "search-for-data": "Nach einer Datenkategorie suchen",
     "search-for-purpose": "Nach einem Zweck suchen",
     "search-for-controller": "Nach einem Verantwortlichen suchen",
-    "search-for-glossary": "Suche nach Begriffen im Glossar",
+    "search-for-glossary": "Nach einem Begriff oder einer Definition suchen",
     "email-me-back": "Geben Sie Ihre E-Mail-Adresse ein, um eine Antwort zu erhalten",
-    "choose-subject": "Wählen Sie ein Thema",
-    "message-body":"<Wählen Sie einen Betreff, um eine Textvorlage anzuzeigen.>"
+    "choose-subject": "Wählen Sie einen Betreff aus",
+    "message-body":"<Wählen Sie einen Betreff aus, um eine Textvorlage zu erhalten.>"
   },
   "updates": {
     "1": "Aktualisierung der Richtlinie",

@@ -47,7 +47,7 @@
       "data": "Dati",
       "purposes": "Scopi",
       "help": "Assistente al Consenso",
-      "faq": "FAQ",
+      "faq": "Domande Frequenti (FAQ)",
       "glossary":"Glossario"
     }
   },
@@ -76,10 +76,10 @@
     "descriptions": {
       "dpv:location": "Informazioni sulla posizione.",
       "dpv:name": "Informazioni sui nomi associati o utilizzati come nome o soprannome.",
-      "dpv:fingerprint": "Informazioni sulle impronte digitali utilizzate per scopi biometrici.",
-      "dpv:marketing": "Scopi associati alla conduzione del marketing in relazione all'organizzazione o ai prodotti o servizi, ad esempio la promozione, la vendita e la distribuzione.",
-      "dpv:advertising": "Finalità (scopi) associate alla conduzione della pubblicità, ossia un processo o un artefatto utilizzato per richiamare l'attenzione su un prodotto, un servizio, ecc. attraverso annunci, avvisi o altre forme di comunicazione.",
-      "dpv:identity-verification": "Finalità (scopi) associate alla verifica o all'autorizzazione dell'identità come forma di sicurezza.",
+      "dpv:fingerprint": "Informazioni sulle impronte digitali utilizzate per finalità (scopi) biometrici.",
+      "dpv:marketing": "Finalità (Scopi) associati alla conduzione del marketing in relazione all'organizzazione o ai prodotti o servizi, ad esempio la promozione, la vendita e la distribuzione.",
+      "dpv:advertising": "Finalità (Scopi) associate alla conduzione della pubblicità, ossia un processo o un artefatto utilizzato per richiamare l'attenzione su un prodotto, un servizio, ecc. attraverso annunci, avvisi o altre forme di comunicazione.",
+      "dpv:identity-verification": "Finalità (Scopi) associate alla verifica o all'autorizzazione dell'identità come forma di sicurezza.",
       "dpv:age": "Informazioni sull'età.",
       "dpv:gender": "Informazioni sul genere.",
       "dpv:country": "Informazioni sul paese, ad esempio residenza, viaggi.",
@@ -91,8 +91,8 @@
       "dpv:communication": "Informazioni comunicate da o a un individuo.",
       "dpv:commercialResearch": "Finalità (Scopi) associati alla conduzione di una ricerca in un contesto commerciale o con l'intenzione di commercializzarla, ad esempio in un'azienda o sponsorizzata da un'azienda.",
       "dpv:customerCare": "Il servizio clienti definisce le finalità (scopi) associati all'assistenza provvista, alla risoluzione di problemi, all'assicurazione della soddisfazione, ecc, in relazione ai servizi provveduti.",
-      "dpv:sellDataToThirdParties": "Finalità (Scopo) associate alla vendita o alla condivisione di dati o informazioni a terzi.",
-      "dpv:sellInsightsToThirdParties": "Finalità (Scopo) associate alla vendita o alla condivisione di informazioni ottenute dall'analisi dei dati."
+      "dpv:sellDataToThirdParties": "Finalità (Scopi) associate alla vendita o alla condivisione di dati o informazioni a terzi.",
+      "dpv:sellInsightsToThirdParties": "Finalità (Scopi) associate alla vendita o alla condivisione di informazioni ottenute dall'analisi dei dati."
     }
   },
   "btn": {
@@ -120,8 +120,8 @@
       "discard-changes": "Scartare le modifiche",
       "load-more": "Vedi di più",
       "select": "Selezionare",
-      "show-details": "Mostra i dettagli",
-      "hide-details": "Nascondi dettagli"
+      "show-details": "Mostra di più",
+      "hide-details": "Mostra di meno"
     }
   },
   "snackbar": {
@@ -132,7 +132,7 @@
     }
   },
   "placeholder": {
-    "search-for-a-question-or-an-answer": "Ricerca una domanda o una risposta",
+    "search-for-a-question-or-an-answer": "Ricerca di una domanda o una risposta",
     "search-for-data": "Ricerca di una categoria di dati",
     "search-for-purpose": "Ricerca di uno scopo",
     "search-for-controller": "Ricerca di un titolare del trattamento",
@@ -267,7 +267,7 @@
         "events": {
           "values": {
             "consent-request-policy-update": "Richiesta di consenso - Aggiornamento delle norme",
-            "consent-revocation": "Revoca del consenso",
+            "consent-revocation": "Ritira del consenso",
             "consent-giving": "Dare il consenso",
             "consent-request-account-creation": "Richiesta di consenso - Creazione account"
           }
