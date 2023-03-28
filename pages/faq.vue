@@ -40,9 +40,9 @@
             <template v-slot:actions>
               <v-icon class="icon"> $expand </v-icon>
             </template>
-            <span class="header" style="white-space: pre-line">{{
-              category
-            }}</span>
+            <span class="header newline-character-support" >
+              {{category}}
+            </span>
           </v-expansion-panel-header>
 
           <v-expansion-panel-content class="px-0">
@@ -56,13 +56,13 @@
                   <template v-slot:actions>
                     <v-icon class="icon" left> $expand </v-icon>
                   </template>
-                  <span class="header" style="white-space: pre-line">{{
-                    faq[$i18n.locale][category]["qnas"][qna].question
-                  }}</span>
+                  <span class="header newline-character-support" >
+                    {{faq[$i18n.locale][category]["qnas"][qna].question}}
+                  </span>
                 </v-expansion-panel-header>
 
                 <v-expansion-panel-content>
-                  <p style="white-space: pre-line">
+                  <p class="newline-character-support">
                     {{
                       faq[$i18n.locale][category]["qnas"][qna].answer
                     }}

@@ -5,3 +5,13 @@
 .clickable {
   cursor: pointer;
 }
+
+
+// add support to newline character (\n)
+.newline-character-support{
+  white-space: pre-line
+}
+// first line is always empty. it needs to be removed
+.newline-character-support:first-line{ 
+  line-height: 0;
+}

@@ -44,15 +44,16 @@
               <v-icon class="icon" left> $expand </v-icon>
             </template>
             
-            <span class="header" style="white-space: pre-line">{{
-              entry.term
-            }}</span>
+            <span class="header newline-character-support">
+              {{entry.term}}
+            </span>
           </v-expansion-panel-header>
 
           <v-expansion-panel-content>
-            <span>
+            <!-- first line is always empty -->
+            <p class="newline-character-support">
               {{ entry.definition }}
-            </span>
+            </p>
             <div
               v-if="
                 Object.values(entry['references']).length
