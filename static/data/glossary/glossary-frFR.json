@@ -16,14 +16,14 @@
       },
       "entry3": {
           "term": "Responsable du Traitement",
-          "definition": "Selon l'article 4, point 7) RGPD, les responsables du traitement sont chargés du traitement de vos données à caractère personnel. Ils doivent vous indiquer clairement comment et à quelles fins ils traitent vos données à caractère personnel.",
+          "definition": "Selon l'article 4, point 7) RGPD, les responsables du traitement sont chargés du traitement de vos données à caractère personnel. Ils doivent vous indiquer clairement comment et à quelles finalités ils traitent vos données à caractère personnel.",
           "references": {
               "ref1": "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX%3A32016R0679"
           }
       },
       "entry4": {
           "term": "Sous-traitant",
-          "definition": "Selon l'article 4, point 8) RGPD, les sous-traitants traitent vos données à caractère personnel.\n\n  Les sous-traitants peuvent également être des responsables du traitement.\n\n Toutefois, un sous-traitant ne doit pas nécessairement être un responsable du traitement.\n \n Si un sous-traitant n'est pas un responsable du traitement, le sous-traitant n'est généralement pas informé de la fin du traitement ni du type de données à caractère personnel qu'il traite pour le responsable du traitement.",
+          "definition": "Selon l'article 4, point 8) RGPD, les sous-traitants traitent vos données à caractère personnel.\n\n  Les sous-traitants peuvent également être des responsables du traitement.\n\n Toutefois, un sous-traitant ne doit pas nécessairement être un responsable du traitement.\n \n Si un sous-traitant n'est pas un responsable du traitement, le sous-traitant n'est généralement pas informé de la finalité du traitement ni du type de données à caractère personnel qu'il traite pour le responsable du traitement.",
           "references": {
               "ref1": "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX%3A32016R0679"
           }
@@ -85,8 +85,8 @@
           }
       },
       "entry13": {
-          "term": "Finalité (Fin)",
-          "definition": "Selon l'article 5, paragraphe 1, point b) RGPD, les responsables du traitement doivent vous indiquer clairement à quelles fins ils collectent et traitent vos données à caractère personnel.\n \n Après leur collecte, les données à caractère personnel ne peuvent être utilisées à d'autres fins.\n \n Il est par exemple illégal, en vertu du RGPD, de collecter des données à caractère personnel à des fins de recommandations d'emploi personnalisées et de les utiliser ultérieurement à des fins de marketing.",
+          "term": "Finalité",
+          "definition": "Selon l'article 5, paragraphe 1, point b) RGPD, les responsables du traitement doivent vous indiquer clairement à quelles finalités ils collectent et traitent vos données à caractère personnel.\n \n Après leur collecte, les données à caractère personnel ne peuvent être utilisées à d'autres finalités.\n \n Il est par exemple illégal, en vertu du RGPD, de collecter des données à caractère personnel à des finalités de recommandations d'emploi personnalisées et de les utiliser ultérieurement à des finalités de marketing.",
           "references": {
               "ref1": "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX%3A32016R0679"
           }
