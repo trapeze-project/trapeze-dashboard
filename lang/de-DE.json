@@ -1,18 +1,7 @@
 {
   "general": {
-    "cancel": "Abbrechen",
-    "revoke": "Alles widerrufen",
-    "category": "Daten",
-    "location": "Standort",
-    "advertising": "Werbung",
-    "warning": "Warnung",
-    "access": "Dateneinsicht Anfordern",
-    "unrelatedData": "Nicht verwandte Datenkategorie",
-    "bioData": "Biometrische Daten",
     "dpo": "Datenschutzbeauftragter",
-    "dpo-abbrev": "DSB",
-    "unrelatedDataText": "Es ist sehr ungew\u00f6hnlich, dass Fingerabdr\u00fccke zu Werbezwecken verwendet werden.",
-    "bioDataText": "Fingerabdr\u00fccke sind besonders sensibel, da sie es erm\u00f6glichen Ihre Identit\u00e4t zu stehlen. Es wird empfohlen, die Zustimmung zur Nutzung von Fingerabdr\u00fccken nur dann zu erteilen, wenn dies unbedingt erforderlich ist."
+    "dpo-abbrev": "DSB"
   },
   "landing": {
     "general": {
@@ -53,23 +42,9 @@
   },
   "btn": {
     "labels": {
-      "consent-guide": "Einwilligungsassistent",
-      "i-can-not-find-an-answer": "Ich finde keine Antwort auf meine Frage",
-      "undo-last-change": "letzte \u00c4nderungen r\u00fcckg\u00e4ngig machen",
       "submit-changes": "\u00c4nderungen übermitteln",
-      "see-changes": "\u00c4nderungen anzeigen",
-      "view-changes": "\u00c4nderungen anzeigen",
       "send-message": "Nachricht senden",
       "cancel": "Abbrechen",
-      "back": "Zur\u00fcck",
-      "next": "Weiter",
-      "view-issues": "Fragebogen Abschlie\u00dfen",
-      "fix": "Beheben",
-      "fix-all": "Alle beheben",
-      "ignore": "Ignorieren",
-      "ignore-all": "Alle ignorieren",
-      "view": "Ansehen",
-      "visit-website": "Webseite besuchen",
       "leave-anyway": "Trotzdem verlassen",
       "contact": "Kontakt",
       "withdraw-all-consent": "Alle Einwilligungen widerrufen",
@@ -82,7 +57,6 @@
   },
   "snackbar": {
     "msg": {
-      "please-complete-the-consent-guide": "Sie haben noch nicht alle Fragen beantwortet. Sie k\u00f6nnen den Fragebogen erst abschlie\u00dfen, wenn Sie alle Fragen beantwortet haben.",
       "submission-successful": "Speichern erfolgreich",
       "message-sent": "Nachricht gesendet"
     }
@@ -97,14 +71,8 @@
     "choose-subject": "Wählen Sie einen Betreff aus",
     "message-body":"<Wählen Sie einen Betreff aus, um eine Textvorlage zu erhalten.>"
   },
-  "updates": {
-    "1": "Aktualisierung der Richtlinie",
-    "2": "Widerruf der Einwilligung",
-    "3": "Einwilligungsanfrage"
-  },
   "sidebar-title": {
-    "navigation": "Men\u00fc",
-    "update": "Aktualisierungen"
+    "navigation": "Men\u00fc"
   },
   "qna": {
     "links-and-sources": "Links und Quellen",
@@ -113,10 +81,7 @@
   },
   "home": {
     "title": "Willkommen auf dem Datenschutz-Dashboard von TRAPEZE!",
-    "explore-btn": "Ansehen",
     "welcome-msg1": "Verwalten Sie Ihre Einwilligungen und bestimmen Sie selbst wie und wofür Ihre Daten verarbeitet werden.\n Klicken Sie unten auf eine Karte, um loszulegen.",
-    "welcome-msg2": "Sie können Ihre Einwilligung auf der Grundlage der folgenden Punkte erteilen oder widerrufen:",
-    "welcome-msg3": "Wir empfehlen die Verwendung des 'Einwilligungsassistenten', um Ihre Präferenzen auszudrücken und sie mit Ihren Zustimmungsentscheidungen abzugleichen.",
     "purpose": {
       "0": {
         "name": "Klicken Sie auf die 'Daten'-Karte, um zu sehen, welche Ihrer Daten verarbeitet werden.\n Widerrufen Sie Ihre Einwilligung, um die Verarbeitung bestimmter Datenkategorien zu stoppen."
@@ -147,30 +112,11 @@
         "title": "FAQ",
         "content": "See the FAQ"
       }
-    },
-    "consent": {
-      "consent-menu": "Einwilligungsmenü",
-      "title": "Einwilligungen",
-      "location": "Ihre Standortdaten",
-      "purpose": "Zwecke",
-      "text": "Standortdaten sind Daten, die uns sagen, wo Sie zu welcher Zeit waren. Wir erfassen Standortdaten \u00fcber GPS, wenn Sie uns in unserer mobilen ${we} App die Erlaubnis dazu erteilen. Wir verwenden Ihre Standortdaten, um unsere Werbung anzupassen, unser Marketing geografisch zu planen und Betrug durch geografische Identit\u00e4tspr\u00fcfung zu vermeiden.",
-      "text_ad": "Werbung ist ein integraler Bestandteil unseres Gesch\u00e4ftsmodells, der garantiert, dass wir Ihnen weiterhin lokale Restaurants empfehlen k\u00f6nnen. Wir verwenden die folgenden Datenkategorien, um Werbung anzupassen. Teilen Sie uns unten mit, welche Datenkategorien wir verwenden d\u00fcrfen, um unsere Werbung anzupassen.",
-      "ad": "Werbung",
-      "marketing": "Marketing",
-      "id": "Identit\u00e4tspr\u00fcfung",
-      "name": "Name",
-      "fingerprint": "Fingerabdr\u00fccke",
-      "bank": "Kontodaten",
-      "credit": "Kreditkartennummer",
-      "sensitivity": "Sensibilitat:",
-      "sensitivityText": "Sie k\u00f6nnen konfigurieren, wie sensibel diese Daten f\u00fcr Sie sind. Wir behandeln sehr sensible Daten gesondert und mit gro\u00dfer Sorgfalt",
-      "sensitivityHeader": "Wie sensibel sind diese Daten f\u00fcr Sie?"
     }
   },
   "PAlertLeaveDialog": {
     "dialog-title": "Möchten Sie diese Seite wirklich verlassen?",
-    "lose-changes-warning": "Sie müssen Ihre Auswahl einreichen.",
-    "lose-consent-helper-choices": "Sie haben noch nicht auf alle Warnungen reagiert."
+    "lose-changes-warning": "Sie müssen Ihre Auswahl einreichen."
   },
   "controller-selection": {
     "heading": "Wählen Sie einen Verantwortlichen, um Ihre Einwilligungen zu verwalten",
@@ -180,97 +126,18 @@
     }
   },
   "consent": {
-    "purposeDescription":"123",
-    "dataDescription":"1233626551",
     "desc": "Widerrufen Sie Ihre Einwilligung, indem Sie die Schieberegler nach links schieben oder auf \"Alle Einwilligungen widerrufen\" klicken. Vergessen Sie nicht Ihre Änderungen zu übermitteln.",
     "consent-menu": "Einwilligungsmenü",
-    "title": "Einwilligungsassistent",
-    "location": "Ihre Standortdaten",
-    "purposes": "Zwecke",
-    "text": "Standortdaten sind Daten, die uns sagen, wo Sie sich zu welcher Zeit aufgehalten haben. Wir erfassen Standortdaten \u00fcber GPS, wenn Sie uns dazu in unserer mobilen ${we} App die Erlaubnis erteilen. Wir verwenden Ihre Standortdaten, um unsere Werbung anzupassen, unser Marketing geografisch zu planen und um Betrug durch geografische Identit\u00e4tspr\u00fcfung zu verhindern.",
-    "text_ad": "Werbung ist ein integraler Bestandteil unseres Gesch\u00e4ftsmodells, der sicherstellt, dass wir Ihnen weiterhin unsere Restaurantempfehlungen zur Verf\u00fcgung stellen k\u00f6nnen. Wir verwenden die unten aufgef\u00fchrten Datenkategorien, um die Werbung zu personalisieren. Teilen Sie uns im Folgenden mit, welche Datenkategorien wir verwenden d\u00fcrfen, um unsere Werbung zu individualisieren.",
-    "ad": "Werbung",
-    "marketing": "Marketing",
-    "id": "Identit\u00e4tspr\u00fcfung",
-    "name": "Name",
-    "fingerprint": "Fingerabdr\u00fccke",
-    "bank": "Kontodaten",
-    "credit": "Kreditkartennummer",
     "sensitivity": "Sensibilit\u00e4t",
     "sensitivityText": "Sie k\u00f6nnen einstellen, wie sensibel diese Daten f\u00fcr Sie sind. Wir behandeln sehr sensible Daten anders und mit gro\u00dfer Sorgfalt",
     "sensitivityHeader": "Wie sensibel sind diese Daten f\u00fcr Sie?",
-    "warnings": "Konflikte",
-    "warning-msg-not-comfortable": "Im Einwilligungsassistenten haben Sie angegeben, dass Sie nicht damit einverstanden sind, dass wir (${we}) Ihre ${dataCategory}-Daten für ${purpose}-Zwecke verwenden. Aus der Einwilligung, die Sie uns erteilt haben, schließen wir jedoch, dass Sie damit doch einverstanden sind. Bitte überprüfen Sie Ihre Einwilligung.",
-    "warning-msg-no-opinion": "Im Einwilligungsassistenten haben Sie angegeben, dass Sie unentschlossen zu unserer (${we}) Verarbeitung Ihrer ${dataCategory}-Daten für ${purpose}-Zwecke haben. Aus der Einwilligung, die Sie uns erteilt haben, schließen wir jedoch, dass Sie damit einverstanden sind. Bitte überprüfen Sie Ihre Einwilligung.",
-    "issues": "Konflikte",
-    "issue": "Konflikt",
     "tab": {
       "labels": {
         "consent": "Datenschutzrichtlinie",
         "data-category": "Datenkategorien",
         "purpose": "Zwecke"
       }
-    },
-    "consent": {
-      "ptable": {
-        "header": {
-          "values": {
-            "date": "Datum",
-            "event": "Betreff",
-            "policy": "Politik"
-          }
-        },
-        "events": {
-          "values": {
-            "consent-request-policy-update": "Einwilligungsanfrage - Richtlinienaktualisierung",
-            "consent-revocation": "Widerruf der Einwilligung",
-            "consent-giving": "Einwilligungserteilung",
-            "consent-request-account-creation": "Einwilligungsanfrage - Kontoerstellung"
-          }
-        },
-        "policy": {
-          "active": "aktiv",
-          "inactive": "inaktiv"
-        },
-        "footer": {
-          "rows-per-page": "Zeilen pro Seite"
-        }
-      }
-    },
-    "data": {
-      "ptable": {
-        "header": {
-          "values": {
-            "data": "Datenkategorie",
-            "purposes": "Zwecke",
-            "issue": "Konflikte"
-          }
-        },
-        "footer": {
-          "rows-per-page": "Zeilen pro Seite"
-        }
-      }
-    },
-    "purpose": {
-      "ptable": {
-        "header": {
-          "values": {
-            "purpose": "Zweck",
-            "data": "Datenkategorien",
-            "issue": "Konflikte"
-          }
-        },
-        "footer": {
-          "rows-per-page": "Zeilen pro Seite"
-        }
-      }
     }
-  },
-  "consent-helper": {
-    "purpose": "Zweck",
-    "comfortable": "Einverstanden",
-    "no-opinion": "Unentschlossen",
-    "not-comfortable": "Nicht Einverstanden"
   },
   "contact": {
     "heading": "Kontakt-Formular",

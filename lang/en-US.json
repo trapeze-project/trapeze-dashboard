@@ -1,18 +1,7 @@
 {
   "general": {
-    "cancel": "Cancel",
-    "revoke": "Revoke all",
-    "category": "Data Categories",
-    "location": "Location Data",
-    "advertising": "Advertising",
-    "warning": "Issues",
-    "access": "Request Data Access",
-    "unrelatedData": "Unrelated Data Category",
-    "bioData": "Biometric Data",
     "dpo": "Data Protection Officer",
-    "dpo-abbrev": "DPO",
-    "unrelatedDataText": "It is very unusual that fingerprints are used for advertising purposes.",
-    "bioDataText": "Fingerprints are particularly sensitive, since they facilitate identity theft. It is recommended to only provide consent for fingerprint data where absolutely necessary."
+    "dpo-abbrev": "DPO"
   },
   "landing": {
     "general": {
@@ -53,23 +42,9 @@
   },
   "btn": {
     "labels": {
-      "consent-guide": "Consent Assistant",
-      "i-can-not-find-an-answer": "I can't find an answer",
-      "undo-last-change": "Undo last change",
       "submit-changes": "Submit Changes",
-      "see-changes": "See Changes",
-      "view-changes": "View Changes",
       "send-message": "Send message",
       "cancel": "Cancel",
-      "back": "Back",
-      "next": "Next",
-      "view-issues": "View issues",
-      "fix": "Fix",
-      "fix-all": "Fix All",
-      "ignore": "Ignore",
-      "ignore-all": "Ignore All",
-      "view": "View",
-      "visit-website": "Visit Website",
       "leave-anyway": "Leave Anyway",
       "contact": "Contact",
       "withdraw-all-consent": "Withdraw all consent",
@@ -82,7 +57,6 @@
   },
   "snackbar": {
     "msg": {
-      "please-complete-the-consent-guide": "You have not yet answered all questions. Please answer all questions to complete the questionnaire.",
       "submission-successful": "Submission Successful",
       "message-sent": "Message Sent"
     }
@@ -97,14 +71,8 @@
     "choose-subject": "Choose a subject",
     "message-body":"<Choose a subject to show a text template.>"
   },
-  "updates": {
-    "1": "Policy Update",
-    "2": "Consent Revocation",
-    "3": "Consent Request"
-  },
   "sidebar-title": {
-    "navigation": "Navigation",
-    "update": "Updates"
+    "navigation": "Navigation"
   },
   "qna": {
     "links-and-sources": "Links and Sources",
@@ -113,10 +81,7 @@
   },
   "home": {
     "title": "Welcome to the TRAPEZE privacy dashboard!",
-    "explore-btn": "View",
     "welcome-msg1": "Manage your consent and control the processing of your data.\n Click on a card below to get started.",
-    "welcome-msg2": "You can give or revoke your consent based on the following:",
-    "welcome-msg3": "We recommend using the 'Consent Assistant' to express your preferences and match them against your consent decisions.",
     "purpose": {
       "0": {
         "name": "Click on the Data Card to see which of your data is processed.\n Withdraw your consent to stop the processing of your data."
@@ -147,30 +112,11 @@
         "title": "FAQ",
         "content": "See the FAQ"
       }
-    },
-    "consent": {
-      "consent-menu": "Consent Menu",
-      "title": "Consent",
-      "location": "Your location data",
-      "purpose": "Purposes",
-      "text": "Location data is data that tells us where you have been at what time. We collect location data via GPS if you give permission in our ${we} mobile application. We use your location data to customize our advertising, to plan our marketing geographically, and to prevent fraud via geographic identity verification.",
-      "text_ad": "Advertising is an integral part of our business model, which guarantees that we can continue to provide you with our restaurant recommendations. We use the below data categories to customize advertising. Tell us below which data categories we may use to customize our advertising.",
-      "ad": "Advertisement",
-      "marketing": "Marketing",
-      "id": "Identity Verification",
-      "name": "Name",
-      "fingerprint": "Fingerprint",
-      "bank": "Bank Account",
-      "credit": "Credit Card Number",
-      "sensitivity": "Sensitivity:",
-      "sensitivityText": "You can configure how sensitive this data is to you. We treat very sensitive data differently and with extensive care",
-      "sensitivityHeader": "How sensitive is this data to you?"
     }
   },
   "PAlertLeaveDialog": {
     "dialog-title": "Are you sure you want to leave this page?",
-    "lose-changes-warning": "You need to submit your choices.",
-    "lose-consent-helper-choices": "You haven't addressed all warnings yet."
+    "lose-changes-warning": "You need to submit your choices."
   },
   "controller-selection": {
     "heading": "Select a data controller to manage your consent",
@@ -180,97 +126,18 @@
     }
   },
   "consent": {
-    "purposeDescription":"123",
-    "dataDescription":"1233626551",
     "desc": "Withdraw you consent by moving the sliders to the left or clicking on \"Withdraw all consent\". Do not forget to submit your changes.",
     "consent-menu": "Consent Menu",
-    "title": "Consent Assistant",
-    "location": "Your location data",
-    "purposes": "Purposes",
-    "text": "Location data is data that tells us where you have been at what time. We collect location data via GPS if you give permission in our ${we} mobile application. We use your location data to customize our advertising, to plan our marketing geographically, and to prevent fraud via geographic identity verification.",
-    "text_ad": "Advertising is an integral part of our business model, which guarantees that we can continue to provide you with our restaurant recommendations free of charge. We use the below data categories to customize advertising. Tell us below which data categories we may use to customize our advertising.",
-    "ad": "Advertisement",
-    "marketing": "Marketing",
-    "id": "Identity Verification",
-    "name": "Name",
-    "fingerprint": "Fingerprint",
-    "bank": "Bank Account",
-    "credit": "Credit Card Number",
     "sensitivity": "Sensitivity",
     "sensitivityText": "You can configure how sensitive this data is to you. We treat very sensitive data differently and with extensive care",
     "sensitivityHeader": "How sensitive is this data to you?",
-    "warnings": "Warnings",
-    "warning-msg-not-comfortable": "In the Consent Assistant, you have indicated that you are uncomfortable that we (${we}) use your ${dataCategory} data for ${purpose} purposes. However, the consent you gave us indicates that you are comfortable. Please review your consent.",
-    "warning-msg-no-opinion": "In the Consent Assistant, you have indicated that you do not have an opinion on our (${we}) processing of your ${dataCategory} data for ${purpose} purposes. However, the consent you gave us indicates that you are comfortable. Please review your consent.",
-    "issues": "issues",
-    "issue": "issue",
     "tab": {
       "labels": {
         "consent": "Privacy Policy",
         "data-category": "Data Category",
         "purpose": "Purpose"
       }
-    },
-    "consent": {
-      "ptable": {
-        "header": {
-          "values": {
-            "date": "Date",
-            "event": "Subject",
-            "policy": "Policy"
-          }
-        },
-        "events": {
-          "values": {
-            "consent-request-policy-update": "Consent Request - Policy Update",
-            "consent-revocation": "Consent Revocation",
-            "consent-giving": "Consent Giving",
-            "consent-request-account-creation": "Consent Request - Account Creation"
-          }
-        },
-        "policy": {
-          "active": "active",
-          "inactive": "inactive"
-        },
-        "footer": {
-          "rows-per-page": "Rows per page"
-        }
-      }
-    },
-    "data": {
-      "ptable": {
-        "header": {
-          "values": {
-            "data": "Data Category",
-            "purposes": "Purposes",
-            "issue": "Issue"
-          }
-        },
-        "footer": {
-          "rows-per-page": "Rows per page"
-        }
-      }
-    },
-    "purpose": {
-      "ptable": {
-        "header": {
-          "values": {
-            "purpose": "Purpose",
-            "data": "Data Categories",
-            "issue": "Issue"
-          }
-        },
-        "footer": {
-          "rows-per-page": "Rows per page"
-        }
-      }
     }
-  },
-  "consent-helper": {
-    "purpose": "Purpose",
-    "comfortable": "Comfortable",
-    "no-opinion": "No opinion",
-    "not-comfortable": "Not comfortable"
   },
   "contact": {
     "heading": "Contact form",
