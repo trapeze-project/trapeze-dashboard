@@ -89,6 +89,10 @@
 </template>
 
 <script>
+import DPV_Labels_descriptions_deDE from  "../../static/data/DPV/DPV_Labels_descriptions-deDE.json";
+import DPV_Labels_descriptions_enUS from  "../../static/data/DPV/DPV_Labels_descriptions-enUS.json";
+import DPV_Labels_descriptions_frFR from  "../../static/data/DPV/DPV_Labels_descriptions-frFR.json";
+import DPV_Labels_descriptions_itIT from  "../../static/data/DPV/DPV_Labels_descriptions-itIT.json";
 export default {
   props: {
     tabName: {
@@ -119,6 +123,12 @@ export default {
       componentKey: 0,
       modifiedUserChoices: {},
       max: 10,
+      Imported_DPV_Labels_descriptions: {
+        "en": DPV_Labels_descriptions_enUS,
+        "de": DPV_Labels_descriptions_deDE,
+        "it": DPV_Labels_descriptions_itIT,
+        "fr": DPV_Labels_descriptions_frFR
+      }
     };
   },
   watch: {
@@ -145,11 +155,14 @@ export default {
     },
   },
   computed: {
+    DPV_Labels_descriptions(){
+      return this.Imported_DPV_Labels_descriptions[this.$i18n.locale];
+    },
     parents() {
       return Object
         .keys(this.modifiedUserChoices)
         .filter((e) => {
-          let label = this.$t(`dpv.labels.${e}`).toLowerCase();
+          let label = this.DPV_Labels_descriptions.labels[e].toLowerCase();
           return label.includes((this.searchValue) ? this.searchValue : '');
         });
     }
