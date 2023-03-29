@@ -2,6 +2,7 @@
   <div>
     <v-app>
       <PNavBar />
+      <PNotification ref="notification" />
 
       <v-main >
         <v-container>
@@ -44,6 +45,7 @@
                 <PControllerView 
                   v-if="controller"
                   :controller="controller"
+                  :showNotification="showNotification"
                 />
               </v-navigation-drawer>
             </v-col>
@@ -69,10 +71,12 @@
             </v-col>
 
             <!-- Controller information column -->
+
             <v-col class="hidden-sm-and-down px-0" md="2" lg="2">
               <PControllerView
                 v-if="controller"
                 :controller="controller"
+                :showNotification="showNotification"
               />
             </v-col>
           </v-row>
@@ -135,6 +139,9 @@ export default {
     onScroll (event) {
       this.offsetTop = event.target.scrollingElement.scrollTop;
     },
+    showNotification(text,color){
+      this.$refs.notification.showNotification(text, color)
+    }
   }
 };
 </script>

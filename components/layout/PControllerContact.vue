@@ -1,6 +1,5 @@
 <template>
   <div>
-    <PNotification ref="notification" />
 
     <v-dialog 
       class="rounded-xl" 
@@ -111,6 +110,9 @@ import emailTemplateIT from  "../../static/data/emailTemplates/emailTemplate-itI
 
 export default {
   props: {
+    showNotification:{
+      type:Function
+    },
     companyName: {
       type: String,
       required: true
@@ -154,7 +156,7 @@ export default {
     sendMessage(){
       this.dialog = false;
       const text = this.$t("snackbar.msg.message-sent")
-      this.$refs.notification.showNotification(text, "green")
+      this.showNotification(text, "green")
       this.clearAllFields()
     },
     cancel(){

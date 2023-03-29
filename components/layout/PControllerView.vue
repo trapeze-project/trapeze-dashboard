@@ -23,6 +23,8 @@
         :company-name="controller.name"
         :btn-name="$t('btn.labels.contact')"
         :email="controller.email"
+        v-on="$listeners"
+        :showNotification="showNotification"
       />
     </v-card-text>
   </v-card>
@@ -31,6 +33,9 @@
 <script>
 export default {
   props: {
+    showNotification:{
+      type:Function
+    },
     controller: {
       type: Object,
       default: () => {}

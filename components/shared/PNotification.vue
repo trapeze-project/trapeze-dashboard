@@ -3,7 +3,7 @@
     <v-snackbar
       v-model="snackbar"
       top
-      :timeout="timeout"
+      :timeout="-1"
       :color="`${color} darken-1`"
     >
       {{ text }}
@@ -36,31 +36,29 @@ export default {
       timeout: 5000,
       valueDeterminate: 100,
       interval: null,
-      intervalDelay: 100,
-      steps: 0
+      intervalDelay: 100
     }
   },
   methods: {
     showNotification (text, color) {
+      clearInterval(this.interval)
+      this.timeout=0;
       this.text = text
       this.color = color
       this.timeout = text.split(' ').length * 2500
-      clearInterval(this.interval)
-      this.snackbar = true
+      // extend time 
       this.valueDeterminate = 100
-      this.steps = 0
+      this.snackbar = true
+
       this.interval = setInterval(() => {
         if (this.valueDeterminate <= 0) {
+          this.snackbar = false;
           clearInterval(this.interval)
         }
-        this.steps += 1
-        this.valueDeterminate = 100 * (this.timeout - this.steps * this.intervalDelay) / this.timeout
-      }, 100)
+        
+        this.valueDeterminate -= 100*this.intervalDelay / this.timeout
+      }, this.intervalDelay)
     }
   }
 }
 </script>
-
-<style>
-
-</style>
