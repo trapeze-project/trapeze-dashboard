@@ -180,7 +180,7 @@ export default {
       return this
         .children
         .filter((e) => {
-          let label = this.$t(`dpv.labels.${e}`).toLowerCase();
+          let label = this.DPV_Labels_descriptions.labels[e].toLowerCase();
           return label.includes((this.searchValue) ? this.searchValue : '');
         });        
     },

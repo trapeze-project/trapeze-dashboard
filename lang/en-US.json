@@ -51,50 +51,6 @@
       "glossary":"Glossary"
     }
   },
-  "dpv": {
-    "labels": {
-      "dpv:location": "Location",
-      "dpv:name": "Name",
-      "dpv:fingerprint": "Fingerprint",
-      "dpv:identityVerification": "Identity Verification",
-      "dpv:advertising": "Advertising",
-      "dpv:marketing": "Marketing",
-      "dpv:age": "Age",
-      "dpv:gender": "Gender",
-      "dpv:country": "Country",
-      "dpv:preference": "Preference",
-      "dpv:behavioral": "Behavioral",
-      "dpv:browserHistory": "Browsing History",
-      "dpv:browsingBehavior": "Browsing Behavior",
-      "dpv:academicResearch": "Academic Research",
-      "dpv:communication": "Communication",
-      "dpv:commercialResearch": "Commercial Research",
-      "dpv:customerCare": "Customer Care",
-      "dpv:sellDataToThirdParties": "Sell Data to Third Parties",
-      "dpv:sellInsightsToThirdParties": "Sell Insights to Third Parties"
-    },
-    "descriptions": {
-      "dpv:location": "Information about location.",
-      "dpv:name": "Information about names associated or used as given name or nickname.",
-      "dpv:fingerprint": "Information about fingerprint used for biometric purposes.",
-      "dpv:marketing": "Purposes associated with conducting marketing in relation to organisation or products or services e.g. promoting, selling, and distributing.",
-      "dpv:advertising": "Purposes associated with conducting advertising i.e. process or artefact used to call attention to a product, service, etc. through announcements, notices, or other forms of communication.",
-      "dpv:identity-verification": "Purposes associated with verifying or authorising identity as a form of security.",
-      "dpv:age": "Information about age.",
-      "dpv:gender": "Information about gender.",
-      "dpv:country": "Information about country e.g. residence, travel.",
-      "dpv:preference": "Information about preferences or interests.",
-      "dpv:behavioral": "Information about behavior or activity.",
-      "dpv:browserHistory": "Information about and including web browsing history.",
-      "dpv:browsingBehavior": "Information about browsing Behavior.",
-      "dpv:academicResearch": "Purposes associated with conducting or assisting with research conducted in an academic context e.g. within universities.",
-      "dpv:communication": "Information communicated from or to an individual.",
-      "dpv:commercialResearch": "Purposes associated with conducting research in a commercial setting or with intention to commercialise e.g. in a company or sponsored by a company.",
-      "dpv:customerCare": "Customer Care refers to purposes associated with purposes for providing assistance, resolving issues, ensuring satisfaction, etc. in relation to services provided.",
-      "dpv:sellDataToThirdParties": "Purposes associated with selling or sharing data or information to third parties.",
-      "dpv:sellInsightsToThirdParties": "Purposes associated with selling or sharing insights obtained from analysis of data."
-    }
-  },
   "btn": {
     "labels": {
       "consent-guide": "Consent Assistant",
