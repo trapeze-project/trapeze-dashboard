@@ -15,7 +15,8 @@
               />
 
               <span class="ml-3 me-auto">
-                {{ this.$t(`dpv.labels.${this.parent}`) }}
+                {{DPV_Labels_descriptions.labels[this.parent]}}
+
               </span>
 
               <div class="mr-3">
@@ -65,10 +66,10 @@
                           v-model="ChildrenSwitchesValues[child]"
                           @change="changeUserChoice(child)"
                         />
-                        <small>{{ $t(`dpv.labels.${child}`) }}</small>
+                        <small>{{DPV_Labels_descriptions.labels[child]}}</small>
                       </v-card-title>
                       <v-card-text>
-                        {{ $t(`dpv.descriptions.${child}`) }}
+                        {{DPV_Labels_descriptions.descriptions[child]}}
                       </v-card-text>
                     </v-card>            
                   </v-col>
@@ -122,10 +123,16 @@
         </v-row>
       </v-container>
     </v-card>
+
   </div>
 </template>
 
 <script>
+import DPV_Labels_descriptions_deDE from  "../../static/data/DPV/DPV_Labels_descriptions-deDE.json";
+import DPV_Labels_descriptions_enUS from  "../../static/data/DPV/DPV_Labels_descriptions-enUS.json";
+import DPV_Labels_descriptions_frFR from  "../../static/data/DPV/DPV_Labels_descriptions-frFR.json";
+import DPV_Labels_descriptions_itIT from  "../../static/data/DPV/DPV_Labels_descriptions-itIT.json";
+
 export default {
   props: {
     tabName: {
@@ -157,9 +164,18 @@ export default {
       userChoices: {},
       searchValue: "",
       max: 10,
+      Imported_DPV_Labels_descriptions: {
+        "en": DPV_Labels_descriptions_enUS,
+        "de": DPV_Labels_descriptions_deDE,
+        "it": DPV_Labels_descriptions_itIT,
+        "fr": DPV_Labels_descriptions_frFR
+      }
     };
   },
   computed: {
+    DPV_Labels_descriptions(){
+      return this.Imported_DPV_Labels_descriptions[this.$i18n.locale];
+    },
     slicedChildren() {
       return this
         .children
@@ -175,6 +191,7 @@ export default {
     }
   },
   created() {
+
     this.ChildrenSwitchesValues = Object.assign({}, this.subTree);
     this.parentSwitchValue = Object.values(
       this.ChildrenSwitchesValues
