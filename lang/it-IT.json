@@ -1,18 +1,7 @@
 {
   "general": {
-    "cancel": "Annulla",
-    "revoke": "Cancella tutto",
-    "category": "Categorie di dati",
-    "location": "Dati sulla posizione",
-    "advertising": "Pubblicit\u00e0",
-    "warning": "Problemi",
-    "access": "Richiesta di Accesso ai Dati",
-    "unrelatedData": "Categorie di dati non correlati",
-    "bioData": "Dati biometrici",
     "dpo": "Responsabile della Protezione dei Dati",
-    "dpo-abbrev": "DPD",
-    "unrelatedDataText": "E' molto insolito che le impronte digitali vengano utilizzate per scopi pubblicitari.",
-    "bioDataText": "Le impronte digitali sono particolarmente sensibili, in quanto facilitano il furto di identit\u00e0. Si raccomanda di fornire il consenso per i dati relativi alle impronte digitali solo se assolutamente necessario."
+    "dpo-abbrev": "DPD"
   },
   "landing": {
     "general": {
@@ -53,23 +42,9 @@
   },
   "btn": {
     "labels": {
-      "consent-guide": "Assistente al Consenso",
-      "i-can-not-find-an-answer": "Non riesco a trovare una risposta",
-      "undo-last-change": "Annulla le modifiche",
       "submit-changes": "Invia le modifiche",
-      "see-changes": "Guarda le modifiche",
-      "view-changes": "Visualizza le modifiche",
       "send-message": "Invia il messaggio",
       "cancel": "Annulla",
-      "back": "Indietro",
-      "next": "Avanti",
-      "view-issues": "Visualizza i problemi",
-      "fix": "Correggere",
-      "fix-all": "Correggere tutto",
-      "ignore": "Ignora",
-      "ignore-all": "Ignora tutto",
-      "view": "Visualizza",
-      "visit-website": "Visita il sito web",
       "leave-anyway": "Esci comunque",
       "contact": "Contatto",
       "withdraw-all-consent": "Ritirare tutti i consensi",
@@ -82,7 +57,6 @@
   },
   "snackbar": {
     "msg": {
-      "please-complete-the-consent-guide": "Non ha ancora risposto a tutte le domande. La preghiamo di rispondere a tutte le domande per completare il questionario.",
       "submission-successful": "Invio dei dati completato",
       "message-sent": "Messaggio inviato"
     }
@@ -97,14 +71,8 @@
     "choose-subject": "Scegliere un argomento",
     "message-body":"<Scegliere un argomento per mostrare un modello di testo.>"
   },
-  "updates": {
-    "1": "Aggiornamento della politica sulla privacy",
-    "2": "Revoca del consenso",
-    "3": "Richiesta di consenso"
-  },
   "sidebar-title": {
-    "navigation": "Navigazione",
-    "update": "Aggiornamenti"
+    "navigation": "Navigazione"
   },
   "qna": {
     "links-and-sources": "Link e fonti",
@@ -113,10 +81,7 @@
   },
   "home": {
     "title": "Benvenuti sul Dashboard sulla Privacy di TRAPEZE!",
-    "explore-btn": "Visualizza",
     "welcome-msg1": "Gestite il vostro consenso e controllate il trattamento dei vostri dati.\n Cliccate su una carta qui sotto per iniziare.",
-    "welcome-msg2": "È possibile dare o ritirare il vostro consenso in base a quanto segue:",
-    "welcome-msg3": "Si consiglia di utilizzare l'Assistente per il consenso per esprimere le vostre preferenze e confrontarle con le vostre decisioni sul consenso.",
     "purpose": {
       "0": {
         "name": "Fare clic sulla scheda 'Dati' per vedere quali vostri dati sono trattati.\n Ritirare il consenso per interrompere il trattamento dei vostri dati."
@@ -147,30 +112,11 @@
         "title": "FAQ",
         "content": "See the FAQ"
       }
-    },
-    "consent": {
-      "consent-menu": "Menu del Consenso",
-      "title": "Consenso",
-      "location": "I vostri dati sulla posizione",
-      "purpose": "Scopi",
-      "text": "I dati sulla posizione sono dati che ci dicono dove siete stati in quale momento. Raccogliamo i dati di localizzazione tramite GPS se l'utente fornisce l'autorizzazione nella nostra applicazione mobile ${we}. Utilizziamo i dati sulla posizione dell'utente per personalizzare la nostra pubblicità, per pianificare il nostro marketing a livello geografico e per prevenire le frodi attraverso la verifica dell'identità geografica.",
-      "text_ad": "La pubblicit\u00e0 \u00e8 parte integrante del nostro modello di business, che ci permette di continuare a fornirvi gratuitamente le nostre raccomandazioni sui ristoranti. Utilizziamo le seguenti categorie di dati per personalizzare la pubblicit\u00e0. Indicate qui di seguito quali categorie di dati possiamo utilizzare per personalizzare la nostra pubblicit\u00e0.",
-      "ad": "Pubblicit\u00e0",
-      "marketing": "Marketing",
-      "id": "Verifica dell'identit\u00e0",
-      "name": "Nome",
-      "fingerprint": "Impronta digitale",
-      "bank": "Conto corrente bancario",
-      "credit": "Numero di carta di credito",
-      "sensitivity": "Sensibilit\u00e0:",
-      "sensitivityText": "Potete configurare il grado di sensibilit\u00e0\u00a0 di questi dati. I dati molto sensibili vengono trattati in modo diverso e con grande attenzione.",
-      "sensitivityHeader": "Quanto sono sensibili questi dati per voi?"
     }
   },
   "PAlertLeaveDialog": {
     "dialog-title": "Sei sicuro di voler lasciare questa pagina?",
-    "lose-changes-warning": "Devi inviare le tue scelte.",
-    "lose-consent-helper-choices": "Non avete ancora risposto a tutti gli avvertimenti."
+    "lose-changes-warning": "Devi inviare le tue scelte."
   },
   "controller-selection": {
     "heading": "Selezionare un titolare del trattamento per gestire il vostro consenso",
@@ -180,97 +126,18 @@
     }
   },
   "consent": {
-    "purposeDescription":"123",
-    "dataDescription":"1233626551",
-    "desc": "Ritirare il consenso muovando i cursori verso sinistra o facendo clic sul bottone \"Ritirare tutti i consensi\". Non dimenticate di inviare le modifiche.",
+   "desc": "Ritirare il consenso muovando i cursori verso sinistra o facendo clic sul bottone \"Ritirare tutti i consensi\". Non dimenticate di inviare le modifiche.",
     "consent-menu": "Menu del Consenso",
-    "title": "Assistente al Consenso",
-    "location": "I vostri dati sulla posizione",
-    "purposes": "Scopi",
-    "text": "I dati sulla posizione sono dati che ci dicono dove siete stati in quale momento. Raccogliamo i dati di localizzazione tramite GPS se l'utente fornisce l'autorizzazione nella nostra applicazione mobile ${we}. Utilizziamo i dati sulla posizione dell'utente per personalizzare la nostra pubblicità, per pianificare il nostro marketing a livello geografico e per prevenire le frodi attraverso la verifica dell'identità geografica.",
-    "text_ad": "La pubblicit\u00e0 \u00e8 parte integrante del nostro modello di business, che ci permette di continuare a fornirvi le nostre raccomandazioni sui ristoranti. Utilizziamo le seguenti categorie di dati per personalizzare la pubblicit\u00e0. Indicate qui di seguito quali categorie di dati possiamo utilizzare per personalizzare la nostra pubblicit\u00e0.",
-    "ad": "Pubblicit\u00e0",
-    "marketing": "Marketing",
-    "id": "Verifica dell'identit\u00e0",
-    "name": "Nome",
-    "fingerprint": "Impronta digitale",
-    "bank": "Conto corrente bancario",
-    "credit": "Numero di carta di credito",
     "sensitivity": "Sensibilit\u00e0",
     "sensitivityText": "Potete configurare il grado di sensibilit\u00e0 di questi dati. I dati molto sensibili vengono trattati in modo diverso e con grande attenzione.",
     "sensitivityHeader": "Quanto sono sensibili questi dati per voi?",
-    "warnings": "Avvertenze",
-    "warning-msg-not-comfortable": "Nell'Assistente al Consenso, avete indicato di non sentirvi a vostro agio se noi (${we}) utilizziamo i vostri${dataCategory} dati per ${purpose}  scopi. Tuttavia, il consenso che ci avete dato indica che siete a vostro agio. Vi preghiamo di rivedere il vostro consenso.",
-    "warning-msg-no-opinion": "Nell'Assistente al Consenso, avete indicato di non avere un'opinione sul trattamento da parte nostra (${we}) dei vostri ${dataCategory} dati per  ${purpose} scopi. Tuttavia, il consenso che ci avete dato indica che siete a vostro agio. Vi preghiamo di rivedere il vostro consenso.",
-    "issues": "problemi",
-    "issue": "problem",
     "tab": {
       "labels": {
         "consent": "Informativa sulla privacy",
         "data-category": "Categoria di dati",
         "purpose": "Scopo"
       }
-    },
-    "consent": {
-      "ptable": {
-        "header": {
-          "values": {
-            "date": "Data",
-            "event": "Oggetto",
-            "policy": "Politica sulla privacy"
-          }
-        },
-        "events": {
-          "values": {
-            "consent-request-policy-update": "Richiesta di consenso - Aggiornamento delle norme",
-            "consent-revocation": "Ritira del consenso",
-            "consent-giving": "Dare il consenso",
-            "consent-request-account-creation": "Richiesta di consenso - Creazione account"
-          }
-        },
-        "policy": {
-          "active": "attivo",
-          "inactive": "non attivo"
-        },
-        "footer": {
-          "rows-per-page": "Righe per pagina"
-        }
-      }
-    },
-    "data": {
-      "ptable": {
-        "header": {
-          "values": {
-            "data": "Categoria di dati",
-            "purposes": "Scopi",
-            "issue": "Problema"
-          }
-        },
-        "footer": {
-          "rows-per-page": "Righe per pagina"
-        }
-      }
-    },
-    "purpose": {
-      "ptable": {
-        "header": {
-          "values": {
-            "purpose": "Scopo",
-            "data": "Categorie di dati",
-            "issue": "Problema"
-          }
-        },
-        "footer": {
-          "rows-per-page": "Righe per pagina"
-        }
-      }
     }
-  },
-  "consent-helper": {
-    "purpose": "Scopo",
-    "comfortable": "A mio agio",
-    "no-opinion": "Nessuna opinione",
-    "not-comfortable": "A disagio"
   },
   "contact": {
     "heading": "Modulo di contatto",

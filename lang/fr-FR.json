@@ -1,18 +1,7 @@
 {
   "general": {
-    "cancel": "Annuler",
-    "revoke": "R\u00e9voquer tout",
-    "category": "Cat\u00e9gories de donn\u00e9es",
-    "location": "Donn\u00e9es de localisation",
-    "advertising": "Publicit\u00e9s",
-    "warning": "Avertissement",
-    "access": "Demander l'Accès aux Données",
-    "unrelatedData": "Cat\u00e9gorie de donn\u00e9es non li\u00e9es",
-    "bioData": "Donn\u00e9es biom\u00e9triques",
     "dpo": "D\u00e9l\u00e9gu\u00e9 \u00e0 la protection des donn\u00e9es",
-    "dpo-abbrev": "DPD",
-    "unrelatedDataText": "Il est tr\u00e8s inhabituel que les empreintes digitales soient utilis\u00e9es \u00e0 des finalités publicitaires.",
-    "bioDataText": "Les empreintes digitales sont particuli\ufffdrement sensibles, car elles facilitent le vol d'identit\u00e9. Il est recommand\u00e9 de ne donner son consentement pour les donn\u00e9es dactyloscopiques qu'en cas d'absolu nécessité."
+    "dpo-abbrev": "DPD"
   },
   "landing": {
     "general": {
@@ -53,23 +42,9 @@
   },
   "btn": {
     "labels": {
-      "consent-guide": "Assistant de Consentement",
-      "i-can-not-find-an-answer": "Je ne trouve pas de r\u00e9ponse",
-      "undo-last-change": "Annuler la derni\u00e8re modification",
       "submit-changes": "Soumettre les modifications",
-      "see-changes": "Voir les modifications",
-      "view-changes": "Afficher les modifications",
       "send-message": "Envoyer un message",
       "cancel": "Annuler",
-      "back": "Pr\u00e9c\u00e9dent",
-      "next": "Suivant",
-      "view-issues": "Afficher les probl\u00e8mes",
-      "fix": "R\u00e9parer",
-      "fix-all": "R\u00e9parer tout",
-      "ignore": "Ignorer",
-      "ignore-all": "Ignorer tout",
-      "view": "Voir",
-      "visit-website": "Visitez le site web",
       "leave-anyway": "Quitter quand même",
       "contact": "Nous contacter",
       "withdraw-all-consent": "Retirer tout le consentement",
@@ -82,7 +57,6 @@
   },
   "snackbar": {
     "msg": {
-      "please-complete-the-consent-guide": "Vous n'avez pas encore r\u00e9pondu \u00e0 toutes les questions. Veuillez r\u00e9pondre \u00e0 toutes les questions pour compl\u00e9ter le questionnaire.",
       "submission-successful": "Soumission r\u00e9ussie",
       "message-sent": "Message envoy\u00e9"
     }
@@ -97,14 +71,8 @@
     "choose-subject": "Choisir un objet",
     "message-body":"<Choisissez un objet pour afficher un modèle de texte.>"
   },
-  "updates": {
-    "1": "Mise \u00e0 jour de la politique de confidentialit\u00e9",
-    "2": "R\u00e9vocation du consentement",
-    "3": "Demande de consentement"
-  },
   "sidebar-title": {
-    "navigation": "Navigation",
-    "update": "Mises \u00e0 jour"
+    "navigation": "Navigation"
   },
   "qna": {
     "links-and-sources": "Liens et sources",
@@ -113,10 +81,7 @@
   },
   "home": {
     "title": "Bienvenue sur le tableau de bord de protection des données de TRAPEZE!",
-    "explore-btn": "Voir",
     "welcome-msg1": "Gérez votre consentement et contrôlez le traitement de vos données.\n Cliquez sur une carte ci-dessous pour commencer.",
-    "welcome-msg2": "Vous pouvez donner ou révoquer votre consentement en fonction des éléments suivants:",
-    "welcome-msg3": "Nous vous recommandons d'utiliser l'Assistant de Consentement pour exprimer vos préférences et les faire correspondre à vos décisions de consentement.",
     "purpose": {
       "0": {
         "name": "Cliquez sur la carte 'Données' pour savoir lesquelles de vos données sont traitées.\n Retirez votre consentement pour mettre fin au traitement de vos données."
@@ -147,30 +112,11 @@
         "title": "FAQ",
         "content": "See the FAQ"
       }
-    },
-    "consent": {
-      "consent-menu": "Menu Consentement",
-      "title": "Consentement",
-      "location": "Vos donn\u00e9es de localisation",
-      "purpose": "Finalités",
-      "text": "Les données de localisation sont des données qui nous indiquent où vous avez été à quel moment. Nous collectons les données de localisation par GPS si vous nous en donnez l'autorisation dans notre application mobile ${we}. Nous utilisons vos données de localisation pour personnaliser nos publicités, pour planifier notre marketing de manière géographique et pour prévenir la fraude via la vérification géographique de l'identité.",
-      "text_ad": "La publicit\u00e9 fait partie int\u00e9grante de notre mod\u00e8le \u00e9conomique, ce qui garantit que nous pouvons continuer \u00e0 vous fournir gratuitement nos recommandations de restaurants. Nous utilisons les cat\u00e9gories de donn\u00e9es ci-dessous pour personnaliser la publicit\u00e9. Dites-nous ci-dessous quelles cat\u00e9gories de donn\u00e9es nous pouvons utiliser pour personnaliser notre publicit\u00e9.",
-      "ad": "Publicit\u00e9",
-      "marketing": "Marketing",
-      "id": "V\u00e9rification de l'identit\u00e9",
-      "name": "Nom",
-      "fingerprint": "Empreinte digitale",
-      "bank": "Compte en banque",
-      "credit": "Num\u00e9ro de carte de cr\u00e9dit",
-      "sensitivity": "Sensibilit\u00e9:",
-      "sensitivityText": "Vous pouvez configurer la sensibilit\u00e9 de ces donn\u00e9es pour vous. Nous traitons les donn\u00e9es tr\u00e8s sensibles diff\u00e9remment et avec le plus grand soin",
-      "sensitivityHeader": "Quel est le degr\u00e9 de sensibilit\u00e9 de ces donn\u00e9es pour vous ?"
     }
   },
   "PAlertLeaveDialog": {
     "dialog-title": "Voulez-vous vraiment quitter cette page ?",
-    "lose-changes-warning": "Vous devez soumettre vos choix.",
-    "lose-consent-helper-choices": "Vous n'avez pas encore répondu à tous les avertissements."
+    "lose-changes-warning": "Vous devez soumettre vos choix."
   },
   "controller-selection": {
     "heading": "Sélectionnez un responsable du traitement pour gérer votre consentement",
@@ -180,97 +126,18 @@
     }
   },
   "consent": {
-    "purposeDescription":"123",
-    "dataDescription":"1233626551",
     "desc": "Retirez votre consentement en déplaçant les curseurs vers la gauche ou en cliquant sur le bouton \"Retirer tout le consentement\". N'oubliez pas de soumettre vos modifications.",
     "consent-menu": "Menu Consentement",
-    "title": "Assistant de Consentement",
-    "location": "Vos donn\u00e9es de localisation",
-    "purposes": "Fins",
-    "text": "Les données de localisation sont des données qui nous indiquent où vous avez été à quel moment. Nous collectons les données de localisation par GPS si vous nous en donnez l'autorisation dans notre application mobile ${we}. Nous utilisons vos données de localisation pour personnaliser nos publicités, pour planifier notre marketing de manière géographique et pour prévenir la fraude via la vérification géographique de l'identité.",
-    "text_ad": "La publicit\u00e9 fait partie int\u00e9grante de notre mod\u00e8le \u00e9conomique, qui garantit que nous pouvons continuer \u00e0 vous fournir nos recommandations de restaurants. Nous utilisons les cat\u00e9gories de donn\u00e9es ci-dessous pour personnaliser la publicit\u00e9. Dites-nous ci-dessous quelles cat\u00e9gories de donn\u00e9es nous pouvons utiliser pour personnaliser notre publicit\u00e9.",
-    "ad": "Publicit\u00e9",
-    "marketing": "Marketing",
-    "id": "V\u00e9rification de l'identit\u00e9",
-    "name": "Nom",
-    "fingerprint": "Empreinte digitale",
-    "bank": "Compte bancaire",
-    "credit": "Num\u00e9ro de la carte de cr\u00e9dit",
     "sensitivity": "Sensibilit\u00e9",
     "sensitivityText": "Vous pouvez configurer le degr\u00e9 de sensibilit\u00e9 de ces donn\u00e9es. Nous traitons les donn\u00e9es tr\u00e8s sensibles diff\u00e9remment et avec une attention particuli\u00e8re.",
     "sensitivityHeader": "Dans quelle mesure ces donn\u00e9es sont-elles sensibles pour vous ?",
-    "warnings": "Problèmes",
-    "warning-msg-not-comfortable": "Dans l'Assistant de Consentement, vous avez indiqué que vous n'étiez pas confortable avec le fait que nous (${we}) utilisions vos données ${dataCategory} à des finalités ${purpose}. Cependant, le consentement que vous nous avez donné indique que vous êtes confortable. Veuillez revoir votre consentement.",
-    "warning-msg-no-opinion": "Dans l'Assistant de Consentement, vous avez indiqué que vous n'avez pas d'opinion sur notre (${we}) traitement de vos données ${dataCategory} à des finalités ${purpose}. Cependant, le consentement que vous nous avez donné indique que vous êtes à l'aise. Veuillez revoir votre consentement.",
-    "issues": "probl\u00e8mes",
-    "issue": "probl\u00e8me",
     "tab": {
       "labels": {
         "consent": "Politique de confidentialité",
         "data-category": "Cat\u00e9gorie de donn\u00e9es",
         "purpose": "Finalité"
       }
-    },
-    "consent": {
-      "ptable": {
-        "header": {
-          "values": {
-            "date": "Date",
-            "event": "Sujet",
-            "policy": "Politique de confidentialit\u00e9"
-          }
-        },
-        "events": {
-          "values": {
-            "consent-request-policy-update": "Demande de consentement - Mise \u00e0 jour de la politique de confidentialit\u00e9",
-            "consent-revocation": "R\u00e9vocation du consentement",
-            "consent-giving": "Donner son consentement",
-            "consent-request-account-creation": "Demande de consentement - Cr\u00e9ation de compte"
-          }
-        },
-        "policy": {
-          "active": "actif",
-          "inactive": "inactif"
-        },
-        "footer": {
-          "rows-per-page": "Lignes par page"
-        }
-      }
-    },
-    "data": {
-      "ptable": {
-        "header": {
-          "values": {
-            "data": "Catégorie de donn\u00e9es",
-            "purposes": "Finalités",
-            "issue": "Probl\u00e8me"
-          }
-        },
-        "footer": {
-          "rows-per-page": "Lignes par page"
-        }
-      }
-    },
-    "purpose": {
-      "ptable": {
-        "header": {
-          "values": {
-            "purpose": "Finalités",
-            "data": "Catégories de donn\u00e9es",
-            "issue": "Probl\u00e8me"
-          }
-        },
-        "footer": {
-          "rows-per-page": "Lignes par page"
-        }
-      }
     }
-  },
-  "consent-helper": {
-    "purpose": "Finalités",
-    "comfortable": "À l'aise",
-    "no-opinion": "Sans opinion",
-    "not-comfortable": "Pas à l'aise"
   },
   "contact": {
     "heading": "Formulaire de contact",
