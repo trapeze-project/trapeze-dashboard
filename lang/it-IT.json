@@ -156,5 +156,10 @@
   "sensitivity": {
     "low": "Non sensibile",
     "high": "Molto sensibile"
+  },
+  "error":{
+    "page-not-found":"Page Not Found",
+    "an-error-occurred":"An error occurred",
+    "go-to-home":"Go To Home"
   }
 }
