@@ -11,6 +11,11 @@
 		"dpv-pd:browserHistory": "Browser-Verlauf",
 		"dpv-pd:browsingBehavior": "Browsing-Verhalten",
 		"dpv-pd:communication": "Kommunikation",
+		"dpvo-pd:Identifying": "Identifying",
+		"dpvo-pd:Demographic": "Demographic",
+		"dpvo-pd:Contact": "Contact",
+		"dpvo-pd:Financial": "Financial",
+		"dpvo-pd:Credit": "Credit",
 		"dpv:identityVerification": "Identit\u00e4tspr\u00fcfung",
 		"dpv:advertising": "Werbung",
 		"dpv:marketing": "Marketing",
@@ -18,7 +23,10 @@
 		"dpv:commercialResearch": "Kommerzielle Forschung",
 		"dpv:customerCare": "Kundenbetreuung",
 		"dpv:sellDataToThirdParties": "Verkauf an Dritte (Daten)",
-		"dpv:sellInsightsToThirdParties": "Verkauf an Dritte (Einsichten)"
+		"dpv:sellInsightsToThirdParties": "Verkauf an Dritte (Einsichten)",
+		"dpvo:IdentityVerification": "Identity Verification",
+		"dpvo:ServicePersonalisation": "Service Personalisation",
+		"dpvo:OptimisationForConsumer": "Optimisation for Consumer"
 	},
 	"descriptions": {
 		"dpv-pd:location": "Informationen zum Standort.",
@@ -32,6 +40,11 @@
 		"dpv-pd:browserHistory": "Informationen über und einschließlich des Web-Browsing-Verlaufs.",
 		"dpv-pd:browsingBehavior": "Informationen zum Browsing-Verhalten.",
 		"dpv-pd:communication": "Informationen, die von oder an eine Person übermittelt werden.",
+		"dpvo-pd:Identifying": "Information that uniquely or semi-uniquely identifies an individual or a group",
+		"dpvo-pd:Demographic": "Information about demography and demographic characteristics",
+		"dpvo-pd:Contact": "Information about contacts or used for contacting e.g. email address or phone number",
+		"dpvo-pd:Financial": "Information about finance including monetary characteristics and transactions",
+		"dpvo-pd:Credit": "Information about reputation with regards to money",
 		"dpv:marketing": "Zwecke, die mit der Durchführung von Marketing in Bezug auf Organisationen, Produkte oder Dienstleistungen verbunden sind, z. B. Werbung, Verkauf und Vertrieb.",
 		"dpv:advertising": "Zwecke, die mit der Durchführung von Werbung verbunden sind, d. h. Verfahren oder Artefakte, die dazu dienen, die Aufmerksamkeit auf ein Produkt, eine Dienstleistung usw. durch Ankündigungen, Hinweise oder andere Kommunikationsformen zu lenken.",
 		"dpv:identity-verification": "Zwecke im Zusammenhang mit der Überprüfung oder Autorisierung der Identität als eine Form der Sicherheit.",
@@ -39,6 +52,9 @@
 		"dpv:commercialResearch": "Zwecke im Zusammenhang mit der Durchführung von Forschungsarbeiten in einem kommerziellen Umfeld oder mit der Absicht der Kommerzialisierung, z. B. in einem Unternehmen oder von einem Unternehmen gesponsert.",
 		"dpv:customerCare": "Kundenbetreuung bezieht sich auf Zwecke, die mit der Bereitstellung von Hilfe, der Lösung von Problemen, der Sicherstellung der Zufriedenheit usw. in Bezug auf die erbrachten Dienstleistungen verbunden sind.",
 		"dpv:sellDataToThirdParties": "Zwecke, die mit dem Verkauf oder der Weitergabe von Daten oder Informationen an Dritte verbunden sind.",
-		"dpv:sellInsightsToThirdParties": "Zwecke im Zusammenhang mit dem Verkauf oder der Weitergabe von Erkenntnissen, die aus der Analyse von Daten gewonnen wurden."
+		"dpv:sellInsightsToThirdParties": "Zwecke im Zusammenhang mit dem Verkauf oder der Weitergabe von Erkenntnissen, die aus der Analyse von Daten gewonnen wurden.",
+		"dpvo:IdentityVerification": "Purposes associated with verifying or authorising identity as a form of security",
+		"dpvo:ServicePersonalisation": "Purposes associated with providing personalisation within services or product or activities",
+		"dpvo:OptimisationForConsumer": "Purposes associated with optimisation of activities and services for consumer or user"
 	}
 }

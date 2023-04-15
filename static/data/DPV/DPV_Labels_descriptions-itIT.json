@@ -11,6 +11,11 @@
 		"dpv-pd:browserHistory": "Cronologia di navigazione",
 		"dpv-pd:browsingBehavior": "Comportamento di navigazione",
 		"dpv-pd:communication": "Comunicazione",
+		"dpvo-pd:Identifying": "Identifying",
+		"dpvo-pd:Demographic": "Demographic",
+		"dpvo-pd:Contact": "Contact",
+		"dpvo-pd:Financial": "Financial",
+		"dpvo-pd:Credit": "Credit",
 		"dpv:identityVerification": "Verifica dell'identit\u00e0",
 		"dpv:advertising": "Pubblicit\u00e0",
 		"dpv:marketing": "Marketing",
@@ -18,7 +23,10 @@
 		"dpv:commercialResearch": "Ricerca commerciale",
 		"dpv:customerCare": "Servizio clienti",
 		"dpv:sellDataToThirdParties": "Vendita di dati a terzi",
-		"dpv:sellInsightsToThirdParties": "Vendita di informazioni a terzi"
+		"dpv:sellInsightsToThirdParties": "Vendita di informazioni a terzi",
+		"dpvo:IdentityVerification": "Identity Verification",
+		"dpvo:ServicePersonalisation": "Service Personalisation",
+		"dpvo:OptimisationForConsumer": "Optimisation for Consumer"
 	},
 	"descriptions": {
 		"dpv-pd:location": "Informazioni sulla posizione.",
@@ -32,6 +40,11 @@
 		"dpv-pd:browserHistory": "Informazioni sulla cronologia di navigazione web, compresa.",
 		"dpv-pd:browsingBehavior": "Informazioni sul comportamento di navigazione.",
 		"dpv-pd:communication": "Informazioni comunicate da o a un individuo.",
+		"dpvo-pd:Identifying": "Information that uniquely or semi-uniquely identifies an individual or a group",
+		"dpvo-pd:Demographic": "Information about demography and demographic characteristics",
+		"dpvo-pd:Contact": "Information about contacts or used for contacting e.g. email address or phone number",
+		"dpvo-pd:Financial": "Information about finance including monetary characteristics and transactions",
+		"dpvo-pd:Credit": "Information about reputation with regards to money",
 		"dpv:marketing": "Finalità (Scopi) associati alla conduzione del marketing in relazione all'organizzazione o ai prodotti o servizi, ad esempio la promozione, la vendita e la distribuzione.",
 		"dpv:advertising": "Finalità (Scopi) associate alla conduzione della pubblicità, ossia un processo o un artefatto utilizzato per richiamare l'attenzione su un prodotto, un servizio, ecc. attraverso annunci, avvisi o altre forme di comunicazione.",
 		"dpv:identity-verification": "Finalità (Scopi) associate alla verifica o all'autorizzazione dell'identità come forma di sicurezza.",
@@ -39,6 +52,9 @@
 		"dpv:commercialResearch": "Finalità (Scopi) associati alla conduzione di una ricerca in un contesto commerciale o con l'intenzione di commercializzarla, ad esempio in un'azienda o sponsorizzata da un'azienda.",
 		"dpv:customerCare": "Il servizio clienti definisce le finalità (scopi) associati all'assistenza provvista, alla risoluzione di problemi, all'assicurazione della soddisfazione, ecc, in relazione ai servizi provveduti.",
 		"dpv:sellDataToThirdParties": "Finalità (Scopi) associate alla vendita o alla condivisione di dati o informazioni a terzi.",
-		"dpv:sellInsightsToThirdParties": "Finalità (Scopi) associate alla vendita o alla condivisione di informazioni ottenute dall'analisi dei dati."
+		"dpv:sellInsightsToThirdParties": "Finalità (Scopi) associate alla vendita o alla condivisione di informazioni ottenute dall'analisi dei dati.",
+		"dpvo:IdentityVerification": "Purposes associated with verifying or authorising identity as a form of security",
+		"dpvo:ServicePersonalisation": "Purposes associated with providing personalisation within services or product or activities",
+		"dpvo:OptimisationForConsumer": "Purposes associated with optimisation of activities and services for consumer or user"
 	}
 }

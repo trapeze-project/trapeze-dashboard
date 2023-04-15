@@ -11,6 +11,11 @@
 		"dpv-pd:browserHistory": "Historique de la navigation",
 		"dpv-pd:browsingBehavior": "Comportement de navigation",
 		"dpv-pd:communication": "Communication",
+		"dpvo-pd:Identifying": "Identifying",
+		"dpvo-pd:Demographic": "Demographic",
+		"dpvo-pd:Contact": "Contact",
+		"dpvo-pd:Financial": "Financial",
+		"dpvo-pd:Credit": "Credit",
 		"dpv:identityVerification": "V\u00e9rification de l'identit\u00e9",
 		"dpv:advertising": "Publicit\u00e9s",
 		"dpv:marketing": "Marketing",
@@ -18,7 +23,10 @@
 		"dpv:commercialResearch": "Recherche commerciale",
 		"dpv:customerCare": "Service clientèle",
 		"dpv:sellDataToThirdParties": "Vente de données à des tiers",
-		"dpv:sellInsightsToThirdParties": "Vente de renseignements à des tiers"
+		"dpv:sellInsightsToThirdParties": "Vente de renseignements à des tiers",
+		"dpvo:IdentityVerification": "Identity Verification",
+		"dpvo:ServicePersonalisation": "Service Personalisation",
+		"dpvo:OptimisationForConsumer": "Optimisation for Consumer"
 	},
 	"descriptions": {
 		"dpv-pd:location": "Informations sur la localisation.",
@@ -32,6 +40,11 @@
 		"dpv-pd:browserHistory": "Informations relatives à l'historique de la navigation sur le web, y compris l'historique de cette navigation.",
 		"dpv-pd:browsingBehavior": "Informations sur le comportement de navigation.",
 		"dpv-pd:communication": "Informations communiquées par une personne ou à une personne.",
+		"dpvo-pd:Identifying": "Information that uniquely or semi-uniquely identifies an individual or a group",
+		"dpvo-pd:Demographic": "Information about demography and demographic characteristics",
+		"dpvo-pd:Contact": "Information about contacts or used for contacting e.g. email address or phone number",
+		"dpvo-pd:Financial": "Information about finance including monetary characteristics and transactions",
+		"dpvo-pd:Credit": "Information about reputation with regards to money",
 		"dpv:marketing": "Les finalités associés à la conduite du marketing en relation avec l'organisation, les produits ou les services, par exemple la promotion, la vente et la distribution.",
 		"dpv:advertising": "Les finalités associés à la publicité, c'est-à-dire le processus ou l'artefact utilisé pour attirer l'attention sur un produit, un service, etc. par le biais d'annonces, d'avis ou d'autres formes de communication.",
 		"dpv:identity-verification": "Finalités associées à la vérification ou à l'autorisation de l'identité en tant que forme de sécurité.",
@@ -39,6 +52,9 @@
 		"dpv:commercialResearch": "Finalités associées à la réalisation de recherches dans un cadre commercial ou avec l'intention de commercialiser, par exemple au sein d'une entreprise ou parrainées par une entreprise.",
 		"dpv:customerCare": "Le service clientèle désigne les finalités associées à la fourniture d'une assistance, à la résolution de problèmes, à l'assurance de la satisfaction, etc. en rapport avec les services fournis.",
 		"dpv:sellDataToThirdParties": "Finalités associés à la vente ou au partage de données ou d'informations avec des tiers.",
-		"dpv:sellInsightsToThirdParties": "Finalités associées à la vente ou au partage des connaissances obtenues à partir de l'analyse des données."
+		"dpv:sellInsightsToThirdParties": "Finalités associées à la vente ou au partage des connaissances obtenues à partir de l'analyse des données.",
+		"dpvo:IdentityVerification": "Purposes associated with verifying or authorising identity as a form of security",
+		"dpvo:ServicePersonalisation": "Purposes associated with providing personalisation within services or product or activities",
+		"dpvo:OptimisationForConsumer": "Purposes associated with optimisation of activities and services for consumer or user"
 	}
 }

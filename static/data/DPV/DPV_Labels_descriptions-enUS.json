@@ -11,6 +11,11 @@
 		"dpv-pd:browserHistory": "Browsing History",
 		"dpv-pd:browsingBehavior": "Browsing Behavior",
 		"dpv-pd:communication": "Communication",
+		"dpvo-pd:Identifying": "Identifying",
+		"dpvo-pd:Demographic": "Demographic",
+		"dpvo-pd:Contact": "Contact",
+		"dpvo-pd:Financial": "Financial",
+		"dpvo-pd:Credit": "Credit",
 		"dpv:identityVerification": "Identity Verification",
 		"dpv:advertising": "Advertising",
 		"dpv:marketing": "Marketing",
@@ -18,7 +23,10 @@
 		"dpv:commercialResearch": "Commercial Research",
 		"dpv:customerCare": "Customer Care",
 		"dpv:sellDataToThirdParties": "Sell Data to Third Parties",
-		"dpv:sellInsightsToThirdParties": "Sell Insights to Third Parties"
+		"dpv:sellInsightsToThirdParties": "Sell Insights to Third Parties",
+		"dpvo:IdentityVerification": "Identity Verification",
+		"dpvo:ServicePersonalisation": "Service Personalisation",
+		"dpvo:OptimisationForConsumer": "Optimisation for Consumer"
 	},
 	"descriptions": {
 		"dpv-pd:location": "Information about location.",
@@ -32,6 +40,11 @@
 		"dpv-pd:browserHistory": "Information about and including web browsing history.",
 		"dpv-pd:browsingBehavior": "Information about browsing Behavior.",
 		"dpv-pd:communication": "Information communicated from or to an individual.",
+		"dpvo-pd:Identifying": "Information that uniquely or semi-uniquely identifies an individual or a group",
+		"dpvo-pd:Demographic": "Information about demography and demographic characteristics",
+		"dpvo-pd:Contact": "Information about contacts or used for contacting e.g. email address or phone number",
+		"dpvo-pd:Financial": "Information about finance including monetary characteristics and transactions",
+		"dpvo-pd:Credit": "Information about reputation with regards to money",
 		"dpv:marketing": "Purposes associated with conducting marketing in relation to organisation or products or services e.g. promoting, selling, and distributing.",
 		"dpv:advertising": "Purposes associated with conducting advertising i.e. process or artefact used to call attention to a product, service, etc. through announcements, notices, or other forms of communication.",
 		"dpv:identity-verification": "Purposes associated with verifying or authorising identity as a form of security.",
@@ -39,6 +52,9 @@
 		"dpv:commercialResearch": "Purposes associated with conducting research in a commercial setting or with intention to commercialise e.g. in a company or sponsored by a company.",
 		"dpv:customerCare": "Customer Care refers to purposes associated with purposes for providing assistance, resolving issues, ensuring satisfaction, etc. in relation to services provided.",
 		"dpv:sellDataToThirdParties": "Purposes associated with selling or sharing data or information to third parties.",
-		"dpv:sellInsightsToThirdParties": "Purposes associated with selling or sharing insights obtained from analysis of data."
+		"dpv:sellInsightsToThirdParties": "Purposes associated with selling or sharing insights obtained from analysis of data.",
+		"dpvo:IdentityVerification": "Purposes associated with verifying or authorising identity as a form of security",
+		"dpvo:ServicePersonalisation": "Purposes associated with providing personalisation within services or product or activities",
+		"dpvo:OptimisationForConsumer": "Purposes associated with optimisation of activities and services for consumer or user"
 	}
 }
