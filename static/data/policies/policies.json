@@ -13,24 +13,24 @@
     "controller": "c630f98e-a9f2-413a-8c71-8436a6f60001",
     "@policySet": [
       {
-        "@id": "c630f98e-a9f2-413a-8c71-8436a6f70002",
+        "@id": "c630f98e-a9f2-413a-8c71-8436a6f60001-1",
         "title": "Policy 01",
         "description": "...",
         "dpv:hasPersonalDataCategory": [
           {
-            "@class": "dpv:location"
+            "@class": "dpv-pd:location"
           },
           {
-            "@class": "dpv:name"
+            "@class": "dpv-pd:name"
           },
           {
-            "@class": "dpv:age"
+            "@class": "dpv-pd:age"
           },
           {
-            "@class": "dpv:country"
+            "@class": "dpv-pd:country"
           },
           {
-            "@class": "dpv:preference"
+            "@class": "dpv-pd:preference"
           }
         ],
         "dpv:hasPurpose": [
@@ -65,15 +65,15 @@
         }
       },
       {
-        "@id": "c630f98e-a9f2-413a-8c71-8436a6f70003",
+        "@id": "c630f98e-a9f2-413a-8c71-8436a6f60001-2",
         "title": "Policy 02",
         "description": "...",
         "dpv:hasPersonalDataCategory": [
           {
-            "@class": "dpv:location"
+            "@class": "dpv-pd:location"
           },
           {
-            "@class": "dpv:fingerprint"
+            "@class": "dpv-pd:fingerprint"
           }
         ],
         "dpv:hasPurpose": [
@@ -108,30 +108,30 @@
         }
       },
       {
-        "@id": "c630f98e-a9f2-413a-8c71-8436a6f70002",
-        "title": "Policy 01",
+        "@id": "c630f98e-a9f2-413a-8c71-8436a6f60001-3",
+        "title": "Policy 03",
         "description": "...",
         "dpv:hasPersonalDataCategory": [
           {
-            "@class": "dpv:location"
+            "@class": "dpv-pd:location"
           },
           {
-            "@class": "dpv:name"
+            "@class": "dpv-pd:name"
           },
           {
-            "@class": "dpv:age"
+            "@class": "dpv-pd:age"
           },
           {
-            "@class": "dpv:gender"
+            "@class": "dpv-pd:gender"
           },
           {
-            "@class": "dpv:country"
+            "@class": "dpv-pd:country"
           },
           {
-            "@class": "dpv:behavioral"
+            "@class": "dpv-pd:behavioral"
           },
           {
-            "@class": "dpv:preference"
+            "@class": "dpv-pd:preference"
           }
         ],
         "dpv:hasPurpose": [
@@ -166,30 +166,30 @@
         }
       },
       {
-        "@id": "c630f98e-a9f2-413a-8c71-8436a6f70002",
-        "title": "Policy 01",
+        "@id": "c630f98e-a9f2-413a-8c71-8436a6f60001-4",
+        "title": "Policy 04",
         "description": "...",
         "dpv:hasPersonalDataCategory": [
           {
-            "@class": "dpv:location"
+            "@class": "dpv-pd:location"
           },
           {
-            "@class": "dpv:name"
+            "@class": "dpv-pd:name"
           },
           {
-            "@class": "dpv:age"
+            "@class": "dpv-pd:age"
           },
           {
-            "@class": "dpv:gender"
+            "@class": "dpv-pd:gender"
           },
           {
-            "@class": "dpv:country"
+            "@class": "dpv-pd:country"
           },
           {
-            "@class": "dpv:behavioral"
+            "@class": "dpv-pd:behavioral"
           },
           {
-            "@class": "dpv:preference"
+            "@class": "dpv-pd:preference"
           }
         ],
         "dpv:hasPurpose": [
@@ -224,30 +224,30 @@
         }
       },
       {
-        "@id": "c630f98e-a9f2-413a-8c71-8436a6f70002",
-        "title": "Policy 01",
+        "@id": "c630f98e-a9f2-413a-8c71-8436a6f60001-5",
+        "title": "Policy 05",
         "description": "...",
         "dpv:hasPersonalDataCategory": [
           {
-            "@class": "dpv:location"
+            "@class": "dpv-pd:location"
           },
           {
-            "@class": "dpv:name"
+            "@class": "dpv-pd:name"
           },
           {
-            "@class": "dpv:age"
+            "@class": "dpv-pd:age"
           },
           {
-            "@class": "dpv:gender"
+            "@class": "dpv-pd:gender"
           },
           {
-            "@class": "dpv:country"
+            "@class": "dpv-pd:country"
           },
           {
-            "@class": "dpv:behavioral"
+            "@class": "dpv-pd:behavioral"
           },
           {
-            "@class": "dpv:preference"
+            "@class": "dpv-pd:preference"
           }
         ],
         "dpv:hasPurpose": [
@@ -282,36 +282,36 @@
         }
       },
       {
-        "@id": "c630f98e-a9f2-413a-8c71-8436a6f70002",
-        "title": "Policy 01",
+        "@id": "c630f98e-a9f2-413a-8c71-8436a6f60001-6",
+        "title": "Policy 06",
         "description": "...",
         "dpv:hasPersonalDataCategory": [
           {
-            "@class": "dpv:location"
+            "@class": "dpv-pd:location"
           },
           {
-            "@class": "dpv:name"
+            "@class": "dpv-pd:name"
           },
           {
-            "@class": "dpv:age"
+            "@class": "dpv-pd:age"
           },
           {
-            "@class": "dpv:country"
+            "@class": "dpv-pd:country"
           },
           {
-            "@class": "dpv:preference"
+            "@class": "dpv-pd:preference"
           },
           {
-            "@class": "dpv:behavioral"
+            "@class": "dpv-pd:behavioral"
           },
           {
-            "@class": "dpv:browserHistory"
+            "@class": "dpv-pd:browserHistory"
           },
           {
-            "@class": "dpv:browsingBehavior"
+            "@class": "dpv-pd:browsingBehavior"
           },
           {
-            "@class": "dpv:communication"
+            "@class": "dpv-pd:communication"
           }
         ],
         "dpv:hasPurpose": [
@@ -346,24 +346,24 @@
         }
       },
       {
-        "@id": "c630f98e-a9f2-413a-8c71-8436a6f70002",
-        "title": "Policy 01",
+        "@id": "c630f98e-a9f2-413a-8c71-8436a6f60001-7",
+        "title": "Policy 07",
         "description": "...",
         "dpv:hasPersonalDataCategory": [
           {
-            "@class": "dpv:location"
+            "@class": "dpv-pd:location"
           },
           {
-            "@class": "dpv:name"
+            "@class": "dpv-pd:name"
           },
           {
-            "@class": "dpv:age"
+            "@class": "dpv-pd:age"
           },
           {
-            "@class": "dpv:country"
+            "@class": "dpv-pd:country"
           },
           {
-            "@class": "dpv:preference"
+            "@class": "dpv-pd:preference"
           }
         ],
         "dpv:hasPurpose": [
@@ -383,18 +383,6 @@
           },
           {
             "@class": "dpv:age"
-          },
-          {
-            "@class": "dpv:gender"
-          },
-          {
-            "@class": "dpv:country"
-          },
-          {
-            "@class": "dpv:behavioral"
-          },
-          {
-            "@class": "dpv:preference"
           }
         ],
         "dpv:hasStorage": {
@@ -413,24 +401,24 @@
         }
       },
       {
-        "@id": "c630f98e-a9f2-413a-8c71-8436a6f70002",
-        "title": "Policy 01",
+        "@id": "c630f98e-a9f2-413a-8c71-8436a6f60001-8",
+        "title": "Policy 08",
         "description": "...",
         "dpv:hasPersonalDataCategory": [
           {
-            "@class": "dpv:location"
+            "@class": "dpv-pd:location"
           },
           {
-            "@class": "dpv:name"
+            "@class": "dpv-pd:name"
           },
           {
-            "@class": "dpv:age"
+            "@class": "dpv-pd:age"
           },
           {
-            "@class": "dpv:country"
+            "@class": "dpv-pd:country"
           },
           {
-            "@class": "dpv:preference"
+            "@class": "dpv-pd:preference"
           }
         ],
         "dpv:hasPurpose": [
@@ -447,21 +435,6 @@
           },
           {
             "@class": "dpv:Collect"
-          },
-          {
-            "@class": "dpv:age"
-          },
-          {
-            "@class": "dpv:gender"
-          },
-          {
-            "@class": "dpv:country"
-          },
-          {
-            "@class": "dpv:behavioral"
-          },
-          {
-            "@class": "dpv:preference"
           }
         ],
         "dpv:hasStorage": {
