@@ -36,7 +36,7 @@
     "telephone": "( 34 ) 938 56 24 94",
     "faxNumber": "",
     "email": "test@cxb.es",
-    "url": "https://www.caixabank.com/",
+    "url": "https://www.caixabank.com",
     "logo": "/data/trapeze-use-cases/use-case-3-CXB/controller-info/logos/CaixaBank_Logo_Horitzontal_RGB_white_bg.png",
     "address": {
       "@type": "PostalAddress",
@@ -53,6 +53,35 @@
       {
         "@type": "Person",
         "name": "",
+        "jobTitle": "Data Protection Officer (DPO)"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "c630f98e-a9f2-413a-8c71-8436a6f60003",
+    "name": "Deutsche Telekom AG",
+    "telephone": "( 49 ) 228 181-0",
+    "faxNumber": "",
+    "email": "datenschutz@telekom.de",
+    "url": "https://www.telekom.com",
+    "logo": "/data/trapeze-use-cases/use-case-2-DT/controller-info/logos/Telekom_Logo_2013.svg[OLD].png",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Bonn, Germany",
+      "postalCode": "53113",
+      "streetAddress": "Friedrich-Ebert-Allee 140"
+    },
+    "member": [
+      {
+        "@type": "Organization"
+      }
+    ],
+    "alumni": [
+      {
+        "@type": "Person",
+        "name": "Dr. Claus-Dieter Ulmer",
         "jobTitle": "Data Protection Officer (DPO)"
       }
     ]
