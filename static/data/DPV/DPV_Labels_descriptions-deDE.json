@@ -55,6 +55,7 @@
 		"dpv:sellInsightsToThirdParties": "Zwecke im Zusammenhang mit dem Verkauf oder der Weitergabe von Erkenntnissen, die aus der Analyse von Daten gewonnen wurden.",
 		"dpvo:IdentityVerification": "Purposes associated with verifying or authorising identity as a form of security",
 		"dpvo:ServicePersonalisation": "Purposes associated with providing personalisation within services or product or activities",
-		"dpvo:OptimisationForConsumer": "Purposes associated with optimisation of activities and services for consumer or user"
+		"dpvo:OptimisationForConsumer": "Purposes associated with optimisation of activities and services for consumer or user",
+		"dpvo:OptimisationForController": "Purposes associated with optimisation of activities and services for provider or controller"
 	}
 }
