@@ -11,7 +11,7 @@
     "logo": "/img/mocked-controller/clover.png",
     "address": {
       "@type": "PostalAddress",
-      "addressLocality": " Viale dei fiori, Italy",
+      "addressLocality": "Viale dei fiori, Italy",
       "postalCode": "123456",
       "streetAddress": "Via del Campo Verde"
     },
@@ -82,6 +82,35 @@
       {
         "@type": "Person",
         "name": "Dr. Claus-Dieter Ulmer",
+        "jobTitle": "Data Protection Officer (DPO)"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "c630f98e-a9f2-413a-8c71-8436a6f60004",
+    "name": "Vlaamse Gewest",
+    "telephone": "( 32 ) 2 553 1700",
+    "faxNumber": "",
+    "email": "test@aiv.be",
+    "url": "https://www.vlaanderen.be",
+    "logo": "/data/trapeze-use-cases/use-case-1-AIV/controller-info/logos/Flanders_verticaal.png",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Brussel, Belgium",
+      "postalCode": "1000",
+      "streetAddress": "Avenue du Port 88"
+    },
+    "member": [
+      {
+        "@type": "Organization"
+      }
+    ],
+    "alumni": [
+      {
+        "@type": "Person",
+        "name": "",
         "jobTitle": "Data Protection Officer (DPO)"
       }
     ]
