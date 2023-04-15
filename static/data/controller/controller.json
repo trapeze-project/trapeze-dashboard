@@ -27,5 +27,34 @@
         "jobTitle": "Data Protection Officer (DPO)"
       }
     ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "c630f98e-a9f2-413a-8c71-8436a6f60002",
+    "name": "CaixaBank SA",
+    "telephone": "( 34 ) 938 56 24 94",
+    "faxNumber": "",
+    "email": "test@cxb.es",
+    "url": "https://www.caixabank.com/",
+    "logo": "/data/trapeze-use-cases/use-case-3-CXB/controller-info/logos/CaixaBank_Logo_Horitzontal_RGB_white_bg.png",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Barcelona, Spain",
+      "postalCode": "08028",
+      "streetAddress": "Avenida Diagonal 621"
+    },
+    "member": [
+      {
+        "@type": "Organization"
+      }
+    ],
+    "alumni": [
+      {
+        "@type": "Person",
+        "name": "",
+        "jobTitle": "Data Protection Officer (DPO)"
+      }
+    ]
   }
 ]
