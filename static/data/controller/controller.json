@@ -66,7 +66,7 @@
     "faxNumber": "",
     "email": "datenschutz@telekom.de",
     "url": "https://www.telekom.com",
-    "logo": "/data/trapeze-use-cases/use-case-2-DT/controller-info/logos/dl-telekom-logo-02.jpg",
+    "logo": "/data/trapeze-use-cases/use-case-2-DT/controller-info/logos/T-without-Slogan_png/T_Logo_3c_n_bg.png",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Bonn, Germany",
