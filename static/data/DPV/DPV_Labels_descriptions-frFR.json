@@ -16,6 +16,7 @@
 		"dpvo-pd:Contact": "Contact",
 		"dpvo-pd:Financial": "Financial",
 		"dpvo-pd:Credit": "Credit",
+		"dpvo-pd:Biometric": "Biometric",
 		"dpv:identityVerification": "V\u00e9rification de l'identit\u00e9",
 		"dpv:advertising": "Publicit\u00e9s",
 		"dpv:marketing": "Marketing",
@@ -26,7 +27,10 @@
 		"dpv:sellInsightsToThirdParties": "Vente de renseignements à des tiers",
 		"dpvo:IdentityVerification": "Identity Verification",
 		"dpvo:ServicePersonalisation": "Service Personalisation",
-		"dpvo:OptimisationForConsumer": "Optimisation for Consumer"
+		"dpvo:OptimisationForConsumer": "Optimisation for Consumer",
+		"dpvo:OptimisationForController": "Optimisation for Controller",
+		"dpvo:FraudPreventionAndDetection": "Fraud Prevention and Detection",
+		"dpvo:RequestedServiceProvision": "Requested Service Provision"
 	},
 	"descriptions": {
 		"dpv-pd:location": "Informations sur la localisation.",
@@ -45,6 +49,7 @@
 		"dpvo-pd:Contact": "Information about contacts or used for contacting e.g. email address or phone number",
 		"dpvo-pd:Financial": "Information about finance including monetary characteristics and transactions",
 		"dpvo-pd:Credit": "Information about reputation with regards to money",
+		"dpvo-pd:Biometric": "Information about biometrics and biometric characteristics.",
 		"dpv:marketing": "Les finalités associés à la conduite du marketing en relation avec l'organisation, les produits ou les services, par exemple la promotion, la vente et la distribution.",
 		"dpv:advertising": "Les finalités associés à la publicité, c'est-à-dire le processus ou l'artefact utilisé pour attirer l'attention sur un produit, un service, etc. par le biais d'annonces, d'avis ou d'autres formes de communication.",
 		"dpv:identity-verification": "Finalités associées à la vérification ou à l'autorisation de l'identité en tant que forme de sécurité.",
@@ -56,6 +61,8 @@
 		"dpvo:IdentityVerification": "Purposes associated with verifying or authorising identity as a form of security",
 		"dpvo:ServicePersonalisation": "Purposes associated with providing personalisation within services or product or activities",
 		"dpvo:OptimisationForConsumer": "Purposes associated with optimisation of activities and services for consumer or user",
-		"dpvo:OptimisationForController": "Purposes associated with optimisation of activities and services for provider or controller"
+		"dpvo:OptimisationForController": "Purposes associated with optimisation of activities and services for provider or controller",
+		"dpvo:FraudPreventionAndDetection": "Purposes associated with fraud detection, prevention, and mitigation",
+		"dpvo:RequestedServiceProvision": "Purposes associated with delivering services as requested by user or consumer"
 	}
 }
