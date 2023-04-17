@@ -775,6 +775,202 @@
             "@class" : "dpv-gdpr:A22"
           }
         ]
+      },
+      {
+        "@id": "c630f98e-a9f2-413a-8c71-8436a6f60002-4",
+        "title": "Policy 04",
+        "description": "Fraud prevention and detection. TODO: dpv:hasPersonalDataCategory -> dpvo:hasPersonalDataCategory;  dpv:hasPurpose -> dpvo:hasPurpose;dpv:hasProcessing -> dpvo:hasProcessing",
+        "dpv:hasPersonalDataCategory": [
+          {
+            "@class": "dpvo-pd:Demographic"
+          },
+          {
+            "@class": "dpvo-pd:Contact"
+          },
+          {
+            "@class": "dpvo-pd:Biometric"
+          },
+          {
+            "@class": "dpvo-pd:Identifying"
+          },
+          {
+            "@class": "dpvo-pd:Financial"
+          },
+          {
+            "@class": "dpvo-pd:Credit"
+          }
+        ],
+        "dpv:hasPurpose": [
+          {
+            "@class": "dpvo:FraudPreventionAndDetection"
+          }
+        ],
+        "dpv:hasProcessing": [
+          {
+            "@class": "dpvo:Obtain"
+          },
+          {
+            "@class": "dpvo:Store"
+          },
+          {
+            "@class": "dpvo:Retrieve"
+          },
+          {
+            "@class": "dpvo:Consult"
+          },
+          {
+            "@class": "dpvo:Analyse"
+          },          
+          {
+            "@class": "dpvo:Transfer"
+          },
+          {
+            "@class": "dpvo:Share"
+          },
+          {
+            "@class": "dpvo:Remove"
+          }
+        ],
+        "dpvo:hasStorageCondition" : [
+          {
+          "dpvo:hasDuration" : "pilot3:ContractDuration"
+          },
+          {
+          "dpvo:hasLocation" : "dpv-legal:ES"
+          }
+        ],
+        "dpvo:hasRecipient" : [
+          {
+          "@instance" : "pilot3:CXB"
+          }
+        ],
+        "dpvo:hasLegalBasis" : [
+          {
+          "@class" : "dpv-gdpr:A6-1-f"
+          }
+        ],
+        "dpvo:hasRight" : [
+          {
+            "@class" : "dpv-gdpr:A13"
+          }
+        ],
+        "dpvo:hasRight" : [
+          {
+            "@class" : "dpv-gdpr:A15"
+          }
+        ],
+        "dpvo:hasRight" : [
+          {
+            "@class" : "dpv-gdpr:A20"
+          }
+        ],
+        "dpvo:hasRight" : [
+          {
+            "@class" : "dpv-gdpr:A22"
+          }
+        ]
+      },
+      {
+        "@id": "c630f98e-a9f2-413a-8c71-8436a6f60002-5",
+        "title": "Policy 05",
+        "description": "Policy for service provision. TODO: dpv:hasPersonalDataCategory -> dpvo:hasPersonalDataCategory;  dpv:hasPurpose -> dpvo:hasPurpose;dpv:hasProcessing -> dpvo:hasProcessing",
+        "dpv:hasPersonalDataCategory": [
+          {
+            "@class": "dpvo-pd:Demographic"
+          },
+          {
+            "@class": "dpvo-pd:Contact"
+          },
+          {
+            "@class": "dpvo-pd:Financial"
+          },
+          {
+            "@class": "dpvo-pd:Credit"
+          }
+        ],
+        "dpv:hasPurpose": [
+          {
+            "@class": "dpvo:RequestedServiceProvision"
+          }
+        ],
+        "dpv:hasProcessing": [
+          {
+            "@class": "dpvo:Obtain"
+          },
+          {
+            "@class": "dpvo:Store"
+          },
+          {
+            "@class": "dpvo:Retrieve"
+          },
+          {
+            "@class": "dpvo:Consult"
+          },
+          {
+            "@class": "dpvo:Analyse"
+          },
+          {
+            "@class": "dpvo:Remove"
+          }
+        ],
+        "dpvo:hasStorageCondition" : [
+          {
+          "dpvo:hasDuration" : "pilot3:ContractDuration"
+          },
+          {
+          "dpvo:hasLocation" : "dpv-legal:ES"
+          }
+        ],
+        "dpvo:hasRecipient" : [
+          {
+          "@instance" : "pilot3:CXB"
+          }
+        ],
+        "dpvo:hasLegalBasis" : [
+          {
+          "@class" : "dpv-gdpr:A6-1-b"
+          }
+        ],
+        "dpvo:hasRight" : [
+          {
+            "@class" : "dpv-gdpr:A13"
+          }
+        ],
+        "dpvo:hasRight" : [
+          {
+            "@class" : "dpv-gdpr:A15"
+          }
+        ],
+        "dpvo:hasRight" : [
+          {
+            "@class" : "dpv-gdpr:A16"
+          }
+        ],
+        "dpvo:hasRight" : [
+          {
+            "@class" : "dpv-gdpr:A17"
+          }
+        ],
+        "dpvo:hasRight" : [
+          {
+            "@class" : "dpv-gdpr:A18"
+          }
+        ],
+        "dpvo:hasRight" : [
+          {
+            "@class" : "dpv-gdpr:A19"
+          }
+        ],
+        "dpvo:hasRight" : [
+          {
+            "@class" : "dpv-gdpr:A20"
+          }
+        ],
+        "dpvo:hasRight" : [
+          {
+            "@class" : "dpv-gdpr:A22"
+          }
+        ]
       }
     ]
   }
