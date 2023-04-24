@@ -455,6 +455,12 @@
     ]
   },
   {
+
+    "userID": "caixabank-controller",
+    "organization": "Org1MSP",
+    "id": "0x0020",
+    "policyType": "Policy",
+    
     "@description": "This is the example privacy policy for the CXB use case. This JSON file is an adaptation of the policy JSON in './static/data/trapeze-use-cases/use-case-3-CXB/policy-files/policy-CXB-v1-complete.txt'. TODO: Add which parts are omitted here, so that it can easily be extended.", 
 
     "@context": {
@@ -926,6 +932,7 @@
           "@instance" : "pilot3:CXB"
           }
         ],
+        
         "dpvo:hasLegalBasis" : [
           {
           "@class" : "dpv-gdpr:A6-1-b"

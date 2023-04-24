@@ -44,18 +44,18 @@
       >
         <v-card class="d-flex flex-column fill-height rounded-xl">
 
+          <v-card-title class="d-flex flex-no-wrap justify-center py-0">
+            <v-avatar class="ma-3 pa-0" size="150" tile>
+              <v-img :src="c.logo" style="max-width: 128px !important"></v-img>
+            </v-avatar>
+          </v-card-title>
+
           <div class="d-flex flex-no-wrap justify-space-around">
 
-            <v-avatar class="ma-3" size="100" tile>
-              <v-img :src="c.logo"></v-img>
-            </v-avatar>
-
             <div>
-              <v-card-title class="pl-0">
-                {{ c.name }}
-              </v-card-title>
 
-              <v-card-text class="pl-0">
+              <v-card-text class="pl-0 text-center">
+                <h2 class="mb-3"> {{ c.name }} </h2>
                 {{ c.address.streetAddress }}<br />
                 {{ c.address.postalCode }},
                 {{ c.address.addressLocality }}<br />
@@ -140,3 +140,9 @@ export default {
   },
 };
 </script>
+
+<style>
+.v-image__image {
+  background-size: contain !important;
+}
+</style>
