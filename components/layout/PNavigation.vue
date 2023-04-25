@@ -114,6 +114,12 @@ export default {
         icon: "mdi-file-document",
         isDisabled: disabled 
       }, { 
+        to: `/${id}/other-legal-bases`, 
+        label: "otherLegalBases.other-legal-bases", 
+        icon: "?",
+        isDisabled: disabled 
+      }
+      , { 
         type: "divider" 
       }, { 
         to: `/glossary`, 

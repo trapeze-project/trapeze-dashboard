@@ -161,5 +161,17 @@
     "page-not-found":"Page Not Found",
     "an-error-occurred":"An error occurred",
     "go-to-home":"Go To Home"
+  },
+  "otherLegalBases":{
+    "other-legal-bases":"Other Legal Bases",
+    "titleDescription":"123Text",
+    "group-by":"group by",
+    "legal-bases":{
+      "A6-1-b":"Contract",
+      "A6-1-c":"Legal Obligation",
+      "A6-1-d":"Vital Interests",
+      "A6-1-e":"Public Interest",
+      "A6-1-f":"Legitimate Interests"
+    }
   }
 }

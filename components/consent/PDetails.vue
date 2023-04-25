@@ -9,12 +9,13 @@
               @click="showDetails = !showDetails; max = 10"
             >
               <v-switch
+                v-if="showSwitches"
                 inset
                 v-model="parentSwitchValue"
                 @change="changeParentValue"
               />
 
-              <span class="ml-3 me-auto">
+              <span class="ml-3 me-auto ma-3">
                 {{DPV_Labels_descriptions.labels[this.parent]}}
 
               </span>
@@ -62,6 +63,7 @@
                     >
                       <v-card-title class="py-0">
                         <v-switch
+                          v-if="showSwitches"
                           inset
                           v-model="ChildrenSwitchesValues[child]"
                           @change="changeUserChoice(child)"
@@ -99,7 +101,7 @@
 
                 <!-- Sensitivity -->
                 <v-card 
-                  v-if="tabName === 'data'"
+                  v-if="tabName === 'data' && showSwitches=== true"
                   class="my-3 rounded-xl"
                   outlined
                   elevation="0"
@@ -153,8 +155,14 @@ export default {
     },
     subTree: {
       type: Object,
-      required: true,
+      required: false,
     },
+    showSwitches: {
+      type: Boolean,
+      required: false,
+      default: true
+    },
+
   },
   data() {
     return {
@@ -191,13 +199,16 @@ export default {
     }
   },
   created() {
+    if(this.showSwitches){
+      this.ChildrenSwitchesValues = Object.assign({}, this.subTree);
+      this.parentSwitchValue = Object.values(
+        this.ChildrenSwitchesValues
+      ).includes(true)
+        ? true
+        : false;
+    }
 
-    this.ChildrenSwitchesValues = Object.assign({}, this.subTree);
-    this.parentSwitchValue = Object.values(
-      this.ChildrenSwitchesValues
-    ).includes(true)
-      ? true
-      : false;
+
   },
   methods: {
     changeUserChoice(child) {
