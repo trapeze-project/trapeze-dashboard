@@ -4,9 +4,12 @@
       <v-container>
         <v-row>
           <v-col :cols="12" class="pa-0">
-            <v-card-title 
+            <v-card-title
               class="pa-0 pl-5 clickable"
-              @click="showDetails = !showDetails; max = 10"
+              @click="
+                showDetails = !showDetails;
+                max = 10;
+              "
             >
               <v-switch
                 v-if="showSwitches"
@@ -16,8 +19,7 @@
               />
 
               <span class="ml-3 me-auto ma-3">
-                {{DPV_Labels_descriptions.labels[this.parent]}}
-
+                {{ DPV_Labels_descriptions.labels[this.parent] }}
               </span>
 
               <div class="mr-3">
@@ -28,7 +30,6 @@
 
             <v-expand-transition>
               <div v-show="showDetails" class="pa-3">
-
                 <v-row>
                   <v-col class="fill-height pb-0">
                     <v-text-field
@@ -36,13 +37,25 @@
                       v-model="searchValue"
                       :placeholder="$t('placeholder.search-for-' + sub)"
                       outlined
-                      dense 
-                      clearable 
+                      dense
+                      clearable
                       append-icon="mdi-magnify"
                       @keyup.enter="max = 10"
                       @click:append="max = 10"
-                      @click:clear="searchValue = ''; max = 10"
+                      @click:clear="
+                        searchValue = '';
+                        max = 10;
+                      "
                     />
+                  </v-col>
+                </v-row>
+                <v-row>
+                  <v-col class="fill-height pb-0" v-if="this.slicedChildren.length !== 1">
+                    <v-select
+                      v-model="selectedSortOption"
+                      :items="sortOptions"
+                      label="Sort By"
+                    ></v-select>
                   </v-col>
                 </v-row>
 
@@ -68,25 +81,30 @@
                           v-model="ChildrenSwitchesValues[child]"
                           @change="changeUserChoice(child)"
                         />
-                        <small>{{DPV_Labels_descriptions.labels[child]}}</small>
+                        <small>{{
+                          DPV_Labels_descriptions.labels[child]
+                        }}</small>
                       </v-card-title>
                       <v-card-text>
-                        {{DPV_Labels_descriptions.descriptions[child]}}
+                        {{ DPV_Labels_descriptions.descriptions[child] }}
                       </v-card-text>
-                    </v-card>            
+                    </v-card>
                   </v-col>
                 </v-row>
-                
-                <div v-if="max < children.length" class="d-flex justify-center mt-3">
+
+                <div
+                  v-if="max < children.length"
+                  class="d-flex justify-center mt-3"
+                >
                   <v-btn
-                    class="my-2 black--text" 
-                    color="primary" 
-                    @click="() => max += max"
+                    class="my-2 black--text"
+                    color="primary"
+                    @click="() => (max += max)"
                   >
                     {{ $t("btn.labels.load-more") }}
                   </v-btn>
                 </div>
-                
+
                 <!-- Recipients -->
                 <!-- Storage -->
                 <!--
@@ -100,8 +118,8 @@
                 -->
 
                 <!-- Sensitivity -->
-                <v-card 
-                  v-if="tabName === 'data' && showSwitches=== true"
+                <v-card
+                  v-if="tabName === 'data' && showSwitches === true"
                   class="my-3 rounded-xl"
                   outlined
                   elevation="0"
@@ -121,19 +139,17 @@
               </div>
             </v-expand-transition>
           </v-col>
-
         </v-row>
       </v-container>
     </v-card>
-
   </div>
 </template>
 
 <script>
-import DPV_Labels_descriptions_deDE from  "../../static/data/DPV/DPV_Labels_descriptions-deDE.json";
-import DPV_Labels_descriptions_enUS from  "../../static/data/DPV/DPV_Labels_descriptions-enUS.json";
-import DPV_Labels_descriptions_frFR from  "../../static/data/DPV/DPV_Labels_descriptions-frFR.json";
-import DPV_Labels_descriptions_itIT from  "../../static/data/DPV/DPV_Labels_descriptions-itIT.json";
+import DPV_Labels_descriptions_deDE from "../../static/data/DPV/DPV_Labels_descriptions-deDE.json";
+import DPV_Labels_descriptions_enUS from "../../static/data/DPV/DPV_Labels_descriptions-enUS.json";
+import DPV_Labels_descriptions_frFR from "../../static/data/DPV/DPV_Labels_descriptions-frFR.json";
+import DPV_Labels_descriptions_itIT from "../../static/data/DPV/DPV_Labels_descriptions-itIT.json";
 
 export default {
   props: {
@@ -160,9 +176,8 @@ export default {
     showSwitches: {
       type: Boolean,
       required: false,
-      default: true
+      default: true,
     },
-
   },
   data() {
     return {
@@ -173,33 +188,56 @@ export default {
       searchValue: "",
       max: 10,
       Imported_DPV_Labels_descriptions: {
-        "en": DPV_Labels_descriptions_enUS,
-        "de": DPV_Labels_descriptions_deDE,
-        "it": DPV_Labels_descriptions_itIT,
-        "fr": DPV_Labels_descriptions_frFR
-      }
+        en: DPV_Labels_descriptions_enUS,
+        de: DPV_Labels_descriptions_deDE,
+        it: DPV_Labels_descriptions_itIT,
+        fr: DPV_Labels_descriptions_frFR,
+      },
+      selectedSortOption:null,
+      sortOptions: [
+        { text: 'Alphabetical Ascending', value: 'alpha-ascending' },
+        { text: 'Alphabetical Descending', value: 'alpha-descending' },
+        { text: 'Sensitivity Ascending', value: 'sensitive-ascending', disabled: true },
+        { text: 'Sensitivity Descending', value: 'sensitive-descending', disabled: true },
+      ]
     };
   },
   computed: {
-    DPV_Labels_descriptions(){
+    DPV_Labels_descriptions() {
       return this.Imported_DPV_Labels_descriptions[this.$i18n.locale];
     },
     slicedChildren() {
-      return this
-        .children
-        .filter((e) => {
-          let label = this.DPV_Labels_descriptions.labels[e].toLowerCase();
-          return label.includes((this.searchValue) ? this.searchValue : '');
-        });        
+      let unsortedSlicedChildren = this.children.filter((e) => {
+        let label = this.DPV_Labels_descriptions.labels[e].toLowerCase();
+        return label.includes(this.searchValue ? this.searchValue : "");
+      });
+
+      if(['alpha-ascending','alpha-descending'].includes(this.selectedSortOption)){
+        let sign = this.selectedSortOption === 'alpha-ascending' ? 1 : -1;
+        return unsortedSlicedChildren.sort((a, b) => sign* a.localeCompare(b))
+
+
+
+      }else if(['sensitive-ascending','sensitive-descending'].includes(this.selectedSortOption)){
+        // sort by sensitive
+        return unsortedSlicedChildren; 
+
+      }else{
+        return unsortedSlicedChildren;
+      }
+
+
+
+
+
     },
     sub() {
-      return (this.tabName === "data")
-        ? "purpose"
-        : "data";
-    }
+      return this.tabName === "data" ? "purpose" : "data";
+    },
   },
   created() {
-    if(this.showSwitches){
+    this.selectedSortOption="alpha-ascending";
+    if (this.showSwitches) {
       this.ChildrenSwitchesValues = Object.assign({}, this.subTree);
       this.parentSwitchValue = Object.values(
         this.ChildrenSwitchesValues
@@ -207,8 +245,6 @@ export default {
         ? true
         : false;
     }
-
-
   },
   methods: {
     changeUserChoice(child) {
