@@ -4,9 +4,12 @@
       <v-container>
         <v-row>
           <v-col :cols="12" class="pa-0">
-            <v-card-title 
+            <v-card-title
               class="pa-0 pl-5 clickable"
-              @click="showDetails = !showDetails; max = 10"
+              @click="
+                showDetails = !showDetails;
+                max = 10;
+              "
             >
               <v-switch
                 v-if="showSwitches"
@@ -28,7 +31,6 @@
 
             <v-expand-transition>
               <div v-show="showDetails" class="pa-3">
-
                 <v-row>
                   <v-col class="fill-height pb-0">
                     <v-text-field
@@ -36,13 +38,25 @@
                       v-model="searchValue"
                       :placeholder="$t('placeholder.search-for-' + sub)"
                       outlined
-                      dense 
-                      clearable 
+                      dense
+                      clearable
                       append-icon="mdi-magnify"
                       @keyup.enter="max = 10"
                       @click:append="max = 10"
-                      @click:clear="searchValue = ''; max = 10"
+                      @click:clear="
+                        searchValue = '';
+                        max = 10;
+                      "
                     />
+                  </v-col>
+                </v-row>
+                <v-row>
+                  <v-col class="fill-height pb-0" v-if="this.slicedChildren.length !== 1">
+                    <v-select
+                      v-model="selectedSortOption"
+                      :items="sortOptions"
+                      label="Sort By"
+                    ></v-select>
                   </v-col>
                 </v-row>
 
@@ -78,17 +92,20 @@
                     </v-card>            
                   </v-col>
                 </v-row>
-                
-                <div v-if="max < children.length" class="d-flex justify-center mt-3">
+
+                <div
+                  v-if="max < children.length"
+                  class="d-flex justify-center mt-3"
+                >
                   <v-btn
-                    class="my-2 black--text" 
-                    color="primary" 
-                    @click="() => max += max"
+                    class="my-2 black--text"
+                    color="primary"
+                    @click="() => (max += max)"
                   >
                     {{ $t("btn.labels.load-more") }}
                   </v-btn>
                 </div>
-                
+
                 <!-- Recipients -->
                 <!-- Storage -->
                 <!--
@@ -102,8 +119,8 @@
                 -->
 
                 <!-- Sensitivity -->
-                <v-card 
-                  v-if="tabName === 'data' && showSwitches=== true"
+                <v-card
+                  v-if="tabName === 'data' && showSwitches === true"
                   class="my-3 rounded-xl"
                   outlined
                   elevation="0"
@@ -123,11 +140,9 @@
               </div>
             </v-expand-transition>
           </v-col>
-
         </v-row>
       </v-container>
     </v-card>
-
   </div>
 </template>
 
@@ -162,9 +177,8 @@ export default {
     showSwitches: {
       type: Boolean,
       required: false,
-      default: true
+      default: true,
     },
-
   },
   data() {
     return {
@@ -194,14 +208,13 @@ export default {
     },
 
     sub() {
-      return (this.tabName === "data")
-        ? "purpose"
-        : "data";
-    }
+      return this.tabName === "data" ? "purpose" : "data";
+    },
   },
 
   created() {
-    if(this.showSwitches){
+    this.selectedSortOption="alpha-ascending";
+    if (this.showSwitches) {
       this.ChildrenSwitchesValues = Object.assign({}, this.subTree);
       this.parentSwitchValue = Object.values(
         this.ChildrenSwitchesValues

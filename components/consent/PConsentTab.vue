@@ -58,6 +58,14 @@
             {{ $t("btn.labels.submit-changes") }}
           </v-btn>
         </div>
+        <div>
+          <v-select
+            v-model="selectedSortOption"
+            :items="sortOptions"
+            label="Sort By"
+          ></v-select>
+        </div>
+
 
         <!-- Data / Purposes -->
         <div>
@@ -128,7 +136,14 @@ export default {
         "de": DPV_Labels_descriptions_deDE,
         "it": DPV_Labels_descriptions_itIT,
         "fr": DPV_Labels_descriptions_frFR
-      }
+      },
+      selectedSortOption:null,
+      sortOptions: [
+        { text: 'Alphabetical Ascending', value: 'alpha-ascending' },
+        { text: 'Alphabetical Descending', value: 'alpha-descending' },
+        { text: 'Sensitivity Ascending', value: 'sensitive-ascending', disabled: true },
+        { text: 'Sensitivity Descending', value: 'sensitive-descending', disabled: true },
+      ]
     };
   },
   watch: {
@@ -158,16 +173,32 @@ export default {
     DPV_Labels_descriptions(){
       return this.Imported_DPV_Labels_descriptions[this.$i18n.locale];
     },
+
     parents() {
-      return Object
+      let unsortedParents = Object
         .keys(this.modifiedUserChoices)
         .filter((e) => {
           let label = this.DPV_Labels_descriptions.labels[e].toLowerCase();
           return label.includes((this.searchValue) ? this.searchValue : '');
         });
+
+      if(['alpha-ascending','alpha-descending'].includes(this.selectedSortOption)){
+        let sign = this.selectedSortOption === 'alpha-ascending' ? 1 : -1;
+        return unsortedParents.sort((a, b) => sign* a.localeCompare(b))
+
+
+
+      }else if(['sensitive-ascending','sensitive-descending'].includes(this.selectedSortOption)){
+        // sort by sensitive
+        return unsortedParents; 
+
+      }else{
+        return unsortedParents;
+      }
     }
   },
   created() {
+    this.selectedSortOption="alpha-ascending";
     this.modifiedUserChoices = this.userChoices;
   },
   methods: {
