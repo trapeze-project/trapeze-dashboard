@@ -100,6 +100,10 @@
         "title": "Scopi",
         "content": "See for which purposes your data is processed."
       },
+      "legal": {
+        "title": "Legale",
+        "content": ""
+      },
       "trapeze": {
         "title": "TRAPEZE",
         "content": "Scopri di più sul progetto TRAPEZE dell'Unione Europea"
@@ -163,15 +167,15 @@
     "go-to-home":"Go To Home"
   },
   "otherLegalBases":{
-    "other-legal-bases":"Other Legal Bases",
-    "titleDescription":"123Text",
-    "group-by":"group by",
+    "other-legal-bases":"Altre basi giuridiche",
+    "titleDescription":"Scopri come i tuoi dati personali possono essere legalmente elaborati senza il tuo consenso sulla nostra piattaforma.",
+    "group-by":"Gruppo da",
     "legal-bases":{
-      "A6-1-b":"Contract",
-      "A6-1-c":"Legal Obligation",
-      "A6-1-d":"Vital Interests",
-      "A6-1-e":"Public Interest",
-      "A6-1-f":"Legitimate Interests"
+      "A6-1-b":"Necessità contrattuale",
+      "A6-1-c":"Obbligo legale",
+      "A6-1-d":"Protezione degli interessi vitali",
+      "A6-1-e":"Adempimento di un compito di interesse pubblico",
+      "A6-1-f":"Interessi legittimi"
     }
   }
 }

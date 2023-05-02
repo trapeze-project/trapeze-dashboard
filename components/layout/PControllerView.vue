@@ -2,7 +2,7 @@
   <v-card outlined color="transparent">
 
     <v-card
-      class="rounded-circle pa-5 ma-3"
+      class="rounded-pill pa-5 ma-3"
     >
       <v-img :src="controller.logo" />
     </v-card>

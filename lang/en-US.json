@@ -100,6 +100,10 @@
         "title": "Purposes",
         "content": "See for which purposes your data is processed."
       },
+      "legal": {
+        "title": "Legal",
+        "content": ""
+      },
       "trapeze": {
         "title": "TRAPEZE",
         "content": "Learn more about the TRAPEZE project of the European Union."
@@ -164,10 +168,10 @@
   },
   "otherLegalBases":{
     "other-legal-bases":"Other Legal Bases",
-    "titleDescription":"123Text",
-    "group-by":"group by",
+    "titleDescription":"Discover how your personal data is processed legally beyond your consent.",
+    "group-by":"Group by",
     "legal-bases":{
-      "A6-1-b":"Contract",
+      "A6-1-b":"Contractual Necessity",
       "A6-1-c":"Legal Obligation",
       "A6-1-d":"Vital Interests",
       "A6-1-e":"Public Interest",

@@ -40,12 +40,17 @@ export default {
           "title": "home.explain-card.data.title",
           "image": "/img/home-icon-data.svg",
           "content": "home.explain-card.data.content",
-          "to": `/${this.$i18n.locale}/${this.controller["@id"]}/consent?tab=data`
+          "to": `cconsent?tab=data`
         }, {
           "title": "home.explain-card.purpose.title",
           "image": "/img/home-icon-purpose.svg",
           "content": "home.explain-card.purpose.title",
           "to": `/${this.$i18n.locale}/${this.controller["@id"]}/consent?tab=purpose`
+        }, {
+          "title": "home.explain-card.legal.title",
+          "image": "/img/home-icon-legal-bases.svg",
+          "content": "home.explain-card.legal.title",
+          "to": `/${this.$i18n.locale}/${this.controller["@id"]}/other-legal-bases`
         }, {
           "title": "home.explain-card.trapeze.title",
           "image": "/img/home-icon-trapeze.svg",

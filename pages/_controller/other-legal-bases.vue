@@ -4,13 +4,6 @@
       <!-- Title -->
       <v-card-title class="d-flex pa-0 pb-1">
         <span>{{$t('otherLegalBases.other-legal-bases')}}</span>
-        <v-spacer></v-spacer>
-        <v-select
-          style="maxWidth: 120px"
-          v-model="groupBy"
-          :label="$t('otherLegalBases.group-by')"
-          :items="groupByOptions"
-        ></v-select>
       </v-card-title>
 
       <v-divider />
@@ -22,11 +15,17 @@
       <v-container class="pa-0">
         <!-- Search field -->
         <v-row>
-          <v-col class="fill-height">
+          <v-col 
+            cols="6"
+            sm="8"
+            md="9" 
+            class="fill-height"
+          >
+
             <v-text-field
               class="rounded-pill"
               v-model="searchValue"
-              :placeholder="$t('placeholder.search-for-'+groupBy)"
+              :placeholder="$t('placeholder.search-for-' + placeholderKey)"
               outlined
               dense
               clearable
@@ -36,14 +35,40 @@
               @click:clear="resetMaxDisplayValues"
             />
           </v-col>
+
+          <v-col 
+            align="right"
+            cols="6"
+            sm="4"
+            md="3"
+          >
+            <v-select
+              class="rounded-pill"
+              outlined
+              dense
+              v-model="groupBy"
+              :label="$t('otherLegalBases.group-by')"
+              :items="groupByOptions"
+            ></v-select>
+
+          </v-col>
         </v-row>
 
         <!-- Data / Purposes -->
         <div>
-          <div v-for="legalBasis in legalBases" :key="legalBasis">
-            <p v-show="parents[legalBasis].length !== 0">{{ $t('otherLegalBases.legal-bases.'+lablelFromIRI(legalBasis) )  }}</p>
+          <div 
+            v-for="legalBasis in legalBases" 
+            :key="legalBasis"
+            class="mb-5"
+          >
+            <v-card-title
+              v-show="parents[legalBasis].length !== 0"
+            >
+              {{ $t('otherLegalBases.legal-bases.' + labelFromIRI(legalBasis)) }}
+            </v-card-title>
+
             <div
-              v-for="parent in parents[legalBasis].slice(0, max[legalBasis])"
+              v-for="parent in parents[legalBasis].slice(0, max)"
               :key="parent"
             >
               <PDetails
@@ -55,13 +80,13 @@
             </div>
 
             <div
-              v-if=" max[legalBasis] < parents[legalBasis].length"
+              v-if=" max < parents[legalBasis].length"
               class="d-flex justify-center"
             >
               <v-btn
                 class="my-2 black--text rounded-pill"
                 color="primary"
-                @click="max[legalBasis] += max[legalBasis]"
+                @click="max += max"
               >
                 {{ $t("btn.labels.load-more") }}
               </v-btn>
@@ -76,10 +101,13 @@
 
 <script>
 import PolicyService from "~/modules/PolicyService";
-import DPV_Labels_descriptions_deDE from "~/static/data/DPV/DPV_Labels_descriptions-deDE.json";
-import DPV_Labels_descriptions_enUS from "~/static/data/DPV/DPV_Labels_descriptions-enUS.json";
-import DPV_Labels_descriptions_frFR from "~/static/data/DPV/DPV_Labels_descriptions-frFR.json";
-import DPV_Labels_descriptions_itIT from "~/static/data/DPV/DPV_Labels_descriptions-itIT.json";
+
+import dpvLabelsDescriptionsEN from "~/static/data/DPV/DPV_Labels_descriptions-enUS.json";
+import dpvLabelsDescriptionsDE from "~/static/data/DPV/DPV_Labels_descriptions-deDE.json";
+import dpvLabelsDescriptionsIT from "~/static/data/DPV/DPV_Labels_descriptions-itIT.json";
+import dpvLabelsDescriptionsFR from "~/static/data/DPV/DPV_Labels_descriptions-frFR.json";
+
+const initialMax = 5;
 
 export default {
   props: {
@@ -89,75 +117,89 @@ export default {
   },
   data() {
     return {
-      groupBy: "data",
-      groupByOptions: ["data", "purpose"],
+      groupBy: "",
       searchValue: "",
-      max: {
-        "dpv-gdpr:A6-1-b": 4,
-        "dpv-gdpr:A6-1-d": 4,
-        "dpv-gdpr:A6-1-c": 4,
-        "dpv-gdpr:A6-1-d": 4,
-        "dpv-gdpr:A6-1-e": 4,
-        "dpv-gdpr:A6-1-f": 4,
-      },
+      max: initialMax,
       mapGroupedByData: {},
       mapGroupedByPurpose: {},
       legalBases: [],
-      Imported_DPV_Labels_descriptions: {
-        en: DPV_Labels_descriptions_enUS,
-        de: DPV_Labels_descriptions_deDE,
-        it: DPV_Labels_descriptions_itIT,
-        fr: DPV_Labels_descriptions_frFR,
+      dpv: {
+        en: dpvLabelsDescriptionsEN,
+        de: dpvLabelsDescriptionsDE,
+        it: dpvLabelsDescriptionsIT,
+        fr: dpvLabelsDescriptionsFR,
       },
     };
   },
+
   created() {
     let policy = PolicyService.get(this.controller);
+
     this.mapGroupedByData = policy.getOtherLegalBasesMap(
       "dpv:hasPersonalDataCategory",
       "dpv:hasPurpose"
     );
+
     this.mapGroupedByPurpose = policy.getOtherLegalBasesMap(
       "dpv:hasPurpose",
       "dpv:hasPersonalDataCategory"
     );
+    
     this.legalBases = Object.keys(this.mapGroupedByData);
+
+    this.groupBy = this.groupByOptions[0];
   },
   computed: {
+    groupByOptions() {
+      return [
+        this.$t("nav.labels.data"),
+        this.$t("nav.labels.purposes")
+      ];
+    },
+
+    placeholderKey() {
+      if (this.groupByOptions.indexOf(this.groupBy) === 0) {
+        return "data";
+      } else {
+        return "purpose";
+      }      
+    },
+
     map() {
-      if (this.groupBy === "data") {
+      if (this.groupByOptions.indexOf(this.groupBy) === 0) {
         return this.mapGroupedByData;
-      } else if (this.groupBy === "purpose") {
+      } else {
         return this.mapGroupedByPurpose;
       }
-			
     },
-    DPV_Labels_descriptions() {
-      return this.Imported_DPV_Labels_descriptions[this.$i18n.locale];
-    },
+
     parents() {
       let result = {};
-      Object.keys(this.map).forEach((legalBasis) => {
-        result[legalBasis] = Object.keys(this.map[legalBasis]).filter((e) => {
-          let label = this.DPV_Labels_descriptions.labels[e].toLowerCase();
-          return label
-            .toLowerCase()
-            .includes(this.searchValue ? this.searchValue : "");
-        });
-      }, {});
+      Object
+        .keys(this.map)
+        .forEach((legalBasis) => {
+          result[legalBasis] = Object
+            .keys(this.map[legalBasis])
+            .filter((e) => {
+              let label = this.dpv[this.$i18n.locale].labels[e].toLowerCase();
+              return label
+                .toLowerCase()
+                .includes(this.searchValue ? this.searchValue : "");
+          });
+        }, {});
+
       return result;
-			
     },
   },
+
   methods: {
     resetMaxDisplayValues() {
-      Object.keys(this.max).forEach((legalBasis) => {
-        this.max[legalBasis] = 4;
-      });
+      this.max = initialMax;
       this.$forceUpdate();
     },
-    lablelFromIRI(IRI){
-      return IRI.split(':')[1]
+
+    labelFromIRI(IRI){
+      return IRI.split(":")[1]
     }
   },
 };

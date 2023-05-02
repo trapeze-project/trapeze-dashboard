@@ -86,18 +86,20 @@
       >
         <v-card class="fill-height rounded-xl">
 
-          <div class="d-flex flex-no-wrap align-center justify-space-around">
-
+          <v-card-title class="d-flex flex-no-wrap justify-center py-0">
             <v-avatar class="ma-3" size="100" tile>
               <v-icon x-large>mdi-magnify</v-icon>
             </v-avatar>
+          </v-card-title>
+
+          <div class="d-flex flex-no-wrap justify-space-around">
 
             <div>
-              <v-card-title class="pl-0">
+              <v-card-title class="text-center">
                 {{ $t("controller-selection.search-hint.heading") }}
               </v-card-title>
 
-              <v-card-text class="pl-0">
+              <v-card-text class="text-center">
                 {{ $t("controller-selection.search-hint.desc") }}
               </v-card-text>
             </div>

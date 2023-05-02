@@ -100,6 +100,10 @@
         "title": "Zwecke",
         "content": "See for which purposes your data is processed."
       },
+      "legal": {
+        "title": "Rechtliches",
+        "content": ""
+      },
       "trapeze": {
         "title": "TRAPEZE",
         "content": "Learn more about the TRAPEZE project of the European Union."
@@ -163,15 +167,15 @@
     "go-to-home":"Go To Home"
   },
   "otherLegalBases":{
-    "other-legal-bases":"Other Legal Bases",
-    "titleDescription":"123Text",
-    "group-by":"group by",
+    "other-legal-bases":"Weitere Rechtsgrundlagen",
+    "titleDescription":"Entdecken Sie, wie Ihre persönlichen Daten legal verarbeitet werden können, ohne dass Ihre Zustimmung erforderlich ist.",
+    "group-by":"Gruppieren nach",
     "legal-bases":{
-      "A6-1-b":"Contract",
-      "A6-1-c":"Legal Obligation",
-      "A6-1-d":"Vital Interests",
-      "A6-1-e":"Public Interest",
-      "A6-1-f":"Legitimate Interests"
+      "A6-1-b":"Vertragliche Notwendigkeit",
+      "A6-1-c":"Rechtliche Verpflichtung",
+      "A6-1-d":"Schutz lebenswichtiger Interessen",
+      "A6-1-e":"Erfüllung einer Aufgabe im öffentlichen Interesse",
+      "A6-1-f":"Berechtigte Interessen"
     }
   }
 }
