@@ -8,8 +8,8 @@
                 "references": {                }
             },
             "qna2": {
-                "question": "Qui est responsable des informations contenues le tableau de bord de confidentialité de TRAPEZE?",
-                "answer": "Les informations présentées dans le tableau de bord de confidentialité de TRAPEZE sont fournies par le reponsable que vous avez sélectionné. \n \n  Sur desktop: Voir la bannière sur le côté droit.\n \n Sur mobile: Cliquez sur l'icône du responsable du traitement en haut à droite OU sur l'onglet 'Responsable' dans le menu en haut à gauche.",
+                "question": "Qui est responsable des informations contenues dans le tableau de bord de confidentialité de TRAPEZE?",
+                "answer": "Les informations présentées dans le tableau de bord de confidentialité de TRAPEZE sont fournies par le responsable que vous avez sélectionné. \n \n  Sur desktop: Voir la bannière sur le côté droit.\n \n Sur mobile: Cliquez sur l'icône du responsable du traitement en haut à droite OU sur l'onglet 'Responsable' dans le menu en haut à gauche.",
                 "references": {
                 }
             },
@@ -89,7 +89,7 @@
             }
         }
     },
-    "Données Personelles": {
+    "Données Personnelles": {
         "qnas": {
             "qna1": {
                 "question": "Qu'est-ce qu'une donn\u00e9e à caractère personnelle?",
