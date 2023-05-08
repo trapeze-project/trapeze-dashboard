@@ -11,22 +11,30 @@
                 max = 10;
               "
             >
-              <v-switch
-                v-if="showSwitches"
-                inset
-                v-model="parentSwitchValue"
-                @change="changeParentValue"
-              />
-
-              <span class="ml-3 me-auto ma-3">
-                {{dpv[$i18n.locale].labels[this.parent]}}
-
-              </span>
-
-              <div class="mr-3">
-                <v-icon v-if="showDetails"> mdi-chevron-up </v-icon>
-                <v-icon v-else> mdi-chevron-down </v-icon>
-              </div>
+              <v-row>
+                <v-col cols="1">
+                  <v-switch
+                    v-if="showSwitches"
+                    inset
+                    v-model="parentSwitchValue"
+                    @change="changeParentValue"
+                  />
+                </v-col>
+                <v-col cols="10">
+                  <div class="ml-3 me-auto ma-3">
+                    <div>
+                      {{ dpv[$i18n.locale].labels[this.parent] }}
+                    </div>
+                    <div class="text-caption">{{this.usedBy}}</div>
+                  </div>
+                </v-col>
+                <v-col cols="1">
+                  <div class="mr-3 mt-2">
+                    <v-icon v-if="showDetails"> mdi-chevron-up </v-icon>
+                    <v-icon v-else> mdi-chevron-down </v-icon>
+                  </div>
+                </v-col>
+              </v-row>
             </v-card-title>
 
             <v-expand-transition>
@@ -51,7 +59,10 @@
                   </v-col>
                 </v-row>
                 <v-row>
-                  <v-col class="fill-height pb-0" v-if="this.slicedChildren.length !== 1">
+                  <v-col
+                    class="fill-height pb-0"
+                    v-if="this.slicedChildren.length !== 1"
+                  >
                     <v-select
                       v-model="selectedSortOption"
                       :items="sortOptions"
@@ -82,14 +93,13 @@
                           v-model="ChildrenSwitchesValues[child]"
                           @change="changeUserChoice(child)"
                         />
-                        <small>{{dpv[$i18n.locale].labels[child]}}</small>
+                        <small>{{ dpv[$i18n.locale].labels[child] }}</small>
                       </v-card-title>
 
                       <v-card-text>
-                        {{dpv[$i18n.locale].descriptions[child]}}
+                        {{ dpv[$i18n.locale].descriptions[child] }}
                       </v-card-text>
-
-                    </v-card>            
+                    </v-card>
                   </v-col>
                 </v-row>
 
@@ -143,6 +153,7 @@
         </v-row>
       </v-container>
     </v-card>
+
   </div>
 </template>
 
@@ -197,23 +208,30 @@ export default {
     };
   },
   computed: {
-
     slicedChildren() {
-      return this
-        .children
-        .filter((e) => {
-          let label = this.dpv[this.$i18n.locale].labels[e].toLowerCase();
-          return label.includes((this.searchValue) ? this.searchValue : '');
-        });        
+      return this.children.filter((e) => {
+        let label = this.dpv[this.$i18n.locale].labels[e].toLowerCase();
+        return label.includes(this.searchValue ? this.searchValue : "");
+      });
     },
 
     sub() {
       return this.tabName === "data" ? "purpose" : "data";
     },
+    usedBy(){
+      let text = this.tabName ==="data"? this.$t("consent.used-for"):this.$t("consent.uses")
+      text+=": "
+      this.children.forEach((IRI, index) => {
+        text+= `${index+1}-${this.dpv[this.$i18n.locale].labels[IRI]} `
+      });
+
+      return text
+
+    }
   },
 
   created() {
-    this.selectedSortOption="alpha-ascending";
+    this.selectedSortOption = "alpha-ascending";
     if (this.showSwitches) {
       this.ChildrenSwitchesValues = Object.assign({}, this.subTree);
       this.parentSwitchValue = Object.values(
@@ -225,7 +243,6 @@ export default {
   },
 
   methods: {
-
     changeUserChoice(child) {
       if (
         Object.values(this.ChildrenSwitchesValues).every(
@@ -250,7 +267,6 @@ export default {
         this.changeUserChoice(child);
       }
     },
-
   },
 };
 </script>

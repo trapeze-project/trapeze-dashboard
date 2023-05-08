@@ -141,7 +141,9 @@
         "data-category": "Cat\u00e9gorie de donn\u00e9es",
         "purpose": "Finalité"
       }
-    }
+    },
+    "uses":"les usages",
+    "used-for":"utilisé pour"
   },
   "contact": {
     "heading": "Formulaire de contact",

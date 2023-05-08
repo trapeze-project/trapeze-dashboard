@@ -141,7 +141,9 @@
         "data-category": "Categoria di dati",
         "purpose": "Scopo"
       }
-    }
+    },
+    "uses":"utilizza",
+    "used-for":"usato per"
   },
   "contact": {
     "heading": "Modulo di contatto",
