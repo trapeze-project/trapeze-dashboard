@@ -153,9 +153,6 @@
         </v-row>
       </v-container>
     </v-card>
-    <div>
-      {{ this.debug }}
-    </div>
   </div>
 </template>
 
@@ -213,6 +210,12 @@ export default {
         it: dpvLabelsDescriptionsIT,
         fr: dpvLabelsDescriptionsFR,
       },
+      sortOptions: [
+        { text: 'Alphabetical Ascending', value: 'alpha-ascending' },
+        { text: 'Alphabetical Descending', value: 'alpha-descending' },
+        { text: 'Sensitivity Ascending', value: 'sensitive-ascending', disabled: true },
+        { text: 'Sensitivity Descending', value: 'sensitive-descending', disabled: true },
+      ]
     };
   },
   computed: {
