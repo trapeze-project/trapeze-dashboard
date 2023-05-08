@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "core-js": "^3.22.4",
+    "promise": "^8.3.0",
     "vuetify": "^2.6.13"
   },
   "devDependencies": {

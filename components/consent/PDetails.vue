@@ -25,7 +25,7 @@
                     <div>
                       {{ dpv[$i18n.locale].labels[this.parent] }}
                     </div>
-                    <div class="text-caption">{{this.usedBy}}</div>
+                    <div class="text-caption">{{ this.usedBy }}</div>
                   </div>
                 </v-col>
                 <v-col cols="1">
@@ -153,15 +153,22 @@
         </v-row>
       </v-container>
     </v-card>
-
+    <div>
+      {{ this.debug }}
+    </div>
   </div>
 </template>
 
 <script>
+import axios from "axios";
+import promise from "promise";
 import dpvLabelsDescriptionsEN from "~/static/data/DPV/DPV_Labels_descriptions-enUS.json";
 import dpvLabelsDescriptionsDE from "~/static/data/DPV/DPV_Labels_descriptions-deDE.json";
 import dpvLabelsDescriptionsIT from "~/static/data/DPV/DPV_Labels_descriptions-itIT.json";
 import dpvLabelsDescriptionsFR from "~/static/data/DPV/DPV_Labels_descriptions-frFR.json";
+import conceptsLabels from "~/static/data/DPV/conceptsLabelsTakenFromPolicyEdtorToolRepo.json";
+
+
 
 export default {
   props: {
@@ -193,6 +200,7 @@ export default {
   },
   data() {
     return {
+      conceptsLabels:conceptsLabels,
       parentSwitchValue: false,
       ChildrenSwitchesValues: {},
       showDetails: false,
@@ -218,19 +226,21 @@ export default {
     sub() {
       return this.tabName === "data" ? "purpose" : "data";
     },
-    usedBy(){
-      let text = this.tabName ==="data"? this.$t("consent.used-for"):this.$t("consent.uses")
-      text+=": "
+    usedBy() {
+      let text =
+        this.tabName === "data"
+          ? this.$t("consent.used-for")
+          : this.$t("consent.uses");
+      text += ": ";
       this.children.forEach((IRI, index) => {
-        text+= `${index+1}-${this.dpv[this.$i18n.locale].labels[IRI]} `
+        text += `${index + 1}-${this.dpv[this.$i18n.locale].labels[IRI]} `;
       });
 
-      return text
-
-    }
+      return text;
+    },
   },
 
-  created() {
+  async created() {
     this.selectedSortOption = "alpha-ascending";
     if (this.showSwitches) {
       this.ChildrenSwitchesValues = Object.assign({}, this.subTree);
@@ -241,6 +251,51 @@ export default {
         : false;
     }
   },
+  // async mounted() {
+  //   // fetch terms definitions (this.parent and this.children include the terms as compacted IRIs)
+  //   try {
+  //     let termDPVInfoRequests = this.children.map((term) => {
+  //       let label = this.conceptsLabels[term]
+
+  //       return axios.get(
+  //         `https://trapeze.imp.bg.ac.rs/knowledgebase/kb.php?action=dpv&lang=&term=${label}`
+  //       )
+
+  //     });
+
+  //     this.debug = {};
+  //     this.debug = {
+  //       en: {
+  //         labels:{}
+  //       },
+  //       de: {
+  //         labels:{}
+  //       },
+  //       it: {
+  //         labels:{}
+  //       },
+  //       fr: {
+  //         labels:{}
+  //       },
+  //     };
+
+  //     const termDPVInfoResponces = await promise.all(termDPVInfoRequests);
+
+  //     termDPVInfoResponces.forEach((responce, index) => {
+  //       responce["data"][0][
+  //         "http://www.w3.org/2004/02/skos/core#definition"
+  //       ].forEach((langSpecificDefinition) => {
+  //         let IRI = this.children[index]
+  //         let lang = langSpecificDefinition["@language"];
+  //         let def = langSpecificDefinition["@value"];
+  //         this.dpv[lang].labels[IRI] = def;
+  //       });
+  //     });
+      
+  //   } catch (error) {
+  //     console.log("failed " + error);
+  //   }
+  // },
 
   methods: {
     changeUserChoice(child) {
