@@ -1,6 +1,7 @@
 {
   "glossaryEntries": {
     "entry1":{
+      "id":"consent",
       "term":"Consent",
       "definition": "According to Article 4, point (11) GDPR, consent is your clear affirmative action towards a controller to process your personal data.\n \n Note that controllers do not always have to collect consent from you to process your personal data.\n \n For example, a delivery service needs to process your address in order to comply with a delivery order.\n \n  In this case, the controller does not have to collect consent from you.",
       "references": {
@@ -8,6 +9,7 @@
       }
     },
     "entry2":{
+      "id":"cross-border-processing",
       "term":"Cross-border Processing",
       "definition": "According to Article 4, point (23) GDPR, cross-border processing either means that processing is (a) performed in multiple EU member states, or (b) performed in a single EU member state yet on personal data on data subjects like you from multiple member states.",
       "references": {
@@ -15,6 +17,7 @@
       }
     },
     "entry3":{
+      "id":"controller",
       "term":"Controller",
       "definition": "According to Article 4, point (7) GDPR, controllers are responsible for the processing of your personal data.\n \n They have to make clear to you how and for which purposes they process your personal data.",
       "references": {
@@ -22,6 +25,7 @@
       }
     },
     "entry4":{
+      "id":"processor",
       "term":"Processor",
       "definition": "According to Article 4, point (8) GDPR, processors process your personal data.\n \n Processors can also be controllers.\n \n However, a processor need not be a controller.\n \n If a processor is not a controller, the processor is usually neither told the purpose of processing nor the type of personal data it is they process for the controller.",
       "references": {
@@ -29,6 +33,7 @@
       }
     },
     "entry5":{
+      "id":"data-protection-officer",
       "term":"Data Protection Officer (DPO)",
       "definition": "Every controller has to have a Data Protection Officer (DPO).\n \n DPOs are responsible for the compliance of their processing of personal data with the GDPR.\n \n DPOs are also responsible for informing you about how they protect your personal data.",
       "references": {
@@ -36,6 +41,7 @@
       }
     },
     "entry6":{
+      "id":"recipient",
       "term":"Recipient",
       "definition": "According to Article 4, point (9) GDPR, anyone to whom your personal data are disclosed is a recipient.\n \n Recipients are often also controllers and/or processors.",
       "references": {
@@ -43,6 +49,7 @@
       }
     },
     "entry7":{
+      "id":"data-subject",
       "term":"Data Subject",
       "definition": "According to Article 4, point (1) GDPR, you are a data subject since you are identifiable for instance by your name or your social security number.",
       "references": {
@@ -50,6 +57,7 @@
       }
     },
     "entry8":{
+      "id":"GDPR",
       "term":"General Data Protection Regulation (GDPR)",
 
       "definition": "The General Data Protection Regulation (GDPR) is the data protection legislation active in the European Union.\n \n It has been passed in May 2016 and has taken effect in May 2018.",
@@ -58,6 +66,7 @@
       }
     },
     "entry9":{
+      "id":"personal-data",
       "term":"Personal Data",
 
       "definition": "According to Article 4, point (1) GDPR, any data that is attributable to you is personal data.",
@@ -66,6 +75,7 @@
       }
     },
     "entry10":{
+      "id":"processing",
       "term":"Processing",
 
       "definition": "According to Article 4, point (2) GDPR, only processing of personal data is regulated.\n \n Art. 6 in particular defines that the processing of personal data is lawful if you have given consent or the processing is necessary to comply with a contract.\n \n For example, a delivery service needs to process your address in order to comply with a delivery order.\n \n  In this case, controllers do not need to collect consent.\n \n Processing also involves collecting and storing personal data.",
@@ -74,6 +84,7 @@
       }
     },
     "entry11":{
+      "id":"profiling",
       "term":"Profiling",
       "definition": "According Article 4, point (4) GDPR, profiling is any form of automated processing on personal data in order to infer specific information on you.\n \n Profiling is commonly used to estimate the probability that you buy a certain product or cannot pay back a credit.",
       "references": {
@@ -81,6 +92,7 @@
       }
     },
     "entry12":{
+      "id":"pseudonymisation",
       "term":"Pseudonymisation",
       "definition": "According to Article 4, point (5) GDPR, pseudonymisation of personal data means that personal data can only be attributed to you with the help of additonal data.\n \n Using artifical names or numbers instead of your real name is a simple pseudonymisation technique.",
       "references": {
@@ -88,6 +100,7 @@
       }
     },
     "entry13":{
+      "id":"purpose",
       "term":"Purpose",
       "definition": "According to Article 5, paragraph 1, point (b) GDPR, controllers must make clear to you for what they collect and process your personal data.\n \n After collection, personal data may not be used for any other purposes.\n \n It is for instance illegal, under the GDPR, to collect personal data for the purpose of personalized job recommendations and later on use it for the purpose of marketing.",
       "references": {
@@ -95,6 +108,7 @@
       }
     },
     "entry14":{
+      "id":"third-party",
       "term":"Third Party",
       "definition": "According to Article 4, point (10) GDPR, third parties are directly authorized by controllers and/or processors to process your personal data.",
       "references": {

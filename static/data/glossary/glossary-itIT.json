@@ -1,102 +1,116 @@
 {
-  "glossaryEntries": {
-      "entry1": {
-          "term": "Consenso",
-          "definition": "Secondo il articolo 4, punto 11 RGPD, il consenso è la vostra chiara azione affermativa nei confronti di un titolare del trattamento dei vostri dati personali.\n \n Si noti che i titolari del trattamento non devono sempre raccogliere il vostro consenso per trattare i vostri dati personali.\n \n Ad esempio, un servizio di consegna ha bisogno di trattare il vostro indirizzo per soddisfare un ordine di consegna.\n \n In questo caso, il titolare del trattamento non deve raccogliere il vostro consenso.",
-          "references": {
-              "ref1": "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX%3A32016R0679"
-          }
-      },
-      "entry2": {
-          "term": "Trattamento Transfrontaliero",
-          "definition": "Secondo il articolog 4, punto 23 RGPD, il trattamento transfrontaliero significa che il trattamento è (a) effettuato in più Stati membri dell'UE, oppure (b) effettuato in un unico Stato membro dell'UE ma su dati personali di soggetti come voi provenienti da più Stati membri.",
-          "references": {
-              "ref1": "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX%3A32016R0679"
-          }
-      },
-      "entry3": {
-          "term": "Titolare del trattamento dei dati",
-          "definition": "Secondo il articolo 4, punto 7 RGPD, i titolari del trattamento dei dati personali sono responsabili del trattamento dei vostri dati personali.",
-          "references": {
-              "ref1": "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX%3A32016R0679"
-          }
-      },
-      "entry4": {
-          "term": "Responsabile del trattamento",
-          "definition": "Secondo il articolo 4, punto 8 RGPD, i responsabili del trattamento possono essere anche responsabili del trattamento. I responsabili del trattamento possono essere anche responsabili del trattamento. Tuttavia, un responsabile del trattamento non deve necessariamente essere un titolare del trattamento. Se un responsabile del trattamento non è un titolare del trattamento, di solito non gli viene comunicato né lo scopo del trattamento né il tipo di dati personali che tratta per conto del titolare del trattamento.",
-          "references": {
-              "ref1": "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX%3A32016R0679"
-          }
-      },
-      "entry5": {
-          "term": "Responsabile della Protezione dei Dati (RPD)",
-          "definition": "Ogni titolare del trattamento deve avere un Responsabile della Protezione dei Dati (RPD).\n \n RPD sono responsabili della conformità del loro trattamento dei dati personali con il RGPD.\n \n RPD sono anche responsabili di informarvi su come proteggono i vostri dati personali.",
-          "references": {
-              "ref1": "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX%3A32016R0679"
-          }
-      },
-      "entry6": {
-          "term": "Destinatario",
-          "definition": "Secondo il articolo 4, punto 9 RGPD, chiunque riceva i vostri dati personali è un destinatario.\n \n I destinatari sono spesso anche titolari del trattamento e/o responsabili del trattamento.",
-          "references": {
-              "ref1": "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX%3A32016R0679"
-          }
-      },
-      "entry7": {
-          "term": "Interessato",
-          "definition": "Secondo il articolo 4, punto 1 RGPD, siete un interessato, perché siete identificabili, ad esempio, con il vostro nome o numero di previdenza sociale.",
-          "references": {
-              "ref1": "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX%3A32016R0679"
-          }
-      },
-      "entry8": {
-          "term": "Regolamento Generale sulla Protezione dei Dati (RGPD)",
-          "definition": "Il Regolamento Generale sulla Protezione dei Dati (RGPD) è la normativa sulla protezione dei dati attiva nell'Unione europea.",
-          "references": {
-              "ref1": "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX%3A32016R0679"
-          }
-      },
-      "entry9": {
-          "term": "Dati personali",
-          "definition": "Secondo il articolo 4, punto 11 RGPD, tutti i dati attribuibili a voi sono dati personali.",
-          "references": {
-              "ref1": "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX%3A32016R0679"
-          }
-      },
-      "entry10": {
-          "term": "Trattamento",
-          "definition": "Secondo il articolo 4, punto 2 RGPD, solo il trattamento dei dati personali è regolamentato.\n \n Art. 6, in particolare, stabilisce che il trattamento dei dati personali è lecito se l'interessato il proprio consenso o se il trattamento è necessario per adempiere a un contratto.\n \n Ad esempio, un servizio di consegna deve elaborare l'indirizzo dell'interessato per adempiere a un ordine di consegna.\n \n In questo caso, i titolari del trattamento non hanno bisogno di raccogliere il consenso.\n \n Il trattamento comporta anche la raccolta e la conservazione dei dati personali.",
-          "references": {
-              "ref1": "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX%3A32016R0679"
-          }
-      },
-      "entry11": {
-          "term": "Profilazione",
-          "definition": "Secondo il articolo 4, punto 4 RGPD, la profilazione è una qualsiasi forma di trattamento automatizzato dei dati personali al fine di dedurre informazioni specifiche su voi.\n \n La profilazione è comunemente utilizzata per stimare la probabilità che voi acquisti un determinato prodotto o non riesca a rimborsare un credito.",
-          "references": {
-              "ref1": "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX%3A32016R0679"
-          }
-      },
-      "entry12": {
-          "term": "Pseudonimizzazione",
-          "definition": "Secondo il articolo 4, punto 5 RGPD, la pseudonimizzazione dei dati personali significa che i dati personali possono essere attribuiti a voi solo con l'aiuto di dati aggiuntivi.\n \n L'utilizzo di nomi o numeri artificiali al posto del nome reale è una semplice tecnica di pseudonimizzazione.",
-          "references": {
-              "ref1": "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX%3A32016R0679"
-          }
-      },
-      "entry13": {
-          "term": "Finalità (Scopo)",
-          "definition": "Secondo il articolo 5, paragrafo 5, lettera b) RGPD, i titolari del trattamento devono chiarire a voi per quali scopi raccolgono e trattano i suoi dati personali. \n\n Dopo la raccolta, i dati personali non possono essere utilizzati per altri scopi. È ad esempio illegale, ai sensi del RGPD, raccogliere dati personali allo scopo di fornire raccomandazioni lavorative personalizzate e successivamente utilizzarli a scopo di marketing.",
-          "references": {
-              "ref1": "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX%3A32016R0679"
-          }
-      },
-      "entry14": {
-          "term": "Terzo",
-          "definition": "Secondo il articolo 4, punto 10 RGPD, i terzi sono direttamente autorizzati dai titolari del trattamento e/o dai responsabili del trattamento a trattare i vostri dati personali.",
-          "references": {
-              "ref1": "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX%3A32016R0679"
-          }
-      }
-  }
+    "glossaryEntries": {
+        "entry1": {
+            "id":"consent",
+            "term": "Consenso",
+            "definition": "Secondo il articolo 4, punto 11 RGPD, il consenso è la vostra chiara azione affermativa nei confronti di un titolare del trattamento dei vostri dati personali.\n \n Si noti che i titolari del trattamento non devono sempre raccogliere il vostro consenso per trattare i vostri dati personali.\n \n Ad esempio, un servizio di consegna ha bisogno di trattare il vostro indirizzo per soddisfare un ordine di consegna.\n \n In questo caso, il titolare del trattamento non deve raccogliere il vostro consenso.",
+            "references": {
+                "ref1": "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX%3A32016R0679"
+            }
+        },
+        "entry2": {
+            "id":"cross-border-processing",
+            "term": "Trattamento Transfrontaliero",
+            "definition": "Secondo il articolog 4, punto 23 RGPD, il trattamento transfrontaliero significa che il trattamento è (a) effettuato in più Stati membri dell'UE, oppure (b) effettuato in un unico Stato membro dell'UE ma su dati personali di soggetti come voi provenienti da più Stati membri.",
+            "references": {
+                "ref1": "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX%3A32016R0679"
+            }
+        },
+        "entry3": {
+            "id":"controller",
+            "term": "Titolare del trattamento dei dati",
+            "definition": "Secondo il articolo 4, punto 7 RGPD, i titolari del trattamento dei dati personali sono responsabili del trattamento dei vostri dati personali.",
+            "references": {
+                "ref1": "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX%3A32016R0679"
+            }
+        },
+        "entry4": {
+            "id":"processor",
+            "term": "Responsabile del trattamento",
+            "definition": "Secondo il articolo 4, punto 8 RGPD, i responsabili del trattamento possono essere anche responsabili del trattamento. I responsabili del trattamento possono essere anche responsabili del trattamento. Tuttavia, un responsabile del trattamento non deve necessariamente essere un titolare del trattamento. Se un responsabile del trattamento non è un titolare del trattamento, di solito non gli viene comunicato né lo scopo del trattamento né il tipo di dati personali che tratta per conto del titolare del trattamento.",
+            "references": {
+                "ref1": "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX%3A32016R0679"
+            }
+        },
+        "entry5": {
+            "id":"data-protection-officer",
+            "term": "Responsabile della Protezione dei Dati (RPD)",
+            "definition": "Ogni titolare del trattamento deve avere un Responsabile della Protezione dei Dati (RPD).\n \n RPD sono responsabili della conformità del loro trattamento dei dati personali con il RGPD.\n \n RPD sono anche responsabili di informarvi su come proteggono i vostri dati personali.",
+            "references": {
+                "ref1": "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX%3A32016R0679"
+            }
+        },
+        "entry6": {
+            "id":"recipient",
+            "term": "Destinatario",
+            "definition": "Secondo il articolo 4, punto 9 RGPD, chiunque riceva i vostri dati personali è un destinatario.\n \n I destinatari sono spesso anche titolari del trattamento e/o responsabili del trattamento.",
+            "references": {
+                "ref1": "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX%3A32016R0679"
+            }
+        },
+        "entry7": {
+            "id":"data-subject",
+            "term": "Interessato",
+            "definition": "Secondo il articolo 4, punto 1 RGPD, siete un interessato, perché siete identificabili, ad esempio, con il vostro nome o numero di previdenza sociale.",
+            "references": {
+                "ref1": "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX%3A32016R0679"
+            }
+        },
+        "entry8": {
+            "id":"GDPR",
+            "term": "Regolamento Generale sulla Protezione dei Dati (RGPD)",
+            "definition": "Il Regolamento Generale sulla Protezione dei Dati (RGPD) è la normativa sulla protezione dei dati attiva nell'Unione europea.",
+            "references": {
+                "ref1": "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX%3A32016R0679"
+            }
+        },
+        "entry9": {
+            "id":"personal-data",
+            "term": "Dati personali",
+            "definition": "Secondo il articolo 4, punto 11 RGPD, tutti i dati attribuibili a voi sono dati personali.",
+            "references": {
+                "ref1": "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX%3A32016R0679"
+            }
+        },
+        "entry10": {
+            "id":"processing",
+            "term": "Trattamento",
+            "definition": "Secondo il articolo 4, punto 2 RGPD, solo il trattamento dei dati personali è regolamentato.\n \n Art. 6, in particolare, stabilisce che il trattamento dei dati personali è lecito se l'interessato il proprio consenso o se il trattamento è necessario per adempiere a un contratto.\n \n Ad esempio, un servizio di consegna deve elaborare l'indirizzo dell'interessato per adempiere a un ordine di consegna.\n \n In questo caso, i titolari del trattamento non hanno bisogno di raccogliere il consenso.\n \n Il trattamento comporta anche la raccolta e la conservazione dei dati personali.",
+            "references": {
+                "ref1": "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX%3A32016R0679"
+            }
+        },
+        "entry11": {
+            "id":"profiling",
+            "term": "Profilazione",
+            "definition": "Secondo il articolo 4, punto 4 RGPD, la profilazione è una qualsiasi forma di trattamento automatizzato dei dati personali al fine di dedurre informazioni specifiche su voi.\n \n La profilazione è comunemente utilizzata per stimare la probabilità che voi acquisti un determinato prodotto o non riesca a rimborsare un credito.",
+            "references": {
+                "ref1": "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX%3A32016R0679"
+            }
+        },
+        "entry12": {
+            "id":"pseudonymisation",
+            "term": "Pseudonimizzazione",
+            "definition": "Secondo il articolo 4, punto 5 RGPD, la pseudonimizzazione dei dati personali significa che i dati personali possono essere attribuiti a voi solo con l'aiuto di dati aggiuntivi.\n \n L'utilizzo di nomi o numeri artificiali al posto del nome reale è una semplice tecnica di pseudonimizzazione.",
+            "references": {
+                "ref1": "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX%3A32016R0679"
+            }
+        },
+        "entry13": {
+            "id":"purpose",
+            "term": "Finalità (Scopo)",
+            "definition": "Secondo il articolo 5, paragrafo 5, lettera b) RGPD, i titolari del trattamento devono chiarire a voi per quali scopi raccolgono e trattano i suoi dati personali. \n\n Dopo la raccolta, i dati personali non possono essere utilizzati per altri scopi. È ad esempio illegale, ai sensi del RGPD, raccogliere dati personali allo scopo di fornire raccomandazioni lavorative personalizzate e successivamente utilizzarli a scopo di marketing.",
+            "references": {
+                "ref1": "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX%3A32016R0679"
+            }
+        },
+        "entry14": {
+            "id":"third-party",
+            "term": "Terzo",
+            "definition": "Secondo il articolo 4, punto 10 RGPD, i terzi sono direttamente autorizzati dai titolari del trattamento e/o dai responsabili del trattamento a trattare i vostri dati personali.",
+            "references": {
+                "ref1": "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX%3A32016R0679"
+            }
+        }
+    }
 }

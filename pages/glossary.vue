@@ -1,7 +1,5 @@
 <template>
-  <v-card
-    elevation="0"
-  >
+  <v-card elevation="0">
     <v-card-title class="pa-0 pb-1">
       {{ $t("nav.labels.glossary") }}
     </v-card-title>
@@ -25,27 +23,26 @@
             dense
             clearable
             append-icon="mdi-magnify"
-              @keyup.enter="() => null"
-              @click:append="() => null"
-              @click:clear="() => null"            
+            @keyup.enter="() => null"
+            @click:append="() => null"
+            @click:clear="() => null"
           />
         </v-col>
       </v-row>
 
-      <v-expansion-panels inset>
+      <v-expansion-panels inset v-model="openPanel">
         <v-expansion-panel
           v-for="entry in entries"
           :key="entry.term"
           class="mb-3 rounded-xl"
         >
-          <v-expansion-panel-header>
-
+          <v-expansion-panel-header :class="entry.id">
             <template v-slot:actions>
               <v-icon class="icon" left> $expand </v-icon>
             </template>
-            
+
             <span class="header newline-character-support">
-              {{entry.term}}
+              {{ entry.term }}
             </span>
           </v-expansion-panel-header>
 
@@ -55,9 +52,7 @@
               {{ entry.definition }}
             </p>
             <div
-              v-if="
-                Object.values(entry['references']).length
-              "
+              v-if="Object.values(entry['references']).length"
               class="mt-4 black--text"
             >
               <span class="font-weight-bold">
@@ -65,9 +60,7 @@
               </span>
               <ol>
                 <li
-                  v-for="link in Object.values(
-                    entry['references']
-                  )"
+                  v-for="link in Object.values(entry['references'])"
                   :key="link"
                 >
                   <a :href="link" class="black--text">{{ link }}</a>
@@ -91,23 +84,44 @@ export default {
   data() {
     return {
       glossary: {
-        "en": glossaryEN,
-        "de": glossaryDE,
-        "fr": glossaryFR,
-        "it": glossaryIT
+        en: glossaryEN,
+        de: glossaryDE,
+        fr: glossaryFR,
+        it: glossaryIT,
       },
       searchValue: "",
       searching: false,
+      openPanel: null,
     };
+  },
+  mounted() {
+    let hashValue = this.$nuxt.$route.hash.slice(1);
+    let entries = Object.values(this.glossary.en["glossaryEntries"]);
+    this.openPanel = entries.findIndex((entry) => {
+      let entryID = entry.id;
+      return hashValue === entryID;
+    });
+    if (this.openPanel > -1) {
+      window.onload = () => {
+        this.scrollpage(hashValue);
+      };
+    }
   },
   computed: {
     entries() {
-      return Object
-        .values(this.glossary[this.$i18n.locale].glossaryEntries)
-        .filter((e) => {
-          return e.term.toLowerCase().includes(this.searchValue.toLowerCase());
-        });
-    }
+      return Object.values(
+        this.glossary[this.$i18n.locale].glossaryEntries
+      ).filter((e) => {
+        return e.term.toLowerCase().includes(this.searchValue.toLowerCase());
+      });
+    },
+  },
+  methods: {
+    scrollpage(className) {
+      document
+        .getElementsByClassName(className)[0]
+        .scrollIntoView({ behavior: "smooth" });
+    },
   },
 };
 </script>
