@@ -5,7 +5,7 @@ export default (() => {
 
   return {
 
-    get(controller, policyIDs) {
+    get(controller, policyIDs = []) {
       let policy = policies.find((p) => p.controller === controller["@id"]);
       if (policy) {
         policy["@policySet"] = policy["@policySet"].filter((policy)=>{

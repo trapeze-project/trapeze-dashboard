@@ -40,7 +40,7 @@ export default {
           "title": "home.explain-card.data.title",
           "image": "/img/home-icon-data.svg",
           "content": "home.explain-card.data.content",
-          "to": `cconsent?tab=data`
+          "to": `consent?tab=data`
         }, {
           "title": "home.explain-card.purpose.title",
           "image": "/img/home-icon-purpose.svg",
