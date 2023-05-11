@@ -76,7 +76,8 @@ export default {
   },
 
   created() {
-    let policy = PolicyService.get(this.controller);
+    let policyIDs = this.$route.query.policyID;
+    let policy = PolicyService.get(this.controller, policyIDs);
     this.purposeMap = policy.getMap("dpv:hasPurpose", "dpv:hasPersonalDataCategory");
     this.fetchedUserChoices = Object.assign({}, this.fetchUserChoices())
     this.userChoices = Object.assign({}, this.fetchedUserChoices);
