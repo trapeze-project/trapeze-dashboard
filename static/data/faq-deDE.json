@@ -1,24 +1,29 @@
 {
     "TRAPEZE": {
+        "id":"TRAPEZE",
         "qnas": {
             "qna1": {
+                "id":"what-can-I-do-on-the-TRAPEZE-privacy-dashboard",
                 "question": "Was kann ich auf dem TRAPEZE-Datenschutz-Dashboard tun?",
                 "answer": "Nachdem Sie einen Verantwortlichen ausgewählt haben, können Sie sich ansehen, welche Daten er über Sie verarbeitet und zu welchen Zwecken. \n \n Sie können die Verarbeitung Ihrer Daten einschränken, indem Sie Ihre Einwilligung widerrufen. Sie können Ihre Einwilligung widerrufen, indem Sie die Schieberegler im Daten- oder Zwecke-Menü nach links schieben und dann Ihre Änderungen übermitteln. \n \n Sie können auch automatisch alle Ihre Einwilligungen widerrufen, indem Sie auf die Schaltfläche 'Alle Einwilligungen widerrufen' klicken. \n \n Sie können auch den Umfang ihrer Verarbeitung erweitern, indem Sie ihre Einwilligung erteilen. Schieben Sie dazu die Schieberegler nach rechts. \n \n Wenn Sie spezielle Fragen haben, können Sie sich über die Schaltfläche 'Kontakt' in den Informationen zum für die Verarbeitung Verantwortlichen an den Datenschutzbeauftragten wenden.\n\n Auf dem Desktop: Siehe das Banner auf der rechten Seite.\n\n Auf dem Handy: Klicken Sie auf das Symbol für den für die Verarbeitung Verantwortlichen oben rechts ODER auf die Registerkarte für den für die Verarbeitung Verantwortlichen im Menü oben links.",
                 "references": {                }
             },
             "qna2": {
+                "id":"who-is-responsible-for-the-information-on-the-TRAPEZE-privacy-dashboard",
                 "question": "Wer ist für die Informationen auf dem TRAPEZE-Datenschutz-Dashboard verantwortlich?",
                 "answer": "Die auf dem TRAPEZE-Datenschutz-Dashboard angezeigten Informationen werden von dem von Ihnen ausgewählten Verantwortlichen bereitgestellt. \n\n Auf dem Desktop: Siehe das Banner auf der rechten Seite.\n\n Auf dem Handy: Klicken Sie auf das Symbol des Verantwortlichen oben rechts ODER auf die Registerkarte 'Verantwortlicher' im Menü oben links.",
                 "references": {
                 }
             },
             "qna3": {
+                "id":"why-do-controllers-use-the-TRAPEZE-privacy-dashboard",
                 "question": "Warum verwenden Verantwortliche das TRAPEZE-Datenschutz-Dashboard?",
                 "answer": "Das TRAPEZE-Datenschutz-Dashboard ist eine Software, mit der die Verantwortlichen Ihnen deutlich machen können, wie und zu welchen Zwecken sie Ihre personenbezogenen Daten verarbeiten. \n \n Die Verantwortlichen sind nach der Datenschutz-Grundverordnung (DSGVO) verpflichtet, ihre Verarbeitung personenbezogener Daten transparent zu machen.\n \n Das TRAPEZE-Datenschutz-Dashboard ist ein einfach zu bedienendes Tool, das Verantwortliche dafür kostenlos nutzen können.",
                 "references": {
                 }
             },
             "qna4": {
+                "id":"who-has-developed-the-TRAPEZE-privacy-dashboard",
                 "question": "Wer hat das TRAPEZE-Datenschutz-Dashboard entwickelt?",
                 "answer": "TRAPEZE ist ein von der Europäischen Union finanziertes Forschungsprojekt. TRAPEZE ist ein Akronym für \"TRAnsparency, Privacy and security for European citiZEns\". \n \n TRAPEZE ist Teil des Förderprogramms Horizon2020 der Europäischen Union. Das dreijährige Projekt wurde zwischen September 2020 und August 2023 durchgeführt. \n \n Das TRAPEZE-Projektkonsortium besteht aus den folgenden 13 Partnern:\n \n  (1.) TenForce BVBA,\n  (2.) GEIE ERCIM,\n  (3.) Technische Universität Berlin,\n  (4.) VLAAMSE GEWEST,\n  (5.) Deutsche Telekom AG,\n  (6.) CaixaBank SA,\n  (7.) Consorzio Interuniversitario Nazionale Per L'Informatica,\n  (8.) Unabhängiges Landeszentrum für Datenschutz,\n  (9.) Kaspersky Lab Italia SRL,\n  (10.) Institut Mihajlo Pupin,\n  (11.) IPSOS NV,\n  (12.) Athens Technology Center Anonymi Biomichaniki Emporiki Kai Techniki Etaireia Efarmogon Ypsilis Technologias,\n  (13.) E-Seniors: Initiation des Séniors Aux NTIC Association.",
                 "references": { 
@@ -42,8 +47,10 @@
         }
     },
     "Einwilligung": {
+        "id":"consent",
         "qnas": {
             "qna1": {
+                "id":"what-is-consent",
                 "question": "Was ist eine Einwilligung?",
                 "answer": "Gem\u00e4\u00df Artikel 4, Nummer 11 DSGVO, ist die Einwilligung eine eindeutige bestätigende Handlung gegenüber einem Verantwortlichen Ihre personenbezogenen Daten zu verarbeiten. \n \n Beachten Sie, dass die für die Verarbeitung Verantwortlichen NICHT immer eine Einwilligung von Ihnen einholen müssen, um Ihre personenbezogenen Daten zu verarbeiten. \n \n Zum Beispiel muss ein Lieferdienst Ihre Adresse verarbeiten, um seinen Lieferauftrag zu erfüllen. Er muss keine Einwilligung einholen.",
                 "references": {
@@ -51,6 +58,7 @@
                 }
             },
             "qna2": {
+                "id":"can-children-give-consent",
                 "question": "K\u00f6nnen Kinder eine Einwilligung erteilen?",
                 "answer": "16-jährige und ältere Kinder können ihre Einwilligung geben. \n \n Die Verantwortlichen müssen sich jedoch in angemessener Weise vergewissern, dass diese Einwilligung entweder von einem Erziehungsberechtigten selbst erteilt wurde oder dem Kind von ihm die Erlaubnis zur Erteilung gegeben wurde. \n \n Die EU-Mitgliedstaaten können die Altersschwelle von 16 Jahren herabsetzen, jedoch nicht unter 13 Jahre.",
                 "references": {
@@ -58,6 +66,7 @@
                 }
             },
             "qna3": {
+                "id":"can-I-withdraw-my-consent",
                 "question": "Kann ich meine Einwilligung widerrufen?",
                 "answer": "Gem\u00e4\u00df Artikel 7, Absatz 3 DSGVO, können Sie Ihre Einwilligung jederzeit widerrufen. \n \n Der Widerruf der Einwilligung bedarf keiner besonderen Form. \n \n Sie können Ihre Einwilligung zum Beispiel durch einen Brief oder eine E-Mail an den Verantwortlichen oder durch einen Anruf widerrufen.",
                 "references": {
@@ -65,16 +74,19 @@
                 }
             },
             "qna4": {
+                "id":"do-controllers-delete-my-personal-data-when-I-withdraw-my-consent",
                 "question": "L\u00f6schen die Verantwortlichen meine personenbezogenen Daten, wenn ich meine Einwilligung widerrufe?",
                 "answer": "Sobald Sie Ihre Einwilligung widerrufen, müssen die für die Verarbeitung Verantwortlichen die Verarbeitung Ihrer Daten einstellen und Ihre personenbezogenen Daten für alle Zwecke, für die Sie Ihre Einwilligung widerrufen haben, löschen.",
                 "references": { }
             },
             "qna5": {
+                "id":"what-is-a-purpose",
                 "question": "Warum sollte ich meine Einwilligung widerrufen, wenn ich die L\u00f6schung meiner personenbezogenen Daten beantragen kann?",
                 "answer": "Der Widerruf der Einwilligung ist gründlicher als ein Antrag auf Löschung Ihrer personenbezogenen Daten.\n \n Anträge auf Löschung verhindern nicht die künftige Erhebung Ihrer personenbezogenen Daten. \n \n Wenn Sie Ihre Einwilligung widerrufen, müssen die Verantwortlichen die Verarbeitung Ihrer Daten einstellen und Ihre personenbezogenen Daten für alle Zwecke, für die Sie Ihre Einwilligung widerrufen haben, löschen.",
                 "references": { }
             },
             "qna6": {
+                "id":"what-can-I-do-if-I-forgot-what-I-consented-to",
                 "question": "Was kann ich tun, wenn ich vergessen habe, wofür ich meine Einwilligung erteilt habe?",
                 "answer": "Gem\u00e4\u00df Artikel 7, Absatz 1 DSGVO, müssen die Verantwortlichen nachweisen, dass und wofür sie Ihre Einwilligung eingeholt haben.",
                 "references": {
@@ -82,6 +94,7 @@
                 }
             },
             "qna7": {
+                "id":"does-consent-expire",
                 "question": "Verj\u00e4hren Einwilligungen?",
                 "answer": "Nein, Einwilligungen verjähren nicht. \n \n Allerdings müssen die für die Verantwortlichen erneut eine Einwilligung einholen, wenn sie Ihre personenbezogenen Daten für neue Zwecke verarbeiten wollen.",
                 "references": { }
@@ -89,8 +102,10 @@
         }
     },
     "Personenbezogene Daten": {
+        "id":"personal-data",
         "qnas": {
             "qna1": {
+                "id":"what-is-personal-data",
                 "question": "Was sind personenbezogene Daten?",
                 "answer": "Gem\u00e4\u00df Artikel 4, Nummer 1 DSGVO, sind alle Daten, die Ihnen zugeordnet werden k\u00f6nnen, personenbezogene Daten.",
                 "references": {
@@ -100,8 +115,10 @@
         }
     },
     "Zwecke": {
+        "id":"purpose",
         "qnas": {
             "qna1": {
+                "id":"what-is-a-purpose",
                 "question": "Was ist ein Zweck?",
                 "answer": "Gem\u00e4\u00df Artikel 5, Absatz 1, Buchstabe b DSGVO, müssen die Verantwortlichen Ihnen deutlich machen, zu welchen Zwecken sie Ihre personenbezogenen Daten konkret erheben und verarbeiten. \n \n Nach der DSGVO ist es beispielsweise illegal, Ihre personenbezogenen Daten für den angegebenen Zweck personalisierter Jobempfehlungen zu erfassen und sie anschließend für Marketingzwecke zu verwenden.",
                 "references": {

@@ -30,13 +30,13 @@
         </v-col>
       </v-row>
 
-      <v-expansion-panels inset v-model="openPanel">
+      <v-expansion-panels inset v-model="openPanel" >
         <v-expansion-panel
           v-for="entry in entries"
           :key="entry.term"
           class="mb-3 rounded-xl"
         >
-          <v-expansion-panel-header :class="entry.id">
+          <v-expansion-panel-header >
             <template v-slot:actions>
               <v-icon class="icon" left> $expand </v-icon>
             </template>
@@ -46,7 +46,7 @@
             </span>
           </v-expansion-panel-header>
 
-          <v-expansion-panel-content>
+          <v-expansion-panel-content :class="entry.id">
             <!-- first line is always empty -->
             <p class="newline-character-support">
               {{ entry.definition }}
@@ -120,7 +120,15 @@ export default {
     scrollpage(className) {
       document
         .getElementsByClassName(className)[0]
-        .scrollIntoView({ behavior: "smooth" });
+        .scrollIntoView({ behavior: "smooth", block: "center"  });
+      // let component = this.$refs[className]
+      // console.log(component)
+      // component.scrollIntoView({ behavior: "smooth" });
+
+
+        // const position = document.getElementsByClassName(className)[0].offsetTop;
+          // smooth scroll
+        // window.scrollTo({ top: position, behavior: "smooth" }); 
     },
   },
 };

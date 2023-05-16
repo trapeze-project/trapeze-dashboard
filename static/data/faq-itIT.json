@@ -1,24 +1,29 @@
 {
     "TRAPEZE": {
+        "id":"TRAPEZE",
         "qnas": {
             "qna1": {
+                "id":"what-can-I-do-on-the-TRAPEZE-privacy-dashboard",
                 "question": "Cosa posso fare nel dashboard sulla privacy di TRAPEZE?",
                 "answer": "Dopo aver selezionato un titolare del trattamento, è possibile sfogliare i dati trattati e per quali scopi. \n \n Potete limitare il trattamento dei vostri dati ritirando il vostro consenso. È possibile ritirare il consenso spostando a sinistra i cursori nel menu 'Dati' o 'Scopi' e inviando le modifiche. \n \n Potete anche ritirare automaticamente tutti i vostri consensi facendo clic sul pulsante 'Ritirare tutti i consensi'. \n \n L'utente può anche ampliare l'ambito del trattamento dei dati forniti con il consenso, spostando i cursori verso destra. \n \n In caso di domande specifiche, è possibile contattare il Responsabile della Protezione dei Dati (RPD) tramite il pulsante 'Contatto' nelle informazioni sul titolare del trattamento. \n \n Su desktop: Vedere il banner sul lato destro.\n\n Su mobile: Cliccare sull'icona del titolare del trattamento in alto a destra O sulla scheda del titolare del trattamento nel menu in alto a sinistra.",
                 "references": {                }
             },
             "qna2": {
+                "id":"who-is-responsible-for-the-information-on-the-TRAPEZE-privacy-dashboard",
                 "question": "Chi è responsabile delle informazioni contenute nel dashboard sulla privacy di TRAPEZE?",
                 "answer": "Le informazioni presentate nel dashboard sulla privacy di TRAPEZE sono fornite dal titolare del trattamento selezionato. \n \n Su desktop: Vedere il banner sul lato destro.\n\n Su mobile: Cliccare sull'icona del titolare del trattamento in alto a destra O sulla scheda del titolare del trattamento nel menu in alto a sinistra.",
                 "references": {
                 }
             },
             "qna3": {
+                "id":"why-do-controllers-use-the-TRAPEZE-privacy-dashboard",
                 "question": "Perché i responsabili utilizzano il dashboard sulla privacy di TRAPEZE?",
                 "answer": "Il dashboard sulla privacy di TRAPEZE è un software che i responsabili possono utilizzare per chiarire all'utente come e per quali scopi trattano i suoi dati personali. \n \n I responsabili sono obbligati dal Regolamento Generale sulla Protezione dei Dati (RGPD) a rendere trasparente il trattamento dei dati personali.\n \n Il dashboard sulla privacy di TRAPEZE è uno strumento di facile utilizzo che i responsabili possono utilizzare gratuitamente.",
                 "references": {
                 }
             },
             "qna4": {
+                "id":"who-has-developed-the-TRAPEZE-privacy-dashboard",
                 "question": "Chi ha sviluppato il dashboard sulla privacy di TRAPEZE?",
                 "answer": "TRAPEZE è un progetto di ricerca finanziato dall'Unione Europea.\n \n TRAPEZE è l'acronimo di \"TRAnsparency, Privacy and security for European citiZEns\". \n \n TRAPEZE fa parte del programma di finanziamento Horizon2020 dell'Unione Europea.\n \n Il progetto triennale è stato condotto tra settembre 2020 e agosto 2023.\n \n Il consorzio del progetto TRAPEZE è composto dai seguenti 13 partner:\n \n (1.) TenForce BVBA,\n (2.) GEIE ERCIM,\n (3.) Technische Universität Berlin,\n (4.) VLAAMSE GEWEST,\n (5.) Deutsche Telekom AG,\n (6.) CaixaBank SA,\n (7.) Consorzio Interuniversitario Nazionale Per L'Informatica,\n (8.) Unabhängiges Landeszentrum für Datenschutz,\n (9.) Kaspersky Lab Italia SRL,\n (10.) Institut Mihajlo Pupin,\n (11.) IPSOS NV,\n (12.) Athens Technology Center Anonymi Biomichaniki Emporiki Kai Techniki Etaireia Efarmogon Ypsilis Technologias,\n (13.) E-Seniors: Initiation des Séniors Aux NTIC Association.",
                 "references": { 
@@ -42,8 +47,10 @@
         }
     },   
     "Consenso": {
+        "id":"consent",
         "qnas": {
             "qna1": {
+                "id":"what-is-consent",
                 "question": "Che cos'\u00e8 il consenso?",
                 "answer": "Secondo il articolo 4, punto 11 RGPD, il consenso è una chiara azione affermativa nei confronti di un titolare del trattamento dei vostri dati personali. \n \n Si noti che i responsabili non devono sempre raccogliere il consenso dell'utente per trattare i suoi dati personali. \n \n Ad esempio, un servizio di consegna ha bisogno di elaborare il vostro indirizzo per rispettare l'ordine di consegna. Non è necessario raccogliere il consenso.",
                 "references": {
@@ -51,6 +58,7 @@
                 }
             },
             "qna2": {
+                "id":"can-children-give-consent",
                 "question": "I bambini possono dare il consenso?",
                 "answer": "I minori di 16 anni o più possono dare il consenso. \n \n Tuttavia, i responsabili devono compiere uno sforzo ragionevole per verificare che il consenso sia stato dato o autorizzato dal titolare della responsabilità genitoriale sul minore. \n \n Gli Stati membri dell'UE possono abbassare la soglia dei 16 anni, ma non al di sotto dei 13 anni.",
                 "references": {
@@ -58,6 +66,7 @@
                 }
             },
             "qna3": {
+                "id":"can-I-withdraw-my-consent",
                 "question": "Posso ritirare il mio consenso?",
                 "answer": "Secondo il articolo 7, paragrafo 3 RGPD, è possibile ritirare il consenso in qualsiasi momento. \n \n Il ritiro del consenso non richiede un modulo specifico. \n \n È possibile, ad esempio, ritirare il consenso scrivendo una lettera o un'e-mail a un titolare del trattamento o chiamandolo.",
                 "references": {
@@ -65,16 +74,19 @@
                 }
             },
             "qna4": {
+                "id":"do-controllers-delete-my-personal-data-when-I-withdraw-my-consent",
                 "question": "I responsabili cancellano i miei dati personali quando ritiro il mio consenso?",
                 "answer": "Non appena l'utente ritira il proprio consenso, i responsabili devono interrompere il trattamento dei suoi dati e cancellare i suoi dati personali per gli scopi per cui ha ritirato il consenso.",
                 "references": { }
             },
             "qna5": {
+                "id":"what-is-a-purpose",
                 "question": "Perch\u00e9 dovrei ritirare il consenso, quando posso richiedere la cancellazione dei miei dati personali?",
                 "answer": "Il ritiro del consenso è più rigorosa della richiesta di cancellazione dei dati personali.\n \n La richiesta di cancellazione non impedisce la futura raccolta dei dati personali. \n \n Quando l'utente ritira il consenso, i responsabili devono interrompere il trattamento dei suoi dati e cancellare i suoi dati personali per qualsiasi scopo per cui ha ritirato il consenso.",
                 "references": { }
             },
             "qna6": {
+                "id":"what-can-I-do-if-I-forgot-what-I-consented-to",
                 "question": "Cosa posso fare se ho dimenticato il mio consenso?",
                 "answer": "Secondo il articolo 7, paragrafo 1 RGPD, i responsabili devono dimostrare di aver raccolto il consenso dell'utente e anche i dettagli di tale consenso.",
                 "references": {
@@ -82,6 +94,7 @@
                 }
             },
             "qna7": {
+                "id":"does-consent-expire",
                 "question": "Il consenso scade?",
                 "answer": "No, il consenso non scade. \n \n Tuttavia, i responsabili del trattamento devono raccogliere nuovamente il consenso se vogliono trattare i vostri dati personali per nuovi scopi.",
                 "references": { }
@@ -89,8 +102,10 @@
         }
     },
     "Dati Personale": {
+        "id":"personal-data",
         "qnas": {
             "qna1": {
+                "id":"what-is-personal-data",
                 "question": "Cosa sono i dati personali?",
                 "answer": "Secondo il articolo 4, punto 1 RGPD, tutti i dati che vi sono attribuibili sono dati personali.",
                 "references": {
@@ -100,8 +115,10 @@
         }
     },
     "Finalità (Scopi)": {
+        "id":"purpose",
         "qnas": {
             "qna1": {
+                "id":"what-is-a-purpose",
                 "question": "Che cos'\u00e8 una finalità?",
                 "answer": "Secondo il articolo 5, paragrafo 1, lettera b) RGPD, i responsabili devono chiarire all'utente per quali scopi specifici raccolgono ed elaborano i suoi dati personali. \n \n È ad esempio illegale, ai sensi del RGPD, raccogliere i vostri dati personali per lo scopo specifico di raccomandazioni lavorative personalizzate e successivamente utilizzarli per scopi di marketing.",
                 "references": {

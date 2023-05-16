@@ -30,7 +30,7 @@
         </v-col>
       </v-row>
 
-      <v-expansion-panels inset>
+      <v-expansion-panels v-model="openParentPanel" inset>
         <v-expansion-panel
           v-for="category in entries"
           :key="category"
@@ -45,9 +45,8 @@
             </span>
           </v-expansion-panel-header>
 
-          <v-expansion-panel-content class="px-0">
-
-            <v-expansion-panels flat popout>
+          <v-expansion-panel-content class="px-0">    
+            <v-expansion-panels v-model="openSubPanel[faq[$i18n.locale][category].id]" flat popout>
               <v-expansion-panel
                 v-for="qna in Object.keys(faq[$i18n.locale][category]['qnas'])"
                 :key="faq[$i18n.locale][category]['qnas'][qna].question"
@@ -61,7 +60,7 @@
                   </span>
                 </v-expansion-panel-header>
 
-                <v-expansion-panel-content>
+                <v-expansion-panel-content :class="`${faq[$i18n.locale][category].id}_${faq[$i18n.locale][category]['qnas'][qna].id}`">
                   <p class="newline-character-support">
                     {{
                       faq[$i18n.locale][category]["qnas"][qna].answer
@@ -90,6 +89,7 @@
                   </div>
                 </v-expansion-panel-content>
 
+
               </v-expansion-panel>
             </v-expansion-panels>
             
@@ -116,13 +116,55 @@ export default {
         "fr": faqFR
       },
       searchValue: "",
+      openParentPanel:-1,
+      openSubPanel:{}
     };
+  },
+  mounted() {
+    let hashValue = this.$nuxt.$route.hash.slice(1);
+    let parentID = hashValue.split('_')[0]
+    let childID = hashValue.split('_')[1]
+
+    let entries = Object.values(this.faq.en);
+    this.openParentPanel = entries.findIndex((entry) => {
+      let entryID = entry.id;
+      return parentID === entryID;
+    });
+
+
+    this.openSubPanel = entries.reduce(function (accumulator, entry) { 
+      accumulator[entry.id] = -1
+      return accumulator
+    }, {})
+
+    if(this.openParentPanel > -1){
+      let categoryQNAs = Object.values(entries[this.openParentPanel].qnas)
+      let openSubPanelValue = categoryQNAs.findIndex((qna) => {
+        let qnaID = qna.id;
+        return childID === qnaID;
+      });
+      this.openSubPanel[parentID]= openSubPanelValue
+      if (openSubPanelValue > -1 ) {
+        window.onload = () => {
+          this.scrollpage(hashValue);
+        };
+      }
+    }
+
+
   },
   computed: {
     entries() {
       return Object.keys(this.faq[this.$i18n.locale]).filter((e) => {
         return e.toLowerCase().includes(this.searchValue.toLowerCase());
       });
+    },
+  },
+  methods: {
+    scrollpage(className) {
+      document
+        .getElementsByClassName(className)[0]
+        .scrollIntoView({ behavior: "smooth", block:"center" });
     },
   },
 };

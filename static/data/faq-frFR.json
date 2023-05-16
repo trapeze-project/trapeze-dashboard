@@ -1,25 +1,30 @@
 {
    
     "TRAPEZE": {
+        "id":"TRAPEZE",
         "qnas": {
             "qna1": {
+                "id":"what-can-I-do-on-the-TRAPEZE-privacy-dashboard",
                 "question": "Que puis-je faire sur le tableau de bord de confidentialité de TRAPEZE?",
                 "answer": "Après avoir sélectionné un responsable du traitement, vous pouvez consulter les données qu'il traite à votre sujet et à quelles fins. \n \n Vous pouvez limiter le traitement de vos données en retirant votre consentement. Vous pouvez retirer votre consentement en déplaçant les curseurs du menu 'Données' ou 'Fins' vers la gauche, puis en soumettant vos modifications. \n \n Vous pouvez également retirer automatiquement tout votre consentement en cliquant sur le bouton 'Retirer tout le consentement'. \n \n Vous pouvez également élargir la portée de leur traitement en leur donnant leur consentement en déplaçant les curseurs vers la droite. \n \n Si vous avez des questions spécifiques, vous pouvez contacter le délégué à la protection des données (DPD) en cliquant sur le bouton 'Nous Contacter' dans les informations sur le responsable du traitement. \n \n Sur desktop: Voir la bannière sur le côté droit. \n \n Sur mobile: Cliquez sur l'icône du responsable du traitement en haut à droite OU sur l'onglet 'Responsable' dans le menu en haut à gauche.",
                 "references": {                }
             },
             "qna2": {
+                "id":"who-is-responsible-for-the-information-on-the-TRAPEZE-privacy-dashboard",
                 "question": "Qui est responsable des informations contenues dans le tableau de bord de confidentialité de TRAPEZE?",
                 "answer": "Les informations présentées dans le tableau de bord de confidentialité de TRAPEZE sont fournies par le responsable que vous avez sélectionné. \n \n  Sur desktop: Voir la bannière sur le côté droit.\n \n Sur mobile: Cliquez sur l'icône du responsable du traitement en haut à droite OU sur l'onglet 'Responsable' dans le menu en haut à gauche.",
                 "references": {
                 }
             },
             "qna3": {
+                "id":"why-do-controllers-use-the-TRAPEZE-privacy-dashboard",
                 "question": "Pourquoi les responsables du traitement utilisent-ils le tableau de bord de condidentialité de TRAPEZE?",
                 "answer": "Le tableau de bord de confidentialité de TRAPEZE est un logiciel que les responsables du traitement peuvent utiliser pour vous expliquer clairement comment et à quelles fins ils traitent vos données à caractère personnel. \n \n Le Règlement Général sur la Protection des Données (RGPD) oblige les responsables du traitement à rendre transparent leur traitement des données à caractère personnel. \n \n Le tableau de bord de confidentialité de TRAPEZE est un outil facile à utiliser que les responsables du traitement peuvent utiliser gratuitement.",
                 "references": {
                 }
             },
             "qna4": {
+                "id":"who-has-developed-the-TRAPEZE-privacy-dashboard",
                 "question": "Qui a développé le tableau de bord de confidentialité de TRAPEZE?",
                 "answer": "TRAPEZE est un projet de recherche financé par l'Union Européenne. \n \n TRAPEZE est l'acronyme de \"TRAnsparency, Privacy and security for European citiZEns\". \n \n TRAPEZE fait partie du programme de financement Horizon2020 de l'Union Européenne. \n \n Le projet de 3 ans a été mené entre septembre 2020 et août 2023. \n \n  Le consortium du projet TRAPEZE est composé des 13 partenaires suivants:\n  \n  (1.) TenForce BVBA,\n  (2.) GEIE ERCIM,\n  (3.) Technische Universität Berlin,\n  (4.) VLAAMSE GEWEST,\n  (5.) Deutsche Telekom AG,\n  (6.) CaixaBank SA,\n  (7.) Consorzio Interuniversitario Nazionale Per L'Informatica,\n  (8.) Unabhängiges Landeszentrum für Datenschutz,\n  (9.) Kaspersky Lab Italia SRL,\n  (10.) Institut Mihajlo Pupin,\n  (11.) IPSOS NV,\n  (12.) Athens Technology Center Anonymi Biomichaniki Emporiki Kai Techniki Etaireia Efarmogon Ypsilis Technologias,\n  (13.) E-Seniors: Initiation des Séniors Aux NTIC Association.",
                 "references": { 
@@ -43,8 +48,10 @@
         }
     },
     "Consentement": {
+        "id":"consent",
         "qnas": {
             "qna1": {
+                "id":"what-is-consent",
                 "question": "Qu'est-ce que le consentement?",
                 "answer": "Selon l'article 4, point 11) RGPD, le consentement est une action affirmative claire à l'égard d'un responsable du traitement pour traiter vos données à caractère personnel. \n \n Notez que les responsables du traitement ne doivent PAS toujours obtenir votre consentement pour traiter vos données à caractère personnel. \n \n Par exemple, un service de livraison a besoin de connaître votre adresse pour se conformer à son ordre de livraison. Il n'a pas besoin de recueillir votre consentement.",
                 "references": {
@@ -52,6 +59,7 @@
                 }
             },
             "qna2": {
+                "id":"can-children-give-consent",
                 "question": "Les enfants peuvent-ils donner leur consentement?",
                 "answer": "Les enfants de 16 ans et plus peuvent donner leur consentement. \n \n Toutefois, les responsables du traitement doivent s'efforcer de vérifier que ce consentement est donné ou autorisé par le titulaire de la responsabilité parentale à l'égard de l'enfant. \n \n Les États membres de l'UE peuvent abaisser le seuil de 16 ans, mais pas en dessous de 13 ans.",
                 "references": {
@@ -59,6 +67,7 @@
                 }
             },
             "qna3": {
+                "id":"can-I-withdraw-my-consent",
                 "question": "Puis-je retirer mon consentement?",
                 "answer": "Selon l'article 7, paragraphe 3 RGPD, vous pouvez retirer votre consentement \u00e0 tout moment.\n \n Le retrait du consentement ne n\u00e9cessite pas de formulaire sp\u00e9cifique.\n \n Vous pouvez par exemple retirer le consentement en \u00e9crivant une lettre ou un courriel, ou en nous appelant.",
                 "references": {
@@ -66,16 +75,19 @@
                 }
             },
             "qna4": {
+                "id":"do-controllers-delete-my-personal-data-when-I-withdraw-my-consent",
                 "question": "Les responsables du traitement suppriment-ils mes données à caractère personnel lorsque je retire mon consentement?",
                 "answer": "Dès que vous retirez votre consentement, les responsables du traitement doivent cesser le traitement de vos données et supprimer vos données à caractère personnel pour toutes les fins pour lesquelles vous avez retiré votre consentement.",
                 "references": { }
             },
             "qna5": {
+                "id":"what-is-a-purpose",
                 "question": "Pourquoi devrais-je retirer mon consentement, alors que je peux demander la suppression de mes données à caractère personnel?",
                 "answer": "Le retrait du consentement est plus rigoureux que la demande d'effacement des données à caractère personnel. \n \n Les demandes d'effacement n'empêchent pas la collecte future des données à caractère personnel. \n \n Lorsque vous retirez votre consentement, les responsables du traitement doivent cesser le traitement de vos données et supprimer vos données à caractère personnel pour toutes les fins pour lesquelles vous avez retiré votre consentement.",
                 "references": { }
             },
             "qna6": {
+                "id":"what-can-I-do-if-I-forgot-what-I-consented-to",
                 "question": "Que puis-je faire si j'ai oubli\u00e9 ce \u00e0 quoi j'ai consenti?",
                 "answer": "Selon l'article 7, paragraphe 1 RGPD, les responsables du traitement doivent démontrer qu'ils ont recueilli votre consentement et en préciser les détails.",
                 "references": {
@@ -83,6 +95,7 @@
                 }
             },
             "qna7": {
+                "id":"does-consent-expire",
                 "question": "Le consentement expire-t-il?",
                 "answer": "Non, le consentement n'expire pas. \n \n Toutefois, les responsables du traitement doivent à nouveau recueillir le consentement s'ils souhaitent traiter vos données à caractère personnel à de nouvelles fins.",
                 "references": { }
@@ -91,7 +104,9 @@
     },
     "Données Personnelles": {
         "qnas": {
+            "id":"personal-data",
             "qna1": {
+                "id":"what-is-personal-data",
                 "question": "Qu'est-ce qu'une donn\u00e9e à caractère personnelle?",
                 "answer": "Selon l'article 4, point 4) RGPD, toute donn\u00e9e qui vous est attribuable est une donn\u00e9e à caractère personnelle.",
                 "references": {
@@ -101,8 +116,10 @@
         }
     },
     "Finalités (Fins)": {
+        "id":"purpose",
         "qnas": {
             "qna1": {
+                "id":"what-is-a-purpose",
                 "question": "Qu'est-ce qu'une finalité (fin)?",
                 "answer": "Selon l'article 5, paragraphe 1 RGPD, point b), les responsables doivent vous indiquer clairement à quelles fins précises ils collectent et traitent vos données à caractère personnel. \n \n Il est par exemple illégal, en vertu du RGPD, de collecter vos données à caractère personnel dans la fin précise de vous fournir des recommandations d'emploi personnalisées et de les utiliser ensuite à des fins de marketing.",
                 "references": {
