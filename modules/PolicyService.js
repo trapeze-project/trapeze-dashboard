@@ -9,7 +9,12 @@ export default (() => {
       let policy = policies.find((p) => p.controller === controller["@id"]);
       if (policy) {
         policy["@policySet"] = policy["@policySet"].filter((policy)=>{
-          return policyIDs.includes(policy["@id"]);
+          if(policyIDs.length === 0){
+            return true
+          }else{
+            return policyIDs.includes(policy["@id"]);
+          }
+          
         })
         return new Policy(policy);
       } else {
