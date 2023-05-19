@@ -15,6 +15,8 @@
           @undoAllChanges="undoAllChanges"
           @submitMyConsent="submitMyConsent"
           @changeUserChoice="changeUserChoice"
+          :openControllerForm="openControllerForm"
+
         />
       </v-tab-item>
 
@@ -28,6 +30,8 @@
           @undoAllChanges="undoAllChanges"
           @submitMyConsent="submitMyConsent"
           @changeUserChoice="changeUserChoice"
+          :openControllerForm="openControllerForm"
+          
         />
       </v-tab-item>
     </v-tabs-items>
@@ -42,6 +46,9 @@ export default {
   props: {
     controller: {
       type: Object,
+    },
+    openControllerForm:{
+      type:Function
     }
   },
 

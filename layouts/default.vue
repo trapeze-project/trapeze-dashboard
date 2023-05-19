@@ -6,7 +6,6 @@
 
       <v-main >
         <v-container>
-
           <!-- Mobile only -->
           <v-row v-if="$vuetify.breakpoint.smAndDown">
 
@@ -42,7 +41,8 @@
                 temporary
                 right
               >
-                <PControllerView 
+                <PControllerView
+                  ref="mobile-PControllerView"
                   v-if="controller"
                   :controller="controller"
                   :showNotification="showNotification"
@@ -67,6 +67,7 @@
             <v-col class="pt-3" sm="12" md="8" lg="8">
               <nuxt-child
                 :controller="controller"
+                :openControllerForm="openControllerForm"
               />
             </v-col>
 
@@ -74,6 +75,7 @@
 
             <v-col class="hidden-sm-and-down px-0" md="2" lg="2">
               <PControllerView
+                ref="desktop-PControllerView"
                 v-if="controller"
                 :controller="controller"
                 :showNotification="showNotification"
@@ -102,6 +104,7 @@
 </template>
 
 <script>
+import PControllerViewVue from '~/components/layout/PControllerView.vue';
 import ControllerService from "../modules/ControllerService.js";
 
 export default {
@@ -141,6 +144,18 @@ export default {
     },
     showNotification(text,color){
       this.$refs.notification.showNotification(text, color)
+    },
+    openControllerForm(subject){
+      if(this.$vuetify.breakpoint.smAndDown){
+        this.$refs['mobile-PControllerView'].$refs['PControllerContact'].open(subject)
+
+      }else{
+        this.$refs['desktop-PControllerView'].$refs['PControllerContact'].open(subject)
+
+      }
+
+
+
     }
   }
 };

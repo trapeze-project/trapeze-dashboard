@@ -98,6 +98,20 @@
 
                       <v-card-text>
                         {{ dpv[$i18n.locale].descriptions[child] }}
+                        <div>
+                          rights:
+                          <ul>
+                            <li
+                              v-for="subject in subjects"
+                              :key="subject"
+                              class="clickable"
+                              style="color:blue; text-decoration: underline"
+                              @click="openControllerForm(subject)"
+                            >
+                              {{subject}}
+                            </li>
+                          </ul>
+                        </div>
                       </v-card-text>
                     </v-card>
                   </v-col>
@@ -165,6 +179,10 @@ import dpvLabelsDescriptionsIT from "~/static/data/DPV/DPV_Labels_descriptions-i
 import dpvLabelsDescriptionsFR from "~/static/data/DPV/DPV_Labels_descriptions-frFR.json";
 import conceptsLabels from "~/static/data/DPV/conceptsLabelsTakenFromPolicyEdtorToolRepo.json";
 
+import emailTemplateEN from  "../../static/data/emailTemplates/emailTemplate-enUS.json";
+import emailTemplateDE from  "../../static/data/emailTemplates/emailTemplate-deDE.json";
+import emailTemplateFR from  "../../static/data/emailTemplates/emailTemplate-frFR.json";
+import emailTemplateIT from  "../../static/data/emailTemplates/emailTemplate-itIT.json";
 
 
 export default {
@@ -194,7 +212,11 @@ export default {
       required: false,
       default: true,
     },
+    openControllerForm:{
+      type:Function
+    }
   },
+
   data() {
     return {
       conceptsLabels:conceptsLabels,
@@ -215,10 +237,19 @@ export default {
         { text: 'Alphabetical Descending', value: 'alpha-descending' },
         { text: 'Sensitivity Ascending', value: 'sensitive-ascending', disabled: true },
         { text: 'Sensitivity Descending', value: 'sensitive-descending', disabled: true },
-      ]
+      ],
+      emailTemplate: {
+        "en": emailTemplateEN,
+        "de": emailTemplateDE,
+        "it": emailTemplateIT,
+        "fr": emailTemplateFR
+      }
     };
   },
   computed: {
+    subjects() {
+      return this.emailTemplate[this.$i18n.locale].map((e) => e.subject);
+    },
     slicedChildren() {
       return this.children.filter((e) => {
         let label = this.dpv[this.$i18n.locale].labels[e].toLowerCase();

@@ -1,6 +1,6 @@
 <template>
   <div>
-
+    
     <!-- Revoke all button -->
     <v-card elevation="0">
 
@@ -78,6 +78,7 @@
               :children="Object.keys(modifiedUserChoices[parent])"
               :subTree="modifiedUserChoices[parent]"
               @changeUserChoice="changeUserChoice" 
+              :openControllerForm="openControllerForm"
             />
           </div>
 
@@ -123,6 +124,9 @@ export default {
       type: Object,
       required: true,
     },
+    openControllerForm:{
+      type:Function
+    }
   },
   data() {
     return {
@@ -225,6 +229,12 @@ export default {
         "tab": this.tabName,
         "userChoices": this.modifiedUserChoices,
       })
+    },
+    handleOpenFormButton(){
+      let subject = 'Right to Request Access to Personal Data'
+      console.log(subject)
+      this.openControllerForm(subject)
+      console.log("open form")
     }
   }
 };

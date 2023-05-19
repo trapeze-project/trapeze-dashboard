@@ -153,6 +153,13 @@ export default {
     }
   },
   methods: {
+    open(subject){
+      console.log("subject vslue "+subject)
+      this.message.subject = subject
+      
+      this.fillMessageBody();
+      this.dialog = true
+    },
     sendMessage(){
       this.dialog = false;
       const text = this.$t("snackbar.msg.message-sent")
