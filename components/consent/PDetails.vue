@@ -171,13 +171,11 @@
 </template>
 
 <script>
-import axios from "axios";
-import promise from "promise";
+
 import dpvLabelsDescriptionsEN from "~/static/data/DPV/DPV_Labels_descriptions-enUS.json";
 import dpvLabelsDescriptionsDE from "~/static/data/DPV/DPV_Labels_descriptions-deDE.json";
 import dpvLabelsDescriptionsIT from "~/static/data/DPV/DPV_Labels_descriptions-itIT.json";
 import dpvLabelsDescriptionsFR from "~/static/data/DPV/DPV_Labels_descriptions-frFR.json";
-import conceptsLabels from "~/static/data/DPV/conceptsLabelsTakenFromPolicyEdtorToolRepo.json";
 
 import emailTemplateEN from  "../../static/data/emailTemplates/emailTemplate-enUS.json";
 import emailTemplateDE from  "../../static/data/emailTemplates/emailTemplate-deDE.json";
@@ -219,7 +217,6 @@ export default {
 
   data() {
     return {
-      conceptsLabels:conceptsLabels,
       parentSwitchValue: false,
       ChildrenSwitchesValues: {},
       showDetails: false,
@@ -285,51 +282,7 @@ export default {
         : false;
     }
   },
-  // async mounted() {
-  //   // fetch terms definitions (this.parent and this.children include the terms as compacted IRIs)
-  //   try {
-  //     let termDPVInfoRequests = this.children.map((term) => {
-  //       let label = this.conceptsLabels[term]
-
-  //       return axios.get(
-  //         `https://trapeze.imp.bg.ac.rs/knowledgebase/kb.php?action=dpv&lang=&term=${label}`
-  //       )
-
-  //     });
-
-  //     this.debug = {};
-  //     this.debug = {
-  //       en: {
-  //         labels:{}
-  //       },
-  //       de: {
-  //         labels:{}
-  //       },
-  //       it: {
-  //         labels:{}
-  //       },
-  //       fr: {
-  //         labels:{}
-  //       },
-  //     };
-
-  //     const termDPVInfoResponces = await promise.all(termDPVInfoRequests);
-
-  //     termDPVInfoResponces.forEach((responce, index) => {
-  //       responce["data"][0][
-  //         "http://www.w3.org/2004/02/skos/core#definition"
-  //       ].forEach((langSpecificDefinition) => {
-  //         let IRI = this.children[index]
-  //         let lang = langSpecificDefinition["@language"];
-  //         let def = langSpecificDefinition["@value"];
-  //         this.dpv[lang].labels[IRI] = def;
-  //       });
-  //     });
-      
-  //   } catch (error) {
-  //     console.log("failed " + error);
-  //   }
-  // },
+  
 
   methods: {
     changeUserChoice(child) {

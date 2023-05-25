@@ -35,11 +35,15 @@
         />
       </v-tab-item>
     </v-tabs-items>
+
+    <div>{{this.debug}}</div>
     
   </div>
 </template>
 
 <script>
+import axios from "axios";
+import promise from "promise";
 import PolicyService from '~/modules/PolicyService';
 
 export default {
@@ -54,6 +58,7 @@ export default {
 
   data() {
     return {
+      debug:"",
       tabs: [
         {
           name: "data",
@@ -90,9 +95,79 @@ export default {
     this.userChoices = Object.assign({}, this.fetchedUserChoices);
   },
 
+
+  // async beforeMount() {
+  //   let compactedIRIs= ['dpv:Location','dpv:CustomerCare']
+
+
+  //   console.log("before mount")
+  //   try {
+  //     let termDPVInfoRequests = compactedIRIs.map((compactedIRI) => {
+  //       let term = compactedIRI.split(':')[1]
+  //       console.log(term)
+
+  //       return axios.get(
+  //         `https://trapeze.imp.bg.ac.rs/knowledgebase/kb.php?action=dpv&lang=&term=${term}`
+  //       )
+
+  //     });
+
+
+      
+  //     let result = {
+  //       "en": {
+  //         labels:{},
+  //         descriptions:{}
+  //       },
+  //       de: {
+  //         labels:{},
+  //         descriptions:{}
+  //       },
+  //       it: {
+  //         labels:{},
+  //         descriptions:{}
+  //       },
+  //       fr: {
+  //         labels:{},
+  //         descriptions:{}
+  //       },
+  //     }
+
+  //     const termDPVInfoResponces = await promise.all(termDPVInfoRequests);
+  //     // this.debug = termDPVInfoResponces
+  //     console.log(termDPVInfoResponces)
+  //     termDPVInfoResponces.forEach((responce, index) => {
+  //       let definitions = responce["data"][0][
+  //         "http://www.w3.org/2004/02/skos/core#definition"
+  //       ] 
+
+  //       let labels = responce["data"][0][
+  //         "http://www.w3.org/2004/02/skos/core#prefLabel"
+  //       ]
+  //       definitions.forEach((langSpecificDefinition) => {
+  //         let IRI = compactedIRIs[index]
+  //         let lang = langSpecificDefinition["@language"];
+  //         let def = langSpecificDefinition["@value"];
+  //         result[lang].descriptions[IRI] = def;
+  //       });
+
+  //       labels.forEach((langSpecificLabel) => {
+  //         let IRI = compactedIRIs[index]
+  //         let lang = langSpecificLabel["@language"];
+  //         let label = langSpecificLabel["@value"];
+  //         result[lang].labels[IRI] = label;
+  //       });
+  //     });
+  //     this.debug = result
+      
+  //   } catch (error) {
+  //     console.log("failed " + error);
+  //   }
+  // },
   mounted() {
     window.addEventListener("beforeunload", this.beforeWindowUnload);
   },
+
 
   beforeDestroy() {
     window.removeEventListener("beforeunload", this.beforeWindowUnload);
