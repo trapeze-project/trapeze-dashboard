@@ -18,9 +18,10 @@
       <b>{{ $t("general.dpo") }} ({{ $t("general.dpo-abbrev") }})</b><br>
       {{ controller.alumni[0].name }}<br>
       {{ controller.email }}<br>
-      <PControllerContact
-        ref="PControllerContact"
+      <PContactForm
+        ref="PContactForm"
         class="mt-3"
+        :contactController="true"
         :company-name="controller.name"
         :btn-name="$t('btn.labels.contact')"
         :email="controller.email"

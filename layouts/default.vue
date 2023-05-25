@@ -80,6 +80,7 @@
                 :controller="controller"
                 :showNotification="showNotification"
               />
+              <PDPAView :showNotification="showNotification"/>
             </v-col>
           </v-row>
 
@@ -147,10 +148,10 @@ export default {
     },
     openControllerForm(subject){
       if(this.$vuetify.breakpoint.smAndDown){
-        this.$refs['mobile-PControllerView'].$refs['PControllerContact'].open(subject)
+        this.$refs['mobile-PControllerView'].$refs['PContactForm'].open(subject)
 
       }else{
-        this.$refs['desktop-PControllerView'].$refs['PControllerContact'].open(subject)
+        this.$refs['desktop-PControllerView'].$refs['PContactForm'].open(subject)
 
       }
 

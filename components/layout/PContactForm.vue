@@ -50,6 +50,7 @@
           />
 
           <v-combobox
+            v-if="contactController"
             class="rounded-pill"
             :label="`${$t('contact.subject')}:`"
             disable-lookup
@@ -124,6 +125,10 @@ export default {
     email: {
       type: String,
       required: true
+    },
+    contactController:{
+      type:Boolean,
+      default: false
     }
   },
 
