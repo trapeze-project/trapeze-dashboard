@@ -24,24 +24,24 @@
         "description": "...",
         "dpv:hasPersonalDataCategory": [
           {
-            "@class": "dpv-pd:location"
+            "@class": "dpv-pd:Location"
           },
           {
-            "@class": "dpv-pd:name"
+            "@class": "dpv-pd:Name"
           },
           {
-            "@class": "dpv-pd:age"
+            "@class": "dpv-pd:Age"
           },
           {
-            "@class": "dpv-pd:country"
+            "@class": "dpv-pd:Country"
           },
           {
-            "@class": "dpv-pd:preference"
+            "@class": "dpv-pd:Preference"
           }
         ],
         "dpv:hasPurpose": [
           {
-            "@class": "dpv:marketing"
+            "@class": "dpv:Marketing"
           }
         ],
         "dpv:hasProcessing": [
@@ -81,15 +81,15 @@
         "description": "...",
         "dpv:hasPersonalDataCategory": [
           {
-            "@class": "dpv-pd:location"
+            "@class": "dpv-pd:Location"
           },
           {
-            "@class": "dpv-pd:fingerprint"
+            "@class": "dpv-pd:Fingerprint"
           }
         ],
         "dpv:hasPurpose": [
           {
-            "@class": "dpv:advertising"
+            "@class": "dpv:Advertising"
           }
         ],
         "dpv:hasProcessing": [
@@ -129,30 +129,30 @@
         "description": "...",
         "dpv:hasPersonalDataCategory": [
           {
-            "@class": "dpv-pd:location"
+            "@class": "dpv-pd:Location"
           },
           {
-            "@class": "dpv-pd:name"
+            "@class": "dpv-pd:Name"
           },
           {
-            "@class": "dpv-pd:age"
+            "@class": "dpv-pd:Age"
           },
           {
-            "@class": "dpv-pd:gender"
+            "@class": "dpv-pd:Gender"
           },
           {
-            "@class": "dpv-pd:country"
+            "@class": "dpv-pd:Country"
           },
           {
-            "@class": "dpv-pd:behavioral"
+            "@class": "dpv-pd:Behavioral"
           },
           {
-            "@class": "dpv-pd:preference"
+            "@class": "dpv-pd:Preference"
           }
         ],
         "dpv:hasPurpose": [
           {
-            "@class": "dpv:academicResearch"
+            "@class": "dpv:AcademicResearch"
           }
         ],
         "dpv:hasProcessing": [
@@ -192,30 +192,30 @@
         "description": "...",
         "dpv:hasPersonalDataCategory": [
           {
-            "@class": "dpv-pd:location"
+            "@class": "dpv-pd:Location"
           },
           {
-            "@class": "dpv-pd:name"
+            "@class": "dpv-pd:Name"
           },
           {
-            "@class": "dpv-pd:age"
+            "@class": "dpv-pd:Age"
           },
           {
-            "@class": "dpv-pd:gender"
+            "@class": "dpv-pd:Gender"
           },
           {
-            "@class": "dpv-pd:country"
+            "@class": "dpv-pd:Country"
           },
           {
-            "@class": "dpv-pd:behavioral"
+            "@class": "dpv-pd:Behavioral"
           },
           {
-            "@class": "dpv-pd:preference"
+            "@class": "dpv-pd:Preference"
           }
         ],
         "dpv:hasPurpose": [
           {
-            "@class": "dpv:commercialResearch"
+            "@class": "dpv:CommercialResearch"
           }
         ],
         "dpv:hasProcessing": [
@@ -255,30 +255,30 @@
         "description": "...",
         "dpv:hasPersonalDataCategory": [
           {
-            "@class": "dpv-pd:location"
+            "@class": "dpv-pd:Location"
           },
           {
-            "@class": "dpv-pd:name"
+            "@class": "dpv-pd:Name"
           },
           {
-            "@class": "dpv-pd:age"
+            "@class": "dpv-pd:Age"
           },
           {
-            "@class": "dpv-pd:gender"
+            "@class": "dpv-pd:Gender"
           },
           {
-            "@class": "dpv-pd:country"
+            "@class": "dpv-pd:Country"
           },
           {
-            "@class": "dpv-pd:behavioral"
+            "@class": "dpv-pd:Behavioral"
           },
           {
-            "@class": "dpv-pd:preference"
+            "@class": "dpv-pd:Preference"
           }
         ],
         "dpv:hasPurpose": [
           {
-            "@class": "dpv:academicResearch"
+            "@class": "dpv:AcademicResearch"
           }
         ],
         "dpv:hasProcessing": [
@@ -318,36 +318,36 @@
         "description": "...",
         "dpv:hasPersonalDataCategory": [
           {
-            "@class": "dpv-pd:location"
+            "@class": "dpv-pd:Location"
           },
           {
-            "@class": "dpv-pd:name"
+            "@class": "dpv-pd:Name"
           },
           {
-            "@class": "dpv-pd:age"
+            "@class": "dpv-pd:Age"
           },
           {
-            "@class": "dpv-pd:country"
+            "@class": "dpv-pd:Country"
           },
           {
-            "@class": "dpv-pd:preference"
+            "@class": "dpv-pd:Preference"
           },
           {
-            "@class": "dpv-pd:behavioral"
+            "@class": "dpv-pd:Behavioral"
           },
           {
-            "@class": "dpv-pd:browserHistory"
+            "@class": "dpv-pd:BrowserHistory"
           },
           {
-            "@class": "dpv-pd:browsingBehavior"
+            "@class": "dpv-pd:BrowsingBehavior"
           },
           {
-            "@class": "dpv-pd:communication"
+            "@class": "dpv-pd:Communication"
           }
         ],
         "dpv:hasPurpose": [
           {
-            "@class": "dpv:customerCare"
+            "@class": "dpv:CustomerCare"
           }
         ],
         "dpv:hasProcessing": [
@@ -387,24 +387,24 @@
         "description": "...",
         "dpv:hasPersonalDataCategory": [
           {
-            "@class": "dpv-pd:location"
+            "@class": "dpv-pd:Location"
           },
           {
-            "@class": "dpv-pd:name"
+            "@class": "dpv-pd:Name"
           },
           {
-            "@class": "dpv-pd:age"
+            "@class": "dpv-pd:Age"
           },
           {
-            "@class": "dpv-pd:country"
+            "@class": "dpv-pd:Country"
           },
           {
-            "@class": "dpv-pd:preference"
+            "@class": "dpv-pd:Preference"
           }
         ],
         "dpv:hasPurpose": [
           {
-            "@class": "dpv:sellDataToThirdParties"
+            "@class": "dpv:SellDataToThirdParties"
           }
         ],
         "dpv:hasProcessing": [
@@ -447,24 +447,24 @@
         "description": "...",
         "dpv:hasPersonalDataCategory": [
           {
-            "@class": "dpv-pd:location"
+            "@class": "dpv-pd:Location"
           },
           {
-            "@class": "dpv-pd:name"
+            "@class": "dpv-pd:Name"
           },
           {
-            "@class": "dpv-pd:age"
+            "@class": "dpv-pd:Age"
           },
           {
-            "@class": "dpv-pd:country"
+            "@class": "dpv-pd:Country"
           },
           {
-            "@class": "dpv-pd:preference"
+            "@class": "dpv-pd:Preference"
           }
         ],
         "dpv:hasPurpose": [
           {
-            "@class": "dpv:sellInsightsToThirdParties"
+            "@class": "dpv:Marketing"
           }
         ],
         "dpv:hasProcessing": [
