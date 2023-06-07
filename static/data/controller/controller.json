@@ -2,7 +2,7 @@
   {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "@id": "c630f98e-a9f2-413a-8c71-8436a6f60001",
+    "@id": "Clover-IT",
     "name": "CloverIT",
     "telephone": "( 39 ) 42 68 53 00",
     "faxNumber": "( 39 ) 42 68 53 01",
@@ -31,7 +31,7 @@
   {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "@id": "c630f98e-a9f2-413a-8c71-8436a6f60002",
+    "@id": "CaixaBank-SA",
     "name": "CaixaBank SA",
     "telephone": "( 34 ) 938 56 24 94",
     "faxNumber": "",
@@ -60,7 +60,7 @@
   {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "@id": "c630f98e-a9f2-413a-8c71-8436a6f60003",
+    "@id": "Deutsche-Telekom-AG",
     "name": "Deutsche Telekom AG",
     "telephone": "( 49 ) 228 181-0",
     "faxNumber": "",
@@ -89,7 +89,7 @@
   {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "@id": "c630f98e-a9f2-413a-8c71-8436a6f60004",
+    "@id": "Vlaamse-Gewest",
     "name": "Vlaamse Gewest",
     "telephone": "( 32 ) 2 553 1700",
     "faxNumber": "",
