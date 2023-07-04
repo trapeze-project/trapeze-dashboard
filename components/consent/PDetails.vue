@@ -23,7 +23,7 @@
                 <v-col cols="10">
                   <div class="ml-3 me-auto ma-3">
                     <div>
-                      {{ dpv[$i18n.locale].labels[this.parent] }}
+                      {{ fetched_DPV_Labels_descriptions[$i18n.locale].labels[this.parent] }}
                     </div>
                     <div class="text-caption">{{ this.usedBy }}</div>
                   </div>
@@ -93,11 +93,11 @@
                           v-model="ChildrenSwitchesValues[child]"
                           @change="changeUserChoice(child)"
                         />
-                        <small>{{ dpv[$i18n.locale].labels[child] }}</small>
+                        <small>{{ fetched_DPV_Labels_descriptions[$i18n.locale].labels[child] }}</small>
                       </v-card-title>
 
                       <v-card-text>
-                        {{ dpv[$i18n.locale].descriptions[child] }}
+                        {{ fetched_DPV_Labels_descriptions[$i18n.locale].descriptions[child] }}
                         <div>
                           rights:
                           <ul>
@@ -172,10 +172,6 @@
 
 <script>
 
-import dpvLabelsDescriptionsEN from "~/static/data/DPV/DPV_Labels_descriptions-enUS.json";
-import dpvLabelsDescriptionsDE from "~/static/data/DPV/DPV_Labels_descriptions-deDE.json";
-import dpvLabelsDescriptionsIT from "~/static/data/DPV/DPV_Labels_descriptions-itIT.json";
-import dpvLabelsDescriptionsFR from "~/static/data/DPV/DPV_Labels_descriptions-frFR.json";
 
 import emailTemplateEN from  "../../static/data/emailTemplates/emailTemplate-enUS.json";
 import emailTemplateDE from  "../../static/data/emailTemplates/emailTemplate-deDE.json";
@@ -212,6 +208,10 @@ export default {
     },
     openControllerForm:{
       type:Function
+    },
+    fetched_DPV_Labels_descriptions:{
+      type: Object,
+      required: false,
     }
   },
 
@@ -223,12 +223,6 @@ export default {
       userChoices: {},
       searchValue: "",
       max: 10,
-      dpv: {
-        en: dpvLabelsDescriptionsEN,
-        de: dpvLabelsDescriptionsDE,
-        it: dpvLabelsDescriptionsIT,
-        fr: dpvLabelsDescriptionsFR,
-      },
       sortOptions: [
         { text: 'Alphabetical Ascending', value: 'alpha-ascending' },
         { text: 'Alphabetical Descending', value: 'alpha-descending' },
@@ -249,7 +243,7 @@ export default {
     },
     slicedChildren() {
       return this.children.filter((e) => {
-        let label = this.dpv[this.$i18n.locale].labels[e].toLowerCase();
+        let label = this.fetched_DPV_Labels_descriptions[this.$i18n.locale].labels[e].toLowerCase();
         return label.includes(this.searchValue ? this.searchValue : "");
       });
     },
@@ -264,7 +258,7 @@ export default {
           : this.$t("consent.uses");
       text += ": ";
       this.children.forEach((IRI, index) => {
-        text += `${index + 1}-${this.dpv[this.$i18n.locale].labels[IRI]} `;
+        text += `${index + 1}-${this.fetched_DPV_Labels_descriptions[this.$i18n.locale].labels[IRI]} `;
       });
 
       return text;

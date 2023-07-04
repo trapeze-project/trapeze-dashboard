@@ -45,7 +45,6 @@ export default {
     };
   },
   async beforeCreate() {
-    console.log("mounting ...");
     let countryAPIResponse = await fetch("https://api.country.is/");
     let countryAPIResponseJSON = await countryAPIResponse.json();
     let userCountryCode = countryAPIResponseJSON.country;

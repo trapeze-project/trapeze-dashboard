@@ -159,7 +159,6 @@ export default {
   },
   methods: {
     open(subject){
-      console.log("subject vslue "+subject)
       this.message.subject = subject
       
       this.fillMessageBody();

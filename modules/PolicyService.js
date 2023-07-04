@@ -5,8 +5,8 @@ export default (() => {
 
   return {
 
-    get(controller, policyIDs = []) {
-      let policy = policies.find((p) => p.controller === controller["@id"]);
+    get(controllerID, policyIDs = []) {
+      let policy = policies.find((p) => p.controller === controllerID);
       if (policy) {
         policy["@policySet"] = policy["@policySet"].filter((policy)=>{
           if(policyIDs.length === 0){
@@ -18,6 +18,7 @@ export default (() => {
         })
         return new Policy(policy);
       } else {
+        console.log("return undefined")
         return undefined;
       }
     },

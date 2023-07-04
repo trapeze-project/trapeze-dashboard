@@ -79,6 +79,7 @@
               :subTree="modifiedUserChoices[parent]"
               @changeUserChoice="changeUserChoice" 
               :openControllerForm="openControllerForm"
+              :fetched_DPV_Labels_descriptions="fetched_DPV_Labels_descriptions"
             />
           </div>
 
@@ -98,10 +99,6 @@
 </template>
 
 <script>
-import DPV_Labels_descriptions_deDE from  "../../static/data/DPV/DPV_Labels_descriptions-deDE.json";
-import DPV_Labels_descriptions_enUS from  "../../static/data/DPV/DPV_Labels_descriptions-enUS.json";
-import DPV_Labels_descriptions_frFR from  "../../static/data/DPV/DPV_Labels_descriptions-frFR.json";
-import DPV_Labels_descriptions_itIT from  "../../static/data/DPV/DPV_Labels_descriptions-itIT.json";
 export default {
   props: {
     tabName: {
@@ -126,6 +123,10 @@ export default {
     },
     openControllerForm:{
       type:Function
+    },
+    fetched_DPV_Labels_descriptions:{
+      type: Object,
+      required: true,
     }
   },
   data() {
@@ -135,12 +136,6 @@ export default {
       componentKey: 0,
       modifiedUserChoices: {},
       max: 10,
-      Imported_DPV_Labels_descriptions: {
-        "en": DPV_Labels_descriptions_enUS,
-        "de": DPV_Labels_descriptions_deDE,
-        "it": DPV_Labels_descriptions_itIT,
-        "fr": DPV_Labels_descriptions_frFR
-      },
       selectedSortOption:null,
       sortOptions: [
         { text: 'Alphabetical Ascending', value: 'alpha-ascending' },
@@ -175,7 +170,7 @@ export default {
   },
   computed: {
     DPV_Labels_descriptions(){
-      return this.Imported_DPV_Labels_descriptions[this.$i18n.locale];
+      return this.fetched_DPV_Labels_descriptions[this.$i18n.locale];
     },
 
     parents() {
@@ -232,9 +227,7 @@ export default {
     },
     handleOpenFormButton(){
       let subject = 'Right to Request Access to Personal Data'
-      console.log(subject)
       this.openControllerForm(subject)
-      console.log("open form")
     }
   }
 };

@@ -9,6 +9,29 @@ export default function (policy) {
   }
 
   return {
+    getIRIs(){
+      let policySet = policy["@policySet"];
+      let IRIs =  policySet.reduce((list, policy) => {
+
+        policy["dpv:hasPersonalDataCategory"].forEach((instance) => {
+          if (instance.hasOwnProperty("@instance")) {
+            list.push(instance["@instance"]);
+          } else if (instance.hasOwnProperty("@class")) {
+            list.push(instance["@class"]);
+          }
+        });
+        policy["dpv:hasPurpose"].forEach((instance) => {
+          if (instance.hasOwnProperty("@instance")) {
+            list.push(instance["@instance"]);
+          } else if (instance.hasOwnProperty("@class")) {
+            list.push(instance["@class"]);
+          }
+        });
+        return list
+      }, []);
+      IRIs = [...new Set(IRIs)];
+      return IRIs
+    },
 
     getMap(groupBy, attribute) {
       let policySet = policy["@policySet"];

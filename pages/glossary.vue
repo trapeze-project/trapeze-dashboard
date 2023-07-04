@@ -122,7 +122,6 @@ export default {
         .getElementsByClassName(className)[0]
         .scrollIntoView({ behavior: "smooth", block: "center"  });
       // let component = this.$refs[className]
-      // console.log(component)
       // component.scrollIntoView({ behavior: "smooth" });
 
 
