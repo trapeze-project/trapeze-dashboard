@@ -1,0 +1,57 @@
+{
+  "@description" : "AIV policy - use case 1",
+  
+  "@ontologies" : [	 "https://w3id.org/dpv/dpv-owl#",	 
+  					 "http://www.w3id.org/dpv/dpv-owl/dpv-pd#",	 
+					 "http://www.w3id.org/dpv/dpv-legal#",	 
+					 "http://www.w3id.org/dpv/dpv-gdpr#",	 
+					 "https://trapeze-project.eu/demos/pilot1/pilot1-ontology#"	 ],
+  
+  "@context" : {
+  	"@base"     : "https://w3id.org/dpv/dpv-owl#",
+  	"dpvo-pd"   : "http://www.w3id.org/dpv/dpv-owl/dpv-pd#",
+  	"dpv-legal" : "http://www.w3id.org/dpv/dpv-legal#",
+  	"dpv-gdpr"  : "http://www.w3id.org/dpv/dpv-gdpr#",
+  	"pilot1"       : "https://trapeze-project.eu/demos/pilot1/pilot1-ontology#"
+  	},
+  	
+  "@policySet" : [
+  
+     {
+     	"@description": "Policy for copying data to PODs",
+        "hasDataController"  :  {"@instance" : "pilot1:AIV"}
+     	"hasPurpose"      : "ShareGovernmentalData",
+     	"hasPersonalData" : [
+     	     "dpvo-pd:Identifying",
+     	     "dpvo-pd:Demographic",
+     	     "dpvo-pd:PhysicalAddress",
+     	     "dpvo-pd:Criminal",
+     	     "dpvo-pd:Family",
+     	     "dpvo-pd:MaritalStatus",
+     	     "dpvo-pd:Nationality",
+     	     "dpvo-pd:ProfessionalCertification",
+     	     "dpvo-pd:School",
+     	     "dpvo-pd:VehicleLicense"
+     	     ],
+     	"hasProcessing"   : [
+     	     "Copy",
+     	     "Store",
+     	     "Modify",
+     	     "Remove"
+     	     ],
+     	"hasStorageCondition" : {
+     	     "hasLocation" : "dpv-legal:Europe"},
+     	"hasRecipient" : {"@instance" : "pilot1:AIV"},
+     	
+     	"hasLegalBasis" : "dpv-gdpr:A6-1-a",
+     	
+     	"hasRight" : "A15",
+     	"hasRight" : "A16",
+     	"hasRight" : "A17",
+     	"hasRight" : "A18",
+     	"hasRight" : "A19",
+     	"hasRight" : "A20"
+     }
+     
+  ]
+}
