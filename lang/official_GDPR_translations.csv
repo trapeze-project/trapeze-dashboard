@@ -1,0 +1,96 @@
+﻿Glossary;;sources:;;;
+;;https://www.privacy-regulation.eu/fr/4.htm;;;
+;;https://legallayman.de/wie-liest-und-zitiert-man-eigentlich-paragraphen/;;;
+;;;;;
+;;"Article 4 ist ein ""unnumbered paragraph"" [info von Bud am 1. Aug 2022]";;all'articolo 1, paragrafo 1;
+;;https://publications.europa.eu/code/it/it-120700.htm;;;
+;Absatz;en-US;de-DE;it-IT;fr-FR
+;;In Article 4(<point>) GDPR;In Artikel 4, Nummer <Nummer> DSGVO;All'articolo 4, punto <Nummer> RGPD;À l'article 4, point <Nummer> RGPD
+;1.;personal data;personenbezogene Daten;dato/dati personale;données à caractère personnel
+;;data subject;betroffene Person;interessato;personne concernée
+;2.;processing;Verarbeitung;trattamento;traitement
+;3.;restriction of processing;Einschränkung der Verarbeitung;limitazione di trattamento;limitation du traitement
+;4. ;profiling;Profiling;profilazione;profilage
+;5.;pseudonymisation;Pseudonymisierung;pseudonimizzazione;pseudonymisation
+;6.;filing system;Dateisystem;archivio;fichier
+;7.;controller;Verantwortlicher;titolare del trattamento;responsable du traitement
+;8.;processor;Auftragsverarbeiter;responsabile del trattamento;sous-traitant
+;9.;recipient;Empfänger;destinatario;destinataire
+;10.;third party;Dritter;terzo;tiers
+;11.;consent;Einwilligung;consenso dell'interessato;consentement
+;12.;personal data breach;Verletzung des Schutzes personenbezogener Daten;violazione dei dati personali;violation de données à caractère personnel
+;13.;genetic data;genetische Daten;dati genetici;données génétiques
+;14.;biometric data;biometrische Daten;dati biometrici;données biométriques
+;15.;data concerning help;Gesundheitsdaten;dati relativi alla salute;données concernant la santé
+;16.;main establishment;Hauptniederlassung;stabilimento principale;établissement principal
+;17.;representative;Vertreter;rappresentante;représentant
+;18.;enterprise;Unternehmen;impresa;entreprise
+;19.;group of undertakings;Unternehmensgruppe;gruppo imprenditoriale;groupe d'entreprises
+;20.;binding corporate rules;verbindliche interne Datenschutzvorschriften;norme vincolanti d'impresa;règles d'entreprise contraignantes
+;21.;supervisory authority;Aufsichtsbehörde;autorità di controllo;autorité de contrôle
+;22.;supervisory authority concerned;betroffene Aufsichtsbehörde;autorità di controllo interessata;autorité de contrôle concernée
+;23.;cross-border processing;grenzüberschreitende Verarbeitung;trattamento transfrontaliero;traitement transfrontalier
+;24.;relevant and reasoned objection;maßgeblicher und begründeter Einspruch;obiezione pertinente e motivata;objection pertinente et motivée
+;25.;information society service;Dienst der Informationsgesellschaft;servizio della società dell'informazione;service de la société de l'information
+;26.;international organisation;internationale Organisation;organizzazione internazionale;organisation internationale
+;;General Data Protection Regulation;Datenschutz-Grundverordnung;;Règlement Général sur la Protection des Données
+;;;;;
+;;In Article 5(1)(b) GDPR;In Artikel 5, Absatz 1, Buchstabe b  DSGVO;All'articolo 5, paragrafo 1, lettera b) RGPD;À l'article 5, premier paragraphe, point b) RGPD
+;Art. 5(1)(b);purpose/purposes;Zweck/Zwecke;finalità (only singular);finalité/finalités
+;;In Article 13(1)(b);In Artikel 13, Absatz 1, Buchstabe b DSGVO;All'articolo 13, paragrafo 1, lettera b) RGPD;À l'article 13, premier paragraphe, point b) RGPD
+;Art. 13(1)(b);data protection officer (DPO);Datenschutzbeauftragter (DBA);responsabile della protezione dei dati (RPD);délégué à la protection des données (DPD)
+;;In Article 9(2)(a);In Artikel 9, Absatz 2, Buchstabe a;All'articolo 9, paragrafo 2, lettera a) RGPD;À l'article 9, deuxième paragraphe, point b) RGPD
+;Art. 9(2)(a);data subject;betroffene Person;interessato;personne concernée
+;;;;;
+;inofficial;privacy policy;Datenschutzerklärung;Informativa sulla privacy;déclaration de confidentialité
+;;;;;
+;;purpose;Zweck;finalità (scopo/scopi);finalité (fin/fins)
+;;;;;
+;;withdraw consent;Einwilligung wiederrufen;ritirare consenso;retirer consentement
+;;give consent;Einwilligung erteilen;dare il consenso;
+;;obtain consent;Einwilligung einholen;;recueillir consentement
+;;;;;
+;;Data Protection Officer (DPO);Datenschutzbeauftragter (DSB);Responsabile della Protezione dei Dati (RPD);Délégué à la Protection des Données (DPD)
+;;;;;
+;;;;NICHT VERIFIZIERT;
+Art. 13 2. (b);;Right to Request Access to Personal Data;Recht auf Auskunft über die betreffenden personenbezogene Daten;Diritto di richiedere l'accesso ai dati personali;le droit de demander l'accès aux données à caractère personnel 
+;;Right to Request Rectification of Personal Data;Recht auf Berichtigung der betreffenden personenbezogenen Daten;Diritto di richiedere la rettifica dei dati personali;le droit de demander la rectification des données à caractère personnel
+;;Right to Request Erasure of Personal Data;Recht auf Löschung der betreffenden personenbezogenen Daten;Diritto di richiedere la cancellazione dei dati personali;le droit de demander l'effacement des données à caractère personnel
+;;Right to Request Restriction of Processing;Recht auf Einschränkung der Verarbeitung;Diritto di richiedere la limitazione del trattamento;le droit de demander une limitation du traitement
+;;Right to Object to Processing;Widerspruchsrecht gegen die Verarbeitung;Diritto di opporsi al trattamento;le droit de s'opposer au traitement
+;;Right to Data Portability;Recht auf Datenübertragbarkeit;Diritto alla portabilità dei dati;le droit de la portabilité des données
+Art 13 2. (c);;Right to Withdraw Consent at any Time;Recht die Einwilligung jederzeit zu widerrufen;Diritto di ritirare il consenso in qualsiasi momento;le droit de retirer son consentement à tout moment 
+Art 13 2. (d);;Right to Lodge a Complaint;Beschwerderecht bei einer Aufsichtsbehörde;Diritto di presentare un reclamo;le droit d'introduire une réclamation auprès d'une autorité de contrôle 
+;;;;;
+;;;;;
+unnumbered!;;Article 4, point (5) GDPR;Artikel 4, Nummer 5 DSGVO;articolo 4, punto 4 RGPD;Article 4, point 5) RGPD
+numbered!;;Article 13, paragraph 2, point (b) GDPR;Artikel 13, Absatz 2, Buchstabe b);articolo 13, paragrafo 2, punto b) RGPD;Article 13, paragraphe 2, point b) RGPD
+;;;;;
+;;;;;
+;;;;;
+;;;;;
+;;;;;
+;;;;;
+;;;;;
+;;;;;
+;;;;;
+;;;;;
+;;;;;
+;;;;;
+;;;;;
+;;;;;
+;;;;;
+;;;;;
+;;;;;
+;;;;;
+;;;;;
+;;;;;
+;;;;;
+;;;;;
+;;;;;
+;;;;;
+;;;;;
+;;;;;
+;;;;;
+;;;;;
+;;;;;

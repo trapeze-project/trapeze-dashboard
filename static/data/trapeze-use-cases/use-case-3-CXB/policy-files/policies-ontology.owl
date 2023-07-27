@@ -1,0 +1,25 @@
+Prefix: : <https://trapeze-project.eu/demos/pilot3/pilot3-ontology#>
+Prefix: dpv-owl: <https://w3id.org/dpv/dpv-owl#>
+
+
+Ontology: <https://trapeze-project.eu/demos/pilot3/pilot3-ontology#>
+
+Import: <https://w3id.org/dpv/dpv-owl>
+
+
+Class: ContractDuration
+
+    SubClassOf: 
+        dpv-owl:StorageDuration
+    
+    
+Individual: CXB
+
+    Types: 
+        dpv-owl:DataController
+    
+    
+Class: Banks
+
+    SubClassOf: 
+        dpv-owl:Recipient

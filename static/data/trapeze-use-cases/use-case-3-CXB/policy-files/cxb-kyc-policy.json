@@ -1,0 +1,48 @@
+{
+  "@id": "c630f98e-a9f2-413a-8c71-8436a6f60001-10",
+  "title": "Policy 01",
+  "description": "...",
+  "dpv:hasPersonalDataCategory": [
+    {
+      "@class": "dpv-pd:Identifying"
+    },
+    {
+      "@class": "dpv-pd:Financial"
+    }
+  ],
+  "dpv:hasPurpose": [
+    {
+      "@class": "dpv-owl:CustomerManagement"
+    }
+  ],
+  "dpv:hasProcessing": [
+    {
+      "@class": "dpv:Analyse"
+    },
+    {
+      "@class": "dpv:Alter"
+    },
+    {
+      "@class": "dpv:Collect"
+    }
+  ],
+  "dpv:hasStorage": {
+    "dpv:hasDuration": {
+      "@interval": [
+        30,
+        90
+      ]
+    },
+    "dpv:hasLocation": {
+      "@class": "svl:ControllerServers"
+    }
+  },
+  "dpv:Recipient": {
+    "@class": "pilot3:Banks"
+  },
+  "dpv:hasLegalBasis" : [
+    {
+    "@class" : "dpv-gdpr:A6-1-a"
+    }
+  ]
+}
