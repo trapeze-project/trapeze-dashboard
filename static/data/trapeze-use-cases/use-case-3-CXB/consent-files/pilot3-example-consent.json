@@ -1,0 +1,73 @@
+{
+  "userID": "caixabank-user1",
+  "organization": "Org1MSP",
+  "id": "caixabank-user1-01",
+  "policyType": "Consent",
+  "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "dpv": "http://example.com/dpv#",
+    "dct": "http://purl.org/dc/terms/",
+    "dpv-pd": "http://example.com/dpv/personaldata#",
+    "dpv-legal": "http://example.com/dpv/legal#"
+  },
+  "@id": "urn:uuid:214cf307-b365-49a2-8330-bcdc49b723ec",
+  "@type": "dpv:ConsentRecord",
+  "dct:hasVersion": "1",
+  "dpv:hasIdentifier": "214cf307-b365-49a2-8330-bcdc49b723ec",
+  "dpv:hasDataSubject": "ea5b9df8-ea55-45f3-8f62-38f86e9eb90c",
+  "dpv:hasNotice": {
+    "@id": "dpv:ConsentNotice"
+  },
+  "$policySet": [
+    {
+      "@id": "0x0020",
+      "@type": "dpv:PersonalDataHandling",
+      "@title": "Send recommendations for events nearby",
+      "dpv:hasPurpose": {
+        "@class": "dpv:ProvidePersonalisedRecommendations"
+      },
+      "dpv:hasLegalBasis": {
+        "@class": "dpv:Consent"
+      },
+      "dpv:hasPersonalData": {
+        "@class": "dpv-pd:GPS"
+      },
+      "dpv:hasDataController": "2e8ec370-472d-4356-a8f7-39cf482b5788",
+      "dpv:hasProcessing": [
+        {
+          "@class": "dpv:Collect"
+        },
+        {
+          "@class": "dpv:Store"
+        }
+      ],
+      "dpv:hasStorageCondition": {
+        "dpv:hasLocation": {
+          "@class": "dpv-legal:IE"
+        },
+        "dpv:hasDuration": 63115200
+      },
+      "dpv:hasJurisdiction": {
+        "@class": "dpv-legal:EU"
+      },
+      "dpv:hasRecipient": "2e8ec370-472d-4356-a8f7-39cf482b5788"
+    }
+  ],
+  "dpv:hasConsentStatus": {
+    "@class": "dpv:ConsentGiven"
+  },
+  "dct:hasPart": {
+    "@type": [
+      "dpv:ConsentGiven",
+      "dpv:ExplicitlyExpressedConsent"
+    ],
+    "dpv:isIndicatedAtTime": {
+      "@value": "2023-04-24T29:59:00",
+      "@type": "xsd:dateTime"
+    },
+    "dpv:hasDuration": 63115200,
+    "dpv:hasEntity": "9d994a94-0b8f-4a3e-b1e5-6cb0c43a7b45"
+  }
+}
