@@ -1,30 +1,25 @@
 <template>
-  <div>
-    <v-card>
-      <v-card-text>
+  <div style="height: 750px" :key="key">
+    <v-card outlined color="transparent">
+      <v-card-text >
         <b>{{ this.DPAInfo.name }}</b>
         <p style="white-space: pre-line">{{ this.DPAInfo.address }}</p>
         <p>{{ this.DPAInfo.email }}</p>
-        <p>poststelle@bfdi.bund.de</p>
         <p>{{ this.DPAInfo.url }}</p>
         <p>{{ this.DPAInfo.tel }}</p>
-      </v-card-text>
-      <v-card-actions>
         <PContactForm
           class="mt-3"
           company-name="green"
           btn-name="Contact DPA"
-          :email=" this.DPAInfo.email "
+          :email="this.DPAInfo.email"
           :showNotification="showNotification"
         />
-      </v-card-actions>
+      </v-card-text>
     </v-card>
   </div>
 </template>
 
 <script>
-import axios from "axios";
-import promise from "promise";
 export default {
   props: {
     showNotification: {
@@ -42,9 +37,10 @@ export default {
         tel: "",
         fax: "",
       },
+      key: 0,
     };
   },
-  async beforeCreate() {
+  async fetch() {
     let countryAPIResponse = await fetch("https://api.country.is/");
     let countryAPIResponseJSON = await countryAPIResponse.json();
     let userCountryCode = countryAPIResponseJSON.country;
@@ -53,9 +49,15 @@ export default {
       `https://trapeze.imp.bg.ac.rs/knowledgebase/kb.php?action=dpa&lang=&country=${userCountryCode}`
     );
     let DPAInfoResponseJSON = await DPAInfoResponse.json();
-    this.DPAInfo = DPAInfoResponseJSON[0];
+    this.DPAInfo = JSON.parse(JSON.stringify(DPAInfoResponseJSON[0]));
+
+    this.forceRerender();
   },
-  methods: {},
+  methods: {
+    forceRerender() {
+      this.key += 1;
+    },
+  },
 };
 </script>
 

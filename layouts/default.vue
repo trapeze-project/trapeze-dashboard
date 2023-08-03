@@ -47,6 +47,7 @@
                   :controller="controller"
                   :showNotification="showNotification"
                 />
+                <PDPAView :showNotification="showNotification"/>
               </v-navigation-drawer>
             </v-col>
 
