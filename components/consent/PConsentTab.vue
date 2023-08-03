@@ -53,7 +53,7 @@
           </v-btn>
           
           <!-- Submit changes button -->
-          <v-btn class="px-2 ml-3 rounded-pill black--text" color="primary" @click="() => $emit('submitMyConsent')" :disabled="!hasChanged">
+          <v-btn :loading="loading" class="px-2 ml-3 rounded-pill black--text" color="primary" @click="() => $emit('submitMyConsent')" :disabled="!hasChanged">
             <v-icon class="mr-1"> mdi-tray-arrow-up </v-icon>
             {{ $t("btn.labels.submit-changes") }}
           </v-btn>
@@ -127,6 +127,10 @@ export default {
     fetched_DPV_Labels_descriptions:{
       type: Object,
       required: true,
+    },
+    loading:{
+      type:Boolean,
+      default:false
     }
   },
   data() {
@@ -167,6 +171,9 @@ export default {
       },
       deep: true,
     },
+    loading(newVal,oldVal){
+      this.loading=newVal
+    }
   },
   computed: {
     DPV_Labels_descriptions(){

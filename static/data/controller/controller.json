@@ -26,7 +26,14 @@
         "name": "Andrea Bouquet",
         "jobTitle": "Data Protection Officer (DPO)"
       }
-    ]
+    ],
+    "controllerPolicyRequestBody": {
+      "userID": [
+        "cxb-controller"
+      ],
+      "policyID": "d23b4ad7-3fa0-4dd6-a918-8173bde441df",
+      "organization": "Org1MSP"
+    }
   },
   {
     "@context": "https://schema.org",
@@ -55,7 +62,14 @@
         "name": "",
         "jobTitle": "Data Protection Officer (DPO)"
       }
-    ]
+    ],
+    "controllerPolicyRequestBody": {
+      "userID": [
+        "cxb-controller"
+      ],
+      "policyID": "d23b4ad7-3fa0-4dd6-a918-8173bde441df",
+      "organization": "Org1MSP"
+    }
   },
   {
     "@context": "https://schema.org",
@@ -84,7 +98,14 @@
         "name": "Dr. Claus-Dieter Ulmer",
         "jobTitle": "Data Protection Officer (DPO)"
       }
-    ]
+    ],
+    "controllerPolicyRequestBody": {
+      "userID": [
+        "cxb-controller"
+      ],
+      "policyID": "d23b4ad7-3fa0-4dd6-a918-8173bde441df",
+      "organization": "Org1MSP"
+    }
   },
   {
     "@context": "https://schema.org",
@@ -113,6 +134,13 @@
         "name": "",
         "jobTitle": "Data Protection Officer (DPO)"
       }
-    ]
+    ],
+    "controllerPolicyRequestBody": {
+      "userID": [
+        "cxb-controller"
+      ],
+      "policyID": "d23b4ad7-3fa0-4dd6-a918-8173bde441df",
+      "organization": "Org1MSP"
+    }
   }
 ]

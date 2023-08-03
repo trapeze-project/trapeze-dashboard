@@ -143,7 +143,8 @@
       }
     },
     "uses":"utilizza",
-    "used-for":"usato per"
+    "used-for":"usato per",
+    "loading":"Caricamento"
   },
   "contact": {
     "heading": "Modulo di contatto",

@@ -4,7 +4,11 @@
 
     <PAlertLeaveDialog ref="alertDialog" />
 
-    <v-tabs-items v-model="tab">
+    <div v-if="$fetchState.pending">
+      <PLoading />
+    </div>
+    <p v-else-if="$fetchState.error">An error occurred :(</p>
+    <v-tabs-items v-model="tab" v-else>
       <v-tab-item value="data" :eager="true" :transition="false">
         <PConsentTab
           ref="data"
@@ -19,6 +23,7 @@
           :fetched_DPV_Labels_descriptions="
             this.fetched_DPV_Labels_descriptions
           "
+          :loading="loading"
         />
       </v-tab-item>
 
@@ -36,24 +41,15 @@
           :fetched_DPV_Labels_descriptions="
             this.fetched_DPV_Labels_descriptions
           "
+          :loading="loading"
         />
       </v-tab-item>
     </v-tabs-items>
-
-    <div>{{ this.debug }}</div>
   </div>
 </template>
 
 <script>
-import axios from "axios";
-import promise from "promise";
-import PolicyService from "~/modules/PolicyService";
-import DPV_Labels_descriptions_deDE from "../../static/data/DPV/DPV_Labels_descriptions-deDE.json";
-import DPV_Labels_descriptions_enUS from "../../static/data/DPV/DPV_Labels_descriptions-enUS.json";
-import DPV_Labels_descriptions_frFR from "../../static/data/DPV/DPV_Labels_descriptions-frFR.json";
-import DPV_Labels_descriptions_itIT from "../../static/data/DPV/DPV_Labels_descriptions-itIT.json";
-
-let PolicyService1 = require("~/modules/PolicyService");
+let PolicyService = require("~/modules/PolicyService");
 
 export default {
   props: {
@@ -82,6 +78,11 @@ export default {
       userChoices: {},
       purposeMap: {},
       showFloatingMenu: false,
+      loading: false,
+      policy: null,
+      fetched_DPV_Labels_descriptions: {},
+      fetchedUserChoices: {},
+      userChoices: {},
     };
   },
 
@@ -96,109 +97,27 @@ export default {
     },
   },
 
-  created() {
+  async fetch() {
+    let controller = this.controller["@id"];
     let policyIDs = this.$route.query.policyID;
-    let policy = PolicyService.get(this.controller["@id"], policyIDs);
-    this.purposeMap = policy.getMap(
-      "dpv:hasPurpose",
-      "dpv:hasPersonalDataCategory"
+
+    let controllerPolicyRequestBody = this.getControllerPolicyRequestBody();
+    let consentPolicyRequestBody = await this.getConsentPolicyRequestBody();
+
+    this.policy = await PolicyService.default.get(
+      controllerPolicyRequestBody,
+      consentPolicyRequestBody,
+      policyIDs
     );
-    this.fetchedUserChoices = Object.assign({}, this.fetchUserChoices());
-    this.userChoices = Object.assign({}, this.fetchedUserChoices);
-  },
-  async asyncData({ params, query }) {
-    // let fetched_DPV_Labels_descriptions = {
 
-    // }
-    // return {
-    //   fetched_DPV_Labels_descriptions
-    // }
+    this.fetched_DPV_Labels_descriptions =
+      await this.policy.fetch_DPV_Labels_and_descriptions();
 
-    let controller = params.controller;
-    let policyIDs = query.policyIDs;
-    let policy = PolicyService1.default.get(controller, policyIDs);
-    console.log(policy.getIRIs());
-
-    let compactedIRIs = policy.getIRIs();
-
-    let result = {
-      en: {
-        labels: {},
-        descriptions: {},
-      },
-      de: {
-        labels: {},
-        descriptions: {},
-      },
-      it: {
-        labels: {},
-        descriptions: {},
-      },
-      fr: {
-        labels: {},
-        descriptions: {},
-      },
-    };
-    let termDPVInfoRequests = compactedIRIs.map((compactedIRI) => {
-      let term = compactedIRI.split(":")[1];
-
-      return axios
-        .get(
-          `https://trapeze.imp.bg.ac.rs/knowledgebase/kb.php?action=dpv&lang=&term=${term}`
-        )
-        .catch(function (err) {
-          console.log("here is the error " + compactedIRI);
-          console.log(err);
-        });
-    });
-
-    let termDPVInfoResponces = await promise.all(termDPVInfoRequests);
-
-    termDPVInfoResponces.forEach((responce, index) => {
-      let IRI = compactedIRIs[index];
-
-      if (responce == undefined) {
-        let languages = Object.keys(result);
-        languages.forEach((lang) => {
-          result[lang].labels[IRI] = IRI;
-          result[lang].descriptions[IRI] = IRI + " unable to fetch defintion";
-        });
-        return;
-      }
-
-      let definitions =
-        responce["data"][0]["http://www.w3.org/2004/02/skos/core#definition"];
-
-      let labels =
-        responce["data"][0]["http://www.w3.org/2004/02/skos/core#prefLabel"];
-
-      definitions.forEach((langSpecificDefinition) => {
-        let lang = langSpecificDefinition["@language"];
-        let def = langSpecificDefinition["@value"];
-        result[lang].descriptions[IRI] = def;
-      });
-
-      labels.forEach((langSpecificLabel) => {
-        let lang = langSpecificLabel["@language"];
-        let label = langSpecificLabel["@value"];
-        result[lang].labels[IRI] = label;
-      });
-    });
-
-    let fetchdata = false;
-    let fetched_DPV_Labels_descriptions;
-    if (fetchdata) {
-      fetched_DPV_Labels_descriptions = JSON.parse(JSON.stringify(result));
-    } else {
-      fetched_DPV_Labels_descriptions = {
-        en: DPV_Labels_descriptions_enUS,
-        de: DPV_Labels_descriptions_deDE,
-        it: DPV_Labels_descriptions_itIT,
-        fr: DPV_Labels_descriptions_frFR,
-      };
-    }
-
-    return { fetched_DPV_Labels_descriptions };
+    let tempFetchedUserChoices = await this.policy.fetchUserChoices(controller);
+    this.fetchedUserChoices = JSON.parse(
+      JSON.stringify(tempFetchedUserChoices)
+    );
+    this.userChoices = JSON.parse(JSON.stringify(tempFetchedUserChoices));
   },
 
   mounted() {
@@ -213,6 +132,20 @@ export default {
       if (this.showFloatingMenu) {
         event.preventDefault();
         event.returnValue = "";
+      }
+    },
+    getControllerPolicyRequestBody() {
+      return this.controller.controllerPolicyRequestBody
+    },
+    async getConsentPolicyRequestBody() {
+      let userID = ["cxb-user"]
+      let policyID= "5b465de8-9bf5-4b69-9cc4-ad8d3c563d7f"
+      let organization= "Org1MSP"
+
+      // let policyID=  await PolicyService.default.createEmptyPolicy(userID,organization)
+
+      return {
+        userID,policyID,organization
       }
     },
 
@@ -231,10 +164,39 @@ export default {
 
       this.showFloatingMenu = hasChanged;
     },
+    getConsentPairs() {
+      let consentPaires = [];
+      let purposes = Object.keys(this.userChoices);
+      for (let purpose of purposes) {
+        let dataCategories = Object.keys(this.userChoices[purpose]);
+        for (let dataCategory of dataCategories) {
+          if (this.userChoices[purpose][dataCategory]) {
+            consentPaires.push({
+              dataCategory,
+              purpose,
+            });
+          }
+        }
+      }
+      return consentPaires;
+    },
 
-    submitMyConsent() {
+    async submitMyConsent() {
+      this.loading = true;
       //submit to server
-      this.fetchedUserChoices = Object.assign({}, this.userChoices);
+      let consentPaires = this.getConsentPairs();
+
+      //working here
+      let result = await PolicyService.default.update(
+        consentPaires,
+        this.policy.getConsentPolicy()
+      );
+
+      ////////////////////////////////
+
+      // submit completed
+      this.fetchedUserChoices = JSON.parse(JSON.stringify(this.userChoices));
+      this.loading = false;
       this.showFloatingMenu = false;
       this.$refs.consentNotification.showNotification(
         this.$t("snackbar.msg.submission-successful"),
@@ -249,25 +211,6 @@ export default {
       this.$refs.purpose.forceRerender();
     },
 
-    fetchUserChoices() {
-      // this.fetchedUserChoices =
-      return JSON.parse(
-        JSON.stringify(
-          Object.keys(this.purposeMap).reduce((total, currentValue) => {
-            total[currentValue] = this.purposeMap[currentValue].reduce(
-              (total, currentValue) => {
-                total[currentValue] = true;
-                return total;
-              },
-              {}
-            );
-            return total;
-          }, {})
-        )
-      );
-    },
-
-    // http://localhost/444-werwe-131231-132123-123123/home
     invertUserChoices(userChoices) {
       return Object.keys(userChoices).reduce((total, a) => {
         const b = userChoices[a];

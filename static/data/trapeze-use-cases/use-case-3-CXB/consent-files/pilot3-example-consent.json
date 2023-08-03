@@ -20,19 +20,19 @@
   "dpv:hasNotice": {
     "@id": "dpv:ConsentNotice"
   },
-  "$policySet": [
+  "@policySet": [
     {
       "@id": "0x0020",
       "@type": "dpv:PersonalDataHandling",
       "@title": "Send recommendations for events nearby",
       "dpv:hasPurpose": {
-        "@class": "dpv:ProvidePersonalisedRecommendations"
+        "@class": "dpv:OptimisationForConsumer"
       },
       "dpv:hasLegalBasis": {
         "@class": "dpv:Consent"
       },
       "dpv:hasPersonalData": {
-        "@class": "dpv-pd:GPS"
+        "@class": "dpv-pd:Contact"
       },
       "dpv:hasDataController": "2e8ec370-472d-4356-a8f7-39cf482b5788",
       "dpv:hasProcessing": [

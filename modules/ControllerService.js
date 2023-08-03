@@ -4,17 +4,19 @@ export default (() => {
 
   return {
 
-    all() {
+    all() {      
       return controller
         .slice(0, 10);
     },
 
     get(id) {
+      
       return controller
         .find((c) => c["@id"] === id);
     },
 
     search(keyword) {
+      console.log(controllerNew)
       if (keyword === "") {
         return this.all();
       }

@@ -143,7 +143,8 @@
       }
     },
     "uses":"Uses",
-    "used-for":"Used for"
+    "used-for":"Used for",
+    "loading":"Loading"
   },
   "contact": {
     "heading": "Contact form",

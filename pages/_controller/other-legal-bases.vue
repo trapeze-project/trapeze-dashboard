@@ -76,6 +76,7 @@
                 :parent="parent"
                 :children="map[legalBasis][parent]"
                 :showSwitches="false"
+                :fetched_DPV_Labels_descriptions="dpv"
               />
             </div>
 
@@ -100,7 +101,7 @@
 </template>
 
 <script>
-import PolicyService from "~/modules/PolicyService";
+let PolicyService = require("~/modules/PolicyService");
 
 import dpvLabelsDescriptionsEN from "~/static/data/DPV/DPV_Labels_descriptions-enUS.json";
 import dpvLabelsDescriptionsDE from "~/static/data/DPV/DPV_Labels_descriptions-deDE.json";
@@ -117,38 +118,48 @@ export default {
   },
   data() {
     return {
-      groupBy: "",
       searchValue: "",
       max: initialMax,
-      mapGroupedByData: {},
-      mapGroupedByPurpose: {},
-      legalBases: [],
-      dpv: {
-        en: dpvLabelsDescriptionsEN,
-        de: dpvLabelsDescriptionsDE,
-        it: dpvLabelsDescriptionsIT,
-        fr: dpvLabelsDescriptionsFR,
-      },
+      groupBy:null
     };
   },
 
   created() {
-    let policy = PolicyService.get(this.controller);
-
-    this.mapGroupedByData = policy.getOtherLegalBasesMap(
-      "dpv:hasPersonalDataCategory",
-      "dpv:hasPurpose"
-    );
-
-    this.mapGroupedByPurpose = policy.getOtherLegalBasesMap(
-      "dpv:hasPurpose",
-      "dpv:hasPersonalDataCategory"
-    );
-    
-    this.legalBases = Object.keys(this.mapGroupedByData);
-
     this.groupBy = this.groupByOptions[0];
   },
+
+  async asyncData({ params, query }) {
+    let controller = params.controller;
+    console.log(controller)
+    let policyIDs = query.policyIDs;
+
+    let policy = await PolicyService.default.get(controller, policyIDs);
+
+    let dpv = await policy.fetch_DPV_Labels_and_descriptions()
+
+    let mapGroupedByData = policy.getOtherLegalBasesMap(
+      "hasPersonalDataCategory",
+      "hasPurpose"
+    );
+
+    let mapGroupedByPurpose = policy.getOtherLegalBasesMap(
+      "hasPurpose",
+      "hasPersonalDataCategory"
+    );
+    
+    let legalBases = Object.keys(mapGroupedByData);
+
+
+    return {
+      dpv,
+      mapGroupedByData,
+      mapGroupedByPurpose,
+      legalBases
+
+    }
+  },
+
+
   computed: {
     groupByOptions() {
       return [
