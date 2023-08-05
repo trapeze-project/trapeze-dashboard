@@ -81,7 +81,8 @@
                 :controller="controller"
                 :showNotification="showNotification"
               />
-              <PDPAView :showNotification="showNotification"/>
+
+              <PDPAView v-if="controller" :showNotification="showNotification"/>
             </v-col>
           </v-row>
 
