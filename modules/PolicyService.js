@@ -24,10 +24,14 @@ export default (() => {
       // currently hardcoded
       let url = "https://hyperledgerapitrapeze.atc.gr/ledger/readPolicy";
 
-      let requests = [
-        controllerPolicyRequestBody,
-        consentPolicyRequestBody,
-      ].map((reqBody) => {
+      let requestBodies = [controllerPolicyRequestBody]
+      if(consentPolicyRequestBody!== undefined){
+        requestBodies.push(consentPolicyRequestBody)
+      }
+      
+      
+      
+      let requests = requestBodies.map((reqBody) => {
         return axios.post(url, reqBody);
       });
       let results = await Promise.allSettled(requests);

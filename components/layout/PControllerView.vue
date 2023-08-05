@@ -1,23 +1,31 @@
 <template>
   <v-card outlined color="transparent">
-
-    <v-card
-      class="rounded-pill pa-5 ma-3"
-    >
+    <v-card class="rounded-pill pa-5 ma-3">
       <v-img :src="controller.logo" />
     </v-card>
-    
-    <v-card-text>
-      <b>{{ controller.name }}</b><br>
-      {{ controller.address.streetAddress }}<br>
-      {{ controller.address.postalCode }}, {{ controller.address.addressLocality }}<br>
-      {{ controller.url }}<br>
-      
-      <br>
 
-      <b>{{ $t("general.dpo") }} ({{ $t("general.dpo-abbrev") }})</b><br>
-      {{ controller.alumni[0].name }}<br>
-      {{ controller.email }}<br>
+    <v-card-text>
+      <b>{{ controller.name }}</b
+      ><br />
+      {{ controller.address.streetAddress }}<br />
+      {{ controller.address.postalCode }},
+      {{ controller.address.addressLocality }}<br />
+      {{ controller.url }}<br />
+
+
+      <br />
+      <b>Privacy Policy</b>
+      <div>
+        <span>PDF</span>
+        <span>, </span>
+        <nuxt-link style="color: blue" :to="`/${controller['@id']}/displayPrivacyPolicy`" target="_blank"
+          >JSON-LD</nuxt-link
+        >
+      </div>
+      <br />
+      <b>{{ $t("general.dpo") }} ({{ $t("general.dpo-abbrev") }})</b><br />
+      {{ controller.alumni[0].name }}<br />
+      {{ controller.email }}<br />
       <PContactForm
         ref="PContactForm"
         class="mt-3"
@@ -35,21 +43,19 @@
 <script>
 export default {
   props: {
-    showNotification:{
-      type:Function
+    showNotification: {
+      type: Function,
     },
     controller: {
       type: Object,
-      default: () => {}
-    }
+      default: () => {},
+    },
   },
-  data(){
-    return{
-      controllerId:""
-    }
+  data() {
+    return {
+      controllerId: "",
+    };
   },
-  created(){
-
-  }
-}
+  created() {},
+};
 </script>
