@@ -138,15 +138,16 @@ export default {
       return this.controller.controllerPolicyRequestBody
     },
     async getConsentPolicyRequestBody() {
-      let userID = ["cxb-user"]
-      let policyID= "5b465de8-9bf5-4b69-9cc4-ad8d3c563d7f"
-      let organization= "Org1MSP"
+      // let userID = ["cxb-user"]
+      // let policyID= "5b465de8-9bf5-4b69-9cc4-ad8d3c563d7f"
+      // let organization= "Org1MSP"
+      // // if policyid is missing or unavaliable then create an empty consent policy
+      // // let policyID=  await PolicyService.default.createEmptyPolicy(userID,organization)
 
-      // let policyID=  await PolicyService.default.createEmptyPolicy(userID,organization)
-
-      return {
-        userID,policyID,organization
-      }
+      // return {
+      //   userID,policyID,organization
+      // }
+      return this.controller.userPolicyRequestBody
     },
 
     changeUserChoice(update) {

@@ -33,6 +33,13 @@
       ],
       "policyID": "d23b4ad7-3fa0-4dd6-a918-8173bde441df",
       "organization": "Org1MSP"
+    },
+    "userPolicyRequestBody":{
+      "userID": [
+        "cxb-user"
+      ],
+      "policyID": "5b465de8-9bf5-4b69-9cc4-ad8d3c563d7f",
+      "organization": "Org1MSP"
     }
   },
   {
@@ -68,6 +75,13 @@
         "cxb-controller"
       ],
       "policyID": "d23b4ad7-3fa0-4dd6-a918-8173bde441df",
+      "organization": "Org1MSP"
+    },
+    "userPolicyRequestBody":{
+      "userID": [
+        "cxb-user"
+      ],
+      "policyID": "5b465de8-9bf5-4b69-9cc4-ad8d3c563d7f",
       "organization": "Org1MSP"
     }
   },
@@ -105,6 +119,13 @@
       ],
       "policyID": "d23b4ad7-3fa0-4dd6-a918-8173bde441df",
       "organization": "Org1MSP"
+    },
+    "userPolicyRequestBody":{
+      "userID": [
+        "cxb-user"
+      ],
+      "policyID": "5b465de8-9bf5-4b69-9cc4-ad8d3c563d7f",
+      "organization": "Org1MSP"
     }
   },
   {
@@ -140,6 +161,13 @@
         "cxb-controller"
       ],
       "policyID": "d23b4ad7-3fa0-4dd6-a918-8173bde441df",
+      "organization": "Org1MSP"
+    },
+    "userPolicyRequestBody":{
+      "userID": [
+        "cxb-user"
+      ],
+      "policyID": "5b465de8-9bf5-4b69-9cc4-ad8d3c563d7f",
       "organization": "Org1MSP"
     }
   }
