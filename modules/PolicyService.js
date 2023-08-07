@@ -68,6 +68,16 @@ export default (() => {
 
       delete body.created;
       delete body.modified;
+      // add the timestamp when the user clicks on "submit changes" to the consent record
+      // this code should be on the server side. 
+      const now = new Date();
+      const isoDateTime = now.toISOString();
+      const xsdDateTime = isoDateTime.substring(0, 19);
+      body["dpv:isIndicatedAtTime"]={
+        "@value": xsdDateTime,
+        "@type": "xsd:dateTime"
+      }
+      //
 
       let responseUpdateConsent = await axios
         .put(url, body)
@@ -88,6 +98,18 @@ export default (() => {
           "@class": "dpv:ConsentGiven",
         },
       };
+
+      // add the timestamp when the user clicks on "submit changes" to the consent record
+      // this code should be on the server side. 
+      const now = new Date();
+      const isoDateTime = now.toISOString();
+      const xsdDateTime = isoDateTime.substring(0, 19);
+      reqBody["dpv:isIndicatedAtTime"]={
+        "@value": xsdDateTime,
+        "@type": "xsd:dateTime"
+      }
+      //
+
       let responce = await axios.post(url, reqBody).catch(function (err) {
         console.log("here is the error " + err);
       });
