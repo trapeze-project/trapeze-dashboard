@@ -1,27 +1,28 @@
 <template>
   <div>
-    <v-card elevation="0">
+    <div v-if="$fetchState.pending">
+      <PLoading />
+    </div>
+    <p v-else-if="$fetchState.error">An error occurred :(</p>
+
+    <v-card v-else elevation="0">
       <!-- Title -->
       <v-card-title class="d-flex pa-0 pb-1">
-        <span>{{$t('otherLegalBases.other-legal-bases')}}</span>
+        <span>{{ $t("otherLegalBases.other-legal-bases") }}</span>
       </v-card-title>
 
       <v-divider />
 
       <!-- Description -->
-      <v-card-text class="pa-0 my-3"> {{$t('otherLegalBases.titleDescription')}}</v-card-text>
+      <v-card-text class="pa-0 my-3">
+        {{ $t("otherLegalBases.titleDescription") }}</v-card-text
+      >
 
       <!-- Content -->
       <v-container class="pa-0">
         <!-- Search field -->
         <v-row>
-          <v-col 
-            cols="6"
-            sm="8"
-            md="9" 
-            class="fill-height"
-          >
-
+          <v-col cols="6" sm="8" md="9" class="fill-height">
             <v-text-field
               class="rounded-pill"
               v-model="searchValue"
@@ -36,12 +37,7 @@
             />
           </v-col>
 
-          <v-col 
-            align="right"
-            cols="6"
-            sm="4"
-            md="3"
-          >
+          <v-col align="right" cols="6" sm="4" md="3">
             <v-select
               class="rounded-pill"
               outlined
@@ -50,21 +46,16 @@
               :label="$t('otherLegalBases.group-by')"
               :items="groupByOptions"
             ></v-select>
-
           </v-col>
         </v-row>
 
         <!-- Data / Purposes -->
         <div>
-          <div 
-            v-for="legalBasis in legalBases" 
-            :key="legalBasis"
-            class="mb-5"
-          >
-            <v-card-title
-              v-show="parents[legalBasis].length !== 0"
-            >
-              {{ $t('otherLegalBases.legal-bases.' + labelFromIRI(legalBasis)) }}
+          <div v-for="legalBasis in legalBases" :key="legalBasis" class="mb-5">
+            <v-card-title v-show="parents[legalBasis].length !== 0">
+              {{
+                $t("otherLegalBases.legal-bases." + labelFromIRI(legalBasis))
+              }}
             </v-card-title>
 
             <div
@@ -81,7 +72,7 @@
             </div>
 
             <div
-              v-if=" max < parents[legalBasis].length"
+              v-if="max < parents[legalBasis].length"
               class="d-flex justify-center"
             >
               <v-btn
@@ -96,7 +87,6 @@
         </div>
       </v-container>
     </v-card>
-
   </div>
 </template>
 
@@ -120,7 +110,11 @@ export default {
     return {
       searchValue: "",
       max: initialMax,
-      groupBy:null
+      groupBy: null,
+      legalBases: [],
+      dpv: {},
+      mapGroupedByData: {},
+      mapGroupedByPurpose: {},
     };
   },
 
@@ -128,44 +122,29 @@ export default {
     this.groupBy = this.groupByOptions[0];
   },
 
-  async asyncData({ params, query }) {
-    let controller = params.controller;
-    console.log(controller)
-    let policyIDs = query.policyIDs;
+  async fetch() {
+    let controllerPolicyRequestBody = this.getControllerPolicyRequestBody();
 
-    let policy = await PolicyService.default.get(controller, policyIDs);
+    let policy = await PolicyService.default.get(controllerPolicyRequestBody);
 
-    let dpv = await policy.fetch_DPV_Labels_and_descriptions()
+    this.dpv = await policy.fetch_DPV_Labels_and_descriptions();
 
-    let mapGroupedByData = policy.getOtherLegalBasesMap(
+    this.mapGroupedByData = policy.getOtherLegalBasesMap(
       "hasPersonalDataCategory",
       "hasPurpose"
     );
 
-    let mapGroupedByPurpose = policy.getOtherLegalBasesMap(
+    this.mapGroupedByPurpose = policy.getOtherLegalBasesMap(
       "hasPurpose",
       "hasPersonalDataCategory"
     );
-    
-    let legalBases = Object.keys(mapGroupedByData);
 
-
-    return {
-      dpv,
-      mapGroupedByData,
-      mapGroupedByPurpose,
-      legalBases
-
-    }
+    this.legalBases = Object.keys(this.mapGroupedByData);
   },
-
 
   computed: {
     groupByOptions() {
-      return [
-        this.$t("nav.labels.data"),
-        this.$t("nav.labels.purposes")
-      ];
+      return [this.$t("nav.labels.data"), this.$t("nav.labels.purposes")];
     },
 
     placeholderKey() {
@@ -173,7 +152,7 @@ export default {
         return "data";
       } else {
         return "purpose";
-      }      
+      }
     },
 
     map() {
@@ -186,18 +165,14 @@ export default {
 
     parents() {
       let result = {};
-      Object
-        .keys(this.map)
-        .forEach((legalBasis) => {
-          result[legalBasis] = Object
-            .keys(this.map[legalBasis])
-            .filter((e) => {
-              let label = this.dpv[this.$i18n.locale].labels[e].toLowerCase();
-              return label
-                .toLowerCase()
-                .includes(this.searchValue ? this.searchValue : "");
-          });
-        }, {});
+      Object.keys(this.map).forEach((legalBasis) => {
+        result[legalBasis] = Object.keys(this.map[legalBasis]).filter((e) => {
+          let label = this.dpv[this.$i18n.locale].labels[e].toLowerCase();
+          return label
+            .toLowerCase()
+            .includes(this.searchValue ? this.searchValue : "");
+        });
+      }, {});
 
       return result;
     },
@@ -209,9 +184,12 @@ export default {
       this.$forceUpdate();
     },
 
-    labelFromIRI(IRI){
-      return IRI.split(":")[1]
-    }
+    labelFromIRI(IRI) {
+      return IRI.split(":")[1];
+    },
+    getControllerPolicyRequestBody() {
+      return this.controller.controllerPolicyRequestBody;
+    },
   },
 };
 </script>

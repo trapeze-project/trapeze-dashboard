@@ -12,7 +12,8 @@
               "
             >
               <v-row>
-                <v-col cols="1">
+
+                <v-col v-if="showSwitches" cols="1">
                   <v-switch
                     v-if="showSwitches"
                     inset
@@ -20,7 +21,7 @@
                     @change="changeParentValue"
                   />
                 </v-col>
-                <v-col cols="10">
+                <v-col :cols="showSwitches? 10:11">
                   <div class="ml-3 me-auto ma-3">
                     <div>
                       {{ fetched_DPV_Labels_descriptions[$i18n.locale].labels[this.parent] }}
