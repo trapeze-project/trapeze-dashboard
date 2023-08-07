@@ -187,18 +187,18 @@ export default function (controllerPolicy, consentPolicy) {
 
         return choices;
       } else {
-        let choicesAllOn = {};
+        let choicesAllOff = {};
 
         let purposes = Object.keys(controllerPolicyPurposeMap);
         for (let purpose of purposes) {
           let datacategories = controllerPolicyPurposeMap[purpose];
 
-          choicesAllOn[purpose] = {};
+          choicesAllOff[purpose] = {};
           for (let dataCategory of datacategories) {
-            choicesAllOn[purpose][dataCategory] = true;
+            choicesAllOff[purpose][dataCategory] = false;
           }
         }
-        return choicesAllOn;
+        return choicesAllOff;
       }
     },
 
