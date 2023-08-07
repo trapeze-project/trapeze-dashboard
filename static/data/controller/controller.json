@@ -51,7 +51,7 @@
     "faxNumber": "",
     "email": "test@cxb.es",
     "url": "https://www.caixabank.com",
-    "logo": "/data/trapeze-use-cases/use-case-3-CXB/controller-info/logos/CaixaBank_Logo_Horitzontal_RGB_white_bg.png",
+    "logo": "/data/trapeze-use-cases/use-case-3-CXB/controller-info/logos/CaixaBank_logo_color_CMYK_horizontal_300dpi_black_bg.png",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Barcelona, Spain",
@@ -88,56 +88,13 @@
   {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "@id": "Deutsche-Telekom-AG",
-    "name": "Deutsche Telekom AG",
-    "telephone": "( 49 ) 228 181-0",
-    "faxNumber": "",
-    "email": "datenschutz@telekom.de",
-    "url": "https://www.telekom.com",
-    "logo": "/data/trapeze-use-cases/use-case-2-DT/controller-info/logos/T-without-Slogan_png/T_Logo_3c_n_bg.png",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Bonn, Germany",
-      "postalCode": "53113",
-      "streetAddress": "Friedrich-Ebert-Allee 140"
-    },
-    "member": [
-      {
-        "@type": "Organization"
-      }
-    ],
-    "alumni": [
-      {
-        "@type": "Person",
-        "name": "Dr. Claus-Dieter Ulmer",
-        "jobTitle": "Data Protection Officer (DPO)"
-      }
-    ],
-    "controllerPolicyRequestBody": {
-      "userID": [
-        "cxb-controller"
-      ],
-      "policyID": "d23b4ad7-3fa0-4dd6-a918-8173bde441df",
-      "organization": "Org1MSP"
-    },
-    "userPolicyRequestBody":{
-      "userID": [
-        "cxb-user"
-      ],
-      "policyID": "5b465de8-9bf5-4b69-9cc4-ad8d3c563d7f",
-      "organization": "Org1MSP"
-    }
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
     "@id": "Vlaamse-Gewest",
     "name": "Vlaamse Gewest",
     "telephone": "( 32 ) 2 553 1700",
     "faxNumber": "",
     "email": "test@aiv.be",
     "url": "https://www.vlaanderen.be",
-    "logo": "/data/trapeze-use-cases/use-case-1-AIV/controller-info/logos/Flanders_verticaal.png",
+    "logo": "/data/trapeze-use-cases/use-case-1-AIV/controller-info/logos/Flanders_verticaal.jpg",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Brussel, Belgium",
