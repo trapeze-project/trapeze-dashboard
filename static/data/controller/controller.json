@@ -2,18 +2,18 @@
   {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "@id": "Clover-IT",
-    "name": "CloverIT",
-    "telephone": "( 39 ) 42 68 53 00",
-    "faxNumber": "( 39 ) 42 68 53 01",
-    "email": "info@clover-it.com",
-    "url": "https://clover-it.com",
-    "logo": "/img/mocked-controller/clover.png",
+    "@id": "DummyEmployer",
+    "name": "Dummy Employer",
+    "telephone": "telephone",
+    "faxNumber": "",
+    "email": "DummyEmployer@xyz.com",
+    "url": "https://www.DummyEmployer.com",
+    "logo": "/data/trapeze-use-cases/use-case-3-CXB/controller-info/logos/DummyEmployer.png",
     "address": {
       "@type": "PostalAddress",
-      "addressLocality": "Viale dei fiori, Italy",
-      "postalCode": "123456",
-      "streetAddress": "Via del Campo Verde"
+      "addressLocality": "addressLocality",
+      "postalCode": "postalCode",
+      "streetAddress": "streetAddress"
     },
     "member": [
       {
@@ -23,7 +23,7 @@
     "alumni": [
       {
         "@type": "Person",
-        "name": "Andrea Bouquet",
+        "name": "",
         "jobTitle": "Data Protection Officer (DPO)"
       }
     ],
@@ -115,17 +115,17 @@
     ],
     "controllerPolicyRequestBody": {
       "userID": [
-        "cxb-controller"
+        "dv-controller"
       ],
-      "policyID": "d23b4ad7-3fa0-4dd6-a918-8173bde441df",
-      "organization": "Org1MSP"
+      "policyID": "0316789b-d101-4acd-84d3-f632722d5318",
+      "organization": "Org2MSP"
     },
     "userPolicyRequestBody":{
       "userID": [
-        "cxb-user"
+        "dv-user"
       ],
-      "policyID": "5b465de8-9bf5-4b69-9cc4-ad8d3c563d7f",
-      "organization": "Org1MSP"
+      "policyID": "2998ba81-13d6-4ff1-bdb1-e7eae25fe341",
+      "organization": "Org2MSP"
     }
   }
 ]

@@ -1,8 +1,4 @@
 {
-	"userID": ["dv-controller"],
-    "organization": "Org1MSP",
-    "title": "Policy 111",
-    "policyType": "controller",
 	"@description": "Sample employer policy/consent - use case 1",
 	"@ontologies": [
 		"https://w3id.org/dpv/dpv-owl#",
@@ -33,7 +29,15 @@
 			"hasRecipient": {
 				"@instance": "pilot1:ACME"
 			},
-			"hasLegalBasis": "dpv-gdpr:A6-1-a"
+			"hasLegalBasis": "dpv-gdpr:A6-1-a",
+			"hasRight": [
+				"A15",
+				"A16",
+				"A17",
+				"A18",
+				"A19",
+				"A20"
+			]
 		}
 	]
 }
