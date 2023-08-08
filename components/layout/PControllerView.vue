@@ -16,7 +16,7 @@
       <br />
       <b>Privacy Policy</b>
       <div>
-        <span>PDF</span>
+        <a style="color: blue" :href="controller.privacyPolicyPDF" target="_blank">PDF</a>
         <span>, </span>
         <nuxt-link style="color: blue" :to="`/${controller['@id']}/displayPrivacyPolicy`" target="_blank"
           >JSON-LD</nuxt-link

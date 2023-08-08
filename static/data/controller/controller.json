@@ -27,6 +27,7 @@
         "jobTitle": "Data Protection Officer (DPO)"
       }
     ],
+    "privacyPolicyPDF":"/data/policy-pdfs/DummyEmployer-PP.pdf",
     "controllerPolicyRequestBody": {
       "userID": [
         "dummyemployer-controller"
@@ -70,6 +71,7 @@
         "jobTitle": "Data Protection Officer (DPO)"
       }
     ],
+    "privacyPolicyPDF":"/data/policy-pdfs/CXB-PP.pdf",
     "controllerPolicyRequestBody": {
       "userID": [
         "cxb-controller"
@@ -113,6 +115,7 @@
         "jobTitle": "Data Protection Officer (DPO)"
       }
     ],
+    "privacyPolicyPDF":"/data/policy-pdfs/VlaamseGewest-PP.pdf",
     "controllerPolicyRequestBody": {
       "userID": [
         "dv-controller"
