@@ -8,7 +8,7 @@
     "faxNumber": "",
     "email": "DummyEmployer@xyz.com",
     "url": "https://www.DummyEmployer.com",
-    "logo": "/data/trapeze-use-cases/use-case-3-CXB/controller-info/logos/DummyEmployer.png",
+    "logo": "/data/trapeze-use-cases/use-case-1-AIV/controller-info/logos/dummyEmployer.jpg",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "addressLocality",
@@ -29,16 +29,16 @@
     ],
     "controllerPolicyRequestBody": {
       "userID": [
-        "cxb-controller"
+        "dummyemployer-controller"
       ],
-      "policyID": "d23b4ad7-3fa0-4dd6-a918-8173bde441df",
+      "policyID": "de71bc39-d620-426e-b4f6-39629072e6ed",
       "organization": "Org1MSP"
     },
     "userPolicyRequestBody":{
       "userID": [
-        "cxb-user"
+        "dummyemployer-user"
       ],
-      "policyID": "5b465de8-9bf5-4b69-9cc4-ad8d3c563d7f",
+      "policyID": "73584fde-b065-4070-b9f8-002c4eec6687",
       "organization": "Org1MSP"
     }
   },

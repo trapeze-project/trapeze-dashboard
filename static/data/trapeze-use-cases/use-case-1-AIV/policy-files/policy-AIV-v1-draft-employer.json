@@ -1,4 +1,7 @@
 {
+	"userID": ["dummyemployer-controller"],
+    "organization": "Org1MSP",
+    "title": "Policy 111",
 	"@description": "Sample employer policy/consent - use case 1",
 	"@ontologies": [
 		"https://w3id.org/dpv/dpv-owl#",
