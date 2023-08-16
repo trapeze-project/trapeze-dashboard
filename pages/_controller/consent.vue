@@ -137,7 +137,7 @@ export default {
     this.fetchedUserSensitivityValues = JSON.parse(JSON.stringify(userSensitivityValues))
     this.userSensitivityValues = JSON.parse(JSON.stringify(userSensitivityValues))
 
-    console.log(JSON.stringify(userSensitivityValues))
+    // console.log(JSON.stringify(userSensitivityValues))
 
 
 
@@ -166,7 +166,7 @@ export default {
       return this.controller.userPolicyRequestBody
     },
     changeUserSensitivityValue(update){
-      console.log(JSON.stringify(update.userSensitivityValues))
+      // console.log(JSON.stringify(update.userSensitivityValues))
       this.userSensitivityValues = JSON.parse(JSON.stringify(update.userSensitivityValues))
       let hasChanged = !this.areUserSensitivityValuesObjectsEqual(this.fetchedUserSensitivityValues ,this.userSensitivityValues);
       this.showFloatingMenu = hasChanged;
@@ -211,12 +211,11 @@ export default {
       for (let purpose of purposes) {
         let dataCategories = Object.keys(this.userChoices[purpose]);
         for (let dataCategory of dataCategories) {
-          if (this.userChoices[purpose][dataCategory]) {
-            consentPaires.push({
-              dataCategory,
-              purpose,
-            });
-          }
+          consentPaires.push({
+            dataCategory,
+            purpose,
+            value: this.userChoices[purpose][dataCategory]
+          });
         }
       }
       return consentPaires;
@@ -241,7 +240,7 @@ export default {
       //working here
       let result = await PolicyService.default.update(
         consentPaires,
-        this.policy.getConsentPolicy()
+        this.policy
       );
 
       ////////////////////////////////

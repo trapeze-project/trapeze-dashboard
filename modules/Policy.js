@@ -160,6 +160,31 @@ export default function (controllerPolicy, consentPolicy) {
       });
       return result;
     },
+    getConsentsPairs(){
+      let consentPolicyPurposeMap = this.getMap(
+        consentPolicy,
+        "dpv:hasPurpose",
+        "dpv:hasPersonalDataCategory",
+        "dpv:hasConsentStatus"
+      );
+
+      let consentPairs = [];
+
+      let purposes = Object.keys(consentPolicyPurposeMap);
+      for (let purpose of purposes) {
+        let datacategories = consentPolicyPurposeMap[purpose];
+        for (let dataCategory of datacategories) {
+          consentPairs.push({
+            dataCategory,
+            purpose,
+            value:true
+          });
+        }
+      }
+      return consentPairs;
+
+
+    },
     async fetchUserChoices(controllerID) {
       let controllerPolicyPurposeMap = this.getMap(
         controllerPolicy,

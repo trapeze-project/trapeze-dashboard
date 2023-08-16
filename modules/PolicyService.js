@@ -53,13 +53,54 @@ export default (() => {
         return undefined;
       }
     },
-    async update(consentPairs, oldConsentPolicy) {
-      let policySet = consentPairs.map((element) => {
-        return {
-          "dpv:hasPurpose": { "@class": element.purpose },
-          "dpv:hasPersonalDataCategory": { "@class": element.dataCategory },
-        };
-      });
+    async update(newConsentPairs, policy) {
+      let oldConsentPolicy = policy.getConsentPolicy()
+
+      //////// debug  
+      let oldConsentPairs = policy.getConsentsPairs()
+
+      
+      let policySet =[]
+      
+      let l1= oldConsentPairs.reduce(function (list, oldPair) { 
+
+        let dataCategory = oldPair.dataCategory
+        let purpose = oldPair.purpose
+        for(const newPair of newConsentPairs){
+          if(newPair.dataCategory === dataCategory && newPair.purpose === purpose){
+            return list
+          }
+        }
+        // add
+        list.push({
+          "dpv:hasPurpose": { "@class": purpose },
+          "dpv:hasPersonalDataCategory": { "@class": dataCategory },
+        })
+        return list
+      }, [])
+
+      let l2= newConsentPairs.reduce(function (list,newPair) { 
+        if(newPair.value === false) return list 
+        let dataCategory = newPair.dataCategory
+        let purpose = newPair.purpose
+        list.push({
+          "dpv:hasPurpose": { "@class": purpose },
+          "dpv:hasPersonalDataCategory": { "@class": dataCategory },
+        }) 
+        return list
+      },[])
+      policySet.push(...l1)
+      policySet.push(...l2)
+
+
+
+
+
+      console.log("submit policies"+ JSON.stringify(policy.getConsentsPairs()))
+
+
+
+      ///////////////
 
       let url = "https://hyperledgerapitrapeze.atc.gr/ledger/updatePolicy";
       let body = JSON.parse(JSON.stringify(oldConsentPolicy));
