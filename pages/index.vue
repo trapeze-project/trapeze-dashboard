@@ -100,6 +100,9 @@ export default {
     }
   },
   mounted() {
+    // this.$auth.loginWith("keycloak"); // NOTE: command to trigger redirect to keycloack server
+    // console.log(this.$auth.loggedIn) // NOTE: command to check if user is logged in or not
+
     this.cards = [{
         heading: "landing.login.heading",
         content: "landing.login.content",

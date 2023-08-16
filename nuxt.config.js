@@ -108,7 +108,7 @@ export default {
             "https://trapeze.imp.bg.ac.rs/auth/realms/trapeze/protocol/openid-connect/userinfo",
           logout:
             "https://trapeze.imp.bg.ac.rs/auth/realms/trapeze/protocol/openid-connect/logout" +
-            "?redirect_uri=" + encodeURIComponent("http://localhost:3000/home"),
+            "?redirect_uri=" + encodeURIComponent("http://localhost:3000/"), // TODO: redirect URL needs to be updated
         },
         token: {
           property: "access_token",
@@ -129,8 +129,8 @@ export default {
     },
     redirect: {
       login: "/home",
-      // logout: "/login",
-      home: "/",
+      logout: "/home",
+      home: "/home",
     },
   },  
 

@@ -14,7 +14,7 @@
     "vuetify": "^2.6.13"
   },
   "devDependencies": {
-    "@nuxtjs/auth-next": "^5.0.0-1648802546.c9880dc",
+    "@nuxtjs/auth-next": "^5.0.0-1607534757.1122b76",
     "@nuxtjs/axios": "^5.13.6",
     "@nuxtjs/i18n": "^7.2.2",
     "@nuxtjs/proxy": "^2.1.0",
