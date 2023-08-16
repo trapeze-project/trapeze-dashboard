@@ -24,6 +24,8 @@
             this.fetched_DPV_Labels_descriptions
           "
           :loading="loading"
+          :userSensitivityValues="userSensitivityValues"
+          @changeUserSensitivityValue="changeUserSensitivityValue"
         />
       </v-tab-item>
 
@@ -50,6 +52,8 @@
 
 <script>
 let PolicyService = require("~/modules/PolicyService");
+import axios from "axios";
+import promise from "promise";
 
 export default {
   props: {
@@ -83,6 +87,8 @@ export default {
       fetched_DPV_Labels_descriptions: {},
       fetchedUserChoices: {},
       userChoices: {},
+      fetchedUserSensitivityValues:{},
+      userSensitivityValues:{},
     };
   },
 
@@ -118,6 +124,25 @@ export default {
       JSON.stringify(tempFetchedUserChoices)
     );
     this.userChoices = JSON.parse(JSON.stringify(tempFetchedUserChoices));
+
+
+
+    //  risk-assessment 
+    
+    let policyIRIs = this.policy.getDataCategoriesIRIs()
+    let userSensitivityValues =policyIRIs.reduce(function (accumulator, IRI) { 
+      accumulator[IRI] = 2
+      return accumulator
+    }, {})
+    this.fetchedUserSensitivityValues = JSON.parse(JSON.stringify(userSensitivityValues))
+    this.userSensitivityValues = JSON.parse(JSON.stringify(userSensitivityValues))
+
+    console.log(JSON.stringify(userSensitivityValues))
+
+
+
+
+
   },
 
   mounted() {
@@ -138,32 +163,47 @@ export default {
       return this.controller.controllerPolicyRequestBody
     },
     async getConsentPolicyRequestBody() {
-      // let userID = ["cxb-user"]
-      // let policyID= "5b465de8-9bf5-4b69-9cc4-ad8d3c563d7f"
-      // let organization= "Org1MSP"
-      // // if policyid is missing or unavaliable then create an empty consent policy
-      // // let policyID=  await PolicyService.default.createEmptyPolicy(userID,organization)
-
-      // return {
-      //   userID,policyID,organization
-      // }
       return this.controller.userPolicyRequestBody
+    },
+    changeUserSensitivityValue(update){
+      console.log(JSON.stringify(update.userSensitivityValues))
+      this.userSensitivityValues = JSON.parse(JSON.stringify(update.userSensitivityValues))
+      let hasChanged = !this.areUserSensitivityValuesObjectsEqual(this.fetchedUserSensitivityValues ,this.userSensitivityValues);
+      this.showFloatingMenu = hasChanged;
     },
 
     changeUserChoice(update) {
       if (update.tab === "data") {
         this.userChoices = this.invertUserChoices(
-          Object.assign({}, update.userChoices)
+          JSON.parse(JSON.stringify(update.userChoices))
         );
       } else {
-        this.userChoices = Object.assign({}, update.userChoices);
+        this.userChoices = JSON.parse(JSON.stringify(update.userChoices))
       }
 
-      let hasChanged =
-        JSON.stringify(this.userChoices) !==
-        JSON.stringify(this.fetchedUserChoices);
-
+      let hasChanged = !this.areUserChoicesObjectsEqual(this.userChoices, this.fetchedUserChoices)
+      
       this.showFloatingMenu = hasChanged;
+    },
+    areUserSensitivityValuesObjectsEqual(obj1, obj2){
+      
+      for( const dataCategory in obj1){
+        if(obj1[dataCategory]!==obj2[dataCategory]){
+          return false
+        }
+      }
+      return true
+    },
+    areUserChoicesObjectsEqual(obj1, obj2){
+      
+      for( const purpose in obj1){
+        for( const dataCategory in obj1[purpose]){
+          if(obj1[purpose][dataCategory]!==obj2[purpose][dataCategory]){
+            return false
+          }
+        }
+      }
+      return true
     },
     getConsentPairs() {
       let consentPaires = [];
@@ -184,7 +224,18 @@ export default {
 
     async submitMyConsent() {
       this.loading = true;
-      //submit to server
+      // // submit user sensitivity values
+      // let sensitivitySubmissionReqBody ={
+      //   "data-subject":222,
+      //   "name":{
+      //       "custom-risk-assessment":this.userSensitivityValues
+      //   }
+      // }
+
+
+      // let sensitivitySubmissionResult = await axios.post("http://74.234.146.205:8888/risk-assessment", sensitivitySubmissionReqBody)
+
+      //submit to consents to server
       let consentPaires = this.getConsentPairs();
 
       //working here
@@ -207,6 +258,8 @@ export default {
 
     undoAllChanges() {
       this.userChoices = Object.assign({}, this.fetchedUserChoices);
+      this.userSensitivityValues = JSON.parse(JSON.stringify(this.fetchedUserSensitivityValues))
+
       this.showFloatingMenu = false;
       this.$refs.data.forceRerender();
       this.$refs.purpose.forceRerender();

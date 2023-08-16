@@ -80,6 +80,8 @@
               @changeUserChoice="changeUserChoice" 
               :openControllerForm="openControllerForm"
               :fetched_DPV_Labels_descriptions="fetched_DPV_Labels_descriptions"
+              :userSensitivityValues="modifiedUserSensitivityValues"
+              @changeSensitivityValue="changeSensitivityValue"
             />
           </div>
 
@@ -121,12 +123,17 @@ export default {
       type: Object,
       required: true,
     },
+    userSensitivityValues:{
+      type: Object,
+      required: false,
+    },
     openControllerForm:{
       type:Function
     },
     fetched_DPV_Labels_descriptions:{
       type: Object,
       required: true,
+      default:{}
     },
     loading:{
       type:Boolean,
@@ -139,6 +146,7 @@ export default {
       searchValue: "",
       componentKey: 0,
       modifiedUserChoices: {},
+      modifiedUserSensitivityValues:{},
       max: 10,
       selectedSortOption:null,
       sortOptions: [
@@ -167,6 +175,14 @@ export default {
         }
         else {
           this.revokeAllValue = true;
+        }
+      },
+      deep: true,
+    },
+    userSensitivityValues: {
+      handler(newVal, oldVal) {
+        if (JSON.stringify(newVal) !== JSON.stringify(oldVal)) {
+          this.modifiedUserSensitivityValues = Object.assign({}, newVal);
         }
       },
       deep: true,
@@ -206,11 +222,19 @@ export default {
   created() {
     this.selectedSortOption="alpha-ascending";
     this.modifiedUserChoices = this.userChoices;
+    this.modifiedUserSensitivityValues = this.userSensitivityValues;
   },
   methods: {
+    debug(dataCategoryName, sensitivityCurrentValue){
+      console.log("lol"+dataCategoryName, sensitivityCurrentValue)
+    },
     changeUserChoice(parent, child, newConsentValue) {
       this.modifiedUserChoices[parent][child] = newConsentValue;
-      this.update();
+      this.updateUserChoice();
+    },
+    changeSensitivityValue(dataCategoryName, sensitivityCurrentValue){
+      this.modifiedUserSensitivityValues[dataCategoryName]=sensitivityCurrentValue;
+      this.updateUserSensitivityValue()
     },
     forceRerender() {
       this.componentKey += 1;
@@ -223,13 +247,18 @@ export default {
         }
       }
       this.modifiedUserChoices = Object.assign({}, tempModifiedUserChoices);
-      this.update();
+      this.updateUserChoice();
       this.forceRerender();
     },
-    update() {
+    updateUserChoice() {
       this.$emit("changeUserChoice", {
         "tab": this.tabName,
         "userChoices": this.modifiedUserChoices,
+      })
+    },
+    updateUserSensitivityValue() {
+      this.$emit("changeUserSensitivityValue", {
+        "userSensitivityValues": this.modifiedUserSensitivityValues,
       })
     },
     handleOpenFormButton(){

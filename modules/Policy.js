@@ -70,6 +70,15 @@ export default function (controllerPolicy, consentPolicy) {
       IRIs = [...new Set(IRIs)];
       return IRIs;
     },
+    getDataCategoriesIRIs() {
+      let policySet = controllerPolicy["@policySet"];
+      let IRIs = policySet.reduce((list, policy) => {
+        list.push(...createValueArray(policy["hasPersonalDataCategory"]));
+        return list;
+      }, []);
+      IRIs = [...new Set(IRIs)];
+      return IRIs;
+    },
     async fetch_DPV_Labels_and_descriptions() {
       let result = {
         en: {

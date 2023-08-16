@@ -25,32 +25,59 @@
       class="px-3"
       color="black"
       track-color="grey"
-      min="1"
+      min="0"
       max="10"
       step="1"
       :ticks="true"
       tick-size="0"
       :tick-labels="labels"
-      :value="sensitivity"
+      v-model="sensitivityCurrent"
+      @change="show"
     />
+    <div>{{ this.sensitivityCurrent}}</div>
+    <v-btn @click="show">show value</v-btn>
   </div>
 </template>
 
 <script>
 export default {
+  
   props: {
-    sensitivity: {
+    sensitivityValue: {
       type: Number,
-      required: false,
-      default: 5
+      required: true,
+      default: 10
+
+    },
+    dataCategoryName:{
+      type: String,
+      required: true,
     }
+  },
+  data(){
+    return {
+      sensitivityCurrent:0
+    }
+  },
+  created(){
+    this.sensitivityCurrent = this.sensitivityValue
   },
   computed: {
     labels() {
-      let labels = new Array(10).fill('');
+      let labels = new Array(11).fill('');
       labels[0] = this.$t("sensitivity.low");
-      labels[9] = this.$t("sensitivity.high");
+      labels[10] = this.$t("sensitivity.high");
       return labels;
+    }
+  },
+  methods:{
+    show(){
+      console.log("changed sensitivityValue")
+      this.$emit(
+        "changeSensitivityValue",
+        this.dataCategoryName,
+        this.sensitivityCurrent
+      );
     }
   }
 }

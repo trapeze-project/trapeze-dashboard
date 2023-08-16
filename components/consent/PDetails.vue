@@ -74,6 +74,7 @@
 
                 <v-row>
                   <v-col
+                    v-if="false"
                     class="pa-3 pt-0"
                     cols="12"
                     sm="6"
@@ -159,7 +160,7 @@
                   </v-card-text>
 
                   <v-card-text>
-                    <PSensitivity />
+                    <PSensitivity :dataCategoryName="parent" :sensitivityValue="userSensitivityValues[parent]" v-on="$listeners"/>
                   </v-card-text>
                 </v-card>
               </div>
@@ -213,6 +214,10 @@ export default {
     fetched_DPV_Labels_descriptions:{
       type: Object,
       required: false,
+    },
+    userSensitivityValues:{
+      type:Object,
+      required:false
     }
   },
 
