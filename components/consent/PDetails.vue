@@ -74,7 +74,6 @@
 
                 <v-row>
                   <v-col
-                    v-if="false"
                     class="pa-3 pt-0"
                     cols="12"
                     sm="6"
