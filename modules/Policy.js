@@ -79,6 +79,7 @@ export default function (controllerPolicy, consentPolicy) {
       IRIs = [...new Set(IRIs)];
       return IRIs;
     },
+
     async fetch_DPV_Labels_and_descriptions() {
       let result = {
         en: {
@@ -100,12 +101,14 @@ export default function (controllerPolicy, consentPolicy) {
       };
       let compactedIRIs = this.getIRIs();
 
+      let knowledgeBaseURL = process.env.KNOWLEDGE_BASE
+      console.log("here is the error "+knowledgeBaseURL)
       let termDPVInfoRequests = compactedIRIs.map((compactedIRI) => {
         let term = compactedIRI.split(":")[1];
 
         return axios
           .get(
-            `https://trapeze.imp.bg.ac.rs/knowledgebase/kb.php?action=dpv&lang=&term=${term}`
+            `${knowledgeBaseURL}?action=dpv&lang=&term=${term}`
           )
           .catch(function (err) {
             console.log("here is the error " + compactedIRI);
@@ -199,7 +202,7 @@ export default function (controllerPolicy, consentPolicy) {
           "dpv:hasPersonalDataCategory",
           "dpv:hasConsentStatus"
         );
-        console.log("consentPolicyPurposeMap"+JSON.stringify(consentPolicyPurposeMap))
+        // console.log("consentPolicyPurposeMap"+JSON.stringify(consentPolicyPurposeMap))
 
         let choices = {};
 
@@ -211,7 +214,7 @@ export default function (controllerPolicy, consentPolicy) {
           choices[purpose] = {};
           for (let dataCategory of datacategories) {
             if (consentPolicyPurposeMap[purpose]?.includes(dataCategory)) {
-              console.log("im turning sth to true");
+              // console.log("im turning sth to true");
               choices[purpose][dataCategory] = true;
             } else {
               choices[purpose][dataCategory] = false;
@@ -254,7 +257,7 @@ export default function (controllerPolicy, consentPolicy) {
           !createValueArray(policy["dpv:hasConsentStatus"]).includes(
             "dpv:ConsentGiven"
           ))){
-            console.log("im exisiting")
+            // console.log("im exisiting")
           }
         
           return map;
@@ -262,8 +265,8 @@ export default function (controllerPolicy, consentPolicy) {
 
         let groupByInstances = createValueArray(policy[groupBy]);
         let attributeInstances = createValueArray(policy[attribute]);
-        console.log("policy"+i+groupByInstances)
-        console.log("policy"+i+attributeInstances)
+        // console.log("policy"+i+groupByInstances)
+        // console.log("policy"+i+attributeInstances)
         i++
         groupByInstances.forEach((instance) => {
           if (!map.hasOwnProperty(instance)) {
@@ -307,7 +310,7 @@ export default function (controllerPolicy, consentPolicy) {
             map[legalBasis][instance].push(...new Set(attributeInstances));
           });
         });
-        console.log("otherpurposemap" + JSON.stringify(map));
+        // console.log("otherpurposemap" + JSON.stringify(map));
 
         return map;
       }, {});

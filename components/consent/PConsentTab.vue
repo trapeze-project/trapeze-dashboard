@@ -226,7 +226,7 @@ export default {
   },
   methods: {
     debug(dataCategoryName, sensitivityCurrentValue){
-      console.log("lol"+dataCategoryName, sensitivityCurrentValue)
+      // console.log("lol"+dataCategoryName, sensitivityCurrentValue)
     },
     changeUserChoice(parent, child, newConsentValue) {
       this.modifiedUserChoices[parent][child] = newConsentValue;

@@ -16,7 +16,7 @@ export default (() => {
     },
 
     search(keyword) {
-      console.log(controllerNew)
+      // console.log(controllerNew)
       if (keyword === "") {
         return this.all();
       }

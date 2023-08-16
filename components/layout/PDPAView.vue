@@ -45,8 +45,9 @@ export default {
     let countryAPIResponseJSON = await countryAPIResponse.json();
     let userCountryCode = countryAPIResponseJSON.country;
     this.debug = userCountryCode;
+    let knowledgeBaseURL = process.env.KNOWLEDGE_BASE
     let DPAInfoResponse = await fetch(
-      `https://trapeze.imp.bg.ac.rs/knowledgebase/kb.php?action=dpa&lang=&country=${userCountryCode}`
+      `${knowledgeBaseURL}?action=dpa&lang=&country=${userCountryCode}`
     );
     let DPAInfoResponseJSON = await DPAInfoResponse.json();
     this.DPAInfo = JSON.parse(JSON.stringify(DPAInfoResponseJSON[0]));

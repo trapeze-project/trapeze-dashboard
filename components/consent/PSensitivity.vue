@@ -72,7 +72,7 @@ export default {
   },
   methods:{
     show(){
-      console.log("changed sensitivityValue")
+      // console.log("changed sensitivityValue")
       this.$emit(
         "changeSensitivityValue",
         this.dataCategoryName,

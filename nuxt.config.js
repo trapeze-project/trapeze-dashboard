@@ -91,7 +91,7 @@ export default {
   axios: {
     baseURL: process.env.BASE_URL,
     proxyHeaders: false,
-    credentials: false
+    credentials: false,
   },
   
   auth: {
@@ -165,6 +165,12 @@ export default {
   server: {
     host: process.env.HOST,
     port: process.env.PORT
+  },
+  env:{
+    READ_POLICY: process.env.READ_POLICY,
+    CREAETE_POLICY: process.env.CREAETE_POLICY,
+    UPDATE_POLICY: process.env.UPDATE_POLICY,
+    KNOWLEDGE_BASE: process.env.KNOWLEDGE_BASE
   }
   
 }

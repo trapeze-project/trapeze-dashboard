@@ -1,4 +1,3 @@
-import policies from "../static/data/policies/policies.json";
 import Policy from "./Policy.js";
 import axios from "axios";
 
@@ -22,7 +21,8 @@ export default (() => {
       //fetchPolicy
 
       // currently hardcoded
-      let url = "https://hyperledgerapitrapeze.atc.gr/ledger/readPolicy";
+      console.log("env file read "+JSON.stringify(process.env.HSA_HJSA))
+      let url = process.env.READ_POLICY;
 
       let requestBodies = [controllerPolicyRequestBody]
       if(consentPolicyRequestBody!== undefined){
@@ -96,13 +96,13 @@ export default (() => {
 
 
 
-      console.log("submit policies"+ JSON.stringify(policy.getConsentsPairs()))
+      // console.log("submit policies"+ JSON.stringify(policy.getConsentsPairs()))
 
 
 
       ///////////////
 
-      let url = "https://hyperledgerapitrapeze.atc.gr/ledger/updatePolicy";
+      let url = process.env.UPDATE.POLICY;
       let body = JSON.parse(JSON.stringify(oldConsentPolicy));
       body.userID = [body.ownerID];
       body["@policySet"] = JSON.parse(JSON.stringify(policySet));
@@ -128,7 +128,7 @@ export default (() => {
     },
     async createEmptyPolicy(userID, organization) {
       // return policy id
-      let url = "https://hyperledgerapitrapeze.atc.gr/ledger/createPolicy";
+      let url = process.env.CREATE_POLICY;
       let reqBody = {
         userID,
         organization,
