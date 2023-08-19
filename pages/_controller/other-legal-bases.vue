@@ -124,8 +124,9 @@ export default {
 
   async fetch() {
     let controllerPolicyRequestBody = this.getControllerPolicyRequestBody();
+    let policyIDs = this.$route.query.policyID;
 
-    let policy = await PolicyService.default.get(controllerPolicyRequestBody);
+    let policy = await PolicyService.default.get(controllerPolicyRequestBody, undefined, policyIDs);
 
     this.dpv = await policy.fetch_DPV_Labels_and_descriptions();
 
