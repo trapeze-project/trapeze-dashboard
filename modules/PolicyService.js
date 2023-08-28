@@ -102,7 +102,7 @@ export default (() => {
 
       ///////////////
 
-      let url = process.env.UPDATE.POLICY;
+      let url = process.env.UPDATE_POLICY;
       let body = JSON.parse(JSON.stringify(oldConsentPolicy));
       body.userID = [body.ownerID];
       body["@policySet"] = JSON.parse(JSON.stringify(policySet));
