@@ -26,6 +26,7 @@
               :key="index"
               cols="12"
               md="4"
+              :offset-md="(index === 0) ? 2 : 0"
               class="pa-4"
               align="left"
             >
@@ -49,6 +50,7 @@
                     color="primary"
                     class="rounded-pill px-5 black--text"
                     :to="card.to"
+                    :disabled="card.disabled"
                   >
                     {{ $t(card.btn) }}
                   </v-btn>
@@ -57,7 +59,8 @@
                     v-else 
                     color="primary"
                     class="rounded-pill px-5 black--text"
-                    disabled
+                    @click="card.handler"
+                    :disabled="card.disabled"
                   >
                     {{ $t(card.btn) }}
                   </v-btn>
@@ -100,31 +103,28 @@ export default {
     }
   },
   async mounted() {
-    if (!this.$auth.loggedIn) {
-      this.$auth.loginWith('keycloak');
-    } else {
-      console.log(this.$auth.user)
-    }
-
     this.cards = [{
         heading: "landing.login.heading",
         content: "landing.login.content",
         btn: "landing.login.btn",
-        to: null,
-        img: "/img/landing-login-icon.svg"
+        handler: () => this.$auth.loginWith('keycloak'),
+        img: "/img/landing-login-icon.svg",
+        disabled: this.$auth.loggedIn,
       }, {
         heading: "landing.choose-controller.heading",
         content: "landing.choose-controller.content",
         btn: "landing.choose-controller.btn",
         to: `/${this.$i18n.locale}/controller-selection`,
-        img: "/img/landing-select-icon.svg"
-      }, {
+        img: "/img/landing-select-icon.svg",
+        disabled: !this.$auth.loggedIn,
+      }/*, {
         heading: "landing.consent.heading",
         content: "landing.consent.content",
         btn: "landing.consent.btn",
         to: null,
-        img: "/img/landing-manage-icon.svg"
-      }]
+        img: "/img/landing-manage-icon.svg",
+        disabled: this.$auth.loggedIn,
+      }*/]
   }
 }
 </script>
