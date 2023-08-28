@@ -107,21 +107,19 @@ export default {
           userInfo:
             "https://trapeze.imp.bg.ac.rs/auth/realms/trapeze/protocol/openid-connect/userinfo",
           logout:
-            "https://trapeze.imp.bg.ac.rs/auth/realms/trapeze/protocol/openid-connect/logout" +
-            "?redirect_uri=" + encodeURIComponent("http://localhost:3000/"), // TODO: redirect URL needs to be updated
+            "https://trapeze.imp.bg.ac.rs/auth/realms/trapeze/protocol/openid-connect/logout"
         },
         token: {
           property: "access_token",
           type: "Bearer",
-          name: "Authorization",
-          maxAge: 300,
+          maxAge: 1800,
         },
         refreshToken: {
           property: "refresh_token",
           maxAge: 60 * 60 * 24 * 30,
         },
         responseType: "code",
-        grantType: "password",
+        grantType: "authorization_code",
         clientId: "trapeze-dashboard",
         scope: ["openid"],
         codeChallengeMethod: "S256",
@@ -130,7 +128,7 @@ export default {
     redirect: {
       login: "/home",
       logout: "/home",
-      home: "/home",
+      home: "/en",
     },
   },  
 

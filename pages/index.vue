@@ -100,8 +100,11 @@ export default {
     }
   },
   async mounted() {
-    await this.$auth.loginWith("keycloak"); // NOTE: command to trigger redirect to keycloack server
-    console.log(this.$auth.loggedIn) // NOTE: command to check if user is logged in or not
+    if (!this.$auth.loggedIn) {
+      this.$auth.loginWith('keycloak');
+    } else {
+      console.log(this.$auth.user)
+    }
 
     this.cards = [{
         heading: "landing.login.heading",
