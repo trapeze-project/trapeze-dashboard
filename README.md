@@ -1,6 +1,20 @@
-# dashboardvuetfy
+# TRAPEZE-Privacy Dashboard
 
-## Build Setup
+Visit the currently deployed version: https://dashboard.trapeze-project.eu/
+
+Web frontend that allows citizens to give/change/revoke their consent through the TRAPEZE-platform.
+
+## Requirements
+
+- npm ([Node Package Manager](https://nodejs.org/en/download/))
+
+```bash
+# check whether npm is installed
+$ npm --version
+# >> npm-version, e.g. 8.9.0
+```
+
+## Deployment
 
 ```bash
 # install dependencies
