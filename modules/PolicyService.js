@@ -12,7 +12,7 @@ let getToken = () => {
   return kv['auth._token.keycloak'].split('Bearer%20').pop();
 }
 
-axios.defaults.headers.common['Authorization'] = 'Bearer ' + getToken();
+// axios.defaults.headers.common['Authorization'] = 'Bearer ' + getToken();
 
 export default (() => {
   return {
@@ -46,7 +46,7 @@ export default (() => {
       
       let requests = requestBodies.map((reqBody) => {
         
-        return axios.post(url, reqBody);
+        return axios.post(url, reqBody, { headers: { 'Authorization': 'Bearer ' + getToken() }});
       });
       let results = await Promise.allSettled(requests);
 
@@ -135,7 +135,7 @@ export default (() => {
       //
 
       let responseUpdateConsent = await axios
-        .put(url, body)
+        .put(url, body, { headers: { 'Authorization': 'Bearer ' + getToken() }})
         .catch(function (err) {
           console.log("here is the error " + err);
         });
@@ -165,7 +165,7 @@ export default (() => {
       }
       //
 
-      let responce = await axios.post(url, reqBody).catch(function (err) {
+      let responce = await axios.post(url, reqBody, { headers: { 'Authorization': 'Bearer ' + getToken() }}).catch(function (err) {
         console.log("here is the error " + err);
       });
 
