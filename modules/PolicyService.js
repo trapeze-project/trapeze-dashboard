@@ -1,6 +1,19 @@
 import Policy from "./Policy.js";
 import axios from "axios";
 
+let getToken = () => {
+  let kv = document.cookie
+    .split('; ')
+    .reduce((acc, val) => {
+      let x = val.split('=');
+      acc[x[0]] = x[1];
+      return acc;
+    }, {});
+  return kv['auth._token.keycloak'].split('Bearer%20').pop();
+}
+
+axios.defaults.headers.common['Authorization'] = 'Bearer ' + getToken();
+
 export default (() => {
   return {
     async get(
@@ -32,6 +45,7 @@ export default (() => {
       
       
       let requests = requestBodies.map((reqBody) => {
+        
         return axios.post(url, reqBody);
       });
       let results = await Promise.allSettled(requests);

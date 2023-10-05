@@ -76,15 +76,15 @@
       "userID": [
         "cxb-controller"
       ],
-      "policyID": "d23b4ad7-3fa0-4dd6-a918-8173bde441df",
-      "organization": "Org1MSP"
+      "policyID": "664eb03b-2853-44b4-a28e-58e325553299",
+      "organization": "Org3MSP"
     },
     "userPolicyRequestBody":{
       "userID": [
         "cxb-user"
       ],
-      "policyID": "5b465de8-9bf5-4b69-9cc4-ad8d3c563d7f",
-      "organization": "Org1MSP"
+      "policyID": "742797fa-b4e0-4d49-aaeb-573d30e26a84",
+      "organization": "Org3MSP"
     }
   },
   {
@@ -121,14 +121,14 @@
         "dv-controller"
       ],
       "policyID": "0316789b-d101-4acd-84d3-f632722d5318",
-      "organization": "Org2MSP"
+      "organization": "Org1MSP"
     },
     "userPolicyRequestBody":{
       "userID": [
         "dv-user"
       ],
       "policyID": "2998ba81-13d6-4ff1-bdb1-e7eae25fe341",
-      "organization": "Org2MSP"
+      "organization": "Org1MSP"
     }
   }
 ]

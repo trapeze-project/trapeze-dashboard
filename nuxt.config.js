@@ -91,7 +91,7 @@ export default {
   axios: {
     baseURL: process.env.BASE_URL,
     proxyHeaders: false,
-    credentials: false,
+    credentials: true,
   },
   
   auth: {
