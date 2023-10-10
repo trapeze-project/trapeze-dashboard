@@ -120,14 +120,14 @@
       "userID": [
         "dv-controller"
       ],
-      "policyID": "0316789b-d101-4acd-84d3-f632722d5318",
+      "policyID": "1448986e-3eee-44b4-a9ed-f036688cd426",
       "organization": "Org1MSP"
     },
     "userPolicyRequestBody":{
       "userID": [
         "dv-user"
       ],
-      "policyID": "2998ba81-13d6-4ff1-bdb1-e7eae25fe341",
+      "policyID": "c9eeb3af-8d0b-486f-ba35-01f3b7e06ad6",
       "organization": "Org1MSP"
     }
   }
