@@ -125,11 +125,6 @@ export default {
         codeChallengeMethod: "S256",
       },
     },
-    redirect: {
-      login: "/home",
-      logout: "/home",
-      home: "/en",
-    },
   },  
 
   publicRuntimeConfig: {

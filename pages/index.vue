@@ -103,6 +103,21 @@ export default {
     }
   },
   async mounted() {
+    if (this.$route.query.trigger && this.$route.query.redirect_uri) {
+      localStorage.setItem('redirect_uri', this.$route.query.redirect_uri);
+      this.$auth.loginWith('keycloak');
+    }
+
+    if (document.referrer) {
+      let referrer = new URL(document.referrer);
+      let path = referrer.pathname;
+      if (path == '/login' && localStorage.getItem('redirect_uri')) {
+        let url = localStorage.getItem('redirect_uri');
+        window.localStorage.removeItem('redirect_uri');
+        window.location.href = url;
+      }
+    }
+
     this.cards = [{
         heading: "landing.login.heading",
         content: "landing.login.content",

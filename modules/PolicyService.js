@@ -26,7 +26,6 @@ export default (() => {
           if (result.status === "rejected") {
             return undefined;
           } else {
-            console.log(result.value);
             return result.value.data.policy;
           }
         });
@@ -34,7 +33,7 @@ export default (() => {
       //fetchPolicy
 
       // currently hardcoded
-      console.log("env file read "+JSON.stringify(process.env.HSA_HJSA))
+      // console.log("env file read "+JSON.stringify(process.env.HSA_HJSA))
       let url = process.env.READ_POLICY;
 
       let requestBodies = [controllerPolicyRequestBody]

@@ -136,17 +136,21 @@ export default function (controllerPolicy, consentPolicy) {
         let labels =
           responce["data"][0]["http://www.w3.org/2004/02/skos/core#prefLabel"];
 
-        definitions.forEach((langSpecificDefinition) => {
-          let lang = langSpecificDefinition["@language"];
-          let def = langSpecificDefinition["@value"];
-          result[lang].descriptions[IRI] = def;
-        });
+        if (definitions) {
+          definitions.forEach((langSpecificDefinition) => {
+            let lang = langSpecificDefinition["@language"];
+            let def = langSpecificDefinition["@value"];
+            result[lang].descriptions[IRI] = def;
+          });
+        }
 
-        labels.forEach((langSpecificLabel) => {
-          let lang = langSpecificLabel["@language"];
-          let label = langSpecificLabel["@value"];
-          result[lang].labels[IRI] = label;
-        });
+        if (labels) {
+          labels.forEach((langSpecificLabel) => {
+            let lang = langSpecificLabel["@language"];
+            let label = langSpecificLabel["@value"];
+            result[lang].labels[IRI] = label;
+          });
+        }
 
         // check for missing definitions and labels
         let langs = ["en", "de", "it", "fr"];
