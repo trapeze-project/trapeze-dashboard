@@ -1,5 +1,7 @@
 # TRAPEZE-Privacy Dashboard
 
+Contributors: P.Raschke, H.Schwerdtner, N.Shawarba, T.Eichinger
+
 Visit the currently deployed version: https://dashboard.trapeze-project.eu/
 
 Web frontend that allows citizens to give/change/revoke their consent through the TRAPEZE-platform.
